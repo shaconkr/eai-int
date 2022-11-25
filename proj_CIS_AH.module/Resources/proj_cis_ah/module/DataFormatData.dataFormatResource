@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:_72090314-b59f-477e-8460-eea6605ac654="http://ns.tibco.com/bw/palette/dataformat/72090314-b59f-477e-8460-eea6605ac654" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_20FKIGyGEe2F2fDVMIjqNQ" name="proj_cis_ah.module.DataFormatData" type="dataformat:DataFormat">
+  <imports xmi:id="_bswiEGyHEe2F2fDVMIjqNQ" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/72090314-b59f-477e-8460-eea6605ac654"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_20GYQGyGEe2F2fDVMIjqNQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="_72090314-b59f-477e-8460-eea6605ac654:root" lineLength="247" fieldOffsetsStr="wrkGbVal(0,2)&#xA;memNm(2,102)&#xA;crdMemNo(102,111)&#xA;aprvlCareGbcd(111,115)&#xA;aprvlCareAplyDt(115,123)&#xA;aprvlCareEndDt(123,131)&#xA;aprvlCareCntn(131,231)&#xA;cnslStoreCd(231,234)&#xA;conpsId(234,242)&#xA;ocrnCnt(242,246)">
+    <fieldOffsets xmi:id="_btkaYGyHEe2F2fDVMIjqNQ" name="wrkGbVal" end="2"/>
+    <fieldOffsets xmi:id="_btkaYWyHEe2F2fDVMIjqNQ" name="memNm" start="2" end="102"/>
+    <fieldOffsets xmi:id="_btkaYmyHEe2F2fDVMIjqNQ" name="crdMemNo" start="102" end="111"/>
+    <fieldOffsets xmi:id="_btkaY2yHEe2F2fDVMIjqNQ" name="aprvlCareGbcd" start="111" end="115"/>
+    <fieldOffsets xmi:id="_btkaZGyHEe2F2fDVMIjqNQ" name="aprvlCareAplyDt" start="115" end="123"/>
+    <fieldOffsets xmi:id="_btkaZWyHEe2F2fDVMIjqNQ" name="aprvlCareEndDt" start="123" end="131"/>
+    <fieldOffsets xmi:id="_btkaZmyHEe2F2fDVMIjqNQ" name="aprvlCareCntn" start="131" end="231"/>
+    <fieldOffsets xmi:id="_btkaZ2yHEe2F2fDVMIjqNQ" name="cnslStoreCd" start="231" end="234"/>
+    <fieldOffsets xmi:id="_btkaaGyHEe2F2fDVMIjqNQ" name="conpsId" start="234" end="242"/>
+    <fieldOffsets xmi:id="_btkaaWyHEe2F2fDVMIjqNQ" name="ocrnCnt" start="242" end="246"/>
+  </jndi:configuration>
+</jndi:namedResource>

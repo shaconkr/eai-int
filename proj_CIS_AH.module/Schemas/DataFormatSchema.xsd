@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat/72090314-b59f-477e-8460-eea6605ac654" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.tibco.com/bw/palette/dataformat/72090314-b59f-477e-8460-eea6605ac654">
+    
+  <xsd:element name="root" tibex:source="sr.index.dataFormatResource">
+        
+    <xsd:complexType>
+            
+      <xsd:sequence>
+        <xsd:element name="wrkGbVal" type="xsd:string"/>
+        <xsd:element name="memNm" type="xsd:string"/>
+        <xsd:element name="crdMemNo" type="xsd:string"/>
+        <xsd:element name="aprvlCareGbcd" type="xsd:string"/>
+        <xsd:element name="aprvlCareAplyDt" type="xsd:string"/>
+        <xsd:element name="aprvlCareEndDt" type="xsd:string"/>
+        <xsd:element name="aprvlCareCntn" type="xsd:string"/>
+        <xsd:element name="cnslStoreCd" type="xsd:string"/>
+        <xsd:element name="conpsId" type="xsd:string"/>
+        <xsd:element name="ocrnCnt" type="xsd:string"/>
+      </xsd:sequence>
+          
+    </xsd:complexType>
+      
+  </xsd:element>
+  
+</xsd:schema>

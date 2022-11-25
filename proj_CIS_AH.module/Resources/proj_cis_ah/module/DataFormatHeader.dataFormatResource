@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:_2b9d50ca-6957-41e7-ad74-95dbbe79f0d9="http://ns.tibco.com/bw/palette/dataformat/2b9d50ca-6957-41e7-ad74-95dbbe79f0d9" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_y5jxIWyNEe2F2fDVMIjqNQ" name="proj_cis_ah.module.DataFormatHeader" type="dataformat:DataFormat">
+  <imports xmi:id="_z7XzcGyNEe2F2fDVMIjqNQ" importType="http://www.w3.org/2001/XMLSchema" location="../../../Schemas/DF_HcisStdHeader.xsd" namespace="http://schema.hcis.com/json"/>
+  <imports xmi:id="_i2Q9kGyWEe2iEKhZWzeHMA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/2b9d50ca-6957-41e7-ad74-95dbbe79f0d9"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_y5jxImyNEe2F2fDVMIjqNQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="_2b9d50ca-6957-41e7-ad74-95dbbe79f0d9:root" lineLength="339" fieldOffsetsStr="totTgrmLen(0,8)&#xA;hdrLen(8,16)&#xA;tgrmFrmCd(16,17)&#xA;sysEnvGbcd(17,18)&#xA;ipAdr(18,58)&#xA;guid(58,96)&#xA;prgrNo(96,99)&#xA;frstGuid(99,137)&#xA;sendSysCd(137,140)&#xA;frstSendSysCd(140,143)&#xA;sysCommTrtyPrepCntn(143,164)&#xA;eimsTgrmId(164,181)&#xA;eimsTgrmVerNo(181,184)&#xA;frwkTrdId(184,196)&#xA;rcvSysCd(196,199)&#xA;tieTgrmCd(199,209)&#xA;tieSrvGrpCd(209,211)&#xA;tieSrvNm(211,241)&#xA;scrnNo(241,261)&#xA;reqnRespGbcd(261,262)&#xA;syncProcGbcd(262,263)&#xA;trdRespCd(263,264)&#xA;pageNo(264,273)&#xA;pageRowCnt(273,282)&#xA;totRowCnt(282,291)&#xA;reqnDtm(291,308)&#xA;respDtm(308,325)&#xA;storeCd(325,328)&#xA;userId(328,336)&#xA;stdTgrmEndLettrVal(336,338)">
+    <fieldOffsets xmi:id="_i3LjkGyWEe2iEKhZWzeHMA" name="totTgrmLen" end="8"/>
+    <fieldOffsets xmi:id="_i3LjkWyWEe2iEKhZWzeHMA" name="hdrLen" start="8" end="16"/>
+    <fieldOffsets xmi:id="_i3LjkmyWEe2iEKhZWzeHMA" name="tgrmFrmCd" start="16" end="17"/>
+    <fieldOffsets xmi:id="_i3Ljk2yWEe2iEKhZWzeHMA" name="sysEnvGbcd" start="17" end="18"/>
+    <fieldOffsets xmi:id="_i3LjlGyWEe2iEKhZWzeHMA" name="ipAdr" start="18" end="58"/>
+    <fieldOffsets xmi:id="_i3LjlWyWEe2iEKhZWzeHMA" name="guid" start="58" end="96"/>
+    <fieldOffsets xmi:id="_i3LjlmyWEe2iEKhZWzeHMA" name="prgrNo" start="96" end="99"/>
+    <fieldOffsets xmi:id="_i3Ljl2yWEe2iEKhZWzeHMA" name="frstGuid" start="99" end="137"/>
+    <fieldOffsets xmi:id="_i3LjmGyWEe2iEKhZWzeHMA" name="sendSysCd" start="137" end="140"/>
+    <fieldOffsets xmi:id="_i3LjmWyWEe2iEKhZWzeHMA" name="frstSendSysCd" start="140" end="143"/>
+    <fieldOffsets xmi:id="_i3LjmmyWEe2iEKhZWzeHMA" name="sysCommTrtyPrepCntn" start="143" end="164"/>
+    <fieldOffsets xmi:id="_i3Ljm2yWEe2iEKhZWzeHMA" name="eimsTgrmId" start="164" end="181"/>
+    <fieldOffsets xmi:id="_i3LjnGyWEe2iEKhZWzeHMA" name="eimsTgrmVerNo" start="181" end="184"/>
+    <fieldOffsets xmi:id="_i3LjnWyWEe2iEKhZWzeHMA" name="frwkTrdId" start="184" end="196"/>
+    <fieldOffsets xmi:id="_i3LjnmyWEe2iEKhZWzeHMA" name="rcvSysCd" start="196" end="199"/>
+    <fieldOffsets xmi:id="_i3Ljn2yWEe2iEKhZWzeHMA" name="tieTgrmCd" start="199" end="209"/>
+    <fieldOffsets xmi:id="_i3LjoGyWEe2iEKhZWzeHMA" name="tieSrvGrpCd" start="209" end="211"/>
+    <fieldOffsets xmi:id="_i3LjoWyWEe2iEKhZWzeHMA" name="tieSrvNm" start="211" end="241"/>
+    <fieldOffsets xmi:id="_i3LjomyWEe2iEKhZWzeHMA" name="scrnNo" start="241" end="261"/>
+    <fieldOffsets xmi:id="_i3Ljo2yWEe2iEKhZWzeHMA" name="reqnRespGbcd" start="261" end="262"/>
+    <fieldOffsets xmi:id="_i3LjpGyWEe2iEKhZWzeHMA" name="syncProcGbcd" start="262" end="263"/>
+    <fieldOffsets xmi:id="_i3LjpWyWEe2iEKhZWzeHMA" name="trdRespCd" start="263" end="264"/>
+    <fieldOffsets xmi:id="_i3LjpmyWEe2iEKhZWzeHMA" name="pageNo" start="264" end="273"/>
+    <fieldOffsets xmi:id="_i3Ljp2yWEe2iEKhZWzeHMA" name="pageRowCnt" start="273" end="282"/>
+    <fieldOffsets xmi:id="_H6r2AGyYEe2iEKhZWzeHMA" name="totRowCnt" start="282" end="291"/>
+    <fieldOffsets xmi:id="_i3LjqGyWEe2iEKhZWzeHMA" name="reqnDtm" start="291" end="308"/>
+    <fieldOffsets xmi:id="_i3LjqWyWEe2iEKhZWzeHMA" name="respDtm" start="308" end="325"/>
+    <fieldOffsets xmi:id="_i3LjqmyWEe2iEKhZWzeHMA" name="storeCd" start="325" end="328"/>
+    <fieldOffsets xmi:id="_i3Ljq2yWEe2iEKhZWzeHMA" name="userId" start="328" end="336"/>
+    <fieldOffsets xmi:id="_i3LjrGyWEe2iEKhZWzeHMA" name="stdTgrmEndLettrVal" start="336" end="338"/>
+  </jndi:configuration>
+</jndi:namedResource>

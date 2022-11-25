@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_-B2qUGyEEe2F2fDVMIjqNQ" targetNamespace="http://tns.tibco.com/bw/composite/proj_CIS_AH.module" name="proj_CIS_AH.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_-PZXEGyEEe2F2fDVMIjqNQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-PZXEWyEEe2F2fDVMIjqNQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-PjIEGyEEe2F2fDVMIjqNQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-PjIEWyEEe2F2fDVMIjqNQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-PjIEmyEEe2F2fDVMIjqNQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-PjIE2yEEe2F2fDVMIjqNQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-PjIFGyEEe2F2fDVMIjqNQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-PjIFWyEEe2F2fDVMIjqNQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-PsSAGyEEe2F2fDVMIjqNQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_751y8GyaEe2iEKhZWzeHMA" name="TAD_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_83UH0GyaEe2iEKhZWzeHMA" name="TAD_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9VsF4GyaEe2iEKhZWzeHMA" name="TAD_ENCODING" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_DdvrQGyFEe2F2fDVMIjqNQ" name="Componentproc_AH_TAD_CISTADAHFF0030102" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_DdvrQWyFEe2F2fDVMIjqNQ" processName="proj_cis_ah.module.proc_AH_TAD_CISTADAHFF0030102"/>
+  </sca:component>
+  <sca:component xmi:id="_MgLdoGycEe2iEKhZWzeHMA" name="Componenttest" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_MgLdoWycEe2iEKhZWzeHMA" processName="proj_cis_ah.module.test"/>
+  </sca:component>
+</sca:composite>

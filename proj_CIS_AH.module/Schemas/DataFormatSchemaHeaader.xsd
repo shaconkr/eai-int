@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat/2b9d50ca-6957-41e7-ad74-95dbbe79f0d9" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.tibco.com/bw/palette/dataformat/2b9d50ca-6957-41e7-ad74-95dbbe79f0d9">
+    
+  <xsd:element name="root" tibex:source="sr.index.dataFormatResource">
+        
+    <xsd:complexType>
+            
+      <xsd:sequence>
+        <xsd:element name="totTgrmLen" type="xsd:string"/>
+        <xsd:element name="hdrLen" type="xsd:string"/>
+        <xsd:element name="tgrmFrmCd" type="xsd:string"/>
+        <xsd:element name="sysEnvGbcd" type="xsd:string"/>
+        <xsd:element name="ipAdr" type="xsd:string"/>
+        <xsd:element name="guid" type="xsd:string"/>
+        <xsd:element name="prgrNo" type="xsd:string"/>
+        <xsd:element name="frstGuid" type="xsd:string"/>
+        <xsd:element name="sendSysCd" type="xsd:string"/>
+        <xsd:element name="frstSendSysCd" type="xsd:string"/>
+        <xsd:element name="sysCommTrtyPrepCntn" type="xsd:string"/>
+        <xsd:element name="eimsTgrmId" type="xsd:string"/>
+        <xsd:element name="eimsTgrmVerNo" type="xsd:string"/>
+        <xsd:element name="frwkTrdId" type="xsd:string"/>
+        <xsd:element name="rcvSysCd" type="xsd:string"/>
+        <xsd:element name="tieTgrmCd" type="xsd:string"/>
+        <xsd:element name="tieSrvGrpCd" type="xsd:string"/>
+        <xsd:element name="tieSrvNm" type="xsd:string"/>
+        <xsd:element name="scrnNo" type="xsd:string"/>
+        <xsd:element name="reqnRespGbcd" type="xsd:string"/>
+        <xsd:element name="syncProcGbcd" type="xsd:string"/>
+        <xsd:element name="trdRespCd" type="xsd:string"/>
+        <xsd:element name="pageNo" type="xsd:string"/>
+        <xsd:element name="pageRowCnt" type="xsd:string"/>
+        <xsd:element name="totRowCnt" type="xsd:string"/>
+        <xsd:element name="reqnDtm" type="xsd:string"/>
+        <xsd:element name="respDtm" type="xsd:string"/>
+        <xsd:element name="storeCd" type="xsd:string"/>
+        <xsd:element name="userId" type="xsd:string"/>
+        <xsd:element name="stdTgrmEndLettrVal" type="xsd:string"/>
+       
+      </xsd:sequence>
+          
+    </xsd:complexType>
+      
+  </xsd:element>
+  
+</xsd:schema>
+
