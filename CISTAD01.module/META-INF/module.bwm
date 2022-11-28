@@ -9,11 +9,7 @@
   <sca:property xmi:id="_OdLW4GvNEe2hXrWVH37Eyg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_OdLW4WvNEe2hXrWVH37Eyg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_OdLW4mvNEe2hXrWVH37Eyg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_HLJtwGxcEe28nsNW1rmVxg" name="/local/eimsPath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_JxgE8GxcEe28nsNW1rmVxg" name="/local/projPath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_RaRNIGxcEe28nsNW1rmVxg" name="/dev/eimsPath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_VwC6kGxcEe28nsNW1rmVxg" name="/dev/projPath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:component xmi:id="_N8QbIGvNEe2hXrWVH37Eyg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_N8QbIWvNEe2hXrWVH37Eyg" processName="cistad01.module.Provisioning"/>
+  <sca:component xmi:id="_5Ck9oG7ZEe2z9Zzz4dfcKw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_5Ck9oW7ZEe2z9Zzz4dfcKw" processName="cistad01.module.Process"/>
   </sca:component>
 </sca:composite>

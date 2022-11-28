@@ -165,21 +165,23 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//HcisCommon.smodule//PROJ_PATH</name>
-			<value>d:/HCIS/</value>
+			<value>/hcisnas/eai-data/eims/latest/</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>/hcisnas/eai-data/eims/latest/</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//HcisCommon.smodule//EIMS_PATH</name>
-			<value>d:/HCIS/eai-repo/</value>
+			<value>/hcisnas/eai-data/</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>/hcisnas/eai-data/</lookupValue>
 		</globalVariable>
 	</globalVariables>
 </repository>
