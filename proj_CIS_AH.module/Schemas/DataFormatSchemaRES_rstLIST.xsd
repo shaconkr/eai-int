@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat/f4711f70-ba93-47cb-ae98-812546d4a676" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.tibco.com/bw/palette/dataformat/f4711f70-ba93-47cb-ae98-812546d4a676">
+    
+  <xsd:element name="root" tibex:source="sr.index.dataFormatResource">
+        
+             <xsd:complexType>
+		        <xsd:sequence>
+		            <xsd:element name="regDtm" type="xsd:string"/>
+		            <xsd:element name="aprvlCareGbcd" type="xsd:string"/>
+		            <xsd:element name="aprvlCareAplyDt" type="xsd:string"/>
+		            <xsd:element name="aprvlCareEndDt" type="xsd:string"/>
+		            <xsd:element name="aprvlCareCntn" type="xsd:string"/>
+		            <xsd:element name="cnslStoreCd" type="xsd:string"/>
+		            <xsd:element name="conpsId" type="xsd:string"/>
+		        </xsd:sequence>
+            </xsd:complexType>
+      
+  </xsd:element>
+  
+</xsd:schema>
