@@ -102,7 +102,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//proj_CIS_AH.module//TAD_PORT</name>
-			<value>5905</value>
+			<value>25905</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
