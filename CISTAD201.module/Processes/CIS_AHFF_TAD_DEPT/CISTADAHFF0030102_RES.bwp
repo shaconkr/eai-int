@@ -2157,6 +2157,8 @@
             namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+3e7300d8-879a-4363-938d-b13c91a097a7+JavaInvokeActivityInput" prefix="tns13"/>
         <tibex:namespaceItem
             namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+179939d1-0856-49b8-abdf-c063b310e006+JavaInvokeActivityInput" prefix="tns14"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreceiver+295f77d8-6c6a-4493-b2a7-ae4d793e1463+ActivityOutput" prefix="tns15"/>
     </tibex:NamespaceRegistry>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
@@ -2174,7 +2176,7 @@
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/jms}JMSConnectionFactory" type="xsd:string">
             <bpws:from>
-                <bpws:literal>HCN_DEFT_CIS_DEFT.JMSConnectionResource</bpws:literal>
+                <bpws:literal>CIS_AHFF_TAD_DEFT.JMSConnectionResource</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable name="httpClientResource"
@@ -2265,6 +2267,7 @@
                     <bpws:sources>
                         <bpws:source linkName="TCPReceiverToReadTCPData"/>
                     </bpws:sources>
+                    <bpws:correlations/>
                     <tibex:eventSource>
                         <bwext:BWActivity
                             activityTypeID="bw.tcp.receive"
@@ -2296,7 +2299,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+3f3ecafe-ce50-4a2e-bdf1-8aa0571c7783+ActivityInput&quot; xmlns:tns15=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreceiver+295f77d8-6c6a-4493-b2a7-ae4d793e1463+ActivityOutput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;TCPReceiver&quot;/>&#xa;    &lt;xsl:template name=&quot;ReadTCPData-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:ActivityInput>&#xa;            &lt;tns6:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPReceiver/tns15:connection&quot;/>&#xa;            &lt;/tns6:connection>&#xa;        &lt;/tns6:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+3f3ecafe-ce50-4a2e-bdf1-8aa0571c7783+ActivityInput&quot; xmlns:tns15=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreceiver+295f77d8-6c6a-4493-b2a7-ae4d793e1463+ActivityOutput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;TCPReceiver&quot;/>&lt;xsl:template name=&quot;ReadTCPData-input&quot; match=&quot;/&quot;>&lt;tns6:ActivityInput>&lt;tns6:connection>&lt;xsl:value-of select=&quot;$TCPReceiver/tns15:connection&quot;/>&lt;/tns6:connection>&lt;/tns6:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.tcp.read"

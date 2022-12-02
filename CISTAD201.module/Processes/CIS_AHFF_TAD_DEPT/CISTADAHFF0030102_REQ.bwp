@@ -2025,7 +2025,7 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/tcpconnection}tcpconnection" type="xsd:string">
             <bpws:from>
-                <bpws:literal>HCN_DEFT_CIS_DEFT.HCN</bpws:literal>
+                <bpws:literal>CIS_AHFF_TAD_DEFT.TCPConnectionResource</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns18:ActivityInput"
@@ -2256,7 +2256,7 @@
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/tcp#//TCPOpenConnection"/>
-                                    <value localHost=""
+                                    <value localHost="10.108.199.40"
                                     tcpConnection="tcpConnectionProperty" xsi:type="tcpPalette:TCPOpenConnection"/>
                                 </properties>
                             </activityConfig>

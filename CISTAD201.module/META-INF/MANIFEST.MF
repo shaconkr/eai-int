@@ -5,8 +5,13 @@ Bundle-SymbolicName: CISTAD201.module
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
 Require-Bundle: HcisCommon.smodule;bundle-version="1.0.0"
+Import-Package: com.hcis.eai
 TIBCO-BW-Edition: bwe
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
 TIBCO-BW-Version: 6.8.1 HF1 V43 2022-08-11
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.module; filter:="(&(name=HcisCommon.smodule)(version=1.0.0))",
  com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
@@ -17,8 +22,5 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.palette; filter:="(name=bw.http)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.dataformat)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.jmsconnection)",
- com.tibco.bw.sharedresource.model; filter:="(name=bw.jndiconfiguration)"
-TIBCO-BW-ApplicationModule: META-INF/module.bwm
-TIBCO-BW-ConfigProfile: META-INF/default.substvar
-TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
-TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.jndiconfiguration)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.tcp)"
