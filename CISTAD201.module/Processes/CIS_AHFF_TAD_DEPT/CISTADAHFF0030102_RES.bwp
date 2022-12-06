@@ -2184,7 +2184,7 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
             <bpws:from>
-                <bpws:literal>HCN_DEFT_CIS_DEFT.HttpClientResource</bpws:literal>
+                <bpws:literal>CIS_AHFF_TAD_DEFT.HttpClientResource</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns15:RestActivityInput"
@@ -2193,10 +2193,6 @@
             name="InvokeRESTAPI" sca-bpel:internal="true"/>
         <bpws:variable element="ns17:ActivityErrorData"
             name="_error_InvokeRESTAPI" sca-bpel:internal="true"/>
-        <bpws:variable name="SpecFileProperty"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            tibex:propertySource="SpecFileProperty" type="xsd:string"/>
         <bpws:variable name="reqIFID" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes" type="xsd:string">
             <bpws:from>

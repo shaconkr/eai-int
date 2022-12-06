@@ -1993,7 +1993,7 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector}HttpConnectorConfiguration" type="xsd:string">
             <bpws:from>
-                <bpws:literal>HCN_DEFT_CIS_DEFT.HTTPConnectorResource</bpws:literal>
+                <bpws:literal>CIS_AHFF_TAD_DEFT.HTTPConnectorResource</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>

@@ -21,6 +21,8 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.palette; filter:="(name=bw.jms)",
  com.tibco.bw.palette; filter:="(name=bw.http)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.dataformat)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconnector)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.jmsconnection)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.jndiconfiguration)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.tcp)"
