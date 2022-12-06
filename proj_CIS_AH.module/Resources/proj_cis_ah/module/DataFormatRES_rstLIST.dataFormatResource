@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:f4711f70-ba93-47cb-ae98-812546d4a676="http://ns.tibco.com/bw/palette/dataformat/f4711f70-ba93-47cb-ae98-812546d4a676" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_EjjP4XBuEe2dFL0RmVW0Nw" name="proj_cis_ah.module.DataFormatRES_rstLIST" type="dataformat:DataFormat">
+  <imports xmi:id="_Ipt0AHBuEe2dFL0RmVW0Nw" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/f4711f70-ba93-47cb-ae98-812546d4a676"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_EjjP4nBuEe2dFL0RmVW0Nw" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="|" fillCharacter="Space" schemaElementQName="f4711f70-ba93-47cb-ae98-812546d4a676:root" lineLength="146" fieldOffsetsStr="regDtm(0,14)&#xA;aprvlCareGbcd(14,18)&#xA;aprvlCareAplyDt(18,26)&#xA;aprvlCareEndDt(26,34)&#xA;aprvlCareCntn(34,134)&#xA;cnslStoreCd(134,137)&#xA;conpsId(137,145)">
+    <fieldOffsets xmi:id="_NvM_wHBxEe2dFL0RmVW0Nw" name="regDtm" end="14"/>
+    <fieldOffsets xmi:id="_NvM_wXBxEe2dFL0RmVW0Nw" name="aprvlCareGbcd" start="14" end="18"/>
+    <fieldOffsets xmi:id="_NvM_wnBxEe2dFL0RmVW0Nw" name="aprvlCareAplyDt" start="18" end="26"/>
+    <fieldOffsets xmi:id="_NvM_w3BxEe2dFL0RmVW0Nw" name="aprvlCareEndDt" start="26" end="34"/>
+    <fieldOffsets xmi:id="_NvM_xHBxEe2dFL0RmVW0Nw" name="aprvlCareCntn" start="34" end="134"/>
+    <fieldOffsets xmi:id="_NvM_xXBxEe2dFL0RmVW0Nw" name="cnslStoreCd" start="134" end="137"/>
+    <fieldOffsets xmi:id="_NvM_xnBxEe2dFL0RmVW0Nw" name="conpsId" start="137" end="145"/>
+  </jndi:configuration>
+</jndi:namedResource>
