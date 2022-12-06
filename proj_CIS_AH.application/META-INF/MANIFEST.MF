@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Proj_CIS_AH Pplication
-Bundle-SymbolicName: proj_CIS_AH.pplication
+Bundle-Name: Proj_CIS_AH Application
+Bundle-SymbolicName: proj_CIS_AH.application
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-Version: 6.8.1 HF1 V43 2022-08-11
