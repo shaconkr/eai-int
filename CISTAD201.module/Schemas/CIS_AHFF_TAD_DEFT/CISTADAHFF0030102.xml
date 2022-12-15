@@ -8,7 +8,7 @@
     <parser> 
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
-    <record name="TAD_OutReq" class="map"> 
+    <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
       <field kor="작업구분값" name="wrkGbVal" position="0" length="2" type="string"/>  
       <field kor="회원명" name="memNm" position="2" length="100" type="string"/>  
       <field kor="카드회원번호" name="crdMemNo" position="102" length="9" type="string"/>  
@@ -24,7 +24,7 @@
     <parser>
       <property name="recordTerminator" value="\r\n"/>
     </parser>
-    <record name="TAD_OutRes" class="map">
+    <record name="TAD_OutRes" class="java.util.LinkedHashMap">
       <field kor="응답값" name="respVal" position="0" length="1" type="string"/>
       <field kor="메시지응답내용" name="msgRespCntn" position="1" length="1" type="string"/>
       <field kor="메시지응답값" name="msgRespVal" position="2" length="1" type="string"/>

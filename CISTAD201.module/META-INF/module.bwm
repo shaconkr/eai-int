@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_hzKSsHE0Ee2D6a4gCbgkRg" targetNamespace="http://tns.tibco.com/bw/composite/CISTAD201.module" name="CISTAD201.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
-  <sca:property xmi:id="_h4010HE0Ee2D6a4gCbgkRg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_h5I-4HE0Ee2D6a4gCbgkRg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_h5K0EHE0Ee2D6a4gCbgkRg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_h5MCMHE0Ee2D6a4gCbgkRg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_h5NQUHE0Ee2D6a4gCbgkRg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_h5PFgHE0Ee2D6a4gCbgkRg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_h5Q6sHE0Ee2D6a4gCbgkRg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_h5SI0HE0Ee2D6a4gCbgkRg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_h5T-AHE0Ee2D6a4gCbgkRg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:component xmi:id="_f77wc3HmEe27g6LzLmG3Eg" name="ComponentCISHCNCTJD0120104_RES" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_f77wdHHmEe27g6LzLmG3Eg" processName="CIS_AHFF_TAD_DEPT.CISTADAHFF0030102_REQ"/>
-  </sca:component>
-  <sca:component xmi:id="_m7PE4nHmEe27g6LzLmG3Eg" name="ComponentHCNCISCTJD0120103_REQ" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_m7PE43HmEe27g6LzLmG3Eg" processName="CIS_AHFF_TAD_DEPT.CISTADAHFF0030102_RES"/>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_gfx6kHw9Ee2gldSm5nKO_w" targetNamespace="http://tns.tibco.com/bw/composite/CISTAD201.module" name="CISTAD201.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_gw4RoHw9Ee2gldSm5nKO_w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gw4RoXw9Ee2gldSm5nKO_w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gxCCoHw9Ee2gldSm5nKO_w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gxCCoXw9Ee2gldSm5nKO_w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gxCConw9Ee2gldSm5nKO_w" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gxCCo3w9Ee2gldSm5nKO_w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gxLMkHw9Ee2gldSm5nKO_w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gxLMkXw9Ee2gldSm5nKO_w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gxLMknw9Ee2gldSm5nKO_w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_4yT04Hw-Ee2gldSm5nKO_w" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_4yT04Xw-Ee2gldSm5nKO_w" processName="Activator"/>
   </sca:component>
 </sca:composite>
