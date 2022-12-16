@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="CISTADAHFF0030102_OutReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
+      <field kor="작업구분값" name="wrkGbVal" position="0" length="2" type="string"/>  
+      <field kor="회원명" name="memNm" position="2" length="100" type="string"/>  
+      <field kor="카드회원번호" name="crdMemNo" position="102" length="9" type="string"/>  
+      <field kor="승인주의구분코드" name="aprvlCareGbcd" position="111" length="4" type="string"/>  
+      <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="115" length="8" type="string"/>  
+      <field kor="승인주의종료일자" name="aprvlCareEndDt" position="123" length="8" type="string"/>  
+      <field kor="승인주의내용" name="aprvlCareCntn" position="131" length="100" type="string"/>  
+      <field kor="상담점코드" name="cnslStoreCd" position="231" length="3" type="string"/>  
+      <field kor="상담자ID" name="conpsId" position="234" length="8" type="string"/> 
+    </record> 
+  </stream>  
+  <stream kor="" name="CISTADAHFF0030102_OutRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="TAD_OutRes" class="java.util.LinkedHashMap">
+      <field kor="응답값" name="respVal" position="0" length="1" type="string"/>
+      <field kor="메시지응답내용" name="msgRespCntn" position="1" length="1" type="string"/>
+      <field kor="메시지응답값" name="msgRespVal" position="2" length="1" type="string"/>
+      <field kor="결과건수" name="rstRowcount" position="3" length="5" type="long"/>
+      <segment name="rstList" collection="list" minOccurs="1" maxOccurs="unbounded" class="map">
+        <field kor="등록일시" name="regDtm" position="0" length="14" type="string"/>
+        <field kor="승인주의구분코드" name="aprvlCareGbcd" position="14" length="4" type="string"/>
+        <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="18" length="8" type="string"/>
+        <field kor="승인주의종료일자" name="aprvlCareEndDt" position="26" length="8" type="string"/>
+        <field kor="승인주의내용" name="aprvlCareCntn" position="34" length="100" type="string"/>
+        <field kor="상담점코드" name="cnslStoreCd" position="134" length="3" type="string"/>
+        <field kor="상담자ID" name="conpsId" position="137" length="8" type="string"/>
+      </segment>
+    </record>
+  </stream>
+</beanio>
