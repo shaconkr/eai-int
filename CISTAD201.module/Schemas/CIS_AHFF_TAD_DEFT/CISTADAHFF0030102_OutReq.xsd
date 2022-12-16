@@ -1,4 +1,5 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHFF0030102" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHFF0030102">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:hdr="http://schema.hcis.com/json" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHFF0030102" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHFF0030102">
+    <import namespace="http://schema.hcis.com/json" schemaLocation="file://../../../../eai-com/HcisCommon.smodule/Schemas/TADHeader.xsd"/>
     <complexType name="CISTADAHFF0030102_OutReq">
         <sequence>
             <element e:kor="작업구분값" e:length="2" e:padder="SpaceRight" name="wrkGbVal" nillable="true" type="string"/>
@@ -12,5 +13,11 @@
             <element e:kor="상담자ID" e:length="8" e:padder="SpaceRight" name="conpsId" nillable="true" type="string"/>
         </sequence>
     </complexType>
-    <element name="root" type="ns:CISTADAHFF0030102_OutReq"/>
+    <complexType name="rootType">
+        <sequence>
+            <element name="header" type="hdr:TADHeaderType"/>
+            <element name="data" type="ns:CISTADAHFF0030102_OutReq"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:rootType"/>
 </schema>

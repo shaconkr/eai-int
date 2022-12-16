@@ -1,5 +1,5 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:hdr="http://schema.hcis.com/json" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHFF0030102" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHFF0030102">
-    <import namespace="http://schema.hcis.com/json" schemaLocation="classpath://Schemas/HcisStdHeader.xsd"/>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://schema.hcis.com/xsd" xmlns:hdr="http://schema.hcis.com/json" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHFF0030102" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHFF0030102">
+    <import namespace="http://schema.hcis.com/json" schemaLocation="file://../../../../eai-com/HcisCommon.smodule/Schemas/CISHeader.xsd"/>
     <complexType name="CISTADAHFF0030102_InReq">
         <sequence>
             <element e:kor="작업구분값" e:length="2" e:padder="SpaceRight" name="wrkGbVal" nillable="true" type="string"/>
@@ -15,7 +15,7 @@
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="hdr:hcisHeaderType"/>
+            <element name="header" type="hdr:CISHeaderType"/>
             <element name="data" type="ns:CISTADAHFF0030102_InReq"/>
         </sequence>
     </complexType>
