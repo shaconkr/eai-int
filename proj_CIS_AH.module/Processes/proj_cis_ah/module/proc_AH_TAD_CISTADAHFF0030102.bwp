@@ -22,6 +22,37 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="CallProcess">
+            <endingVariables>
+                <variable>CallProcess-input</variable>
+            </endingVariables>
+        </task>
+        <task name="ReplytoJMSMessage">
+            <endingVariables>
+                <variable>ReplytoJMSMessage-input</variable>
+                <variable>CallProcess</variable>
+            </endingVariables>
+        </task>
+        <task name="ReplytoJMSMessage_Error">
+            <endingVariables>
+                <variable>ReplytoJMSMessage_Error-input</variable>
+                <variable>RenderJSON</variable>
+            </endingVariables>
+        </task>
+        <task name="RenderJSON">
+            <endingVariables>
+                <variable>RenderJSON-input</variable>
+                <variable>ParseJSON</variable>
+            </endingVariables>
+        </task>
+        <task name="ParseJSON">
+            <endingVariables>
+                <variable>ParseJSON-input</variable>
+                <variable>JMSReceiveMessage</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
