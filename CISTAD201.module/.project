@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>HcisCommon.smodule</project>
-		<project>TAD.module</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
