@@ -9,15 +9,49 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <field kor="작업구분값" name="wrkGbVal" position="0" length="2" type="string"/>  
-      <field kor="회원명" name="memNm" position="2" length="100" type="string"/>  
-      <field kor="카드회원번호" name="crdMemNo" position="102" length="9" type="string"/>  
-      <field kor="승인주의구분코드" name="aprvlCareGbcd" position="111" length="4" type="string"/>  
-      <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="115" length="8" type="string"/>  
-      <field kor="승인주의종료일자" name="aprvlCareEndDt" position="123" length="8" type="string"/>  
-      <field kor="승인주의내용" name="aprvlCareCntn" position="131" length="100" type="string"/>  
-      <field kor="상담점코드" name="cnslStoreCd" position="231" length="3" type="string"/>  
-      <field kor="상담자ID" name="conpsId" position="234" length="8" type="string"/> 
+      <segment name="header" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="전체전문길이" name="totTgrmLen" position="0" length="8" type="integer"/>  
+        <field kor="헤더길이" name="hdrLen" position="8" length="8" type="integer"/>  
+        <field kor="전문형식코드" name="tgrmFrmCd" position="16" length="1" type="string"/>  
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" position="17" length="1" type="string"/>  
+        <field kor="IP주소" name="ipAdr" position="18" length="40" type="string"/>  
+        <field kor="GUID" name="guid" position="58" length="38" type="string"/>  
+        <field kor="진행번호" name="prgrNo" position="96" length="3" type="integer"/>  
+        <field kor="최초GUID" name="frstGuid" position="99" length="38" type="string"/>  
+        <field kor="전송시스템코드" name="sendSysCd" position="137" length="3" type="string"/>  
+        <field kor="최초전송시스템코드" name="frstSendSysCd" position="140" length="3" type="string"/>  
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" position="143" length="21" type="string"/>  
+        <field kor="EIMS전문ID" name="eimsTgrmId" position="164" length="17" type="string"/>  
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" position="181" length="3" type="string"/>  
+        <field kor="프래임워크거래ID" name="frwkTrdId" position="184" length="12" type="string"/>  
+        <field kor="수신시스템코드" name="rcvSysCd" position="196" length="3" type="string"/>  
+        <field kor="연계전문코드" name="tieTgrmCd" position="199" length="10" type="string"/>  
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" position="209" length="2" type="string"/>  
+        <field kor="연계서비스명" name="tieSrvNm" position="211" length="30" type="string"/>  
+        <field kor="화면번호" name="scrnNo" position="241" length="20" type="string"/>  
+        <field kor="요청응답구분코드" name="reqnRespGbcd" position="261" length="1" type="string"/>  
+        <field kor="동기처리구분코드" name="syncProcGbcd" position="262" length="1" type="string"/>  
+        <field kor="거래응답코드" name="trdRespCd" position="263" length="1" type="string"/>  
+        <field kor="페이지번호" name="pageNo" position="264" length="9" type="integer"/>  
+        <field kor="페이지행건수" name="pageRowCnt" position="273" length="9" type="integer"/>  
+        <field kor="전체레코드건수" name="totRowCnt" position="282" length="9" type="integer"/>  
+        <field kor="다음페이지여부" name="nxtPageYn" position="291" length="1" type="string"/>  
+        <field kor="요청일시" name="reqnDtm" position="292" length="17" type="string"/>  
+        <field kor="응답일시" name="respDtm" position="309" length="17" type="string"/>  
+        <field kor="점코드" name="storeCd" position="326" length="3" type="string"/>  
+        <field kor="사용자ID" name="userId" position="329" length="8" type="string"/> 
+      </segment>  
+      <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="작업구분값" name="wrkGbVal" position="337" length="2" type="string"/>  
+        <field kor="회원명" name="memNm" position="339" length="100" type="string"/>  
+        <field kor="카드회원번호" name="crdMemNo" position="439" length="9" type="string"/>  
+        <field kor="승인주의구분코드" name="aprvlCareGbcd" position="448" length="4" type="string"/>  
+        <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="452" length="8" type="string"/>  
+        <field kor="승인주의종료일자" name="aprvlCareEndDt" position="460" length="8" type="string"/>  
+        <field kor="승인주의내용" name="aprvlCareCntn" position="468" length="100" type="string"/>  
+        <field kor="상담점코드" name="cnslStoreCd" position="568" length="3" type="string"/>  
+        <field kor="상담자ID" name="conpsId" position="571" length="8" type="string"/> 
+      </segment> 
     </record> 
   </stream>  
   <stream kor="" name="CISTADAHFF0030102_OutRes" format="fixedlength">
@@ -25,18 +59,52 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <field kor="응답값" name="respVal" position="0" length="1" type="string"/>
-      <field kor="메시지응답내용" name="msgRespCntn" position="1" length="1" type="string"/>
-      <field kor="메시지응답값" name="msgRespVal" position="2" length="1" type="string"/>
-      <field kor="결과건수" name="rstRowcount" position="3" length="5" type="long"/>
-      <segment name="rstList" collection="list" minOccurs="1" maxOccurs="unbounded" class="map">
-        <field kor="등록일시" name="regDtm" position="0" length="14" type="string"/>
-        <field kor="승인주의구분코드" name="aprvlCareGbcd" position="14" length="4" type="string"/>
-        <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="18" length="8" type="string"/>
-        <field kor="승인주의종료일자" name="aprvlCareEndDt" position="26" length="8" type="string"/>
-        <field kor="승인주의내용" name="aprvlCareCntn" position="34" length="100" type="string"/>
-        <field kor="상담점코드" name="cnslStoreCd" position="134" length="3" type="string"/>
-        <field kor="상담자ID" name="conpsId" position="137" length="8" type="string"/>
+      <segment name="header" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="전체전문길이" name="totTgrmLen" position="579" length="8" type="integer"/>
+        <field kor="헤더길이" name="hdrLen" position="587" length="8" type="integer"/>
+        <field kor="전문형식코드" name="tgrmFrmCd" position="595" length="1" type="string"/>
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" position="596" length="1" type="string"/>
+        <field kor="IP주소" name="ipAdr" position="597" length="40" type="string"/>
+        <field kor="GUID" name="guid" position="637" length="38" type="string"/>
+        <field kor="진행번호" name="prgrNo" position="675" length="3" type="integer"/>
+        <field kor="최초GUID" name="frstGuid" position="678" length="38" type="string"/>
+        <field kor="전송시스템코드" name="sendSysCd" position="716" length="3" type="string"/>
+        <field kor="최초전송시스템코드" name="frstSendSysCd" position="719" length="3" type="string"/>
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" position="722" length="21" type="string"/>
+        <field kor="EIMS전문ID" name="eimsTgrmId" position="743" length="17" type="string"/>
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" position="760" length="3" type="string"/>
+        <field kor="프래임워크거래ID" name="frwkTrdId" position="763" length="12" type="string"/>
+        <field kor="수신시스템코드" name="rcvSysCd" position="775" length="3" type="string"/>
+        <field kor="연계전문코드" name="tieTgrmCd" position="778" length="10" type="string"/>
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" position="788" length="2" type="string"/>
+        <field kor="연계서비스명" name="tieSrvNm" position="790" length="30" type="string"/>
+        <field kor="화면번호" name="scrnNo" position="820" length="20" type="string"/>
+        <field kor="요청응답구분코드" name="reqnRespGbcd" position="840" length="1" type="string"/>
+        <field kor="동기처리구분코드" name="syncProcGbcd" position="841" length="1" type="string"/>
+        <field kor="거래응답코드" name="trdRespCd" position="842" length="1" type="string"/>
+        <field kor="페이지번호" name="pageNo" position="843" length="9" type="integer"/>
+        <field kor="페이지행건수" name="pageRowCnt" position="852" length="9" type="integer"/>
+        <field kor="전체레코드건수" name="totRowCnt" position="861" length="9" type="integer"/>
+        <field kor="다음페이지여부" name="nxtPageYn" position="870" length="1" type="string"/>
+        <field kor="요청일시" name="reqnDtm" position="871" length="17" type="string"/>
+        <field kor="응답일시" name="respDtm" position="888" length="17" type="string"/>
+        <field kor="점코드" name="storeCd" position="905" length="3" type="string"/>
+        <field kor="사용자ID" name="userId" position="908" length="8" type="string"/>
+      </segment>
+      <segment name="data" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="응답값" name="respVal" position="916" length="1" type="string"/>
+        <field kor="메시지응답내용" name="msgRespCntn" position="917" length="1" type="string"/>
+        <field kor="메시지응답값" name="msgRespVal" position="918" length="1" type="string"/>
+        <field kor="결과건수" name="rstRowcount" position="919" length="5" type="long"/>
+        <segment name="rstList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
+          <field kor="등록일시" name="regDtm" position="924" length="14" type="string"/>
+          <field kor="승인주의구분코드" name="aprvlCareGbcd" position="938" length="4" type="string"/>
+          <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="942" length="8" type="string"/>
+          <field kor="승인주의종료일자" name="aprvlCareEndDt" position="950" length="8" type="string"/>
+          <field kor="승인주의내용" name="aprvlCareCntn" position="958" length="100" type="string"/>
+          <field kor="상담점코드" name="cnslStoreCd" position="1058" length="3" type="string"/>
+          <field kor="상담자ID" name="conpsId" position="1061" length="8" type="string"/>
+        </segment>
       </segment>
     </record>
   </stream>
