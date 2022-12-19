@@ -1,0 +1,12 @@
+diff a/CISTAD201.module/build.properties b/CISTAD201.module/build.properties	(rejected hunks)
+@@ -6,7 +6,8 @@
+                Resources/,\
+                Schemas/,\
+                Service Descriptors/,\
+-               Tests/,\
+                bin/,\
+-               lib/
++               lib/,\
++               CISTAD201.module.iml,\
++               Tests/
+ source.. = src/
