@@ -9,7 +9,8 @@
   <sca:property xmi:id="_gxLMkHw9Ee2gldSm5nKO_w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_gxLMkXw9Ee2gldSm5nKO_w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_gxLMknw9Ee2gldSm5nKO_w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:component xmi:id="_4yT04Hw-Ee2gldSm5nKO_w" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_4yT04Xw-Ee2gldSm5nKO_w" processName="Activator"/>
+  <sca:property xmi:id="_mF8tQH98Ee2UJtrw6yWAQQ" name="PROJ_PATH" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_lVJ4kH9zEe2UJtrw6yWAQQ" name="ComponentCISTADAHFF0030102_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lVJ4kX9zEe2UJtrw6yWAQQ" processName="CIS_AHFF_TAD_DEFT.CISTADAHFF0030102_Main"/>
   </sca:component>
 </sca:composite>
