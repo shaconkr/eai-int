@@ -1346,7 +1346,7 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/tcpconnection}tcpconnection" type="xsd:string">
             <bpws:from>
-                <bpws:literal>CIS_AHFF_TAD_DEFT.TCPConnection_TAD</bpws:literal>
+                <bpws:literal>CISTADAHFF.TCPConnection_TAD</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns26:JavaInvokeActivityInput"
