@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030102="http://schema.hcis.com/xsd/CISTADAHFF0030102" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_cge8sIAdEe2Bi-_l967z8Q" name="CISTADAHFF.CISTADAHFF0030102.CISTADAHFF0030102_OutReq_data" type="dataformat:DataFormat">
-  <imports xmi:id="_cge8sYAdEe2Bi-_l967z8Q" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030102_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030102"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_cge8soAdEe2Bi-_l967z8Q" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030102:main" lineLength="242" fieldOffsetsStr="wrkGbVal(0,2)&#xA;memNm(2,102)&#xA;crdMemNo(102,111)&#xA;aprvlCareGbcd(111,115)&#xA;aprvlCareAplyDt(115,123)&#xA;aprvlCareEndDt(123,131)&#xA;aprvlCareCntn(131,231)&#xA;cnslStoreCd(231,234)&#xA;conpsId(234,242)">
-    <fieldOffsets xmi:id="_cge8s4AdEe2Bi-_l967z8Q" name="wrkGbVal" end="2" kor="작업구분값" type="string"/>
-    <fieldOffsets xmi:id="_cge8tIAdEe2Bi-_l967z8Q" name="memNm" start="2" end="102" kor="회원명" type="string"/>
-    <fieldOffsets xmi:id="_cge8tYAdEe2Bi-_l967z8Q" name="crdMemNo" start="102" end="111" kor="카드회원번호" type="string"/>
-    <fieldOffsets xmi:id="_cge8toAdEe2Bi-_l967z8Q" name="aprvlCareGbcd" start="111" end="115" kor="승인주의구분코드" type="string"/>
-    <fieldOffsets xmi:id="_cge8t4AdEe2Bi-_l967z8Q" name="aprvlCareAplyDt" start="115" end="123" kor="승인주의적용일자" type="string"/>
-    <fieldOffsets xmi:id="_cge8uIAdEe2Bi-_l967z8Q" name="aprvlCareEndDt" start="123" end="131" kor="승인주의종료일자" type="string"/>
-    <fieldOffsets xmi:id="_cge8uYAdEe2Bi-_l967z8Q" name="aprvlCareCntn" start="131" end="231" kor="승인주의내용" type="string"/>
-    <fieldOffsets xmi:id="_cge8uoAdEe2Bi-_l967z8Q" name="cnslStoreCd" start="231" end="234" kor="상담점코드" type="string"/>
-    <fieldOffsets xmi:id="_cge8u4AdEe2Bi-_l967z8Q" name="conpsId" start="234" end="242" kor="상담자ID" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030102="http://schema.hcis.com/xsd/CISTADAHFF0030102" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHFF/CISTADAHFF0030102.CISTADAHFF0030102_OutReq_data" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030102_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030102"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030102:main" lineLength="242" fieldOffsetsStr="wrkGbVal(0,2)&#xA;memNm(2,102)&#xA;crdMemNo(102,111)&#xA;aprvlCareGbcd(111,115)&#xA;aprvlCareAplyDt(115,123)&#xA;aprvlCareEndDt(123,131)&#xA;aprvlCareCntn(131,231)&#xA;cnslStoreCd(231,234)&#xA;conpsId(234,242)">
+    <fieldOffsets kor="작업구분값" type="string" name="wrkGbVal" start="0" end="2"/>
+    <fieldOffsets kor="회원명" type="string" name="memNm" start="2" end="102"/>
+    <fieldOffsets kor="카드회원번호" type="string" name="crdMemNo" start="102" end="111"/>
+    <fieldOffsets kor="승인주의구분코드" type="string" name="aprvlCareGbcd" start="111" end="115"/>
+    <fieldOffsets kor="승인주의적용일자" type="string" name="aprvlCareAplyDt" start="115" end="123"/>
+    <fieldOffsets kor="승인주의종료일자" type="string" name="aprvlCareEndDt" start="123" end="131"/>
+    <fieldOffsets kor="승인주의내용" type="string" name="aprvlCareCntn" start="131" end="231"/>
+    <fieldOffsets kor="상담점코드" type="string" name="cnslStoreCd" start="231" end="234"/>
+    <fieldOffsets kor="상담자ID" type="string" name="conpsId" start="234" end="242"/>
   </jndi:configuration>
 </jndi:namedResource>
