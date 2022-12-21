@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:tcpconnection="http://ns.tibco.com/bw/palette/tcpconnection" xmi:id="__c7n4XxAEe2gldSm5nKO_w" name="tad.module.DEFT" type="tcpconnection:tcpconnection">
-  <jndi:description>TAD  DEFT  어플리케이션별 TCP Connection</jndi:description>
-  <jndi:configuration xsi:type="tcpconnection:TCPConnection" xmi:id="__dCVkHxAEe2gldSm5nKO_w" host="localhost" port="5001" whenExhaustedAction="Block"/>
-</jndi:namedResource>
