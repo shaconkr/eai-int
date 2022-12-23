@@ -1071,6 +1071,13 @@
                 </choice>
             </complexType>
         </schema>
+        <schema elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/tnt/utilitySchema"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/tnt/utilitySchema">
+            <simpleType name="nativeJavaObjectKey">
+                <restriction base="string"/>
+            </simpleType>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="javal"
         createdOn="Thu Dec 15 15:00:46 KST 2022" description=""
@@ -1208,7 +1215,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="271"
+                                    x="341"
                                     xsi:type="notation:Bounds" y="-8"/>
                                     </children>
                                     <children type="4002 bw.tcp.tcpopenconnection">
@@ -1393,7 +1400,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="164"
+                                    x="195"
                                     xsi:type="notation:Bounds" y="-8"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1500,7 +1507,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="55"
+                                    x="82"
                                     xsi:type="notation:Bounds" y="-8"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1533,7 +1540,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.11"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="-43"
+                                    x="-22"
                                     xsi:type="notation:Bounds" y="-8"/>
                                     </children>
                                     <children type="4002 bw.tcp.read">
@@ -1823,7 +1830,7 @@
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.0"/>
             <bendpoints
-                points="[-10, 25, 158, -109]$[-10, 70, 158, -64]$[-298, 70, -130, -64]$[-298, 150, -130, 16]$[-192, 150, -24, 16]" xsi:type="notation:RelativeBendpoints"/>
+                points="[25, 20, 485, -114]$[83, 20, 543, -114]$[83, 70, 543, -64]$[-517, 70, -57, -64]$[-517, 150, -57, 16]$[-484, 150, -24, 16]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
@@ -1903,7 +1910,7 @@
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.7"/>
             <bendpoints
-                points="[0, 25, 714, -83]$[0, 68, 714, -40]$[-710, 68, 4, -40]$[-710, 107, 4, -1]" xsi:type="notation:RelativeBendpoints"/>
+                points="[25, 13, 733, -95]$[73, 13, 781, -95]$[73, 68, 781, -40]$[-706, 68, 2, -40]$[-706, 107, 2, -1]" xsi:type="notation:RelativeBendpoints"/>
             <targetAnchor id="(0.46938775510204084,0.02040816326530612)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges

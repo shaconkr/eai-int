@@ -8,14 +8,13 @@ Bundle-Vendor: TIBCO Software Inc.
 Export-Package: CISTADAHFF,
  com.hcis.eai
 Require-Bundle: HcisCommon.smodule;bundle-version="1.0.0"
-TIBCO-BW-Version: 6.9.0 V26 2022-11-02
-Import-Package: com.hcis.eai,
- com.shacon.hcis
+Import-Package: com.hcis.eai,com.shacon.hcis
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
-Bundle-RequiredExecutionEnvironment: JavaSE-11
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
 TIBCO-BW-Edition: bwe
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.module; filter:="(&(name=HcisCommon.smodule)(version=1.0.0))",
  com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
@@ -25,4 +24,4 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.dataformat)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.java)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.tcp)"
-TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-Version: 6.9.0 V26 2022-11-02
