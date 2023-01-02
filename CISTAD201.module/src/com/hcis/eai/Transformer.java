@@ -1,6 +1,6 @@
 package com.hcis.eai;
 
-import com.shacon.hcis.Transformer2;
+import kr.shacon.format.Transformer2;
 
 /**
  * Module 내의 classpath 만 적용됨으로 beanio xml 를 loading 하기위해 가져옴. 

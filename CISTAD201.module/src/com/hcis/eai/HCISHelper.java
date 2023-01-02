@@ -2,7 +2,7 @@ package com.hcis.eai;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
-import com.shacon.hcis.HCISHelperAnc;
+import kr.shacon.format.*;
 
 public class HCISHelper extends HCISHelperAnc {
 
