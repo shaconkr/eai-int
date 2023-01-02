@@ -6,9 +6,9 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: TIBCO Software Inc.
 Export-Package: CISTADAHFF,
- com.hcis.eai
+ com.hcis.eai.module
 TIBCO-BW-Version: 6.9.0 V26 2022-11-02
-Import-Package: com.hcis.eai,
+Import-Package: com.hcis.eai.common,
  kr.shacon.format
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
 Bundle-RequiredExecutionEnvironment: JavaSE-11
