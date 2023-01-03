@@ -2306,7 +2306,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\edifact-48.png"
                                     isNew="true"
                                     isNewActivity="true"
@@ -2454,7 +2454,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\json-48.png"
                                     isNew="true"
                                     isNewActivity="true"
@@ -2505,7 +2505,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\change-48.png"
                                     isNew="true"
                                     isNewActivity="true"
@@ -2549,7 +2549,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\change-48.png"
                                     isNew="true"
                                     isNewActivity="true"
@@ -2623,7 +2623,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.shacon.hcis.HCISHelperAnc"
+                                    className="com.shacon.hcis.common.HCISHelperAnc"
                                     icon="HcisCommon.smodule\Resources\icons\edit-node-48.png"
                                     isNew="true"
                                     isNewActivity="true"
@@ -2667,7 +2667,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\outgoing-data-48.png"
                                     isNew="true"
                                     isNewActivity="true"
@@ -2738,7 +2738,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\binary-code-48.png"
                                     isNew="true"
                                     isNewActivity="true"
@@ -2782,7 +2782,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     isNew="true"
                                     isNewActivity="true"
                                     javaGlobalInstance="HcisModuleHelper"
@@ -2909,7 +2909,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     isNew="true"
                                     isNewActivity="true"
                                     javaGlobalInstance="HcisModuleHelper"
@@ -2951,7 +2951,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.shacon.hcis.HCISHelperAnc"
+                                    className="com.shacon.hcis.common.HCISHelperAnc"
                                     icon="HcisCommon.smodule\Resources\icons\edit-node-48.png"
                                     isNew="true"
                                     isNewActivity="true"
