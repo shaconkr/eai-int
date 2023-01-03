@@ -2,7 +2,7 @@
 <bpws:process exitOnStandardFault="no"
     name="CIS_AHFF_TAD_DEFT.CISTADAHFF0030102_Main"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20221220165322"
+    targetNamespace="http://xmlns.example.com/20230102160935"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
@@ -215,17 +215,6 @@
             </xs:complexType>
             <xs:element name="TimerOutputSchema" type="tns:TimerOutputSchemaType"/>
         </xs:schema>
-        <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/file/v2"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/file/v2">
-            <complexType name="ReadActivityInputClass">
-                <sequence>
-                    <element maxOccurs="1" minOccurs="0" name="fileName" type="string"/>
-                    <element maxOccurs="1" minOccurs="0" name="encoding" type="string"/>
-                </sequence>
-            </complexType>
-            <element name="ReadActivityInputClass" type="tns:ReadActivityInputClass"/>
-        </schema>
         <schema
             targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/file"
             xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/file">
@@ -586,6 +575,17 @@
             </complexType>
             <element name="ReadFileFaultData" type="tns:ReadFileFaultDataType"/>
         </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/file/v2"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/file/v2">
+            <complexType name="ReadActivityInputClass">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="fileName" type="string"/>
+                    <element maxOccurs="1" minOccurs="0" name="encoding" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ReadActivityInputClass" type="tns:ReadActivityInputClass"/>
+        </schema>
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.file.read"
             xmlns="http://www.w3.org/2001/XMLSchema"
@@ -602,7 +602,7 @@
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="false" createdBy="javal"
-        createdOn="Tue Dec 20 16:53:22 KST 2022" description=""
+        createdOn="Mon Jan 02 16:09:35 KST 2023" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="6.9.0 V26 2022-11-02" scalable="true"
         singleton="true" stateless="false" type="IT"/>
@@ -663,8 +663,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="8"
-                                    xsi:type="notation:Bounds" y="82"/>
+                                    x="10"
+                                    xsi:type="notation:Bounds" y="97"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.callprocess">
                                     <children type="4017">
@@ -696,8 +696,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="336"
-                                    xsi:type="notation:Bounds" y="93"/>
+                                    x="324"
+                                    xsi:type="notation:Bounds" y="97"/>
                                     </children>
                                     <children type="4002 bw.file.read">
                                     <children type="4017">
@@ -729,8 +729,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="181"
-                                    xsi:type="notation:Bounds" y="94"/>
+                                    x="170"
+                                    xsi:type="notation:Bounds" y="97"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -773,7 +773,7 @@
             </children>
             <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="860" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="317" width="860" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -786,7 +786,7 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[25, 2, -148, -10]$[149, 10, -24, -2]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, 0, -289, 0]$[290, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
@@ -797,7 +797,7 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.1"/>
-            <bendpoints points="[25, -1, -130, 0]$[131, 0, -24, 1]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -830,16 +830,16 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="TimerToReadFile" tibex:linkType="SUCCESS"/>
+                <bpws:link name="TimerToCallProcess" tibex:linkType="SUCCESS"/>
                 <bpws:link name="ReadFileToCallProcess" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="60" name="Timer"
-                    tibex:xpdlId="6a5c2f2d-ab75-4694-bbda-46b810d7e3e5"
+                    tibex:xpdlId="0f0c61b9-1667-4d3d-9d98-4243cede4ccb"
                     variable="Timer" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="TimerToReadFile"/>
+                        <bpws:source linkName="TimerToCallProcess"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <bwext:BWActivity
@@ -852,10 +852,10 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Timer"/>
                                     <value
-                                    endTime="2022-12-20T16:53:31.484+0900"
+                                    endTime="2023-01-02T16:10:04.196+0900"
                                     intervalUnit="Second"
                                     runOnce="true"
-                                    startTime="2022-12-20T16:53:31.484+0900"
+                                    startTime="2023-01-02T16:10:04.196+0900"
                                     timeInterval="1" xsi:type="generalactivities:Timer"/>
                                 </properties>
                             </activityConfig>
@@ -866,7 +866,7 @@
             <bpws:extensionActivity>
                 <tibex:extActivity inputVariable="CallProcess-input"
                     name="CallProcess" outputVariable="CallProcess"
-                    tibex:xpdlId="0750e92b-423c-4627-8590-8c84c9d26f9b"
+                    tibex:xpdlId="2989cd2f-feaf-42a4-a3c9-0ccaa3179455"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="ReadFileToCallProcess"/>
@@ -882,16 +882,16 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="ReadFile-input"
                     name="ReadFile" outputVariable="ReadFile"
-                    tibex:xpdlId="e689d420-f38d-4fac-bef1-1bb2799b2472" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="196f4f0f-d4f2-462d-a23c-2143548b67b1" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="TimerToReadFile"/>
+                        <bpws:target linkName="TimerToCallProcess"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="ReadFileToCallProcess"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/file/v2&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;ReadFile-input&quot; match=&quot;/&quot;>&lt;tns:ReadActivityInputClass>&lt;fileName>&lt;xsl:value-of select=&quot;&amp;quot;C:/Temp/CIS_AH.json&amp;quot;&quot;/>&lt;/fileName>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;UTF-8&amp;quot;&quot;/>&lt;/encoding>&lt;/tns:ReadActivityInputClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/file/v2&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;ReadFile-input&quot; match=&quot;/&quot;>&lt;tns:ReadActivityInputClass>&lt;fileName>&lt;xsl:value-of select=&quot;&amp;quot;C:\Temp\CIS_AH.json&amp;quot;&quot;/>&lt;/fileName>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;UTF-8&amp;quot;&quot;/>&lt;/encoding>&lt;/tns:ReadActivityInputClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.file.read"
@@ -901,7 +901,9 @@
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/file#//ReadFile"/>
-                                    <value readAs="text" xsi:type="file:ReadFile"/>
+                                    <value
+                                    fileName="C:\Temp\CIS_AH.json"
+                                    readAs="text" xsi:type="file:ReadFile"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>

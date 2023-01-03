@@ -3,6 +3,7 @@
 	<name>CISTAD201.module</name>
 	<comment></comment>
 	<projects>
+		<project>CSPI_Library</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
