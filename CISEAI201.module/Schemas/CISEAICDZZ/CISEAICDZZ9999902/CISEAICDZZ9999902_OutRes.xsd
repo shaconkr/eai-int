@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISEAICDZZ9999902" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CISEAICDZZ9999902">
+    <complexType name="CISEAICDZZ9999902_OutRes">
+        <sequence>
+            <element e:kor="파일전송완료여부" e:length="1" e:padder="SpaceRight" name="fileSendCmptYn" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:CISEAICDZZ9999902_OutRes"/>
+</schema>

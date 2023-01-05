@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0020101="http://schema.hcis.com/xsd/CISTADAHHE0020101" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHE/CISTADAHHE0020101.CISTADAHHE0020101_OutReq_data_srchGroup" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0020101_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020101"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0020101:main" lineLength="49" fieldOffsetsStr="wrkGbVal(0,2)&#xA;crdNo(2,18)&#xA;qryStrtDt(18,26)&#xA;qryEndDt(26,34)&#xA;aprvlRstCsfCd(34,35)&#xA;nxtSrchKey(35,49)">
+    <fieldOffsets kor="작업구분값" type="string" name="wrkGbVal" start="0" end="2"/>
+    <fieldOffsets kor="카드번호" type="string" name="crdNo" start="2" end="18"/>
+    <fieldOffsets kor="조회시작일자" type="string" name="qryStrtDt" start="18" end="26"/>
+    <fieldOffsets kor="조회종료일자" type="string" name="qryEndDt" start="26" end="34"/>
+    <fieldOffsets kor="승인결과분류코드" type="string" name="aprvlRstCsfCd" start="34" end="35"/>
+    <fieldOffsets kor="다음검색KEY" type="string" name="nxtSrchKey" start="35" end="49"/>
+  </jndi:configuration>
+</jndi:namedResource>

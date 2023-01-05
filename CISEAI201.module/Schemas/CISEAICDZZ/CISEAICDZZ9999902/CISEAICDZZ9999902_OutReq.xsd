@@ -1,0 +1,17 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISEAICDZZ9999902" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CISEAICDZZ9999902">
+    <complexType name="CISEAICDZZ9999902_OutReq">
+        <sequence>
+            <element e:kor="인터페이스ID" e:length="17" e:padder="SpaceRight" name="intId" nillable="true" type="string"/>
+            <element e:kor="소스시스템코드" e:length="3" e:padder="SpaceRight" name="srcSysGbcd" nillable="true" type="string"/>
+            <element e:kor="타겟시스템코드" e:length="3" e:padder="SpaceRight" name="trgtSysGbcd" nillable="true" type="string"/>
+            <element e:kor="어플리케이션코드" e:length="4" e:padder="SpaceRight" name="appGbcd" nillable="true" type="string"/>
+            <element e:kor="파일경로" e:length="1000" e:padder="SpaceRight" name="filePath" nillable="true" type="string"/>
+            <element e:kor="파일명" e:length="1000" e:padder="SpaceRight" name="fileNm" nillable="true" type="string"/>
+            <element e:kor="후처리여부" e:length="1" e:padder="SpaceRight" name="afProcYn" nillable="true" type="string"/>
+            <element e:kor="후처리파일경로" e:length="1000" e:padder="SpaceRight" name="afProcFilePath" nillable="true" type="string"/>
+            <element e:kor="후처리파일명" e:length="1000" e:padder="SpaceRight" name="afProcFileNm" nillable="true" type="string"/>
+            <element e:kor="후처리파라미터" e:length="1000" e:padder="SpaceRight" name="afProcPara" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:CISEAICDZZ9999902_OutReq"/>
+</schema>

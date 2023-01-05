@@ -1,0 +1,69 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/EIMARSKBNS0100101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/EIMARSKBNS0100101">
+    <complexType name="EIMARSKBNS0100101_OutReq">
+        <sequence>
+            <element e:kor="고객정보건수" e:length="5" e:padder="ZeroLeft" name="infRowcount" nillable="true" type="long"/>
+            <element e:kor="정보리스트" e:padder="ZeroLeft" maxOccurs="unbounded" name="infList" nillable="true" type="ns:INF_LIST_TYPE"/>
+            <element e:kor="수행건수" e:length="5" e:padder="ZeroLeft" name="exectRowcount" nillable="true" type="long"/>
+            <element e:kor="수행리스트" e:padder="ZeroLeft" maxOccurs="unbounded" name="exectList" nillable="true" type="ns:EXECT_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="INF_LIST_TYPE">
+        <sequence>
+            <element e:kor="신규수정삭제플래그값" e:length="1" e:padder="SpaceRight" name="iudFlagVal" nillable="true" type="string"/>
+            <element e:kor="CIS화면ID" e:length="12" e:padder="SpaceRight" name="cisScrnId" nillable="true" type="string"/>
+            <element e:kor="화면명" e:length="50" e:padder="SpaceRight" name="scrnNm" nillable="true" type="string"/>
+            <element e:kor="화면URL" e:length="500" e:padder="SpaceRight" name="scrnUrl" nillable="true" type="string"/>
+            <element e:kor="재산목록내용" e:padder="ZeroLeft" maxOccurs="5" minOccurs="5" name="pptyLstList" nillable="true" type="ns:PPTY_LST_LIST_TYPE"/>
+            <element e:kor="화면구분코드" e:length="2" e:padder="SpaceRight" name="scrnGbcd" nillable="true" type="string"/>
+            <element e:kor="단위업무코드" e:length="4" e:padder="SpaceRight" name="unitTskCd" nillable="true" type="string"/>
+            <element e:kor="중복탭설정코드" e:length="1" e:padder="SpaceRight" name="dupTapSetupCd" nillable="true" type="string"/>
+            <element e:kor="고객기본정보사용여부" e:length="1" e:padder="SpaceRight" name="custBaseInfUseYn" nillable="true" type="string"/>
+            <element e:kor="비고" e:length="4000" e:padder="SpaceRight" name="rmrk" nillable="true" type="string"/>
+            <element e:kor="사용여부" e:length="1" e:padder="SpaceRight" name="useYn" nillable="true" type="string"/>
+            <element e:kor="가족접수목록" e:padder="ZeroLeft" maxOccurs="5" minOccurs="5" name="famlAcptLstList" nillable="true" type="ns:FAML_ACPT_LST_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="PPTY_LST_LIST_TYPE">
+        <sequence>
+            <element e:kor="화면명" e:length="50" e:padder="SpaceRight" name="scrnNm" nillable="true" type="string"/>
+            <element e:kor="화면URL" e:length="500" e:padder="SpaceRight" name="scrnUrl" nillable="true" type="string"/>
+            <element e:kor="화면구분코드" e:length="2" e:padder="SpaceRight" name="scrnGbcd" nillable="true" type="string"/>
+            <element e:kor="화면구분코드2" e:length="2" e:padder="SpaceRight" name="scrnGbcd2" nillable="true" type="string"/>
+            <element e:kor="가족접수목록" e:padder="ZeroLeft" maxOccurs="5" minOccurs="5" name="famlAcptLstList" nillable="true" type="ns:FAML_ACPT_LST_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="FAML_ACPT_LST_LIST_TYPE">
+        <sequence>
+            <element e:kor="화면명" e:length="50" e:padder="SpaceRight" name="scrnNm" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="FAML_ACPT_LST_LIST_TYPE">
+        <sequence>
+            <element e:kor="화면명" e:length="50" e:padder="SpaceRight" name="scrnNm" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="EXECT_LIST_TYPE">
+        <sequence>
+            <element e:kor="신규수정삭제플래그값" e:length="1" e:padder="SpaceRight" name="iudFlagVal" nillable="true" type="string"/>
+            <element e:kor="CIS화면ID" e:length="12" e:padder="SpaceRight" name="cisScrnId" nillable="true" type="string"/>
+            <element e:kor="화면명" e:length="50" e:padder="SpaceRight" name="scrnNm" nillable="true" type="string"/>
+            <element e:kor="화면URL" e:length="500" e:padder="SpaceRight" name="scrnUrl" nillable="true" type="string"/>
+            <element e:kor="화면구분코드" e:length="2" e:padder="SpaceRight" name="scrnGbcd" nillable="true" type="string"/>
+            <element e:kor="단위업무코드" e:length="4" e:padder="SpaceRight" name="unitTskCd" nillable="true" type="string"/>
+            <element e:kor="중복탭설정코드" e:length="1" e:padder="SpaceRight" name="dupTapSetupCd" nillable="true" type="string"/>
+            <element e:kor="가족접수목록" e:padder="ZeroLeft" maxOccurs="5" minOccurs="5" name="famlAcptLstList" nillable="true" type="ns:FAML_ACPT_LST_LIST_TYPE"/>
+            <element e:kor="고객기본정보사용여부" e:length="1" e:padder="SpaceRight" name="custBaseInfUseYn" nillable="true" type="string"/>
+            <element e:kor="비고" e:length="4000" e:padder="SpaceRight" name="rmrk" nillable="true" type="string"/>
+            <element e:kor="사용여부" e:length="1" e:padder="SpaceRight" name="useYn" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="FAML_ACPT_LST_LIST_TYPE">
+        <sequence>
+            <element e:kor="화면명" e:length="50" e:padder="SpaceRight" name="scrnNm" nillable="true" type="string"/>
+            <element e:kor="화면URL" e:length="500" e:padder="SpaceRight" name="scrnUrl" nillable="true" type="string"/>
+            <element e:kor="화면구분코드" e:length="2" e:padder="SpaceRight" name="scrnGbcd" nillable="true" type="string"/>
+            <element e:kor="화면구분코드2" e:length="2" e:padder="SpaceRight" name="scrnGbcd2" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:EIMARSKBNS0100101_OutReq"/>
+</schema>

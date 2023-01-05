@@ -1,0 +1,37 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/HQMCISCTJD0100102" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/HQMCISCTJD0100102">
+    <complexType name="HQMCISCTJD0100102_InRes">
+        <sequence>
+            <element e:kor="현대렌탈케어헤더부" e:padder="ZeroLeft" name="hrcallicrdmeminfrcvhdr" nillable="true" type="ns:HrcAlliCrdMemInfRcvHdr_TYPE"/>
+            <element e:kor="현대렌탈케어바디부" e:padder="ZeroLeft" name="hrcallicrdmeminfrcvbody" nillable="true" type="ns:HrcAlliCrdMemInfRcvBody_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="HrcAlliCrdMemInfRcvHdr_TYPE">
+        <sequence>
+            <element e:kor="거래코드" e:length="4" e:padder="SpaceRight" name="trdCd" nillable="true" type="string"/>
+            <element e:kor="전문코드" e:length="1" e:padder="SpaceRight" name="tgrmCd" nillable="true" type="string"/>
+            <element e:kor="전문번호" e:length="6" e:padder="SpaceRight" name="tgrmNo" nillable="true" type="string"/>
+            <element e:kor="전문전송일시" e:length="1" e:padder="SpaceRight" name="tgrmSendDtm" nillable="true" type="string"/>
+            <element e:kor="테스트여부" e:length="1" e:padder="SpaceRight" name="testYn" nillable="true" type="string"/>
+            <element e:kor="전문유형" e:length="1" e:padder="SpaceRight" name="tgrmType" nillable="true" type="string"/>
+            <element e:kor="예비값" e:length="19" e:padder="SpaceRight" name="prepVal" nillable="true" type="string"/>
+            <element e:kor="전문길이" e:length="1" e:padder="SpaceRight" name="tgrmLen" nillable="true" type="string"/>
+            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="HrcAlliCrdMemInfRcvBody_TYPE">
+        <sequence>
+            <element e:kor="MSO접수일자" e:length="8" e:padder="SpaceRight" name="msoAcptDt" nillable="true" type="string"/>
+            <element e:kor="고객명" e:length="70" e:padder="SpaceRight" name="custNm" nillable="true" type="string"/>
+            <element e:kor="연락처전화지역번호" e:length="4" e:padder="SpaceRight" name="ctelTelpnAreaNo" nillable="true" type="string"/>
+            <element e:kor="연락처전화국번호" e:length="4" e:padder="SpaceRight" name="ctelTels" nillable="true" type="string"/>
+            <element e:kor="연락처전화일련번호" e:length="4" e:padder="SpaceRight" name="ctelTelpnSeqno" nillable="true" type="string"/>
+            <element e:kor="주소" e:length="200" e:padder="SpaceRight" name="adr" nillable="true" type="string"/>
+            <element e:kor="상세주소" e:length="200" e:padder="SpaceRight" name="ptcAdr" nillable="true" type="string"/>
+            <element e:kor="제휴카드고객번호" e:length="20" e:padder="SpaceRight" name="alliCrdCustNo" nillable="true" type="string"/>
+            <element e:kor="제휴카드법인구분코드" e:length="4" e:padder="SpaceRight" name="alliCrdCorpGbcd" nillable="true" type="string"/>
+            <element e:kor="결과메시지" e:length="80" e:padder="SpaceRight" name="rstMsg" nillable="true" type="string"/>
+            <element e:kor="예비값" e:length="19" e:padder="SpaceRight" name="prepVal" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:HQMCISCTJD0100102_InRes"/>
+</schema>

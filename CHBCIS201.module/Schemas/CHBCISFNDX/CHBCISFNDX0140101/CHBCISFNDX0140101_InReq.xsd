@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CHBCISFNDX0140101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CHBCISFNDX0140101">
+    <complexType name="CHBCISFNDX0140101_InReq">
+        <sequence>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:CHBCISFNDX0140101_InReq"/>
+</schema>
