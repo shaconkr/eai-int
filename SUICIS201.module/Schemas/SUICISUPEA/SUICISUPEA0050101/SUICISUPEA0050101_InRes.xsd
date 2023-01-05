@@ -1,0 +1,28 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISUPEA0050101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISUPEA0050101">
+    <complexType name="SUICISUPEA0050101_InRes">
+        <sequence>
+            <element e:kor="연체업체목록건수" e:length="5" e:padder="ZeroLeft" name="odueCustLstRowcount" nillable="true" type="long"/>
+            <element e:kor="연체업체목록" e:padder="ZeroLeft" maxOccurs="unbounded" name="odueCustLstList" nillable="true" type="ns:ODUE_CUST_LST_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="ODUE_CUST_LST_LIST_TYPE">
+        <sequence>
+            <element e:kor="추심업체관리번호" e:length="20" e:padder="SpaceRight" name="cllctnCustMngNo" nillable="true" type="string"/>
+            <element e:kor="위임업체구분코드" e:length="2" e:padder="SpaceRight" name="degtnCustGbcd" nillable="true" type="string"/>
+            <element e:kor="위임업체명" e:length="300" e:padder="SpaceRight" name="degtnCustNm" nillable="true" type="string"/>
+            <element e:kor="대표자명" e:length="100" e:padder="SpaceRight" name="reppNm" nillable="true" type="string"/>
+            <element e:kor="사업자등록번호" e:length="10" e:padder="SpaceRight" name="rgno" nillable="true" type="string"/>
+            <element e:kor="업종명" e:length="100" e:padder="SpaceRight" name="biztpNm" nillable="true" type="string"/>
+            <element e:kor="업태명" e:length="100" e:padder="SpaceRight" name="bizcNm" nillable="true" type="string"/>
+            <element e:kor="전화번호" e:length="20" e:padder="SpaceRight" name="telno" nillable="true" type="string"/>
+            <element e:kor="팩스번호" e:length="20" e:padder="SpaceRight" name="faxNo" nillable="true" type="string"/>
+            <element e:kor="계약시작일자" e:length="8" e:padder="SpaceRight" name="contStrtDt" nillable="true" type="string"/>
+            <element e:kor="계약종료일자" e:length="8" e:padder="SpaceRight" name="contEndDt" nillable="true" type="string"/>
+            <element e:kor="거래여부" e:length="1" e:padder="SpaceRight" name="trdYn" nillable="true" type="string"/>
+            <element e:kor="우편번호" e:length="6" e:padder="SpaceRight" name="postNo" nillable="true" type="string"/>
+            <element e:kor="주소1" e:length="200" e:padder="SpaceRight" name="adr1" nillable="true" type="string"/>
+            <element e:kor="주소2" e:length="200" e:padder="SpaceRight" name="adr2" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISUPEA0050101_InRes"/>
+</schema>

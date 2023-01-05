@@ -1,0 +1,15 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISUPEA0010201" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISUPEA0010201">
+    <complexType name="SUICISUPEA0010201_InReq">
+        <sequence>
+            <element e:kor="연체관리지역코드" e:length="2" e:padder="SpaceRight" name="odueMngAreaCd" nillable="true" type="string"/>
+            <element e:kor="법무추심진행상태코드" e:length="2" e:padder="SpaceRight" name="lgltmCllctnPrgrStatCd" nillable="true" type="string"/>
+            <element e:kor="조회시작일자" e:length="8" e:padder="SpaceRight" name="qryStrtDt" nillable="true" type="string"/>
+            <element e:kor="조회종료일자" e:length="8" e:padder="SpaceRight" name="qryEndDt" nillable="true" type="string"/>
+            <element e:kor="의뢰자ID" e:length="20" e:padder="SpaceRight" name="clntId" nillable="true" type="string"/>
+            <element e:kor="의뢰자명" e:length="50" e:padder="SpaceRight" name="clntNm" nillable="true" type="string"/>
+            <element e:kor="연체시작개월수" e:length="8" e:padder="ZeroLeft" name="odueStrtMths" nillable="true" type="long"/>
+            <element e:kor="연체종료개월수" e:length="8" e:padder="ZeroLeft" name="odueEndMths" nillable="true" type="long"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISUPEA0010201_InReq"/>
+</schema>

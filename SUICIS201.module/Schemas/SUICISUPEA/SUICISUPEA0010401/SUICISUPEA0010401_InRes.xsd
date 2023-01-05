@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISUPEA0010401" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISUPEA0010401">
+    <complexType name="SUICISUPEA0010401_InRes">
+        <sequence>
+            <element e:kor="진행결과구분코드" e:length="2" e:padder="SpaceRight" name="prgrRstGbcd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISUPEA0010401_InRes"/>
+</schema>

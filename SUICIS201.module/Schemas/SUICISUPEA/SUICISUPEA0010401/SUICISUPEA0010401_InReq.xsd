@@ -1,0 +1,34 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISUPEA0010401" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISUPEA0010401">
+    <complexType name="SUICISUPEA0010401_InReq">
+        <sequence>
+            <element e:kor="법무추심진행상태코드" e:length="2" e:padder="SpaceRight" name="lgltmCllctnPrgrStatCd" nillable="true" type="string"/>
+            <element e:kor="추심업체관리번호" e:length="20" e:padder="SpaceRight" name="cllctnCustMngNo" nillable="true" type="string"/>
+            <element e:kor="관리년월" e:length="6" e:padder="SpaceRight" name="mngYm" nillable="true" type="string"/>
+            <element e:kor="위임대상자목록건수" e:length="5" e:padder="ZeroLeft" name="degtnTrgtpLstRowcount" nillable="true" type="long"/>
+            <element e:kor="위임대상자목록" e:padder="ZeroLeft" maxOccurs="unbounded" name="degtnTrgtpLstList" nillable="true" type="ns:DEGTN_TRGTP_LST_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="DEGTN_TRGTP_LST_LIST_TYPE">
+        <sequence>
+            <element e:kor="신규수정삭제플래그값" e:length="1" e:padder="SpaceRight" name="iudFlagVal" nillable="true" type="string"/>
+            <element e:kor="의뢰일자" e:length="8" e:padder="SpaceRight" name="askDt" nillable="true" type="string"/>
+            <element e:kor="개인법인구분코드" e:length="1" e:padder="SpaceRight" name="psnCorpGbcd" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="고객명" e:length="100" e:padder="SpaceRight" name="custNm" nillable="true" type="string"/>
+            <element e:kor="최장연체개월수" e:length="11" e:padder="ZeroLeft" name="lngsOdueMths" nillable="true" type="long"/>
+            <element e:kor="연체원금금액" e:length="19" e:padder="ZeroLeft" name="oduePrncAmt" nillable="true" type="long"/>
+            <element e:kor="연체수수료금액" e:length="19" e:padder="ZeroLeft" name="odueCmisAmt" nillable="true" type="long"/>
+            <element e:kor="연체이자금액" e:length="19" e:padder="ZeroLeft" name="odueIntrAmt" nillable="true" type="long"/>
+            <element e:kor="입금원금금액" e:length="19" e:padder="ZeroLeft" name="iamtPrncAmt" nillable="true" type="long"/>
+            <element e:kor="입금수수료" e:length="19" e:padder="ZeroLeft" name="iamtCmis" nillable="true" type="long"/>
+            <element e:kor="입금이자금액" e:length="19" e:padder="ZeroLeft" name="iamtIntrAmt" nillable="true" type="long"/>
+            <element e:kor="의뢰자명" e:length="50" e:padder="SpaceRight" name="clntNm" nillable="true" type="string"/>
+            <element e:kor="확정자ID" e:length="20" e:padder="SpaceRight" name="cnfrId" nillable="true" type="string"/>
+            <element e:kor="법무추심진행상태코드" e:length="2" e:padder="SpaceRight" name="lgltmCllctnPrgrStatCd" nillable="true" type="string"/>
+            <element e:kor="확정일자" e:length="8" e:padder="SpaceRight" name="cnfmDt" nillable="true" type="string"/>
+            <element e:kor="연체관리지역코드" e:length="2" e:padder="SpaceRight" name="odueMngAreaCd" nillable="true" type="string"/>
+            <element e:kor="의뢰자ID" e:length="20" e:padder="SpaceRight" name="clntId" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISUPEA0010401_InReq"/>
+</schema>

@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISUPEA0050102" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISUPEA0050102">
+    <complexType name="SUICISUPEA0050102_InRes">
+        <sequence>
+            <element e:kor="결과응답코드" e:length="4" e:padder="SpaceRight" name="rstRespCd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISUPEA0050102_InRes"/>
+</schema>

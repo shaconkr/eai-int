@@ -1,0 +1,20 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISCTJA0240101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISCTJA0240101">
+    <complexType name="SUICISCTJA0240101_InRes">
+        <sequence>
+            <element e:kor="조회건수" e:length="5" e:padder="ZeroLeft" name="qryRowcount" nillable="true" type="long"/>
+            <element e:kor="조회내역" e:padder="ZeroLeft" maxOccurs="unbounded" name="qryList" nillable="true" type="ns:QRY_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="QRY_LIST_TYPE">
+        <sequence>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="회원명" e:length="100" e:padder="SpaceRight" name="memNm" nillable="true" type="string"/>
+            <element e:kor="생년월일" e:length="8" e:padder="SpaceRight" name="bymd" nillable="true" type="string"/>
+            <element e:kor="휴대폰번호" e:length="16" e:padder="SpaceRight" name="mphonNo" nillable="true" type="string"/>
+            <element e:kor="접수점코드" e:length="3" e:padder="SpaceRight" name="acptStoreCd" nillable="true" type="string"/>
+            <element e:kor="카드접수일자" e:length="8" e:padder="SpaceRight" name="crdAcptDt" nillable="true" type="string"/>
+            <element e:kor="카드접수번호" e:length="6" e:padder="SpaceRight" name="crdAcptNo" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISCTJA0240101_InRes"/>
+</schema>

@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISUPSB0110101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISUPSB0110101">
+    <complexType name="SUICISUPSB0110101_InReq">
+        <sequence>
+            <element e:kor="마감기준일자" e:length="8" e:padder="SpaceRight" name="dlineBsicDt" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISUPSB0110101_InReq"/>
+</schema>

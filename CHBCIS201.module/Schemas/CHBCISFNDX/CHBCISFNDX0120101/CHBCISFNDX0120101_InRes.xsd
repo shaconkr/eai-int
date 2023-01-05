@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CHBCISFNDX0120101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CHBCISFNDX0120101">
+    <complexType name="CHBCISFNDX0120101_InRes">
+        <sequence>
+            <element e:kor="총잔액" e:length="22" e:padder="ZeroLeft" name="totBlnc" nillable="true" type="long"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:CHBCISFNDX0120101_InRes"/>
+</schema>

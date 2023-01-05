@@ -1,0 +1,13 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISAHFF0030101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISAHFF0030101">
+    <complexType name="SUICISAHFF0030101_InRes">
+        <sequence>
+            <element e:kor="결과그룹" e:padder="ZeroLeft" name="rstGroup" nillable="true" type="ns:RST_GROUP_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="RST_GROUP_TYPE">
+        <sequence>
+            <element e:kor="등록여부" e:length="1" e:padder="SpaceRight" name="regYn" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISAHFF0030101_InRes"/>
+</schema>

@@ -1,0 +1,36 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISUPSB0110101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISUPSB0110101">
+    <complexType name="SUICISUPSB0110101_InRes">
+        <sequence>
+            <element e:kor="전월대비회수실적목록배열건수" e:length="5" e:padder="ZeroLeft" name="lmmVsWtdwArltLstRowcount" nillable="true" type="long"/>
+            <element e:kor="전월대비회수실적목록_배열" e:padder="ZeroLeft" maxOccurs="unbounded" name="lmmVsWtdwArltLstList" nillable="true" type="ns:LMM_VS_WTDW_ARLT_LST_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="LMM_VS_WTDW_ARLT_LST_LIST_TYPE">
+        <sequence>
+            <element e:kor="담당자ID" e:length="100" e:padder="SpaceRight" name="asgnrId" nillable="true" type="string"/>
+            <element e:kor="담당자명" e:length="100" e:padder="SpaceRight" name="asgnrNm" nillable="true" type="string"/>
+            <element e:kor="연체개월수" e:length="8" e:padder="ZeroLeft" name="odueMths" nillable="true" type="long"/>
+            <element e:kor="코드지역명1" e:length="200" e:padder="SpaceRight" name="cdAreaNm1" nillable="true" type="string"/>
+            <element e:kor="연체원금금액1" e:length="19" e:padder="ZeroLeft" name="oduePrncAmt1" nillable="true" type="long"/>
+            <element e:kor="연체입금금액1" e:length="19" e:padder="ZeroLeft" name="odueIamtAmt1" nillable="true" type="long"/>
+            <element e:kor="연체입금회수비율1" e:length="7" e:padder="ZeroLeft" name="odueIamtWtdwRate1" nillable="true" type="decimal"/>
+            <element e:kor="코드지역명2" e:length="200" e:padder="SpaceRight" name="cdAreaNm2" nillable="true" type="string"/>
+            <element e:kor="연체원금금액2" e:length="20" e:padder="ZeroLeft" name="oduePrncAmt2" nillable="true" type="long"/>
+            <element e:kor="연체입금금액2" e:length="20" e:padder="ZeroLeft" name="odueIamtAmt2" nillable="true" type="long"/>
+            <element e:kor="연체입금회수비율2" e:length="9" e:padder="ZeroLeft" name="odueIamtWtdwRate2" nillable="true" type="decimal"/>
+            <element e:kor="코드지역명3" e:length="200" e:padder="SpaceRight" name="cdAreaNm3" nillable="true" type="string"/>
+            <element e:kor="연체원금금액3" e:length="21" e:padder="ZeroLeft" name="oduePrncAmt3" nillable="true" type="long"/>
+            <element e:kor="연체입금금액3" e:length="21" e:padder="ZeroLeft" name="odueIamtAmt3" nillable="true" type="long"/>
+            <element e:kor="연체입금회수비율3" e:length="11" e:padder="ZeroLeft" name="odueIamtWtdwRate3" nillable="true" type="decimal"/>
+            <element e:kor="코드지역명4" e:length="200" e:padder="SpaceRight" name="cdAreaNm4" nillable="true" type="string"/>
+            <element e:kor="연체원금금액4" e:length="22" e:padder="ZeroLeft" name="oduePrncAmt4" nillable="true" type="long"/>
+            <element e:kor="연체입금금액4" e:length="22" e:padder="ZeroLeft" name="odueIamtAmt4" nillable="true" type="long"/>
+            <element e:kor="연체입금회수비율4" e:length="13" e:padder="ZeroLeft" name="odueIamtWtdwRate4" nillable="true" type="decimal"/>
+            <element e:kor="코드지역명5" e:length="200" e:padder="SpaceRight" name="cdAreaNm5" nillable="true" type="string"/>
+            <element e:kor="연체원금금액5" e:length="23" e:padder="ZeroLeft" name="oduePrncAmt5" nillable="true" type="long"/>
+            <element e:kor="연체입금금액5" e:length="23" e:padder="ZeroLeft" name="odueIamtAmt5" nillable="true" type="long"/>
+            <element e:kor="연체입금회수비율5" e:length="15" e:padder="ZeroLeft" name="odueIamtWtdwRate5" nillable="true" type="decimal"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISUPSB0110101_InRes"/>
+</schema>

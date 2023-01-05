@@ -1,0 +1,20 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISCTJA0370401" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISCTJA0370401">
+    <complexType name="SUICISCTJA0370401_InRes">
+        <sequence>
+            <element e:kor="조회_배열건수" e:length="5" e:padder="ZeroLeft" name="iqryRowcount" nillable="true" type="long"/>
+            <element e:kor="조회_배열" e:padder="ZeroLeft" maxOccurs="unbounded" name="iqryList" nillable="true" type="ns:IQRY_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="IQRY_LIST_TYPE">
+        <sequence>
+            <element e:kor="모집년도" e:length="4" e:padder="SpaceRight" name="rcrtYr" nillable="true" type="string"/>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="지점명" e:length="50" e:padder="SpaceRight" name="brnNm" nillable="true" type="string"/>
+            <element e:kor="모집형태코드" e:length="4" e:padder="SpaceRight" name="rcrtFormCd" nillable="true" type="string"/>
+            <element e:kor="모집인명" e:length="50" e:padder="SpaceRight" name="rcrtrNm" nillable="true" type="string"/>
+            <element e:kor="행사순번" e:length="7" e:padder="ZeroLeft" name="devtSeq" nillable="true" type="long"/>
+            <element e:kor="행사내용" e:length="4000" e:padder="SpaceRight" name="devtCntn" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISCTJA0370401_InRes"/>
+</schema>

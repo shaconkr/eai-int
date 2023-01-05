@@ -1,0 +1,13 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISAHFF0030301" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISAHFF0030301">
+    <complexType name="SUICISAHFF0030301_InReq">
+        <sequence>
+            <element e:kor="검색그룹" e:padder="ZeroLeft" name="srchGroup" nillable="true" type="ns:SRCH_GROUP_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="SRCH_GROUP_TYPE">
+        <sequence>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISAHFF0030301_InReq"/>
+</schema>

@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISCTJA0370401" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISCTJA0370401">
+    <complexType name="SUICISCTJA0370401_InReq">
+        <sequence>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISCTJA0370401_InReq"/>
+</schema>

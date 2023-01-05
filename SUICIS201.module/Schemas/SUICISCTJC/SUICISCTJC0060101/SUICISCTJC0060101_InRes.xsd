@@ -1,0 +1,15 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/SUICISCTJC0060101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/SUICISCTJC0060101">
+    <complexType name="SUICISCTJC0060101_InRes">
+        <sequence>
+            <element e:kor="카드목록건수" e:length="5" e:padder="ZeroLeft" name="crdRowcount" nillable="true" type="long"/>
+            <element e:kor="카드목록" e:padder="ZeroLeft" maxOccurs="unbounded" name="crdList" nillable="true" type="ns:CRD_LIST_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="CRD_LIST_TYPE">
+        <sequence>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="결과코드" e:length="3" e:padder="SpaceRight" name="rstCd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:SUICISCTJC0060101_InRes"/>
+</schema>
