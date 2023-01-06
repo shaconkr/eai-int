@@ -4,6 +4,8 @@
 	<comment></comment>
 	<projects>
 		<project>CSPI_Library</project>
+		<project>HcisCommon.smodule</project>
+		<project>JeinSoft.dataformat.plugin</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

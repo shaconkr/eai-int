@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0020101="http://schema.hcis.com/xsd/CISTADAHHE0020101" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHE/CISTADAHHE0020101.CISTADAHHE0020101_OutRes_data" type="dataformat:DataFormat">
-  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0020101_OutRes_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020101"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0020101:main" lineLength="5" fieldOffsetsStr="rstRowcount(0,5)&#xA;rstList(5,5)">
-    <fieldOffsets kor="결과건수" type="long" name="rstRowcount" start="0" end="5"/>
-    <fieldOffsets kor="결과리스트" type="RST_LIST_TYPE" name="rstList" start="5" end="5"/>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0020101="http://schema.hcis.com/xsd/CISTADAHHE0020101" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_XRPu0Yy1Ee2dyYDinhq_Lw" name="CISTADAHHE.CISTADAHHE0020101.CISTADAHHE0020101_OutRes_data" type="dataformat:DataFormat">
+  <imports xmi:id="_XRPu0oy1Ee2dyYDinhq_Lw" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0020101_OutRes_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020101"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_XRPu04y1Ee2dyYDinhq_Lw" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0020101:main" lineLength="5" fieldOffsetsStr="rstRowcount(0,5)&#xA;rstList(5,5)">
+    <fieldOffsets xmi:id="_XRPu1Iy1Ee2dyYDinhq_Lw" name="rstRowcount" end="5" kor="결과건수" type="long"/>
+    <fieldOffsets xmi:id="_XRVOQIy1Ee2dyYDinhq_Lw" name="rstList" start="5" end="5" kor="결과리스트" type="RST_LIST_TYPE"/>
   </jndi:configuration>
 </jndi:namedResource>
