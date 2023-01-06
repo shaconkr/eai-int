@@ -92,44 +92,8 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//CSPI_Library///Resources/Jdbc/MaximumConnections</name>
-			<value>10</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Integer</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
 			<name>//CSPI_Library//Env</name>
 			<value>DEV</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//CSPI_Library///Resources/Jdbc/Password</name>
-			<value>#!981egVjY6WbSQzJhrW9TCdH++doBFa9FIh5tvuYnVX8=</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Password</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//CSPI_Library///Destination/DBLog</name>
-			<value>%%Env%%.ezMNA.DBLog</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//CSPI_Library///Destination/EngineResource</name>
-			<value>%%Env%%.ezMNA.ENGINERESOURCE</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -144,53 +108,6 @@
 			<type>String</type>
 			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//CSPI_Library///BaseInfo/CfgFileName</name>
-			<value>cfg_AH.ini</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>true</isOverride>
-			<useLookupValue>false</useLookupValue>
-			<lookupValue>cfg_AH.ini</lookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//CSPI_Library///Resources/Jdbc/UserName</name>
-			<value>EAIMON</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//CSPI_Library///Resources/Jms/UserName</name>
-			<value>admin</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//CSPI_Library///Destination/FileLog</name>
-			<value>%%Env%%.ezMNA.FileLog</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//CSPI_Library///BaseInfo/WorkGroup</name>
-			<value>AH</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>true</isOverride>
-			<useLookupValue>false</useLookupValue>
-			<lookupValue>AH</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//CSPI_Library//BW.APPNODE.NAME</name>
@@ -247,8 +164,44 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//CSPI_Library///Destination/Alert</name>
-			<value>%%Env%%.ezMNA.ALERT</value>
+			<name>//CSPI_Library//BW.DEPLOYMENTUNIT.VERSION</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library//BW.MODULE.NAME</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library///Resources/Jdbc/MaximumConnections</name>
+			<value>10</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library///Resources/Jdbc/Password</name>
+			<value>#!981egVjY6WbSQzJhrW9TCdH++doBFa9FIh5tvuYnVX8=</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library///Resources/Jdbc/UserName</name>
+			<value>EAIMON</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -265,8 +218,26 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//CSPI_Library//BW.DEPLOYMENTUNIT.VERSION</name>
-			<value></value>
+			<name>//CSPI_Library///Resources/Jdbc/JDBCDriver</name>
+			<value>oracle.jdbc.OracleDriver</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library///Resources/Jdbc/DatabaseURL</name>
+			<value>jdbc:oracle:thin:@10.100.166.41:1621:HCISDEV</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library///Resources/Jms/UserName</name>
+			<value>admin</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -292,8 +263,8 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//CSPI_Library///Resources/Jdbc/JDBCDriver</name>
-			<value>oracle.jdbc.OracleDriver</value>
+			<name>//CSPI_Library///Destination/DBLog</name>
+			<value>%%Env%%.ezMNA.DBLog</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -301,27 +272,55 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//CSPI_Library///BaseInfo/CfgFileDir</name>
-			<value>d:/</value>
+			<name>//CSPI_Library///Destination/EngineResource</name>
+			<value>%%Env%%.ezMNA.ENGINERESOURCE</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library///Destination/FileLog</name>
+			<value>%%Env%%.ezMNA.FileLog</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library///Destination/Alert</name>
+			<value>%%Env%%.ezMNA.ALERT</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CSPI_Library///BaseInfo/CfgFileName</name>
+			<value>cfg_AH.ini</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
 			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
-			<lookupValue>d:/</lookupValue>
+			<lookupValue>cfg_AH.ini</lookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//CSPI_Library//BW.MODULE.NAME</name>
-			<value></value>
+			<name>//CSPI_Library///BaseInfo/WorkGroup</name>
+			<value>AH</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>AH</lookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//CSPI_Library///Resources/Jdbc/DatabaseURL</name>
-			<value>jdbc:oracle:thin:@10.100.166.41:1621:HCISDEV</value>
+			<name>//CSPI_Library///BaseInfo/CfgFileDir</name>
+			<value>/app/tibco/ezMNA/baseinfo/</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
