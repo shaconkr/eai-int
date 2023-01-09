@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHB0011001="http://schema.hcis.com/xsd/CISTADAHHB0011001" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_bw9wgI2gEe2Dd8HEb9rYYQ" name="CISTADAHHB.CISTADAHHB0011001.CISTADAHHB0011001_OutReq_data_srchGroup" type="dataformat:DataFormat">
   <imports xmi:id="_bw9wgY2gEe2Dd8HEb9rYYQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHB0011001_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHB0011001"/>
   <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_bw9wgo2gEe2Dd8HEb9rYYQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHB0011001:main" lineLength="16" fieldOffsetsStr="crdNo(0,16)">
     <fieldOffsets xmi:id="_bw9wg42gEe2Dd8HEb9rYYQ" name="crdNo" end="16" kor="카드번호" type="string"/>
+=======
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHB0011001="http://schema.hcis.com/xsd/CISTADAHHB0011001" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHB/CISTADAHHB0011001.CISTADAHHB0011001_OutReq_data_srchGroup" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHB0011001_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHB0011001"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHB0011001:main" lineLength="16" fieldOffsetsStr="crdNo(0,16)">
+    <fieldOffsets kor="카드번호" type="string" name="crdNo" start="0" end="16"/>
+>>>>>>> DEV
   </jndi:configuration>
 </jndi:namedResource>

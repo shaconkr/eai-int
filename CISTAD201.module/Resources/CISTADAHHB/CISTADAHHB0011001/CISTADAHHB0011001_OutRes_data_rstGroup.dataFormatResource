@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHB0011001="http://schema.hcis.com/xsd/CISTADAHHB0011001" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_bxLL4I2gEe2Dd8HEb9rYYQ" name="CISTADAHHB.CISTADAHHB0011001.CISTADAHHB0011001_OutRes_data_rstGroup" type="dataformat:DataFormat">
   <imports xmi:id="_bxLL4Y2gEe2Dd8HEb9rYYQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHB0011001_OutRes_data_rstGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHB0011001"/>
   <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_bxLL4o2gEe2Dd8HEb9rYYQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHB0011001:main" lineLength="137" fieldOffsetsStr="totBndsAmt(0,19)&#xA;spymUseAmt(19,38)&#xA;rmndBndsAmt(38,57)&#xA;tmpBndsAmt(57,76)&#xA;speclBndsAmt(76,95)&#xA;speclTmpBndsAplyTerm(95,118)&#xA;speclBndsBlnc(118,137)">
@@ -9,5 +10,18 @@
     <fieldOffsets xmi:id="_bxLL542gEe2Dd8HEb9rYYQ" name="speclBndsAmt" start="76" end="95" kor="특별한도금액" type="long"/>
     <fieldOffsets xmi:id="_bxLL6I2gEe2Dd8HEb9rYYQ" name="speclTmpBndsAplyTerm" start="95" end="118" kor="특별임시한도적용기간" type="string"/>
     <fieldOffsets xmi:id="_bxLL6Y2gEe2Dd8HEb9rYYQ" name="speclBndsBlnc" start="118" end="137" kor="특별한도잔액" type="long"/>
+=======
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHB0011001="http://schema.hcis.com/xsd/CISTADAHHB0011001" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHB/CISTADAHHB0011001.CISTADAHHB0011001_OutRes_data_rstGroup" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHB0011001_OutRes_data_rstGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHB0011001"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHB0011001:main" lineLength="137" fieldOffsetsStr="totBndsAmt(0,19)&#xA;spymUseAmt(19,38)&#xA;rmndBndsAmt(38,57)&#xA;tmpBndsAmt(57,76)&#xA;speclBndsAmt(76,95)&#xA;speclTmpBndsAplyTerm(95,118)&#xA;speclBndsBlnc(118,137)">
+    <fieldOffsets kor="총한도금액" type="long" name="totBndsAmt" start="0" end="19"/>
+    <fieldOffsets kor="일시불사용금액" type="long" name="spymUseAmt" start="19" end="38"/>
+    <fieldOffsets kor="잔여한도금액" type="long" name="rmndBndsAmt" start="38" end="57"/>
+    <fieldOffsets kor="임시한도금액" type="long" name="tmpBndsAmt" start="57" end="76"/>
+    <fieldOffsets kor="특별한도금액" type="long" name="speclBndsAmt" start="76" end="95"/>
+    <fieldOffsets kor="특별임시한도적용기간" type="string" name="speclTmpBndsAplyTerm" start="95" end="118"/>
+    <fieldOffsets kor="특별한도잔액" type="long" name="speclBndsBlnc" start="118" end="137"/>
+>>>>>>> DEV
   </jndi:configuration>
 </jndi:namedResource>

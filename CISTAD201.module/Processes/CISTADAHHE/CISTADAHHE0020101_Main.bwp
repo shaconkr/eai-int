@@ -15,7 +15,12 @@
     xmlns:ns15="activity.jsonRender.output+cd38904d-abc9-4d1b-9780-811b7fc3367a+ActivityOutputType"
     xmlns:ns16="activity.jsonRender.output+bc96dd0f-0e4e-4076-bfda-9990747c1c3a+ActivityOutputType"
     xmlns:ns17="activity.jsonParser.input+2a7d7736-0e0c-4ccf-b2c2-db7f185da705+ActivityInputType"
+<<<<<<< HEAD
     xmlns:ns18="http://schema.hcis.com/xsd/CISTADAHHE0020101"
+=======
+    xmlns:ns18="activity.jsonRender.output+68eb1ff8-4687-4c30-b955-762b671d584e+ActivityOutputType"
+    xmlns:ns19="http://schema.hcis.com/xsd/CISTADAHHE0020101"
+>>>>>>> DEV
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonParser"
     xmlns:ns3="http://tns.tibco.com/bw/json/1668647313518"
     xmlns:ns4="http://www.cspi_library.org/Library"
@@ -27,7 +32,12 @@
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
+<<<<<<< HEAD
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+=======
+    xmlns:tibprop="http://ns.tibco.com/bw/property"
+    xmlns:tns="http://simple.schema/simple" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+>>>>>>> DEV
     <tibex:VariableDescriptor type="MemorySaving">
         <task name="ParseJSON">
             <endingVariables>
@@ -823,34 +833,54 @@
                                     <children type="3007">
                                     <children type="4002 bw.jms.receive">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
@@ -864,40 +894,61 @@
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
+<<<<<<< HEAD
                                     <layoutConstraint x="88"
                                     xsi:type="notation:Bounds" y="175"/>
                                     </children>
@@ -905,43 +956,107 @@
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <layoutConstraint x="-50"
+                                    xsi:type="notation:Bounds" y="172"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
+<<<<<<< HEAD
                                     <layoutConstraint x="181"
+=======
+                                    <layoutConstraint x="127"
+                                    xsi:type="notation:Bounds" y="172"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint x="127"
+>>>>>>> DEV
                                     xsi:type="notation:Bounds" y="69"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
@@ -983,32 +1098,51 @@
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
@@ -1020,34 +1154,54 @@
                                     </children>
                                     <children type="4002 bw.jms.reply">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
@@ -1061,34 +1215,54 @@
                                     </children>
                                     <children type="4002 bw.generalactivities.callprocess">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
@@ -1097,39 +1271,63 @@
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint
                                     height="40" width="40"
+<<<<<<< HEAD
                                     x="416"
+=======
+                                    x="380"
+>>>>>>> DEV
                                     xsi:type="notation:Bounds" y="69"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
@@ -1141,34 +1339,54 @@
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
@@ -1180,80 +1398,128 @@
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
+<<<<<<< HEAD
                                     <layoutConstraint x="548"
+=======
+                                    <layoutConstraint x="510"
+>>>>>>> DEV
                                     xsi:type="notation:Bounds" y="193"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
+<<<<<<< HEAD
                                     <styles
                                     fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
+<<<<<<< HEAD
                                     <layoutConstraint x="425"
+=======
+                                    <layoutConstraint x="380"
+>>>>>>> DEV
                                     xsi:type="notation:Bounds" y="193"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1261,7 +1527,11 @@
                                     <styles xsi:type="notation:FilteringStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     </children>
+<<<<<<< HEAD
                                     <styles fontName="D2Coding"
+=======
+                                    <styles fontName="맑은 고딕"
+>>>>>>> DEV
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles backgroundColor="16777215"
                                     gradientEndColor="50431"
@@ -1275,7 +1545,11 @@
                                 <styles xsi:type="notation:FilteringStyle"/>
                                 <element href="//0/@process/@activity"/>
                             </children>
+<<<<<<< HEAD
                             <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
+=======
+                            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+>>>>>>> DEV
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
@@ -1285,7 +1559,11 @@
                         <styles xsi:type="notation:FilteringStyle"/>
                         <element href="//0/@process/@activity"/>
                     </children>
+<<<<<<< HEAD
                     <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
+=======
+                    <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+>>>>>>> DEV
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
@@ -1296,7 +1574,11 @@
                 <styles xsi:type="notation:FilteringStyle"/>
                 <element href="//0/@process"/>
             </children>
+<<<<<<< HEAD
             <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
+=======
+            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+>>>>>>> DEV
             <element href="//0/@process"/>
             <layoutConstraint height="490" width="1387" xsi:type="notation:Bounds"/>
         </children>
@@ -1309,7 +1591,11 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+>>>>>>> DEV
             <element href="//0/@process/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -1320,7 +1606,11 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+>>>>>>> DEV
             <element href="//0/@process/@activity/@activity/@links/@children.1"/>
             <bendpoints points="[25, 0, -78, 0]$[79, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -1331,7 +1621,11 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+>>>>>>> DEV
             <element href="//0/@process/@activity/@activity/@links/@children.2"/>
             <bendpoints points="[25, 6, -72, 0]$[73, 0, -24, -6]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -1342,7 +1636,11 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+>>>>>>> DEV
             <element href="//0/@process/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[25, 0, -105, 0]$[106, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -1353,7 +1651,11 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+>>>>>>> DEV
             <element href="//0/@process/@activity/@activity/@links/@children.4"/>
             <bendpoints points="[25, 0, -76, 0]$[77, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -1364,7 +1666,11 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+>>>>>>> DEV
             <element href="//0/@process/@activity/@activity/@links/@children.5"/>
             <bendpoints points="[25, 0, -132, 0]$[123, 0, -34, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -1375,7 +1681,11 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontColor="255" fontName="D2Coding" xsi:type="notation:FontStyle"/>
+=======
+            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+>>>>>>> DEV
             <element href="//0/@process/@activity/@activity/@links/@children.6"/>
             <bendpoints points="[2, 25, -8, -82]$[8, 83, -2, -24]" xsi:type="notation:RelativeBendpoints"/>
             <targetAnchor id="(0.0,0.8571428571428571)" xsi:type="notation:IdentityAnchor"/>
@@ -1387,10 +1697,27 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.7"/>
             <bendpoints
                 points="[25, 0, -88, 76]$[51, 0, -62, 76]$[51, -76, -62, 0]$[79, -76, -34, 0]" xsi:type="notation:RelativeBendpoints"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <bendpoints points="[25, -24, -91, 89]$[91, -88, -25, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+>>>>>>> DEV
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
@@ -1399,8 +1726,13 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+>>>>>>> DEV
             <bendpoints points="[25, 0, -82, 0]$[83, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1410,6 +1742,7 @@
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+<<<<<<< HEAD
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.9"/>
             <bendpoints points="[25, 0, -146, 0]$[147, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
@@ -1424,6 +1757,11 @@
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.10"/>
             <bendpoints points="[25, 0, -276, 0]$[277, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+=======
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <bendpoints points="[25, 0, -146, 0]$[147, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+>>>>>>> DEV
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1452,7 +1790,10 @@
             namespace="http://schema.hcis.com/xsd/CISTADAHHE0020101" prefix="ns"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library"/>
+<<<<<<< HEAD
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/json/1668647313518"/>
+=======
+>>>>>>> DEV
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
@@ -1471,7 +1812,11 @@
         </bpws:variable>
         <bpws:variable element="ns1:ActivityInputClass"
             name="ParseJSON-input" sca-bpel:internal="true"/>
+<<<<<<< HEAD
         <bpws:variable element="ns18:root" name="ParseJSON" sca-bpel:internal="true"/>
+=======
+        <bpws:variable element="ns19:root" name="ParseJSON" sca-bpel:internal="true"/>
+>>>>>>> DEV
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:SetInterface"
             name="L_Get_InterfaceInfo-input" sca-bpel:internal="true"/>
@@ -1486,7 +1831,11 @@
         <bpws:variable name="replyData" type="xsd:string"/>
         <bpws:variable element="ns2:ActivityErrorData"
             name="_error_ParseJSON1" sca-bpel:internal="true"/>
+<<<<<<< HEAD
         <bpws:variable element="ns18:root" name="RenderJSON_Error-input" sca-bpel:internal="true"/>
+=======
+        <bpws:variable element="ns19:root" name="RenderJSON_Error-input" sca-bpel:internal="true"/>
+>>>>>>> DEV
         <bpws:variable element="ns11:ActivityOutputClass"
             name="RenderJSON_Error" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
@@ -1519,9 +1868,15 @@
                 <bpws:link name="AssignToReplytoJMSMessage" tibex:linkType="SUCCESS"/>
                 <bpws:link name="CallProc_IFID01ToL_Set_LogError" tibex:linkType="ERROR"/>
                 <bpws:link name="Assign_ErrorToReplytoJMSMessage" tibex:linkType="SUCCESS"/>
+<<<<<<< HEAD
                 <bpws:link name="L_Set_LogErrorToRenderJSON_Error" tibex:linkType="SUCCESS"/>
                 <bpws:link name="RenderJSON_ErrorToAssign_Error" tibex:linkType="SUCCESS"/>
                 <bpws:link name="CallProc_CISTADAHHE0020101ToAssign_OK" tibex:linkType="SUCCESS"/>
+=======
+                <bpws:link name="CallProc_CISTADAHHE0020101ToAssign_OK" tibex:linkType="SUCCESS"/>
+                <bpws:link name="L_Set_LogErrorToRenderJSON_Error" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RenderJSON_ErrorToAssign_Error" tibex:linkType="SUCCESS"/>
+>>>>>>> DEV
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1700,7 +2055,11 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
+<<<<<<< HEAD
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&#xa;    &lt;xsl:template name=&quot;CallProc_IFID01-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns7:subElement>&#xa;            &lt;tns7:emsBody>&#xa;                &lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&#xa;            &lt;/tns7:emsBody>&#xa;        &lt;/tns7:subElement>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+=======
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:template name=&quot;CallProc_CISTADAHHE0020101-input&quot; match=&quot;/&quot;>&lt;tns7:subElement>&lt;tns7:emsBody>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/tns7:emsBody>&lt;/tns7:subElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+>>>>>>> DEV
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         subProcessName="CISTADAHHE.CISTADAHHE0020101_Sub" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1780,7 +2139,11 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
+<<<<<<< HEAD
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://schema.hcis.com/xsd/CISTADAHHE0020101&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;RenderJSON_Error-input&quot; match=&quot;/&quot;>&lt;ns:root>&lt;xsl:for-each select=&quot;$ParseJSON/ns:header&quot;>&lt;ns:header>&lt;xsl:if test=&quot;ns:totTgrmLen&quot;>&lt;ns:totTgrmLen>&lt;xsl:copy-of select=&quot;ns:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:totTgrmLen&quot;/>&lt;/ns:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:hdrLen&quot;>&lt;ns:hdrLen>&lt;xsl:copy-of select=&quot;ns:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:hdrLen&quot;/>&lt;/ns:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:tgrmFrmCd&quot;>&lt;ns:tgrmFrmCd>&lt;xsl:copy-of select=&quot;ns:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:tgrmFrmCd&quot;/>&lt;/ns:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:sysEnvGbcd&quot;>&lt;ns:sysEnvGbcd>&lt;xsl:copy-of select=&quot;ns:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:sysEnvGbcd&quot;/>&lt;/ns:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:ipAdr&quot;>&lt;ns:ipAdr>&lt;xsl:copy-of select=&quot;ns:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:ipAdr&quot;/>&lt;/ns:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:guid&quot;>&lt;ns:guid>&lt;xsl:copy-of select=&quot;ns:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:guid&quot;/>&lt;/ns:guid>&lt;/xsl:if>&lt;ns:prgrNo>&lt;xsl:value-of select=&quot;ns:prgrNo+1&quot;/>&lt;/ns:prgrNo>&lt;xsl:if test=&quot;ns:frstGuid&quot;>&lt;ns:frstGuid>&lt;xsl:copy-of select=&quot;ns:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:frstGuid&quot;/>&lt;/ns:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:sendSysCd&quot;>&lt;ns:sendSysCd>&lt;xsl:copy-of select=&quot;ns:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:sendSysCd&quot;/>&lt;/ns:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:frstSendSysCd&quot;>&lt;ns:frstSendSysCd>&lt;xsl:copy-of select=&quot;ns:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:frstSendSysCd&quot;/>&lt;/ns:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:sysCommTrtyPrepCntn&quot;>&lt;ns:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;ns:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:sysCommTrtyPrepCntn&quot;/>&lt;/ns:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:eimsTgrmId&quot;>&lt;ns:eimsTgrmId>&lt;xsl:copy-of select=&quot;ns:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:eimsTgrmId&quot;/>&lt;/ns:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:eimsTgrmVerNo&quot;>&lt;ns:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;ns:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:eimsTgrmVerNo&quot;/>&lt;/ns:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:frwkTrdId&quot;>&lt;ns:frwkTrdId>&lt;xsl:copy-of select=&quot;ns:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:frwkTrdId&quot;/>&lt;/ns:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:rcvSysCd&quot;>&lt;ns:rcvSysCd>&lt;xsl:copy-of select=&quot;ns:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:rcvSysCd&quot;/>&lt;/ns:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:tieTgrmCd&quot;>&lt;ns:tieTgrmCd>&lt;xsl:copy-of select=&quot;ns:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:tieTgrmCd&quot;/>&lt;/ns:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:tieSrvGrpCd&quot;>&lt;ns:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;ns:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:tieSrvGrpCd&quot;/>&lt;/ns:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:tieSrvNm&quot;>&lt;ns:tieSrvNm>&lt;xsl:copy-of select=&quot;ns:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:tieSrvNm&quot;/>&lt;/ns:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:scrnNo&quot;>&lt;ns:scrnNo>&lt;xsl:copy-of select=&quot;ns:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:scrnNo&quot;/>&lt;/ns:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:reqnRespGbcd&quot;>&lt;ns:reqnRespGbcd>&lt;xsl:copy-of select=&quot;ns:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:reqnRespGbcd&quot;/>&lt;/ns:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:syncProcGbcd&quot;>&lt;ns:syncProcGbcd>&lt;xsl:copy-of select=&quot;ns:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:syncProcGbcd&quot;/>&lt;/ns:syncProcGbcd>&lt;/xsl:if>&lt;ns:trdRespCd>&lt;xsl:value-of select=&quot;'1'&quot;/>&lt;/ns:trdRespCd>&lt;xsl:if test=&quot;ns:pageNo&quot;>&lt;ns:pageNo>&lt;xsl:copy-of select=&quot;ns:pageNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:pageNo&quot;/>&lt;/ns:pageNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:pageRowCnt&quot;>&lt;ns:pageRowCnt>&lt;xsl:copy-of select=&quot;ns:pageRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:pageRowCnt&quot;/>&lt;/ns:pageRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:totRowCnt&quot;>&lt;ns:totRowCnt>&lt;xsl:copy-of select=&quot;ns:totRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:totRowCnt&quot;/>&lt;/ns:totRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:nxtPageYn&quot;>&lt;ns:nxtPageYn>&lt;xsl:copy-of select=&quot;ns:nxtPageYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:nxtPageYn&quot;/>&lt;/ns:nxtPageYn>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:reqnDtm&quot;>&lt;ns:reqnDtm>&lt;xsl:copy-of select=&quot;ns:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:reqnDtm&quot;/>&lt;/ns:reqnDtm>&lt;/xsl:if>&lt;ns:respDtm>&lt;xsl:value-of select=&quot;format-dateTime(current-dateTime(), &amp;quot;[Y0001][M01][D01][H01][m01][s01][f001]&amp;quot;)&quot;/>&lt;/ns:respDtm>&lt;xsl:if test=&quot;ns:storeCd&quot;>&lt;ns:storeCd>&lt;xsl:copy-of select=&quot;ns:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:storeCd&quot;/>&lt;/ns:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:userId&quot;>&lt;ns:userId>&lt;xsl:copy-of select=&quot;ns:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:userId&quot;/>&lt;/ns:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:trdCommTrtyPrepCntn&quot;>&lt;ns:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;ns:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:trdCommTrtyPrepCntn&quot;/>&lt;/ns:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:for-each select=&quot;ns:msgGrpNm&quot;>&lt;ns:msgGrpNm>&lt;xsl:if test=&quot;ns:msgShwMthdGbcd&quot;>&lt;ns:msgShwMthdGbcd>&lt;xsl:copy-of select=&quot;ns:msgShwMthdGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:msgShwMthdGbcd&quot;/>&lt;/ns:msgShwMthdGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:errOcrnTgrmClasNm&quot;>&lt;ns:errOcrnTgrmClasNm>&lt;xsl:copy-of select=&quot;ns:errOcrnTgrmClasNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:errOcrnTgrmClasNm&quot;/>&lt;/ns:errOcrnTgrmClasNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;ns:msgCd>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/ns:msgCd>&lt;/xsl:if>&lt;ns:msgCntn>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/ns:msgCntn>&lt;ns:msgDtlCntn>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/ns:msgDtlCntn>&lt;/ns:msgGrpNm>&lt;/xsl:for-each>&lt;xsl:if test=&quot;ns:stdTgrmEndLettrVal&quot;>&lt;ns:stdTgrmEndLettrVal>&lt;xsl:copy-of select=&quot;ns:stdTgrmEndLettrVal/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:stdTgrmEndLettrVal&quot;/>&lt;/ns:stdTgrmEndLettrVal>&lt;/xsl:if>&lt;/ns:header>&lt;/xsl:for-each>&lt;ns:data>&lt;xsl:for-each select=&quot;$ParseJSON/ns:data/ns:srchGroup&quot;>&lt;ns:srchGroup>&lt;ns:wrkGbVal>&lt;xsl:copy-of select=&quot;ns:wrkGbVal/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:wrkGbVal&quot;/>&lt;/ns:wrkGbVal>&lt;ns:crdNo>&lt;xsl:copy-of select=&quot;ns:crdNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:crdNo&quot;/>&lt;/ns:crdNo>&lt;ns:qryStrtDt>&lt;xsl:copy-of select=&quot;ns:qryStrtDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:qryStrtDt&quot;/>&lt;/ns:qryStrtDt>&lt;ns:qryEndDt>&lt;xsl:copy-of select=&quot;ns:qryEndDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:qryEndDt&quot;/>&lt;/ns:qryEndDt>&lt;ns:aprvlRstCsfCd>&lt;xsl:copy-of select=&quot;ns:aprvlRstCsfCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:aprvlRstCsfCd&quot;/>&lt;/ns:aprvlRstCsfCd>&lt;ns:nxtSrchKey>&lt;xsl:copy-of select=&quot;ns:nxtSrchKey/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:nxtSrchKey&quot;/>&lt;/ns:nxtSrchKey>&lt;/ns:srchGroup>&lt;/xsl:for-each>&lt;/ns:data>&lt;/ns:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+=======
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://schema.hcis.com/xsd/CISTADAHHE0020101&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;RenderJSON_Error-input&quot; match=&quot;/&quot;>&lt;ns:root>&lt;xsl:for-each select=&quot;$ParseJSON/ns:header&quot;>&lt;ns:header>&lt;xsl:if test=&quot;ns:totTgrmLen&quot;>&lt;ns:totTgrmLen>&lt;xsl:copy-of select=&quot;ns:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:totTgrmLen&quot;/>&lt;/ns:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:hdrLen&quot;>&lt;ns:hdrLen>&lt;xsl:copy-of select=&quot;ns:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:hdrLen&quot;/>&lt;/ns:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:tgrmFrmCd&quot;>&lt;ns:tgrmFrmCd>&lt;xsl:copy-of select=&quot;ns:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:tgrmFrmCd&quot;/>&lt;/ns:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:sysEnvGbcd&quot;>&lt;ns:sysEnvGbcd>&lt;xsl:copy-of select=&quot;ns:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:sysEnvGbcd&quot;/>&lt;/ns:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:ipAdr&quot;>&lt;ns:ipAdr>&lt;xsl:copy-of select=&quot;ns:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:ipAdr&quot;/>&lt;/ns:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:guid&quot;>&lt;ns:guid>&lt;xsl:copy-of select=&quot;ns:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:guid&quot;/>&lt;/ns:guid>&lt;/xsl:if>&lt;ns:prgrNo>&lt;xsl:value-of select=&quot;ns:prgrNo+1&quot;/>&lt;/ns:prgrNo>&lt;xsl:if test=&quot;ns:frstGuid&quot;>&lt;ns:frstGuid>&lt;xsl:copy-of select=&quot;ns:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:frstGuid&quot;/>&lt;/ns:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:sendSysCd&quot;>&lt;ns:sendSysCd>&lt;xsl:copy-of select=&quot;ns:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:sendSysCd&quot;/>&lt;/ns:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:frstSendSysCd&quot;>&lt;ns:frstSendSysCd>&lt;xsl:copy-of select=&quot;ns:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:frstSendSysCd&quot;/>&lt;/ns:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:sysCommTrtyPrepCntn&quot;>&lt;ns:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;ns:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:sysCommTrtyPrepCntn&quot;/>&lt;/ns:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:eimsTgrmId&quot;>&lt;ns:eimsTgrmId>&lt;xsl:copy-of select=&quot;ns:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:eimsTgrmId&quot;/>&lt;/ns:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:eimsTgrmVerNo&quot;>&lt;ns:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;ns:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:eimsTgrmVerNo&quot;/>&lt;/ns:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:frwkTrdId&quot;>&lt;ns:frwkTrdId>&lt;xsl:copy-of select=&quot;ns:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:frwkTrdId&quot;/>&lt;/ns:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:rcvSysCd&quot;>&lt;ns:rcvSysCd>&lt;xsl:copy-of select=&quot;ns:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:rcvSysCd&quot;/>&lt;/ns:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:tieTgrmCd&quot;>&lt;ns:tieTgrmCd>&lt;xsl:copy-of select=&quot;ns:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:tieTgrmCd&quot;/>&lt;/ns:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:tieSrvGrpCd&quot;>&lt;ns:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;ns:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:tieSrvGrpCd&quot;/>&lt;/ns:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:tieSrvNm&quot;>&lt;ns:tieSrvNm>&lt;xsl:copy-of select=&quot;ns:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:tieSrvNm&quot;/>&lt;/ns:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:scrnNo&quot;>&lt;ns:scrnNo>&lt;xsl:copy-of select=&quot;ns:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:scrnNo&quot;/>&lt;/ns:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:reqnRespGbcd&quot;>&lt;ns:reqnRespGbcd>&lt;xsl:copy-of select=&quot;ns:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:reqnRespGbcd&quot;/>&lt;/ns:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:syncProcGbcd&quot;>&lt;ns:syncProcGbcd>&lt;xsl:copy-of select=&quot;ns:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:syncProcGbcd&quot;/>&lt;/ns:syncProcGbcd>&lt;/xsl:if>&lt;ns:trdRespCd>&lt;xsl:value-of select=&quot;&amp;quot;1&amp;quot;&quot;/>&lt;/ns:trdRespCd>&lt;xsl:if test=&quot;ns:pageNo&quot;>&lt;ns:pageNo>&lt;xsl:copy-of select=&quot;ns:pageNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:pageNo&quot;/>&lt;/ns:pageNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:pageRowCnt&quot;>&lt;ns:pageRowCnt>&lt;xsl:copy-of select=&quot;ns:pageRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:pageRowCnt&quot;/>&lt;/ns:pageRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:totRowCnt&quot;>&lt;ns:totRowCnt>&lt;xsl:copy-of select=&quot;ns:totRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:totRowCnt&quot;/>&lt;/ns:totRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:nxtPageYn&quot;>&lt;ns:nxtPageYn>&lt;xsl:copy-of select=&quot;ns:nxtPageYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:nxtPageYn&quot;/>&lt;/ns:nxtPageYn>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:reqnDtm&quot;>&lt;ns:reqnDtm>&lt;xsl:copy-of select=&quot;ns:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:reqnDtm&quot;/>&lt;/ns:reqnDtm>&lt;/xsl:if>&lt;ns:respDtm>&lt;xsl:value-of select=&quot;format-dateTime(current-dateTime(), &amp;quot;[Y0001][M01][D01][H01][m01][s01][f001]&amp;quot;)&quot;/>&lt;/ns:respDtm>&lt;xsl:if test=&quot;ns:storeCd&quot;>&lt;ns:storeCd>&lt;xsl:copy-of select=&quot;ns:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:storeCd&quot;/>&lt;/ns:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:userId&quot;>&lt;ns:userId>&lt;xsl:copy-of select=&quot;ns:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:userId&quot;/>&lt;/ns:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:trdCommTrtyPrepCntn&quot;>&lt;ns:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;ns:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:trdCommTrtyPrepCntn&quot;/>&lt;/ns:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:for-each select=&quot;ns:msgGrpNm&quot;>&lt;ns:msgGrpNm>&lt;xsl:if test=&quot;ns:msgShwMthdGbcd&quot;>&lt;ns:msgShwMthdGbcd>&lt;xsl:copy-of select=&quot;ns:msgShwMthdGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:msgShwMthdGbcd&quot;/>&lt;/ns:msgShwMthdGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns:errOcrnTgrmClasNm&quot;>&lt;ns:errOcrnTgrmClasNm>&lt;xsl:copy-of select=&quot;ns:errOcrnTgrmClasNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:errOcrnTgrmClasNm&quot;/>&lt;/ns:errOcrnTgrmClasNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;ns:msgCd>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/ns:msgCd>&lt;/xsl:if>&lt;ns:msgCntn>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/ns:msgCntn>&lt;ns:msgDtlCntn>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/ns:msgDtlCntn>&lt;/ns:msgGrpNm>&lt;/xsl:for-each>&lt;xsl:if test=&quot;ns:stdTgrmEndLettrVal&quot;>&lt;ns:stdTgrmEndLettrVal>&lt;xsl:copy-of select=&quot;ns:stdTgrmEndLettrVal/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns:stdTgrmEndLettrVal&quot;/>&lt;/ns:stdTgrmEndLettrVal>&lt;/xsl:if>&lt;/ns:header>&lt;/xsl:for-each>&lt;ns:data>&lt;xsl:copy-of select=&quot;$ParseJSON/ns:data/ns:srchGroup&quot;/>&lt;/ns:data>&lt;/ns:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+>>>>>>> DEV
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity

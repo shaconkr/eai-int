@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
     name="CISTADAHHE.CISTADAHHE0020101_Sub" suppressJoinFailure="yes"
+<<<<<<< HEAD
     targetNamespace="http://xmlns.example.com/20230105124516"
+=======
+    targetNamespace="http://xmlns.example.com/20230106153030"
+>>>>>>> DEV
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
@@ -179,8 +183,13 @@
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
     </tibex:Types>
+<<<<<<< HEAD
     <tibex:ProcessInfo callable="true" createdBy="cis089"
         createdOn="Thu Jan 05 12:45:16 KST 2023" description=""
+=======
+    <tibex:ProcessInfo callable="true" createdBy="cis099"
+        createdOn="Fri Jan 06 15:30:30 KST 2023" description=""
+>>>>>>> DEV
         extraErrorVars="true" modifiers="public"
         productVersion="6.9.0 V26 2022-11-02" scalable="true"
         singleton="true" stateless="false" type="IT"/>
@@ -356,7 +365,11 @@
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="0" name="Start"
+<<<<<<< HEAD
                     tibex:xpdlId="e073f184-6a5c-4b7f-9f87-9d4a9a022717"
+=======
+                    tibex:xpdlId="8d194c7e-0a58-44e5-bb20-e3074a9f3dbb"
+>>>>>>> DEV
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
                         <bpws:source linkName="StartToEnd"/>
@@ -369,7 +382,11 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="End-input"
                     name="End"
+<<<<<<< HEAD
                     tibex:xpdlId="0d784430-c234-42cb-bfa4-fd91ee63d502" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+=======
+                    tibex:xpdlId="d0d9442f-7958-4071-98e0-62b0cb2318e6" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+>>>>>>> DEV
                     <bpws:targets>
                         <bpws:target linkName="StartToEnd"/>
                     </bpws:targets>
@@ -377,8 +394,11 @@
                         <tibex:inputBinding
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:subElement>&lt;tns:emsBody>&lt;xsl:value-of select=&quot;$Start/tns:emsBody&quot;/>&lt;/tns:emsBody>&lt;/tns:subElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
+<<<<<<< HEAD
                     <tibex:inputBinding
                         expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">&lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://www.example.org/Schema_SubProc" version="2.0"&gt; &lt;xsl:template name="End-input" match="/"&gt; &lt;tns:subElement/&gt;&lt;/xsl:template&gt; &lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+=======
+>>>>>>> DEV
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.internal.end"

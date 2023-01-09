@@ -327,6 +327,7 @@
 			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
+<<<<<<< HEAD
 		<globalVariable>
 			<name>//HcisCommon.smodule//BW.DEPLOYMENTUNIT.TYPE</name>
 			<value></value>
@@ -426,5 +427,7 @@
 			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
+=======
+>>>>>>> DEV
 	</globalVariables>
 </repository>

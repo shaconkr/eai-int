@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no" name="cistad201.module.Activator"
     suppressJoinFailure="yes"
+<<<<<<< HEAD
     targetNamespace="http://xmlns.example.com/20230106153546"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://xmlns.example.com/20230106153546PLT"
+=======
+    targetNamespace="http://xmlns.example.com/20230106162834"
+    xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:info="http://www.tibco.com/bw/process/info"
+    xmlns:ns="http://xmlns.example.com/20230106162834PLT"
+>>>>>>> DEV
     xmlns:ns0="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns1="http://tibco.com/bw/bw6/system/ModuleActivator"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
@@ -174,10 +181,17 @@
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
         <wsdl:definitions
+<<<<<<< HEAD
             targetNamespace="http://xmlns.example.com/20230106153546PLT"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
             xmlns:ptyp="http://tibco.com/bw/bw6/system/ModuleActivator"
             xmlns:tns="http://xmlns.example.com/20230106153546PLT"
+=======
+            targetNamespace="http://xmlns.example.com/20230106162834PLT"
+            xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+            xmlns:ptyp="http://tibco.com/bw/bw6/system/ModuleActivator"
+            xmlns:tns="http://xmlns.example.com/20230106162834PLT"
+>>>>>>> DEV
             xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <plnk:partnerLinkType name="partnerLinkType">
@@ -186,8 +200,13 @@
             <wsdl:import namespace="http://tibco.com/bw/bw6/system/ModuleActivator"/>
         </wsdl:definitions>
     </tibex:Types>
+<<<<<<< HEAD
     <tibex:ProcessInfo callable="false" createdBy="cis089"
         createdOn="Fri Jan 06 15:35:46 KST 2023" description=""
+=======
+    <tibex:ProcessInfo callable="false" createdBy="cis099"
+        createdOn="Fri Jan 06 16:28:34 KST 2023" description=""
+>>>>>>> DEV
         extraErrorVars="true" modifiers="public"
         productVersion="6.9.0 V26 2022-11-02" scalable="true"
         singleton="true" stateless="false" type="IT"/>
@@ -403,8 +422,13 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
+<<<<<<< HEAD
                                     x="101"
                                     xsi:type="notation:Bounds" y="25"/>
+=======
+                                    x="147"
+                                    xsi:type="notation:Bounds" y="22"/>
+>>>>>>> DEV
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -430,8 +454,15 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity"/>
 
                                     <layoutConstraint
+<<<<<<< HEAD
                                     height="127"
                                     width="381" xsi:type="notation:Bounds"/>
+=======
+                                    height="108"
+                                    width="400"
+                                    x="2"
+                                    xsi:type="notation:Bounds" y="2"/>
+>>>>>>> DEV
                                     </children>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -450,9 +481,16 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
 
                                     <layoutConstraint
+<<<<<<< HEAD
                                     height="126"
                                     width="384"
                                     x="15" xsi:type="notation:Bounds"/>
+=======
+                                    height="-45"
+                                    width="-76"
+                                    x="30"
+                                    xsi:type="notation:Bounds" y="20"/>
+>>>>>>> DEV
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -465,9 +503,13 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
 
+<<<<<<< HEAD
                                     <layoutConstraint
                                     height="150"
                                     width="424" xsi:type="notation:Bounds"/>
+=======
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+>>>>>>> DEV
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -526,9 +568,14 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0"/>
                                     <layoutConstraint
+<<<<<<< HEAD
                                     height="169"
                                     width="486"
                                     x="2" xsi:type="notation:Bounds"/>
+=======
+                                    height="140"
+                                    width="485" xsi:type="notation:Bounds"/>
+>>>>>>> DEV
                                     </children>
                                     <children type="4011">
                                     <children type="3012">
@@ -722,7 +769,13 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
+<<<<<<< HEAD
                                     height="342" width="561" xsi:type="notation:Bounds"/>
+=======
+                                    height="314" width="561"
+                                    x="20"
+                                    xsi:type="notation:Bounds" y="20"/>
+>>>>>>> DEV
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -736,8 +789,14 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
+<<<<<<< HEAD
                                     <layoutConstraint height="384"
                                     width="515" xsi:type="notation:Bounds"/>
+=======
+                                    <layoutConstraint height="108"
+                                    width="400" x="2"
+                                    xsi:type="notation:Bounds" y="2"/>
+>>>>>>> DEV
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -802,21 +861,38 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links/>
+<<<<<<< HEAD
             <bpws:pick createInstance="yes" name="pick" tibex:xpdlId="1eca50b0-8b09-4b55-9386-97f1c72d2a30">
                 <bpws:onMessage operation="onStartup"
                     partnerLink="ModuleActivator"
                     portType="ns1:ModuleActivator"
                     tibex:xpdlId="05941c4a-3035-4ae4-a6d3-3b119895822e" variable="onStartup">
+=======
+            <bpws:pick createInstance="yes" name="pick" tibex:xpdlId="5d07b048-3572-433e-9248-c07934a1ead4">
+                <bpws:onMessage operation="onStartup"
+                    partnerLink="ModuleActivator"
+                    portType="ns1:ModuleActivator"
+                    tibex:xpdlId="47fe3701-ff62-4ca6-a8f6-bfcb945553fc" variable="onStartup">
+>>>>>>> DEV
                     <bpws:scope name="scope1">
                         <bpws:flow name="flow1">
                             <bpws:links/>
                             <bpws:empty name="OnMessageStart"
+<<<<<<< HEAD
                                 tibex:constructor="onMessageStart" tibex:xpdlId="a4c5d830-682a-4212-82b1-43ff3e3ac11a"/>
                             <bpws:empty name="OnMessageEnd"
                                 tibex:constructor="onMessageEnd" tibex:xpdlId="fd81daad-5652-43a9-a263-01c6dec6cb5e"/>
                             <bpws:extensionActivity>
                                 <tibex:extActivity name="L_Set_BaseInfo"
                                     tibex:xpdlId="f7fc7b2e-cdf5-4f5a-b0d1-17c8cbfc439d"
+=======
+                                tibex:constructor="onMessageStart" tibex:xpdlId="7d30c071-47de-4675-b2c6-e1e95b3cfc64"/>
+                            <bpws:empty name="OnMessageEnd"
+                                tibex:constructor="onMessageEnd" tibex:xpdlId="0f3cb32b-39f8-4233-bd5f-44aaa349fbda"/>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity name="L_Set_BaseInfo"
+                                    tibex:xpdlId="a47b858c-770d-4381-8433-ac7609fe7abf"
+>>>>>>> DEV
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <tibex:CallProcess
                                     moduleRef="CSPI_Library"
@@ -829,14 +905,24 @@
                 <bpws:onMessage operation="onShutdown"
                     partnerLink="ModuleActivator"
                     portType="ns1:ModuleActivator"
+<<<<<<< HEAD
                     tibex:xpdlId="37ccbb74-aa36-4c8b-9d36-1da447877525" variable="onShutdown">
+=======
+                    tibex:xpdlId="88f8e934-eba2-49c0-9668-6c8d8f01bf1e" variable="onShutdown">
+>>>>>>> DEV
                     <bpws:scope name="scope2">
                         <bpws:flow name="flow2">
                             <bpws:links/>
                             <bpws:empty name="OnMessageStart1"
+<<<<<<< HEAD
                                 tibex:constructor="onMessageStart" tibex:xpdlId="94df6833-f8c6-4d6b-99d4-ec84957d7a78"/>
                             <bpws:empty name="OnMessageEnd1"
                                 tibex:constructor="onMessageEnd" tibex:xpdlId="eafa1add-6f20-4332-9042-43ce245d6872"/>
+=======
+                                tibex:constructor="onMessageStart" tibex:xpdlId="028eb6af-b29a-4902-bd9d-3499d45ff8b4"/>
+                            <bpws:empty name="OnMessageEnd1"
+                                tibex:constructor="onMessageEnd" tibex:xpdlId="a472b490-dcfd-45be-8d94-a0489eb0cff5"/>
+>>>>>>> DEV
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
