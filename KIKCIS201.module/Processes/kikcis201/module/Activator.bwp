@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no" name="kikcis201.module.Activator"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20230109151004"
+    targetNamespace="http://xmlns.example.com/20230109160345"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
-    xmlns:ns="http://xmlns.example.com/20230109151004PLT"
+    xmlns:ns="http://xmlns.example.com/20230109160345PLT"
     xmlns:ns0="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns1="http://tibco.com/bw/bw6/system/ModuleActivator"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
@@ -174,10 +174,10 @@
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
         <wsdl:definitions
-            targetNamespace="http://xmlns.example.com/20230109151004PLT"
+            targetNamespace="http://xmlns.example.com/20230109160345PLT"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
             xmlns:ptyp="http://tibco.com/bw/bw6/system/ModuleActivator"
-            xmlns:tns="http://xmlns.example.com/20230109151004PLT"
+            xmlns:tns="http://xmlns.example.com/20230109160345PLT"
             xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <plnk:partnerLinkType name="partnerLinkType">
@@ -186,8 +186,8 @@
             <wsdl:import namespace="http://tibco.com/bw/bw6/system/ModuleActivator"/>
         </wsdl:definitions>
     </tibex:Types>
-    <tibex:ProcessInfo callable="false" createdBy="cis099"
-        createdOn="Mon Jan 09 15:10:04 KST 2023" description=""
+    <tibex:ProcessInfo callable="false" createdBy="hakusa"
+        createdOn="Mon Jan 09 16:03:45 KST 2023" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="6.9.0 V26 2022-11-02" scalable="true"
         singleton="true" stateless="false" type="IT"/>
@@ -403,8 +403,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="107"
-                                    xsi:type="notation:Bounds" y="22"/>
+                                    x="110"
+                                    xsi:type="notation:Bounds" y="15"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -805,21 +805,21 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links/>
-            <bpws:pick createInstance="yes" name="pick" tibex:xpdlId="88eae348-4bcd-4feb-98b3-0c7e7999174c">
+            <bpws:pick createInstance="yes" name="pick" tibex:xpdlId="0efe6db0-fc5f-4152-9356-c6a504292e1e">
                 <bpws:onMessage operation="onStartup"
                     partnerLink="ModuleActivator"
                     portType="ns1:ModuleActivator"
-                    tibex:xpdlId="fb291c5f-7625-4b77-adf5-1be81b99aad2" variable="onStartup">
+                    tibex:xpdlId="d4e9696b-4c6b-45a1-9a24-5e91168ed2e6" variable="onStartup">
                     <bpws:scope name="scope1">
                         <bpws:flow name="flow1">
                             <bpws:links/>
                             <bpws:empty name="OnMessageStart"
-                                tibex:constructor="onMessageStart" tibex:xpdlId="a1b96ecb-2011-4029-b9c7-972715aeae3a"/>
+                                tibex:constructor="onMessageStart" tibex:xpdlId="d9cc7550-6e2c-438d-8dab-febf794c4e4b"/>
                             <bpws:empty name="OnMessageEnd"
-                                tibex:constructor="onMessageEnd" tibex:xpdlId="daabb915-aa21-46ca-a70c-19e8db0b2c58"/>
+                                tibex:constructor="onMessageEnd" tibex:xpdlId="e619a263-6f61-4519-9e28-b8ecd1395b2a"/>
                             <bpws:extensionActivity>
                                 <tibex:extActivity name="L_Set_BaseInfo"
-                                    tibex:xpdlId="f95acbea-0ede-4885-ab67-e6c234f3973d"
+                                    tibex:xpdlId="6da3e363-4047-448b-a1a4-01cc68a73502"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <tibex:CallProcess
                                     moduleRef="CSPI_Library"
@@ -832,14 +832,14 @@
                 <bpws:onMessage operation="onShutdown"
                     partnerLink="ModuleActivator"
                     portType="ns1:ModuleActivator"
-                    tibex:xpdlId="cad1a1a7-9f18-495f-af1f-ef1d066157ef" variable="onShutdown">
+                    tibex:xpdlId="d7facec3-7cba-4214-a0d5-d8f7fc817650" variable="onShutdown">
                     <bpws:scope name="scope2">
                         <bpws:flow name="flow2">
                             <bpws:links/>
                             <bpws:empty name="OnMessageStart1"
-                                tibex:constructor="onMessageStart" tibex:xpdlId="dafef0c2-0710-460c-a023-b57e9058f14b"/>
+                                tibex:constructor="onMessageStart" tibex:xpdlId="9ecb9585-1d59-4e4b-8647-d3d22c267157"/>
                             <bpws:empty name="OnMessageEnd1"
-                                tibex:constructor="onMessageEnd" tibex:xpdlId="32f17cb2-8f6a-41c4-8cf7-c70ccc25bd01"/>
+                                tibex:constructor="onMessageEnd" tibex:xpdlId="4318d4e7-7c77-4c5b-aa09-40e806ca6245"/>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
