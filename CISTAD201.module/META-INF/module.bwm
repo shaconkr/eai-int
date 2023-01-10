@@ -18,4 +18,7 @@
   <sca:component xmi:id="_aCD5UI_-Ee2EFu28jDi2mQ" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_aCD5UY_-Ee2EFu28jDi2mQ" processName="CISTAD201.module.Activator"/>
   </sca:component>
+  <sca:component xmi:id="_pik2EJCcEe2Nh4unqPy6DA" name="ComponentCISTADAHFZ0011101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_pik2EZCcEe2Nh4unqPy6DA" processName="CISTADAHFZ.CISTADAHFZ0011101_Main"/>
+  </sca:component>
 </sca:composite>
