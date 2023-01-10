@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_f0g-sZCDEe2DPcQvU2ULoA" name="KIKCIS201.module.FW" type="http:HttpClientConfiguration">
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_f0hlwJCDEe2DPcQvU2ULoA" httpClientVersion="httpcomponents" retryCount="3" idleConnectionTimeout="3000" hystrixCommandName="KIKCIS201.module.FW" cmdExecutionIsolationStrategy="COUNT_BASED" cmdExecutionIsolationTimeout="10" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="50" cmdCircuitBreakerSleepWindow="100" cmdCircuitBreakerErrorThresholdPercentage="100" cmdMetricsRollingStatsTime="100" cmdMetricsRollingStatsNumBuckets="60000" cmdMetricsHealthSnapshotInterval="500" tpCoreSize="10" tpMaxQueueSize="60000" tpQueueSizeRejectionThreshold="6000" tpKeepAliveTime="1">
+    <tcpDetails xmi:id="_f0hlwZCDEe2DPcQvU2ULoA">
+      <substitutionBindings xmi:id="_juF4UJCDEe2DPcQvU2ULoA" template="host" propName="FW_IP"/>
+      <substitutionBindings xmi:id="_kVczQJCDEe2DPcQvU2ULoA" template="port" propName="FW_PORT"/>
+    </tcpDetails>
+  </jndi:configuration>
+</jndi:namedResource>
