@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="CISTADAHHE0020101_OutReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
+      <segment name="srchGroup" minOccurs="1" collection="list" maxOccurs="unbounded" class="map"> 
+        <field kor="작업구분값" name="wrkGbVal" position="0" length="2"/>  
+        <field kor="카드번호" name="crdNo" position="2" length="16"/>  
+        <field kor="조회시작일자" name="qryStrtDt" position="18" length="8"/>  
+        <field kor="조회종료일자" name="qryEndDt" position="26" length="8"/>  
+        <field kor="승인결과분류코드" name="aprvlRstCsfCd" position="34" length="1"/>  
+        <field kor="다음검색KEY" name="nxtSrchKey" position="35" length="14"/> 
+      </segment> 
+    </record> 
+  </stream>  
+  <stream kor="" name="CISTADAHHE0020101_OutRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="TAD_OutRes" class="java.util.LinkedHashMap">
+      <field kor="결과건수" name="rstRowcount" position="0" length="5" justify="right" padding="0"/>
+      <segment name="rstList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
+        <field kor="카드번호" name="crdNo" position="5" length="16"/>
+        <field kor="카드브랜드구분코드" name="crdBrndGbcd" position="21" length="1"/>
+        <field kor="승인번호" name="aprvlNo" position="22" length="12"/>
+        <field kor="백화점아울렛점코드" name="dptsOutltStoreCd" position="34" length="3"/>
+        <field kor="승인유입구분코드" name="aprvlInfwGbcd" position="37" length="1"/>
+        <field kor="승인자ID" name="aprvId" position="38" length="100"/>
+        <field kor="승인일시" name="aprvlDtm" position="138" length="14"/>
+        <field kor="포스번호" name="posNo" position="152" length="6"/>
+        <field kor="할부개월수" name="insmMths" position="158" length="1" justify="right" padding="0"/>
+        <field kor="승인입금구분코드" name="aprvlIamtGbcd" position="159" length="1"/>
+        <field kor="총매출금액" name="tsaleAmt" position="160" length="1" justify="right" padding="0"/>
+        <field kor="할인금액" name="dcAmt" position="161" length="1" justify="right" padding="0"/>
+        <field kor="순매출금액" name="nsaleAmt" position="162" length="1" justify="right" padding="0"/>
+        <field kor="입금금액" name="iamtAmt" position="163" length="1" justify="right" padding="0"/>
+        <field kor="카드승인금액" name="crdAprvlAmt" position="164" length="19" justify="right" padding="0"/>
+        <field kor="승인결과분류코드" name="aprvlRstCsfCd" position="183" length="1"/>
+        <field kor="승인코드" name="aprvlCd" position="184" length="4"/>
+        <field kor="승인메모" name="aprvlMemo" position="188" length="200"/>
+        <field kor="에누리구분값" name="enuriGbVal" position="388" length="2"/>
+        <field kor="상품코드" name="itemCd" position="390" length="20"/>
+        <field kor="상품금액" name="itemAmt" position="410" length="1" justify="right" padding="0"/>
+      </segment>
+    </record>
+  </stream>
+</beanio>

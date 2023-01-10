@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFZ0011101="http://schema.hcis.com/xsd/CISTADAHFZ0011101" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_51I7UI_8Ee2EFu28jDi2mQ" name="CISTADAHFZ.CISTADAHFZ0011101.CISTADAHFZ0011101_OutReq_data" type="dataformat:DataFormat">
+  <imports xmi:id="_51I7UY_8Ee2EFu28jDi2mQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFZ0011101_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFZ0011101"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_51I7Uo_8Ee2EFu28jDi2mQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFZ0011101:main" fieldOffsetsStr="srchGroup(0,0)">
+    <fieldOffsets xmi:id="_51I7U4_8Ee2EFu28jDi2mQ" name="srchGroup" kor="검색그룹" type="SRCH_GROUP_TYPE"/>
+  </jndi:configuration>
+</jndi:namedResource>
