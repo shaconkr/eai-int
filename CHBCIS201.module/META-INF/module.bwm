@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_t3ykAJC2Ee2njO93zN7Lvw" targetNamespace="http://tns.tibco.com/bw/composite/CHBCIS201.module" name="CHBCIS201.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_uB6wYJC2Ee2njO93zN7Lvw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uB6wYZC2Ee2njO93zN7Lvw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uCFIcJC2Ee2njO93zN7Lvw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uCFIcZC2Ee2njO93zN7Lvw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uCFIcpC2Ee2njO93zN7Lvw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uCFIc5C2Ee2njO93zN7Lvw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uCFIdJC2Ee2njO93zN7Lvw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uCFIdZC2Ee2njO93zN7Lvw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uCO5cJC2Ee2njO93zN7Lvw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_G5bVIJC6Ee2njO93zN7Lvw" name="FW_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_HOPHgJC6Ee2njO93zN7Lvw" name="FW_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_awqssJC3Ee2njO93zN7Lvw" name="ComponentCHBCISFNDX0120101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_awqssZC3Ee2njO93zN7Lvw" processName="CHBCISFNDX.CHBCISFNDX0120101_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_7Fw50JC5Ee2njO93zN7Lvw" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_7Fw50ZC5Ee2njO93zN7Lvw" processName="CHBCIS201.module.Activator"/>
+  </sca:component>
+  <sca:component xmi:id="_jYjoMZC6Ee2njO93zN7Lvw" name="ComponentCHBCISFNDX0140101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jYjoMpC6Ee2njO93zN7Lvw" processName="CHBCISFNDX.CHBCISFNDX0140101_Main"/>
+  </sca:component>
+</sca:composite>
