@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030102="http://schema.hcis.com/xsd/CISTADAHFF0030102" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CIS_AHFF_TAD_DEFT.CISTADAHFF0030102_OutRes" type="dataformat:DataFormat">
-  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030102_OutRes.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030102"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030102:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets kor="0" type="TADHeaderType" name="header" start="0" end="0"/>
-    <fieldOffsets kor="0" type="CISTADAHFF0030102_OutRes" name="data" start="0" end="0"/>
-  </jndi:configuration>
-</jndi:namedResource>
