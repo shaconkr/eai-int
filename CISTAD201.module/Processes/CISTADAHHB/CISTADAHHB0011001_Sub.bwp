@@ -1838,7 +1838,7 @@
             </children>
             <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="1337" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="1218" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
