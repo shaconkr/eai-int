@@ -17,4 +17,7 @@
   <sca:component xmi:id="_sh0UkpB_Ee2DPcQvU2ULoA" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_sh0Uk5B_Ee2DPcQvU2ULoA" processName="KIKCIS201.module.Activator"/>
   </sca:component>
+  <sca:component xmi:id="_B6ktwJLkEe2eZcVV88IE4A" name="ComponentKIKCISFNDX0010101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_B6ktwZLkEe2eZcVV88IE4A" processName="KIKCISFNDX.KIKCISFNDX0010101_Main"/>
+  </sca:component>
 </sca:composite>
