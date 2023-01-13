@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0020301="http://schema.hcis.com/xsd/CISTADAHHE0020301" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_pWwEkJLhEe2U4fONT9V05A" name="CISTADAHHE.CISTADAHHE0020301.CISTADAHHE0020301_OutReq_data_srchGroup" type="dataformat:DataFormat">
-  <imports xmi:id="_pWwEkZLhEe2U4fONT9V05A" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0020301_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020301"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_pWwEkpLhEe2U4fONT9V05A" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0020301:main" lineLength="115" fieldOffsetsStr="storeCd(0,3)&#xA;aprvId(3,103)&#xA;strtYm(103,109)&#xA;endYm(109,115)">
-    <fieldOffsets xmi:id="_pWwEk5LhEe2U4fONT9V05A" name="storeCd" end="3" kor="점코드" type="string"/>
-    <fieldOffsets xmi:id="_pWwElJLhEe2U4fONT9V05A" name="aprvId" start="3" end="103" kor="승인자ID" type="string"/>
-    <fieldOffsets xmi:id="_pWwElZLhEe2U4fONT9V05A" name="strtYm" start="103" end="109" kor="시작년월" type="string"/>
-    <fieldOffsets xmi:id="_pWwElpLhEe2U4fONT9V05A" name="endYm" start="109" end="115" kor="종료년월" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0020301="http://schema.hcis.com/xsd/CISTADAHHE0020301" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHE/CISTADAHHE0020301.CISTADAHHE0020301_OutReq_data_srchGroup" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0020301_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020301"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0020301:main" lineLength="216" fieldOffsetsStr="storeCd(0,3)&#xA;aprvId(3,103)&#xA;strtYm(103,109)&#xA;endYm(109,115)&#xA;nxtSrchKey(115,216)">
+    <fieldOffsets kor="점코드" type="string" name="storeCd" start="0" end="3"/>
+    <fieldOffsets kor="승인자ID" type="string" name="aprvId" start="3" end="103"/>
+    <fieldOffsets kor="시작년월" type="string" name="strtYm" start="103" end="109"/>
+    <fieldOffsets kor="종료년월" type="string" name="endYm" start="109" end="115"/>
+    <fieldOffsets kor="다음검색KEY" type="string" name="nxtSrchKey" start="115" end="216"/>
   </jndi:configuration>
 </jndi:namedResource>

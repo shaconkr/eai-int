@@ -6,6 +6,7 @@
                 <element e:kor="승인자ID" e:length="100" e:padder="SpaceRight" name="aprvId" nillable="true" type="string"/>
                 <element e:kor="시작년월" e:length="6" e:padder="SpaceRight" name="strtYm" nillable="true" type="string"/>
                 <element e:kor="종료년월" e:length="6" e:padder="SpaceRight" name="endYm" nillable="true" type="string"/>
+                <element e:kor="다음검색KEY" e:length="101" e:padder="SpaceRight" name="nxtSrchKey" nillable="true" type="string"/>
             </sequence>
         </complexType>
     </element>

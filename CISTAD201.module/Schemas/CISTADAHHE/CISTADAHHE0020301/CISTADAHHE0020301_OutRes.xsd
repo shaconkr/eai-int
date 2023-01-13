@@ -33,8 +33,8 @@
     </complexType>
     <complexType name="CISTADAHHE0020301_OutRes">
         <sequence>
-            <element e:kor="결과건수" e:length="5" e:padder="ZeroLeft" name="rstRowcount" nillable="true" type="long"/>
-            <element e:kor="결과리스트" e:padder="ZeroLeft" maxOccurs="unbounded" name="rstList" nillable="true" type="ns:RST_LIST_TYPE"/>
+            <element e:kor="다음검색KEY" e:length="101" e:padder="SpaceRight" name="nxtSrchKey" nillable="true" type="string"/>
+            <element e:kor="결과리스트" e:padder="ZeroLeft" maxOccurs="50" minOccurs="50" name="rstList" nillable="true" type="ns:RST_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RST_LIST_TYPE">
