@@ -5,7 +5,9 @@ Bundle-SymbolicName: CISTAD201.module
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: TIBCO Software Inc.
-Export-Package: CISTADAHHE,
+Export-Package: CISTADAHFF,
+ CISTADAHHB,
+ CISTADAHHE,
  com.hcis.eai
 Require-Bundle: HcisCommon.smodule;bundle-version="1.0.0",
  JeinSoft.dataformat.plugin;bundle-version="1.0.0"

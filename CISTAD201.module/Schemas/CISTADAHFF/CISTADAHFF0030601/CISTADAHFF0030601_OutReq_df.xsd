@@ -1,0 +1,9 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHFF0030601" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHFF0030601">
+    <element name="root">
+        <complexType>
+            <sequence>
+                <element e:kor="검색그룹" e:padder="ZeroLeft" name="srchGroup" nillable="true" type="ns:SRCH_GROUP_TYPE"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

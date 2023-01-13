@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="CISTADAHFF0030601_OutReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
+      <segment name="header" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="전체전문길이" name="totTgrmLen" position="0" length="8" justify="right" padding="0"/>  
+        <field kor="헤더길이" name="hdrLen" position="8" length="8" justify="right" padding="0"/>  
+        <field kor="전문형식코드" name="tgrmFrmCd" position="16" length="1"/>  
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" position="17" length="1"/>  
+        <field kor="IP주소" name="ipAdr" position="18" length="40"/>  
+        <field kor="GUID" name="guid" position="58" length="38"/>  
+        <field kor="진행번호" name="prgrNo" position="96" length="3" justify="right" padding="0"/>  
+        <field kor="최초GUID" name="frstGuid" position="99" length="38"/>  
+        <field kor="전송시스템코드" name="sendSysCd" position="137" length="3"/>  
+        <field kor="최초전송시스템코드" name="frstSendSysCd" position="140" length="3"/>  
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" position="143" length="21"/>  
+        <field kor="EIMS전문ID" name="eimsTgrmId" position="164" length="17"/>  
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" position="181" length="3"/>  
+        <field kor="프래임워크거래ID" name="frwkTrdId" position="184" length="12"/>  
+        <field kor="수신시스템코드" name="rcvSysCd" position="196" length="3"/>  
+        <field kor="연계전문코드" name="tieTgrmCd" position="199" length="10"/>  
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" position="209" length="2"/>  
+        <field kor="연계서비스명" name="tieSrvNm" position="211" length="30"/>  
+        <field kor="화면번호" name="scrnNo" position="241" length="20"/>  
+        <field kor="요청응답구분코드" name="reqnRespGbcd" position="261" length="1"/>  
+        <field kor="동기처리구분코드" name="syncProcGbcd" position="262" length="1"/>  
+        <field kor="거래응답코드" name="trdRespCd" position="263" length="1"/>  
+        <field kor="요청일시" name="reqnDtm" position="264" length="17"/>  
+        <field kor="응답일시" name="respDtm" position="281" length="17"/>  
+        <field kor="점코드" name="storeCd" position="298" length="3"/>  
+        <field kor="사용자ID" name="userId" position="301" length="8"/>  
+        <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="309" length="100"/>  
+        <field kor="메시지코드" name="msgCd" position="409" length="10"/> 
+      </segment>  
+      <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
+        <segment name="srchGroup" minOccurs="1" collection="list" maxOccurs="unbounded" class="map"> 
+          <field kor="작업구분값" name="wrkGbVal" position="419" length="2"/>  
+          <field kor="카드회원번호" name="crdMemNo" position="421" length="9"/> 
+        </segment> 
+      </segment> 
+    </record> 
+  </stream>  
+  <stream kor="" name="CISTADAHFF0030601_OutRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="TAD_OutRes" class="java.util.LinkedHashMap">
+      <segment name="header" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="전체전문길이" name="totTgrmLen" position="0" length="8" justify="right" padding="0"/>
+        <field kor="헤더길이" name="hdrLen" position="8" length="8" justify="right" padding="0"/>
+        <field kor="전문형식코드" name="tgrmFrmCd" position="16" length="1"/>
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" position="17" length="1"/>
+        <field kor="IP주소" name="ipAdr" position="18" length="40"/>
+        <field kor="GUID" name="guid" position="58" length="38"/>
+        <field kor="진행번호" name="prgrNo" position="96" length="3" justify="right" padding="0"/>
+        <field kor="최초GUID" name="frstGuid" position="99" length="38"/>
+        <field kor="전송시스템코드" name="sendSysCd" position="137" length="3"/>
+        <field kor="최초전송시스템코드" name="frstSendSysCd" position="140" length="3"/>
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" position="143" length="21"/>
+        <field kor="EIMS전문ID" name="eimsTgrmId" position="164" length="17"/>
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" position="181" length="3"/>
+        <field kor="프래임워크거래ID" name="frwkTrdId" position="184" length="12"/>
+        <field kor="수신시스템코드" name="rcvSysCd" position="196" length="3"/>
+        <field kor="연계전문코드" name="tieTgrmCd" position="199" length="10"/>
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" position="209" length="2"/>
+        <field kor="연계서비스명" name="tieSrvNm" position="211" length="30"/>
+        <field kor="화면번호" name="scrnNo" position="241" length="20"/>
+        <field kor="요청응답구분코드" name="reqnRespGbcd" position="261" length="1"/>
+        <field kor="동기처리구분코드" name="syncProcGbcd" position="262" length="1"/>
+        <field kor="거래응답코드" name="trdRespCd" position="263" length="1"/>
+        <field kor="요청일시" name="reqnDtm" position="264" length="17"/>
+        <field kor="응답일시" name="respDtm" position="281" length="17"/>
+        <field kor="점코드" name="storeCd" position="298" length="3"/>
+        <field kor="사용자ID" name="userId" position="301" length="8"/>
+        <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="309" length="100"/>
+        <field kor="메시지코드" name="msgCd" position="409" length="10"/>
+      </segment>
+      <segment name="data" minOccurs="1" maxOccurs="1" class="map">
+        <segment name="rstGroup" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
+          <field kor="카드회원번호" name="crdMemNo" position="419" length="9"/>
+          <field kor="승인주의코드" name="aprvlCareCd" position="428" length="4"/>
+          <field kor="승인주의내용" name="aprvlCareCntn" position="432" length="100"/>
+          <field kor="승인주의종료일자" name="aprvlCareEndDt" position="532" length="8"/>
+        </segment>
+      </segment>
+    </record>
+  </stream>
+</beanio>
