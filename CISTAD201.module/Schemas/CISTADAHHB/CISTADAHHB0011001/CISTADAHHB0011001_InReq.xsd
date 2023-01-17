@@ -53,6 +53,7 @@
     <complexType name="SRCH_GROUP_TYPE">
         <sequence>
             <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="작업구분값" e:length="2" e:padder="SpaceRight" name="wrkGbVal" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">

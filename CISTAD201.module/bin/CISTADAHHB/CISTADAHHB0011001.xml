@@ -41,7 +41,8 @@
       </segment>  
       <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
         <segment name="srchGroup" minOccurs="1" collection="list" maxOccurs="unbounded" class="map"> 
-          <field kor="카드번호" name="crdNo" position="419" length="16"/> 
+          <field kor="카드번호" name="crdNo" position="419" length="16"/>  
+          <field kor="작업구분값" name="wrkGbVal" position="435" length="2"/> 
         </segment> 
       </segment> 
     </record> 
@@ -83,13 +84,16 @@
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
         <segment name="rstGroup" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="총한도금액" name="totBndsAmt" position="419" length="18" justify="right" padding="0"/>
-          <field kor="총사용금액" name="totUseAmt" position="437" length="18" justify="right" padding="0"/>
-          <field kor="잔여한도금액" name="rmndBndsAmt" position="455" length="18" justify="right" padding="0"/>
-          <field kor="임시한도금액" name="tmpBndsAmt" position="473" length="18" justify="right" padding="0"/>
-          <field kor="특별한도금액" name="speclBndsAmt" position="491" length="18" justify="right" padding="0"/>
-          <field kor="특별임시한도적용기간" name="speclTmpBndsAplyTerm" position="509" length="23"/>
-          <field kor="특별한도잔액" name="speclBndsBlnc" position="532" length="18" justify="right" padding="0"/>
+          <field kor="총한도금액" name="totBndsAmt" position="419" length="18"/>
+          <field kor="총사용금액" name="totUseAmt" position="437" length="18"/>
+          <field kor="잔여한도금액" name="rmndBndsAmt" position="455" length="18"/>
+          <field kor="임시한도금액" name="tmpBndsAmt" position="473" length="18"/>
+          <field kor="특별한도금액" name="speclBndsAmt" position="491" length="18"/>
+          <field kor="임시한도적용일자" name="tmpBndsAplyDt" position="509" length="8"/>
+          <field kor="임시한도종료일자" name="tmpBndsEndDt" position="517" length="8"/>
+          <field kor="특별한도적용일자" name="speclBndsAplyDt" position="525" length="8"/>
+          <field kor="특별한도종료일자" name="speclBndsEndDt" position="533" length="8"/>
+          <field kor="특별한도잔액" name="speclBndsBlnc" position="541" length="18"/>
         </segment>
       </segment>
     </record>
