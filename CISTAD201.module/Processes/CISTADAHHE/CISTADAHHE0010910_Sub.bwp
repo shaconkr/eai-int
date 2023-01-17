@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="CISTADAHHE.CISTADAHHE0020101_Sub" suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20230106161806"
+    name="CISTADAHHE.CISTADAHHE0010910_Sub" suppressJoinFailure="yes"
+    targetNamespace="http://xmlns.example.com/20230117102008"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
@@ -1061,13 +1061,6 @@
                     <element maxOccurs="1" minOccurs="0" ref="Q1:InvocationException"/>
                 </choice>
             </complexType>
-        </schema>
-        <schema elementFormDefault="qualified"
-            targetNamespace="http://www.tibco.com/tnt/utilitySchema"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/tnt/utilitySchema">
-            <simpleType name="nativeJavaObjectKey">
-                <restriction base="string"/>
-            </simpleType>
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="cis099"

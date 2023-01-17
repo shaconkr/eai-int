@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0010910="http://schema.hcis.com/xsd/CISTADAHHE0010910" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4bWxUJYEEe21RYnq_RSbFQ" name="CISTADAHHE.CISTADAHHE0010910.CISTADAHHE0010910_OutRes_data" type="dataformat:DataFormat">
+  <imports xmi:id="_4bWxUZYEEe21RYnq_RSbFQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0010910_OutRes_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0010910"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_4bWxUpYEEe21RYnq_RSbFQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0010910:main" lineLength="11" fieldOffsetsStr="nxtSrchKey(0,6)&#xA;rstRowcount(6,11)&#xA;rstList(11,11)">
+    <fieldOffsets xmi:id="_4bWxU5YEEe21RYnq_RSbFQ" name="nxtSrchKey" end="6" kor="다음검색KEY" type="string"/>
+    <fieldOffsets xmi:id="_4bWxVJYEEe21RYnq_RSbFQ" name="rstRowcount" start="6" end="11" kor="결과건수" type="long"/>
+    <fieldOffsets xmi:id="_4bWxVZYEEe21RYnq_RSbFQ" name="rstList" start="11" end="11" kor="결과리스트" type="RST_LIST_TYPE"/>
+  </jndi:configuration>
+</jndi:namedResource>
