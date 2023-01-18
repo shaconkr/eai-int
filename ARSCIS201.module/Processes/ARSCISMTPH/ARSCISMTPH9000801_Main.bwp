@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="ARSCISMTSY.ARSCISMTSY0016001_Main" suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20230118110703"
+    name="ARSCISMTPH.ARSCISMTPH9000801_Main" suppressJoinFailure="yes"
+    targetNamespace="http://xmlns.example.com/20230118131555"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
@@ -19,6 +19,7 @@
     xmlns:ns19="http://schema.hcis.com/xsd/ARSCISFNDX0100101"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonParser"
     xmlns:ns20="http://schema.hcis.com/xsd/ARSCISMTSY0016001"
+    xmlns:ns21="http://schema.hcis.com/xsd/ARSCISMTPH9000801"
     xmlns:ns3="http://tns.tibco.com/bw/json/1668647313518"
     xmlns:ns4="http://www.cspi_library.org/Library"
     xmlns:ns5="http://www.example.org/Schema_EAI_Call"
@@ -29,8 +30,7 @@
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
-    xmlns:tibprop="http://ns.tibco.com/bw/property"
-    xmlns:tns="djfvbndjf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <tibex:VariableDescriptor type="MemorySaving">
         <task name="ParseJSON">
             <endingVariables>
@@ -60,14 +60,14 @@
                 <variable>ReplytoJMSMessage-input</variable>
             </endingVariables>
         </task>
-        <task name="CallProc_ARSCISMTSY0016001">
+        <task name="CallProc_ARSCISMTPH9000801">
             <endingVariables>
-                <variable>CallProc_ARSCISMTSY0016001-input</variable>
+                <variable>CallProc_ARSCISMTPH9000801-input</variable>
             </endingVariables>
         </task>
         <task name="Assign_OK">
             <endingVariables>
-                <variable>CallProc_ARSCISMTSY0016001</variable>
+                <variable>CallProc_ARSCISMTPH9000801</variable>
             </endingVariables>
         </task>
         <task name="Assign_Error">
@@ -858,7 +858,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="4"
+                                    x="-2"
                                     xsi:type="notation:Bounds" y="69"/>
                                     </children>
                                     <children type="4002">
@@ -1410,12 +1410,14 @@
             namespace="http://schema.hcis.com/xsd/ARSCISFNDX0100101" prefix="ns"/>
         <tibex:namespaceItem
             namespace="http://schema.hcis.com/xsd/ARSCISMTSY0016001" prefix="ns1"/>
+        <tibex:namespaceItem
+            namespace="http://schema.hcis.com/xsd/ARSCISMTPH9000801" prefix="ns2"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../Schemas/ARSCISMTSY/ARSCISMTSY0016001/ARSCISMTSY0016001_InReq.xsd" namespace="http://schema.hcis.com/xsd/ARSCISMTSY0016001"/>
+        location="../../Schemas/ARSCISMTPH/ARSCISMTPH9000801/ARSCISMTPH9000801_InReq.xsd" namespace="http://schema.hcis.com/xsd/ARSCISMTPH9000801"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1430,7 +1432,7 @@
         </bpws:variable>
         <bpws:variable element="ns1:ActivityInputClass"
             name="ParseJSON-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns20:root" name="ParseJSON" sca-bpel:internal="true"/>
+        <bpws:variable element="ns21:root" name="ParseJSON" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:SetInterface"
             name="L_Get_InterfaceInfo-input" sca-bpel:internal="true"/>
@@ -1445,7 +1447,7 @@
         <bpws:variable name="replyData" type="xsd:string"/>
         <bpws:variable element="ns2:ActivityErrorData"
             name="_error_ParseJSON1" sca-bpel:internal="true"/>
-        <bpws:variable element="ns20:root" name="RenderJSON_Error-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns21:root" name="RenderJSON_Error-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns11:ActivityOutputClass"
             name="RenderJSON_Error" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
@@ -1455,9 +1457,9 @@
             name="_error_RenderJSON1" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:SetLog" name="L_Set_LogError-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:subElement"
-            name="CallProc_ARSCISMTSY0016001-input" sca-bpel:internal="true"/>
+            name="CallProc_ARSCISMTPH9000801-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:subElement"
-            name="CallProc_ARSCISMTSY0016001" sca-bpel:internal="true"/>
+            name="CallProc_ARSCISMTPH9000801" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1503,7 +1505,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/jms#//JMSReceiverEventSource"/>
                                     <value
                                     connectionReference="jmsConnection"
-                                    destinationName="Q.FW.ARSCISMTSY0016001"
+                                    destinationName="Q.FW.ARSCISMTPH9000801"
                                     maxSessions="1"
                                     messagingStyle="Queue"
                                     receiveTimeout="2" xsi:type="jms:JMSReceiverEventSource"/>
@@ -1538,7 +1540,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/restjson#//JsonParser"/>
                                     <value jsonInputStyle="None"
                                     schemaType="Xsd" xsi:type="restjson:JsonParser">
-                                    <outputEditorElement href="platform:/resource/ARSCIS201.module/Schemas/ARSCISMTSY/ARSCISMTSY0016001/ARSCISMTSY0016001_InReq.xsd#//root;XSDElementDeclaration"/>
+                                    <outputEditorElement href="platform:/resource/ARSCIS201.module/Schemas/ARSCISMTPH/ARSCISMTPH9000801/ARSCISMTPH9000801_InReq.xsd#//root;XSDElementDeclaration"/>
                                     </value>
                                 </properties>
                             </activityConfig>
@@ -1561,7 +1563,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ns=&quot;http://schema.hcis.com/xsd/ARSCISFNDX0100101&quot; xmlns:ns1=&quot;http://schema.hcis.com/xsd/ARSCISMTSY0016001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;L_Get_InterfaceInfo-input&quot; match=&quot;/&quot;>&lt;Library:SetInterface>&lt;Library:InterfaceId>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:header/ns1:eimsTgrmId&quot;/>&lt;/Library:InterfaceId>&lt;xsl:if test=&quot;not((string($ParseJSON/ns1:header/ns1:guid/@xsi:nil)=(&amp;quot;true&amp;quot;)) or (string($ParseJSON/ns1:header/ns1:guid/@xsi:nil)=(&amp;quot;1&amp;quot;))) and exists($ParseJSON/ns1:header/ns1:guid)&quot;>&lt;Library:InterfaceSysId>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:header/ns1:guid&quot;/>&lt;/Library:InterfaceSysId>&lt;/xsl:if>&lt;/Library:SetInterface>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/ARSCISMTPH9000801&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;L_Get_InterfaceInfo-input&quot; match=&quot;/&quot;>&lt;Library:SetInterface>&lt;Library:InterfaceId>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmId&quot;/>&lt;/Library:InterfaceId>&lt;xsl:if test=&quot;not((string($ParseJSON/ns2:header/ns2:guid/@xsi:nil)=(&amp;quot;true&amp;quot;)) or (string($ParseJSON/ns2:header/ns2:guid/@xsi:nil)=(&amp;quot;1&amp;quot;))) and exists($ParseJSON/ns2:header/ns2:guid)&quot;>&lt;Library:InterfaceSysId>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:guid&quot;/>&lt;/Library:InterfaceSysId>&lt;/xsl:if>&lt;/Library:SetInterface>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess moduleRef="CSPI_Library"
                         subProcessName="L_Get_InterfaceInfo" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1580,7 +1582,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:ns=&quot;http://schema.hcis.com/xsd/ARSCISFNDX0100101&quot; xmlns:ns1=&quot;http://schema.hcis.com/xsd/ARSCISMTSY0016001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;L_Set_LogStart-input&quot; match=&quot;/&quot;>&lt;Log:SetLog>&lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&lt;Log:InterfaceSysId>&lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&lt;/Log:InterfaceSysId>&lt;/xsl:if>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:header/ns1:frwkTrdId&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;/Log:SetLog>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/ARSCISMTPH9000801&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;L_Set_LogStart-input&quot; match=&quot;/&quot;>&lt;Log:SetLog>&lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&lt;Log:InterfaceSysId>&lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&lt;/Log:InterfaceSysId>&lt;/xsl:if>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;/Log:SetLog>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess moduleRef="CSPI_Library"
                         subProcessName="L_Set_LogStart" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1596,7 +1598,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:ns=&quot;http://schema.hcis.com/xsd/ARSCISFNDX0100101&quot; xmlns:ns1=&quot;http://schema.hcis.com/xsd/ARSCISMTSY0016001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:template name=&quot;L_Set_LogEnd-input&quot; match=&quot;/&quot;>&lt;Log:SetLog>&lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&lt;Log:InterfaceSysId>&lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&lt;/Log:InterfaceSysId>&lt;/xsl:if>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:header/ns1:frwkTrdId&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;/Log:SetLog>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:ns1=&quot;http://schema.hcis.com/xsd/ARSCISMTSY0016001&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/ARSCISMTPH9000801&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:template name=&quot;L_Set_LogEnd-input&quot; match=&quot;/&quot;>&lt;Log:SetLog>&lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&lt;Log:InterfaceSysId>&lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&lt;/Log:InterfaceSysId>&lt;/xsl:if>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;/Log:SetLog>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess moduleRef="CSPI_Library"
                         subProcessName="L_Set_LogEnd" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1638,9 +1640,9 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:extActivity
-                    inputVariable="CallProc_ARSCISMTSY0016001-input"
-                    name="CallProc_ARSCISMTSY0016001"
-                    outputVariable="CallProc_ARSCISMTSY0016001"
+                    inputVariable="CallProc_ARSCISMTPH9000801-input"
+                    name="CallProc_ARSCISMTPH9000801"
+                    outputVariable="CallProc_ARSCISMTPH9000801"
                     tibex:xpdlId="00328e9e-67b3-45be-9463-0a7c8657929a"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
@@ -1649,7 +1651,7 @@
                     <bpws:sources>
                         <bpws:source
                             linkName="CallProc_IFID01ToL_Set_LogError"
-                            tibex:faultDetailsVar="CallProc_ARSCISMTSY0016001" tibex:faultNameVar="FaultName">
+                            tibex:faultDetailsVar="CallProc_ARSCISMTPH9000801" tibex:faultNameVar="FaultName">
                             <tibex:DesignExpression>
                                 <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
@@ -1662,7 +1664,7 @@
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&#xa;    &lt;xsl:template name=&quot;CallProc_IFID01-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns7:subElement>&#xa;            &lt;tns7:emsBody>&#xa;                &lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&#xa;            &lt;/tns7:emsBody>&#xa;        &lt;/tns7:subElement>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
-                        subProcessName="ARSCISMTSY.ARSCISMTSY0016001_Sub" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                        subProcessName="ARSCISMTPH.ARSCISMTPH9000801_Sub" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
@@ -1677,7 +1679,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="$CallProc_ARSCISMTSY0016001/ns13:emsBody" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            expression="$CallProc_ARSCISMTPH9000801/ns13:emsBody" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1739,7 +1741,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns1=&quot;http://schema.hcis.com/xsd/ARSCISMTSY0016001&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;RenderJSON_Error-input&quot; match=&quot;/&quot;>&lt;ns1:root>&lt;xsl:for-each select=&quot;$ParseJSON/ns1:header&quot;>&lt;ns1:header>&lt;xsl:if test=&quot;ns1:totTgrmLen&quot;>&lt;ns1:totTgrmLen>&lt;xsl:copy-of select=&quot;ns1:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:totTgrmLen&quot;/>&lt;/ns1:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:hdrLen&quot;>&lt;ns1:hdrLen>&lt;xsl:copy-of select=&quot;ns1:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:hdrLen&quot;/>&lt;/ns1:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:tgrmFrmCd&quot;>&lt;ns1:tgrmFrmCd>&lt;xsl:copy-of select=&quot;ns1:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:tgrmFrmCd&quot;/>&lt;/ns1:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:sysEnvGbcd&quot;>&lt;ns1:sysEnvGbcd>&lt;xsl:copy-of select=&quot;ns1:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:sysEnvGbcd&quot;/>&lt;/ns1:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:ipAdr&quot;>&lt;ns1:ipAdr>&lt;xsl:copy-of select=&quot;ns1:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:ipAdr&quot;/>&lt;/ns1:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:guid&quot;>&lt;ns1:guid>&lt;xsl:copy-of select=&quot;ns1:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:guid&quot;/>&lt;/ns1:guid>&lt;/xsl:if>&lt;ns1:prgrNo>&lt;xsl:value-of select=&quot;ns1:prgrNo+1&quot;/>&lt;/ns1:prgrNo>&lt;xsl:if test=&quot;ns1:frstGuid&quot;>&lt;ns1:frstGuid>&lt;xsl:copy-of select=&quot;ns1:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:frstGuid&quot;/>&lt;/ns1:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:sendSysCd&quot;>&lt;ns1:sendSysCd>&lt;xsl:copy-of select=&quot;ns1:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:sendSysCd&quot;/>&lt;/ns1:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:frstSendSysCd&quot;>&lt;ns1:frstSendSysCd>&lt;xsl:copy-of select=&quot;ns1:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:frstSendSysCd&quot;/>&lt;/ns1:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:sysCommTrtyPrepCntn&quot;>&lt;ns1:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;ns1:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:sysCommTrtyPrepCntn&quot;/>&lt;/ns1:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:eimsTgrmId&quot;>&lt;ns1:eimsTgrmId>&lt;xsl:copy-of select=&quot;ns1:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:eimsTgrmId&quot;/>&lt;/ns1:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:eimsTgrmVerNo&quot;>&lt;ns1:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;ns1:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:eimsTgrmVerNo&quot;/>&lt;/ns1:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:frwkTrdId&quot;>&lt;ns1:frwkTrdId>&lt;xsl:copy-of select=&quot;ns1:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:frwkTrdId&quot;/>&lt;/ns1:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:rcvSysCd&quot;>&lt;ns1:rcvSysCd>&lt;xsl:copy-of select=&quot;ns1:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:rcvSysCd&quot;/>&lt;/ns1:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:tieTgrmCd&quot;>&lt;ns1:tieTgrmCd>&lt;xsl:copy-of select=&quot;ns1:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:tieTgrmCd&quot;/>&lt;/ns1:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:tieSrvGrpCd&quot;>&lt;ns1:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;ns1:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:tieSrvGrpCd&quot;/>&lt;/ns1:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:tieSrvNm&quot;>&lt;ns1:tieSrvNm>&lt;xsl:copy-of select=&quot;ns1:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:tieSrvNm&quot;/>&lt;/ns1:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:scrnNo&quot;>&lt;ns1:scrnNo>&lt;xsl:copy-of select=&quot;ns1:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:scrnNo&quot;/>&lt;/ns1:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:reqnRespGbcd&quot;>&lt;ns1:reqnRespGbcd>&lt;xsl:copy-of select=&quot;ns1:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:reqnRespGbcd&quot;/>&lt;/ns1:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:syncProcGbcd&quot;>&lt;ns1:syncProcGbcd>&lt;xsl:copy-of select=&quot;ns1:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:syncProcGbcd&quot;/>&lt;/ns1:syncProcGbcd>&lt;/xsl:if>&lt;ns1:trdRespCd>&lt;xsl:value-of select=&quot;&amp;quot;1&amp;quot;&quot;/>&lt;/ns1:trdRespCd>&lt;xsl:if test=&quot;ns1:pageNo&quot;>&lt;ns1:pageNo>&lt;xsl:copy-of select=&quot;ns1:pageNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:pageNo&quot;/>&lt;/ns1:pageNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:pageRowCnt&quot;>&lt;ns1:pageRowCnt>&lt;xsl:copy-of select=&quot;ns1:pageRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:pageRowCnt&quot;/>&lt;/ns1:pageRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:totRowCnt&quot;>&lt;ns1:totRowCnt>&lt;xsl:copy-of select=&quot;ns1:totRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:totRowCnt&quot;/>&lt;/ns1:totRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:nxtPageYn&quot;>&lt;ns1:nxtPageYn>&lt;xsl:copy-of select=&quot;ns1:nxtPageYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:nxtPageYn&quot;/>&lt;/ns1:nxtPageYn>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:reqnDtm&quot;>&lt;ns1:reqnDtm>&lt;xsl:copy-of select=&quot;ns1:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:reqnDtm&quot;/>&lt;/ns1:reqnDtm>&lt;/xsl:if>&lt;ns1:respDtm>&lt;xsl:value-of select=&quot;format-dateTime(current-dateTime(), &amp;quot;[Y0001][M01][D01][H01][m01][s01][f001]&amp;quot;)&quot;/>&lt;/ns1:respDtm>&lt;xsl:if test=&quot;ns1:storeCd&quot;>&lt;ns1:storeCd>&lt;xsl:copy-of select=&quot;ns1:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:storeCd&quot;/>&lt;/ns1:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:userId&quot;>&lt;ns1:userId>&lt;xsl:copy-of select=&quot;ns1:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:userId&quot;/>&lt;/ns1:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:trdCommTrtyPrepCntn&quot;>&lt;ns1:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;ns1:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:trdCommTrtyPrepCntn&quot;/>&lt;/ns1:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:for-each select=&quot;ns1:msgGrpNm&quot;>&lt;ns1:msgGrpNm>&lt;xsl:if test=&quot;ns1:msgShwMthdGbcd&quot;>&lt;ns1:msgShwMthdGbcd>&lt;xsl:copy-of select=&quot;ns1:msgShwMthdGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:msgShwMthdGbcd&quot;/>&lt;/ns1:msgShwMthdGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns1:errOcrnTgrmClasNm&quot;>&lt;ns1:errOcrnTgrmClasNm>&lt;xsl:copy-of select=&quot;ns1:errOcrnTgrmClasNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:errOcrnTgrmClasNm&quot;/>&lt;/ns1:errOcrnTgrmClasNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;ns1:msgCd>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/ns1:msgCd>&lt;/xsl:if>&lt;ns1:msgCntn>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/ns1:msgCntn>&lt;ns1:msgDtlCntn>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/ns1:msgDtlCntn>&lt;/ns1:msgGrpNm>&lt;/xsl:for-each>&lt;xsl:if test=&quot;ns1:stdTgrmEndLettrVal&quot;>&lt;ns1:stdTgrmEndLettrVal>&lt;xsl:copy-of select=&quot;ns1:stdTgrmEndLettrVal/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns1:stdTgrmEndLettrVal&quot;/>&lt;/ns1:stdTgrmEndLettrVal>&lt;/xsl:if>&lt;/ns1:header>&lt;/xsl:for-each>&lt;ns1:data>&lt;ns1:crdMemNo>&lt;xsl:copy-of select=&quot;$ParseJSON/ns1:data/ns1:crdMemNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:data/ns1:crdMemNo&quot;/>&lt;/ns1:crdMemNo>&lt;ns1:strtDt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns1:data/ns1:strtDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:data/ns1:strtDt&quot;/>&lt;/ns1:strtDt>&lt;ns1:endDt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns1:data/ns1:endDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:data/ns1:endDt&quot;/>&lt;/ns1:endDt>&lt;/ns1:data>&lt;/ns1:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/ARSCISMTPH9000801&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;RenderJSON_Error-input&quot; match=&quot;/&quot;>&lt;ns2:root>&lt;xsl:for-each select=&quot;$ParseJSON/ns2:header&quot;>&lt;ns2:header>&lt;xsl:if test=&quot;ns2:totTgrmLen&quot;>&lt;ns2:totTgrmLen>&lt;xsl:copy-of select=&quot;ns2:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:totTgrmLen&quot;/>&lt;/ns2:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:hdrLen&quot;>&lt;ns2:hdrLen>&lt;xsl:copy-of select=&quot;ns2:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:hdrLen&quot;/>&lt;/ns2:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:tgrmFrmCd&quot;>&lt;ns2:tgrmFrmCd>&lt;xsl:copy-of select=&quot;ns2:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:tgrmFrmCd&quot;/>&lt;/ns2:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:sysEnvGbcd&quot;>&lt;ns2:sysEnvGbcd>&lt;xsl:copy-of select=&quot;ns2:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:sysEnvGbcd&quot;/>&lt;/ns2:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:ipAdr&quot;>&lt;ns2:ipAdr>&lt;xsl:copy-of select=&quot;ns2:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:ipAdr&quot;/>&lt;/ns2:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:guid&quot;>&lt;ns2:guid>&lt;xsl:copy-of select=&quot;ns2:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:guid&quot;/>&lt;/ns2:guid>&lt;/xsl:if>&lt;ns2:prgrNo>&lt;xsl:value-of select=&quot;ns2:prgrNo+1&quot;/>&lt;/ns2:prgrNo>&lt;xsl:if test=&quot;ns2:frstGuid&quot;>&lt;ns2:frstGuid>&lt;xsl:copy-of select=&quot;ns2:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:frstGuid&quot;/>&lt;/ns2:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:sendSysCd&quot;>&lt;ns2:sendSysCd>&lt;xsl:copy-of select=&quot;ns2:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:sendSysCd&quot;/>&lt;/ns2:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:frstSendSysCd&quot;>&lt;ns2:frstSendSysCd>&lt;xsl:copy-of select=&quot;ns2:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:frstSendSysCd&quot;/>&lt;/ns2:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:sysCommTrtyPrepCntn&quot;>&lt;ns2:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;ns2:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:sysCommTrtyPrepCntn&quot;/>&lt;/ns2:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:eimsTgrmId&quot;>&lt;ns2:eimsTgrmId>&lt;xsl:copy-of select=&quot;ns2:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:eimsTgrmId&quot;/>&lt;/ns2:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:eimsTgrmVerNo&quot;>&lt;ns2:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;ns2:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:eimsTgrmVerNo&quot;/>&lt;/ns2:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:frwkTrdId&quot;>&lt;ns2:frwkTrdId>&lt;xsl:copy-of select=&quot;ns2:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:frwkTrdId&quot;/>&lt;/ns2:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:rcvSysCd&quot;>&lt;ns2:rcvSysCd>&lt;xsl:copy-of select=&quot;ns2:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:rcvSysCd&quot;/>&lt;/ns2:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:tieTgrmCd&quot;>&lt;ns2:tieTgrmCd>&lt;xsl:copy-of select=&quot;ns2:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:tieTgrmCd&quot;/>&lt;/ns2:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:tieSrvGrpCd&quot;>&lt;ns2:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;ns2:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:tieSrvGrpCd&quot;/>&lt;/ns2:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:tieSrvNm&quot;>&lt;ns2:tieSrvNm>&lt;xsl:copy-of select=&quot;ns2:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:tieSrvNm&quot;/>&lt;/ns2:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:scrnNo&quot;>&lt;ns2:scrnNo>&lt;xsl:copy-of select=&quot;ns2:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:scrnNo&quot;/>&lt;/ns2:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:reqnRespGbcd&quot;>&lt;ns2:reqnRespGbcd>&lt;xsl:copy-of select=&quot;ns2:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:reqnRespGbcd&quot;/>&lt;/ns2:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:syncProcGbcd&quot;>&lt;ns2:syncProcGbcd>&lt;xsl:copy-of select=&quot;ns2:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:syncProcGbcd&quot;/>&lt;/ns2:syncProcGbcd>&lt;/xsl:if>&lt;ns2:trdRespCd>&lt;xsl:value-of select=&quot;&amp;quot;1&amp;quot;&quot;/>&lt;/ns2:trdRespCd>&lt;xsl:if test=&quot;ns2:pageNo&quot;>&lt;ns2:pageNo>&lt;xsl:copy-of select=&quot;ns2:pageNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:pageNo&quot;/>&lt;/ns2:pageNo>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:pageRowCnt&quot;>&lt;ns2:pageRowCnt>&lt;xsl:copy-of select=&quot;ns2:pageRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:pageRowCnt&quot;/>&lt;/ns2:pageRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:totRowCnt&quot;>&lt;ns2:totRowCnt>&lt;xsl:copy-of select=&quot;ns2:totRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:totRowCnt&quot;/>&lt;/ns2:totRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:nxtPageYn&quot;>&lt;ns2:nxtPageYn>&lt;xsl:copy-of select=&quot;ns2:nxtPageYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:nxtPageYn&quot;/>&lt;/ns2:nxtPageYn>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:reqnDtm&quot;>&lt;ns2:reqnDtm>&lt;xsl:copy-of select=&quot;ns2:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:reqnDtm&quot;/>&lt;/ns2:reqnDtm>&lt;/xsl:if>&lt;ns2:respDtm>&lt;xsl:value-of select=&quot;format-dateTime(current-dateTime(), &amp;quot;[Y0001][M01][D01][H01][m01][s01][f001]&amp;quot;)&quot;/>&lt;/ns2:respDtm>&lt;xsl:if test=&quot;ns2:storeCd&quot;>&lt;ns2:storeCd>&lt;xsl:copy-of select=&quot;ns2:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:storeCd&quot;/>&lt;/ns2:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:userId&quot;>&lt;ns2:userId>&lt;xsl:copy-of select=&quot;ns2:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:userId&quot;/>&lt;/ns2:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:trdCommTrtyPrepCntn&quot;>&lt;ns2:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;ns2:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:trdCommTrtyPrepCntn&quot;/>&lt;/ns2:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:for-each select=&quot;ns2:msgGrpNm&quot;>&lt;ns2:msgGrpNm>&lt;xsl:if test=&quot;ns2:msgShwMthdGbcd&quot;>&lt;ns2:msgShwMthdGbcd>&lt;xsl:copy-of select=&quot;ns2:msgShwMthdGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:msgShwMthdGbcd&quot;/>&lt;/ns2:msgShwMthdGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;ns2:errOcrnTgrmClasNm&quot;>&lt;ns2:errOcrnTgrmClasNm>&lt;xsl:copy-of select=&quot;ns2:errOcrnTgrmClasNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:errOcrnTgrmClasNm&quot;/>&lt;/ns2:errOcrnTgrmClasNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;ns2:msgCd>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/ns2:msgCd>&lt;/xsl:if>&lt;ns2:msgCntn>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/ns2:msgCntn>&lt;ns2:msgDtlCntn>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/ns2:msgDtlCntn>&lt;/ns2:msgGrpNm>&lt;/xsl:for-each>&lt;xsl:if test=&quot;ns2:stdTgrmEndLettrVal&quot;>&lt;ns2:stdTgrmEndLettrVal>&lt;xsl:copy-of select=&quot;ns2:stdTgrmEndLettrVal/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns2:stdTgrmEndLettrVal&quot;/>&lt;/ns2:stdTgrmEndLettrVal>&lt;/xsl:if>&lt;/ns2:header>&lt;/xsl:for-each>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data&quot;/>&lt;/ns2:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1752,7 +1754,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/restjson#//JsonRender"/>
                                     <value jsonOutputStyle="None"
                                     schemaType="Xsd" xsi:type="restjson:JsonRender">
-                                    <inputEditorElement href="platform:/resource/ARSCIS201.module/Schemas/ARSCISMTSY/ARSCISMTSY0016001/ARSCISMTSY0016001_InReq.xsd#//root;XSDElementDeclaration"/>
+                                    <inputEditorElement href="platform:/resource/ARSCIS201.module/Schemas/ARSCISMTPH/ARSCISMTPH9000801/ARSCISMTPH9000801_InReq.xsd#//root;XSDElementDeclaration"/>
                                     </value>
                                 </properties>
                             </activityConfig>
@@ -1773,7 +1775,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:ns=&quot;http://schema.hcis.com/xsd/ARSCISFNDX0100101&quot; xmlns:ns1=&quot;http://schema.hcis.com/xsd/ARSCISMTSY0016001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;L_Set_LogError-input&quot; match=&quot;/&quot;>&lt;Log:SetLog>&lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&lt;Log:InterfaceSysId>&lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&lt;/Log:InterfaceSysId>&lt;/xsl:if>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:header/ns1:frwkTrdId&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Error>&lt;Log:StackTrace>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/Log:StackTrace>&lt;Log:Msg>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/Log:Msg>&lt;Log:FullClass>&lt;xsl:value-of select=&quot;$_error/FullClass&quot;/>&lt;/Log:FullClass>&lt;Log:ProcessStack>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/Log:ProcessStack>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;Log:MsgCode>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/Log:MsgCode>&lt;/xsl:if>&lt;/Log:Error>&lt;/Log:SetLog>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/ARSCISMTPH9000801&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&#xa;    &lt;xsl:param name=&quot;ParseJSON&quot;/>&#xa;    &lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;L_Set_LogError-input&quot; match=&quot;/&quot;>&#xa;        &lt;Log:SetLog>&#xa;            &lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&#xa;                &lt;Log:InterfaceSysId>&#xa;                    &lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&#xa;                &lt;/Log:InterfaceSysId>&#xa;            &lt;/xsl:if>&#xa;            &lt;Log:Detail>&#xa;                &lt;Log:Key>&#xa;                    &lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&#xa;                &lt;/Log:Key>&#xa;                &lt;Log:Value>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;/>&#xa;                &lt;/Log:Value>&#xa;            &lt;/Log:Detail>&#xa;            &lt;Log:Detail>&#xa;                &lt;Log:Key>&#xa;                    &lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&#xa;                &lt;/Log:Key>&#xa;                &lt;Log:Value>&#xa;                    &lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&#xa;                &lt;/Log:Value>&#xa;            &lt;/Log:Detail>&#xa;            &lt;Log:Error>&#xa;                &lt;Log:StackTrace>&#xa;                    &lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&#xa;                &lt;/Log:StackTrace>&#xa;                &lt;Log:Msg>&#xa;                    &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;                &lt;/Log:Msg>&#xa;                &lt;Log:FullClass>&#xa;                    &lt;xsl:value-of select=&quot;$_error/FullClass&quot;/>&#xa;                &lt;/Log:FullClass>&#xa;                &lt;Log:ProcessStack>&#xa;                    &lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&#xa;                &lt;/Log:ProcessStack>&#xa;                &lt;xsl:if test=&quot;$_error/MsgCode&quot;>&#xa;                    &lt;Log:MsgCode>&#xa;                        &lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&#xa;                    &lt;/Log:MsgCode>&#xa;                &lt;/xsl:if>&#xa;            &lt;/Log:Error>&#xa;        &lt;/Log:SetLog>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess moduleRef="CSPI_Library"
                         subProcessName="L_Set_LogError" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
