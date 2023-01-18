@@ -9,7 +9,7 @@
   <sca:property xmi:id="_d4cGEpJQEe2pT8FYTZv6hg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_d4cGE5JQEe2pT8FYTZv6hg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_d4cGFJJQEe2pT8FYTZv6hg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:component xmi:id="_AqaQMJJREe2pT8FYTZv6hg" name="ComponentCopyOfproc_sample_IFID01" compositeext:version="1.0.0.qualifier">
+  <sca:component xmi:id="_AqaQMJJREe2pT8FYTZv6hg" name="ComponentARSCISFNDX0020101_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_AqaQMZJREe2pT8FYTZv6hg" processName="ARSCISFNDX.ARSCISFNDX0020101_Main"/>
   </sca:component>
   <sca:component xmi:id="_zU0yUJJUEe2V9vV0ff31uA" name="ComponentARSCISFNDX0030101_Main" compositeext:version="1.0.0.qualifier">
@@ -20,5 +20,11 @@
   </sca:component>
   <sca:component xmi:id="_pIWP4JJXEe2VzMx2amPmhQ" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_pIWP4ZJXEe2VzMx2amPmhQ" processName="ARSCIS201.module.Activator"/>
+  </sca:component>
+  <sca:component xmi:id="_ZrpMwJb2Ee2vA5sIeTLr7g" name="ComponentARSCISMTPH9000801_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ZrpMwZb2Ee2vA5sIeTLr7g" processName="ARSCISMTPH.ARSCISMTPH9000801_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_aEfxoJb2Ee2vA5sIeTLr7g" name="ComponentARSCISMTSY0016001_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_aEfxoZb2Ee2vA5sIeTLr7g" processName="ARSCISMTSY.ARSCISMTSY0016001_Main"/>
   </sca:component>
 </sca:composite>

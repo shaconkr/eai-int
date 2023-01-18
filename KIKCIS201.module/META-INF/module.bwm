@@ -11,7 +11,7 @@
   <sca:property xmi:id="_LYPzFI-4Ee2YS7K_o5ukzw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_q6jUcJCCEe2DPcQvU2ULoA" name="FW_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_tHgUMJCCEe2DPcQvU2ULoA" name="FW_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
-  <sca:component xmi:id="_UnRucI-4Ee2YS7K_o5ukzw" name="Componentproc_sample_IFID01" compositeext:version="1.0.0.qualifier">
+  <sca:component xmi:id="_UnRucI-4Ee2YS7K_o5ukzw" name="ComponentKIKCISFNDX0010201_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_UnRucY-4Ee2YS7K_o5ukzw" processName="KIKCISFNDX.KIKCISFNDX0010201_Main"/>
   </sca:component>
   <sca:component xmi:id="_sh0UkpB_Ee2DPcQvU2ULoA" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
