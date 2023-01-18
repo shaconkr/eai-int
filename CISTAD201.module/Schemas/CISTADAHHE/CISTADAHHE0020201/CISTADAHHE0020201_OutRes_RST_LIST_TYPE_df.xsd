@@ -1,0 +1,29 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHHE0020201" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHHE0020201">
+    <element name="root">
+        <complexType>
+            <sequence>
+                <element e:kor="일자" e:length="8" e:padder="SpaceRight" name="dt" nillable="true" type="string"/>
+                <element e:kor="자동처리합계건수" e:length="10" e:padder="SpaceRight" name="autoProcSumCnt" nillable="true" type="string"/>
+                <element e:kor="자동처리비율" e:length="5" e:padder="SpaceRight" name="autoProcRate" nillable="true" type="string"/>
+                <element e:kor="자동처리승인건수" e:length="10" e:padder="SpaceRight" name="autoProcAprvlCnt" nillable="true" type="string"/>
+                <element e:kor="자동처리승인건수비율" e:length="5" e:padder="SpaceRight" name="autoProcAprvlCntRate" nillable="true" type="string"/>
+                <element e:kor="자동처리거절건수" e:length="10" e:padder="SpaceRight" name="autoProcFejCnt" nillable="true" type="string"/>
+                <element e:kor="자동처리거절건수비율" e:length="5" e:padder="SpaceRight" name="autoProcFejCntRate" nillable="true" type="string"/>
+                <element e:kor="자동처리승인금액" e:length="18" e:padder="SpaceRight" name="autoProcAprvlAmt" nillable="true" type="string"/>
+                <element e:kor="자동처리승인금액비율" e:length="5" e:padder="SpaceRight" name="autoProcAprvlAmtRate" nillable="true" type="string"/>
+                <element e:kor="팝업처리합계건수" e:length="10" e:padder="SpaceRight" name="pupProcSumCnt" nillable="true" type="string"/>
+                <element e:kor="팝업처리비율" e:length="5" e:padder="SpaceRight" name="pupProcRate" nillable="true" type="string"/>
+                <element e:kor="팝업처리승인건수" e:length="10" e:padder="SpaceRight" name="pupProcAprvlCnt" nillable="true" type="string"/>
+                <element e:kor="팝업처리승인건수비율" e:length="5" e:padder="SpaceRight" name="pupProcAprvlCntRate" nillable="true" type="string"/>
+                <element e:kor="팝업처리거절건수" e:length="10" e:padder="SpaceRight" name="pupProcFejCnt" nillable="true" type="string"/>
+                <element e:kor="팝업처리거절건수비율" e:length="5" e:padder="SpaceRight" name="pupProcFejCntRate" nillable="true" type="string"/>
+                <element e:kor="팝업처리승인금액" e:length="18" e:padder="SpaceRight" name="pupProcAprvlAmt" nillable="true" type="string"/>
+                <element e:kor="팝업처리승인금액비율" e:length="5" e:padder="SpaceRight" name="pupProcAprvlAmtRate" nillable="true" type="string"/>
+                <element e:kor="전체누적건수" e:length="18" e:padder="SpaceRight" name="totAcmtCnt" nillable="true" type="string"/>
+                <element e:kor="승인건수" e:length="10" e:padder="SpaceRight" name="aprvlCnt" nillable="true" type="string"/>
+                <element e:kor="거절건수" e:length="10" e:padder="SpaceRight" name="fejCnt" nillable="true" type="string"/>
+                <element e:kor="승인금액" e:length="18" e:padder="SpaceRight" name="aprvlAmt" nillable="true" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

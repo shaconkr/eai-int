@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0020201="http://schema.hcis.com/xsd/CISTADAHHE0020201" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_K3F0UJbrEe2j6otZXzm9EA" name="CISTADAHHE.CISTADAHHE0020201.CISTADAHHE0020201_OutRes_data_rstList" type="dataformat:DataFormat">
+  <imports xmi:id="_K3F0UZbrEe2j6otZXzm9EA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0020201_OutRes_data_rstList.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020201"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_K3F0UpbrEe2j6otZXzm9EA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0020201:main" lineLength="200" fieldOffsetsStr="dt(0,8)&#xA;autoProcSumCnt(8,18)&#xA;autoProcRate(18,23)&#xA;autoProcAprvlCnt(23,33)&#xA;autoProcAprvlCntRate(33,38)&#xA;autoProcFejCnt(38,48)&#xA;autoProcFejCntRate(48,53)&#xA;autoProcAprvlAmt(53,71)&#xA;autoProcAprvlAmtRate(71,76)&#xA;pupProcSumCnt(76,86)&#xA;pupProcRate(86,91)&#xA;pupProcAprvlCnt(91,101)&#xA;pupProcAprvlCntRate(101,106)&#xA;pupProcFejCnt(106,116)&#xA;pupProcFejCntRate(116,121)&#xA;pupProcAprvlAmt(121,139)&#xA;pupProcAprvlAmtRate(139,144)&#xA;totAcmtCnt(144,162)&#xA;aprvlCnt(162,172)&#xA;fejCnt(172,182)&#xA;aprvlAmt(182,200)">
+    <fieldOffsets xmi:id="_K3F0U5brEe2j6otZXzm9EA" name="dt" end="8" kor="일자" type="string"/>
+    <fieldOffsets xmi:id="_K3F0VJbrEe2j6otZXzm9EA" name="autoProcSumCnt" start="8" end="18" kor="자동처리합계건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0VZbrEe2j6otZXzm9EA" name="autoProcRate" start="18" end="23" kor="자동처리비율" type="string"/>
+    <fieldOffsets xmi:id="_K3F0VpbrEe2j6otZXzm9EA" name="autoProcAprvlCnt" start="23" end="33" kor="자동처리승인건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0V5brEe2j6otZXzm9EA" name="autoProcAprvlCntRate" start="33" end="38" kor="자동처리승인건수비율" type="string"/>
+    <fieldOffsets xmi:id="_K3F0WJbrEe2j6otZXzm9EA" name="autoProcFejCnt" start="38" end="48" kor="자동처리거절건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0WZbrEe2j6otZXzm9EA" name="autoProcFejCntRate" start="48" end="53" kor="자동처리거절건수비율" type="string"/>
+    <fieldOffsets xmi:id="_K3F0WpbrEe2j6otZXzm9EA" name="autoProcAprvlAmt" start="53" end="71" kor="자동처리승인금액" type="string"/>
+    <fieldOffsets xmi:id="_K3F0W5brEe2j6otZXzm9EA" name="autoProcAprvlAmtRate" start="71" end="76" kor="자동처리승인금액비율" type="string"/>
+    <fieldOffsets xmi:id="_K3F0XJbrEe2j6otZXzm9EA" name="pupProcSumCnt" start="76" end="86" kor="팝업처리합계건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0XZbrEe2j6otZXzm9EA" name="pupProcRate" start="86" end="91" kor="팝업처리비율" type="string"/>
+    <fieldOffsets xmi:id="_K3F0XpbrEe2j6otZXzm9EA" name="pupProcAprvlCnt" start="91" end="101" kor="팝업처리승인건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0X5brEe2j6otZXzm9EA" name="pupProcAprvlCntRate" start="101" end="106" kor="팝업처리승인건수비율" type="string"/>
+    <fieldOffsets xmi:id="_K3F0YJbrEe2j6otZXzm9EA" name="pupProcFejCnt" start="106" end="116" kor="팝업처리거절건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0YZbrEe2j6otZXzm9EA" name="pupProcFejCntRate" start="116" end="121" kor="팝업처리거절건수비율" type="string"/>
+    <fieldOffsets xmi:id="_K3F0YpbrEe2j6otZXzm9EA" name="pupProcAprvlAmt" start="121" end="139" kor="팝업처리승인금액" type="string"/>
+    <fieldOffsets xmi:id="_K3F0Y5brEe2j6otZXzm9EA" name="pupProcAprvlAmtRate" start="139" end="144" kor="팝업처리승인금액비율" type="string"/>
+    <fieldOffsets xmi:id="_K3F0ZJbrEe2j6otZXzm9EA" name="totAcmtCnt" start="144" end="162" kor="전체누적건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0ZZbrEe2j6otZXzm9EA" name="aprvlCnt" start="162" end="172" kor="승인건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0ZpbrEe2j6otZXzm9EA" name="fejCnt" start="172" end="182" kor="거절건수" type="string"/>
+    <fieldOffsets xmi:id="_K3F0Z5brEe2j6otZXzm9EA" name="aprvlAmt" start="182" end="200" kor="승인금액" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

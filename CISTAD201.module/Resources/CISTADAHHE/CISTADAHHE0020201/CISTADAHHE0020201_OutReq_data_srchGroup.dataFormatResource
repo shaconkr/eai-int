@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0020201="http://schema.hcis.com/xsd/CISTADAHHE0020201" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_K20HgJbrEe2j6otZXzm9EA" name="CISTADAHHE.CISTADAHHE0020201.CISTADAHHE0020201_OutReq_data_srchGroup" type="dataformat:DataFormat">
+  <imports xmi:id="_K20HgZbrEe2j6otZXzm9EA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0020201_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020201"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_K20HgpbrEe2j6otZXzm9EA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0020201:main" lineLength="24" fieldOffsetsStr="qryStrtDt(0,8)&#xA;qryEndDt(8,16)&#xA;nxtSrchKey(16,24)">
+    <fieldOffsets xmi:id="_K20Hg5brEe2j6otZXzm9EA" name="qryStrtDt" end="8" kor="조회시작일자" type="string"/>
+    <fieldOffsets xmi:id="_K20HhJbrEe2j6otZXzm9EA" name="qryEndDt" start="8" end="16" kor="조회종료일자" type="string"/>
+    <fieldOffsets xmi:id="_K20HhZbrEe2j6otZXzm9EA" name="nxtSrchKey" start="16" end="24" kor="다음검색KEY" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>
