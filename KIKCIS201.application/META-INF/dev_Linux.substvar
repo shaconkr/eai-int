@@ -300,23 +300,23 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//CSPI_Library///BaseInfo/CfgFileName</name>
-			<value>cfg_FN.ini</value>
+			<value>cfg_KIKCIS.ini</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
 			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
-			<lookupValue>cfg_FN.ini</lookupValue>
+			<lookupValue>cfg_KIKCIS.ini</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//CSPI_Library///BaseInfo/WorkGroup</name>
-			<value>FN</value>
+			<value>KIKCIS</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
 			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
-			<lookupValue>FN</lookupValue>
+			<lookupValue>KIKCIS</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//CSPI_Library///BaseInfo/CfgFileDir</name>
