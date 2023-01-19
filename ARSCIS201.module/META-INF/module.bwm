@@ -9,6 +9,8 @@
   <sca:property xmi:id="_d4cGEpJQEe2pT8FYTZv6hg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_d4cGE5JQEe2pT8FYTZv6hg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_d4cGFJJQEe2pT8FYTZv6hg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_iZiwwJeVEe2bMZ1A8luo5Q" name="FW_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_i6rH4JeVEe2bMZ1A8luo5Q" name="FW_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_AqaQMJJREe2pT8FYTZv6hg" name="ComponentARSCISFNDX0020101_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_AqaQMZJREe2pT8FYTZv6hg" processName="ARSCISFNDX.ARSCISFNDX0020101_Main"/>
   </sca:component>
