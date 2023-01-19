@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:tcpconnection="http://ns.tibco.com/bw/palette/tcpconnection" xmi:id="_A3X-oJe2Ee2izowMkiietQ" name="CISSPG201.SPG" type="tcpconnection:tcpconnection">
+  <jndi:configuration xsi:type="tcpconnection:TCPConnection" xmi:id="_A3vLAJe2Ee2izowMkiietQ" host="10.100.166.142" port="9627" whenExhaustedAction="Block">
+    <substitutionBindings xmi:id="_OganMJe2Ee2izowMkiietQ" template="host" propName=""/>
+  </jndi:configuration>
+</jndi:namedResource>

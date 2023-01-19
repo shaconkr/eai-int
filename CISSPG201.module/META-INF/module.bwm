@@ -11,6 +11,8 @@
   <sca:property xmi:id="_rk9-gJeVEe2izowMkiietQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_sI6RsJeYEe2izowMkiietQ" name="FW_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_twQC8JeYEe2izowMkiietQ" name="FW_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_E-Ul4Je2Ee2izowMkiietQ" name="TCP_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FSQOgJe2Ee2izowMkiietQ" name="TCP_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_eYsVAJeWEe2izowMkiietQ" name="ComponentCISSPGMTPH9000901_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_eYsVAZeWEe2izowMkiietQ" processName="CISSPGMTPH.CISSPGMTPH9000901_Main"/>
   </sca:component>
