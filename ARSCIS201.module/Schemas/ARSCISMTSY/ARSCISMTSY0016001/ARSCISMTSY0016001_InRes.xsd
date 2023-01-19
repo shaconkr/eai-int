@@ -47,7 +47,7 @@
     </complexType>
     <complexType name="ARSCISMTSY0016001_InRes">
         <sequence>
-            <element e:kor="순매출금액" e:length="1" e:padder="ZeroLeft" name="nsaleAmt" nillable="true" type="long"/>
+            <element e:kor="순매출금액" e:length="22" e:padder="ZeroLeft" name="nsaleAmt" nillable="true" type="long"/>
             <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
         </sequence>
     </complexType>
