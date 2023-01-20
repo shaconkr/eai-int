@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpws:process exitOnStandardFault="no" copy-namespaces='no'
+<bpws:process exitOnStandardFault="no"
     name="ARSCISFNDX.ARSCISFNDX0030101_Main" suppressJoinFailure="yes"
     targetNamespace="http://xmlns.example.com/20230112173810"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
