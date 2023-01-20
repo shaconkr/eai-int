@@ -48,7 +48,10 @@
     xmlns:ns45="www.tibco.com/plugin/java/JavaInvokeActivityInput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityInput"
     xmlns:ns46="www.tibco.com/plugin/java/JavaInvokeActivityOutput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityOutput"
     xmlns:ns47="http://tns.tibco.com/bw/palette/internal/activityerror+85cb6544-38d7-4933-b770-da81d426ac6f"
+    xmlns:ns48="www.tibco.com/plugin/java/JavaInvokeActivityInput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityInput"
+    xmlns:ns49="www.tibco.com/plugin/java/JavaInvokeActivityOutput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityOutput"
     xmlns:ns5="www.tibco.com/plugin/java/JavaInvokeActivityOutput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityOutput"
+    xmlns:ns50="http://tns.tibco.com/bw/palette/internal/activityerror+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90"
     xmlns:ns6="http://tns.tibco.com/bw/palette/internal/activityerror+96760986-6554-4fda-8c18-be567d57335d"
     xmlns:ns7="www.tibco.com/plugin/java/JavaInvokeActivityInput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityInput"
     xmlns:ns8="www.tibco.com/plugin/java/JavaInvokeActivityOutput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityOutput"
@@ -81,12 +84,6 @@
                 <variable>CIStoSPG</variable>
             </endingVariables>
         </task>
-        <task name="JsonToEdiBytesLen">
-            <endingVariables>
-                <variable>JsonToEdiBytesLen-input</variable>
-                <variable>to2ByteHangle</variable>
-            </endingVariables>
-        </task>
         <task name="TCPOpenConnection">
             <endingVariables>
                 <variable>TCPOpenConnection-input</variable>
@@ -101,7 +98,7 @@
         <task name="WriteTCPData">
             <endingVariables>
                 <variable>WriteTCPData-input</variable>
-                <variable>JsonToEdiBytesLen</variable>
+                <variable>JsonToEdiBytes</variable>
             </endingVariables>
         </task>
         <task name="ReadTotalLength">
@@ -161,6 +158,12 @@
             <endingVariables>
                 <variable>SPGtoCIS-input</variable>
                 <variable>to3ByteHangle</variable>
+            </endingVariables>
+        </task>
+        <task name="JsonToEdiBytes">
+            <endingVariables>
+                <variable>JsonToEdiBytes-input</variable>
+                <variable>to2ByteHangle</variable>
             </endingVariables>
         </task>
     </tibex:VariableDescriptor>
@@ -450,46 +453,6 @@
                 <sequence>
                     <element form="unqualified" maxOccurs="1"
                         minOccurs="0" name="MethodReturnValue" type="string"/>
-                </sequence>
-            </complexType>
-        </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+c5a0480a-5408-4867-ba6f-a18d27f0c13a+JavaInvokeActivityInput"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityInput+c5a0480a-5408-4867-ba6f-a18d27f0c13a+JavaInvokeActivityInput">
-            <complexType name="MutTypeMethodParameters">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="projPath" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="processName" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="msgType" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="jsonString" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="encoding" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="xml" type="string"/>
-                </sequence>
-            </complexType>
-            <element name="JavaInvokeActivityInput" type="tns:MutTypeMethodInputRoot"/>
-            <complexType name="MutTypeMethodInputRoot">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="MethodParameters" type="tns:MutTypeMethodParameters"/>
-                </sequence>
-            </complexType>
-        </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityOutput+c5a0480a-5408-4867-ba6f-a18d27f0c13a+JavaInvokeActivityOutput"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityOutput+c5a0480a-5408-4867-ba6f-a18d27f0c13a+JavaInvokeActivityOutput">
-            <element name="JavaInvokeActivityOutput" type="tns:MutTypeMethodOutputRoot"/>
-            <complexType name="MutTypeMethodOutputRoot">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="MethodReturnValue" type="base64Binary"/>
                 </sequence>
             </complexType>
         </schema>
@@ -907,18 +870,6 @@
             </complexType>
         </schema>
         <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+c5a0480a-5408-4867-ba6f-a18d27f0c13a"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.example.org/JavaExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+c5a0480a-5408-4867-ba6f-a18d27f0c13a">
-            <import namespace="http://www.example.org/JavaExceptions"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvocationException"/>
-                </choice>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.tcp.tcpopenconnection"
             xmlns="http://www.w3.org/2001/XMLSchema"
             xmlns:Q1="http://tns.tibco.com/bw/palette/tcp/exception" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.tcp.tcpopenconnection">
@@ -1054,6 +1005,58 @@
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+85cb6544-38d7-4933-b770-da81d426ac6f"
             xmlns="http://www.w3.org/2001/XMLSchema"
             xmlns:Q1="http://www.example.org/JavaExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+85cb6544-38d7-4933-b770-da81d426ac6f">
+            <import namespace="http://www.example.org/JavaExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvocationException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityInput"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityInput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityInput">
+            <complexType name="MutTypeMethodParameters">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="projPath" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="processName" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="msgType" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="jsonString" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="encoding" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="xml" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="JavaInvokeActivityInput" type="tns:MutTypeMethodInputRoot"/>
+            <complexType name="MutTypeMethodInputRoot">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="MethodParameters" type="tns:MutTypeMethodParameters"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityOutput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityOutput"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityOutput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityOutput">
+            <element name="JavaInvokeActivityOutput" type="tns:MutTypeMethodOutputRoot"/>
+            <complexType name="MutTypeMethodOutputRoot">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="MethodReturnValue" type="base64Binary"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/JavaExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90">
             <import namespace="http://www.example.org/JavaExceptions"/>
             <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
             <complexType name="ActivityErrorDataType">
@@ -1296,74 +1299,33 @@
                                     x="500"
                                     xsi:type="notation:Bounds" y="2"/>
                                     </children>
-                                    <children type="4002 bw.java.javamethod">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint
-                                    height="40" width="40"
-                                    x="658"
-                                    xsi:type="notation:Bounds" y="2"/>
-                                    </children>
                                     <children type="4002 bw.tcp.tcpopenconnection">
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1372,7 +1334,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="2"
@@ -1383,28 +1345,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1413,7 +1375,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="118"
@@ -1424,28 +1386,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1454,7 +1416,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="239"
@@ -1465,28 +1427,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1495,7 +1457,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="366"
@@ -1506,28 +1468,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1536,7 +1498,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="493"
@@ -1547,28 +1509,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1577,7 +1539,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="611"
@@ -1588,28 +1550,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1618,7 +1580,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="714"
@@ -1629,28 +1591,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1659,7 +1621,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="2"
@@ -1670,28 +1632,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1700,7 +1662,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.13"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="121"
@@ -1711,28 +1673,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1741,7 +1703,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.14"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="231"
@@ -1752,28 +1714,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1782,7 +1744,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="340"
@@ -1793,28 +1755,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1823,7 +1785,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="456"
@@ -1834,28 +1796,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1864,11 +1826,42 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="589"
                                     xsi:type="notation:Bounds" y="227"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <layoutConstraint x="699"
+                                    xsi:type="notation:Bounds" y="2"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1950,8 +1943,8 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1961,19 +1954,6 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
-            <bendpoints
-                points="[0, 2, 681, -108]$[85, 2, 766, -108]$[85, 61, 766, -49]$[-681, 61, 0, -49]$[-681, 86, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
-            <sourceAnchor id="(1.0,0.4897959183673469)" xsi:type="notation:IdentityAnchor"/>
-        </edges>
-        <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
             <children type="6002">
@@ -1981,7 +1961,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1992,7 +1972,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2003,7 +1983,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2014,7 +1994,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2025,7 +2005,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2036,8 +2016,9 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <bendpoints
+                points="[25, 0, 737, -115]$[55, 0, 767, -115]$[55, 72, 767, -43]$[-712, 72, 0, -43]$[-712, 91, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12"
@@ -2047,9 +2028,8 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.11"/>
-            <bendpoints
-                points="[25, 0, 737, -115]$[55, 0, 767, -115]$[55, 72, 767, -43]$[-712, 72, 0, -43]$[-712, 91, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.13"
@@ -2059,7 +2039,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.12"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.11"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2070,7 +2050,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.13"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.12"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2081,7 +2061,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.14"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.13"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2092,30 +2072,42 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.15"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.14"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.17"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.18" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.16"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.18"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.17"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.15"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.18" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.16"/>
+            <bendpoints points="[25, 9, -319, 0]$[320, 0, -24, -9]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.18"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.17"/>
+            <bendpoints
+                points="[25, 0, 722, -110]$[69, 0, 766, -110]$[69, 65, 766, -45]$[-697, 65, 0, -45]$[-697, 86, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -2159,6 +2151,8 @@
             namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+353a6863-8f11-4e9a-b2be-484e9aef6486+JavaInvokeActivityInput" prefix="tns15"/>
         <tibex:namespaceItem
             namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityInput" prefix="tns16"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityInput" prefix="tns17"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
     <bpws:variables>
@@ -2195,12 +2189,6 @@
             name="to2ByteHangle" sca-bpel:internal="true"/>
         <bpws:variable element="ns9:ActivityErrorData"
             name="_error_to2ByteHangle" sca-bpel:internal="true"/>
-        <bpws:variable element="ns10:JavaInvokeActivityInput"
-            name="JsonToEdiBytesLen-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns11:JavaInvokeActivityOutput"
-            name="JsonToEdiBytesLen" sca-bpel:internal="true"/>
-        <bpws:variable element="ns12:ActivityErrorData"
-            name="_error_JsonToEdiBytesLen" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:ActivityInput"
             name="TCPOpenConnection-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:ActivityOutput"
@@ -2290,6 +2278,12 @@
                 <bpws:literal>hciscommon.smodule.HcisCommon</bpws:literal>
             </bpws:from>
         </bpws:variable>
+        <bpws:variable element="ns48:JavaInvokeActivityInput"
+            name="JsonToEdiBytes-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns49:JavaInvokeActivityOutput"
+            name="JsonToEdiBytes" sca-bpel:internal="true"/>
+        <bpws:variable element="ns50:ActivityErrorData"
+            name="_error_JsonToEdiBytes" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2305,8 +2299,6 @@
                 <bpws:link name="StartToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvokeToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvokeToEnd1" tibex:linkType="SUCCESS"/>
-                <bpws:link name="JavaInvoke1ToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="JavaInvoke2ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="TCPOpenConnectionToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvoke3ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="WriteTCPDataToEnd" tibex:linkType="SUCCESS"/>
@@ -2320,6 +2312,8 @@
                 <bpws:link name="JavaInvoke8ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvoke9ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvoke10ToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="to2ByteHangleToJavaInvoke2" tibex:linkType="SUCCESS"/>
+                <bpws:link name="JavaInvoke2ToTCPOpenConnection" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -2454,7 +2448,7 @@
                         <bpws:target linkName="JavaInvokeToEnd1"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="JavaInvoke1ToEnd"/>
+                        <bpws:source linkName="to2ByteHangleToJavaInvoke2"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -2491,71 +2485,19 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    inputVariable="JsonToEdiBytesLen-input"
-                    name="JsonToEdiBytesLen"
-                    outputVariable="JsonToEdiBytesLen"
-                    tibex:xpdlId="c5a0480a-5408-4867-ba6f-a18d27f0c13a" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="JavaInvoke1ToEnd"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="JavaInvoke2ToEnd"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+c5a0480a-5408-4867-ba6f-a18d27f0c13a+JavaInvokeActivityInput&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;to2ByteHangle&quot;/>&lt;xsl:template name=&quot;JsonToEdiBytesLen-input&quot; match=&quot;/&quot;>&lt;tns4:JavaInvokeActivityInput>&lt;MethodParameters>&lt;projPath>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;PROJ_PATH&amp;quot;)&quot;/>&lt;/projPath>&lt;processName>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;)&quot;/>&lt;/processName>&lt;msgType>&lt;xsl:value-of select=&quot;&amp;quot;CISSPGMTPH9000901_OutReq&amp;quot;&quot;/>&lt;/msgType>&lt;jsonString>&lt;xsl:value-of select=&quot;$to2ByteHangle/MethodReturnValue&quot;/>&lt;/jsonString>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;xml>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/xml>&lt;/MethodParameters>&lt;/tns4:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity
-                            activityTypeID="bw.java.javamethod"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:java="http://ns.tibco.com/bw/palette/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
-                                    <value
-                                    className="com.hcis.eai.HCISHelper"
-                                    icon="HcisCommon.smodule\Resources\icons\edifact-48.png"
-                                    isNew="true"
-                                    isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
-                                    methodName="JsonToEDIbytesLen"
-                                    methodReturn="byte[]" xsi:type="java:JavaMethod">
-                                    <exceptionTypes>java.lang.Exception</exceptionTypes>
-                                    <methodParameter
-                                    paramName="projPath" paramType="string"/>
-                                    <methodParameter
-                                    paramName="processName" paramType="string"/>
-                                    <methodParameter
-                                    paramName="msgType" paramType="string"/>
-                                    <methodParameter
-                                    paramName="jsonString" paramType="string"/>
-                                    <methodParameter
-                                    paramName="encoding" paramType="string"/>
-                                    <methodParameter paramName="xml" paramType="string"/>
-                                    </value>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:activityExtension
                     inputVariable="TCPOpenConnection-input"
                     name="TCPOpenConnection"
                     outputVariable="TCPOpenConnection"
                     tibex:xpdlId="3882382c-4b2b-406a-bb11-585c003a1a92" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="JavaInvoke2ToEnd"/>
+                        <bpws:target linkName="JavaInvoke2ToTCPOpenConnection"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="TCPOpenConnectionToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns17=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;TCPOpenConnection-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns17:ActivityInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns18=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;TCPOpenConnection-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns18:ActivityInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2586,7 +2528,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+d0599020-2a11-445b-b939-af39d574af8d+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JsonToEdiBytesLen&quot;/>&lt;xsl:template name=&quot;ReqData-input&quot; match=&quot;/&quot;>&lt;tns5:JavaInvokeActivityInput>&lt;MethodParameters>&lt;bytes>&lt;xsl:value-of select=&quot;$JsonToEdiBytesLen/MethodReturnValue&quot;/>&lt;/bytes>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;/MethodParameters>&lt;/tns5:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+d0599020-2a11-445b-b939-af39d574af8d+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JsonToEdiBytes&quot;/>&#xa;    &lt;xsl:template name=&quot;ReqData-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns5:JavaInvokeActivityInput>&#xa;            &lt;MethodParameters>&#xa;                &lt;bytes>&#xa;                    &lt;xsl:value-of select=&quot;$JsonToEdiBytes/MethodReturnValue&quot;/>&#xa;                &lt;/bytes>&#xa;                &lt;encoding>&#xa;                    &lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&#xa;                &lt;/encoding>&#xa;            &lt;/MethodParameters>&#xa;        &lt;/tns5:JavaInvokeActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2629,7 +2571,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpwritedata+e30b49f6-0f66-436c-9561-575ceeb3761e+ActivityInput&quot; xmlns:tns17=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JsonToEdiBytesLen&quot;/>&#xa;    &lt;xsl:param name=&quot;TCPOpenConnection&quot;/>&#xa;    &lt;xsl:template name=&quot;WriteTCPData-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:ActivityInput>&#xa;            &lt;tns6:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPOpenConnection/tns17:connection&quot;/>&#xa;            &lt;/tns6:connection>&#xa;            &lt;tns6:data>&#xa;                &lt;xsl:value-of select=&quot;$JsonToEdiBytesLen/MethodReturnValue&quot;/>&#xa;            &lt;/tns6:data>&#xa;        &lt;/tns6:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpwritedata+e30b49f6-0f66-436c-9561-575ceeb3761e+ActivityInput&quot; xmlns:tns18=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JsonToEdiBytes&quot;/>&#xa;    &lt;xsl:param name=&quot;TCPOpenConnection&quot;/>&#xa;    &lt;xsl:template name=&quot;WriteTCPData-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:ActivityInput>&#xa;            &lt;tns6:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPOpenConnection/tns18:connection&quot;/>&#xa;            &lt;/tns6:connection>&#xa;            &lt;tns6:data>&#xa;                &lt;xsl:value-of select=&quot;$JsonToEdiBytes/MethodReturnValue&quot;/>&#xa;            &lt;/tns6:data>&#xa;        &lt;/tns6:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.tcp.write"
@@ -2661,7 +2603,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+bd2b8326-32d7-491b-866b-3f6256299563+ActivityInput&quot; xmlns:tns17=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;TCPOpenConnection&quot;/>&#xa;    &lt;xsl:template name=&quot;ReadTotalLength-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns7:ActivityInput>&#xa;            &lt;tns7:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPOpenConnection/tns17:connection&quot;/>&#xa;            &lt;/tns7:connection>&#xa;            &lt;tns7:bytesToRead>&#xa;                &lt;xsl:value-of select=&quot;8&quot;/>&#xa;            &lt;/tns7:bytesToRead>&#xa;        &lt;/tns7:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+bd2b8326-32d7-491b-866b-3f6256299563+ActivityInput&quot; xmlns:tns18=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;TCPOpenConnection&quot;/>&#xa;    &lt;xsl:template name=&quot;ReadTotalLength-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns7:ActivityInput>&#xa;            &lt;tns7:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPOpenConnection/tns18:connection&quot;/>&#xa;            &lt;/tns7:connection>&#xa;            &lt;tns7:bytesToRead>&#xa;                &lt;xsl:value-of select=&quot;8&quot;/>&#xa;            &lt;/tns7:bytesToRead>&#xa;        &lt;/tns7:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.tcp.read"
@@ -2735,7 +2677,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+21a1f938-05b2-4a07-a634-d848c99adb67+ActivityInput&quot; xmlns:tns17=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;TCPOpenConnection&quot;/>&#xa;    &lt;xsl:param name=&quot;TotalLeng&quot;/>&#xa;    &lt;xsl:template name=&quot;ReadTCPData-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns9:ActivityInput>&#xa;            &lt;tns9:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPOpenConnection/tns17:connection&quot;/>&#xa;            &lt;/tns9:connection>&#xa;            &lt;tns9:bytesToRead>&#xa;                &lt;xsl:value-of select=&quot;xsd:int($TotalLeng/MethodReturnValue) - 8&quot;/>&#xa;            &lt;/tns9:bytesToRead>&#xa;        &lt;/tns9:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+21a1f938-05b2-4a07-a634-d848c99adb67+ActivityInput&quot; xmlns:tns18=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;TCPOpenConnection&quot;/>&#xa;    &lt;xsl:param name=&quot;TotalLeng&quot;/>&#xa;    &lt;xsl:template name=&quot;ReadTCPData-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns9:ActivityInput>&#xa;            &lt;tns9:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPOpenConnection/tns18:connection&quot;/>&#xa;            &lt;/tns9:connection>&#xa;            &lt;tns9:bytesToRead>&#xa;                &lt;xsl:value-of select=&quot;xsd:int($TotalLeng/MethodReturnValue) - 8&quot;/>&#xa;            &lt;/tns9:bytesToRead>&#xa;        &lt;/tns9:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.tcp.read"
@@ -2766,7 +2708,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;http://xmlns.tibco.com/2003/5/bw/plugins/tcp/tcpcloseconnection&quot; xmlns:tns17=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;TCPOpenConnection&quot;/>&#xa;    &lt;xsl:template name=&quot;TCPCloseConnection-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:ActivityInput>&#xa;            &lt;tns10:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPOpenConnection/tns17:connection&quot;/>&#xa;            &lt;/tns10:connection>&#xa;        &lt;/tns10:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;http://xmlns.tibco.com/2003/5/bw/plugins/tcp/tcpcloseconnection&quot; xmlns:tns18=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;TCPOpenConnection&quot;/>&#xa;    &lt;xsl:template name=&quot;TCPCloseConnection-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:ActivityInput>&#xa;            &lt;tns10:connection>&#xa;                &lt;xsl:value-of select=&quot;$TCPOpenConnection/tns18:connection&quot;/>&#xa;            &lt;/tns10:connection>&#xa;        &lt;/tns10:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -3043,6 +2985,58 @@
                                     paramName="targetSystemId" paramType="string"/>
                                     <methodParameter
                                     paramName="jsonString" paramType="string"/>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="JsonToEdiBytes-input"
+                    name="JsonToEdiBytes"
+                    outputVariable="JsonToEdiBytes"
+                    tibex:xpdlId="170459ed-3bf9-4fd3-a67a-9b1f6da0ba90" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="to2ByteHangleToJavaInvoke2"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="JavaInvoke2ToTCPOpenConnection"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns17=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityInput&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;to2ByteHangle&quot;/>&lt;xsl:template name=&quot;JavaInvoke2-input&quot; match=&quot;/&quot;>&lt;tns17:JavaInvokeActivityInput>&lt;MethodParameters>&lt;projPath>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;PROJ_PATH&amp;quot;)&quot;/>&lt;/projPath>&lt;processName>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;)&quot;/>&lt;/processName>&lt;msgType>&lt;xsl:value-of select=&quot;&amp;quot;CISSPGMTPH9000901_OutReq&amp;quot;&quot;/>&lt;/msgType>&lt;jsonString>&lt;xsl:value-of select=&quot;$to2ByteHangle/MethodReturnValue&quot;/>&lt;/jsonString>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;xml>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/xml>&lt;/MethodParameters>&lt;/tns17:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.java.javamethod"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:java="http://ns.tibco.com/bw/palette/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
+                                    <value
+                                    className="com.hcis.eai.HCISHelper"
+                                    icon="HcisCommon.smodule\Resources\icons\edifact-48.png"
+                                    isNew="true"
+                                    isNewActivity="true"
+                                    javaGlobalInstance="HcisModuleHelper"
+                                    methodName="JsonToEDIbytes"
+                                    methodReturn="byte[]" xsi:type="java:JavaMethod">
+                                    <exceptionTypes>java.lang.Exception</exceptionTypes>
+                                    <methodParameter
+                                    paramName="projPath" paramType="string"/>
+                                    <methodParameter
+                                    paramName="processName" paramType="string"/>
+                                    <methodParameter
+                                    paramName="msgType" paramType="string"/>
+                                    <methodParameter
+                                    paramName="jsonString" paramType="string"/>
+                                    <methodParameter
+                                    paramName="encoding" paramType="string"/>
+                                    <methodParameter paramName="xml" paramType="string"/>
                                     </value>
                                 </properties>
                             </activityConfig>
