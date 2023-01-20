@@ -1,0 +1,11 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADCDZD0010101" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADCDZD0010101">
+    <element name="root">
+        <complexType>
+            <sequence>
+                <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+                <element e:kor="시작일자" e:length="8" e:padder="SpaceRight" name="strtDt" nillable="true" type="string"/>
+                <element e:kor="종료일자" e:length="8" e:padder="SpaceRight" name="endDt" nillable="true" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030601="http://schema.hcis.com/xsd/CISTADAHFF0030601" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Bl47YJLdEe2U4fONT9V05A" name="CISTADAHFF.CISTADAHFF0030601.CISTADAHFF0030601_OutRes_data" type="dataformat:DataFormat">
-  <imports xmi:id="_Bl47YZLdEe2U4fONT9V05A" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030601_OutRes_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030601"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Bl47YpLdEe2U4fONT9V05A" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030601:main" fieldOffsetsStr="rstGroup(0,0)">
-    <fieldOffsets xmi:id="_Bl47Y5LdEe2U4fONT9V05A" name="rstGroup" kor="결과그룹" type="RST_GROUP_TYPE"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030601="http://schema.hcis.com/xsd/CISTADAHFF0030601" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHFF/CISTADAHFF0030601.CISTADAHFF0030601_OutRes_data" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030601_OutRes_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030601"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030601:main" lineLength="0" fieldOffsetsStr="rstGroup(0,0)">
+    <fieldOffsets kor="결과그룹" type="RST_GROUP_TYPE" name="rstGroup" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>

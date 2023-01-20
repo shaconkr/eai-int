@@ -1,0 +1,10 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADCDZD0010101" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADCDZD0010101">
+    <element name="root">
+        <complexType>
+            <sequence>
+                <element e:kor="순매출금액" e:length="1" e:padder="ZeroLeft" name="nsaleAmt" nillable="true" type="long"/>
+                <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

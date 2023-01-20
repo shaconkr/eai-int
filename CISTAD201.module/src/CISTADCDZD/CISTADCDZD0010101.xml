@@ -4,7 +4,7 @@
   <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
     <property name="pattern" value="yyyyMMddhhmm"/> 
   </typeHandler>  
-  <stream kor="" name="CISTADAHHE0010910_OutReq" format="fixedlength"> 
+  <stream kor="" name="CISTADCDZD0010101_OutReq" format="fixedlength"> 
     <parser> 
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
@@ -40,15 +40,13 @@
         <field kor="메시지코드" name="msgCd" position="409" length="10"/> 
       </segment>  
       <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
-        <segment name="srchGroup" minOccurs="1" collection="list" maxOccurs="unbounded" class="map"> 
-          <field kor="시작년월" name="strtYm" position="419" length="6"/>  
-          <field kor="종료년월" name="endYm" position="425" length="6"/>  
-          <field kor="다음검색KEY" name="nxtSrchKey" position="431" length="6"/> 
-        </segment> 
+        <field kor="카드회원번호" name="crdMemNo" position="419" length="9"/>  
+        <field kor="시작일자" name="strtDt" position="428" length="8"/>  
+        <field kor="종료일자" name="endDt" position="436" length="8"/> 
       </segment> 
     </record> 
   </stream>  
-  <stream kor="" name="CISTADAHHE0010910_OutRes" format="fixedlength">
+  <stream kor="" name="CISTADCDZD0010101_OutRes" format="fixedlength">
     <parser>
       <property name="recordTerminator" value="\r\n"/>
     </parser>
@@ -84,30 +82,8 @@
         <field kor="메시지코드" name="msgCd" position="409" length="10"/>
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="다음검색KEY" name="nxtSrchKey" position="419" length="6"/>
-        <field kor="결과건수" name="rstRowcount" position="425" length="5" justify="right" padding="0"/>
-        <segment name="rstList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="년도" name="yr" position="430" length="4"/>
-          <field kor="월" name="mm" position="434" length="3"/>
-          <field kor="인입건수" name="ldinCnt" position="437" length="10"/>
-          <field kor="인입금액" name="ldinAmt" position="447" length="10"/>
-          <field kor="인입건수당단가" name="ldinCntPerUprc" position="457" length="10"/>
-          <field kor="팝업승인건수" name="pupAprvlCnt" position="467" length="10"/>
-          <field kor="팝업승인건수율" name="pupAprvlCntRt" position="477" length="5"/>
-          <field kor="팝업승인금액" name="pupAprvlAmt" position="482" length="10"/>
-          <field kor="팝업승인금액율" name="pupAprvlAmtRt" position="492" length="5"/>
-          <field kor="팝업승인건수당단가" name="pupAprvlCntPerUprc" position="497" length="10"/>
-          <field kor="유선승인건수" name="wirdAprvlCnt" position="507" length="10"/>
-          <field kor="유선승인건수율" name="wirdAprvlCntRt" position="517" length="5"/>
-          <field kor="유선승인금액" name="wirdAprvlAmt" position="522" length="10"/>
-          <field kor="유선승인금액율" name="wirdAprvlAmtRt" position="532" length="5"/>
-          <field kor="유선승인건수당단가" name="wirdAprvlCntPerUprc" position="537" length="10"/>
-          <field kor="총건수" name="totCnt" position="547" length="10"/>
-          <field kor="승인건수율" name="aprvlCntRt" position="557" length="5"/>
-          <field kor="총금액" name="totAmt" position="562" length="10"/>
-          <field kor="승인금액율" name="aprvlAmtRt" position="572" length="5"/>
-          <field kor="건수당단가" name="cntPerUprc" position="577" length="10"/>
-        </segment>
+        <field kor="순매출금액" name="nsaleAmt" position="419" length="1" justify="right" padding="0"/>
+        <field kor="응답코드" name="respCd" position="420" length="4"/>
       </segment>
     </record>
   </stream>
