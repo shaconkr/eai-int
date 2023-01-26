@@ -3,7 +3,7 @@
         <complexType>
             <sequence>
                 <element e:kor="년도" e:length="4" e:padder="SpaceRight" name="yr" nillable="true" type="string"/>
-                <element e:kor="월" e:length="3" e:padder="SpaceRight" name="mm" nillable="true" type="string"/>
+                <element e:kor="월" e:length="2" e:padder="SpaceRight" name="mm" nillable="true" type="string"/>
                 <element e:kor="인입건수" e:length="10" e:padder="SpaceRight" name="ldinCnt" nillable="true" type="string"/>
                 <element e:kor="인입금액" e:length="10" e:padder="SpaceRight" name="ldinAmt" nillable="true" type="string"/>
                 <element e:kor="인입건수당단가" e:length="10" e:padder="SpaceRight" name="ldinCntPerUprc" nillable="true" type="string"/>

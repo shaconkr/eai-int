@@ -7,7 +7,7 @@
                 <element e:kor="조회시작일자" e:length="8" e:padder="SpaceRight" name="qryStrtDt" nillable="true" type="string"/>
                 <element e:kor="조회종료일자" e:length="8" e:padder="SpaceRight" name="qryEndDt" nillable="true" type="string"/>
                 <element e:kor="승인결과분류코드" e:length="1" e:padder="SpaceRight" name="aprvlRstCsfCd" nillable="true" type="string"/>
-                <element e:kor="다음검색KEY" e:length="14" e:padder="SpaceRight" name="nxtSrchKey" nillable="true" type="string"/>
+                <element e:kor="다음검색KEY" e:length="34" e:padder="SpaceRight" name="nxtSrchKey" nillable="true" type="string"/>
             </sequence>
         </complexType>
     </element>

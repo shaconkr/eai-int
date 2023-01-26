@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030601="http://schema.hcis.com/xsd/CISTADAHFF0030601" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHFF/CISTADAHFF0030601.CISTADAHFF0030601_OutReq_data" type="dataformat:DataFormat">
-  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030601_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030601"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030601:main" lineLength="0" fieldOffsetsStr="srchGroup(0,0)">
-    <fieldOffsets kor="검색그룹" type="SRCH_GROUP_TYPE" name="srchGroup" start="0" end="0"/>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030601="http://schema.hcis.com/xsd/CISTADAHFF0030601" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_BlpDwJLdEe2U4fONT9V05A" name="CISTADAHFF.CISTADAHFF0030601.CISTADAHFF0030601_OutReq_data" type="dataformat:DataFormat">
+  <imports xmi:id="_BlpDwZLdEe2U4fONT9V05A" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030601_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030601"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Blpq0JLdEe2U4fONT9V05A" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030601:main" fieldOffsetsStr="srchGroup(0,0)">
+    <fieldOffsets xmi:id="_Blpq0ZLdEe2U4fONT9V05A" name="srchGroup" kor="검색그룹" type="SRCH_GROUP_TYPE"/>
   </jndi:configuration>
 </jndi:namedResource>

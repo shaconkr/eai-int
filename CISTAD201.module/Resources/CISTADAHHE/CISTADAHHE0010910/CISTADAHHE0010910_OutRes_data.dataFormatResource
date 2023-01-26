@@ -2,9 +2,8 @@
 
 <jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0010910="http://schema.hcis.com/xsd/CISTADAHHE0010910" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHE/CISTADAHHE0010910.CISTADAHHE0010910_OutRes_data" type="dataformat:DataFormat">
   <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0010910_OutRes_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0010910"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0010910:main" lineLength="11" fieldOffsetsStr="nxtSrchKey(0,6)&#xA;rstRowcount(6,11)&#xA;rstList(11,11)">
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0010910:main" lineLength="6" fieldOffsetsStr="nxtSrchKey(0,6)&#xA;rstList(6,6)">
     <fieldOffsets kor="다음검색KEY" type="string" name="nxtSrchKey" start="0" end="6"/>
-    <fieldOffsets kor="결과건수" type="long" name="rstRowcount" start="6" end="11"/>
-    <fieldOffsets kor="결과리스트" type="RST_LIST_TYPE" name="rstList" start="11" end="11"/>
+    <fieldOffsets kor="결과리스트" type="RST_LIST_TYPE" name="rstList" start="6" end="6"/>
   </jndi:configuration>
 </jndi:namedResource>

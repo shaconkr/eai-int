@@ -1435,8 +1435,6 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../Schemas/CISTADAHHE/CISTADAHHE0020101/CISTADAHHE0020101_InReq.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020101"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../Schemas/CISTADAHHB/CISTADAHHB0011001/CISTADAHHB0011001_InReq.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHB0011001"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"

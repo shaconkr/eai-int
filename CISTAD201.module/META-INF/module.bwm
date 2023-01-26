@@ -30,4 +30,10 @@
   <sca:component xmi:id="_VWJ0MJbrEe2j6otZXzm9EA" name="ComponentCISTADAHHE0010910_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_VWJ0MZbrEe2j6otZXzm9EA" processName="CISTADAHHE.CISTADAHHE0010910_Main"/>
   </sca:component>
+  <sca:component xmi:id="_UBOnIJ0WEe2qPJTrbb-SSQ" name="ComponentCISTADAHFA0060101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_UBOnIZ0WEe2qPJTrbb-SSQ" processName="CISTADAHFA.CISTADAHFA0060101_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_BHfHsJ0bEe2bRegm0nxkbQ" name="ComponentCISTADAHFA0070101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_BHfHsZ0bEe2bRegm0nxkbQ" processName="CISTADAHFA.CISTADAHFA0070101_Main"/>
+  </sca:component>
 </sca:composite>

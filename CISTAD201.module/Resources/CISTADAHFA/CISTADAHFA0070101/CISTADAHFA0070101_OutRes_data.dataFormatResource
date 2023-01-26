@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFA0070101="http://schema.hcis.com/xsd/CISTADAHFA0070101" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_dmAeIJ0YEe2qPJTrbb-SSQ" name="CISTADAHFA.CISTADAHFA0070101.CISTADAHFA0070101_OutRes_data" type="dataformat:DataFormat">
+  <imports xmi:id="_dmAeIZ0YEe2qPJTrbb-SSQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFA0070101_OutRes_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFA0070101"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_dmAeIp0YEe2qPJTrbb-SSQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFA0070101:main" fieldOffsetsStr=""/>
+</jndi:namedResource>

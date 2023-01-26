@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFA0070101="http://schema.hcis.com/xsd/CISTADAHFA0070101" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_dl0Q4J0YEe2qPJTrbb-SSQ" name="CISTADAHFA.CISTADAHFA0070101.CISTADAHFA0070101_OutReq_data" type="dataformat:DataFormat">
+  <imports xmi:id="_dl0Q4Z0YEe2qPJTrbb-SSQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFA0070101_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFA0070101"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_dl0Q4p0YEe2qPJTrbb-SSQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFA0070101:main" lineLength="2501" fieldOffsetsStr="wrkGbcd(0,2)&#xA;crdMemNo(2,11)&#xA;ptcrMemGbcd(11,13)&#xA;priorAprvlTypeCd(13,14)&#xA;highAprvlBsicAmt(14,32)&#xA;highAprvlBsicTypeCd(32,33)&#xA;intmAprvlBsicTypeCd(33,34)&#xA;lowAprvlBsicAmt(34,52)&#xA;lowAprvlBsicTypeCd(52,53)&#xA;famlAplyYn(53,54)&#xA;aplyDt(54,62)&#xA;clerDt(62,70)&#xA;regRsn(70,2070)&#xA;regStoreCd(2070,2073)&#xA;regId(2073,2173)&#xA;regDtm(2173,2187)&#xA;regPrgId(2187,2287)&#xA;chgId(2287,2387)&#xA;chgDtm(2387,2401)&#xA;chgPrgId(2401,2501)">
+    <fieldOffsets xmi:id="_dl038J0YEe2qPJTrbb-SSQ" name="wrkGbcd" end="2" kor="작업구분코드" type="string"/>
+    <fieldOffsets xmi:id="_dl038Z0YEe2qPJTrbb-SSQ" name="crdMemNo" start="2" end="11" kor="카드회원번호" type="string"/>
+    <fieldOffsets xmi:id="_dl038p0YEe2qPJTrbb-SSQ" name="ptcrMemGbcd" start="11" end="13" kor="특정회원구분코드" type="string"/>
+    <fieldOffsets xmi:id="_dl03850YEe2qPJTrbb-SSQ" name="priorAprvlTypeCd" start="13" end="14" kor="우선승인유형코드" type="string"/>
+    <fieldOffsets xmi:id="_dl039J0YEe2qPJTrbb-SSQ" name="highAprvlBsicAmt" start="14" end="32" kor="상위승인기준금액" type="string"/>
+    <fieldOffsets xmi:id="_dl039Z0YEe2qPJTrbb-SSQ" name="highAprvlBsicTypeCd" start="32" end="33" kor="상위승인기준유형코드" type="string"/>
+    <fieldOffsets xmi:id="_dl039p0YEe2qPJTrbb-SSQ" name="intmAprvlBsicTypeCd" start="33" end="34" kor="중간승인기준유형코드" type="string"/>
+    <fieldOffsets xmi:id="_dl03950YEe2qPJTrbb-SSQ" name="lowAprvlBsicAmt" start="34" end="52" kor="하위승인기준금액" type="string"/>
+    <fieldOffsets xmi:id="_dl03-J0YEe2qPJTrbb-SSQ" name="lowAprvlBsicTypeCd" start="52" end="53" kor="하위승인기준유형코드" type="string"/>
+    <fieldOffsets xmi:id="_dl03-Z0YEe2qPJTrbb-SSQ" name="famlAplyYn" start="53" end="54" kor="가족적용여부" type="string"/>
+    <fieldOffsets xmi:id="_dl03-p0YEe2qPJTrbb-SSQ" name="aplyDt" start="54" end="62" kor="적용일자" type="string"/>
+    <fieldOffsets xmi:id="_dl03-50YEe2qPJTrbb-SSQ" name="clerDt" start="62" end="70" kor="해제일자" type="string"/>
+    <fieldOffsets xmi:id="_dl03_J0YEe2qPJTrbb-SSQ" name="regRsn" start="70" end="2070" kor="등록사유" type="string"/>
+    <fieldOffsets xmi:id="_dl03_Z0YEe2qPJTrbb-SSQ" name="regStoreCd" start="2070" end="2073" kor="등록점코드" type="string"/>
+    <fieldOffsets xmi:id="_dl03_p0YEe2qPJTrbb-SSQ" name="regId" start="2073" end="2173" kor="등록ID" type="string"/>
+    <fieldOffsets xmi:id="_dl03_50YEe2qPJTrbb-SSQ" name="regDtm" start="2173" end="2187" kor="등록일시" type="string"/>
+    <fieldOffsets xmi:id="_dl04AJ0YEe2qPJTrbb-SSQ" name="regPrgId" start="2187" end="2287" kor="등록프로그램ID" type="string"/>
+    <fieldOffsets xmi:id="_dl04AZ0YEe2qPJTrbb-SSQ" name="chgId" start="2287" end="2387" kor="변경ID" type="string"/>
+    <fieldOffsets xmi:id="_dl04Ap0YEe2qPJTrbb-SSQ" name="chgDtm" start="2387" end="2401" kor="변경일시" type="string"/>
+    <fieldOffsets xmi:id="_dl04A50YEe2qPJTrbb-SSQ" name="chgPrgId" start="2401" end="2501" kor="변경프로그램ID" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

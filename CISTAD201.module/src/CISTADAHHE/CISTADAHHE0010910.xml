@@ -85,28 +85,27 @@
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
         <field kor="다음검색KEY" name="nxtSrchKey" position="419" length="6"/>
-        <field kor="결과건수" name="rstRowcount" position="425" length="5" justify="right" padding="0"/>
         <segment name="rstList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="년도" name="yr" position="430" length="4"/>
-          <field kor="월" name="mm" position="434" length="3"/>
-          <field kor="인입건수" name="ldinCnt" position="437" length="10"/>
-          <field kor="인입금액" name="ldinAmt" position="447" length="10"/>
-          <field kor="인입건수당단가" name="ldinCntPerUprc" position="457" length="10"/>
-          <field kor="팝업승인건수" name="pupAprvlCnt" position="467" length="10"/>
-          <field kor="팝업승인건수율" name="pupAprvlCntRt" position="477" length="5"/>
-          <field kor="팝업승인금액" name="pupAprvlAmt" position="482" length="10"/>
-          <field kor="팝업승인금액율" name="pupAprvlAmtRt" position="492" length="5"/>
-          <field kor="팝업승인건수당단가" name="pupAprvlCntPerUprc" position="497" length="10"/>
-          <field kor="유선승인건수" name="wirdAprvlCnt" position="507" length="10"/>
-          <field kor="유선승인건수율" name="wirdAprvlCntRt" position="517" length="5"/>
-          <field kor="유선승인금액" name="wirdAprvlAmt" position="522" length="10"/>
-          <field kor="유선승인금액율" name="wirdAprvlAmtRt" position="532" length="5"/>
-          <field kor="유선승인건수당단가" name="wirdAprvlCntPerUprc" position="537" length="10"/>
-          <field kor="총건수" name="totCnt" position="547" length="10"/>
-          <field kor="승인건수율" name="aprvlCntRt" position="557" length="5"/>
-          <field kor="총금액" name="totAmt" position="562" length="10"/>
-          <field kor="승인금액율" name="aprvlAmtRt" position="572" length="5"/>
-          <field kor="건수당단가" name="cntPerUprc" position="577" length="10"/>
+          <field kor="년도" name="yr" position="425" length="4"/>
+          <field kor="월" name="mm" position="429" length="2"/>
+          <field kor="인입건수" name="ldinCnt" position="431" length="10"/>
+          <field kor="인입금액" name="ldinAmt" position="441" length="10"/>
+          <field kor="인입건수당단가" name="ldinCntPerUprc" position="451" length="10"/>
+          <field kor="팝업승인건수" name="pupAprvlCnt" position="461" length="10"/>
+          <field kor="팝업승인건수율" name="pupAprvlCntRt" position="471" length="5"/>
+          <field kor="팝업승인금액" name="pupAprvlAmt" position="476" length="10"/>
+          <field kor="팝업승인금액율" name="pupAprvlAmtRt" position="486" length="5"/>
+          <field kor="팝업승인건수당단가" name="pupAprvlCntPerUprc" position="491" length="10"/>
+          <field kor="유선승인건수" name="wirdAprvlCnt" position="501" length="10"/>
+          <field kor="유선승인건수율" name="wirdAprvlCntRt" position="511" length="5"/>
+          <field kor="유선승인금액" name="wirdAprvlAmt" position="516" length="10"/>
+          <field kor="유선승인금액율" name="wirdAprvlAmtRt" position="526" length="5"/>
+          <field kor="유선승인건수당단가" name="wirdAprvlCntPerUprc" position="531" length="10"/>
+          <field kor="총건수" name="totCnt" position="541" length="10"/>
+          <field kor="승인건수율" name="aprvlCntRt" position="551" length="5"/>
+          <field kor="총금액" name="totAmt" position="556" length="10"/>
+          <field kor="승인금액율" name="aprvlAmtRt" position="566" length="5"/>
+          <field kor="건수당단가" name="cntPerUprc" position="571" length="10"/>
         </segment>
       </segment>
     </record>

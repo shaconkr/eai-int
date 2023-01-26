@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030601="http://schema.hcis.com/xsd/CISTADAHFF0030601" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHFF/CISTADAHFF0030601.CISTADAHFF0030601_OutReq_data_srchGroup" type="dataformat:DataFormat">
-  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030601_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030601"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030601:main" lineLength="11" fieldOffsetsStr="wrkGbVal(0,2)&#xA;crdMemNo(2,11)">
-    <fieldOffsets kor="작업구분값" type="string" name="wrkGbVal" start="0" end="2"/>
-    <fieldOffsets kor="카드회원번호" type="string" name="crdMemNo" start="2" end="11"/>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030601="http://schema.hcis.com/xsd/CISTADAHFF0030601" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_BltVMJLdEe2U4fONT9V05A" name="CISTADAHFF.CISTADAHFF0030601.CISTADAHFF0030601_OutReq_data_srchGroup" type="dataformat:DataFormat">
+  <imports xmi:id="_BltVMZLdEe2U4fONT9V05A" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030601_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030601"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_BltVMpLdEe2U4fONT9V05A" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030601:main" lineLength="11" fieldOffsetsStr="wrkGbVal(0,2)&#xA;crdMemNo(2,11)">
+    <fieldOffsets xmi:id="_BltVM5LdEe2U4fONT9V05A" name="wrkGbVal" end="2" kor="작업구분값" type="string"/>
+    <fieldOffsets xmi:id="_BltVNJLdEe2U4fONT9V05A" name="crdMemNo" start="2" end="11" kor="카드회원번호" type="string"/>
   </jndi:configuration>
 </jndi:namedResource>
