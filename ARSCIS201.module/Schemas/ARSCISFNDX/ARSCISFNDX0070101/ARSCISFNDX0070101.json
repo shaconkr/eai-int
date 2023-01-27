@@ -4,18 +4,18 @@
     "sysNm": "ARS",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "ioid": "SARSMTSY0016001"
+    "ioid": "SARSFNDX0070101"
   },
   "target": {
     "sysId": "CIS",
     "sysNm": "H-CIS",
-    "workId": "MTSY",
-    "workNm": "자사매출업무연동",
-    "ioid": "TCISMTSY0016001"
+    "workId": "FNDX",
+    "workNm": "청구외부제공",
+    "ioid": "TCISFNDX0070101"
   },
   "request": {
-    "ifId": "ARSCISMTSY0016001",
-    "ifNm": "매출금액조회",
+    "ifId": "ARSCISFNDX0070101",
+    "ifNm": "소득공제재발송등록",
     "sysId": "ARS",
     "sysNm": "ARS",
     "workId": "DEFT",
@@ -55,8 +55,8 @@
     "afterShellPath": ""
   },
   "response": {
-    "ifId": "ARSCISMTSY0016001",
-    "ifNm": "매출금액조회",
+    "ifId": "ARSCISFNDX0070101",
+    "ifNm": "소득공제재발송등록",
     "sysId": "ARS",
     "sysNm": "ARS",
     "workId": "DEFT",
