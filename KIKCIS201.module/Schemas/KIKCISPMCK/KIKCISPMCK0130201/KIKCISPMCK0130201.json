@@ -4,18 +4,18 @@
     "sysNm": "키오스크",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "ioid": "SKIKFNDX0010101"
+    "ioid": "SKIKPMCK0130201"
   },
   "target": {
     "sysId": "CIS",
     "sysNm": "H-CIS",
-    "workId": "FNDX",
-    "workNm": "청구외부제공",
-    "ioid": "TCISFNDX0010101"
+    "workId": "PMCK",
+    "workNm": "키오스크",
+    "ioid": "TCISPMCK0130201"
   },
   "request": {
-    "ifId": "KIKCISFNDX0010101",
-    "ifNm": "키오스크이용내역조회",
+    "ifId": "KIKCISPMCK0130201",
+    "ifNm": "키오스크가상계좌등록",
     "sysId": "KIK",
     "sysNm": "키오스크",
     "workId": "DEFT",
@@ -55,8 +55,8 @@
     "afterShellPath": ""
   },
   "response": {
-    "ifId": "KIKCISFNDX0010101",
-    "ifNm": "키오스크이용내역조회",
+    "ifId": "KIKCISPMCK0130201",
+    "ifNm": "키오스크가상계좌등록",
     "sysId": "KIK",
     "sysNm": "키오스크",
     "workId": "DEFT",
