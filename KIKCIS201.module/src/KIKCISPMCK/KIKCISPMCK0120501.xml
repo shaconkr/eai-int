@@ -105,12 +105,24 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" position="1798" length="2"/>
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="점코드" name="storeCd" position="1800" length="3"/>
-        <field kor="매출일자" name="saleDt" position="1803" length="8"/>
-        <field kor="그리드건수" name="gridRowcount" position="1811" length="5" justify="right" padding="0"/>
+        <field kor="그리드건수" name="gridRowcount" position="1800" length="5" justify="right" padding="0"/>
         <segment name="gridList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="매출관리번호" name="saleMngNo" position="1816" length="18"/>
-          <field kor="매출이용구분코드" name="saleUtlzGbcd" position="1834" length="4"/>
+          <field kor="매출관리번호" name="saleMngNo" position="1805" length="18"/>
+          <field kor="매출이용구분코드" name="saleUtlzGbcd" position="1823" length="4"/>
+          <field kor="자사승인번호" name="owcoAprvlNo" position="1827" length="9"/>
+          <field kor="본인가족회원순번" name="selfFamlMemSeq" position="1836" length="2"/>
+          <field kor="매출일자" name="saleDt" position="1838" length="8"/>
+          <field kor="청구일자" name="chrDt" position="1846" length="8"/>
+          <field kor="상품명" name="itemNm" position="1854" length="200"/>
+          <field kor="순매출금액" name="nsaleAmt" position="2054" length="19" justify="right" padding="0"/>
+          <field kor="카드할부개월수" name="crdInsmMths" position="2073" length="4" justify="right" padding="0"/>
+          <field kor="점코드" name="storeCd" position="2077" length="3"/>
+          <field kor="청구회차" name="reqTmnm" position="2080" length="8" justify="right" padding="0"/>
+          <field kor="청구원금금액" name="reqPrncAmt" position="2088" length="19" justify="right" padding="0"/>
+          <field kor="카드번호" name="crdNo" position="2107" length="16"/>
+          <field kor="오류코드" name="errCd" position="2123" length="2"/>
+          <field kor="오류내용" name="errCntn" position="2125" length="4000"/>
+          <field kor="당월구분코드" name="thmnGbcd" position="6125" length="1"/>
         </segment>
       </segment>
     </record>
