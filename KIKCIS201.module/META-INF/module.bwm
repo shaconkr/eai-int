@@ -29,4 +29,7 @@
   <sca:component xmi:id="_zZ9vQJ4AEe2XKp6oyJ_oKQ" name="ComponentKIKCISPMCK0120501_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zZ9vQZ4AEe2XKp6oyJ_oKQ" processName="KIKCISPMCK.KIKCISPMCK0120501_Main"/>
   </sca:component>
+  <sca:component xmi:id="_jkj70KB8Ee2RwqQ7CweM5g" name="ComponentKIKCISPMCK0120601_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jkj70aB8Ee2RwqQ7CweM5g" processName="KIKCISPMCK.KIKCISPMCK0120601_Main"/>
+  </sca:component>
 </sca:composite>
