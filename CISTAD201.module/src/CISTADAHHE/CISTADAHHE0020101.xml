@@ -90,26 +90,26 @@
         <field kor="다음검색KEY" name="nxtSrchKey" position="419" length="34"/>
         <segment name="rstList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
           <field kor="카드번호" name="crdNo" position="453" length="16"/>
-          <field kor="카드브랜드구분코드" name="crdBrndGbcd" position="469" length="1"/>
-          <field kor="승인번호" name="aprvlNo" position="470" length="12"/>
-          <field kor="점코드" name="storeCd" position="482" length="3"/>
-          <field kor="승인유입구분코드" name="aprvlInfwGbcd" position="485" length="1"/>
-          <field kor="승인자ID" name="aprvId" position="486" length="100"/>
-          <field kor="승인일시" name="aprvlDtm" position="586" length="14"/>
-          <field kor="포스번호" name="posNo" position="600" length="6"/>
-          <field kor="할부개월수" name="insmMths" position="606" length="2"/>
-          <field kor="승인입금구분코드" name="aprvlIamtGbcd" position="608" length="1"/>
-          <field kor="총매출금액" name="tsaleAmt" position="609" length="18"/>
-          <field kor="할인금액" name="dcAmt" position="627" length="18"/>
-          <field kor="순매출금액" name="nsaleAmt" position="645" length="18"/>
-          <field kor="입금금액" name="iamtAmt" position="663" length="18"/>
-          <field kor="카드승인금액" name="crdAprvlAmt" position="681" length="18"/>
-          <field kor="승인결과분류코드" name="aprvlRstCsfCd" position="699" length="1"/>
-          <field kor="승인코드" name="aprvlCd" position="700" length="4"/>
-          <field kor="승인메모" name="aprvlMemo" position="704" length="200"/>
-          <field kor="에누리구분값" name="enuriGbVal" position="904" length="2"/>
-          <field kor="상품코드" name="itemCd" position="906" length="20"/>
-          <field kor="상품금액" name="itemAmt" position="926" length="18"/>
+          <field kor="카드브랜드코드" name="crdBrndCd" position="469" length="4"/>
+          <field kor="승인번호" name="aprvlNo" position="473" length="12"/>
+          <field kor="점코드" name="storeCd" position="485" length="3"/>
+          <field kor="승인유입구분코드" name="aprvlInfwGbcd" position="488" length="1"/>
+          <field kor="승인자ID" name="aprvId" position="489" length="100"/>
+          <field kor="승인일시" name="aprvlDtm" position="589" length="14"/>
+          <field kor="포스번호" name="posNo" position="603" length="6"/>
+          <field kor="할부개월수" name="insmMths" position="609" length="2"/>
+          <field kor="승인입금구분코드" name="aprvlIamtGbcd" position="611" length="1"/>
+          <field kor="총매출금액" name="tsaleAmt" position="612" length="18"/>
+          <field kor="할인금액" name="dcAmt" position="630" length="18"/>
+          <field kor="순매출금액" name="nsaleAmt" position="648" length="18"/>
+          <field kor="입금금액" name="iamtAmt" position="666" length="18"/>
+          <field kor="카드승인금액" name="crdAprvlAmt" position="684" length="18"/>
+          <field kor="승인결과분류코드" name="aprvlRstCsfCd" position="702" length="1"/>
+          <field kor="승인코드" name="aprvlCd" position="703" length="4"/>
+          <field kor="승인메모" name="aprvlMemo" position="707" length="200"/>
+          <field kor="에누리구분값" name="enuriGbVal" position="907" length="2"/>
+          <field kor="상품코드" name="itemCd" position="909" length="20"/>
+          <field kor="상품금액" name="itemAmt" position="929" length="18"/>
         </segment>
       </segment>
     </record>

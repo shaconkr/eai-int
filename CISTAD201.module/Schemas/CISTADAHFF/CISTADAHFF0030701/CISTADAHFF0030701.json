@@ -4,18 +4,18 @@
     "sysNm": "H-CIS",
     "workId": "AHFF",
     "workNm": "부가정보",
-    "ioid": "SCISAHFF0030601"
+    "ioid": "SCISAHFF0030701"
   },
   "target": {
     "sysId": "TAD",
     "sysNm": "승인서버(탠덤)",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "ioid": "TTADAHFF0030601"
+    "ioid": "TTADAHFF0030701"
   },
   "request": {
-    "ifId": "CISTADAHFF0030601",
-    "ifNm": "최근 등록 승인주의메시지 조회(승인서버)",
+    "ifId": "CISTADAHFF0030701",
+    "ifNm": "승인주의메시지 목록조회(승인서버)",
     "sysId": "CIS",
     "sysNm": "H-CIS",
     "workId": "AHFF",
@@ -25,7 +25,7 @@
     "infraNm": "대내I/F",
     "procId": "1",
     "procNm": "온라인(대내)",
-    "charset": "KSC5601",
+    "charset": "UTF-8",
     "extSysId": "",
     "extSysNm": "",
     "extWorkId": "",
@@ -55,8 +55,8 @@
     "afterShellPath": ""
   },
   "response": {
-    "ifId": "CISTADAHFF0030601",
-    "ifNm": "최근 등록 승인주의메시지 조회(승인서버)",
+    "ifId": "CISTADAHFF0030701",
+    "ifNm": "승인주의메시지 목록조회(승인서버)",
     "sysId": "CIS",
     "sysNm": "H-CIS",
     "workId": "AHFF",

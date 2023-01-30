@@ -3,7 +3,7 @@
         <complexType>
             <sequence>
                 <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
-                <element e:kor="카드브랜드구분코드" e:length="1" e:padder="SpaceRight" name="crdBrndGbcd" nillable="true" type="string"/>
+                <element e:kor="카드브랜드코드" e:length="4" e:padder="SpaceRight" name="crdBrndCd" nillable="true" type="string"/>
                 <element e:kor="승인번호" e:length="12" e:padder="SpaceRight" name="aprvlNo" nillable="true" type="string"/>
                 <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
                 <element e:kor="승인유입구분코드" e:length="1" e:padder="SpaceRight" name="aprvlInfwGbcd" nillable="true" type="string"/>

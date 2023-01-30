@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030701="http://schema.hcis.com/xsd/CISTADAHFF0030701" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Zfin4KBhEe2A2JYnfhUfJw" name="CISTADAHFF.CISTADAHFF0030701.CISTADAHFF0030701_OutReq" type="dataformat:DataFormat">
+  <imports xmi:id="_Zfin4aBhEe2A2JYnfhUfJw" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030701_OutReq.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030701"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_ZfjO8KBhEe2A2JYnfhUfJw" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030701:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets xmi:id="_Zfj2AKBhEe2A2JYnfhUfJw" name="header" kor="0" type="TADHeaderType"/>
+    <fieldOffsets xmi:id="_Zfj2AaBhEe2A2JYnfhUfJw" name="data" kor="0" type="CISTADAHFF0030701_OutReq"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030701="http://schema.hcis.com/xsd/CISTADAHFF0030701" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Zf5NMKBhEe2A2JYnfhUfJw" name="CISTADAHFF.CISTADAHFF0030701.CISTADAHFF0030701_OutRes_data" type="dataformat:DataFormat">
+  <imports xmi:id="_Zf5NMaBhEe2A2JYnfhUfJw" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030701_OutRes_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030701"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Zf5NMqBhEe2A2JYnfhUfJw" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030701:main" lineLength="19" fieldOffsetsStr="recdTotCnt(0,11)&#xA;nxtSrchKey(11,19)&#xA;rstList(19,19)">
+    <fieldOffsets xmi:id="_Zf5NM6BhEe2A2JYnfhUfJw" name="recdTotCnt" end="11" kor="레코드총건수" type="long"/>
+    <fieldOffsets xmi:id="_Zf5NNKBhEe2A2JYnfhUfJw" name="nxtSrchKey" start="11" end="19" kor="다음검색KEY" type="string"/>
+    <fieldOffsets xmi:id="_Zf5NNaBhEe2A2JYnfhUfJw" name="rstList" start="19" end="19" kor="결과리스트" type="RST_LIST_TYPE"/>
+  </jndi:configuration>
+</jndi:namedResource>

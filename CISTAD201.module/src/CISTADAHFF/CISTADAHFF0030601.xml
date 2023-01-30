@@ -87,7 +87,7 @@
           <field kor="카드회원번호" name="crdMemNo" position="419" length="9"/>
           <field kor="승인주의코드" name="aprvlCareCd" position="428" length="4"/>
           <field kor="승인주의내용" name="aprvlCareCntn" position="432" length="100"/>
-          <field kor="승인주의종료일자" name="aprvlCareEndDt" position="532" length="8"/>
+          <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="532" length="8"/>
         </segment>
       </segment>
     </record>
