@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030701="http://schema.hcis.com/xsd/CISTADAHFF0030701" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_ZfrKwKBhEe2A2JYnfhUfJw" name="CISTADAHFF.CISTADAHFF0030701.CISTADAHFF0030701_OutReq_data" type="dataformat:DataFormat">
-  <imports xmi:id="_ZfrKwaBhEe2A2JYnfhUfJw" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030701_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030701"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_ZfrKwqBhEe2A2JYnfhUfJw" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030701:main" lineLength="17" fieldOffsetsStr="crdMemNo(0,9)&#xA;nxtSrchKey(9,17)">
-    <fieldOffsets xmi:id="_ZfrKw6BhEe2A2JYnfhUfJw" name="crdMemNo" end="9" kor="카드회원번호" type="string"/>
-    <fieldOffsets xmi:id="_ZfrKxKBhEe2A2JYnfhUfJw" name="nxtSrchKey" start="9" end="17" kor="다음검색KEY" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030701="http://schema.hcis.com/xsd/CISTADAHFF0030701" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHFF/CISTADAHFF0030701.CISTADAHFF0030701_OutReq_data" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030701_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030701"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030701:main" lineLength="17" fieldOffsetsStr="crdMemNo(0,9)&#xA;nxtSrchKey(9,17)">
+    <fieldOffsets kor="카드회원번호" type="string" name="crdMemNo" start="0" end="9"/>
+    <fieldOffsets kor="다음검색KEY" type="string" name="nxtSrchKey" start="9" end="17"/>
   </jndi:configuration>
 </jndi:namedResource>

@@ -81,16 +81,16 @@
         <field kor="메시지코드" name="msgCd" position="409" length="10"/>
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="레코드총건수" name="recdTotCnt" position="419" length="11" justify="right" padding="0"/>
-        <field kor="다음검색KEY" name="nxtSrchKey" position="430" length="8"/>
+        <field kor="레코드총건수" name="recdTotCnt" position="419" length="10"/>
+        <field kor="다음검색KEY" name="nxtSrchKey" position="429" length="8"/>
         <segment name="rstList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="등록일시" name="regDtm" position="438" length="14"/>
-          <field kor="승인주의구분코드" name="aprvlCareGbcd" position="452" length="4"/>
-          <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="456" length="8"/>
-          <field kor="승인주의종료일자" name="aprvlCareEndDt" position="464" length="8"/>
-          <field kor="승인주의내용" name="aprvlCareCntn" position="472" length="100"/>
-          <field kor="상담점코드" name="cnslStoreCd" position="572" length="3"/>
-          <field kor="상담자ID" name="conpsId" position="575" length="8"/>
+          <field kor="승인주의등록일시" name="aprvlCareRegDtm" position="437" length="14"/>
+          <field kor="승인주의구분코드" name="aprvlCareGbcd" position="451" length="4"/>
+          <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="455" length="8"/>
+          <field kor="승인주의종료일자" name="aprvlCareEndDt" position="463" length="8"/>
+          <field kor="승인주의내용" name="aprvlCareCntn" position="471" length="100"/>
+          <field kor="상담점코드" name="cnslStoreCd" position="571" length="3"/>
+          <field kor="상담자ID" name="conpsId" position="574" length="8"/>
         </segment>
       </segment>
     </record>

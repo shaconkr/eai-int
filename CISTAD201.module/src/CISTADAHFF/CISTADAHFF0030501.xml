@@ -4,7 +4,7 @@
   <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
     <property name="pattern" value="yyyyMMddhhmm"/> 
   </typeHandler>  
-  <stream kor="" name="CISTADAHFF0030701_OutReq" format="fixedlength"> 
+  <stream kor="" name="CISTADAHFF0030501_OutReq" format="fixedlength"> 
     <parser> 
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
@@ -40,12 +40,26 @@
         <field kor="메시지코드" name="msgCd" position="409" length="10"/> 
       </segment>  
       <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="카드회원번호" name="crdMemNo" position="419" length="9"/>  
-        <field kor="다음검색KEY" name="nxtSrchKey" position="428" length="8"/> 
+        <field kor="작업처리구분코드" name="wrkProcGbcd" position="419" length="2"/>  
+        <field kor="카드회원번호" name="crdMemNo" position="421" length="9"/>  
+        <field kor="승인주의등록일시" name="aprvlCareRegDtm" position="430" length="14"/>  
+        <field kor="승인주의구분코드" name="aprvlCareGbcd" position="444" length="4"/>  
+        <field kor="승인코드" name="aprvlCd" position="448" length="4"/>  
+        <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="452" length="8"/>  
+        <field kor="승인주의종료일자" name="aprvlCareEndDt" position="460" length="8"/>  
+        <field kor="승인주의내용" name="aprvlCareCntn" position="468" length="100"/>  
+        <field kor="상담점코드" name="cnslStoreCd" position="568" length="3"/>  
+        <field kor="상담자ID" name="conpsId" position="571" length="8"/>  
+        <field kor="등록ID" name="regId" position="579" length="100"/>  
+        <field kor="등록일시" name="regDtm" position="679" length="14"/>  
+        <field kor="등록프로그램ID" name="regPrgId" position="693" length="100"/>  
+        <field kor="변경ID" name="chgId" position="793" length="100"/>  
+        <field kor="변경일시" name="chgDtm" position="893" length="14"/>  
+        <field kor="변경프로그램ID" name="chgPrgId" position="907" length="100"/> 
       </segment> 
     </record> 
   </stream>  
-  <stream kor="" name="CISTADAHFF0030701_OutRes" format="fixedlength">
+  <stream kor="" name="CISTADAHFF0030501_OutRes" format="fixedlength">
     <parser>
       <property name="recordTerminator" value="\r\n"/>
     </parser>
@@ -81,17 +95,22 @@
         <field kor="메시지코드" name="msgCd" position="409" length="10"/>
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="레코드총건수" name="recdTotCnt" position="419" length="10"/>
-        <field kor="다음검색KEY" name="nxtSrchKey" position="429" length="8"/>
-        <segment name="rstList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="승인주의등록일시" name="aprvlCareRegDtm" position="437" length="14"/>
-          <field kor="승인주의구분코드" name="aprvlCareGbcd" position="451" length="4"/>
-          <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="455" length="8"/>
-          <field kor="승인주의종료일자" name="aprvlCareEndDt" position="463" length="8"/>
-          <field kor="승인주의내용" name="aprvlCareCntn" position="471" length="100"/>
-          <field kor="상담점코드" name="cnslStoreCd" position="571" length="3"/>
-          <field kor="상담자ID" name="conpsId" position="574" length="8"/>
-        </segment>
+        <field kor="작업처리구분코드" name="wrkProcGbcd" position="419" length="2"/>
+        <field kor="카드회원번호" name="crdMemNo" position="421" length="9"/>
+        <field kor="승인주의등록일시" name="aprvlCareRegDtm" position="430" length="14"/>
+        <field kor="승인주의구분코드" name="aprvlCareGbcd" position="444" length="4"/>
+        <field kor="승인코드" name="aprvlCd" position="448" length="4"/>
+        <field kor="승인주의적용일자" name="aprvlCareAplyDt" position="452" length="8"/>
+        <field kor="승인주의종료일자" name="aprvlCareEndDt" position="460" length="8"/>
+        <field kor="승인주의내용" name="aprvlCareCntn" position="468" length="100"/>
+        <field kor="상담점코드" name="cnslStoreCd" position="568" length="3"/>
+        <field kor="상담자ID" name="conpsId" position="571" length="8"/>
+        <field kor="등록ID" name="regId" position="579" length="100"/>
+        <field kor="등록일시" name="regDtm" position="679" length="14"/>
+        <field kor="등록프로그램ID" name="regPrgId" position="693" length="100"/>
+        <field kor="변경ID" name="chgId" position="793" length="100"/>
+        <field kor="변경일시" name="chgDtm" position="893" length="14"/>
+        <field kor="변경프로그램ID" name="chgPrgId" position="907" length="100"/>
       </segment>
     </record>
   </stream>
