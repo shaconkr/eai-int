@@ -18,7 +18,6 @@
     xmlns:ns18="activity.jsonRender.output+68eb1ff8-4687-4c30-b955-762b671d584e+ActivityOutputType"
     xmlns:ns19="http://schema.hcis.com/xsd/ARSCISFNDX0080101"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonParser"
-    xmlns:ns20="http://schema.hcis.com/xsd/ARSCISFNDX0100101"
     xmlns:ns3="http://tns.tibco.com/bw/json/1668647313518"
     xmlns:ns4="http://www.cspi_library.org/Library"
     xmlns:ns5="http://www.example.org/Schema_EAI_Call"
