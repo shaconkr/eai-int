@@ -4,7 +4,7 @@
   <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
     <property name="pattern" value="yyyyMMddhhmm"/> 
   </typeHandler>  
-  <stream kor="" name="ARSCISFNDX0090101_InReq" format="fixedlength"> 
+  <stream kor="" name="ARSCISFNDX0190101_InReq" format="fixedlength"> 
     <parser> 
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
@@ -51,15 +51,37 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" position="1798" length="2"/> 
       </segment>  
       <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="본인주민등록번호" name="selfRrno" position="1800" length="13"/>  
-        <field kor="회계년월" name="acncYm" position="1813" length="6"/>  
-        <field kor="가족포함여부" name="famlInclYn" position="1819" length="1"/>  
-        <field kor="본인회원번호" name="selfMemNo" position="1820" length="9"/>  
-        <field kor="사원번호" name="empNo" position="1829" length="10"/> 
+        <field kor="UMS구분코드" name="umsGbcd" position="1800" length="1"/>  
+        <field kor="등록일시" name="regDtm" position="1801" length="14"/>  
+        <field kor="카드회원번호" name="crdMemNo" position="1815" length="9"/>  
+        <field kor="카드번호" name="crdNo" position="1824" length="16"/>  
+        <field kor="카드브랜드구분코드" name="crdBrndGbcd" position="1840" length="1"/>  
+        <field kor="회원명" name="memNm" position="1841" length="20"/>  
+        <field kor="회원등급" name="memGrd" position="1861" length="2"/>  
+        <field kor="기준일자" name="bsicDt" position="1863" length="8"/>  
+        <field kor="종료일자" name="endDt" position="1871" length="8"/>  
+        <field kor="청구형태코드" name="reqFormCd" position="1879" length="1"/>  
+        <field kor="매출조회형태코드" name="saleQryFormCd" position="1880" length="1"/>  
+        <field kor="UMS발송업무유형코드" name="umsSenmTskTypeCd" position="1881" length="3"/>  
+        <field kor="SMS발송내용" name="smsSenmCntn" position="1884" length="200"/>  
+        <field kor="발송번호" name="senmNo" position="2084" length="50"/>  
+        <field kor="발송결과상태코드" name="senmRstStatCd" position="2134" length="2"/>  
+        <field kor="발송결과일시" name="senmRstDtm" position="2136" length="14"/>  
+        <field kor="사원번호" name="empNo" position="2150" length="8"/>  
+        <field kor="사원명" name="empNm" position="2158" length="30"/>  
+        <field kor="발송점코드" name="senmStoreCd" position="2188" length="3"/>  
+        <field kor="발송요청구분코드" name="senmReqnGbcd" position="2191" length="1"/>  
+        <field kor="화면ID" name="scrnId" position="2192" length="8"/>  
+        <field kor="관리지역코드" name="mngAreaCd" position="2200" length="2"/>  
+        <field kor="발송건수구분코드" name="senmCntGbcd" position="2202" length="1"/>  
+        <field kor="소지자회원번호" name="hlerMemNo" position="2203" length="9"/>  
+        <field kor="전체발송여부" name="totSenmYn" position="2212" length="1"/>  
+        <field kor="발송예약일시" name="senmRsvDtm" position="2213" length="14"/>  
+        <field kor="테이블명" name="tblNm" position="2227" length="30"/> 
       </segment> 
     </record> 
   </stream>  
-  <stream kor="" name="ARSCISFNDX0090101_InRes" format="fixedlength">
+  <stream kor="" name="ARSCISFNDX0190101_InRes" format="fixedlength">
     <parser>
       <property name="recordTerminator" value="\r\n"/>
     </parser>
@@ -106,26 +128,7 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" position="1798" length="2"/>
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="결과_배열건수" name="rsltRowcount" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="rsltList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="전송일자" name="sendDt" position="1805" length="8"/>
-          <field kor="전송시간" name="sendTime" position="1813" length="6"/>
-          <field kor="응답코드" name="respCd" position="1819" length="4"/>
-          <field kor="주민등록번호" name="rrno" position="1823" length="13"/>
-          <field kor="회계년도" name="acncYr" position="1836" length="4"/>
-          <field kor="고객명" name="custNm" position="1840" length="100"/>
-          <field kor="자택주소" name="hmAdr" position="1940" length="200"/>
-          <field kor="총건수" name="totCnt" position="2140" length="1" justify="right" padding="0"/>
-          <field kor="매출년월" name="saleYm" position="2141" length="6"/>
-          <field kor="카드사용금액" name="crdUseAmt" position="2147" length="19" justify="right" padding="0"/>
-          <field kor="비정상사용금액" name="anmlUseAmt" position="2166" length="19" justify="right" padding="0"/>
-          <field kor="공제제외금액" name="ddctExcldAmt" position="2185" length="19" justify="right" padding="0"/>
-          <field kor="공제대상금액" name="ddctTgamt" position="2204" length="19" justify="right" padding="0"/>
-          <field kor="문화도서금액" name="cultrIrgnAmt" position="2223" length="19" justify="right" padding="0"/>
-          <field kor="문화도서비정상금액" name="cultrIrgnAnmlAmt" position="2242" length="19" justify="right" padding="0"/>
-          <field kor="문화도서공제제외금액" name="cultrIrgnDdctExcldAmt" position="2261" length="19" justify="right" padding="0"/>
-          <field kor="문화도서공제금액" name="cultrIrgnDdctAmt" position="2280" length="19" justify="right" padding="0"/>
-        </segment>
+        <field kor="작업결과코드" name="wrkRstCd" position="1800" length="2"/>
       </segment>
     </record>
   </stream>

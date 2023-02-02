@@ -106,26 +106,23 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" position="1798" length="2"/>
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="결과_배열건수" name="rsltRowcount" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="rsltList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="전송일자" name="sendDt" position="1805" length="8"/>
-          <field kor="전송시간" name="sendTime" position="1813" length="6"/>
-          <field kor="응답코드" name="respCd" position="1819" length="4"/>
-          <field kor="주민등록번호" name="rrno" position="1823" length="13"/>
-          <field kor="회계년도" name="acncYr" position="1836" length="4"/>
-          <field kor="고객명" name="custNm" position="1840" length="100"/>
-          <field kor="자택주소" name="hmAdr" position="1940" length="200"/>
-          <field kor="총건수" name="totCnt" position="2140" length="1" justify="right" padding="0"/>
-          <field kor="매출년월" name="saleYm" position="2141" length="6"/>
-          <field kor="카드사용금액" name="crdUseAmt" position="2147" length="19" justify="right" padding="0"/>
-          <field kor="비정상사용금액" name="anmlUseAmt" position="2166" length="19" justify="right" padding="0"/>
-          <field kor="공제제외금액" name="ddctExcldAmt" position="2185" length="19" justify="right" padding="0"/>
-          <field kor="공제대상금액" name="ddctTgamt" position="2204" length="19" justify="right" padding="0"/>
-          <field kor="문화도서금액" name="cultrIrgnAmt" position="2223" length="19" justify="right" padding="0"/>
-          <field kor="문화도서비정상금액" name="cultrIrgnAnmlAmt" position="2242" length="19" justify="right" padding="0"/>
-          <field kor="문화도서공제제외금액" name="cultrIrgnDdctExcldAmt" position="2261" length="19" justify="right" padding="0"/>
-          <field kor="문화도서공제금액" name="cultrIrgnDdctAmt" position="2280" length="19" justify="right" padding="0"/>
-        </segment>
+        <field kor="전송일자" name="sendDt" position="1800" length="8"/>
+        <field kor="전송시간" name="sendTime" position="1808" length="6"/>
+        <field kor="응답코드" name="respCd" position="1814" length="4"/>
+        <field kor="주민등록번호" name="rrno" position="1818" length="13"/>
+        <field kor="회계년도" name="acncYr" position="1831" length="4"/>
+        <field kor="고객명" name="custNm" position="1835" length="100"/>
+        <field kor="자택주소" name="hmAdr" position="1935" length="200"/>
+        <field kor="총건수" name="totCnt" position="2135" length="1" justify="right" padding="0"/>
+        <field kor="매출년월" name="saleYm" position="2136" length="6"/>
+        <field kor="카드사용금액" name="crdUseAmt" position="2142" length="19" justify="right" padding="0"/>
+        <field kor="비정상사용금액" name="anmlUseAmt" position="2161" length="19" justify="right" padding="0"/>
+        <field kor="공제제외금액" name="ddctExcldAmt" position="2180" length="19" justify="right" padding="0"/>
+        <field kor="공제대상금액" name="ddctTgamt" position="2199" length="19" justify="right" padding="0"/>
+        <field kor="문화도서금액" name="cultrIrgnAmt" position="2218" length="19" justify="right" padding="0"/>
+        <field kor="문화도서비정상금액" name="cultrIrgnAnmlAmt" position="2237" length="19" justify="right" padding="0"/>
+        <field kor="문화도서공제제외금액" name="cultrIrgnDdctExcldAmt" position="2256" length="19" justify="right" padding="0"/>
+        <field kor="문화도서공제금액" name="cultrIrgnDdctAmt" position="2275" length="19" justify="right" padding="0"/>
       </segment>
     </record>
   </stream>

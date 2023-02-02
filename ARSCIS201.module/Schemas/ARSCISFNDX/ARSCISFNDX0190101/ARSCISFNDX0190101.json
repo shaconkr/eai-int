@@ -4,23 +4,23 @@
     "sysNm": "ARS",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "ioid": "SARSFNDX0100101"
+    "ioid": "SARSFNDX0190101"
   },
   "target": {
     "sysId": "CIS",
     "sysNm": "H-CIS",
     "workId": "FNDX",
     "workNm": "청구외부제공",
-    "ioid": "TCISFNDX0100101"
+    "ioid": "TCISFNDX0190101"
   },
   "request": {
-    "ifId": "ARSCISFNDX0100101",
-    "ifNm": "ARS결제대금총괄잔액조회",
+    "ifId": "ARSCISFNDX0190101",
+    "ifNm": "소득공제FAX재발송등록",
     "sysId": "ARS",
     "sysNm": "ARS",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "fwId": "OCFNDX01001R",
+    "fwId": "OCFNDX01901I",
     "infraId": "2",
     "infraNm": "대내I/F",
     "procId": "1",
@@ -55,13 +55,13 @@
     "afterShellPath": ""
   },
   "response": {
-    "ifId": "ARSCISFNDX0100101",
-    "ifNm": "ARS결제대금총괄잔액조회",
+    "ifId": "ARSCISFNDX0190101",
+    "ifNm": "소득공제FAX재발송등록",
     "sysId": "ARS",
     "sysNm": "ARS",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "fwId": "OCFNDX01001R",
+    "fwId": "OCFNDX01901I",
     "infraId": "2",
     "infraNm": "대내I/F",
     "procId": "1",

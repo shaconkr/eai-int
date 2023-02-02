@@ -1,4 +1,4 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/ARSCISFNDX0090101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/ARSCISFNDX0090101">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/ARSCISFNDX0190101" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/ARSCISFNDX0190101">
     <complexType name="ARSHeaderType">
         <sequence>
             <element e:kor="전체전문길이" e:length="8" e:padder="SpaceRight" minOccurs="0" name="totTgrmLen" nillable="true" type="integer"/>
@@ -45,37 +45,41 @@
             <element e:kor="메시지세부내용" e:length="1000" e:padder="SpaceRight" minOccurs="0" name="msgDtlCntn" nillable="true" type="string"/>
         </sequence>
     </complexType>
-    <complexType name="ARSCISFNDX0090101_InRes">
+    <complexType name="ARSCISFNDX0190101_InReq">
         <sequence>
-            <element e:kor="결과_배열건수" e:length="5" e:padder="ZeroLeft" name="rsltRowcount" nillable="true" type="long"/>
-            <element e:kor="결과_배열" e:padder="ZeroLeft" maxOccurs="unbounded" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
-        </sequence>
-    </complexType>
-    <complexType name="RSLT_LIST_TYPE">
-        <sequence>
-            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" name="sendDt" nillable="true" type="string"/>
-            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" name="sendTime" nillable="true" type="string"/>
-            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
-            <element e:kor="주민등록번호" e:length="13" e:padder="SpaceRight" name="rrno" nillable="true" type="string"/>
-            <element e:kor="회계년도" e:length="4" e:padder="SpaceRight" name="acncYr" nillable="true" type="string"/>
-            <element e:kor="고객명" e:length="100" e:padder="SpaceRight" name="custNm" nillable="true" type="string"/>
-            <element e:kor="자택주소" e:length="200" e:padder="SpaceRight" name="hmAdr" nillable="true" type="string"/>
-            <element e:kor="총건수" e:length="1" e:padder="ZeroLeft" name="totCnt" nillable="true" type="long"/>
-            <element e:kor="매출년월" e:length="6" e:padder="SpaceRight" name="saleYm" nillable="true" type="string"/>
-            <element e:kor="카드사용금액" e:length="19" e:padder="ZeroLeft" name="crdUseAmt" nillable="true" type="long"/>
-            <element e:kor="비정상사용금액" e:length="19" e:padder="ZeroLeft" name="anmlUseAmt" nillable="true" type="long"/>
-            <element e:kor="공제제외금액" e:length="19" e:padder="ZeroLeft" name="ddctExcldAmt" nillable="true" type="long"/>
-            <element e:kor="공제대상금액" e:length="19" e:padder="ZeroLeft" name="ddctTgamt" nillable="true" type="long"/>
-            <element e:kor="문화도서금액" e:length="19" e:padder="ZeroLeft" name="cultrIrgnAmt" nillable="true" type="long"/>
-            <element e:kor="문화도서비정상금액" e:length="19" e:padder="ZeroLeft" name="cultrIrgnAnmlAmt" nillable="true" type="long"/>
-            <element e:kor="문화도서공제제외금액" e:length="19" e:padder="ZeroLeft" name="cultrIrgnDdctExcldAmt" nillable="true" type="long"/>
-            <element e:kor="문화도서공제금액" e:length="19" e:padder="ZeroLeft" name="cultrIrgnDdctAmt" nillable="true" type="long"/>
+            <element e:kor="UMS구분코드" e:length="1" e:padder="SpaceRight" name="umsGbcd" nillable="true" type="string"/>
+            <element e:kor="등록일시" e:length="14" e:padder="SpaceRight" name="regDtm" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="카드브랜드구분코드" e:length="1" e:padder="SpaceRight" name="crdBrndGbcd" nillable="true" type="string"/>
+            <element e:kor="회원명" e:length="20" e:padder="SpaceRight" name="memNm" nillable="true" type="string"/>
+            <element e:kor="회원등급" e:length="2" e:padder="SpaceRight" name="memGrd" nillable="true" type="string"/>
+            <element e:kor="기준일자" e:length="8" e:padder="SpaceRight" name="bsicDt" nillable="true" type="string"/>
+            <element e:kor="종료일자" e:length="8" e:padder="SpaceRight" name="endDt" nillable="true" type="string"/>
+            <element e:kor="청구형태코드" e:length="1" e:padder="SpaceRight" name="reqFormCd" nillable="true" type="string"/>
+            <element e:kor="매출조회형태코드" e:length="1" e:padder="SpaceRight" name="saleQryFormCd" nillable="true" type="string"/>
+            <element e:kor="UMS발송업무유형코드" e:length="3" e:padder="SpaceRight" name="umsSenmTskTypeCd" nillable="true" type="string"/>
+            <element e:kor="SMS발송내용" e:length="200" e:padder="SpaceRight" name="smsSenmCntn" nillable="true" type="string"/>
+            <element e:kor="발송번호" e:length="50" e:padder="SpaceRight" name="senmNo" nillable="true" type="string"/>
+            <element e:kor="발송결과상태코드" e:length="2" e:padder="SpaceRight" name="senmRstStatCd" nillable="true" type="string"/>
+            <element e:kor="발송결과일시" e:length="14" e:padder="SpaceRight" name="senmRstDtm" nillable="true" type="string"/>
+            <element e:kor="사원번호" e:length="8" e:padder="SpaceRight" name="empNo" nillable="true" type="string"/>
+            <element e:kor="사원명" e:length="30" e:padder="SpaceRight" name="empNm" nillable="true" type="string"/>
+            <element e:kor="발송점코드" e:length="3" e:padder="SpaceRight" name="senmStoreCd" nillable="true" type="string"/>
+            <element e:kor="발송요청구분코드" e:length="1" e:padder="SpaceRight" name="senmReqnGbcd" nillable="true" type="string"/>
+            <element e:kor="화면ID" e:length="8" e:padder="SpaceRight" name="scrnId" nillable="true" type="string"/>
+            <element e:kor="관리지역코드" e:length="2" e:padder="SpaceRight" name="mngAreaCd" nillable="true" type="string"/>
+            <element e:kor="발송건수구분코드" e:length="1" e:padder="SpaceRight" name="senmCntGbcd" nillable="true" type="string"/>
+            <element e:kor="소지자회원번호" e:length="9" e:padder="SpaceRight" name="hlerMemNo" nillable="true" type="string"/>
+            <element e:kor="전체발송여부" e:length="1" e:padder="SpaceRight" name="totSenmYn" nillable="true" type="string"/>
+            <element e:kor="발송예약일시" e:length="14" e:padder="SpaceRight" name="senmRsvDtm" nillable="true" type="string"/>
+            <element e:kor="테이블명" e:length="30" e:padder="SpaceRight" name="tblNm" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
             <element name="header" type="ns:ARSHeaderType"/>
-            <element name="data" type="ns:ARSCISFNDX0090101_InRes"/>
+            <element name="data" type="ns:ARSCISFNDX0190101_InReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>
