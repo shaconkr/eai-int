@@ -1,0 +1,17 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHFF0030102" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHFF0030102">
+    <element name="root">
+        <complexType>
+            <sequence>
+                <element e:kor="작업구분값" e:length="2" e:padder="SpaceRight" name="wrkGbVal" nillable="true" type="string"/>
+                <element e:kor="회원명" e:length="100" e:padder="SpaceRight" name="memNm" nillable="true" type="string"/>
+                <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+                <element e:kor="승인주의구분코드" e:length="4" e:padder="SpaceRight" name="aprvlCareGbcd" nillable="true" type="string"/>
+                <element e:kor="승인주의적용일자" e:length="8" e:padder="SpaceRight" name="aprvlCareAplyDt" nillable="true" type="string"/>
+                <element e:kor="승인주의종료일자" e:length="8" e:padder="SpaceRight" name="aprvlCareEndDt" nillable="true" type="string"/>
+                <element e:kor="승인주의내용" e:length="100" e:padder="SpaceRight" name="aprvlCareCntn" nillable="true" type="string"/>
+                <element e:kor="상담점코드" e:length="3" e:padder="SpaceRight" name="cnslStoreCd" nillable="true" type="string"/>
+                <element e:kor="상담자ID" e:length="8" e:padder="SpaceRight" name="conpsId" nillable="true" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

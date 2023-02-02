@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADMTSY0006001="http://schema.hcis.com/xsd/CISTADMTSY0006001" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_ZeWvYKLCEe2_vfBvWYMjWg" name="CISTADMTSY.CISTADMTSY0006001.CISTADMTSY0006001_OutReq_data" type="dataformat:DataFormat">
+  <imports xmi:id="_ZeWvYaLCEe2_vfBvWYMjWg" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADMTSY0006001_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADMTSY0006001"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_ZeWvYqLCEe2_vfBvWYMjWg" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADMTSY0006001:main" lineLength="94" fieldOffsetsStr="dataGbcd(0,1)&#xA;frcsCd(1,10)&#xA;storeCd(10,13)&#xA;salePosNo(13,17)&#xA;frcsGbcd(17,19)&#xA;frcsStatCd(19,20)&#xA;frcsNm(20,40)&#xA;bizBgnDt(40,48)&#xA;bizTmnnDt(48,56)&#xA;owcoCrdHndlYn(56,57)&#xA;owcoCrdAprvlLimtAmt(57,69)&#xA;chgStoreCd(69,72)&#xA;chgpId(72,80)&#xA;chgDtm(80,94)">
+    <fieldOffsets xmi:id="_ZeWvY6LCEe2_vfBvWYMjWg" name="dataGbcd" end="1" kor="데이터구분코드" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvZKLCEe2_vfBvWYMjWg" name="frcsCd" start="1" end="10" kor="가맹점코드" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvZaLCEe2_vfBvWYMjWg" name="storeCd" start="10" end="13" kor="점코드" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvZqLCEe2_vfBvWYMjWg" name="salePosNo" start="13" end="17" kor="매출POS번호" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvZ6LCEe2_vfBvWYMjWg" name="frcsGbcd" start="17" end="19" kor="가맹점구분코드" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvaKLCEe2_vfBvWYMjWg" name="frcsStatCd" start="19" end="20" kor="가맹점상태코드" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvaaLCEe2_vfBvWYMjWg" name="frcsNm" start="20" end="40" kor="가맹점명" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvaqLCEe2_vfBvWYMjWg" name="bizBgnDt" start="40" end="48" kor="영업개시일자" type="string"/>
+    <fieldOffsets xmi:id="_ZeWva6LCEe2_vfBvWYMjWg" name="bizTmnnDt" start="48" end="56" kor="영업해지일자" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvbKLCEe2_vfBvWYMjWg" name="owcoCrdHndlYn" start="56" end="57" kor="자사카드취급여부" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvbaLCEe2_vfBvWYMjWg" name="owcoCrdAprvlLimtAmt" start="57" end="69" kor="자사카드승인제한금액" type="long"/>
+    <fieldOffsets xmi:id="_ZeWvbqLCEe2_vfBvWYMjWg" name="chgStoreCd" start="69" end="72" kor="변경점코드" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvb6LCEe2_vfBvWYMjWg" name="chgpId" start="72" end="80" kor="변경자ID" type="string"/>
+    <fieldOffsets xmi:id="_ZeWvcKLCEe2_vfBvWYMjWg" name="chgDtm" start="80" end="94" kor="변경일시" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>
