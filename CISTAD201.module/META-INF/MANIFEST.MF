@@ -9,6 +9,7 @@ Export-Package: CISTADAHFA,
  CISTADAHFF,
  CISTADAHHB,
  CISTADAHHE,
+ CISTADMTSY,
  com.hcis.eai
 Require-Bundle: HcisCommon.smodule;bundle-version="1.0.0",
  JeinSoft.dataformat.plugin;bundle-version="1.0.0"
