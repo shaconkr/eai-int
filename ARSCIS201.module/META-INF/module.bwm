@@ -32,9 +32,6 @@
   <sca:component xmi:id="_IspB0JeiEe2wz_4T3-DQNw" name="ComponentARSCISMTSY0015001_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_IspB0ZeiEe2wz_4T3-DQNw" processName="ARSCISMTSY.ARSCISMTSY0015001_Main"/>
   </sca:component>
-  <sca:component xmi:id="_SzqgoJhcEe2jrZ9qVDw7Qw" name="ComponentARSCISFNDX0060101_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_SzqgoZhcEe2jrZ9qVDw7Qw" processName="ARSCISFNDX.ARSCISFNDX0060101_Main"/>
-  </sca:component>
   <sca:component xmi:id="_sRzZkJ3bEe20Be98mevuSg" name="ComponentARSCISFNDX0070101_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_sRzZkZ3bEe20Be98mevuSg" processName="ARSCISFNDX.ARSCISFNDX0070101_Main"/>
   </sca:component>
@@ -46,5 +43,8 @@
   </sca:component>
   <sca:component xmi:id="_Sk3yEKKhEe2SYLtZktZG7w" name="ComponentARSCISFNDX0190101_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Sk3yEaKhEe2SYLtZktZG7w" processName="ARSCISFNDX.ARSCISFNDX0190101_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_Gojb4KNjEe2mSpN0je68IQ" name="ComponentARSCISFNDX0060101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Gojb4aNjEe2mSpN0je68IQ" processName="ARSCISFNDX.ARSCISFNDX0060101_Main"/>
   </sca:component>
 </sca:composite>
