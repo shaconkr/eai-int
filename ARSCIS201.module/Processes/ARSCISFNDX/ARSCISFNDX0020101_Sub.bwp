@@ -687,10 +687,10 @@
         <bpws:variable element="ns2:ActivityErrorData"
             name="_error_SendHTTPRequest" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
-        <bpws:variable element="ns3:subElement" name="Start"
-            sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns3:subElement" name="End-input"
             sca-bpel:internal="true" tibex:parameter="out"/>
+        <bpws:variable element="ns3:subElement" name="Start"
+            sca-bpel:internal="true" tibex:parameter="in"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
