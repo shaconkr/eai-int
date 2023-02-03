@@ -13,10 +13,10 @@
   <sca:property xmi:id="_twQC8JeYEe2izowMkiietQ" name="FW_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_E-Ul4Je2Ee2izowMkiietQ" name="TCP_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_FSQOgJe2Ee2izowMkiietQ" name="TCP_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
-  <sca:component xmi:id="_eYsVAJeWEe2izowMkiietQ" name="ComponentCISSPGMTPH9000901_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_eYsVAZeWEe2izowMkiietQ" processName="CISSPGMTPH.CISSPGMTPH9000901_Main"/>
-  </sca:component>
   <sca:component xmi:id="_YEDcQJeYEe2izowMkiietQ" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_YEDcQZeYEe2izowMkiietQ" processName="CISSPG201.module.Activator"/>
+  </sca:component>
+  <sca:component xmi:id="_TuCAMKNqEe2TuZGFJF3wYA" name="ComponentCISSPGMTPH9000901_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_TuCAMaNqEe2TuZGFJF3wYA" processName="CISSPGMTPH.CISSPGMTPH9000901_Main"/>
   </sca:component>
 </sca:composite>

@@ -666,8 +666,6 @@
         <tibex:namespaceItem
             namespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+db367f2f-9dd9-49f2-8d56-7ff88b927d38+RequestActivityInput" prefix="tns1"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../Schemas/KIKCISFNDX/KIKCISFNDX0010201/KIKCISFNDX0010201_InReq.xsd" namespace="http://schema.hcis.com/xsd/KIKCISFNDX0010201"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"

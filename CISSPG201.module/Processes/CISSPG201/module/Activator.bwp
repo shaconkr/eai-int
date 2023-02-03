@@ -403,8 +403,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="125"
-                                    xsi:type="notation:Bounds" y="7"/>
+                                    x="115"
+                                    xsi:type="notation:Bounds" y="25"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -524,11 +524,15 @@
                                     fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles xsi:type="bwnotation:BackgroundStyle"/>
-                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <styles
+                                    restoreHeight="142"
+                                    restoreWidth="486"
+                                    restoreX="2" xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0"/>
                                     <layoutConstraint
-                                    height="140"
-                                    width="485" xsi:type="notation:Bounds"/>
+                                    height="142"
+                                    width="485"
+                                    x="2" xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4011">
                                     <children type="3012">
@@ -722,9 +726,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    height="314" width="561"
-                                    x="20"
-                                    xsi:type="notation:Bounds" y="20"/>
+                                    height="314" width="561" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -738,9 +740,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="108"
-                                    width="400" x="2"
-                                    xsi:type="notation:Bounds" y="2"/>
+                                    <layoutConstraint height="384"
+                                    width="515" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -819,7 +820,7 @@
                                 tibex:constructor="onMessageEnd" tibex:xpdlId="3a160467-f9e7-4ad9-a9ca-4c9ef5a9288a"/>
                             <bpws:extensionActivity>
                                 <tibex:extActivity name="L_Set_BaseInfo"
-                                    tibex:xpdlId="646b83ca-8c15-432e-b53b-369752a8e360"
+                                    tibex:xpdlId="6b8faee3-fb66-499c-a076-b2001894c3be"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <tibex:CallProcess
                                     moduleRef="CSPI_Library"

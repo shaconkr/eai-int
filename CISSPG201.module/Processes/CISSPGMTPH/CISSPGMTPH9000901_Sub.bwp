@@ -2262,14 +2262,6 @@
             name="SPGtoCIS" sca-bpel:internal="true"/>
         <bpws:variable element="ns47:ActivityErrorData"
             name="_error_SPGtoCIS" sca-bpel:internal="true"/>
-        <bpws:variable name="HcisModuleHelper"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/javasharedresource}JavaGlobalInstanceResource" type="xsd:string">
-            <bpws:from>
-                <bpws:literal>CISSPG201.CisSpgHelper</bpws:literal>
-            </bpws:from>
-        </bpws:variable>
         <bpws:variable name="HcisCommonHelper"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
@@ -2381,11 +2373,11 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\outgoing-data-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisCommonHelper"
                                     methodName="setProcessName"
                                     methodReturn="void" xsi:type="java:JavaMethod">
                                     <methodParameter
@@ -2464,11 +2456,11 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\change-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisCommonHelper"
                                     methodName="encodeCharset"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2540,10 +2532,10 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisCommonHelper"
                                     methodName="toString"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2645,11 +2637,11 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\binary-code-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisCommonHelper"
                                     methodName="toString"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2794,10 +2786,10 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisCommonHelper"
                                     methodName="concatBytes"
                                     methodReturn="byte[]" xsi:type="java:JavaMethod">
                                     <methodParameter
@@ -2880,11 +2872,11 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\json-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisCommonHelper"
                                     methodName="EDIbytesToJson"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.lang.Exception</exceptionTypes>
@@ -2931,11 +2923,11 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\change-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisCommonHelper"
                                     methodName="encodeCharset"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -3018,12 +3010,12 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.HCISHelper"
+                                    className="com.hcis.eai.module.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\edifact-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
-                                    methodName="JsonToEDIbytes"
+                                    javaGlobalInstance="HcisCommonHelper"
+                                    methodName="JsonToEDIbytesLen"
                                     methodReturn="byte[]" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.lang.Exception</exceptionTypes>
                                     <methodParameter
