@@ -45,7 +45,7 @@
           <field kor="승인자ID" name="aprvId" position="422" length="100"/>  
           <field kor="시작년월" name="strtYm" position="522" length="6"/>  
           <field kor="종료년월" name="endYm" position="528" length="6"/>  
-          <field kor="다음검색KEY" name="nxtSrchKey" position="534" length="101"/> 
+          <field kor="다음검색KEY" name="nxtSrchKey" position="534" length="111"/> 
         </segment> 
       </segment> 
     </record> 
@@ -86,19 +86,19 @@
         <field kor="메시지코드" name="msgCd" position="409" length="10"/>
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="다음검색KEY" name="nxtSrchKey" position="419" length="101"/>
+        <field kor="다음검색KEY" name="nxtSrchKey" position="419" length="111"/>
         <segment name="rstList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
-          <field kor="점코드" name="storeCd" position="520" length="3"/>
-          <field kor="승인자ID" name="aprvId" position="523" length="100"/>
-          <field kor="승인구분코드" name="aprvlGbcd" position="623" length="1"/>
-          <field kor="결과총건수" name="rstTotCnt" position="624" length="11"/>
-          <field kor="결과총금액" name="rstTotAmt" position="635" length="19"/>
-          <field kor="승인건수" name="aprvlCnt" position="654" length="11"/>
-          <field kor="승인금액" name="aprvlAmt" position="665" length="19"/>
-          <field kor="취소건수" name="cnclCnt" position="684" length="11"/>
-          <field kor="취소금액" name="cnclAmt" position="695" length="19"/>
-          <field kor="승인불가건수" name="aprvlNdmtCnt" position="714" length="11"/>
-          <field kor="승인불가금액" name="aprvlNdmtAmt" position="725" length="19"/>
+          <field kor="점코드" name="storeCd" position="530" length="3"/>
+          <field kor="승인자ID" name="aprvId" position="533" length="100"/>
+          <field kor="승인구분코드" name="aprvlGbcd" position="633" length="1"/>
+          <field kor="결과총건수" name="rstTotCnt" position="634" length="18"/>
+          <field kor="결과총금액" name="rstTotAmt" position="652" length="18"/>
+          <field kor="승인건수" name="aprvlCnt" position="670" length="18"/>
+          <field kor="승인금액" name="aprvlAmt" position="688" length="18"/>
+          <field kor="취소건수" name="cnclCnt" position="706" length="18"/>
+          <field kor="취소금액" name="cnclAmt" position="724" length="18"/>
+          <field kor="승인불가건수" name="aprvlNdmtCnt" position="742" length="18"/>
+          <field kor="승인불가금액" name="aprvlNdmtAmt" position="760" length="18"/>
         </segment>
       </segment>
     </record>

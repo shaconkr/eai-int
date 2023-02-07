@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFA0060101="http://schema.hcis.com/xsd/CISTADAHFA0060101" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_cKO18J0TEe2_yt4H4mTXwA" name="CISTADAHFA.CISTADAHFA0060101.CISTADAHFA0060101_OutReq" type="dataformat:DataFormat">
-  <imports xmi:id="_cKO18Z0TEe2_yt4H4mTXwA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFA0060101_OutReq.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFA0060101"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_cKO18p0TEe2_yt4H4mTXwA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFA0060101:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets xmi:id="_cKPdAJ0TEe2_yt4H4mTXwA" name="header" kor="0" type="TADHeaderType"/>
-    <fieldOffsets xmi:id="_cKPdAZ0TEe2_yt4H4mTXwA" name="data" kor="0" type="CISTADAHFA0060101_OutReq"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFA0060101="http://schema.hcis.com/xsd/CISTADAHFA0060101_OutReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHFA/CISTADAHFA0060101.CISTADAHFA0060101_OutReq" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFA0060101_OutReq_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFA0060101_OutReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFA0060101:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="0" type="TADHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="0" type="CISTADAHFA0060101_OutReq" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>

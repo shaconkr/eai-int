@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0020301="http://schema.hcis.com/xsd/CISTADAHHE0020301" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHE/CISTADAHHE0020301.CISTADAHHE0020301_OutReq_data" type="dataformat:DataFormat">
-  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0020301_OutReq_data.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0020301"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0020301:main" lineLength="0" fieldOffsetsStr="srchGroup(0,0)">
-    <fieldOffsets kor="검색그룹" type="SRCH_GROUP_TYPE" name="srchGroup" start="0" end="0"/>
-  </jndi:configuration>
-</jndi:namedResource>

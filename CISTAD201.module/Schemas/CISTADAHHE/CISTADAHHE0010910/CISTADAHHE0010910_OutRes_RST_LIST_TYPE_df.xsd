@@ -1,28 +1,27 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHHE0010910" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHHE0010910">
-    <element name="root">
-        <complexType>
-            <sequence>
-                <element e:kor="년도" e:length="4" e:padder="SpaceRight" name="yr" nillable="true" type="string"/>
-                <element e:kor="월" e:length="2" e:padder="SpaceRight" name="mm" nillable="true" type="string"/>
-                <element e:kor="인입건수" e:length="10" e:padder="SpaceRight" name="ldinCnt" nillable="true" type="string"/>
-                <element e:kor="인입금액" e:length="10" e:padder="SpaceRight" name="ldinAmt" nillable="true" type="string"/>
-                <element e:kor="인입건수당단가" e:length="10" e:padder="SpaceRight" name="ldinCntPerUprc" nillable="true" type="string"/>
-                <element e:kor="팝업승인건수" e:length="10" e:padder="SpaceRight" name="pupAprvlCnt" nillable="true" type="string"/>
-                <element e:kor="팝업승인건수율" e:length="5" e:padder="SpaceRight" name="pupAprvlCntRt" nillable="true" type="string"/>
-                <element e:kor="팝업승인금액" e:length="10" e:padder="SpaceRight" name="pupAprvlAmt" nillable="true" type="string"/>
-                <element e:kor="팝업승인금액율" e:length="5" e:padder="SpaceRight" name="pupAprvlAmtRt" nillable="true" type="string"/>
-                <element e:kor="팝업승인건수당단가" e:length="10" e:padder="SpaceRight" name="pupAprvlCntPerUprc" nillable="true" type="string"/>
-                <element e:kor="유선승인건수" e:length="10" e:padder="SpaceRight" name="wirdAprvlCnt" nillable="true" type="string"/>
-                <element e:kor="유선승인건수율" e:length="5" e:padder="SpaceRight" name="wirdAprvlCntRt" nillable="true" type="string"/>
-                <element e:kor="유선승인금액" e:length="10" e:padder="SpaceRight" name="wirdAprvlAmt" nillable="true" type="string"/>
-                <element e:kor="유선승인금액율" e:length="5" e:padder="SpaceRight" name="wirdAprvlAmtRt" nillable="true" type="string"/>
-                <element e:kor="유선승인건수당단가" e:length="10" e:padder="SpaceRight" name="wirdAprvlCntPerUprc" nillable="true" type="string"/>
-                <element e:kor="총건수" e:length="10" e:padder="SpaceRight" name="totCnt" nillable="true" type="string"/>
-                <element e:kor="승인건수율" e:length="5" e:padder="SpaceRight" name="aprvlCntRt" nillable="true" type="string"/>
-                <element e:kor="총금액" e:length="10" e:padder="SpaceRight" name="totAmt" nillable="true" type="string"/>
-                <element e:kor="승인금액율" e:length="5" e:padder="SpaceRight" name="aprvlAmtRt" nillable="true" type="string"/>
-                <element e:kor="건수당단가" e:length="10" e:padder="SpaceRight" name="cntPerUprc" nillable="true" type="string"/>
-            </sequence>
-        </complexType>
-    </element>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHHE0010910_OutRes_RST_LIST_TYPE" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHHE0010910_OutRes_RST_LIST_TYPE">
+    <element name="root" type="ns:RST_LIST_TYPE"/>
+    <complexType name="RST_LIST_TYPE">
+        <sequence>
+            <element e:kor="년도" e:length="4" e:padder="SpaceRight" name="yr" nillable="true" type="string"/>
+            <element e:kor="월" e:length="2" e:padder="SpaceRight" name="mm" nillable="true" type="string"/>
+            <element e:kor="인입건수" e:length="10" e:padder="SpaceRight" name="ldinCnt" nillable="true" type="string"/>
+            <element e:kor="인입금액" e:length="10" e:padder="SpaceRight" name="ldinAmt" nillable="true" type="string"/>
+            <element e:kor="인입건수당단가" e:length="10" e:padder="SpaceRight" name="ldinCntPerUprc" nillable="true" type="string"/>
+            <element e:kor="팝업승인건수" e:length="10" e:padder="SpaceRight" name="pupAprvlCnt" nillable="true" type="string"/>
+            <element e:kor="팝업승인건수율" e:length="5" e:padder="SpaceRight" name="pupAprvlCntRt" nillable="true" type="string"/>
+            <element e:kor="팝업승인금액" e:length="10" e:padder="SpaceRight" name="pupAprvlAmt" nillable="true" type="string"/>
+            <element e:kor="팝업승인금액율" e:length="5" e:padder="SpaceRight" name="pupAprvlAmtRt" nillable="true" type="string"/>
+            <element e:kor="팝업승인건수당단가" e:length="10" e:padder="SpaceRight" name="pupAprvlCntPerUprc" nillable="true" type="string"/>
+            <element e:kor="유선승인건수" e:length="10" e:padder="SpaceRight" name="wirdAprvlCnt" nillable="true" type="string"/>
+            <element e:kor="유선승인건수율" e:length="5" e:padder="SpaceRight" name="wirdAprvlCntRt" nillable="true" type="string"/>
+            <element e:kor="유선승인금액" e:length="10" e:padder="SpaceRight" name="wirdAprvlAmt" nillable="true" type="string"/>
+            <element e:kor="유선승인금액율" e:length="5" e:padder="SpaceRight" name="wirdAprvlAmtRt" nillable="true" type="string"/>
+            <element e:kor="유선승인건수당단가" e:length="10" e:padder="SpaceRight" name="wirdAprvlCntPerUprc" nillable="true" type="string"/>
+            <element e:kor="총건수" e:length="10" e:padder="SpaceRight" name="totCnt" nillable="true" type="string"/>
+            <element e:kor="승인건수율" e:length="5" e:padder="SpaceRight" name="aprvlCntRt" nillable="true" type="string"/>
+            <element e:kor="총금액" e:length="10" e:padder="SpaceRight" name="totAmt" nillable="true" type="string"/>
+            <element e:kor="승인금액율" e:length="5" e:padder="SpaceRight" name="aprvlAmtRt" nillable="true" type="string"/>
+            <element e:kor="건수당단가" e:length="10" e:padder="SpaceRight" name="cntPerUprc" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
 </schema>

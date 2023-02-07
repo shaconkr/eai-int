@@ -9,10 +9,8 @@ Export-Package: CISTADAHFA,
  CISTADAHFF,
  CISTADAHHB,
  CISTADAHHE,
- CISTADMTSY,
- com.hcis.eai
-Require-Bundle: HcisCommon.smodule;bundle-version="1.0.0",
- JeinSoft.dataformat.plugin;bundle-version="1.0.0"
+ CISTADMTSY
+Require-Bundle: HcisCommon.smodule;bundle-version="1.0.0"
 TIBCO-BW-Version: 6.9.0 V26 2022-11-02
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
 Bundle-RequiredExecutionEnvironment: JavaSE-11

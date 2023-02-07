@@ -1,19 +1,18 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHHE0020301" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHHE0020301">
-    <element name="root">
-        <complexType>
-            <sequence>
-                <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
-                <element e:kor="승인자ID" e:length="100" e:padder="SpaceRight" name="aprvId" nillable="true" type="string"/>
-                <element e:kor="승인구분코드" e:length="1" e:padder="SpaceRight" name="aprvlGbcd" nillable="true" type="string"/>
-                <element e:kor="결과총건수" e:length="11" e:padder="SpaceRight" name="rstTotCnt" nillable="true" type="string"/>
-                <element e:kor="결과총금액" e:length="19" e:padder="SpaceRight" name="rstTotAmt" nillable="true" type="string"/>
-                <element e:kor="승인건수" e:length="11" e:padder="SpaceRight" name="aprvlCnt" nillable="true" type="string"/>
-                <element e:kor="승인금액" e:length="19" e:padder="SpaceRight" name="aprvlAmt" nillable="true" type="string"/>
-                <element e:kor="취소건수" e:length="11" e:padder="SpaceRight" name="cnclCnt" nillable="true" type="string"/>
-                <element e:kor="취소금액" e:length="19" e:padder="SpaceRight" name="cnclAmt" nillable="true" type="string"/>
-                <element e:kor="승인불가건수" e:length="11" e:padder="SpaceRight" name="aprvlNdmtCnt" nillable="true" type="string"/>
-                <element e:kor="승인불가금액" e:length="19" e:padder="SpaceRight" name="aprvlNdmtAmt" nillable="true" type="string"/>
-            </sequence>
-        </complexType>
-    </element>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADAHHE0020301_OutRes_RST_LIST_TYPE" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CISTADAHHE0020301_OutRes_RST_LIST_TYPE">
+    <element name="root" type="ns:RST_LIST_TYPE"/>
+    <complexType name="RST_LIST_TYPE">
+        <sequence>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="승인자ID" e:length="100" e:padder="SpaceRight" name="aprvId" nillable="true" type="string"/>
+            <element e:kor="승인구분코드" e:length="1" e:padder="SpaceRight" name="aprvlGbcd" nillable="true" type="string"/>
+            <element e:kor="결과총건수" e:length="18" e:padder="SpaceRight" name="rstTotCnt" nillable="true" type="string"/>
+            <element e:kor="결과총금액" e:length="18" e:padder="SpaceRight" name="rstTotAmt" nillable="true" type="string"/>
+            <element e:kor="승인건수" e:length="18" e:padder="SpaceRight" name="aprvlCnt" nillable="true" type="string"/>
+            <element e:kor="승인금액" e:length="18" e:padder="SpaceRight" name="aprvlAmt" nillable="true" type="string"/>
+            <element e:kor="취소건수" e:length="18" e:padder="SpaceRight" name="cnclCnt" nillable="true" type="string"/>
+            <element e:kor="취소금액" e:length="18" e:padder="SpaceRight" name="cnclAmt" nillable="true" type="string"/>
+            <element e:kor="승인불가건수" e:length="18" e:padder="SpaceRight" name="aprvlNdmtCnt" nillable="true" type="string"/>
+            <element e:kor="승인불가금액" e:length="18" e:padder="SpaceRight" name="aprvlNdmtAmt" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
 </schema>

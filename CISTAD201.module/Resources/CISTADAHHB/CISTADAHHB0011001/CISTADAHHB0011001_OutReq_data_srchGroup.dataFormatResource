@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHB0011001="http://schema.hcis.com/xsd/CISTADAHHB0011001" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHB/CISTADAHHB0011001.CISTADAHHB0011001_OutReq_data_srchGroup" type="dataformat:DataFormat">
-  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHB0011001_OutReq_data_srchGroup.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHB0011001"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHB0011001:main" lineLength="18" fieldOffsetsStr="crdNo(0,16)&#xA;wrkGbVal(16,18)">
-    <fieldOffsets kor="카드번호" type="string" name="crdNo" start="0" end="16"/>
-    <fieldOffsets kor="작업구분값" type="string" name="wrkGbVal" start="16" end="18"/>
-  </jndi:configuration>
-</jndi:namedResource>

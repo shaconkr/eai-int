@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0010910="http://schema.hcis.com/xsd/CISTADAHHE0010910_OutRes_RST_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_KN8qoKaXEe2g8c1_8fAd2g" name="CISTADAHHE.CISTADAHHE0010910.CISTADAHHE0010910_OutRes_RST_LIST_TYPE" type="dataformat:DataFormat">
+  <imports xmi:id="_KN8qoaaXEe2g8c1_8fAd2g" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0010910_OutRes_RST_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0010910_OutRes_RST_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_KN8qoqaXEe2g8c1_8fAd2g" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0010910:main" lineLength="156" fieldOffsetsStr="yr(0,4)&#xA;mm(4,6)&#xA;ldinCnt(6,16)&#xA;ldinAmt(16,26)&#xA;ldinCntPerUprc(26,36)&#xA;pupAprvlCnt(36,46)&#xA;pupAprvlCntRt(46,51)&#xA;pupAprvlAmt(51,61)&#xA;pupAprvlAmtRt(61,66)&#xA;pupAprvlCntPerUprc(66,76)&#xA;wirdAprvlCnt(76,86)&#xA;wirdAprvlCntRt(86,91)&#xA;wirdAprvlAmt(91,101)&#xA;wirdAprvlAmtRt(101,106)&#xA;wirdAprvlCntPerUprc(106,116)&#xA;totCnt(116,126)&#xA;aprvlCntRt(126,131)&#xA;totAmt(131,141)&#xA;aprvlAmtRt(141,146)&#xA;cntPerUprc(146,156)">
+    <fieldOffsets xmi:id="_KN8qo6aXEe2g8c1_8fAd2g" name="yr" end="4" kor="년도" type="string"/>
+    <fieldOffsets xmi:id="_KN8qpKaXEe2g8c1_8fAd2g" name="mm" start="4" end="6" kor="월" type="string"/>
+    <fieldOffsets xmi:id="_KN8qpaaXEe2g8c1_8fAd2g" name="ldinCnt" start="6" end="16" kor="인입건수" type="string"/>
+    <fieldOffsets xmi:id="_KN8qpqaXEe2g8c1_8fAd2g" name="ldinAmt" start="16" end="26" kor="인입금액" type="string"/>
+    <fieldOffsets xmi:id="_KN8qp6aXEe2g8c1_8fAd2g" name="ldinCntPerUprc" start="26" end="36" kor="인입건수당단가" type="string"/>
+    <fieldOffsets xmi:id="_KN8qqKaXEe2g8c1_8fAd2g" name="pupAprvlCnt" start="36" end="46" kor="팝업승인건수" type="string"/>
+    <fieldOffsets xmi:id="_KN8qqaaXEe2g8c1_8fAd2g" name="pupAprvlCntRt" start="46" end="51" kor="팝업승인건수율" type="string"/>
+    <fieldOffsets xmi:id="_KN8qqqaXEe2g8c1_8fAd2g" name="pupAprvlAmt" start="51" end="61" kor="팝업승인금액" type="string"/>
+    <fieldOffsets xmi:id="_KN8qq6aXEe2g8c1_8fAd2g" name="pupAprvlAmtRt" start="61" end="66" kor="팝업승인금액율" type="string"/>
+    <fieldOffsets xmi:id="_KN8qrKaXEe2g8c1_8fAd2g" name="pupAprvlCntPerUprc" start="66" end="76" kor="팝업승인건수당단가" type="string"/>
+    <fieldOffsets xmi:id="_KN8qraaXEe2g8c1_8fAd2g" name="wirdAprvlCnt" start="76" end="86" kor="유선승인건수" type="string"/>
+    <fieldOffsets xmi:id="_KN8qrqaXEe2g8c1_8fAd2g" name="wirdAprvlCntRt" start="86" end="91" kor="유선승인건수율" type="string"/>
+    <fieldOffsets xmi:id="_KN8qr6aXEe2g8c1_8fAd2g" name="wirdAprvlAmt" start="91" end="101" kor="유선승인금액" type="string"/>
+    <fieldOffsets xmi:id="_KN8qsKaXEe2g8c1_8fAd2g" name="wirdAprvlAmtRt" start="101" end="106" kor="유선승인금액율" type="string"/>
+    <fieldOffsets xmi:id="_KN8qsaaXEe2g8c1_8fAd2g" name="wirdAprvlCntPerUprc" start="106" end="116" kor="유선승인건수당단가" type="string"/>
+    <fieldOffsets xmi:id="_KN8qsqaXEe2g8c1_8fAd2g" name="totCnt" start="116" end="126" kor="총건수" type="string"/>
+    <fieldOffsets xmi:id="_KN8qs6aXEe2g8c1_8fAd2g" name="aprvlCntRt" start="126" end="131" kor="승인건수율" type="string"/>
+    <fieldOffsets xmi:id="_KN8qtKaXEe2g8c1_8fAd2g" name="totAmt" start="131" end="141" kor="총금액" type="string"/>
+    <fieldOffsets xmi:id="_KN8qtaaXEe2g8c1_8fAd2g" name="aprvlAmtRt" start="141" end="146" kor="승인금액율" type="string"/>
+    <fieldOffsets xmi:id="_KN8qtqaXEe2g8c1_8fAd2g" name="cntPerUprc" start="146" end="156" kor="건수당단가" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

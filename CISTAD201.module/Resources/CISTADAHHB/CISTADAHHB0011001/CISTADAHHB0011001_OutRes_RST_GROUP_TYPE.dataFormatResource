@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHB0011001="http://schema.hcis.com/xsd/CISTADAHHB0011001_OutRes_RST_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_KNszAKaXEe2g8c1_8fAd2g" name="CISTADAHHB.CISTADAHHB0011001.CISTADAHHB0011001_OutRes_RST_GROUP_TYPE" type="dataformat:DataFormat">
+  <imports xmi:id="_KNszAaaXEe2g8c1_8fAd2g" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHB0011001_OutRes_RST_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHB0011001_OutRes_RST_GROUP_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_KNszAqaXEe2g8c1_8fAd2g" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHB0011001:main" lineLength="140" fieldOffsetsStr="totBndsAmt(0,18)&#xA;totUseAmt(18,36)&#xA;rmndBndsAmt(36,54)&#xA;tmpBndsAmt(54,72)&#xA;speclBndsAmt(72,90)&#xA;tmpBndsAplyDt(90,98)&#xA;tmpBndsEndDt(98,106)&#xA;speclBndsAplyDt(106,114)&#xA;speclBndsEndDt(114,122)&#xA;speclBndsBlnc(122,140)">
+    <fieldOffsets xmi:id="_KNszA6aXEe2g8c1_8fAd2g" name="totBndsAmt" end="18" kor="총한도금액" type="string"/>
+    <fieldOffsets xmi:id="_KNszBKaXEe2g8c1_8fAd2g" name="totUseAmt" start="18" end="36" kor="총사용금액" type="string"/>
+    <fieldOffsets xmi:id="_KNszBaaXEe2g8c1_8fAd2g" name="rmndBndsAmt" start="36" end="54" kor="잔여한도금액" type="string"/>
+    <fieldOffsets xmi:id="_KNszBqaXEe2g8c1_8fAd2g" name="tmpBndsAmt" start="54" end="72" kor="임시한도금액" type="string"/>
+    <fieldOffsets xmi:id="_KNszB6aXEe2g8c1_8fAd2g" name="speclBndsAmt" start="72" end="90" kor="특별한도금액" type="string"/>
+    <fieldOffsets xmi:id="_KNszCKaXEe2g8c1_8fAd2g" name="tmpBndsAplyDt" start="90" end="98" kor="임시한도적용일자" type="string"/>
+    <fieldOffsets xmi:id="_KNszCaaXEe2g8c1_8fAd2g" name="tmpBndsEndDt" start="98" end="106" kor="임시한도종료일자" type="string"/>
+    <fieldOffsets xmi:id="_KNszCqaXEe2g8c1_8fAd2g" name="speclBndsAplyDt" start="106" end="114" kor="특별한도적용일자" type="string"/>
+    <fieldOffsets xmi:id="_KNszC6aXEe2g8c1_8fAd2g" name="speclBndsEndDt" start="114" end="122" kor="특별한도종료일자" type="string"/>
+    <fieldOffsets xmi:id="_KNszDKaXEe2g8c1_8fAd2g" name="speclBndsBlnc" start="122" end="140" kor="특별한도잔액" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

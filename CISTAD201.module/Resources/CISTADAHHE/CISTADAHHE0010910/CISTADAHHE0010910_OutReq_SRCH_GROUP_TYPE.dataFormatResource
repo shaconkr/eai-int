@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0010910="http://schema.hcis.com/xsd/CISTADAHHE0010910_OutReq_SRCH_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_KN1V4KaXEe2g8c1_8fAd2g" name="CISTADAHHE.CISTADAHHE0010910.CISTADAHHE0010910_OutReq_SRCH_GROUP_TYPE" type="dataformat:DataFormat">
+  <imports xmi:id="_KN1V4aaXEe2g8c1_8fAd2g" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0010910_OutReq_SRCH_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0010910_OutReq_SRCH_GROUP_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_KN1V4qaXEe2g8c1_8fAd2g" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0010910:main" lineLength="18" fieldOffsetsStr="strtYm(0,6)&#xA;endYm(6,12)&#xA;nxtSrchKey(12,18)">
+    <fieldOffsets xmi:id="_KN1V46aXEe2g8c1_8fAd2g" name="strtYm" end="6" kor="시작년월" type="string"/>
+    <fieldOffsets xmi:id="_KN1V5KaXEe2g8c1_8fAd2g" name="endYm" start="6" end="12" kor="종료년월" type="string"/>
+    <fieldOffsets xmi:id="_KN1V5aaXEe2g8c1_8fAd2g" name="nxtSrchKey" start="12" end="18" kor="다음검색KEY" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

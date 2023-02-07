@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFA0060101="http://schema.hcis.com/xsd/CISTADAHFA0060101_OutRes_RST_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_KMl_wKaXEe2g8c1_8fAd2g" name="CISTADAHFA.CISTADAHFA0060101.CISTADAHFA0060101_OutRes_RST_LIST_TYPE" type="dataformat:DataFormat">
+  <imports xmi:id="_KMl_waaXEe2g8c1_8fAd2g" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFA0060101_OutRes_RST_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFA0060101_OutRes_RST_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_KMl_wqaXEe2g8c1_8fAd2g" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFA0060101:main" lineLength="2246" fieldOffsetsStr="crdMemNo(0,9)&#xA;memNm(9,109)&#xA;ptcrMemGbcd(109,111)&#xA;priorAprvlTypeCd(111,112)&#xA;aplyDt(112,120)&#xA;clerDt(120,128)&#xA;regRsn(128,2128)&#xA;famlAplyYn(2128,2129)&#xA;regStoreCd(2129,2132)&#xA;regId(2132,2232)&#xA;regDtm(2232,2246)">
+    <fieldOffsets xmi:id="_KMl_w6aXEe2g8c1_8fAd2g" name="crdMemNo" end="9" kor="카드회원번호" type="string"/>
+    <fieldOffsets xmi:id="_KMl_xKaXEe2g8c1_8fAd2g" name="memNm" start="9" end="109" kor="회원명" type="string"/>
+    <fieldOffsets xmi:id="_KMl_xaaXEe2g8c1_8fAd2g" name="ptcrMemGbcd" start="109" end="111" kor="특정회원구분코드" type="string"/>
+    <fieldOffsets xmi:id="_KMl_xqaXEe2g8c1_8fAd2g" name="priorAprvlTypeCd" start="111" end="112" kor="우선승인유형코드" type="string"/>
+    <fieldOffsets xmi:id="_KMl_x6aXEe2g8c1_8fAd2g" name="aplyDt" start="112" end="120" kor="적용일자" type="string"/>
+    <fieldOffsets xmi:id="_KMl_yKaXEe2g8c1_8fAd2g" name="clerDt" start="120" end="128" kor="해제일자" type="string"/>
+    <fieldOffsets xmi:id="_KMl_yaaXEe2g8c1_8fAd2g" name="regRsn" start="128" end="2128" kor="등록사유" type="string"/>
+    <fieldOffsets xmi:id="_KMl_yqaXEe2g8c1_8fAd2g" name="famlAplyYn" start="2128" end="2129" kor="가족적용여부" type="string"/>
+    <fieldOffsets xmi:id="_KMl_y6aXEe2g8c1_8fAd2g" name="regStoreCd" start="2129" end="2132" kor="등록점코드" type="string"/>
+    <fieldOffsets xmi:id="_KMl_zKaXEe2g8c1_8fAd2g" name="regId" start="2132" end="2232" kor="등록ID" type="string"/>
+    <fieldOffsets xmi:id="_KMmm0KaXEe2g8c1_8fAd2g" name="regDtm" start="2232" end="2246" kor="등록일시" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>
