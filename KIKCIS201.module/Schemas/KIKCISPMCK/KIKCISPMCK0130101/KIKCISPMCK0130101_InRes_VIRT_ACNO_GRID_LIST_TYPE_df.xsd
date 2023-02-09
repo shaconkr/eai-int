@@ -1,0 +1,11 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/KIKCISPMCK0130101_InRes_VIRT_ACNO_GRID_LIST_TYPE" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/KIKCISPMCK0130101_InRes_VIRT_ACNO_GRID_LIST_TYPE">
+    <element name="root" type="ns:VIRT_ACNO_GRID_LIST_TYPE"/>
+    <complexType name="VIRT_ACNO_GRID_LIST_TYPE">
+        <sequence>
+            <element e:kor="은행코드" e:length="3" e:padder="SpaceRight" name="bankCd" nillable="true" type="string"/>
+            <element e:kor="은행명" e:length="100" e:padder="SpaceRight" name="bankNm" nillable="true" type="string"/>
+            <element e:kor="가상계좌번호" e:length="50" e:padder="SpaceRight" name="virtAcno" nillable="true" type="string"/>
+            <element e:kor="등록일시" e:length="14" e:padder="SpaceRight" name="regDtm" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

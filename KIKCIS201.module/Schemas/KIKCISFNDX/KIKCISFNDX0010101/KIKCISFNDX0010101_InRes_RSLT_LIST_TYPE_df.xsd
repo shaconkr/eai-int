@@ -1,0 +1,28 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/KIKCISFNDX0010101_InRes_RSLT_LIST_TYPE" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/KIKCISFNDX0010101_InRes_RSLT_LIST_TYPE">
+    <element name="root" type="ns:RSLT_LIST_TYPE"/>
+    <complexType name="RSLT_LIST_TYPE">
+        <sequence>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="청구결제단위번호" e:length="4" e:padder="SpaceRight" name="reqStlmUnitNo" nillable="true" type="string"/>
+            <element e:kor="매출관리번호" e:length="18" e:padder="SpaceRight" name="saleMngNo" nillable="true" type="string"/>
+            <element e:kor="이용구분코드" e:length="1" e:padder="SpaceRight" name="utlzGbcd" nillable="true" type="string"/>
+            <element e:kor="마감일자" e:length="8" e:padder="SpaceRight" name="dlineDt" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="본인가족회원순번" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq" nillable="true" type="string"/>
+            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" name="saleDt" nillable="true" type="string"/>
+            <element e:kor="가맹점코드" e:length="20" e:padder="SpaceRight" name="frcsCd" nillable="true" type="string"/>
+            <element e:kor="가맹점명" e:length="100" e:padder="SpaceRight" name="frcsNm" nillable="true" type="string"/>
+            <element e:kor="상품코드" e:length="20" e:padder="SpaceRight" name="itemCd" nillable="true" type="string"/>
+            <element e:kor="상품명" e:length="200" e:padder="SpaceRight" name="itemNm" nillable="true" type="string"/>
+            <element e:kor="총매출금액" e:length="18" e:padder="ZeroLeft" name="tsaleAmt" nillable="true" type="long"/>
+            <element e:kor="에누리금액" e:length="18" e:padder="ZeroLeft" name="enuriAmt" nillable="true" type="long"/>
+            <element e:kor="순매출금액" e:length="18" e:padder="ZeroLeft" name="nsaleAmt" nillable="true" type="long"/>
+            <element e:kor="카드할부개월수" e:length="3" e:padder="ZeroLeft" name="crdInsmMths" nillable="true" type="long"/>
+            <element e:kor="원매출전표번호" e:length="27" e:padder="SpaceRight" name="orgsaleSlipNo" nillable="true" type="string"/>
+            <element e:kor="청구상태코드" e:length="1" e:padder="SpaceRight" name="chrStatCd" nillable="true" type="string"/>
+            <element e:kor="자사승인번호" e:length="9" e:padder="SpaceRight" name="owcoAprvlNo" nillable="true" type="string"/>
+            <element e:kor="승인일자" e:length="8" e:padder="SpaceRight" name="aprvlDt" nillable="true" type="string"/>
+            <element e:kor="매출전표번호" e:length="22" e:padder="SpaceRight" name="saleSlipNo" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

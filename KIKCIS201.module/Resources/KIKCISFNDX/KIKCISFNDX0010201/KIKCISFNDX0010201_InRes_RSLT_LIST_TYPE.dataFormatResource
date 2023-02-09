@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:KIKCISFNDX0010201="http://schema.hcis.com/xsd/KIKCISFNDX0010201_InRes_RSLT_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="KIKCISFNDX/KIKCISFNDX0010201.KIKCISFNDX0010201_InRes_RSLT_LIST_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/KIKCISFNDX0010201_InRes_RSLT_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/KIKCISFNDX0010201_InRes_RSLT_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="KIKCISFNDX0010201:main" lineLength="26" fieldOffsetsStr="chrDt(0,8)&#xA;totStlmAmt(8,26)">
+    <fieldOffsets kor="청구일자" type="string" name="chrDt" start="0" end="8"/>
+    <fieldOffsets kor="총결제금액" type="long" name="totStlmAmt" start="8" end="26"/>
+  </jndi:configuration>
+</jndi:namedResource>

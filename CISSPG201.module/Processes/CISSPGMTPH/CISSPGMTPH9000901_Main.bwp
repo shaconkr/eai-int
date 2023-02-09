@@ -1416,8 +1416,7 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../Schemas/CISSPGMTPH/CISSPGMTPH9000901/CISSPGMTPH9000901_InReq.xsd" namespace="http://schema.hcis.com/xsd/CISSPGMTPH9000901_InReq"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/CISSPGMTPH9000901_InReq"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1649,9 +1648,7 @@
                         <bpws:target linkName="L_Set_LogStartToCallProcess"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source
-                            linkName="CallProc_IFID01ToL_Set_LogError"
-                            tibex:faultDetailsVar="CallProc_CISSPGMTPH9000901" tibex:faultNameVar="FaultName">
+                        <bpws:source linkName="CallProc_IFID01ToL_Set_LogError">
                             <tibex:DesignExpression>
                                 <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>

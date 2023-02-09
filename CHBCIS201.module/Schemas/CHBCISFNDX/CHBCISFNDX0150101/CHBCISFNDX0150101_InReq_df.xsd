@@ -1,0 +1,10 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CHBCISFNDX0150101_InReq" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CHBCISFNDX0150101_InReq">
+    <element name="root" type="ns:CHBCISFNDX0150101_InReq"/>
+    <complexType name="CHBCISFNDX0150101_InReq">
+        <sequence>
+            <element e:kor="회원번호" e:length="12" e:padder="SpaceRight" name="memNo" nillable="true" type="string"/>
+            <element e:kor="매출년도" e:length="4" e:padder="SpaceRight" name="saleYr" nillable="true" type="string"/>
+            <element e:kor="이메일주소" e:length="200" e:padder="SpaceRight" name="emailAdr" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

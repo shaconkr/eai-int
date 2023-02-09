@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CHBCISFNDX0150101_InRes" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CHBCISFNDX0150101_InRes">
+    <element name="root" type="ns:CHBCISFNDX0150101_InRes"/>
+    <complexType name="CHBCISFNDX0150101_InRes">
+        <sequence>
+            <element e:kor="처리결과코드" e:length="2" e:padder="SpaceRight" name="procRstCd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
