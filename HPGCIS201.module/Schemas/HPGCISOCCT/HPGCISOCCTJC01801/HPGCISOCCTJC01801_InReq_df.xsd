@@ -1,0 +1,14 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/HPGCISOCCTJC01801_InReq" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/HPGCISOCCTJC01801_InReq">
+    <element name="root" type="ns:HPGCISOCCTJC01801_InReq"/>
+    <complexType name="HPGCISOCCTJC01801_InReq">
+        <sequence>
+            <element e:kor="본인회원번호" e:length="9" e:padder="SpaceRight" name="selfMemNo" nillable="true" type="string"/>
+            <element e:kor="갱신대상구분코드" e:length="1" e:padder="SpaceRight" name="renwTrgtGbcd" nillable="true" type="string"/>
+            <element e:kor="모바일카드발급여부" e:length="1" e:padder="SpaceRight" name="mblCrdIssuYn" nillable="true" type="string"/>
+            <element e:kor="카드수령지코드" e:length="1" e:padder="SpaceRight" name="crdRcplCd" nillable="true" type="string"/>
+            <element e:kor="공인인증유형코드" e:length="1" e:padder="SpaceRight" name="acrdtTypeCd" nillable="true" type="string"/>
+            <element e:kor="접수경로명" e:length="100" e:padder="SpaceRight" name="acptPathNm" nillable="true" type="string"/>
+            <element e:kor="이용한도상향안내동의여부" e:length="1" e:padder="SpaceRight" name="utlzBndsUpwdGdAgrYn" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
