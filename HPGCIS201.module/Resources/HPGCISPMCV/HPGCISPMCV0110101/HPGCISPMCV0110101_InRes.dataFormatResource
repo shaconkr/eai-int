@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HPGCISPMCV0110101="http://schema.hcis.com/xsd/HPGCISPMCV0110101_InRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="HPGCISPMCV/HPGCISPMCV0110101.HPGCISPMCV0110101_InRes" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/HPGCISPMCV0110101_InRes_df.xsd" namespace="http://schema.hcis.com/xsd/HPGCISPMCV0110101_InRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="HPGCISPMCV0110101:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="0" type="HPGHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="0" type="HPGCISPMCV0110101_InRes" name="data" start="0" end="0"/>
+  </jndi:configuration>
+</jndi:namedResource>

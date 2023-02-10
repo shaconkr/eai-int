@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/ARSCISFNDX0190101_InRes" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/ARSCISFNDX0190101_InRes">
+    <element name="root" type="ns:ARSCISFNDX0190101_InRes"/>
+    <complexType name="ARSCISFNDX0190101_InRes">
+        <sequence>
+            <element e:kor="UMS순번" e:length="14" e:padder="ZeroLeft" name="umsSeq" nillable="true" type="long"/>
+        </sequence>
+    </complexType>
+</schema>

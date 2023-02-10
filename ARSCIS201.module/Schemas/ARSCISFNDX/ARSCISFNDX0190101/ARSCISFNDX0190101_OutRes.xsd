@@ -47,7 +47,7 @@
     </complexType>
     <complexType name="ARSCISFNDX0190101_OutRes">
         <sequence>
-            <element e:kor="작업결과코드" e:length="2" e:padder="SpaceRight" name="wrkRstCd" nillable="true" type="string"/>
+            <element e:kor="UMS순번" e:length="14" e:padder="ZeroLeft" name="umsSeq" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">

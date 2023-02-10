@@ -128,7 +128,7 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" position="1798" length="2"/>
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="작업결과코드" name="wrkRstCd" position="1800" length="2"/>
+        <field kor="UMS순번" name="umsSeq" position="1800" length="14" justify="right" padding="0"/>
       </segment>
     </record>
   </stream>

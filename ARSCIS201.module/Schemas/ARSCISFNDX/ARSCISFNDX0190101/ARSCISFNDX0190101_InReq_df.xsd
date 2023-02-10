@@ -1,0 +1,34 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/ARSCISFNDX0190101_InReq" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/ARSCISFNDX0190101_InReq">
+    <element name="root" type="ns:ARSCISFNDX0190101_InReq"/>
+    <complexType name="ARSCISFNDX0190101_InReq">
+        <sequence>
+            <element e:kor="UMS구분코드" e:length="1" e:padder="SpaceRight" name="umsGbcd" nillable="true" type="string"/>
+            <element e:kor="등록일시" e:length="14" e:padder="SpaceRight" name="regDtm" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="카드브랜드구분코드" e:length="1" e:padder="SpaceRight" name="crdBrndGbcd" nillable="true" type="string"/>
+            <element e:kor="회원명" e:length="20" e:padder="SpaceRight" name="memNm" nillable="true" type="string"/>
+            <element e:kor="회원등급" e:length="2" e:padder="SpaceRight" name="memGrd" nillable="true" type="string"/>
+            <element e:kor="기준일자" e:length="8" e:padder="SpaceRight" name="bsicDt" nillable="true" type="string"/>
+            <element e:kor="종료일자" e:length="8" e:padder="SpaceRight" name="endDt" nillable="true" type="string"/>
+            <element e:kor="청구형태코드" e:length="1" e:padder="SpaceRight" name="reqFormCd" nillable="true" type="string"/>
+            <element e:kor="매출조회형태코드" e:length="1" e:padder="SpaceRight" name="saleQryFormCd" nillable="true" type="string"/>
+            <element e:kor="UMS발송업무유형코드" e:length="3" e:padder="SpaceRight" name="umsSenmTskTypeCd" nillable="true" type="string"/>
+            <element e:kor="SMS발송내용" e:length="200" e:padder="SpaceRight" name="smsSenmCntn" nillable="true" type="string"/>
+            <element e:kor="발송번호" e:length="50" e:padder="SpaceRight" name="senmNo" nillable="true" type="string"/>
+            <element e:kor="발송결과상태코드" e:length="2" e:padder="SpaceRight" name="senmRstStatCd" nillable="true" type="string"/>
+            <element e:kor="발송결과일시" e:length="14" e:padder="SpaceRight" name="senmRstDtm" nillable="true" type="string"/>
+            <element e:kor="사원번호" e:length="8" e:padder="SpaceRight" name="empNo" nillable="true" type="string"/>
+            <element e:kor="사원명" e:length="30" e:padder="SpaceRight" name="empNm" nillable="true" type="string"/>
+            <element e:kor="발송점코드" e:length="3" e:padder="SpaceRight" name="senmStoreCd" nillable="true" type="string"/>
+            <element e:kor="발송요청구분코드" e:length="1" e:padder="SpaceRight" name="senmReqnGbcd" nillable="true" type="string"/>
+            <element e:kor="화면ID" e:length="8" e:padder="SpaceRight" name="scrnId" nillable="true" type="string"/>
+            <element e:kor="관리지역코드" e:length="2" e:padder="SpaceRight" name="mngAreaCd" nillable="true" type="string"/>
+            <element e:kor="발송건수구분코드" e:length="1" e:padder="SpaceRight" name="senmCntGbcd" nillable="true" type="string"/>
+            <element e:kor="소지자회원번호" e:length="9" e:padder="SpaceRight" name="hlerMemNo" nillable="true" type="string"/>
+            <element e:kor="전체발송여부" e:length="1" e:padder="SpaceRight" name="totSenmYn" nillable="true" type="string"/>
+            <element e:kor="발송예약일시" e:length="14" e:padder="SpaceRight" name="senmRsvDtm" nillable="true" type="string"/>
+            <element e:kor="테이블명" e:length="30" e:padder="SpaceRight" name="tblNm" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

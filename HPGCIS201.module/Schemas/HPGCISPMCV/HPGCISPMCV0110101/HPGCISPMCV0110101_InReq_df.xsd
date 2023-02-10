@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/HPGCISPMCV0110101_InReq" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/HPGCISPMCV0110101_InReq">
+    <element name="root" type="ns:HPGCISPMCV0110101_InReq"/>
+    <complexType name="HPGCISPMCV0110101_InReq">
+        <sequence>
+            <element e:kor="은행코드" e:length="3" e:padder="SpaceRight" name="bankCd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

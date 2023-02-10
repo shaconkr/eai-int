@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISFNDX0020101="http://schema.hcis.com/xsd/ARSCISFNDX0020101_InRes_RSLT_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="ARSCISFNDX/ARSCISFNDX0020101.ARSCISFNDX0020101_InRes_RSLT_LIST_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISFNDX0020101_InRes_RSLT_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISFNDX0020101_InRes_RSLT_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISFNDX0020101:main" lineLength="171" fieldOffsetsStr="sendDt(0,8)&#xA;sendTime(8,14)&#xA;respCd(14,18)&#xA;crdMemNo(18,27)&#xA;utlzGbcd(27,28)&#xA;chrDt(28,36)&#xA;stlmCnt(36,39)&#xA;totStlmAmt(39,57)&#xA;saleDt(57,65)&#xA;itemNm(65,125)&#xA;saleAmt(125,143)&#xA;crdInsmMths(143,146)&#xA;reqTmnm(146,153)&#xA;thmnReqAmt(153,171)">
+    <fieldOffsets kor="전송일자" type="string" name="sendDt" start="0" end="8"/>
+    <fieldOffsets kor="전송시간" type="string" name="sendTime" start="8" end="14"/>
+    <fieldOffsets kor="응답코드" type="string" name="respCd" start="14" end="18"/>
+    <fieldOffsets kor="카드회원번호" type="string" name="crdMemNo" start="18" end="27"/>
+    <fieldOffsets kor="이용구분코드" type="string" name="utlzGbcd" start="27" end="28"/>
+    <fieldOffsets kor="청구일자" type="string" name="chrDt" start="28" end="36"/>
+    <fieldOffsets kor="결제건수" type="long" name="stlmCnt" start="36" end="39"/>
+    <fieldOffsets kor="총결제금액" type="long" name="totStlmAmt" start="39" end="57"/>
+    <fieldOffsets kor="매출일자" type="string" name="saleDt" start="57" end="65"/>
+    <fieldOffsets kor="상품명" type="string" name="itemNm" start="65" end="125"/>
+    <fieldOffsets kor="매출금액" type="long" name="saleAmt" start="125" end="143"/>
+    <fieldOffsets kor="카드할부개월수" type="long" name="crdInsmMths" start="143" end="146"/>
+    <fieldOffsets kor="청구회차" type="long" name="reqTmnm" start="146" end="153"/>
+    <fieldOffsets kor="당월청구금액" type="long" name="thmnReqAmt" start="153" end="171"/>
+  </jndi:configuration>
+</jndi:namedResource>

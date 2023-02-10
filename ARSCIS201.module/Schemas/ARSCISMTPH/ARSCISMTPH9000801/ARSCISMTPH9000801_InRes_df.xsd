@@ -1,0 +1,16 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/ARSCISMTPH9000801_InRes" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/ARSCISMTPH9000801_InRes">
+    <element name="root" type="ns:ARSCISMTPH9000801_InRes"/>
+    <complexType name="ARSCISMTPH9000801_InRes">
+        <sequence>
+            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" name="sendDt" nillable="true" type="string"/>
+            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" name="sendTime" nillable="true" type="string"/>
+            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="회원명" e:length="20" e:padder="SpaceRight" name="memNm" nillable="true" type="string"/>
+            <element e:kor="기준일자" e:length="8" e:padder="SpaceRight" name="bsicDt" nillable="true" type="string"/>
+            <element e:kor="마일리지" e:length="12" e:padder="ZeroLeft" name="mlg" nillable="true" type="decimal"/>
+            <element e:kor="잔여오토포인트" e:length="12" e:padder="ZeroLeft" name="rmndAutPnt" nillable="true" type="decimal"/>
+            <element e:kor="명품잔여마일리지" e:length="12" e:padder="ZeroLeft" name="lxgdsRmndMlg" nillable="true" type="decimal"/>
+        </sequence>
+    </complexType>
+</schema>

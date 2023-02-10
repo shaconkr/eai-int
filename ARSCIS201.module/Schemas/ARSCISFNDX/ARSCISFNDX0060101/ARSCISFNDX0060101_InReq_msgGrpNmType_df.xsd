@@ -1,0 +1,12 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/ARSCISFNDX0060101_InReq_msgGrpNmType" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/ARSCISFNDX0060101_InReq_msgGrpNmType">
+    <element name="root" type="ns:msgGrpNmType"/>
+    <complexType name="msgGrpNmType">
+        <sequence>
+            <element e:kor="메시지표시방법구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="msgShwMthdGbcd" nillable="true" type="string"/>
+            <element e:kor="오류발생전문항목명" e:length="50" e:padder="SpaceRight" minOccurs="0" name="errOcrnTgrmClasNm" nillable="true" type="string"/>
+            <element e:kor="메시지코드" e:length="10" e:padder="SpaceRight" minOccurs="0" name="msgCd" nillable="true" type="string"/>
+            <element e:kor="메시지내용" e:length="300" e:padder="SpaceRight" minOccurs="0" name="msgCntn" nillable="true" type="string"/>
+            <element e:kor="메시지세부내용" e:length="1000" e:padder="SpaceRight" minOccurs="0" name="msgDtlCntn" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
