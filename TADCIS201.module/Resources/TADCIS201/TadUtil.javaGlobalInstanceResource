@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:javasharedresource="http://ns.tibco.com/bw/palette/javasharedresource" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_ss-y0ajVEe2Ek8WUBmMbIg" name="TADCIS201.TadUtil" type="javasharedresource:JavaGlobalInstanceResource">
+  <jndi:configuration xsi:type="javasharedresource:JavaGlobalInstance" xmi:id="_ss-y0qjVEe2Ek8WUBmMbIg" className="TADCIS201.TadUtil" methodName="TadUtil" isNewShared="true">
+    <javaConstructorParameter xmi:id="_1kXqQajVEe2Ek8WUBmMbIg" paramName="_encoding" paramType="string">
+      <substitutionBindings xmi:id="_5Q1U8KjVEe2Ek8WUBmMbIg" template="paramValue" propName="TAD_Encoding"/>
+    </javaConstructorParameter>
+    <methodParameters xmi:id="_1kXqQKjVEe2Ek8WUBmMbIg" paramType="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

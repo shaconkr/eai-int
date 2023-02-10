@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="TADCISMTSY0008001_InReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="TAD_InReq" class="java.util.LinkedHashMap"> 
+      <segment name="header" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="전체전문길이" name="totTgrmLen" position="0" length="8" justify="right" padding="0"/>  
+        <field kor="헤더길이" name="hdrLen" position="8" length="8" justify="right" padding="0"/>  
+        <field kor="전문형식코드" name="tgrmFrmCd" position="16" length="1"/>  
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" position="17" length="1"/>  
+        <field kor="IP주소" name="ipAdr" position="18" length="40"/>  
+        <field kor="GUID" name="guid" position="58" length="38"/>  
+        <field kor="진행번호" name="prgrNo" position="96" length="3" justify="right" padding="0"/>  
+        <field kor="최초GUID" name="frstGuid" position="99" length="38"/>  
+        <field kor="전송시스템코드" name="sendSysCd" position="137" length="3"/>  
+        <field kor="최초전송시스템코드" name="frstSendSysCd" position="140" length="3"/>  
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" position="143" length="21"/>  
+        <field kor="EIMS전문ID" name="eimsTgrmId" position="164" length="17"/>  
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" position="181" length="3"/>  
+        <field kor="프래임워크거래ID" name="frwkTrdId" position="184" length="12"/>  
+        <field kor="수신시스템코드" name="rcvSysCd" position="196" length="3"/>  
+        <field kor="연계전문코드" name="tieTgrmCd" position="199" length="10"/>  
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" position="209" length="2"/>  
+        <field kor="연계서비스명" name="tieSrvNm" position="211" length="30"/>  
+        <field kor="화면번호" name="scrnNo" position="241" length="20"/>  
+        <field kor="요청응답구분코드" name="reqnRespGbcd" position="261" length="1"/>  
+        <field kor="동기처리구분코드" name="syncProcGbcd" position="262" length="1"/>  
+        <field kor="거래응답코드" name="trdRespCd" position="263" length="1"/>  
+        <field kor="요청일시" name="reqnDtm" position="264" length="17"/>  
+        <field kor="응답일시" name="respDtm" position="281" length="17"/>  
+        <field kor="점코드" name="storeCd" position="298" length="3"/>  
+        <field kor="사용자ID" name="userId" position="301" length="8"/>  
+        <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="309" length="100"/>  
+        <field kor="메시지코드" name="msgCd" position="409" length="10"/> 
+      </segment>  
+      <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="작업구분값" name="wrkGbVal" position="419" length="1"/>  
+        <field kor="카드회원번호" name="crdMemNo" position="420" length="9"/>  
+        <field kor="카드번호" name="crdNo" position="429" length="16"/>  
+        <field kor="승인일자" name="aprvlDt" position="445" length="8"/>  
+        <field kor="승인시각" name="aprvlTmstmp" position="453" length="6"/>  
+        <field kor="자사승인번호" name="owcoAprvlNo" position="459" length="9"/>  
+        <field kor="점코드" name="storeCd" position="468" length="3"/>  
+        <field kor="포스번호" name="posNo" position="471" length="6"/>  
+        <field kor="승인요청기관코드" name="aprvlReqnIstnCd" position="477" length="2"/>  
+        <field kor="일괄승인여부" name="ilmpAprvlYn" position="479" length="1"/>  
+        <field kor="승인거래구분코드" name="aprvlTrdGbcd" position="480" length="4"/>  
+        <field kor="사용한도구분코드" name="useBndsGbcd" position="484" length="1"/>  
+        <field kor="승인결과분류코드" name="aprvlRstCsfCd" position="485" length="1"/>  
+        <field kor="취소일자" name="cnclDt" position="486" length="8"/>  
+        <field kor="취소시각" name="cnclTmstmp" position="494" length="6"/>  
+        <field kor="원매출POS번호" name="orgsalePosNo" position="500" length="6"/>  
+        <field kor="원매출영수번호" name="orgsaleRceitNo" position="506" length="6"/>  
+        <field kor="카드할부개월수" name="crdInsmMths" position="512" length="3"/>  
+        <field kor="승인시재구분코드" name="aprvlCuratGbcd" position="515" length="2"/>  
+        <field kor="총매출금액" name="tsaleAmt" position="517" length="18"/>  
+        <field kor="에누리금액" name="enuriAmt" position="535" length="18"/>  
+        <field kor="순매출금액" name="nsaleAmt" position="553" length="18"/>  
+        <field kor="카드승인금액" name="crdAprvlAmt" position="571" length="18"/>  
+        <field kor="포인트승인금액" name="pntAprvlAmt" position="589" length="18"/>  
+        <field kor="승인금액" name="aprvlAmt" position="607" length="18"/>  
+        <field kor="발생마일리지" name="ocrnMlg" position="625" length="18"/>  
+        <field kor="NEOX포인트" name="neoxPnt" position="643" length="12"/>  
+        <field kor="NEOX카드번호" name="neoxCrdNo" position="655" length="16"/>  
+        <field kor="포스입력모드구분코드" name="posInsrModeGbcd" position="671" length="1"/>  
+        <field kor="영수증번호" name="rcptNo" position="672" length="6"/>  
+        <field kor="입금구분코드" name="iamtGbcd" position="678" length="1"/>  
+        <field kor="입금금액" name="iamtAmt" position="679" length="18"/>  
+        <field kor="상품코드" name="itemCd" position="697" length="13"/>  
+        <field kor="상품금액" name="itemAmt" position="710" length="18"/>  
+        <field kor="티켓번호" name="tcktNo" position="728" length="7"/>  
+        <field kor="초과승인한도금액" name="overAprvlBndsAmt" position="735" length="18"/> 
+      </segment> 
+    </record> 
+  </stream>  
+  <stream kor="" name="TADCISMTSY0008001_InRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="TAD_InRes" class="java.util.LinkedHashMap">
+      <segment name="header" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="전체전문길이" name="totTgrmLen" position="0" length="8" justify="right" padding="0"/>
+        <field kor="헤더길이" name="hdrLen" position="8" length="8" justify="right" padding="0"/>
+        <field kor="전문형식코드" name="tgrmFrmCd" position="16" length="1"/>
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" position="17" length="1"/>
+        <field kor="IP주소" name="ipAdr" position="18" length="40"/>
+        <field kor="GUID" name="guid" position="58" length="38"/>
+        <field kor="진행번호" name="prgrNo" position="96" length="3" justify="right" padding="0"/>
+        <field kor="최초GUID" name="frstGuid" position="99" length="38"/>
+        <field kor="전송시스템코드" name="sendSysCd" position="137" length="3"/>
+        <field kor="최초전송시스템코드" name="frstSendSysCd" position="140" length="3"/>
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" position="143" length="21"/>
+        <field kor="EIMS전문ID" name="eimsTgrmId" position="164" length="17"/>
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" position="181" length="3"/>
+        <field kor="프래임워크거래ID" name="frwkTrdId" position="184" length="12"/>
+        <field kor="수신시스템코드" name="rcvSysCd" position="196" length="3"/>
+        <field kor="연계전문코드" name="tieTgrmCd" position="199" length="10"/>
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" position="209" length="2"/>
+        <field kor="연계서비스명" name="tieSrvNm" position="211" length="30"/>
+        <field kor="화면번호" name="scrnNo" position="241" length="20"/>
+        <field kor="요청응답구분코드" name="reqnRespGbcd" position="261" length="1"/>
+        <field kor="동기처리구분코드" name="syncProcGbcd" position="262" length="1"/>
+        <field kor="거래응답코드" name="trdRespCd" position="263" length="1"/>
+        <field kor="요청일시" name="reqnDtm" position="264" length="17"/>
+        <field kor="응답일시" name="respDtm" position="281" length="17"/>
+        <field kor="점코드" name="storeCd" position="298" length="3"/>
+        <field kor="사용자ID" name="userId" position="301" length="8"/>
+        <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="309" length="100"/>
+        <field kor="메시지코드" name="msgCd" position="409" length="10"/>
+      </segment>
+      <segment name="data" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="작업구분값" name="wrkGbVal" position="419" length="1"/>
+        <field kor="카드회원번호" name="crdMemNo" position="420" length="9"/>
+        <field kor="카드번호" name="crdNo" position="429" length="16"/>
+        <field kor="승인일자" name="aprvlDt" position="445" length="8"/>
+        <field kor="승인시각" name="aprvlTmstmp" position="453" length="6"/>
+        <field kor="자사승인번호" name="owcoAprvlNo" position="459" length="9"/>
+        <field kor="점코드" name="storeCd" position="468" length="3"/>
+        <field kor="포스번호" name="posNo" position="471" length="6"/>
+        <field kor="승인요청기관코드" name="aprvlReqnIstnCd" position="477" length="2"/>
+        <field kor="일괄승인여부" name="ilmpAprvlYn" position="479" length="1"/>
+        <field kor="승인거래구분코드" name="aprvlTrdGbcd" position="480" length="4"/>
+        <field kor="사용한도구분코드" name="useBndsGbcd" position="484" length="1"/>
+        <field kor="승인결과분류코드" name="aprvlRstCsfCd" position="485" length="1"/>
+        <field kor="취소일자" name="cnclDt" position="486" length="8"/>
+        <field kor="취소시각" name="cnclTmstmp" position="494" length="6"/>
+        <field kor="원매출POS번호" name="orgsalePosNo" position="500" length="6"/>
+        <field kor="원매출영수번호" name="orgsaleRceitNo" position="506" length="6"/>
+        <field kor="카드할부개월수" name="crdInsmMths" position="512" length="3"/>
+        <field kor="승인시재구분코드" name="aprvlCuratGbcd" position="515" length="2"/>
+        <field kor="총매출금액" name="tsaleAmt" position="517" length="18"/>
+        <field kor="에누리금액" name="enuriAmt" position="535" length="18"/>
+        <field kor="순매출금액" name="nsaleAmt" position="553" length="18"/>
+        <field kor="카드승인금액" name="crdAprvlAmt" position="571" length="18"/>
+        <field kor="포인트승인금액" name="pntAprvlAmt" position="589" length="18"/>
+        <field kor="승인금액" name="aprvlAmt" position="607" length="18"/>
+        <field kor="발생마일리지" name="ocrnMlg" position="625" length="18"/>
+        <field kor="NEOX포인트" name="neoxPnt" position="643" length="12"/>
+        <field kor="NEOX카드번호" name="neoxCrdNo" position="655" length="16"/>
+        <field kor="포스입력모드구분코드" name="posInsrModeGbcd" position="671" length="1"/>
+        <field kor="영수증번호" name="rcptNo" position="672" length="6"/>
+        <field kor="입금구분코드" name="iamtGbcd" position="678" length="1"/>
+        <field kor="입금금액" name="iamtAmt" position="679" length="18"/>
+        <field kor="상품코드" name="itemCd" position="697" length="13"/>
+        <field kor="상품금액" name="itemAmt" position="710" length="18"/>
+        <field kor="티켓번호" name="tcktNo" position="728" length="7"/>
+        <field kor="초과승인한도금액" name="overAprvlBndsAmt" position="735" length="18"/>
+      </segment>
+    </record>
+  </stream>
+</beanio>

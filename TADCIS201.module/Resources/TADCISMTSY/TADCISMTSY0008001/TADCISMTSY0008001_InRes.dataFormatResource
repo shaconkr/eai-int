@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TADCISMTSY0008001="http://schema.hcis.com/xsd/TADCISMTSY0008001_InRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_afo3vqjgEe2Ek8WUBmMbIg" name="TADCISMTSY.TADCISMTSY0008001.TADCISMTSY0008001_InRes" type="dataformat:DataFormat">
+  <imports xmi:id="_afo3v6jgEe2Ek8WUBmMbIg" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/TADCISMTSY0008001_InRes_df.xsd" namespace="http://schema.hcis.com/xsd/TADCISMTSY0008001_InRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_afo3wKjgEe2Ek8WUBmMbIg" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="TADCISMTSY0008001:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets xmi:id="_afo3wajgEe2Ek8WUBmMbIg" name="header" kor="0" type="TADHeaderType"/>
+    <fieldOffsets xmi:id="_afo3wqjgEe2Ek8WUBmMbIg" name="data" kor="0" type="TADCISMTSY0008001_InRes"/>
+  </jndi:configuration>
+</jndi:namedResource>
