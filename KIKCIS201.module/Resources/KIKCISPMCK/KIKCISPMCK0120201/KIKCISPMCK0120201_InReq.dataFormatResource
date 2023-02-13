@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:KIKCISPMCK0120201="http://schema.hcis.com/xsd/KIKCISPMCK0120201_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_pBh5IKtkEe2GApIRAlQrgQ" name="KIKCISPMCK.KIKCISPMCK0120201.KIKCISPMCK0120201_InReq" type="dataformat:DataFormat">
-  <imports xmi:id="_pBh5IatkEe2GApIRAlQrgQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/KIKCISPMCK0120201_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/KIKCISPMCK0120201_InReq"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_pBh5IqtkEe2GApIRAlQrgQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="KIKCISPMCK0120201:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets xmi:id="_pBigMKtkEe2GApIRAlQrgQ" name="header" kor="0" type="KIKHeaderType"/>
-    <fieldOffsets xmi:id="_pBigMatkEe2GApIRAlQrgQ" name="data" kor="0" type="KIKCISPMCK0120201_InReq"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:KIKCISPMCK0120201="http://schema.hcis.com/xsd/KIKCISPMCK0120201_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="KIKCISPMCK/KIKCISPMCK0120201.KIKCISPMCK0120201_InReq" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/KIKCISPMCK0120201_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/KIKCISPMCK0120201_InReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="KIKCISPMCK0120201:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="0" type="KIKHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="0" type="KIKCISPMCK0120201_InReq" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>
