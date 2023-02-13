@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:KIKCISPMCK0120201="http://schema.hcis.com/xsd/KIKCISPMCK0120201_InReq_msgGrpNmType" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_pBvUgKtkEe2GApIRAlQrgQ" name="KIKCISPMCK.KIKCISPMCK0120201.KIKCISPMCK0120201_InReq_msgGrpNmType" type="dataformat:DataFormat">
+  <imports xmi:id="_pBvUgatkEe2GApIRAlQrgQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/KIKCISPMCK0120201_InReq_msgGrpNmType_df.xsd" namespace="http://schema.hcis.com/xsd/KIKCISPMCK0120201_InReq_msgGrpNmType"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_pBvUgqtkEe2GApIRAlQrgQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="KIKCISPMCK0120201:main" lineLength="1361" fieldOffsetsStr="msgShwMthdGbcd(0,1)&#xA;errOcrnTgrmClasNm(1,51)&#xA;msgCd(51,61)&#xA;msgCntn(61,361)&#xA;msgDtlCntn(361,1361)">
+    <fieldOffsets xmi:id="_pBv7kKtkEe2GApIRAlQrgQ" name="msgShwMthdGbcd" end="1" kor="메시지표시방법구분코드" type="string"/>
+    <fieldOffsets xmi:id="_pBv7katkEe2GApIRAlQrgQ" name="errOcrnTgrmClasNm" start="1" end="51" kor="오류발생전문항목명" type="string"/>
+    <fieldOffsets xmi:id="_pBv7kqtkEe2GApIRAlQrgQ" name="msgCd" start="51" end="61" kor="메시지코드" type="string"/>
+    <fieldOffsets xmi:id="_pBv7k6tkEe2GApIRAlQrgQ" name="msgCntn" start="61" end="361" kor="메시지내용" type="string"/>
+    <fieldOffsets xmi:id="_pBv7lKtkEe2GApIRAlQrgQ" name="msgDtlCntn" start="361" end="1361" kor="메시지세부내용" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>
