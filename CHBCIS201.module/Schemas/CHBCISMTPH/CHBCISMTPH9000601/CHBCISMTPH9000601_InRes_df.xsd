@@ -1,0 +1,29 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InRes" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InRes">
+    <element name="root" type="ns:CHBCISMTPH9000601_InRes"/>
+    <complexType name="CHBCISMTPH9000601_InRes">
+        <sequence>
+            <element e:kor="결과그룹" e:padder="ZeroLeft" name="rltGroup" type="ns:RLT_GROUP_TYPE"/>
+        </sequence>
+    </complexType>
+    <complexType name="RLT_GROUP_TYPE">
+        <sequence>
+            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" name="saleDt" nillable="true" type="string"/>
+            <element e:kor="매출영수번호" e:length="6" e:padder="SpaceRight" name="saleRceitNo" nillable="true" type="string"/>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="매출POS번호" e:length="6" e:padder="SpaceRight" name="salePosNo" nillable="true" type="string"/>
+            <element e:kor="점명" e:length="60" e:padder="SpaceRight" name="storeNm" nillable="true" type="string"/>
+            <element e:kor="상품명" e:length="60" e:padder="SpaceRight" name="itemNm" nillable="true" type="string"/>
+            <element e:kor="매출금액" e:length="12" e:padder="ZeroLeft" name="saleAmt" nillable="true" type="long"/>
+            <element e:kor="발생마일리지" e:length="20" e:padder="ZeroLeft" name="ocrnMlg" nillable="true" type="decimal"/>
+            <element e:kor="마일리지" e:length="20" e:padder="ZeroLeft" name="mlg" nillable="true" type="decimal"/>
+            <element e:kor="현금마일리지" e:length="20" e:padder="ZeroLeft" name="cashMlg" nillable="true" type="decimal"/>
+            <element e:kor="자사상품권마일리지" e:length="20" e:padder="ZeroLeft" name="owcoGcMlg" nillable="true" type="decimal"/>
+            <element e:kor="타사카드마일리지" e:length="20" e:padder="ZeroLeft" name="otcoCrdMlg" nillable="true" type="decimal"/>
+            <element e:kor="기타마일리지" e:length="20" e:padder="ZeroLeft" name="etcMlg" nillable="true" type="decimal"/>
+            <element e:kor="매출합계금액" e:length="19" e:padder="ZeroLeft" name="saleSumAmt" nillable="true" type="long"/>
+            <element e:kor="매출합계마일리지" e:length="20" e:padder="ZeroLeft" name="saleSumMlg" nillable="true" type="decimal"/>
+            <element e:kor="조회페이지번호" e:length="8" e:padder="ZeroLeft" name="qryPageNo" nillable="true" type="long"/>
+            <element e:kor="명품구분코드" e:length="1" e:padder="SpaceRight" name="lxgdsGbcd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
