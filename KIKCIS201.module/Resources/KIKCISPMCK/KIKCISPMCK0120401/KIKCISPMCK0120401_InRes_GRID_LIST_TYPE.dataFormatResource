@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:KIKCISPMCK0120401="http://schema.hcis.com/xsd/KIKCISPMCK0120401_InRes_GRID_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_OFbJoKzFEe22wJT4a4JItA" name="KIKCISPMCK.KIKCISPMCK0120401.KIKCISPMCK0120401_InRes_GRID_LIST_TYPE" type="dataformat:DataFormat">
+  <imports xmi:id="_OFbJoazFEe22wJT4a4JItA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/KIKCISPMCK0120401_InRes_GRID_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/KIKCISPMCK0120401_InRes_GRID_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_OFbJoqzFEe22wJT4a4JItA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="KIKCISPMCK0120401:main" lineLength="418" fieldOffsetsStr="saleMngNo(0,18)&#xA;saleUtlzGbcd(18,22)&#xA;owcoAprvlNo(22,31)&#xA;selfFamlMemSeq(31,33)&#xA;saleDt(33,41)&#xA;chrDt(41,49)&#xA;itemNm(49,249)&#xA;nsaleAmt(249,268)&#xA;crdInsmMths(268,272)&#xA;storeCd(272,275)&#xA;reqTmnm(275,283)&#xA;odueAmt(283,302)&#xA;nrmlAmt(302,321)&#xA;nadvPrncAmt(321,340)&#xA;nadvCmisAmt(340,359)&#xA;nrNadvPrncAmt(359,378)&#xA;totNadvBlnc(378,397)&#xA;totBlnc(397,416)&#xA;thmnGbcd(416,417)&#xA;insmPamtFllpmtYn(417,418)">
+    <fieldOffsets xmi:id="_OFbJo6zFEe22wJT4a4JItA" name="saleMngNo" end="18" kor="매출관리번호" type="string"/>
+    <fieldOffsets xmi:id="_OFbJpKzFEe22wJT4a4JItA" name="saleUtlzGbcd" start="18" end="22" kor="매출이용구분코드" type="string"/>
+    <fieldOffsets xmi:id="_OFbJpazFEe22wJT4a4JItA" name="owcoAprvlNo" start="22" end="31" kor="자사승인번호" type="string"/>
+    <fieldOffsets xmi:id="_OFbJpqzFEe22wJT4a4JItA" name="selfFamlMemSeq" start="31" end="33" kor="본인가족회원순번" type="string"/>
+    <fieldOffsets xmi:id="_OFbJp6zFEe22wJT4a4JItA" name="saleDt" start="33" end="41" kor="매출일자" type="string"/>
+    <fieldOffsets xmi:id="_OFbJqKzFEe22wJT4a4JItA" name="chrDt" start="41" end="49" kor="청구일자" type="string"/>
+    <fieldOffsets xmi:id="_OFbJqazFEe22wJT4a4JItA" name="itemNm" start="49" end="249" kor="상품명" type="string"/>
+    <fieldOffsets xmi:id="_OFbJqqzFEe22wJT4a4JItA" name="nsaleAmt" start="249" end="268" kor="순매출금액" type="long"/>
+    <fieldOffsets xmi:id="_OFbJq6zFEe22wJT4a4JItA" name="crdInsmMths" start="268" end="272" kor="카드할부개월수" type="long"/>
+    <fieldOffsets xmi:id="_OFbJrKzFEe22wJT4a4JItA" name="storeCd" start="272" end="275" kor="점코드" type="string"/>
+    <fieldOffsets xmi:id="_OFbJrazFEe22wJT4a4JItA" name="reqTmnm" start="275" end="283" kor="청구회차" type="long"/>
+    <fieldOffsets xmi:id="_OFbJrqzFEe22wJT4a4JItA" name="odueAmt" start="283" end="302" kor="연체금액" type="long"/>
+    <fieldOffsets xmi:id="_OFbJr6zFEe22wJT4a4JItA" name="nrmlAmt" start="302" end="321" kor="정상금액" type="long"/>
+    <fieldOffsets xmi:id="_OFbJsKzFEe22wJT4a4JItA" name="nadvPrncAmt" start="321" end="340" kor="미도래원금금액" type="long"/>
+    <fieldOffsets xmi:id="_OFbJsazFEe22wJT4a4JItA" name="nadvCmisAmt" start="340" end="359" kor="미도래수수료금액" type="long"/>
+    <fieldOffsets xmi:id="_OFbJsqzFEe22wJT4a4JItA" name="nrNadvPrncAmt" start="359" end="378" kor="미수미도래원금금액" type="long"/>
+    <fieldOffsets xmi:id="_OFbJs6zFEe22wJT4a4JItA" name="totNadvBlnc" start="378" end="397" kor="총미도래잔액" type="long"/>
+    <fieldOffsets xmi:id="_OFbJtKzFEe22wJT4a4JItA" name="totBlnc" start="397" end="416" kor="총잔액" type="long"/>
+    <fieldOffsets xmi:id="_OFbJtazFEe22wJT4a4JItA" name="thmnGbcd" start="416" end="417" kor="당월구분코드" type="string"/>
+    <fieldOffsets xmi:id="_OFbJtqzFEe22wJT4a4JItA" name="insmPamtFllpmtYn" start="417" end="418" kor="할부선입금완납여부" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>
