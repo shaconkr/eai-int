@@ -21,17 +21,12 @@
   "reqnRespGbcd" : "S",
   "syncProcGbcd" : "S",
   "trdRespCd" : "",
-  "pageNo" : 0,
-  "pageRowCnt" : 0,
-  "totRowCnt" : 0,
-  "nxtPageYn" : "",
   "reqnDtm" : "20230214170835550",
   "respDtm" : "",
   "storeCd" : "200",
   "userId" : "2236662",
   "trdCommTrtyPrepCntn" : "",
-  "msgGrpNm" : null,
-  "stdTgrmEndLettrVal" : ""
+  "msgCd" : ""
 },
 "data" : {
   "crdMemNo" : "104430236",
