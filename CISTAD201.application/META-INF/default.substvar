@@ -336,12 +336,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//HcisCommon.smodule//PROJ_PATH</name>
-			<value>d:/HCIS/</value>
+			<value>d:/_SBYi/</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>d:/_SBYi/</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//HcisCommon.smodule//EIMS_PATH</name>

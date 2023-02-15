@@ -2102,20 +2102,12 @@
                 <bpws:literal>CISTAD201.TAD</bpws:literal>
             </bpws:from>
         </bpws:variable>
-        <bpws:variable name="HcisModuleHelper"
+        <bpws:variable name="HcisHelper"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/javasharedresource}JavaGlobalInstanceResource" type="xsd:string">
             <bpws:from>
                 <bpws:literal>CISTAD201.CisTadHelper</bpws:literal>
-            </bpws:from>
-        </bpws:variable>
-        <bpws:variable name="HcisCommonHelper"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/javasharedresource}JavaGlobalInstanceResource" type="xsd:string">
-            <bpws:from>
-                <bpws:literal>hciscommon.smodule.HcisCommon</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns1:JavaInvokeActivityInput"
@@ -2317,7 +2309,7 @@
                                     icon="HcisCommon.smodule\Resources\icons\outgoing-data-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="setProcessName"
                                     methodReturn="void" xsi:type="java:JavaMethod">
                                     <methodParameter
@@ -2353,11 +2345,11 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.common.HCISHelperAnc"
+                                    className="com.hcis.eai.common.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\edit-node-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisCommonHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="baseMapping"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <methodParameter
@@ -2400,7 +2392,7 @@
                                     icon="HcisCommon.smodule\Resources\icons\change-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="encodeCharset"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2445,14 +2437,10 @@
                                     icon="HcisCommon.smodule\Resources\icons\edifact-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="JsonToEDIbytesLen"
                                     methodReturn="byte[]" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.lang.Exception</exceptionTypes>
-                                    <methodParameter
-                                    paramName="projPath" paramType="string"/>
-                                    <methodParameter
-                                    paramName="processName" paramType="string"/>
                                     <methodParameter
                                     paramName="msgType" paramType="string"/>
                                     <methodParameter
@@ -2527,7 +2515,7 @@
                                     className="com.hcis.eai.HCISHelper"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="toString"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2633,7 +2621,7 @@
                                     icon="HcisCommon.smodule\Resources\icons\binary-code-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="toString"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2735,10 +2723,10 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.common.HCISHelperAnc"
+                                    className="com.hcis.eai.common.HCISHelper"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisCommonHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="dumpBytes"
                                     methodReturn="void" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2781,7 +2769,7 @@
                                     className="com.hcis.eai.HCISHelper"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="concatBytes"
                                     methodReturn="byte[]" xsi:type="java:JavaMethod">
                                     <methodParameter
@@ -2820,10 +2808,10 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.common.HCISHelperAnc"
+                                    className="com.hcis.eai.common.HCISHelper"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisCommonHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="dumpBytes"
                                     methodReturn="void" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2868,14 +2856,10 @@
                                     icon="HcisCommon.smodule\Resources\icons\json-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="EDIbytesToJson"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.lang.Exception</exceptionTypes>
-                                    <methodParameter
-                                    paramName="projPath" paramType="string"/>
-                                    <methodParameter
-                                    paramName="processName" paramType="string"/>
                                     <methodParameter
                                     paramName="msgType" paramType="string"/>
                                     <methodParameter
@@ -2919,7 +2903,7 @@
                                     icon="HcisCommon.smodule\Resources\icons\change-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisModuleHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="encodeCharset"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
@@ -2958,11 +2942,11 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.common.HCISHelperAnc"
+                                    className="com.hcis.eai.common.HCISHelper"
                                     icon="HcisCommon.smodule\Resources\icons\edit-node-48.png"
                                     isNew="true"
                                     isNewActivity="true"
-                                    javaGlobalInstance="HcisCommonHelper"
+                                    javaGlobalInstance="HcisHelper"
                                     methodName="baseMapping"
                                     methodReturn="string" xsi:type="java:JavaMethod">
                                     <methodParameter
