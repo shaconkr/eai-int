@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:javasharedresource="http://ns.tibco.com/bw/palette/javasharedresource" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Qb_EwZCfEe2Nh4unqPy6DA" name="CISTAD201.TAD_JAVA" type="javasharedresource:JavaGlobalInstanceResource">
+  <jndi:configuration xsi:type="javasharedresource:JavaGlobalInstance" xmi:id="_Qb_r0JCfEe2Nh4unqPy6DA" className="com.hcis.eai.tad.TADHelper" methodName="TADHelper" isNewShared="true"/>
+</jndi:namedResource>

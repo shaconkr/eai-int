@@ -3,10 +3,15 @@
 	<name>CISTAD201.module</name>
 	<comment></comment>
 	<projects>
-		<project>CSPI_Library</project>
 		<project>HcisCommon.smodule</project>
+		<project>CSPI_Library</project>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.pde.ManifestBuilder</name>
 			<arguments>
