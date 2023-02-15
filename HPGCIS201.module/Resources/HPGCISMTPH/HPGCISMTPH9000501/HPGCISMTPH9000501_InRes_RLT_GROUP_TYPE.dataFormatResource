@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HPGCISMTPH9000501="http://schema.hcis.com/xsd/HPGCISMTPH9000501_InRes_RLT_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_1_PqgKwZEe2Afv4JxZFnEA" name="HPGCISMTPH.HPGCISMTPH9000501.HPGCISMTPH9000501_InRes_RLT_GROUP_TYPE" type="dataformat:DataFormat">
+  <imports xmi:id="_1_PqgawZEe2Afv4JxZFnEA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/HPGCISMTPH9000501_InRes_RLT_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/HPGCISMTPH9000501_InRes_RLT_GROUP_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_1_PqgqwZEe2Afv4JxZFnEA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="HPGCISMTPH9000501:main" lineLength="323" fieldOffsetsStr="saleDt(0,8)&#xA;saleRceitNo(8,14)&#xA;storeCd(14,17)&#xA;salePosNo(17,23)&#xA;storeNm(23,83)&#xA;itemNm(83,143)&#xA;saleAmt(143,155)&#xA;ocrnMlg(155,175)&#xA;mlg(175,195)&#xA;cashMlg(195,215)&#xA;owcoGcMlg(215,235)&#xA;otcoCrdMlg(235,255)&#xA;etcMlg(255,275)&#xA;saleSumAmt(275,294)&#xA;saleSumMlg(294,314)&#xA;qryPageNo(314,322)&#xA;lxgdsGbcd(322,323)">
+    <fieldOffsets xmi:id="_1_Pqg6wZEe2Afv4JxZFnEA" name="saleDt" end="8" kor="매출일자" type="string"/>
+    <fieldOffsets xmi:id="_1_PqhKwZEe2Afv4JxZFnEA" name="saleRceitNo" start="8" end="14" kor="매출영수번호" type="string"/>
+    <fieldOffsets xmi:id="_1_PqhawZEe2Afv4JxZFnEA" name="storeCd" start="14" end="17" kor="점코드" type="string"/>
+    <fieldOffsets xmi:id="_1_PqhqwZEe2Afv4JxZFnEA" name="salePosNo" start="17" end="23" kor="매출POS번호" type="string"/>
+    <fieldOffsets xmi:id="_1_Pqh6wZEe2Afv4JxZFnEA" name="storeNm" start="23" end="83" kor="점명" type="string"/>
+    <fieldOffsets xmi:id="_1_PqiKwZEe2Afv4JxZFnEA" name="itemNm" start="83" end="143" kor="상품명" type="string"/>
+    <fieldOffsets xmi:id="_1_PqiawZEe2Afv4JxZFnEA" name="saleAmt" start="143" end="155" kor="매출금액" type="long"/>
+    <fieldOffsets xmi:id="_1_PqiqwZEe2Afv4JxZFnEA" name="ocrnMlg" start="155" end="175" kor="발생마일리지" type="decimal"/>
+    <fieldOffsets xmi:id="_1_Pqi6wZEe2Afv4JxZFnEA" name="mlg" start="175" end="195" kor="마일리지" type="decimal"/>
+    <fieldOffsets xmi:id="_1_PqjKwZEe2Afv4JxZFnEA" name="cashMlg" start="195" end="215" kor="현금마일리지" type="decimal"/>
+    <fieldOffsets xmi:id="_1_PqjawZEe2Afv4JxZFnEA" name="owcoGcMlg" start="215" end="235" kor="자사상품권마일리지" type="decimal"/>
+    <fieldOffsets xmi:id="_1_PqjqwZEe2Afv4JxZFnEA" name="otcoCrdMlg" start="235" end="255" kor="타사카드마일리지" type="decimal"/>
+    <fieldOffsets xmi:id="_1_Pqj6wZEe2Afv4JxZFnEA" name="etcMlg" start="255" end="275" kor="기타마일리지" type="decimal"/>
+    <fieldOffsets xmi:id="_1_PqkKwZEe2Afv4JxZFnEA" name="saleSumAmt" start="275" end="294" kor="매출합계금액" type="long"/>
+    <fieldOffsets xmi:id="_1_PqkawZEe2Afv4JxZFnEA" name="saleSumMlg" start="294" end="314" kor="매출합계마일리지" type="decimal"/>
+    <fieldOffsets xmi:id="_1_PqkqwZEe2Afv4JxZFnEA" name="qryPageNo" start="314" end="322" kor="조회페이지번호" type="long"/>
+    <fieldOffsets xmi:id="_1_Pqk6wZEe2Afv4JxZFnEA" name="lxgdsGbcd" start="322" end="323" kor="명품구분코드" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

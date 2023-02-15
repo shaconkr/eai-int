@@ -23,4 +23,7 @@
   <sca:component xmi:id="_FuvskKglEe2UVq3HmN-eBA" name="Component1HPGCISPMCV0110101_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_FuvskaglEe2UVq3HmN-eBA" processName="HPGCISOCCT.HPGCISOCCTJC01801_Main"/>
   </sca:component>
+  <sca:component xmi:id="_MHhJMKwaEe2Afv4JxZFnEA" name="ComponentHPGCISMTPH9000501_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_MHhJMawaEe2Afv4JxZFnEA" processName="HPGCISMTPH.HPGCISMTPH9000501_Main"/>
+  </sca:component>
 </sca:composite>
