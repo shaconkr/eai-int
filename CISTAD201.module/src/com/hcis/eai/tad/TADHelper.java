@@ -17,7 +17,8 @@ public class TADHelper<N> extends HCISHelper<N> {
         EDITransformer trans = new EDITransformer(interfaceId);
         String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
         log.debug("## streamName [{}] xml [{}] msgType [{}] ", streamName, xml, msgType);
-        return  trans.toEDI(streamName, encodedString, encoding, xml);
+        String edi =  trans.toEDI(streamName, encodedString, encoding, xml);        
+        return new String(setTotalLength(edi.getBytes(encoding), 8, 0, false, encoding),encoding); 
     }
 	
 	@Override	
