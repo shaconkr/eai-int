@@ -120,10 +120,9 @@
                 <variable>TCPOpenConnection</variable>
             </endingVariables>
         </task>
-        <task name="dumpLog">
+        <task name="LogEDI">
             <endingVariables>
-                <variable>dumpLog-input</variable>
-                <variable>dumpLog</variable>
+                <variable>LogEDI-input</variable>
             </endingVariables>
         </task>
         <task name="concatBytes">
@@ -136,6 +135,7 @@
         <task name="ResString">
             <endingVariables>
                 <variable>ResString-input</variable>
+                <variable>ResString</variable>
             </endingVariables>
         </task>
         <task name="ediBytesToJson">
@@ -165,7 +165,7 @@
         <task name="ResLog">
             <endingVariables>
                 <variable>ResLog-input</variable>
-                <variable>ResString</variable>
+                <variable>LogEDI</variable>
             </endingVariables>
         </task>
     </tibex:VariableDescriptor>
@@ -659,7 +659,7 @@
                     <element form="unqualified" maxOccurs="1"
                         minOccurs="1" name="bytes" type="base64Binary"/>
                     <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="encoding" type="string"/>
+                        minOccurs="1" name="xsdPath" type="string"/>
                 </sequence>
             </complexType>
             <element name="JavaInvokeActivityInput" type="tns:MutTypeMethodInputRoot"/>
@@ -676,7 +676,10 @@
             xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityOutput+a80b5706-d1da-4262-8aed-90916746fa84+JavaInvokeActivityOutput">
             <element name="JavaInvokeActivityOutput" type="tns:MutTypeMethodOutputRoot"/>
             <complexType name="MutTypeMethodOutputRoot">
-                <sequence/>
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="MethodReturnValue" type="string"/>
+                </sequence>
             </complexType>
         </schema>
         <schema attributeFormDefault="unqualified"
@@ -2006,17 +2009,6 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.13"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.14"/>
-            <bendpoints points="[25, 0, -78, 0]$[79, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.14" type="4006">
             <children type="6002">
@@ -2024,7 +2016,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.15"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.14"/>
             <bendpoints points="[25, 0, -80, 0]$[81, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2035,7 +2027,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.16"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.15"/>
             <bendpoints
                 points="[0, 25, 691, -90]$[0, 66, 691, -49]$[-786, 66, -95, -49]$[-786, 115, -95, 0]$[-715, 115, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -2047,7 +2039,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.17"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.16"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2058,8 +2050,19 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.18"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.17"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.13"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.18"/>
+            <bendpoints points="[25, 0, -87, 0]$[88, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -2183,9 +2186,9 @@
         <bpws:variable element="ns29:ActivityErrorData"
             name="_error_TCPCloseConnection" sca-bpel:internal="true"/>
         <bpws:variable element="ns30:JavaInvokeActivityInput"
-            name="dumpLog-input" sca-bpel:internal="true"/>
+            name="LogEDI-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns31:JavaInvokeActivityOutput"
-            name="dumpLog" sca-bpel:internal="true"/>
+            name="LogEDI" sca-bpel:internal="true"/>
         <bpws:variable element="ns32:ActivityErrorData"
             name="_error_ResString" sca-bpel:internal="true"/>
         <bpws:variable element="ns33:JavaInvokeActivityInput"
@@ -2246,11 +2249,11 @@
                 <bpws:link name="JavaInvoke8ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvoke9ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvoke10ToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="concatBytesTodumpLog" tibex:linkType="SUCCESS"/>
                 <bpws:link name="dumpLogTodumpFullLog" tibex:linkType="SUCCESS"/>
                 <bpws:link name="TCPCloseConnectionToconcatBytes" tibex:linkType="SUCCESS"/>
                 <bpws:link name="LogToWriteTCPData" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Log1ToediBytesToJson" tibex:linkType="SUCCESS"/>
+                <bpws:link name="concatBytesToLogEDI" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -2670,18 +2673,18 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="dumpLog-input"
-                    name="dumpLog" outputVariable="dumpLog"
+                <tibex:activityExtension inputVariable="LogEDI-input"
+                    name="LogEDI" outputVariable="LogEDI"
                     tibex:xpdlId="a80b5706-d1da-4262-8aed-90916746fa84" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="concatBytesTodumpLog"/>
+                        <bpws:target linkName="concatBytesToLogEDI"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="dumpLogTodumpFullLog"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+a80b5706-d1da-4262-8aed-90916746fa84+JavaInvokeActivityInput&quot; xmlns:Q2=&quot;http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataOutput+21a1f938-05b2-4a07-a634-d848c99adb67+ActivityOutput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;concatBytes&quot;/>&lt;xsl:template name=&quot;dumpLog-input&quot; match=&quot;/&quot;>&lt;tns11:JavaInvokeActivityInput>&lt;MethodParameters>&lt;bytes>&lt;xsl:value-of select=&quot;$concatBytes/MethodReturnValue&quot;/>&lt;/bytes>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;/MethodParameters>&lt;/tns11:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+a80b5706-d1da-4262-8aed-90916746fa84+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;concatBytes&quot;/>&lt;xsl:template name=&quot;LogEDI-input&quot; match=&quot;/&quot;>&lt;tns11:JavaInvokeActivityInput>&lt;MethodParameters>&lt;bytes>&lt;xsl:value-of select=&quot;$concatBytes/MethodReturnValue&quot;/>&lt;/bytes>&lt;xsdPath>&lt;xsl:value-of select=&quot;&amp;quot;/Schemas/CISTADAHFF/CISTADAHFF0030701/CISTADAHFF0030701_OutRes.xsd&amp;quot;&quot;/>&lt;/xsdPath>&lt;/MethodParameters>&lt;/tns11:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2693,17 +2696,16 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
                                     <value
-                                    className="com.hcis.eai.common.HCISHelper"
+                                    className="com.hcis.eai.tad.TADHelper"
                                     constructDeclaredClass="true"
                                     isNew="true"
                                     isNewActivity="true"
-                                    methodName="dumpBytes"
-                                    methodReturn="void" xsi:type="java:JavaMethod">
-                                    <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
+                                    methodName="logEDIBytes"
+                                    methodReturn="string" xsi:type="java:JavaMethod">
                                     <methodParameter
                                     paramName="bytes" paramType="byte[]"/>
                                     <methodParameter
-                                    paramName="encoding" paramType="string"/>
+                                    paramName="xsdPath" paramType="string"/>
                                     </value>
                                 </properties>
                             </activityConfig>
@@ -2720,7 +2722,7 @@
                         <bpws:target linkName="TCPCloseConnectionToconcatBytes"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="concatBytesTodumpLog"/>
+                        <bpws:source linkName="concatBytesToLogEDI"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -2974,7 +2976,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns17=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ResString&quot;/>&lt;xsl:template name=&quot;ResLog-input&quot; match=&quot;/&quot;>&lt;tns17:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;$ResString/MethodReturnValue&quot;/>&lt;/message>&lt;/tns17:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns17=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;LogEDI&quot;/>&lt;xsl:template name=&quot;ResLog-input&quot; match=&quot;/&quot;>&lt;tns17:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;$LogEDI/MethodReturnValue&quot;/>&lt;/message>&lt;/tns17:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity

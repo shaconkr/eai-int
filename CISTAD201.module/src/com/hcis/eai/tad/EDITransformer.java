@@ -20,14 +20,14 @@ public class EDITransformer extends Transformer {
 
 	@Override
 	protected StreamFactory newStreamFactory(String xmlpath) {
-    	log.debug("@@@@@@@@@@@@ load xml {}", xmlpath);
+    	log.debug("@@@ load xml {}", xmlpath);
         StreamFactory factory = StreamFactory.newInstance();
 		InputStream is = getClass().getResourceAsStream(xmlpath);
 		try {
 			if(is.available() > 0 ) {
-				log.debug("@@@@@@@@@@@@@@@@@ OKOKOIOIOI");
+				log.debug("@@@ Found O {}", xmlpath);
 			}else {
-				log.debug("@@@@@@@@@@@@@@@@@ 바바보보보보보보OKOKOIOIOI");
+				log.debug("@@@ Not Found O {}", xmlpath);
 			}
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
