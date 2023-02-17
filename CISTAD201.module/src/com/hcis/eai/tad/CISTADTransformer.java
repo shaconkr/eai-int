@@ -10,10 +10,10 @@ import org.slf4j.LoggerFactory;
 
 import kr.shacon.format.Transformer;
 
-public class EDITransformer extends Transformer {
+public class CISTADTransformer extends Transformer {
     private static final Logger log = LoggerFactory.getLogger(Transformer.class);
 	
-	public EDITransformer(String ifId) {
+	public CISTADTransformer(String ifId) {
 		super(ifId);
 		// TODO Auto-generated constructor stub
 	}

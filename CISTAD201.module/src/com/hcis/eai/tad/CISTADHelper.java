@@ -13,15 +13,15 @@ import com.hcis.eai.common.HCISHelper;
 import kr.shacon.format.TibXsdParser;
 
 
-public class TADHelper<N> extends HCISHelper<N> {
+public class CISTADHelper<N> extends HCISHelper<N> {
 	
-    private static final Logger log = LoggerFactory.getLogger(TADHelper.class);	
+    private static final Logger log = LoggerFactory.getLogger(CISTADHelper.class);	
 	
 	@Override
     public String toEDI(String msgType, String jsonString, String encoding, String xml) throws Exception {
         String encodedString = new String(jsonString.getBytes(encoding), encoding);
         String interfaceId = getInterfaceId();
-        EDITransformer trans = new EDITransformer(interfaceId);
+        CISTADTransformer trans = new CISTADTransformer(interfaceId);
         String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
         log.debug("## streamName [{}] xml [{}] msgType [{}] ", streamName, xml, msgType);
         String edi =  trans.toEDI(streamName, encodedString, encoding, xml);        
@@ -31,7 +31,7 @@ public class TADHelper<N> extends HCISHelper<N> {
 	@Override	
     public String toJSON(String msgType, String ediString, String encoding, String xml) throws Exception {
         String interfaceId = getInterfaceId();
-        EDITransformer trans = new EDITransformer(interfaceId);
+        CISTADTransformer trans = new CISTADTransformer(interfaceId);
         String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
         return new String(trans.toJSON(streamName, ediString, encoding, null).getBytes(encoding), encoding);
     }
