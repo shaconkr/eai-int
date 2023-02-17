@@ -41,7 +41,7 @@
         <field kor="점코드" name="storeCd" position="326" length="3"/>  
         <field kor="사용자ID" name="userId" position="329" length="8"/>  
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="337" length="100"/>  
-        <segment name="msgGrpNm" minOccurs="1" collection="list" maxOccurs="unbounded" class="map"> 
+        <segment name="msgGrpNm" minOccurs="0" collection="list" maxOccurs="unbounded" class="map"> 
           <field kor="메시지표시방법구분코드" name="msgShwMthdGbcd" position="437" length="1"/>  
           <field kor="오류발생전문항목명" name="errOcrnTgrmClasNm" position="438" length="50"/>  
           <field kor="메시지코드" name="msgCd" position="488" length="10"/>  
@@ -101,7 +101,7 @@
         <field kor="점코드" name="storeCd" position="326" length="3"/>
         <field kor="사용자ID" name="userId" position="329" length="8"/>
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="337" length="100"/>
-        <segment name="msgGrpNm" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
+        <segment name="msgGrpNm" minOccurs="0" collection="list" maxOccurs="unbounded" class="map">
           <field kor="메시지표시방법구분코드" name="msgShwMthdGbcd" position="437" length="1"/>
           <field kor="오류발생전문항목명" name="errOcrnTgrmClasNm" position="438" length="50"/>
           <field kor="메시지코드" name="msgCd" position="488" length="10"/>
@@ -112,7 +112,7 @@
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
         <field kor="조회결과_배열건수" name="rsltRowcount" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="rsltList" minOccurs="1" collection="list" maxOccurs="unbounded" class="map">
+        <segment name="rsltList" minOccurs="0" collection="list" maxOccurs="unbounded" class="map">
           <field kor="카드회원번호" name="crdMemNo" position="1805" length="9"/>
           <field kor="청구결제단위번호" name="reqStlmUnitNo" position="1814" length="4"/>
           <field kor="매출관리번호" name="saleMngNo" position="1818" length="18"/>
