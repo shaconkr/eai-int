@@ -1238,7 +1238,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="299"
+                                    x="264"
                                     xsi:type="notation:Bounds" y="2"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1279,7 +1279,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="452"
+                                    x="404"
                                     xsi:type="notation:Bounds" y="2"/>
                                     </children>
                                     <children type="4002 bw.tcp.tcpopenconnection">
@@ -1361,7 +1361,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="595"
+                                    x="541"
                                     xsi:type="notation:Bounds" y="2"/>
                                     </children>
                                     <children type="4002 bw.tcp.write">
@@ -1402,7 +1402,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="168"
+                                    x="143"
                                     xsi:type="notation:Bounds" y="112"/>
                                     </children>
                                     <children type="4002 bw.tcp.read">
@@ -1443,7 +1443,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="299"
+                                    x="279"
                                     xsi:type="notation:Bounds" y="112"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1566,7 +1566,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.11"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="778"
+                                    x="722"
                                     xsi:type="notation:Bounds" y="112"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1607,7 +1607,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.12"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="135"
+                                    x="127"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1689,7 +1689,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.14"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="231"
+                                    x="237"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1730,7 +1730,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.15"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="414"
+                                    x="452"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1771,7 +1771,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="527"
+                                    x="565"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1812,7 +1812,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="658"
+                                    x="681"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.log">
@@ -1849,7 +1849,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.18"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="675"
+                                    x="674"
                                     xsi:type="notation:Bounds" y="2"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.log">
@@ -1886,7 +1886,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.19"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="319"
+                                    x="345"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1931,7 +1931,7 @@
             </children>
             <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="1337" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="409" width="1299" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -2077,7 +2077,8 @@
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.12"/>
             <bendpoints
-                points="[0, 25, 691, -90]$[0, 66, 691, -49]$[-786, 66, -95, -49]$[-786, 115, -95, 0]$[-715, 115, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+                points="[9, 16, 724, -115]$[33, 16, 748, -115]$[33, 81, 748, -50]$[-760, 81, -45, -50]$[-760, 131, -45, 0]$[-739, 131, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <sourceAnchor id="(0.8163265306122449,0.16326530612244897)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.19"
@@ -2134,6 +2135,7 @@
             <element href="//0/@process/@activity/@activity/@links/@children.17"/>
             <bendpoints
                 points="[25, 9, 698, -101]$[55, 9, 728, -101]$[55, 65, 728, -45]$[-673, 65, 0, -45]$[-673, 86, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <sourceAnchor id="(1.0,0.24489795918367346)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
@@ -2238,8 +2240,6 @@
             name="_error_TCPOpenConnection" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:JavaInvokeActivityInput"
             name="ReqString-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns16:JavaInvokeActivityOutput"
-            name="ReqString" sca-bpel:internal="true"/>
         <bpws:variable element="ns17:ActivityErrorData"
             name="_error_ReqString" sca-bpel:internal="true"/>
         <bpws:variable element="ns18:ActivityInput"
@@ -2305,6 +2305,8 @@
             name="_error_TADtoCIS" sca-bpel:internal="true"/>
         <bpws:variable element="ns48:ActivityInput" name="ReqLog-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns48:ActivityInput" name="ResLog-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns16:JavaInvokeActivityOutput"
+            name="ReqString" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2556,7 +2558,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+d0599020-2a11-445b-b939-af39d574af8d+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JsonToEdiBytesLen&quot;/>&lt;xsl:template name=&quot;ReqData-input&quot; match=&quot;/&quot;>&lt;tns5:JavaInvokeActivityInput>&lt;MethodParameters>&lt;bytes>&lt;xsl:value-of select=&quot;$JsonToEdiBytesLen/MethodReturnValue&quot;/>&lt;/bytes>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;/MethodParameters>&lt;/tns5:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+d0599020-2a11-445b-b939-af39d574af8d+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JsonToEdiBytesLen&quot;/>&lt;xsl:template name=&quot;ReqString-input&quot; match=&quot;/&quot;>&lt;tns5:JavaInvokeActivityInput>&lt;MethodParameters>&lt;bytes>&lt;xsl:value-of select=&quot;$JsonToEdiBytesLen/MethodReturnValue&quot;/>&lt;/bytes>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;/MethodParameters>&lt;/tns5:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
