@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFF0030601="http://schema.hcis.com/xsd/CISTADAHFF0030601_OutReq_SRCH_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_KNCEoKaXEe2g8c1_8fAd2g" name="CISTADAHFF.CISTADAHFF0030601.CISTADAHFF0030601_OutReq_SRCH_GROUP_TYPE" type="dataformat:DataFormat">
-  <imports xmi:id="_KNCEoaaXEe2g8c1_8fAd2g" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFF0030601_OutReq_SRCH_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFF0030601_OutReq_SRCH_GROUP_TYPE"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_KNCEoqaXEe2g8c1_8fAd2g" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFF0030601:main" lineLength="11" fieldOffsetsStr="wrkGbVal(0,2)&#xA;crdMemNo(2,11)">
-    <fieldOffsets xmi:id="_KNCrsKaXEe2g8c1_8fAd2g" name="wrkGbVal" end="2" kor="작업구분값" type="string"/>
-    <fieldOffsets xmi:id="_KNCrsaaXEe2g8c1_8fAd2g" name="crdMemNo" start="2" end="11" kor="카드회원번호" type="string"/>
-  </jndi:configuration>
-</jndi:namedResource>

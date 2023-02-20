@@ -12,10 +12,7 @@
   <sca:component xmi:id="_aCD5UI_-Ee2EFu28jDi2mQ" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_aCD5UY_-Ee2EFu28jDi2mQ" processName="CISTAD201.module.Activator"/>
   </sca:component>
-  <sca:component xmi:id="_QpZ_kKBfEe2pvsthhy0UVw" name="ComponentCISTADAHFF0030701_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_QpZ_kaBfEe2pvsthhy0UVw" processName="CISTADAHFF.CISTADAHFF0030701_Main"/>
-  </sca:component>
-  <sca:component xmi:id="_czZdIKzJEe2_4Pv6XGyLVg" name="ComponentCISTADAHFA0060101_Chk" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_czZdIazJEe2_4Pv6XGyLVg" processName="CISTADAHFF.CISTADAHFF0030701_Chk"/>
+  <sca:component xmi:id="_ZEtsgK6YEe2gWfIqVklI_A" name="Component1CISTADAHFF0030701_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ZEtsga6YEe2gWfIqVklI_A" processName="CISTADAHFA.CISTADAHFA0130301.CISTADAHFA0130301_Main"/>
   </sca:component>
 </sca:composite>

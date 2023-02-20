@@ -6,15 +6,20 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: TIBCO Software Inc.
 Export-Package: TADCIS201,
- TADCISMTSY,
  com.hcis.eai.tad
 Require-Bundle: HcisCommon.smodule;bundle-version="1.0.0"
-TIBCO-BW-Version: 6.9.0 V26 2022-11-02
+Import-Package: com.tibco.bw.palette.shared.java;version="6.2.1600",
+ com.tibco.bw.runtime;version="6.3.2400",
+ kr.shacon.format,
+ org.beanio,
+ org.beanio.internal.util,
+ org.slf4j
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
-Bundle-RequiredExecutionEnvironment: JavaSE-11
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
 TIBCO-BW-Edition: bwe
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.module; filter:="(&(name=CSPI_Library)(version=2.0.0))",
  com.tibco.bw.module; filter:="(&(name=HcisCommon.smodule)(version=1.0.0))",
@@ -28,10 +33,4 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.java)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.tcp)"
-TIBCO-BW-ApplicationModule: META-INF/module.bwm
-Import-Package: com.tibco.bw.palette.shared.java;version="6.2.1600",
- com.tibco.bw.runtime;version="6.3.2400",
- kr.shacon.format,
- org.beanio,
- org.beanio.internal.util,
- org.slf4j
+TIBCO-BW-Version: 6.9.0 V26 2022-11-02

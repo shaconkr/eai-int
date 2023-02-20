@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0060101="http://schema.hcis.com/xsd/CISTADAHHE0060101_OutRes_RST_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4CRYkK6SEe2PpOOSq4lfZQ" name="CISTADAHHE.CISTADAHHE0060101.CISTADAHHE0060101_OutRes_RST_LIST_TYPE" type="dataformat:DataFormat">
+  <imports xmi:id="_4CRYka6SEe2PpOOSq4lfZQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0060101_OutRes_RST_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0060101_OutRes_RST_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_4CR_oK6SEe2PpOOSq4lfZQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0060101:main" lineLength="494" fieldOffsetsStr="crdNo(0,16)&#xA;crdBrndCd(16,20)&#xA;aprvlNo(20,32)&#xA;storeCd(32,35)&#xA;aprvlInfwGbcd(35,36)&#xA;aprvId(36,136)&#xA;aprvlDtm(136,150)&#xA;posNo(150,156)&#xA;insmMths(156,158)&#xA;aprvlIamtGbcd(158,159)&#xA;tsaleAmt(159,177)&#xA;dcAmt(177,195)&#xA;nsaleAmt(195,213)&#xA;iamtAmt(213,231)&#xA;crdAprvlAmt(231,249)&#xA;aprvlRstCsfCd(249,250)&#xA;aprvlCd(250,254)&#xA;aprvlMemo(254,454)&#xA;enuriGbVal(454,456)&#xA;itemCd(456,476)&#xA;itemAmt(476,494)">
+    <fieldOffsets xmi:id="_4CR_oa6SEe2PpOOSq4lfZQ" name="crdNo" end="16" kor="카드번호" type="string"/>
+    <fieldOffsets xmi:id="_4CR_oq6SEe2PpOOSq4lfZQ" name="crdBrndCd" start="16" end="20" kor="카드브랜드코드" type="string"/>
+    <fieldOffsets xmi:id="_4CR_o66SEe2PpOOSq4lfZQ" name="aprvlNo" start="20" end="32" kor="승인번호" type="string"/>
+    <fieldOffsets xmi:id="_4CR_pK6SEe2PpOOSq4lfZQ" name="storeCd" start="32" end="35" kor="점코드" type="string"/>
+    <fieldOffsets xmi:id="_4CR_pa6SEe2PpOOSq4lfZQ" name="aprvlInfwGbcd" start="35" end="36" kor="승인유입구분코드" type="string"/>
+    <fieldOffsets xmi:id="_4CR_pq6SEe2PpOOSq4lfZQ" name="aprvId" start="36" end="136" kor="승인자ID" type="string"/>
+    <fieldOffsets xmi:id="_4CR_p66SEe2PpOOSq4lfZQ" name="aprvlDtm" start="136" end="150" kor="승인일시" type="string"/>
+    <fieldOffsets xmi:id="_4CR_qK6SEe2PpOOSq4lfZQ" name="posNo" start="150" end="156" kor="포스번호" type="string"/>
+    <fieldOffsets xmi:id="_4CR_qa6SEe2PpOOSq4lfZQ" name="insmMths" start="156" end="158" kor="할부개월수" type="string"/>
+    <fieldOffsets xmi:id="_4CR_qq6SEe2PpOOSq4lfZQ" name="aprvlIamtGbcd" start="158" end="159" kor="승인입금구분코드" type="string"/>
+    <fieldOffsets xmi:id="_4CR_q66SEe2PpOOSq4lfZQ" name="tsaleAmt" start="159" end="177" kor="총매출금액" type="string"/>
+    <fieldOffsets xmi:id="_4CR_rK6SEe2PpOOSq4lfZQ" name="dcAmt" start="177" end="195" kor="할인금액" type="string"/>
+    <fieldOffsets xmi:id="_4CR_ra6SEe2PpOOSq4lfZQ" name="nsaleAmt" start="195" end="213" kor="순매출금액" type="string"/>
+    <fieldOffsets xmi:id="_4CR_rq6SEe2PpOOSq4lfZQ" name="iamtAmt" start="213" end="231" kor="입금금액" type="string"/>
+    <fieldOffsets xmi:id="_4CR_r66SEe2PpOOSq4lfZQ" name="crdAprvlAmt" start="231" end="249" kor="카드승인금액" type="string"/>
+    <fieldOffsets xmi:id="_4CR_sK6SEe2PpOOSq4lfZQ" name="aprvlRstCsfCd" start="249" end="250" kor="승인결과분류코드" type="string"/>
+    <fieldOffsets xmi:id="_4CR_sa6SEe2PpOOSq4lfZQ" name="aprvlCd" start="250" end="254" kor="승인코드" type="string"/>
+    <fieldOffsets xmi:id="_4CR_sq6SEe2PpOOSq4lfZQ" name="aprvlMemo" start="254" end="454" kor="승인메모" type="string"/>
+    <fieldOffsets xmi:id="_4CR_s66SEe2PpOOSq4lfZQ" name="enuriGbVal" start="454" end="456" kor="에누리구분값" type="string"/>
+    <fieldOffsets xmi:id="_4CR_tK6SEe2PpOOSq4lfZQ" name="itemCd" start="456" end="476" kor="상품코드" type="string"/>
+    <fieldOffsets xmi:id="_4CR_ta6SEe2PpOOSq4lfZQ" name="itemAmt" start="476" end="494" kor="상품금액" type="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

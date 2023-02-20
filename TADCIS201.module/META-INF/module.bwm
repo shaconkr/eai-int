@@ -21,6 +21,6 @@
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_yqcg8ag_Ee2Ek8WUBmMbIg" processName="TADCIS201.module.TADCIS_Recv"/>
   </sca:component>
   <sca:component xmi:id="_98lVkKjZEe2Ek8WUBmMbIg" name="ComponentTADCISMTSY0008001_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_98lVkajZEe2Ek8WUBmMbIg" processName="TADCISMTSY.TADCISMTSY0008001_Main"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_98lVkajZEe2Ek8WUBmMbIg" processName="TADCISMTSY.TADCISMTSY0008001.TADCISMTSY0008001_Main"/>
   </sca:component>
 </sca:composite>
