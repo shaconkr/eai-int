@@ -1,0 +1,8 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/HPTCISCTCN0013601_InReq" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/HPTCISCTCN0013601_InReq">
+    <element name="root" type="ns:HPTCISCTCN0013601_InReq"/>
+    <complexType name="HPTCISCTCN0013601_InReq">
+        <sequence>
+            <element e:kor="코드명" e:length="200" e:padder="SpaceRight" name="cdNm" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
