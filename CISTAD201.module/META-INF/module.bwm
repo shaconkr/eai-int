@@ -15,14 +15,8 @@
   <sca:component xmi:id="_1-oawLDgEe2pCfERdvXknw" name="ComponentCISTADAHFA0100101_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1-oawbDgEe2pCfERdvXknw" processName="CISTADAHFA.CISTADAHFA0100101.CISTADAHFA0100101_Main"/>
   </sca:component>
-  <sca:component xmi:id="_1-xksLDgEe2pCfERdvXknw" name="ComponentCISTADAHFA0100201_Chk" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1-xksbDgEe2pCfERdvXknw" processName="CISTADAHFA.CISTADAHFA0100201.CISTADAHFA0100201_Chk"/>
-  </sca:component>
   <sca:component xmi:id="_1-0oALDgEe2pCfERdvXknw" name="ComponentCISTADAHFA0100201_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1-0oAbDgEe2pCfERdvXknw" processName="CISTADAHFA.CISTADAHFA0100201.CISTADAHFA0100201_Main"/>
-  </sca:component>
-  <sca:component xmi:id="_1-5ggLDgEe2pCfERdvXknw" name="ComponentCISTADAHFA0130101_Chk" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1-5ggbDgEe2pCfERdvXknw" processName="CISTADAHFA.CISTADAHFA0130101.CISTADAHFA0130101_Chk"/>
   </sca:component>
   <sca:component xmi:id="_1-78wLDgEe2pCfERdvXknw" name="ComponentCISTADAHFA0130101_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1-78wbDgEe2pCfERdvXknw" processName="CISTADAHFA.CISTADAHFA0130101.CISTADAHFA0130101_Main"/>
@@ -50,11 +44,5 @@
   </sca:component>
   <sca:component xmi:id="_1_Qs4LDgEe2pCfERdvXknw" name="ComponentCISTADMTSY0006001_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1_Qs4bDgEe2pCfERdvXknw" processName="CISTADMTSY.CISTADMTSY0006001.CISTADMTSY0006001_Main"/>
-  </sca:component>
-  <sca:component xmi:id="_Ku8wkLD4Ee2pCfERdvXknw" name="ComponentCISTADAHHE0080101_Chk" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Ku8wkbD4Ee2pCfERdvXknw" processName="CISTADAHHE.CISTADAHHE0080101.CISTADAHHE0080101_Chk"/>
-  </sca:component>
-  <sca:component xmi:id="_wUi44LD4Ee2pCfERdvXknw" name="ComponentCISTADAHFA0100101_Chk" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_wUi44bD4Ee2pCfERdvXknw" processName="CISTADAHFA.CISTADAHFA0100101.CISTADAHFA0100101_Chk"/>
   </sca:component>
 </sca:composite>
