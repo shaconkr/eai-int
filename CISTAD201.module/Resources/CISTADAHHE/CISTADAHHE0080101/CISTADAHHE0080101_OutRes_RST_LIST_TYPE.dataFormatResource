@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0080101="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutRes_RST_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4Cs2YK6SEe2PpOOSq4lfZQ" name="CISTADAHHE.CISTADAHHE0080101.CISTADAHHE0080101_OutRes_RST_LIST_TYPE" type="dataformat:DataFormat">
-  <imports xmi:id="_4Cs2Ya6SEe2PpOOSq4lfZQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0080101_OutRes_RST_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutRes_RST_LIST_TYPE"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_4Cs2Yq6SEe2PpOOSq4lfZQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0080101:main" lineLength="248" fieldOffsetsStr="storeCd(0,3)&#xA;aprvId(3,103)&#xA;aprvlGbcd(103,104)&#xA;rstTotCnt(104,122)&#xA;rstTotAmt(122,140)&#xA;aprvlCnt(140,158)&#xA;aprvlAmt(158,176)&#xA;cnclCnt(176,194)&#xA;cnclAmt(194,212)&#xA;aprvlNdmtCnt(212,230)&#xA;aprvlNdmtAmt(230,248)">
-    <fieldOffsets xmi:id="_4Cs2Y66SEe2PpOOSq4lfZQ" name="storeCd" end="3" kor="점코드" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2ZK6SEe2PpOOSq4lfZQ" name="aprvId" start="3" end="103" kor="승인자ID" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2Za6SEe2PpOOSq4lfZQ" name="aprvlGbcd" start="103" end="104" kor="승인구분코드" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2Zq6SEe2PpOOSq4lfZQ" name="rstTotCnt" start="104" end="122" kor="결과총건수" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2Z66SEe2PpOOSq4lfZQ" name="rstTotAmt" start="122" end="140" kor="결과총금액" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2aK6SEe2PpOOSq4lfZQ" name="aprvlCnt" start="140" end="158" kor="승인건수" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2aa6SEe2PpOOSq4lfZQ" name="aprvlAmt" start="158" end="176" kor="승인금액" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2aq6SEe2PpOOSq4lfZQ" name="cnclCnt" start="176" end="194" kor="취소건수" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2a66SEe2PpOOSq4lfZQ" name="cnclAmt" start="194" end="212" kor="취소금액" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2bK6SEe2PpOOSq4lfZQ" name="aprvlNdmtCnt" start="212" end="230" kor="승인불가건수" type="string"/>
-    <fieldOffsets xmi:id="_4Cs2ba6SEe2PpOOSq4lfZQ" name="aprvlNdmtAmt" start="230" end="248" kor="승인불가금액" type="string"/>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0080101="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutRes_RST_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4cnLILHHEe23KKQfzOtu_g" name="CISTADAHHE.CISTADAHHE0080101.CISTADAHHE0080101_OutRes_RST_LIST_TYPE" type="dataformat:DataFormat">
+  <imports xmi:id="_4cnLIbHHEe23KKQfzOtu_g" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0080101_OutRes_RST_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutRes_RST_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_4cnLIrHHEe23KKQfzOtu_g" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0080101:main" lineLength="248" fieldOffsetsStr="storeCd(0,3)&#xA;aprvId(3,103)&#xA;aprvlGbcd(103,104)&#xA;rstTotCnt(104,122)&#xA;rstTotAmt(122,140)&#xA;aprvlCnt(140,158)&#xA;aprvlAmt(158,176)&#xA;cnclCnt(176,194)&#xA;cnclAmt(194,212)&#xA;aprvlNdmtCnt(212,230)&#xA;aprvlNdmtAmt(230,248)">
+    <fieldOffsets xmi:id="_4cnLI7HHEe23KKQfzOtu_g" name="storeCd" end="3" kor="점코드" type="string"/>
+    <fieldOffsets xmi:id="_4cnLJLHHEe23KKQfzOtu_g" name="aprvId" start="3" end="103" kor="승인자ID" type="string"/>
+    <fieldOffsets xmi:id="_4cnLJbHHEe23KKQfzOtu_g" name="aprvlGbcd" start="103" end="104" kor="승인구분코드" type="string"/>
+    <fieldOffsets xmi:id="_4cnLJrHHEe23KKQfzOtu_g" name="rstTotCnt" start="104" end="122" kor="결과총건수" type="string"/>
+    <fieldOffsets xmi:id="_4cnLJ7HHEe23KKQfzOtu_g" name="rstTotAmt" start="122" end="140" kor="결과총금액" type="string"/>
+    <fieldOffsets xmi:id="_4cnLKLHHEe23KKQfzOtu_g" name="aprvlCnt" start="140" end="158" kor="승인건수" type="string"/>
+    <fieldOffsets xmi:id="_4cnLKbHHEe23KKQfzOtu_g" name="aprvlAmt" start="158" end="176" kor="승인금액" type="string"/>
+    <fieldOffsets xmi:id="_4cnLKrHHEe23KKQfzOtu_g" name="cnclCnt" start="176" end="194" kor="취소건수" type="string"/>
+    <fieldOffsets xmi:id="_4cnLK7HHEe23KKQfzOtu_g" name="cnclAmt" start="194" end="212" kor="취소금액" type="string"/>
+    <fieldOffsets xmi:id="_4cnLLLHHEe23KKQfzOtu_g" name="aprvlNdmtCnt" start="212" end="230" kor="승인불가건수" type="string"/>
+    <fieldOffsets xmi:id="_4cnLLbHHEe23KKQfzOtu_g" name="aprvlNdmtAmt" start="230" end="248" kor="승인불가금액" type="string"/>
   </jndi:configuration>
 </jndi:namedResource>
