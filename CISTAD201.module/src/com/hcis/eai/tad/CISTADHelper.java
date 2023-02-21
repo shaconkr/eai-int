@@ -30,10 +30,13 @@ public class CISTADHelper<N> extends HCISHelper<N> {
 	
 	@Override	
     public String toJSON(String msgType, String ediString, String encoding, String xml) throws Exception {
+log.debug("sbYi --------  CISTADHelper.toJSON  --------------  ediString : {}", ediString);
+log.debug("sbYi --------  CISTADHelper.toJSON  -----  ediString.length() : {}", ediString.length());
         String interfaceId = getInterfaceId();
         CISTADTransformer trans = new CISTADTransformer(interfaceId);
         String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
-        return new String(trans.toJSON(streamName, ediString, encoding, null).getBytes(encoding), encoding);
+        return new String(trans.toJSON(streamName, ediString, encoding, xml).getBytes(encoding), encoding);
+//        return new String(trans.toJSON(streamName, ediString, encoding, null).getBytes(encoding), encoding);
     }
 	
 	@Override

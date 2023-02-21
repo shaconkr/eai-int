@@ -39,7 +39,7 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" position="409" length="10"/> 
       </segment>  
-      <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="data" minOccurs="0" maxOccurs="1" class="map"> 
         <field kor="작업처리구분코드" name="wrkProcGbcd" position="419" length="2"/>  
         <field kor="특정회원구분코드" name="ptcrMemGbcd" position="421" length="2"/>  
         <field kor="우선승인유형코드" name="priorAprvlTypeCd" position="423" length="1"/>  
@@ -90,16 +90,6 @@
         <field kor="다음검색KEY" name="nxtSrchKey" position="429" length="30"/>
         <segment name="rstList" minOccurs="0" collection="list" maxOccurs="unbounded" class="map">
           <field kor="카드회원번호" name="crdMemNo" position="459" length="9"/>
-          <field kor="회원명" name="memNm" position="468" length="100"/>
-          <field kor="특정회원구분코드" name="ptcrMemGbcd" position="568" length="2"/>
-          <field kor="우선승인유형코드" name="priorAprvlTypeCd" position="570" length="1"/>
-          <field kor="적용일자" name="aplyDt" position="571" length="8"/>
-          <field kor="해제일자" name="clerDt" position="579" length="8"/>
-          <field kor="등록사유" name="regRsn" position="587" length="2000"/>
-          <field kor="가족적용여부" name="famlAplyYn" position="2587" length="1"/>
-          <field kor="등록점코드" name="regStoreCd" position="2588" length="3"/>
-          <field kor="등록ID" name="regId" position="2591" length="100"/>
-          <field kor="등록일시" name="regDtm" position="2691" length="14"/>
         </segment>
       </segment>
     </record>

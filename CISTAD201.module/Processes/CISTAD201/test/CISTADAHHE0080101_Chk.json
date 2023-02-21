@@ -1,0 +1,39 @@
+{
+  "header" : {
+"totTgrmLen" : 0,
+"hdrLen" : 0,
+"tgrmFrmCd" : "",
+"sysEnvGbcd" : "",
+"ipAdr" : "",
+"guid" : "",
+"prgrNo" : 0,
+"frstGuid" : "",
+"sendSysCd" : "",
+"frstSendSysCd" : "",
+"sysCommTrtyPrepCntn" : "",
+"eimsTgrmId" : "",
+"eimsTgrmVerNo" : "",
+"frwkTrdId" : "",
+"rcvSysCd" : "",
+"tieTgrmCd" : "",
+"tieSrvGrpCd" : "",
+"tieSrvNm" : "",
+"scrnNo" : "",
+"reqnRespGbcd" : "",
+"syncProcGbcd" : "",
+"trdRespCd" : "",
+"reqnDtm" : "",
+"respDtm" : "",
+"storeCd" : "",
+"userId" : "",
+"trdCommTrtyPrepCntn" : "",
+"msgCd" : ""
+  },
+  "data" : {
+"storeCd" : "",
+"aprvId" : "",
+"strtYm" : "",
+"endYm" : "",
+"nxtSrchKey" : ""
+  }
+}

@@ -45,4 +45,10 @@
   <sca:component xmi:id="_1_Qs4LDgEe2pCfERdvXknw" name="ComponentCISTADMTSY0006001_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1_Qs4bDgEe2pCfERdvXknw" processName="CISTADMTSY.CISTADMTSY0006001.CISTADMTSY0006001_Main"/>
   </sca:component>
+  <sca:component xmi:id="_pjEKULGCEe2h9ZxhwzAiYA" name="ComponentCISTADAHFA0130301_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_pjEKUbGCEe2h9ZxhwzAiYA" processName="CISTADAHFA.CISTADAHFA0130301.CISTADAHFA0130301_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_uuWjcLGCEe2h9ZxhwzAiYA" name="ComponentCISTADAHFA0100101_Chk" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_uuWjcbGCEe2h9ZxhwzAiYA" processName="CISTAD201.test.CISTADAHFA0100101_Chk"/>
+  </sca:component>
 </sca:composite>

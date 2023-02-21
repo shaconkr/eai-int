@@ -1,0 +1,41 @@
+{
+  "header" : {
+"totTgrmLen" : 0,
+"hdrLen" : 0,
+"tgrmFrmCd" : "X",
+"sysEnvGbcd" : "L",
+"ipAdr" : "127.0.0.1",
+"guid" : "20230214170835560CIS0101U84QPWQ0",
+"prgrNo" : 1,
+"frstGuid" : "20230214170835560CIS0101U84QPWQ0",
+"sendSysCd" : "CIS",
+"frstSendSysCd" : "SUI",
+"sysCommTrtyPrepCntn" : "",
+"eimsTgrmId" : "CISTADAHFA0100101",
+"eimsTgrmVerNo" : "001",
+"frwkTrdId" : "ADAHFA01001R",
+"rcvSysCd" : "TAD",
+"tieTgrmCd" : "",
+"tieSrvGrpCd" : "",
+"tieSrvNm" : "",
+"scrnNo" : "CISAHFA0100101",
+"reqnRespGbcd" : "S",
+"syncProcGbcd" : "S",
+"trdRespCd" : "",
+"reqnDtm" : "202302210929111111",
+"respDtm" : "",
+"storeCd" : "200",
+"userId" : "2236662",
+"trdCommTrtyPrepCntn" : "",
+"msgCd" : ""
+  },
+  "data" : {
+"wrkProcGbcd" : "00",
+"ptcrMemGbcd" : "00",
+"priorAprvlTypeCd" : "0",
+"qryStrtDt" : "20230120",
+"qryEndDt" : "20230220",
+"crdMemNo" : "",
+"nxtSrchKey" : ""
+  }
+}

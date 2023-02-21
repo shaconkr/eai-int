@@ -51,7 +51,6 @@
         <task name="L_Set_LogEnd">
             <endingVariables>
                 <variable>L_Set_LogEnd-input</variable>
-                <variable>JMSReceiveMessage</variable>
                 <variable>ParseJSON</variable>
                 <variable>L_Get_InterfaceInfo</variable>
             </endingVariables>
@@ -84,6 +83,7 @@
         <task name="L_Set_LogError">
             <endingVariables>
                 <variable>L_Set_LogError-input</variable>
+                <variable>JMSReceiveMessage</variable>
             </endingVariables>
         </task>
     </tibex:VariableDescriptor>
@@ -1599,7 +1599,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/CISTADAHFA0100201_InReq&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&#xa;    &lt;xsl:param name=&quot;ParseJSON&quot;/>&#xa;    &lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&#xa;    &lt;xsl:template name=&quot;L_Set_LogEnd-input&quot; match=&quot;/&quot;>&#xa;        &lt;Log:SetLog>&#xa;            &lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&#xa;                &lt;Log:InterfaceSysId>&#xa;                    &lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&#xa;                &lt;/Log:InterfaceSysId>&#xa;            &lt;/xsl:if>&#xa;            &lt;Log:Detail>&#xa;                &lt;Log:Key>&#xa;                    &lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&#xa;                &lt;/Log:Key>&#xa;                &lt;Log:Value>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;/>&#xa;                &lt;/Log:Value>&#xa;            &lt;/Log:Detail>&#xa;            &lt;Log:Detail>&#xa;                &lt;Log:Key>&#xa;                    &lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&#xa;                &lt;/Log:Key>&#xa;                &lt;Log:Value>&#xa;                    &lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&#xa;                &lt;/Log:Value>&#xa;            &lt;/Log:Detail>&#xa;        &lt;/Log:SetLog>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/CISTADAHFA0100201_InReq&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;replyData&quot;/>&lt;xsl:template name=&quot;L_Set_LogEnd-input&quot; match=&quot;/&quot;>&lt;Log:SetLog>&lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&lt;Log:InterfaceSysId>&lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&lt;/Log:InterfaceSysId>&lt;/xsl:if>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$replyData&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;/Log:SetLog>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess moduleRef="CSPI_Library"
                         subProcessName="L_Set_LogEnd" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>

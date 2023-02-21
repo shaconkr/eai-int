@@ -20,7 +20,6 @@ public class CISTADTransformer extends Transformer {
 
 	@Override
 	protected StreamFactory newStreamFactory(String xmlpath) {
-log.debug("sbYi ------- newStreamFactory -------------- ");
     	log.debug("@@@ load xml {}", xmlpath);
         StreamFactory factory = StreamFactory.newInstance();
 		InputStream is = getClass().getResourceAsStream(xmlpath);
@@ -48,14 +47,12 @@ log.debug("sbYi ------- newStreamFactory -------------- ");
 
 	@Override
 	public String toEDI(String msgType, String jsonString, String encoding, String xml) {
-log.debug("sbYi ------- toEDI -------------- ");
 		// TODO Auto-generated method stub
 		return super.toEDI(msgType, jsonString, encoding, xml);
 	}
 
 	@Override
 	public String toJSON(String msgType, String ediString, String encoding, String xml) {
-log.debug("sbYi ------- toJSON -------------- ");
 		// TODO Auto-generated method stub
 		return super.toJSON(msgType, ediString, encoding, xml);
 	}
