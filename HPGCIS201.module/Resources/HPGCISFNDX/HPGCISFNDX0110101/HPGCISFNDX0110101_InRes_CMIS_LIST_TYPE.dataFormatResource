@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HPGCISFNDX0110101="http://schema.hcis.com/xsd/HPGCISFNDX0110101_InRes_CMIS_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="HPGCISFNDX/HPGCISFNDX0110101.HPGCISFNDX0110101_InRes_CMIS_LIST_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/HPGCISFNDX0110101_InRes_CMIS_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/HPGCISFNDX0110101_InRes_CMIS_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="HPGCISFNDX0110101:main" lineLength="51" fieldOffsetsStr="reqTmnm(0,2)&#xA;reqPrncAmt(2,21)&#xA;cmisAmt(21,34)&#xA;mmChrAmt(34,51)">
+    <fieldOffsets kor="청구회차" type="long" name="reqTmnm" start="0" end="2"/>
+    <fieldOffsets kor="청구원금금액" type="long" name="reqPrncAmt" start="2" end="21"/>
+    <fieldOffsets kor="수수료금액" type="long" name="cmisAmt" start="21" end="34"/>
+    <fieldOffsets kor="월청구금액" type="decimal" name="mmChrAmt" start="34" end="51"/>
+  </jndi:configuration>
+</jndi:namedResource>

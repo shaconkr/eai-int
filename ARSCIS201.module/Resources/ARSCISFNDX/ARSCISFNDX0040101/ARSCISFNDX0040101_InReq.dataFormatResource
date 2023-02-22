@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISFNDX0040101="http://schema.hcis.com/xsd/ARSCISFNDX0040101_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_LgzpCLJxEe2uvYv9z75GrA" name="ARSCISFNDX0040101_InReq" type="dataformat:DataFormat">
+  <imports xmi:id="_LgzpCbJxEe2uvYv9z75GrA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISFNDX0040101_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISFNDX0040101_InReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_LgzpCrJxEe2uvYv9z75GrA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISFNDX0040101:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets xmi:id="_LgzpC7JxEe2uvYv9z75GrA" name="header" kor="0" type="ARSHeaderType"/>
+    <fieldOffsets xmi:id="_LgzpDLJxEe2uvYv9z75GrA" name="data" kor="0" type="ARSCISFNDX0040101_InReq"/>
+  </jndi:configuration>
+</jndi:namedResource>

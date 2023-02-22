@@ -5,9 +5,6 @@ Bundle-SymbolicName: ARSCIS201.module
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: TIBCO Software Inc.
-Export-Package: ARSCISFNDX,
- ARSCISMTPH,
- ARSCISMTSY
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.module; filter:="(&(name=CSPI_Library)(version=2.0.0))",
  com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
