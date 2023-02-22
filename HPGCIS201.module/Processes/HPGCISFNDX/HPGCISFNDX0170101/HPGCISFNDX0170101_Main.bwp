@@ -1399,8 +1399,6 @@
         <tibex:namespaceItem
             namespace="http://schema.hcis.com/xsd/HPGCISFNDX0170101_InReq" prefix="ns1"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../../Schemas/HPGCISMTPH/HPGCISMTPH9000501/HPGCISMTPH9000501_InReq.xsd" namespace="http://schema.hcis.com/xsd/HPGCISMTPH9000501_InReq"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
