@@ -1420,8 +1420,6 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../../Schemas/CHBCISFNDX/CHBCISFNDX0120101/CHBCISFNDX0120101_InReq.xsd" namespace="http://schema.hcis.com/xsd/CHBCISFNDX0120101_InReq"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../Schemas/CHBCISFNDX/CHBCISFNDX0130101/CHBCISFNDX0130101_InReq.xsd" namespace="http://schema.hcis.com/xsd/CHBCISFNDX0130101_InReq"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
