@@ -40,7 +40,7 @@
         <field kor="메시지코드" name="msgCd" position="409" length="10"/> 
       </segment>  
       <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
-        <segment name="srchGroup" minOccurs="0" collection="list" maxOccurs="unbounded" class="map"> 
+        <segment name="srchGroup" minOccurs="0" maxOccurs="1" class="map"> 
           <field kor="점코드" name="storeCd" position="419" length="3"/>  
           <field kor="승인자ID" name="aprvId" position="422" length="100"/>  
           <field kor="시작년월" name="strtYm" position="522" length="6"/>  
