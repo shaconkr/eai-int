@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CHBCISMTPH9000601="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InReq_SRCH_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4BlzMKwNEe2FP5lwBW7mTw" name="CHBCISMTPH.CHBCISMTPH9000601.CHBCISMTPH9000601_InReq_SRCH_GROUP_TYPE" type="dataformat:DataFormat">
-  <imports xmi:id="_4BlzMawNEe2FP5lwBW7mTw" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CHBCISMTPH9000601_InReq_SRCH_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InReq_SRCH_GROUP_TYPE"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_4BlzMqwNEe2FP5lwBW7mTw" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CHBCISMTPH9000601:main" lineLength="35" fieldOffsetsStr="crdMemNo(0,9)&#xA;qryGb(9,10)&#xA;qryStrtDt(10,18)&#xA;qryEndDt(18,26)&#xA;qryPageNo(26,34)&#xA;lxgdsGbcd(34,35)">
-    <fieldOffsets xmi:id="_4BlzM6wNEe2FP5lwBW7mTw" name="crdMemNo" end="9" kor="카드회원번호" type="string"/>
-    <fieldOffsets xmi:id="_4BlzNKwNEe2FP5lwBW7mTw" name="qryGb" start="9" end="10" kor="조회구분" type="string"/>
-    <fieldOffsets xmi:id="_4BlzNawNEe2FP5lwBW7mTw" name="qryStrtDt" start="10" end="18" kor="조회시작일자" type="string"/>
-    <fieldOffsets xmi:id="_4BlzNqwNEe2FP5lwBW7mTw" name="qryEndDt" start="18" end="26" kor="조회종료일자" type="string"/>
-    <fieldOffsets xmi:id="_4BlzN6wNEe2FP5lwBW7mTw" name="qryPageNo" start="26" end="34" kor="조회페이지번호" type="long"/>
-    <fieldOffsets xmi:id="_4BlzOKwNEe2FP5lwBW7mTw" name="lxgdsGbcd" start="34" end="35" kor="명품구분코드" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CHBCISMTPH9000601="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InReq_SRCH_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CHBCISMTPH/CHBCISMTPH9000601.CHBCISMTPH9000601_InReq_SRCH_GROUP_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CHBCISMTPH9000601_InReq_SRCH_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InReq_SRCH_GROUP_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CHBCISMTPH9000601:main" lineLength="35" fieldOffsetsStr="crdMemNo(0,9)&#xA;qryGb(9,10)&#xA;qryStrtDt(10,18)&#xA;qryEndDt(18,26)&#xA;qryPageNo(26,34)&#xA;lxgdsGbcd(34,35)">
+    <fieldOffsets kor="카드회원번호" type="string" name="crdMemNo" start="0" end="9"/>
+    <fieldOffsets kor="조회구분" type="string" name="qryGb" start="9" end="10"/>
+    <fieldOffsets kor="조회시작일자" type="string" name="qryStrtDt" start="10" end="18"/>
+    <fieldOffsets kor="조회종료일자" type="string" name="qryEndDt" start="18" end="26"/>
+    <fieldOffsets kor="조회페이지번호" type="long" name="qryPageNo" start="26" end="34"/>
+    <fieldOffsets kor="명품구분코드" type="string" name="lxgdsGbcd" start="34" end="35"/>
   </jndi:configuration>
 </jndi:namedResource>

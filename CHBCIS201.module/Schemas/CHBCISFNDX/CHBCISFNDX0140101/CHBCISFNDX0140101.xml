@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="CHBCISFNDX0140101_InReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="CHB_InReq" class="java.util.LinkedHashMap"> 
+      <segment name="header" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="전체전문길이" name="totTgrmLen" position="0" length="8" justify="right" padding="0"/>  
+        <field kor="헤더길이" name="hdrLen" position="8" length="8" justify="right" padding="0"/>  
+        <field kor="전문형식코드" name="tgrmFrmCd" position="16" length="1"/>  
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" position="17" length="1"/>  
+        <field kor="IP주소" name="ipAdr" position="18" length="40"/>  
+        <field kor="GUID" name="guid" position="58" length="38"/>  
+        <field kor="진행번호" name="prgrNo" position="96" length="3" justify="right" padding="0"/>  
+        <field kor="최초GUID" name="frstGuid" position="99" length="38"/>  
+        <field kor="전송시스템코드" name="sendSysCd" position="137" length="3"/>  
+        <field kor="최초전송시스템코드" name="frstSendSysCd" position="140" length="3"/>  
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" position="143" length="21"/>  
+        <field kor="EIMS전문ID" name="eimsTgrmId" position="164" length="17"/>  
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" position="181" length="3"/>  
+        <field kor="프래임워크거래ID" name="frwkTrdId" position="184" length="12"/>  
+        <field kor="수신시스템코드" name="rcvSysCd" position="196" length="3"/>  
+        <field kor="연계전문코드" name="tieTgrmCd" position="199" length="10"/>  
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" position="209" length="2"/>  
+        <field kor="연계서비스명" name="tieSrvNm" position="211" length="30"/>  
+        <field kor="화면번호" name="scrnNo" position="241" length="20"/>  
+        <field kor="요청응답구분코드" name="reqnRespGbcd" position="261" length="1"/>  
+        <field kor="동기처리구분코드" name="syncProcGbcd" position="262" length="1"/>  
+        <field kor="거래응답코드" name="trdRespCd" position="263" length="1"/>  
+        <field kor="페이지번호" name="pageNo" position="264" length="9" justify="right" padding="0"/>  
+        <field kor="페이지행건수" name="pageRowCnt" position="273" length="9" justify="right" padding="0"/>  
+        <field kor="전체레코드건수" name="totRowCnt" position="282" length="9" justify="right" padding="0"/>  
+        <field kor="다음페이지여부" name="nxtPageYn" position="291" length="1"/>  
+        <field kor="요청일시" name="reqnDtm" position="292" length="17"/>  
+        <field kor="응답일시" name="respDtm" position="309" length="17"/>  
+        <field kor="점코드" name="storeCd" position="326" length="3"/>  
+        <field kor="사용자ID" name="userId" position="329" length="8"/>  
+        <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="337" length="100"/>  
+        <segment name="msgGrpNm" minOccurs="0" collection="list" maxOccurs="unbounded" class="map"> 
+          <field kor="메시지표시방법구분코드" name="msgShwMthdGbcd" position="437" length="1"/>  
+          <field kor="오류발생전문항목명" name="errOcrnTgrmClasNm" position="438" length="50"/>  
+          <field kor="메시지코드" name="msgCd" position="488" length="10"/>  
+          <field kor="메시지내용" name="msgCntn" position="498" length="300"/>  
+          <field kor="메시지세부내용" name="msgDtlCntn" position="798" length="1000"/> 
+        </segment>  
+        <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" position="1798" length="2"/> 
+      </segment>  
+      <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="카드회원번호" name="crdMemNo" position="1800" length="9"/> 
+      </segment> 
+    </record> 
+  </stream>  
+  <stream kor="" name="CHBCISFNDX0140101_InRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="CHB_InRes" class="java.util.LinkedHashMap">
+      <segment name="header" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="전체전문길이" name="totTgrmLen" position="0" length="8" justify="right" padding="0"/>
+        <field kor="헤더길이" name="hdrLen" position="8" length="8" justify="right" padding="0"/>
+        <field kor="전문형식코드" name="tgrmFrmCd" position="16" length="1"/>
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" position="17" length="1"/>
+        <field kor="IP주소" name="ipAdr" position="18" length="40"/>
+        <field kor="GUID" name="guid" position="58" length="38"/>
+        <field kor="진행번호" name="prgrNo" position="96" length="3" justify="right" padding="0"/>
+        <field kor="최초GUID" name="frstGuid" position="99" length="38"/>
+        <field kor="전송시스템코드" name="sendSysCd" position="137" length="3"/>
+        <field kor="최초전송시스템코드" name="frstSendSysCd" position="140" length="3"/>
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" position="143" length="21"/>
+        <field kor="EIMS전문ID" name="eimsTgrmId" position="164" length="17"/>
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" position="181" length="3"/>
+        <field kor="프래임워크거래ID" name="frwkTrdId" position="184" length="12"/>
+        <field kor="수신시스템코드" name="rcvSysCd" position="196" length="3"/>
+        <field kor="연계전문코드" name="tieTgrmCd" position="199" length="10"/>
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" position="209" length="2"/>
+        <field kor="연계서비스명" name="tieSrvNm" position="211" length="30"/>
+        <field kor="화면번호" name="scrnNo" position="241" length="20"/>
+        <field kor="요청응답구분코드" name="reqnRespGbcd" position="261" length="1"/>
+        <field kor="동기처리구분코드" name="syncProcGbcd" position="262" length="1"/>
+        <field kor="거래응답코드" name="trdRespCd" position="263" length="1"/>
+        <field kor="페이지번호" name="pageNo" position="264" length="9" justify="right" padding="0"/>
+        <field kor="페이지행건수" name="pageRowCnt" position="273" length="9" justify="right" padding="0"/>
+        <field kor="전체레코드건수" name="totRowCnt" position="282" length="9" justify="right" padding="0"/>
+        <field kor="다음페이지여부" name="nxtPageYn" position="291" length="1"/>
+        <field kor="요청일시" name="reqnDtm" position="292" length="17"/>
+        <field kor="응답일시" name="respDtm" position="309" length="17"/>
+        <field kor="점코드" name="storeCd" position="326" length="3"/>
+        <field kor="사용자ID" name="userId" position="329" length="8"/>
+        <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" position="337" length="100"/>
+        <segment name="msgGrpNm" minOccurs="0" collection="list" maxOccurs="unbounded" class="map">
+          <field kor="메시지표시방법구분코드" name="msgShwMthdGbcd" position="437" length="1"/>
+          <field kor="오류발생전문항목명" name="errOcrnTgrmClasNm" position="438" length="50"/>
+          <field kor="메시지코드" name="msgCd" position="488" length="10"/>
+          <field kor="메시지내용" name="msgCntn" position="498" length="300"/>
+          <field kor="메시지세부내용" name="msgDtlCntn" position="798" length="1000"/>
+        </segment>
+        <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" position="1798" length="2"/>
+      </segment>
+      <segment name="data" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="회원명" name="memNm" position="1800" length="100"/>
+        <field kor="입금예정일자" name="iamtPrrgDt" position="1900" length="8"/>
+        <field kor="작성기준일자" name="wrtBsicDt" position="1908" length="8"/>
+        <field kor="일시불원금금액" name="spymPrncAmt" position="1916" length="18" justify="right" padding="0"/>
+        <field kor="할부원금금액" name="insmPrncAmt" position="1934" length="18" justify="right" padding="0"/>
+        <field kor="할부수수료금액" name="insmCmisAmt" position="1952" length="18" justify="right" padding="0"/>
+        <field kor="할부금액" name="insmAmt" position="1970" length="18" justify="right" padding="0"/>
+        <field kor="납부합계금액" name="pymSumAmt" position="1988" length="18" justify="right" padding="0"/>
+        <field kor="결과리스트_배열건수" name="rsltRowcount" position="2006" length="5" justify="right" padding="0"/>
+        <segment name="rsltList" minOccurs="0" collection="list" maxOccurs="unbounded" class="map">
+          <field kor="매출관리번호" name="saleMngNo" position="2011" length="18"/>
+          <field kor="할부개월수명" name="insmMthsNm" position="2029" length="20"/>
+          <field kor="당월납부원금금액" name="thmnPymPrncAmt" position="2049" length="18" justify="right" padding="0"/>
+          <field kor="당월납부수수료" name="thmnPymCmis" position="2067" length="18" justify="right" padding="0"/>
+        </segment>
+      </segment>
+    </record>
+  </stream>
+</beanio>

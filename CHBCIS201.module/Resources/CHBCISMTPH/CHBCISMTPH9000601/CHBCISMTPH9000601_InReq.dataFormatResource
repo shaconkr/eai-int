@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CHBCISMTPH9000601="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4AXrMKwNEe2FP5lwBW7mTw" name="CHBCISMTPH.CHBCISMTPH9000601.CHBCISMTPH9000601_InReq" type="dataformat:DataFormat">
-  <imports xmi:id="_4AXrMawNEe2FP5lwBW7mTw" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CHBCISMTPH9000601_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InReq"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_4AXrMqwNEe2FP5lwBW7mTw" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CHBCISMTPH9000601:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets xmi:id="_4AXrM6wNEe2FP5lwBW7mTw" name="header" kor="0" type="CHBHeaderType"/>
-    <fieldOffsets xmi:id="_4AXrNKwNEe2FP5lwBW7mTw" name="data" kor="0" type="CHBCISMTPH9000601_InReq"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CHBCISMTPH9000601="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CHBCISMTPH/CHBCISMTPH9000601.CHBCISMTPH9000601_InReq" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CHBCISMTPH9000601_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/CHBCISMTPH9000601_InReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CHBCISMTPH9000601:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="0" type="CHBHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="0" type="CHBCISMTPH9000601_InReq" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>

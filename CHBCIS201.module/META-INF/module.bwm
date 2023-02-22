@@ -12,18 +12,21 @@
   <sca:property xmi:id="_G5bVIJC6Ee2njO93zN7Lvw" name="FW_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_HOPHgJC6Ee2njO93zN7Lvw" name="FW_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_awqssJC3Ee2njO93zN7Lvw" name="ComponentCHBCISFNDX0120101_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_awqssZC3Ee2njO93zN7Lvw" processName="CHBCISFNDX.CHBCISFNDX0120101_Main"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_awqssZC3Ee2njO93zN7Lvw" processName="CHBCISFNDX.CHBCISFNDX0120101.CHBCISFNDX0120101_Main"/>
   </sca:component>
   <sca:component xmi:id="_7Fw50JC5Ee2njO93zN7Lvw" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_7Fw50ZC5Ee2njO93zN7Lvw" processName="CHBCIS201.module.Activator"/>
   </sca:component>
   <sca:component xmi:id="_jYjoMZC6Ee2njO93zN7Lvw" name="ComponentCHBCISFNDX0140101_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jYjoMpC6Ee2njO93zN7Lvw" processName="CHBCISFNDX.CHBCISFNDX0140101_Main"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jYjoMpC6Ee2njO93zN7Lvw" processName="CHBCISFNDX.CHBCISFNDX0140101.CHBCISFNDX0140101_Main"/>
   </sca:component>
   <sca:component xmi:id="_XH3osKKMEe2upbSDTKbrTQ" name="ComponentCHBCISFNDX0150101_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_XH3osaKMEe2upbSDTKbrTQ" processName="CHBCISFNDX.CHBCISFNDX0150101_Main"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_XH3osaKMEe2upbSDTKbrTQ" processName="CHBCISFNDX.CHBCISFNDX0150101.CHBCISFNDX0150101_Main"/>
   </sca:component>
   <sca:component xmi:id="_QTbJ8KwPEe2FP5lwBW7mTw" name="ComponentCHBCISMTPH9000601_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_QTbJ8awPEe2FP5lwBW7mTw" processName="CHBCISMTPH.CHBCISMTPH9000601_Main"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_QTbJ8awPEe2FP5lwBW7mTw" processName="CHBCISMTPH.CHBCISMTPH9000601.CHBCISMTPH9000601_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_f0pkYLJrEe2BwZA_mzGiKA" name="Component1CHBCISFNDX0120101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_f0pkYbJrEe2BwZA_mzGiKA" processName="CHBCISFNDX.CHBCISFNDX0130101.CHBCISFNDX0130101_Main"/>
   </sca:component>
 </sca:composite>

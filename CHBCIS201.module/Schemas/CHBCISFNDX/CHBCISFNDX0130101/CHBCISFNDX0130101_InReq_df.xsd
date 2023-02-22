@@ -1,0 +1,33 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CHBCISFNDX0130101_InReq" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/CHBCISFNDX0130101_InReq">
+    <element name="root" type="ns:CHBCISFNDX0130101_InReq"/>
+    <complexType name="CHBCISFNDX0130101_InReq">
+        <sequence>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="청구결제단위번호" e:length="4" e:padder="SpaceRight" name="reqStlmUnitNo" nillable="true" type="string"/>
+            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" name="chrDt" nillable="true" type="string"/>
+            <element e:kor="접수일시" e:length="14" e:padder="SpaceRight" name="acptDtm" nillable="true" type="string"/>
+            <element e:kor="접수경로코드" e:length="1" e:padder="SpaceRight" name="acptPathCd" nillable="true" type="string"/>
+            <element e:kor="접수점코드" e:length="3" e:padder="SpaceRight" name="acptStoreCd" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="발송구분코드" e:length="1" e:padder="SpaceRight" name="senmGbcd" nillable="true" type="string"/>
+            <element e:kor="청구서발송형태구분코드" e:length="1" e:padder="SpaceRight" name="billSenmFormGbcd" nillable="true" type="string"/>
+            <element e:kor="수령지구분코드" e:length="1" e:padder="SpaceRight" name="rcplGbcd" nillable="true" type="string"/>
+            <element e:kor="이메일주소" e:length="200" e:padder="SpaceRight" name="emailAdr" nillable="true" type="string"/>
+            <element e:kor="팩스지역번호" e:length="4" e:padder="SpaceRight" name="faxAreaNo" nillable="true" type="string"/>
+            <element e:kor="팩스국번호" e:length="4" e:padder="SpaceRight" name="faxSvccd" nillable="true" type="string"/>
+            <element e:kor="팩스일련번호" e:length="4" e:padder="SpaceRight" name="faxSeqno" nillable="true" type="string"/>
+            <element e:kor="SMS번호" e:length="20" e:padder="SpaceRight" name="smsNo" nillable="true" type="string"/>
+            <element e:kor="청구서발송구분코드" e:length="1" e:padder="SpaceRight" name="billSenmGbcd" nillable="true" type="string"/>
+            <element e:kor="청구유형코드" e:length="1" e:padder="SpaceRight" name="reqTypeCd" nillable="true" type="string"/>
+            <element e:kor="청구산정시점코드" e:length="1" e:padder="SpaceRight" name="reqEstmTimeCd" nillable="true" type="string"/>
+            <element e:kor="청구구분코드" e:length="1" e:padder="SpaceRight" name="reqGbCd" nillable="true" type="string"/>
+            <element e:kor="발송유무" e:length="1" e:padder="SpaceRight" name="senmEn" nillable="true" type="string"/>
+            <element e:kor="출력여부" e:length="1" e:padder="SpaceRight" name="prntYn" nillable="true" type="string"/>
+            <element e:kor="취소여부" e:length="1" e:padder="SpaceRight" name="cnclYn" nillable="true" type="string"/>
+            <element e:kor="발송일자" e:length="8" e:padder="SpaceRight" name="senmDt" nillable="true" type="string"/>
+            <element e:kor="고객메모" e:length="500" e:padder="SpaceRight" name="custMemo" nillable="true" type="string"/>
+            <element e:kor="이력등록여부" e:length="1" e:padder="SpaceRight" name="hisRegYn" nillable="true" type="string"/>
+            <element e:kor="사용자회원번호" e:length="12" e:padder="SpaceRight" name="userMemNo" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
