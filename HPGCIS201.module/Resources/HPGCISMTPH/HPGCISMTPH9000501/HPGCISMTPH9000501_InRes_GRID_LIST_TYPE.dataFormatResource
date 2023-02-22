@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HPGCISMTPH9000501="http://schema.hcis.com/xsd/HPGCISMTPH9000501_InRes_GRID_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="HPGCISMTPH/HPGCISMTPH9000501.HPGCISMTPH9000501_InRes_GRID_LIST_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/HPGCISMTPH9000501_InRes_GRID_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/HPGCISMTPH9000501_InRes_GRID_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="HPGCISMTPH9000501:main" lineLength="323" fieldOffsetsStr="saleDt(0,8)&#xA;saleRceitNo(8,14)&#xA;storeCd(14,17)&#xA;salePosNo(17,23)&#xA;storeNm(23,83)&#xA;itemNm(83,143)&#xA;saleAmt(143,155)&#xA;ocrnMlg(155,175)&#xA;mlg(175,195)&#xA;cashMlg(195,215)&#xA;owcoGcMlg(215,235)&#xA;otcoCrdMlg(235,255)&#xA;etcMlg(255,275)&#xA;saleSumAmt(275,294)&#xA;saleSumMlg(294,314)&#xA;qryPageNo(314,322)&#xA;lxgdsGbcd(322,323)">
+    <fieldOffsets kor="매출일자" type="string" name="saleDt" start="0" end="8"/>
+    <fieldOffsets kor="매출영수번호" type="string" name="saleRceitNo" start="8" end="14"/>
+    <fieldOffsets kor="점코드" type="string" name="storeCd" start="14" end="17"/>
+    <fieldOffsets kor="매출POS번호" type="string" name="salePosNo" start="17" end="23"/>
+    <fieldOffsets kor="점명" type="string" name="storeNm" start="23" end="83"/>
+    <fieldOffsets kor="상품명" type="string" name="itemNm" start="83" end="143"/>
+    <fieldOffsets kor="매출금액" type="long" name="saleAmt" start="143" end="155"/>
+    <fieldOffsets kor="발생마일리지" type="decimal" name="ocrnMlg" start="155" end="175"/>
+    <fieldOffsets kor="마일리지" type="decimal" name="mlg" start="175" end="195"/>
+    <fieldOffsets kor="현금마일리지" type="decimal" name="cashMlg" start="195" end="215"/>
+    <fieldOffsets kor="자사상품권마일리지" type="decimal" name="owcoGcMlg" start="215" end="235"/>
+    <fieldOffsets kor="타사카드마일리지" type="decimal" name="otcoCrdMlg" start="235" end="255"/>
+    <fieldOffsets kor="기타마일리지" type="decimal" name="etcMlg" start="255" end="275"/>
+    <fieldOffsets kor="매출합계금액" type="long" name="saleSumAmt" start="275" end="294"/>
+    <fieldOffsets kor="매출합계마일리지" type="decimal" name="saleSumMlg" start="294" end="314"/>
+    <fieldOffsets kor="조회페이지번호" type="long" name="qryPageNo" start="314" end="322"/>
+    <fieldOffsets kor="명품구분코드" type="string" name="lxgdsGbcd" start="322" end="323"/>
+  </jndi:configuration>
+</jndi:namedResource>
