@@ -2,7 +2,7 @@
 
 <jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:KIKCISFNDX0010101="http://schema.hcis.com/xsd/KIKCISFNDX0010101_InRes_RSLT_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="KIKCISFNDX/KIKCISFNDX0010101.KIKCISFNDX0010101_InRes_RSLT_LIST_TYPE" type="dataformat:DataFormat">
   <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/KIKCISFNDX0010101_InRes_RSLT_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/KIKCISFNDX0010101_InRes_RSLT_LIST_TYPE"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="KIKCISFNDX0010101:main" lineLength="530" fieldOffsetsStr="crdMemNo(0,9)&#xA;reqStlmUnitNo(9,13)&#xA;saleMngNo(13,31)&#xA;utlzGbcd(31,32)&#xA;dlineDt(32,40)&#xA;crdNo(40,56)&#xA;selfFamlMemSeq(56,58)&#xA;saleDt(58,66)&#xA;frcsCd(66,86)&#xA;frcsNm(86,186)&#xA;itemCd(186,206)&#xA;itemNm(206,406)&#xA;tsaleAmt(406,424)&#xA;enuriAmt(424,442)&#xA;nsaleAmt(442,460)&#xA;crdInsmMths(460,463)&#xA;orgsaleSlipNo(463,490)&#xA;chrStatCd(490,491)&#xA;owcoAprvlNo(491,500)&#xA;aprvlDt(500,508)&#xA;saleSlipNo(508,530)">
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="KIKCISFNDX0010101:main" lineLength="566" fieldOffsetsStr="crdMemNo(0,9)&#xA;reqStlmUnitNo(9,13)&#xA;saleMngNo(13,31)&#xA;utlzGbcd(31,32)&#xA;dlineDt(32,40)&#xA;crdNo(40,56)&#xA;selfFamlMemSeq(56,58)&#xA;saleDt(58,66)&#xA;frcsCd(66,86)&#xA;frcsNm(86,186)&#xA;itemCd(186,206)&#xA;itemNm(206,406)&#xA;tsaleAmt(406,424)&#xA;enuriAmt(424,442)&#xA;nsaleAmt(442,460)&#xA;chrDcAmt(460,478)&#xA;reqTgamt(478,496)&#xA;crdInsmMths(496,499)&#xA;orgsaleSlipNo(499,526)&#xA;chrStatCd(526,527)&#xA;owcoAprvlNo(527,536)&#xA;aprvlDt(536,544)&#xA;saleSlipNo(544,566)">
     <fieldOffsets kor="카드회원번호" type="string" name="crdMemNo" start="0" end="9"/>
     <fieldOffsets kor="청구결제단위번호" type="string" name="reqStlmUnitNo" start="9" end="13"/>
     <fieldOffsets kor="매출관리번호" type="string" name="saleMngNo" start="13" end="31"/>
@@ -18,11 +18,13 @@
     <fieldOffsets kor="총매출금액" type="long" name="tsaleAmt" start="406" end="424"/>
     <fieldOffsets kor="에누리금액" type="long" name="enuriAmt" start="424" end="442"/>
     <fieldOffsets kor="순매출금액" type="long" name="nsaleAmt" start="442" end="460"/>
-    <fieldOffsets kor="카드할부개월수" type="long" name="crdInsmMths" start="460" end="463"/>
-    <fieldOffsets kor="원매출전표번호" type="string" name="orgsaleSlipNo" start="463" end="490"/>
-    <fieldOffsets kor="청구상태코드" type="string" name="chrStatCd" start="490" end="491"/>
-    <fieldOffsets kor="자사승인번호" type="string" name="owcoAprvlNo" start="491" end="500"/>
-    <fieldOffsets kor="승인일자" type="string" name="aprvlDt" start="500" end="508"/>
-    <fieldOffsets kor="매출전표번호" type="string" name="saleSlipNo" start="508" end="530"/>
+    <fieldOffsets kor="청구할인금액" type="long" name="chrDcAmt" start="460" end="478"/>
+    <fieldOffsets kor="청구대상금액" type="long" name="reqTgamt" start="478" end="496"/>
+    <fieldOffsets kor="카드할부개월수" type="long" name="crdInsmMths" start="496" end="499"/>
+    <fieldOffsets kor="원매출전표번호" type="string" name="orgsaleSlipNo" start="499" end="526"/>
+    <fieldOffsets kor="청구상태코드" type="string" name="chrStatCd" start="526" end="527"/>
+    <fieldOffsets kor="자사승인번호" type="string" name="owcoAprvlNo" start="527" end="536"/>
+    <fieldOffsets kor="승인일자" type="string" name="aprvlDt" start="536" end="544"/>
+    <fieldOffsets kor="매출전표번호" type="string" name="saleSlipNo" start="544" end="566"/>
   </jndi:configuration>
 </jndi:namedResource>
