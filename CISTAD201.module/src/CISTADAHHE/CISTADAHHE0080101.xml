@@ -87,7 +87,7 @@
       </segment>
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
         <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="419" length="111"/>
-        <segment name="rstList" minOccurs="50" maxOccurs="50" collection="list" class="map">
+        <segment name="rstList" minOccurs="0" maxOccurs="50" collection="list" class="map">
           <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="530" length="3"/>
           <field kor="승인자ID" name="aprvId" minOccurs="1" maxOccurs="1" position="533" length="100"/>
           <field kor="승인구분코드" name="aprvlGbcd" minOccurs="1" maxOccurs="1" position="633" length="1"/>

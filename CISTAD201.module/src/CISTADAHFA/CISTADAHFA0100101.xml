@@ -88,7 +88,7 @@
       <segment name="data" minOccurs="1" maxOccurs="1" class="map">
         <field kor="레코드총건수" name="recdTotCnt" minOccurs="1" maxOccurs="1" position="419" length="10"/>
         <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="429" length="30"/>
-        <segment name="rstList" minOccurs="50" maxOccurs="50" collection="list" class="map">
+        <segment name="rstList" minOccurs="0" maxOccurs="50" collection="list" class="map">
           <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="459" length="9"/>
           <field kor="회원명" name="memNm" minOccurs="1" maxOccurs="1" position="468" length="100"/>
           <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="1" maxOccurs="1" position="568" length="2"/>
