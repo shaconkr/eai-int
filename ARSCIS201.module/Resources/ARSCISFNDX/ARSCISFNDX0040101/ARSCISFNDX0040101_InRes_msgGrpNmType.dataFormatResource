@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISFNDX0040101="http://schema.hcis.com/xsd/ARSCISFNDX0040101_InRes_msgGrpNmType" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Lg8zGbJxEe2uvYv9z75GrA" name="ARSCISFNDX0040101_InRes_msgGrpNmType" type="dataformat:DataFormat">
-  <imports xmi:id="_Lg8zGrJxEe2uvYv9z75GrA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISFNDX0040101_InRes_msgGrpNmType_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISFNDX0040101_InRes_msgGrpNmType"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Lg8zG7JxEe2uvYv9z75GrA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISFNDX0040101:main" lineLength="1361" fieldOffsetsStr="msgShwMthdGbcd(0,1)&#xA;errOcrnTgrmClasNm(1,51)&#xA;msgCd(51,61)&#xA;msgCntn(61,361)&#xA;msgDtlCntn(361,1361)">
-    <fieldOffsets xmi:id="_Lg8zHLJxEe2uvYv9z75GrA" name="msgShwMthdGbcd" end="1" kor="메시지표시방법구분코드" type="string"/>
-    <fieldOffsets xmi:id="_Lg8zHbJxEe2uvYv9z75GrA" name="errOcrnTgrmClasNm" start="1" end="51" kor="오류발생전문항목명" type="string"/>
-    <fieldOffsets xmi:id="_Lg8zHrJxEe2uvYv9z75GrA" name="msgCd" start="51" end="61" kor="메시지코드" type="string"/>
-    <fieldOffsets xmi:id="_Lg8zH7JxEe2uvYv9z75GrA" name="msgCntn" start="61" end="361" kor="메시지내용" type="string"/>
-    <fieldOffsets xmi:id="_Lg8zILJxEe2uvYv9z75GrA" name="msgDtlCntn" start="361" end="1361" kor="메시지세부내용" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISFNDX0040101="http://schema.hcis.com/xsd/ARSCISFNDX0040101_InRes_msgGrpNmType" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="ARSCISFNDX/ARSCISFNDX0040101.ARSCISFNDX0040101_InRes_msgGrpNmType" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISFNDX0040101_InRes_msgGrpNmType_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISFNDX0040101_InRes_msgGrpNmType"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISFNDX0040101:main" lineLength="1361" fieldOffsetsStr="msgShwMthdGbcd(0,1)&#xA;errOcrnTgrmClasNm(1,51)&#xA;msgCd(51,61)&#xA;msgCntn(61,361)&#xA;msgDtlCntn(361,1361)">
+    <fieldOffsets kor="메시지표시방법구분코드" type="string" name="msgShwMthdGbcd" start="0" end="1"/>
+    <fieldOffsets kor="오류발생전문항목명" type="string" name="errOcrnTgrmClasNm" start="1" end="51"/>
+    <fieldOffsets kor="메시지코드" type="string" name="msgCd" start="51" end="61"/>
+    <fieldOffsets kor="메시지내용" type="string" name="msgCntn" start="61" end="361"/>
+    <fieldOffsets kor="메시지세부내용" type="string" name="msgDtlCntn" start="361" end="1361"/>
   </jndi:configuration>
 </jndi:namedResource>

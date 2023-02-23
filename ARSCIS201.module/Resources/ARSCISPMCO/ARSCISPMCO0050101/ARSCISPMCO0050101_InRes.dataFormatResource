@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISPMCO0050101="http://schema.hcis.com/xsd/ARSCISPMCO0050101_InRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="ARSCISPMCO/ARSCISPMCO0050101.ARSCISPMCO0050101_InRes" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISPMCO0050101_InRes_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISPMCO0050101_InRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISPMCO0050101:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="0" type="ARSHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="0" type="ARSCISPMCO0050101_InRes" name="data" start="0" end="0"/>
+  </jndi:configuration>
+</jndi:namedResource>

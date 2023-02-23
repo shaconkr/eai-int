@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISFNDX0090101="http://schema.hcis.com/xsd/ARSCISFNDX0090101_InRes_RSLT_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Lh_8AbJxEe2uvYv9z75GrA" name="ARSCISFNDX0090101_InRes_RSLT_LIST_TYPE" type="dataformat:DataFormat">
-  <imports xmi:id="_Lh_8ArJxEe2uvYv9z75GrA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISFNDX0090101_InRes_RSLT_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISFNDX0090101_InRes_RSLT_LIST_TYPE"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Lh_8A7JxEe2uvYv9z75GrA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISFNDX0090101:main" lineLength="494" fieldOffsetsStr="sendDt(0,8)&#xA;sendTime(8,14)&#xA;respCd(14,18)&#xA;rrno(18,31)&#xA;acncYr(31,35)&#xA;custNm(35,135)&#xA;hmAdr(135,335)&#xA;totCnt(335,336)&#xA;saleYm(336,342)&#xA;crdUseAmt(342,361)&#xA;anmlUseAmt(361,380)&#xA;ddctExcldAmt(380,399)&#xA;ddctTgamt(399,418)&#xA;cultrIrgnAmt(418,437)&#xA;cultrIrgnAnmlAmt(437,456)&#xA;cultrIrgnDdctExcldAmt(456,475)&#xA;cultrIrgnDdctAmt(475,494)">
-    <fieldOffsets xmi:id="_Lh_8BLJxEe2uvYv9z75GrA" name="sendDt" end="8" kor="전송일자" type="string"/>
-    <fieldOffsets xmi:id="_Lh_8BbJxEe2uvYv9z75GrA" name="sendTime" start="8" end="14" kor="전송시간" type="string"/>
-    <fieldOffsets xmi:id="_Lh_8BrJxEe2uvYv9z75GrA" name="respCd" start="14" end="18" kor="응답코드" type="string"/>
-    <fieldOffsets xmi:id="_Lh_8B7JxEe2uvYv9z75GrA" name="rrno" start="18" end="31" kor="주민등록번호" type="string"/>
-    <fieldOffsets xmi:id="_Lh_8CLJxEe2uvYv9z75GrA" name="acncYr" start="31" end="35" kor="회계년도" type="string"/>
-    <fieldOffsets xmi:id="_Lh_8CbJxEe2uvYv9z75GrA" name="custNm" start="35" end="135" kor="고객명" type="string"/>
-    <fieldOffsets xmi:id="_Lh_8CrJxEe2uvYv9z75GrA" name="hmAdr" start="135" end="335" kor="자택주소" type="string"/>
-    <fieldOffsets xmi:id="_Lh_8C7JxEe2uvYv9z75GrA" name="totCnt" start="335" end="336" kor="총건수" type="long"/>
-    <fieldOffsets xmi:id="_Lh_8DLJxEe2uvYv9z75GrA" name="saleYm" start="336" end="342" kor="매출년월" type="string"/>
-    <fieldOffsets xmi:id="_Lh_8DbJxEe2uvYv9z75GrA" name="crdUseAmt" start="342" end="361" kor="카드사용금액" type="long"/>
-    <fieldOffsets xmi:id="_Lh_8DrJxEe2uvYv9z75GrA" name="anmlUseAmt" start="361" end="380" kor="비정상사용금액" type="long"/>
-    <fieldOffsets xmi:id="_Lh_8D7JxEe2uvYv9z75GrA" name="ddctExcldAmt" start="380" end="399" kor="공제제외금액" type="long"/>
-    <fieldOffsets xmi:id="_Lh_8ELJxEe2uvYv9z75GrA" name="ddctTgamt" start="399" end="418" kor="공제대상금액" type="long"/>
-    <fieldOffsets xmi:id="_Lh_8EbJxEe2uvYv9z75GrA" name="cultrIrgnAmt" start="418" end="437" kor="문화도서금액" type="long"/>
-    <fieldOffsets xmi:id="_Lh_8ErJxEe2uvYv9z75GrA" name="cultrIrgnAnmlAmt" start="437" end="456" kor="문화도서비정상금액" type="long"/>
-    <fieldOffsets xmi:id="_Lh_8E7JxEe2uvYv9z75GrA" name="cultrIrgnDdctExcldAmt" start="456" end="475" kor="문화도서공제제외금액" type="long"/>
-    <fieldOffsets xmi:id="_Lh_8FLJxEe2uvYv9z75GrA" name="cultrIrgnDdctAmt" start="475" end="494" kor="문화도서공제금액" type="long"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISFNDX0090101="http://schema.hcis.com/xsd/ARSCISFNDX0090101_InRes_RSLT_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="ARSCISFNDX/ARSCISFNDX0090101.ARSCISFNDX0090101_InRes_RSLT_LIST_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISFNDX0090101_InRes_RSLT_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISFNDX0090101_InRes_RSLT_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISFNDX0090101:main" lineLength="494" fieldOffsetsStr="sendDt(0,8)&#xA;sendTime(8,14)&#xA;respCd(14,18)&#xA;rrno(18,31)&#xA;acncYr(31,35)&#xA;custNm(35,135)&#xA;hmAdr(135,335)&#xA;totCnt(335,336)&#xA;saleYm(336,342)&#xA;crdUseAmt(342,361)&#xA;anmlUseAmt(361,380)&#xA;ddctExcldAmt(380,399)&#xA;ddctTgamt(399,418)&#xA;cultrIrgnAmt(418,437)&#xA;cultrIrgnAnmlAmt(437,456)&#xA;cultrIrgnDdctExcldAmt(456,475)&#xA;cultrIrgnDdctAmt(475,494)">
+    <fieldOffsets kor="전송일자" type="string" name="sendDt" start="0" end="8"/>
+    <fieldOffsets kor="전송시간" type="string" name="sendTime" start="8" end="14"/>
+    <fieldOffsets kor="응답코드" type="string" name="respCd" start="14" end="18"/>
+    <fieldOffsets kor="주민등록번호" type="string" name="rrno" start="18" end="31"/>
+    <fieldOffsets kor="회계년도" type="string" name="acncYr" start="31" end="35"/>
+    <fieldOffsets kor="고객명" type="string" name="custNm" start="35" end="135"/>
+    <fieldOffsets kor="자택주소" type="string" name="hmAdr" start="135" end="335"/>
+    <fieldOffsets kor="총건수" type="long" name="totCnt" start="335" end="336"/>
+    <fieldOffsets kor="매출년월" type="string" name="saleYm" start="336" end="342"/>
+    <fieldOffsets kor="카드사용금액" type="long" name="crdUseAmt" start="342" end="361"/>
+    <fieldOffsets kor="비정상사용금액" type="long" name="anmlUseAmt" start="361" end="380"/>
+    <fieldOffsets kor="공제제외금액" type="long" name="ddctExcldAmt" start="380" end="399"/>
+    <fieldOffsets kor="공제대상금액" type="long" name="ddctTgamt" start="399" end="418"/>
+    <fieldOffsets kor="문화도서금액" type="long" name="cultrIrgnAmt" start="418" end="437"/>
+    <fieldOffsets kor="문화도서비정상금액" type="long" name="cultrIrgnAnmlAmt" start="437" end="456"/>
+    <fieldOffsets kor="문화도서공제제외금액" type="long" name="cultrIrgnDdctExcldAmt" start="456" end="475"/>
+    <fieldOffsets kor="문화도서공제금액" type="long" name="cultrIrgnDdctAmt" start="475" end="494"/>
   </jndi:configuration>
 </jndi:namedResource>
