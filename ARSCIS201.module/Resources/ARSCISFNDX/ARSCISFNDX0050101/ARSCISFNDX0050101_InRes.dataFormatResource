@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISFNDX0050101="http://schema.hcis.com/xsd/ARSCISFNDX0050101_InRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_LhGkHLJxEe2uvYv9z75GrA" name="ARSCISFNDX0050101_InRes" type="dataformat:DataFormat">
-  <imports xmi:id="_LhGkHbJxEe2uvYv9z75GrA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISFNDX0050101_InRes_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISFNDX0050101_InRes"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_LhGkHrJxEe2uvYv9z75GrA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISFNDX0050101:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets xmi:id="_LhGkH7JxEe2uvYv9z75GrA" name="header" kor="0" type="ARSHeaderType"/>
-    <fieldOffsets xmi:id="_LhGkILJxEe2uvYv9z75GrA" name="data" kor="0" type="ARSCISFNDX0050101_InRes"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ARSCISFNDX0050101="http://schema.hcis.com/xsd/ARSCISFNDX0050101_InRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="ARSCISFNDX/ARSCISFNDX0050101.ARSCISFNDX0050101_InRes" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ARSCISFNDX0050101_InRes_df.xsd" namespace="http://schema.hcis.com/xsd/ARSCISFNDX0050101_InRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ARSCISFNDX0050101:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="0" type="ARSHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="0" type="ARSCISFNDX0050101_InRes" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>

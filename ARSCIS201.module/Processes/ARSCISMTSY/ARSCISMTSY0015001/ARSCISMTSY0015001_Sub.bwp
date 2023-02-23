@@ -678,7 +678,7 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
             <bpws:from>
-                <bpws:literal>FW</bpws:literal>
+                <bpws:literal>ARSCIS201.module.FW</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns0:RequestActivityInput"
