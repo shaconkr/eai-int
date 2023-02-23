@@ -859,7 +859,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="-3"
+                                    x="2"
                                     xsi:type="notation:Bounds" y="85"/>
                                     </children>
                                     <children type="4002">
@@ -1329,18 +1329,6 @@
             <bendpoints points="[25, 0, -132, 0]$[123, 0, -34, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
-            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
-            <bendpoints points="[2, 25, -8, -82]$[8, 83, -2, -24]" xsi:type="notation:RelativeBendpoints"/>
-            <targetAnchor id="(0.0,0.8571428571428571)" xsi:type="notation:IdentityAnchor"/>
-        </edges>
-        <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
             <children type="6002">
@@ -1348,7 +1336,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
             <bendpoints
                 points="[25, 0, -121, 76]$[68, 0, -78, 76]$[68, -76, -78, 0]$[112, -76, -34, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -1360,7 +1348,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1371,7 +1359,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
             <bendpoints points="[25, 0, -82, 0]$[83, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1382,8 +1370,19 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
             <bendpoints points="[25, 0, -146, 0]$[147, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <bendpoints points="[0, 25, 0, -99]$[0, 100, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1452,8 +1451,6 @@
         <bpws:variable element="ns11:ActivityOutputClass"
             name="RenderJSON_Error" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
-        <bpws:variable element="ns:OptionalErrorReport"
-            name="_errorOptional" sca-bpel:internal="true"/>
         <bpws:variable element="ns12:ActivityErrorData"
             name="_error_RenderJSON1" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:SetLog" name="L_Set_LogError-input" sca-bpel:internal="true"/>
@@ -1461,6 +1458,8 @@
             name="CallProc_CISTADAHHE0080101-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:subElement"
             name="CallProc_CISTADAHHE0080101" sca-bpel:internal="true"/>
+        <bpws:variable element="ns:OptionalErrorReport"
+            name="_errorOptional" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1479,11 +1478,12 @@
                 <bpws:link name="ReplytoJMSMessageToL_Set_LogEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="L_Set_LogStartToCallProcess" tibex:linkType="SUCCESS"/>
                 <bpws:link name="AssignToReplytoJMSMessage" tibex:linkType="SUCCESS"/>
-                <bpws:link name="CallProc_IFID01ToL_Set_LogError" tibex:linkType="ERROR"/>
                 <bpws:link name="Assign_ErrorToReplytoJMSMessage" tibex:linkType="SUCCESS"/>
                 <bpws:link name="CallProc_IFID01ToAssign_OK" tibex:linkType="SUCCESS"/>
                 <bpws:link name="L_Set_LogErrorToRenderJSON_Error" tibex:linkType="SUCCESS"/>
                 <bpws:link name="RenderJSON_ErrorToAssign_Error" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="CallProc_CISTADAHHE0080101ToL_Set_LogError" tibex:linkType="ERROR"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1650,13 +1650,15 @@
                         <bpws:target linkName="L_Set_LogStartToCallProcess"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="CallProc_IFID01ToL_Set_LogError">
+                        <bpws:source linkName="CallProc_IFID01ToAssign_OK"/>
+                        <bpws:source
+                            linkName="CallProc_CISTADAHHE0080101ToL_Set_LogError"
+                            tibex:faultDetailsVar="CallProc_CISTADAHHE0080101" tibex:faultNameVar="FaultName">
                             <tibex:DesignExpression>
                                 <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
                             <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##error##]]></bpws:transitionCondition>
                         </bpws:source>
-                        <bpws:source linkName="CallProc_IFID01ToAssign_OK"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
@@ -1767,7 +1769,7 @@
                     tibex:xpdlId="8b82cceb-b1c3-4b15-b769-cacfbc2d4837"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="CallProc_IFID01ToL_Set_LogError"/>
+                        <bpws:target linkName="CallProc_CISTADAHHE0080101ToL_Set_LogError"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="L_Set_LogErrorToRenderJSON_Error"/>

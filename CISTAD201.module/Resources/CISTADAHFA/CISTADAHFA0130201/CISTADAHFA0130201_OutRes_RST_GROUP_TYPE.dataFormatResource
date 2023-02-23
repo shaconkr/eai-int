@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFA0130201="http://schema.hcis.com/xsd/CISTADAHFA0130201_OutRes_RST_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4AR0gK6SEe2PpOOSq4lfZQ" name="CISTADAHFA.CISTADAHFA0130201.CISTADAHFA0130201_OutRes_RST_GROUP_TYPE" type="dataformat:DataFormat">
-  <imports xmi:id="_4AR0ga6SEe2PpOOSq4lfZQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFA0130201_OutRes_RST_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFA0130201_OutRes_RST_GROUP_TYPE"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_4AR0gq6SEe2PpOOSq4lfZQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFA0130201:main" lineLength="121" fieldOffsetsStr="crdMemNo(0,9)&#xA;aprvlCareCd(9,13)&#xA;aprvlCareCntn(13,113)&#xA;aprvlCareAplyDt(113,121)">
-    <fieldOffsets xmi:id="_4AR0g66SEe2PpOOSq4lfZQ" name="crdMemNo" end="9" kor="카드회원번호" type="string"/>
-    <fieldOffsets xmi:id="_4AR0hK6SEe2PpOOSq4lfZQ" name="aprvlCareCd" start="9" end="13" kor="승인주의코드" type="string"/>
-    <fieldOffsets xmi:id="_4AR0ha6SEe2PpOOSq4lfZQ" name="aprvlCareCntn" start="13" end="113" kor="승인주의내용" type="string"/>
-    <fieldOffsets xmi:id="_4AR0hq6SEe2PpOOSq4lfZQ" name="aprvlCareAplyDt" start="113" end="121" kor="승인주의적용일자" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHFA0130201="http://schema.hcis.com/xsd/CISTADAHFA0130201_OutRes_RST_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHFA/CISTADAHFA0130201.CISTADAHFA0130201_OutRes_RST_GROUP_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHFA0130201_OutRes_RST_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHFA0130201_OutRes_RST_GROUP_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHFA0130201:main" lineLength="121" fieldOffsetsStr="crdMemNo(0,9)&#xA;aprvlCareCd(9,13)&#xA;aprvlCareCntn(13,113)&#xA;aprvlCareAplyDt(113,121)">
+    <fieldOffsets kor="카드회원번호" type="string" name="crdMemNo" start="0" end="9"/>
+    <fieldOffsets kor="승인주의코드" type="string" name="aprvlCareCd" start="9" end="13"/>
+    <fieldOffsets kor="승인주의내용" type="string" name="aprvlCareCntn" start="13" end="113"/>
+    <fieldOffsets kor="승인주의적용일자" type="string" name="aprvlCareAplyDt" start="113" end="121"/>
   </jndi:configuration>
 </jndi:namedResource>

@@ -22,6 +22,7 @@
     xmlns:ns20="http://schema.hcis.com/xsd/CISTADAHFA0100101"
     xmlns:ns21="http://schema.hcis.com/xsd/CISTADAHFA0100101_InReq"
     xmlns:ns22="http://schema.hcis.com/xsd//CISTADAHFA0100101_InReq"
+    xmlns:ns23="http://www.tibco.com/pe/WriteToLogActivitySchema"
     xmlns:ns3="http://tns.tibco.com/bw/json/1668647313518"
     xmlns:ns4="http://www.cspi_library.org/Library"
     xmlns:ns5="http://www.example.org/Schema_EAI_Call"
@@ -965,8 +966,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint x="394"
-                                    xsi:type="notation:Bounds" y="187"/>
+                                    <layoutConstraint x="385"
+                                    xsi:type="notation:Bounds" y="148"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -1214,8 +1215,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
-                                    <layoutConstraint x="535"
-                                    xsi:type="notation:Bounds" y="209"/>
+                                    <layoutConstraint x="506"
+                                    xsi:type="notation:Bounds" y="257"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1229,7 +1230,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="414"
+                                    <layoutConstraint height="490"
                                     width="1307" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -1240,7 +1241,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="414" width="1045" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="490" width="1310" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1250,7 +1251,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="438" width="1045" x="1"
+                    <layoutConstraint height="514" width="1310" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1259,7 +1260,7 @@
             </children>
             <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="490" width="1652" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="566" width="1652" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1330,18 +1331,6 @@
             <bendpoints points="[25, 0, -132, 0]$[123, 0, -34, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
-            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
-            <bendpoints points="[2, 25, -8, -82]$[8, 83, -2, -24]" xsi:type="notation:RelativeBendpoints"/>
-            <targetAnchor id="(0.0,0.8571428571428571)" xsi:type="notation:IdentityAnchor"/>
-        </edges>
-        <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
             <children type="6002">
@@ -1349,7 +1338,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
             <bendpoints
                 points="[25, 0, -121, 76]$[68, 0, -78, 76]$[68, -76, -78, 0]$[112, -76, -34, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -1361,7 +1350,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1372,7 +1361,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
             <bendpoints points="[25, 0, -82, 0]$[83, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1383,8 +1372,19 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
             <bendpoints points="[25, 0, -146, 0]$[147, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <bendpoints points="[1, 25, -10, -189]$[10, 190, -1, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1417,6 +1417,8 @@
             namespace="http://schema.hcis.com/xsd/CISTADAHFA0100101_InReq" prefix="ns2"/>
         <tibex:namespaceItem
             namespace="http://schema.hcis.com/xsd//CISTADAHFA0100101_InReq" prefix="ns3"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns8"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
@@ -1454,9 +1456,6 @@
         <bpws:variable element="ns21:root" name="RenderJSON_Error-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns11:ActivityOutputClass"
             name="RenderJSON_Error" sca-bpel:internal="true"/>
-        <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
-        <bpws:variable element="ns:OptionalErrorReport"
-            name="_errorOptional" sca-bpel:internal="true"/>
         <bpws:variable element="ns12:ActivityErrorData"
             name="_error_RenderJSON1" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:SetLog" name="L_Set_LogError-input" sca-bpel:internal="true"/>
@@ -1464,6 +1463,9 @@
             name="CallProc_CISTADAHFA0100101-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:subElement"
             name="CallProc_CISTADAHFA0100101" sca-bpel:internal="true"/>
+        <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
+        <bpws:variable element="ns:OptionalErrorReport"
+            name="_errorOptional" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1482,11 +1484,12 @@
                 <bpws:link name="ReplytoJMSMessageToL_Set_LogEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="L_Set_LogStartToCallProcess" tibex:linkType="SUCCESS"/>
                 <bpws:link name="AssignToReplytoJMSMessage" tibex:linkType="SUCCESS"/>
-                <bpws:link name="CallProc_IFID01ToL_Set_LogError" tibex:linkType="ERROR"/>
                 <bpws:link name="Assign_ErrorToReplytoJMSMessage" tibex:linkType="SUCCESS"/>
                 <bpws:link name="CallProc_IFID01ToAssign_OK" tibex:linkType="SUCCESS"/>
                 <bpws:link name="L_Set_LogErrorToRenderJSON_Error" tibex:linkType="SUCCESS"/>
                 <bpws:link name="RenderJSON_ErrorToAssign_Error" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="CallProc_CISTADAHFA0100101ToL_Set_LogError" tibex:linkType="ERROR"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1653,13 +1656,15 @@
                         <bpws:target linkName="L_Set_LogStartToCallProcess"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="CallProc_IFID01ToL_Set_LogError">
+                        <bpws:source linkName="CallProc_IFID01ToAssign_OK"/>
+                        <bpws:source
+                            linkName="CallProc_CISTADAHFA0100101ToL_Set_LogError"
+                            tibex:faultDetailsVar="CallProc_CISTADAHFA0100101" tibex:faultNameVar="FaultName">
                             <tibex:DesignExpression>
                                 <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
                             <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##error##]]></bpws:transitionCondition>
                         </bpws:source>
-                        <bpws:source linkName="CallProc_IFID01ToAssign_OK"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
@@ -1770,7 +1775,7 @@
                     tibex:xpdlId="8b82cceb-b1c3-4b15-b769-cacfbc2d4837"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="CallProc_IFID01ToL_Set_LogError"/>
+                        <bpws:target linkName="CallProc_CISTADAHFA0100101ToL_Set_LogError"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="L_Set_LogErrorToRenderJSON_Error"/>

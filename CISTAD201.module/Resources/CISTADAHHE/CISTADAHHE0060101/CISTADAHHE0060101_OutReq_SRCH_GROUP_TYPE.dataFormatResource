@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0060101="http://schema.hcis.com/xsd/CISTADAHHE0060101_OutReq_SRCH_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4CLR8K6SEe2PpOOSq4lfZQ" name="CISTADAHHE.CISTADAHHE0060101.CISTADAHHE0060101_OutReq_SRCH_GROUP_TYPE" type="dataformat:DataFormat">
-  <imports xmi:id="_4CLR8a6SEe2PpOOSq4lfZQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0060101_OutReq_SRCH_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0060101_OutReq_SRCH_GROUP_TYPE"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_4CLR8q6SEe2PpOOSq4lfZQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0060101:main" lineLength="69" fieldOffsetsStr="wrkGbVal(0,2)&#xA;crdNo(2,18)&#xA;qryStrtDt(18,26)&#xA;qryEndDt(26,34)&#xA;aprvlRstCsfCd(34,35)&#xA;nxtSrchKey(35,69)">
-    <fieldOffsets xmi:id="_4CLR866SEe2PpOOSq4lfZQ" name="wrkGbVal" end="2" kor="작업구분값" type="string"/>
-    <fieldOffsets xmi:id="_4CLR9K6SEe2PpOOSq4lfZQ" name="crdNo" start="2" end="18" kor="카드번호" type="string"/>
-    <fieldOffsets xmi:id="_4CLR9a6SEe2PpOOSq4lfZQ" name="qryStrtDt" start="18" end="26" kor="조회시작일자" type="string"/>
-    <fieldOffsets xmi:id="_4CLR9q6SEe2PpOOSq4lfZQ" name="qryEndDt" start="26" end="34" kor="조회종료일자" type="string"/>
-    <fieldOffsets xmi:id="_4CLR966SEe2PpOOSq4lfZQ" name="aprvlRstCsfCd" start="34" end="35" kor="승인결과분류코드" type="string"/>
-    <fieldOffsets xmi:id="_4CLR-K6SEe2PpOOSq4lfZQ" name="nxtSrchKey" start="35" end="69" kor="다음검색KEY" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADAHHE0060101="http://schema.hcis.com/xsd/CISTADAHHE0060101_OutReq_SRCH_GROUP_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADAHHE/CISTADAHHE0060101.CISTADAHHE0060101_OutReq_SRCH_GROUP_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADAHHE0060101_OutReq_SRCH_GROUP_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADAHHE0060101_OutReq_SRCH_GROUP_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADAHHE0060101:main" lineLength="69" fieldOffsetsStr="wrkGbVal(0,2)&#xA;crdNo(2,18)&#xA;qryStrtDt(18,26)&#xA;qryEndDt(26,34)&#xA;aprvlRstCsfCd(34,35)&#xA;nxtSrchKey(35,69)">
+    <fieldOffsets kor="작업구분값" type="string" name="wrkGbVal" start="0" end="2"/>
+    <fieldOffsets kor="카드번호" type="string" name="crdNo" start="2" end="18"/>
+    <fieldOffsets kor="조회시작일자" type="string" name="qryStrtDt" start="18" end="26"/>
+    <fieldOffsets kor="조회종료일자" type="string" name="qryEndDt" start="26" end="34"/>
+    <fieldOffsets kor="승인결과분류코드" type="string" name="aprvlRstCsfCd" start="34" end="35"/>
+    <fieldOffsets kor="다음검색KEY" type="string" name="nxtSrchKey" start="35" end="69"/>
   </jndi:configuration>
 </jndi:namedResource>
