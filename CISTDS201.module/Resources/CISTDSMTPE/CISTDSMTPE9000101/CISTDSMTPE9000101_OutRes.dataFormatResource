@@ -1,41 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTDSMTPE9000101="http://schema.hcis.com/xsd/CISTDSMTPE9000101_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_ybYiwLPbEe2c96NBHSQNLA" name="CISTDSMTPE.CISTDSMTPE9000101.CISTDSMTPE9000101_OutRes" type="dataformat:DataFormat">
-  <imports xmi:id="_ybZJ0LPbEe2c96NBHSQNLA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTDSMTPE9000101_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISTDSMTPE9000101_OutRes"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_ybZJ0bPbEe2c96NBHSQNLA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTDSMTPE9000101:main" lineLength="524" fieldOffsetsStr="trdCd(0,4)&#xA;trdGbcd(4,6)&#xA;nullVal(6,7)&#xA;tgrmLen(7,13)&#xA;respCd(13,20)&#xA;nullVal2(20,120)&#xA;useGvbkGbcd(120,124)&#xA;tgrmTypeNo(124,128)&#xA;crdPosNo(128,132)&#xA;custNo1(132,141)&#xA;custNo2(141,150)&#xA;crdNo(150,170)&#xA;custNo3(170,179)&#xA;nullVal3(179,192)&#xA;nullVal4(192,205)&#xA;swtcAmt(205,218)&#xA;acmDt(218,226)&#xA;procTime(226,232)&#xA;nullVal5(232,242)&#xA;nullVal6(242,257)&#xA;nullVal7(257,260)&#xA;giveNo(260,278)&#xA;giveSeq(278,281)&#xA;nullVal8(281,295)&#xA;storeCd(295,298)&#xA;rgstEmno(298,328)&#xA;nullVal9(328,341)&#xA;nullVal10(341,361)&#xA;nullVal11(361,367)&#xA;yn1(367,368)&#xA;yn2(368,369)&#xA;nullVal12(369,383)&#xA;rgstId(383,413)&#xA;costCd(413,419)&#xA;nullVal13(419,524)">
-    <fieldOffsets xmi:id="_ybZJ0rPbEe2c96NBHSQNLA" name="trdCd" end="4" kor="거래코드" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ07PbEe2c96NBHSQNLA" name="trdGbcd" start="4" end="6" kor="거래구분코드" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ1LPbEe2c96NBHSQNLA" name="nullVal" start="6" end="7" kor="공백값" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ1bPbEe2c96NBHSQNLA" name="tgrmLen" start="7" end="13" kor="전문길이" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ1rPbEe2c96NBHSQNLA" name="respCd" start="13" end="20" kor="응답코드" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ17PbEe2c96NBHSQNLA" name="nullVal2" start="20" end="120" kor="공백값2" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ2LPbEe2c96NBHSQNLA" name="useGvbkGbcd" start="120" end="124" kor="사용반납구분코드" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ2bPbEe2c96NBHSQNLA" name="tgrmTypeNo" start="124" end="128" kor="전문유형번호" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ2rPbEe2c96NBHSQNLA" name="crdPosNo" start="128" end="132" kor="카드포스번호" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ27PbEe2c96NBHSQNLA" name="custNo1" start="132" end="141" kor="고객번호1" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ3LPbEe2c96NBHSQNLA" name="custNo2" start="141" end="150" kor="고객번호2" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ3bPbEe2c96NBHSQNLA" name="crdNo" start="150" end="170" kor="카드번호" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ3rPbEe2c96NBHSQNLA" name="custNo3" start="170" end="179" kor="고객번호3" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ37PbEe2c96NBHSQNLA" name="nullVal3" start="179" end="192" kor="공백값3" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ4LPbEe2c96NBHSQNLA" name="nullVal4" start="192" end="205" kor="공백값4" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ4bPbEe2c96NBHSQNLA" name="swtcAmt" start="205" end="218" kor="전환금액" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ4rPbEe2c96NBHSQNLA" name="acmDt" start="218" end="226" kor="적립일자" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ47PbEe2c96NBHSQNLA" name="procTime" start="226" end="232" kor="처리시간" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ5LPbEe2c96NBHSQNLA" name="nullVal5" start="232" end="242" kor="공백값5" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ5bPbEe2c96NBHSQNLA" name="nullVal6" start="242" end="257" kor="공백값6" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ5rPbEe2c96NBHSQNLA" name="nullVal7" start="257" end="260" kor="공백값7" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ57PbEe2c96NBHSQNLA" name="giveNo" start="260" end="278" kor="지급번호" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ6LPbEe2c96NBHSQNLA" name="giveSeq" start="278" end="281" kor="지급순번" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ6bPbEe2c96NBHSQNLA" name="nullVal8" start="281" end="295" kor="공백값8" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ6rPbEe2c96NBHSQNLA" name="storeCd" start="295" end="298" kor="점코드" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ67PbEe2c96NBHSQNLA" name="rgstEmno" start="298" end="328" kor="등록자사번" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ7LPbEe2c96NBHSQNLA" name="nullVal9" start="328" end="341" kor="공백값9" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ7bPbEe2c96NBHSQNLA" name="nullVal10" start="341" end="361" kor="공백값10" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ7rPbEe2c96NBHSQNLA" name="nullVal11" start="361" end="367" kor="공백값11" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ77PbEe2c96NBHSQNLA" name="yn1" start="367" end="368" kor="여부1" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ8LPbEe2c96NBHSQNLA" name="yn2" start="368" end="369" kor="여부2" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ8bPbEe2c96NBHSQNLA" name="nullVal12" start="369" end="383" kor="공백값12" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ8rPbEe2c96NBHSQNLA" name="rgstId" start="383" end="413" kor="등록자ID" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ87PbEe2c96NBHSQNLA" name="costCd" start="413" end="419" kor="비용코드" type="string"/>
-    <fieldOffsets xmi:id="_ybZJ9LPbEe2c96NBHSQNLA" name="nullVal13" start="419" end="524" kor="공백값13" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTDSMTPE9000101="http://schema.hcis.com/xsd/CISTDSMTPE9000101_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTDSMTPE/CISTDSMTPE9000101.CISTDSMTPE9000101_OutRes" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTDSMTPE9000101_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISTDSMTPE9000101_OutRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTDSMTPE9000101:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="0" type="TDSHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="0" type="CISTDSMTPE9000101_OutRes" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>

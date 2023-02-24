@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISHDFCTCN0013401="http://schema.hcis.com/xsd/CISHDFCTCN0013401_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_weeKK7PbEe2c96NBHSQNLA" name="CISHDFCTCN.CISHDFCTCN0013401.CISHDFCTCN0013401_OutRes" type="dataformat:DataFormat">
-  <imports xmi:id="_weeKLLPbEe2c96NBHSQNLA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISHDFCTCN0013401_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISHDFCTCN0013401_OutRes"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_weeKLbPbEe2c96NBHSQNLA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISHDFCTCN0013401:main" lineLength="2248" fieldOffsetsStr="storeCd(0,3)&#xA;crdNo(3,19)&#xA;mphonNo(19,35)&#xA;bymd(35,43)&#xA;crdGbcd(43,46)&#xA;custGrdCd(46,48)&#xA;msg(48,2048)&#xA;prepClasInf(2048,2248)">
-    <fieldOffsets xmi:id="_weeKLrPbEe2c96NBHSQNLA" name="storeCd" end="3" kor="점코드" type="string"/>
-    <fieldOffsets xmi:id="_weeKL7PbEe2c96NBHSQNLA" name="crdNo" start="3" end="19" kor="카드번호" type="string"/>
-    <fieldOffsets xmi:id="_weeKMLPbEe2c96NBHSQNLA" name="mphonNo" start="19" end="35" kor="휴대폰번호" type="string"/>
-    <fieldOffsets xmi:id="_weeKMbPbEe2c96NBHSQNLA" name="bymd" start="35" end="43" kor="생년월일" type="string"/>
-    <fieldOffsets xmi:id="_weeKMrPbEe2c96NBHSQNLA" name="crdGbcd" start="43" end="46" kor="카드구분코드" type="string"/>
-    <fieldOffsets xmi:id="_weeKM7PbEe2c96NBHSQNLA" name="custGrdCd" start="46" end="48" kor="고객등급코드" type="string"/>
-    <fieldOffsets xmi:id="_weeKNLPbEe2c96NBHSQNLA" name="msg" start="48" end="2048" kor="메시지" type="string"/>
-    <fieldOffsets xmi:id="_weeKNbPbEe2c96NBHSQNLA" name="prepClasInf" start="2048" end="2248" kor="예비항목정보" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISHDFCTCN0013401="http://schema.hcis.com/xsd/CISHDFCTCN0013401_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISHDFCTCN/CISHDFCTCN0013401.CISHDFCTCN0013401_OutRes" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISHDFCTCN0013401_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISHDFCTCN0013401_OutRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISHDFCTCN0013401:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="0" type="HDFHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="0" type="CISHDFCTCN0013401_OutRes" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>
