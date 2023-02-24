@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISHPTCTCN0013602="http://schema.hcis.com/xsd/CISHPTCTCN0013602_OutReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_WCG2-LNVEe2zCa0TT6kE_Q" name="CISHPTCTCN.CISHPTCTCN0013602.CISHPTCTCN0013602_OutReq" type="dataformat:DataFormat">
+  <imports xmi:id="_WCG2-bNVEe2zCa0TT6kE_Q" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISHPTCTCN0013602_OutReq_df.xsd" namespace="http://schema.hcis.com/xsd/CISHPTCTCN0013602_OutReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_WCG2-rNVEe2zCa0TT6kE_Q" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISHPTCTCN0013602:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets xmi:id="_WCG2-7NVEe2zCa0TT6kE_Q" name="header" kor="0" type="HPTHeaderType"/>
+    <fieldOffsets xmi:id="_WCG2_LNVEe2zCa0TT6kE_Q" name="data" kor="0" type="CISHPTCTCN0013602_OutReq"/>
+  </jndi:configuration>
+</jndi:namedResource>
