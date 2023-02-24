@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="CISHDFCTCN0013401_OutReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="HDF_OutReq" class="java.util.LinkedHashMap"> 
+      <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="0" length="3"/>  
+      <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="3" length="16"/>  
+      <field kor="휴대폰번호" name="mphonNo" minOccurs="1" maxOccurs="1" position="19" length="16"/>  
+      <field kor="생년월일" name="bymd" minOccurs="1" maxOccurs="1" position="35" length="8"/>  
+      <field kor="카드구분코드" name="crdGbcd" minOccurs="1" maxOccurs="1" position="43" length="3"/>  
+      <field kor="고객등급코드" name="custGrdCd" minOccurs="1" maxOccurs="1" position="46" length="2"/>  
+      <field kor="메시지" name="msg" minOccurs="1" maxOccurs="1" position="48" length="2000"/>  
+      <field kor="예비항목정보" name="prepClasInf" minOccurs="1" maxOccurs="1" position="2048" length="200"/> 
+    </record> 
+  </stream>  
+  <stream kor="" name="CISHDFCTCN0013401_OutRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="HDF_OutRes" class="java.util.LinkedHashMap">
+      <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="0" length="3"/>
+      <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="3" length="16"/>
+      <field kor="휴대폰번호" name="mphonNo" minOccurs="1" maxOccurs="1" position="19" length="16"/>
+      <field kor="생년월일" name="bymd" minOccurs="1" maxOccurs="1" position="35" length="8"/>
+      <field kor="카드구분코드" name="crdGbcd" minOccurs="1" maxOccurs="1" position="43" length="3"/>
+      <field kor="고객등급코드" name="custGrdCd" minOccurs="1" maxOccurs="1" position="46" length="2"/>
+      <field kor="메시지" name="msg" minOccurs="1" maxOccurs="1" position="48" length="2000"/>
+      <field kor="예비항목정보" name="prepClasInf" minOccurs="1" maxOccurs="1" position="2048" length="200"/>
+    </record>
+  </stream>
+</beanio>

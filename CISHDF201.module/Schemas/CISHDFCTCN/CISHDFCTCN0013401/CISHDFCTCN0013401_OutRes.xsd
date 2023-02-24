@@ -1,0 +1,15 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISHDFCTCN0013401_OutRes" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CISHDFCTCN0013401_OutRes">
+    <complexType name="CISHDFCTCN0013401_OutRes">
+        <sequence>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="휴대폰번호" e:length="16" e:padder="SpaceRight" name="mphonNo" nillable="true" type="string"/>
+            <element e:kor="생년월일" e:length="8" e:padder="SpaceRight" name="bymd" nillable="true" type="string"/>
+            <element e:kor="카드구분코드" e:length="3" e:padder="SpaceRight" name="crdGbcd" nillable="true" type="string"/>
+            <element e:kor="고객등급코드" e:length="2" e:padder="SpaceRight" name="custGrdCd" nillable="true" type="string"/>
+            <element e:kor="메시지" e:length="2000" e:padder="SpaceRight" name="msg" nillable="true" type="string"/>
+            <element e:kor="예비항목정보" e:length="200" e:padder="SpaceRight" name="prepClasInf" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:CISHDFCTCN0013401_OutRes"/>
+</schema>

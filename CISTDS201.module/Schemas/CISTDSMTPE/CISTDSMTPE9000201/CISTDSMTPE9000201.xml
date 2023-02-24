@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="CISTDSMTPE9000201_OutReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="TDS_OutReq" class="java.util.LinkedHashMap"> 
+      <field kor="거래코드" name="trdCd" minOccurs="1" maxOccurs="1" position="0" length="4"/>  
+      <field kor="거래구분코드" name="trdGbcd" minOccurs="1" maxOccurs="1" position="4" length="2"/>  
+      <field kor="공백값" name="nullVal" minOccurs="1" maxOccurs="1" position="6" length="1"/>  
+      <field kor="전문길이" name="tgrmLen" minOccurs="1" maxOccurs="1" position="7" length="6"/>  
+      <field kor="응답코드" name="respCd" minOccurs="1" maxOccurs="1" position="13" length="7"/>  
+      <field kor="공백값2" name="nullVal2" minOccurs="1" maxOccurs="1" position="20" length="100"/>  
+      <field kor="사용반납구분코드" name="useGvbkGbcd" minOccurs="1" maxOccurs="1" position="120" length="4"/>  
+      <field kor="전문유형번호" name="tgrmTypeNo" minOccurs="1" maxOccurs="1" position="124" length="4"/>  
+      <field kor="카드포스번호" name="crdPosNo" minOccurs="1" maxOccurs="1" position="128" length="4"/>  
+      <field kor="고객번호1" name="custNo1" minOccurs="1" maxOccurs="1" position="132" length="9"/>  
+      <field kor="고객번호2" name="custNo2" minOccurs="1" maxOccurs="1" position="141" length="9"/>  
+      <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="150" length="20"/>  
+      <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="170" length="3"/>  
+      <field kor="적립일자" name="acmDt" minOccurs="1" maxOccurs="1" position="173" length="8"/>  
+      <field kor="처리시간" name="procTime" minOccurs="1" maxOccurs="1" position="181" length="6"/>  
+      <field kor="전환금액" name="swtcAmt" minOccurs="1" maxOccurs="1" position="187" length="13"/>  
+      <field kor="점코드2" name="storeCd2" minOccurs="1" maxOccurs="1" position="200" length="3"/>  
+      <field kor="처리일자" name="procDt" minOccurs="1" maxOccurs="1" position="203" length="8"/>  
+      <field kor="처리순번" name="procSeq" minOccurs="1" maxOccurs="1" position="211" length="7"/>  
+      <field kor="지급순번" name="giveSeq" minOccurs="1" maxOccurs="1" position="218" length="3"/>  
+      <field kor="등록자사번" name="rgstEmno" minOccurs="1" maxOccurs="1" position="221" length="30"/>  
+      <field kor="등록자ID" name="rgstId" minOccurs="1" maxOccurs="1" position="251" length="30"/>  
+      <field kor="공백값3" name="nullVal3" minOccurs="1" maxOccurs="1" position="281" length="231"/> 
+    </record> 
+  </stream>  
+  <stream kor="" name="CISTDSMTPE9000201_OutRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="TDS_OutRes" class="java.util.LinkedHashMap">
+      <field kor="거래코드" name="trdCd" minOccurs="1" maxOccurs="1" position="0" length="4"/>
+      <field kor="거래구분코드" name="trdGbcd" minOccurs="1" maxOccurs="1" position="4" length="2"/>
+      <field kor="공백값" name="nullVal" minOccurs="1" maxOccurs="1" position="6" length="1"/>
+      <field kor="전문길이" name="tgrmLen" minOccurs="1" maxOccurs="1" position="7" length="6"/>
+      <field kor="응답코드" name="respCd" minOccurs="1" maxOccurs="1" position="13" length="7"/>
+      <field kor="공백값2" name="nullVal2" minOccurs="1" maxOccurs="1" position="20" length="100"/>
+      <field kor="사용반납구분코드" name="useGvbkGbcd" minOccurs="1" maxOccurs="1" position="120" length="4"/>
+      <field kor="전문유형번호" name="tgrmTypeNo" minOccurs="1" maxOccurs="1" position="124" length="4"/>
+      <field kor="카드포스번호" name="crdPosNo" minOccurs="1" maxOccurs="1" position="128" length="4"/>
+      <field kor="고객번호1" name="custNo1" minOccurs="1" maxOccurs="1" position="132" length="9"/>
+      <field kor="고객번호2" name="custNo2" minOccurs="1" maxOccurs="1" position="141" length="9"/>
+      <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="150" length="20"/>
+      <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="170" length="3"/>
+      <field kor="적립일자" name="acmDt" minOccurs="1" maxOccurs="1" position="173" length="8"/>
+      <field kor="처리시간" name="procTime" minOccurs="1" maxOccurs="1" position="181" length="6"/>
+      <field kor="전환금액" name="swtcAmt" minOccurs="1" maxOccurs="1" position="187" length="13"/>
+      <field kor="점코드2" name="storeCd2" minOccurs="1" maxOccurs="1" position="200" length="3"/>
+      <field kor="처리일자" name="procDt" minOccurs="1" maxOccurs="1" position="203" length="8"/>
+      <field kor="처리순번" name="procSeq" minOccurs="1" maxOccurs="1" position="211" length="7"/>
+      <field kor="지급순번" name="giveSeq" minOccurs="1" maxOccurs="1" position="218" length="3"/>
+      <field kor="등록자사번" name="rgstEmno" minOccurs="1" maxOccurs="1" position="221" length="30"/>
+      <field kor="등록자ID" name="rgstId" minOccurs="1" maxOccurs="1" position="251" length="30"/>
+      <field kor="공백값3" name="nullVal3" minOccurs="1" maxOccurs="1" position="281" length="231"/>
+    </record>
+  </stream>
+</beanio>
