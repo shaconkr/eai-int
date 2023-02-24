@@ -97,15 +97,17 @@ public class CISTADHelper<N> extends HCISHelper<N> {
         	rtnMap = parser.parseXsdFromClasspath(is, "header");
         	is.close();
         } catch (FileNotFoundException e) {
-        	check   = "ANC";
+        	check = "CLA";
         	log.error("Local Test System Header Not Found  {}", path);
         } catch (IOException e) {
         	e.printStackTrace();
         } finally {
-        	if (check.equals("ANC")) {
-           		is = ancClass.getClass().getResourceAsStream(path);
+        	if (check.equals("CLA")) {
+//           		is = ancClass.getClass().getResourceAsStream(path);
+           		is = getClass().getResourceAsStream(headPath);
         		if (is==null) {
-        			log.error("Ancestor System Header Not Found  {}",path);
+        			log.error("Class System Header Not Found  {}",path);
+//        			log.error("Ancestor System Header Not Found  {}",path);
         		} else {
             		rtnMap = parser.parseXsdFromClasspath(is, "header");
         		}
