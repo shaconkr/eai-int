@@ -53,7 +53,20 @@ public class CISTADHelper<N> extends HCISHelper<N> {
         Map<String,Object> sourceBody   = CastUtils.cast((Map<?, ?>) sourceMessage.get("data"));
         Map<String,Object> targetHeader = new LinkedHashMap<>();
 
-        List<Map<String, Object>> targetHeaderLayout =  loadSystemHeader(targetSystemId);
+        List<Map<String, Object>> targetHeaderLayout = null;
+        try {
+        	targetHeaderLayout = loadSystemHeader(targetSystemId);
+        } catch(Exception e) {
+        	e.getMessage();
+        } finally {
+            if (targetHeaderLayout == null) {
+            	targetHeaderLayout = localLoadSystemHeader(targetSystemId);
+            }
+        }
+//        List<Map<String, Object>> targetHeaderLayout = loadSystemHeader(targetSystemId);
+//        if (targetHeaderLayout.isEmpty()) {
+//        	targetHeaderLayout = localLoadSystemHeader(targetSystemId);
+//        }
         int headerLength = 0;
         for (Map<String, Object> m : targetHeaderLayout) {
             int colLen = Integer.parseInt(String.valueOf(m.get("length")));
@@ -67,42 +80,42 @@ public class CISTADHelper<N> extends HCISHelper<N> {
         return gson.toJson(ImmutableMap.of("header", targetHeader, "data", sourceBody));
     }
 
-//	@Override
-//	public List<Map<String, Object>> loadSystemHeader(String sysId) {
-//    	TibXsdParser parser = new TibXsdParser();        
-//        String headPath     = "Schemas/" +sysId + "Header.xsd";
-//        Class<?> ancClass   = HCISHelper.class;
-//        
-//        InputStream is = ancClass.getClass().getResourceAsStream(headPath);    	
-//        if( is == null) {
-//        	log.error("System Header Not Found  {}", headPath);
-//        }
-//        return parser.parseXsdFromClasspath(is, "header");
-//	}
-
-	@Override
-	public List<Map<String, Object>> loadSystemHeader(String sysId) {
+	public List<Map<String, Object>> localLoadSystemHeader(String sysId) {
         String headPath   = "Schemas/" +sysId + "Header.xsd";
         Class<?> ancClass = HCISHelper.class;
         URL location   = ancClass.getProtectionDomain().getCodeSource().getLocation();
         String ancPath = location.getPath();
         String path    = ancPath + headPath;
 
-        InputStream is = null;
         List<Map<String, Object>> rtnMap = null;
         try {
-        	is = new FileInputStream(new File(path));
+        	InputStream is = new FileInputStream(new File(path));
         	TibXsdParser parser = new TibXsdParser();
         	rtnMap = parser.parseXsdFromClasspath(is, "header");
         	is.close();
         } catch (FileNotFoundException e) {
-        	log.error("System Header Not Found  {}", path);
+        	log.error("Local Test System Header Not Found  {}", path);
         } catch (IOException e) {
         	e.printStackTrace();
         }
 
         return rtnMap;
 	}
+
+//    /**
+//     * System 별 Header XSD Loading
+//     *
+//     * @param sysId
+//     * @return
+//     */
+//    public List<Map<String, Object>> ancLoadSystemHeader(String pPath) {
+//        InputStream is = getClass().getResourceAsStream(pPath);
+//        if (is == null) {
+//        	log.error("Ancestor System Header Not Found  {}",pPath);
+//        }
+//
+//        return new TibXsdParser().parseXsdFromClasspath(is, "header");        
+//    }
 
 	@Override
     public String EDIbytesToJson(String msgType, byte[] ediBytes, String encoding, String xml) throws Exception {
