@@ -44,6 +44,7 @@ public class CISTADHelper<N> extends HCISHelper<N> {
      * data bypass
      *
      * @return
+     * @throws Exception 
      */
 	@Override
     @SuppressWarnings("unchecked")
@@ -81,26 +82,40 @@ public class CISTADHelper<N> extends HCISHelper<N> {
     }
 
 	public List<Map<String, Object>> localLoadSystemHeader(String sysId) {
-        String headPath   = "Schemas/" +sysId + "Header.xsd";
+        String headPath   = "/Schemas/" +sysId + "Header.xsd";
         Class<?> ancClass = HCISHelper.class;
         URL location   = ancClass.getProtectionDomain().getCodeSource().getLocation();
         String ancPath = location.getPath();
         String path    = ancPath + headPath;
+        TibXsdParser parser = new TibXsdParser();
+        InputStream is = null;
+        String check   = "";
 
         List<Map<String, Object>> rtnMap = null;
         try {
-        	InputStream is = new FileInputStream(new File(path));
-        	TibXsdParser parser = new TibXsdParser();
+        	is = new FileInputStream(new File(path));
         	rtnMap = parser.parseXsdFromClasspath(is, "header");
         	is.close();
         } catch (FileNotFoundException e) {
+        	check   = "ANC";
         	log.error("Local Test System Header Not Found  {}", path);
         } catch (IOException e) {
         	e.printStackTrace();
+        } finally {
+        	if (check.equals("ANC")) {
+           		is = ancClass.getClass().getResourceAsStream(path);
+        		if (is==null) {
+        			log.error("Ancestor System Header Not Found  {}",path);
+        		} else {
+            		rtnMap = parser.parseXsdFromClasspath(is, "header");
+        		}
+        	}
         }
 
         return rtnMap;
 	}
+	
+//	public List<Map<String, Object>> ancLoadSystemHeader(String)
 
 //    /**
 //     * System 별 Header XSD Loading
