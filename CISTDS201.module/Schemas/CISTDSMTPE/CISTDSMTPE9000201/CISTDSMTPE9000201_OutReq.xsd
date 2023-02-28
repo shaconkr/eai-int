@@ -74,8 +74,8 @@
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:TDSHeaderType"/>
-            <element name="data" type="ns:CISTDSMTPE9000201_OutReq"/>
+            <element e:kor="공통부" name="header" type="ns:TDSHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISTDSMTPE9000201_OutReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

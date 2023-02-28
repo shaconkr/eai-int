@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="HDF_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -50,7 +50,7 @@
         </segment>  
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="1800" length="3"/>  
         <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="1803" length="16"/>  
         <field kor="휴대폰번호" name="mphonNo" minOccurs="1" maxOccurs="1" position="1819" length="16"/>  
@@ -67,7 +67,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="HDF_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -108,7 +108,7 @@
         </segment>
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="1800" length="3"/>
         <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="1803" length="16"/>
         <field kor="휴대폰번호" name="mphonNo" minOccurs="1" maxOccurs="1" position="1819" length="16"/>

@@ -10,20 +10,26 @@
     xmlns:ns1="http://tns.tibco.com/bw/activity/sendhttprequest/output+e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b+RequestActivityOutput"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest"
     xmlns:ns3="http://www.example.org/Schema_SubProc"
+    xmlns:ns4="http://tns.tibco.com/bw/activity/sendhttprequest/input+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityInput"
+    xmlns:ns5="http://tns.tibco.com/bw/activity/sendhttprequest/output+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityOutput"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <tibex:VariableDescriptor type="MemorySaving">
-        <task name="End">
+        <task name="Start">
             <endingVariables>
-                <variable>SendHTTPRequest</variable>
+                <variable>Start</variable>
             </endingVariables>
         </task>
-        <task name="SendHTTPRequest">
+        <task name="End">
             <endingVariables>
-                <variable>SendHTTPRequest-input</variable>
-                <variable>Start</variable>
+                <variable>SendSIMRequest</variable>
+            </endingVariables>
+        </task>
+        <task name="SendSIMRequest">
+            <endingVariables>
+                <variable>SendSIMRequest-input</variable>
             </endingVariables>
         </task>
     </tibex:VariableDescriptor>
@@ -304,9 +310,26 @@
             <element name="Resilience4jCircuitBreakerOpenException" type="tns:Resilience4jCircuitBreakerOpenExceptionType"/>
         </schema>
         <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b+RequestActivityInput"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/input+e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b+RequestActivityInput">
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions"
+            xmlns:Q2="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest">
+            <import namespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpClientException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpServerException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpCommunicationException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q2:ActivityTimedOutException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityInput"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/input+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityInput">
             <import namespace="http://xmlns.tibco.com/encodings/mime"/>
             <complexType name="inputHeadersType">
                 <sequence>
@@ -371,9 +394,9 @@
             <element name="RequestActivityInput" type="tns:RequestActivityInput"/>
         </schema>
         <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/output+e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b+RequestActivityOutput"
+            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/output+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityOutput"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/output+e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b+RequestActivityOutput">
+            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/output+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityOutput">
             <import namespace="http://xmlns.tibco.com/encodings/mime"/>
             <complexType name="outputHeadersType">
                 <sequence>
@@ -436,23 +459,6 @@
                 </sequence>
             </complexType>
             <element name="RequestActivityOutput" type="tns:RequestActivityOutput"/>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions"
-            xmlns:Q2="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest">
-            <import namespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"/>
-            <import namespace="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpClientException"/>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpServerException"/>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpCommunicationException"/>
-                    <element maxOccurs="1" minOccurs="0" ref="Q2:ActivityTimedOutException"/>
-                </choice>
-            </complexType>
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="cis099"
@@ -545,25 +551,29 @@
                                     <layoutConstraint x="322"
                                     xsi:type="notation:Bounds" y="2"/>
                                     </children>
-                                    <children type="4002 bw.http.sendHTTPRequest">
+                                    <children type="4002">
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="맑은 고딕"
@@ -573,10 +583,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint
-                                    height="40" width="40"
-                                    x="143"
-                                    xsi:type="notation:Bounds" y="2"/>
+                                    <layoutConstraint x="143"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -632,7 +640,7 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[25, 1, -145, -9]$[146, 9, -24, -1]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, 20, -116, -94]$[117, 94, -24, -20]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
@@ -643,35 +651,39 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.1"/>
-            <bendpoints points="[25, 0, -154, 0]$[155, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, -16, -154, 98]$[155, -98, -24, 16]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
             namespace="http://www.example.org/Schema_SubProc" prefix="tns"/>
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityInput" prefix="tns18"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
-        <bpws:variable name="httpClientResource"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
-            <bpws:from>
-                <bpws:literal>CISHDF201.module.FW</bpws:literal>
-            </bpws:from>
-        </bpws:variable>
-        <bpws:variable element="ns0:RequestActivityInput"
-            name="SendHTTPRequest-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:RequestActivityOutput"
-            name="SendHTTPRequest" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:ActivityErrorData"
-            name="_error_SendHTTPRequest" sca-bpel:internal="true"/>
         <bpws:variable element="ns3:subElement" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns3:subElement" name="End-input"
             sca-bpel:internal="true" tibex:parameter="out"/>
+        <bpws:variable name="httpClientResourceSIM"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>CISHDF201.module.Simm</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
+        <bpws:variable element="ns4:RequestActivityInput"
+            name="SendSIMRequest-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:RequestActivityOutput"
+            name="SendSIMRequest" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:ActivityErrorData"
+            name="_error_SendSIMRequest" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -684,8 +696,8 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToSendHTTPRequest" tibex:linkType="SUCCESS"/>
-                <bpws:link name="SendHTTPRequestToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToSendSIMRequest" tibex:linkType="SUCCESS"/>
+                <bpws:link name="SendSIMRequestToEnd" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -693,7 +705,7 @@
                     tibex:xpdlId="75bd034e-a99f-42c4-b592-9d336c0359ce"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToSendHTTPRequest"/>
+                        <bpws:source linkName="StartToSendSIMRequest"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -705,11 +717,11 @@
                     name="End"
                     tibex:xpdlId="a1aeb0ec-878a-4782-bb28-a444d1a23612" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="SendHTTPRequestToEnd"/>
+                        <bpws:target linkName="SendSIMRequestToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;SendHTTPRequest&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:subElement>&lt;tns:emsBody>&lt;xsl:value-of select=&quot;$SendHTTPRequest/asciiContent&quot;/>&lt;/tns:emsBody>&lt;/tns:subElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;SendSIMRequest&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:subElement>&lt;tns:emsBody>&lt;xsl:value-of select=&quot;$SendSIMRequest/asciiContent&quot;/>&lt;/tns:emsBody>&lt;/tns:subElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -730,26 +742,26 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     governedObjectTypes="BWHttpReference"
-                    inputVariable="SendHTTPRequest-input"
-                    name="SendHTTPRequest"
-                    outputVariable="SendHTTPRequest"
-                    tibex:xpdlId="e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    inputVariable="SendSIMRequest-input"
+                    name="SendSIMRequest"
+                    outputVariable="SendSIMRequest"
+                    tibex:xpdlId="a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="StartToSendHTTPRequest"/>
+                        <bpws:target linkName="StartToSendSIMRequest"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="SendHTTPRequestToEnd"/>
+                        <bpws:source linkName="SendSIMRequestToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b+RequestActivityInput&quot; xmlns:tns=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;SendHTTPRequest-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:RequestActivityInput>&#xa;            &lt;Method>&#xa;                &lt;xsl:value-of select=&quot;'POST'&quot;/>&#xa;            &lt;/Method>&#xa;            &lt;RequestURI>&#xa;                &lt;xsl:value-of select=&quot;'/serviceEndpoint/httpService/request.json'&quot;/>&#xa;            &lt;/RequestURI>&#xa;            &lt;PostData>&#xa;                &lt;xsl:value-of select=&quot;$Start/tns:emsBody&quot;/>&#xa;            &lt;/PostData>&#xa;        &lt;/tns2:RequestActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns18=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityInput&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendSIMRequest-input&quot; match=&quot;/&quot;>&lt;tns18:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;'GET'&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;concat('/response?id=', &amp;quot;CISHDFCTCN0013401&amp;quot;)&quot;/>&lt;/RequestURI>&lt;/tns18:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.http.sendHTTPRequest"
                             version="6.0.0.20132205"
-                            xmlns:RequestActivityInput="http://tns.tibco.com/bw/activity/sendhttprequest/input+e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b+RequestActivityInput"
-                            xmlns:RequestActivityOutput="http://tns.tibco.com/bw/activity/sendhttprequest/output+e9c0b0a8-8b21-4b12-a35b-c72b684c8c6b+RequestActivityOutput"
+                            xmlns:RequestActivityInput="http://tns.tibco.com/bw/activity/sendhttprequest/input+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityInput"
+                            xmlns:RequestActivityOutput="http://tns.tibco.com/bw/activity/sendhttprequest/output+a704e7f3-c4e3-4d36-a7e8-bec98e2e0dc8+RequestActivityOutput"
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:http="http://ns.tibco.com/bw/palette/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -757,10 +769,12 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/http#//SendHTTPRequest"/>
                                     <value
-                                    httpClientResource="httpClientResource"
+                                    httpClientResource="httpClientResourceSIM"
                                     inputHeadersQName="RequestActivityInput:inputHeadersType"
                                     outputHeadersQName="RequestActivityOutput:outputHeadersType"
-                                    postDataAs="String" xsi:type="http:SendHTTPRequest"/>
+                                    postDataAs="String" xsi:type="http:SendHTTPRequest">
+                                    <writeToFilePolicy/>
+                                    </value>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>

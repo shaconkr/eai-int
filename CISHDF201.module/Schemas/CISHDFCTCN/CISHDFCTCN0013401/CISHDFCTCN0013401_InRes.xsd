@@ -59,8 +59,8 @@
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:CISHDFCTCN0013401_InRes"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISHDFCTCN0013401_InRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>
