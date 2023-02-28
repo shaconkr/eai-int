@@ -33,16 +33,16 @@
     </complexType>
     <complexType name="CISTADAHHE0080101_OutReq">
         <sequence>
-            <element e:kor="검색그룹" e:padder="ZeroLeft" name="srchGroup" nillable="true" type="ns:SRCH_GROUP_TYPE"/>
+            <element e:kor="검색그룹" e:padder="ZeroLeft" minOccurs="0" name="srchGroup" nillable="true" type="ns:SRCH_GROUP_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="SRCH_GROUP_TYPE">
         <sequence>
-            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
-            <element e:kor="승인자ID" e:length="100" e:padder="SpaceRight" name="aprvId" nillable="true" type="string"/>
-            <element e:kor="시작년월" e:length="6" e:padder="SpaceRight" name="strtYm" nillable="true" type="string"/>
-            <element e:kor="종료년월" e:length="6" e:padder="SpaceRight" name="endYm" nillable="true" type="string"/>
-            <element e:kor="다음검색KEY" e:length="111" e:padder="SpaceRight" name="nxtSrchKey" nillable="true" type="string"/>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="승인자ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="aprvId" nillable="true" type="string"/>
+            <element e:kor="시작년월" e:length="6" e:padder="SpaceRight" minOccurs="0" name="strtYm" nillable="true" type="string"/>
+            <element e:kor="종료년월" e:length="6" e:padder="SpaceRight" minOccurs="0" name="endYm" nillable="true" type="string"/>
+            <element e:kor="다음검색KEY" e:length="111" e:padder="SpaceRight" minOccurs="0" name="nxtSrchKey" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">

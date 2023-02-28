@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TADCISMTSY0008001="http://schema.hcis.com/xsd/TADCISMTSY0008001_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_1vePgK6SEe2PpOOSq4lfZQ" name="TADCISMTSY.TADCISMTSY0008001.TADCISMTSY0008001_InReq" type="dataformat:DataFormat">
-  <imports xmi:id="_1vePga6SEe2PpOOSq4lfZQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/TADCISMTSY0008001_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/TADCISMTSY0008001_InReq"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_1vePgq6SEe2PpOOSq4lfZQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="TADCISMTSY0008001:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets xmi:id="_1ve2kK6SEe2PpOOSq4lfZQ" name="header" kor="0" type="TADHeaderType"/>
-    <fieldOffsets xmi:id="_1ve2ka6SEe2PpOOSq4lfZQ" name="data" kor="0" type="TADCISMTSY0008001_InReq"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TADCISMTSY0008001="http://schema.hcis.com/xsd/TADCISMTSY0008001_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="TADCISMTSY/TADCISMTSY0008001.TADCISMTSY0008001_InReq" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/TADCISMTSY0008001_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/TADCISMTSY0008001_InReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="TADCISMTSY0008001:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="공통부" type="TADHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="데이터부" type="TADCISMTSY0008001_InReq" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>

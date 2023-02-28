@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="ARS_InReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -50,10 +50,10 @@
         </segment>  
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="1800" length="9"/>  
-        <field kor="시작일자" name="strtDt" minOccurs="1" maxOccurs="1" position="1809" length="8"/>  
-        <field kor="종료일자" name="endDt" minOccurs="1" maxOccurs="1" position="1817" length="8"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="1800" length="9"/>  
+        <field kor="시작일자" name="strtDt" minOccurs="0" maxOccurs="1" position="1809" length="8"/>  
+        <field kor="종료일자" name="endDt" minOccurs="0" maxOccurs="1" position="1817" length="8"/> 
       </segment> 
     </record> 
   </stream>  
@@ -62,7 +62,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="ARS_InRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -103,9 +103,9 @@
         </segment>
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="순매출금액" name="nsaleAmt" minOccurs="1" maxOccurs="1" position="1800" length="22" justify="right" padding="0"/>
-        <field kor="응답코드" name="respCd" minOccurs="1" maxOccurs="1" position="1822" length="4"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="순매출금액" name="nsaleAmt" minOccurs="0" maxOccurs="1" position="1800" length="22" justify="right" padding="0"/>
+        <field kor="응답코드" name="respCd" minOccurs="0" maxOccurs="1" position="1822" length="4"/>
       </segment>
     </record>
   </stream>

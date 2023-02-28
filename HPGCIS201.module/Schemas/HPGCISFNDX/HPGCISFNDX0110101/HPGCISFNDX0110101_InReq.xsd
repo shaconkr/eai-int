@@ -47,14 +47,14 @@
     </complexType>
     <complexType name="HPGCISFNDX0110101_InReq">
         <sequence>
-            <element e:kor="할부금액" e:length="19" e:padder="ZeroLeft" name="insmAmt" nillable="true" type="long"/>
-            <element e:kor="카드할부개월수" e:length="4" e:padder="ZeroLeft" name="crdInsmMths" nillable="true" type="long"/>
+            <element e:kor="할부금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="insmAmt" nillable="true" type="long"/>
+            <element e:kor="카드할부개월수" e:length="4" e:padder="ZeroLeft" minOccurs="0" name="crdInsmMths" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:HPGHeaderType"/>
-            <element name="data" type="ns:HPGCISFNDX0110101_InReq"/>
+            <element e:kor="공통부" name="header" type="ns:HPGHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:HPGCISFNDX0110101_InReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

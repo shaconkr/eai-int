@@ -47,15 +47,15 @@
     </complexType>
     <complexType name="ARSCISMTSY0016001_InReq">
         <sequence>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="시작일자" e:length="8" e:padder="SpaceRight" name="strtDt" nillable="true" type="string"/>
-            <element e:kor="종료일자" e:length="8" e:padder="SpaceRight" name="endDt" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="시작일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="strtDt" nillable="true" type="string"/>
+            <element e:kor="종료일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="endDt" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:ARSHeaderType"/>
-            <element name="data" type="ns:ARSCISMTSY0016001_InReq"/>
+            <element e:kor="공통부" name="header" type="ns:ARSHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:ARSCISMTSY0016001_InReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="TADCISMTPF9000201_InReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="TAD_InReq" class="java.util.LinkedHashMap"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
+        <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
+        <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" minOccurs="0" maxOccurs="1" position="17" length="1"/>  
+        <field kor="IP주소" name="ipAdr" minOccurs="0" maxOccurs="1" position="18" length="40"/>  
+        <field kor="GUID" name="guid" minOccurs="0" maxOccurs="1" position="58" length="38"/>  
+        <field kor="진행번호" name="prgrNo" minOccurs="0" maxOccurs="1" position="96" length="3" justify="right" padding="0"/>  
+        <field kor="최초GUID" name="frstGuid" minOccurs="0" maxOccurs="1" position="99" length="38"/>  
+        <field kor="전송시스템코드" name="sendSysCd" minOccurs="0" maxOccurs="1" position="137" length="3"/>  
+        <field kor="최초전송시스템코드" name="frstSendSysCd" minOccurs="0" maxOccurs="1" position="140" length="3"/>  
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="143" length="21"/>  
+        <field kor="EIMS전문ID" name="eimsTgrmId" minOccurs="0" maxOccurs="1" position="164" length="17"/>  
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" minOccurs="0" maxOccurs="1" position="181" length="3"/>  
+        <field kor="프래임워크거래ID" name="frwkTrdId" minOccurs="0" maxOccurs="1" position="184" length="12"/>  
+        <field kor="수신시스템코드" name="rcvSysCd" minOccurs="0" maxOccurs="1" position="196" length="3"/>  
+        <field kor="연계전문코드" name="tieTgrmCd" minOccurs="0" maxOccurs="1" position="199" length="10"/>  
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" minOccurs="0" maxOccurs="1" position="209" length="2"/>  
+        <field kor="연계서비스명" name="tieSrvNm" minOccurs="0" maxOccurs="1" position="211" length="30"/>  
+        <field kor="화면번호" name="scrnNo" minOccurs="0" maxOccurs="1" position="241" length="20"/>  
+        <field kor="요청응답구분코드" name="reqnRespGbcd" minOccurs="0" maxOccurs="1" position="261" length="1"/>  
+        <field kor="동기처리구분코드" name="syncProcGbcd" minOccurs="0" maxOccurs="1" position="262" length="1"/>  
+        <field kor="거래응답코드" name="trdRespCd" minOccurs="0" maxOccurs="1" position="263" length="1"/>  
+        <field kor="요청일시" name="reqnDtm" minOccurs="0" maxOccurs="1" position="264" length="17"/>  
+        <field kor="응답일시" name="respDtm" minOccurs="0" maxOccurs="1" position="281" length="17"/>  
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="298" length="3"/>  
+        <field kor="사용자ID" name="userId" minOccurs="0" maxOccurs="1" position="301" length="8"/>  
+        <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
+        <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
+      </segment>  
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="419" length="3"/>  
+        <field kor="승인번호" name="aprvlNo" minOccurs="0" maxOccurs="1" position="422" length="10"/>  
+        <field kor="원매출일자" name="orgsaleDt" minOccurs="0" maxOccurs="1" position="432" length="8"/>  
+        <field kor="원매출POS번호" name="orgsalePosNo" minOccurs="0" maxOccurs="1" position="440" length="4"/>  
+        <field kor="원매출영수증번호" name="orgsaleRcptNo" minOccurs="0" maxOccurs="1" position="444" length="6"/>  
+        <field kor="취소금액" name="cnclAmt" minOccurs="0" maxOccurs="1" position="450" length="10"/>  
+        <field kor="취소마일리지" name="cnclMlg" minOccurs="0" maxOccurs="1" position="460" length="10"/>  
+        <field kor="확정여부" name="cnfmYn" minOccurs="0" maxOccurs="1" position="470" length="10"/>  
+        <field kor="기수령합계마일리지" name="arcvnSumMlg" minOccurs="0" maxOccurs="1" position="480" length="10"/>  
+        <field kor="기수령합계수령금액" name="arcvnSumRcvnAmt" minOccurs="0" maxOccurs="1" position="490" length="10"/>  
+        <field kor="기수령상품권수령마일리지" name="arcvnGcRcvnMlg" minOccurs="0" maxOccurs="1" position="500" length="10"/>  
+        <field kor="기수령상품권수령금액" name="arcvnGcRcvnAmt" minOccurs="0" maxOccurs="1" position="510" length="10"/>  
+        <field kor="기수령사은품수령마일리지1" name="arcvnGiftRcvnMlg1" minOccurs="0" maxOccurs="1" position="520" length="10"/>  
+        <field kor="기수령사은품수령금액1" name="arcvnGiftRcvnAmt1" minOccurs="0" maxOccurs="1" position="530" length="10"/>  
+        <field kor="기수령사은품상품명1" name="arcvnGiftItemNm1" minOccurs="0" maxOccurs="1" position="540" length="10"/>  
+        <field kor="기수령사은품수령마일리지2" name="arcvnGiftRcvnMlg2" minOccurs="0" maxOccurs="1" position="550" length="10"/>  
+        <field kor="기수령사은품수령금액2" name="arcvnGiftRcvnAmt2" minOccurs="0" maxOccurs="1" position="560" length="10"/>  
+        <field kor="기수령사은품상품명2" name="arcvnGiftItemNm2" minOccurs="0" maxOccurs="1" position="570" length="10"/>  
+        <field kor="기수령사은품수령마일리지3" name="arcvnGiftRcvnMlg3" minOccurs="0" maxOccurs="1" position="580" length="10"/>  
+        <field kor="기수령사은품수령금액3" name="arcvnGiftRcvnAmt3" minOccurs="0" maxOccurs="1" position="590" length="10"/>  
+        <field kor="기수령사은품상품명3" name="arcvnGiftItemNm3" minOccurs="0" maxOccurs="1" position="600" length="10"/>  
+        <field kor="취소후합계마일리지" name="afcnSumMlg" minOccurs="0" maxOccurs="1" position="610" length="10"/>  
+        <field kor="취소후합계수령금액" name="afcnSumRcvnAmt" minOccurs="0" maxOccurs="1" position="620" length="10"/>  
+        <field kor="재수령가능마일리지" name="reRcvnPossMlg" minOccurs="0" maxOccurs="1" position="630" length="10"/>  
+        <field kor="재수령가능금액" name="reRcvnPossAmt" minOccurs="0" maxOccurs="1" position="640" length="10"/>  
+        <field kor="반납합계마일리지" name="gvbkSumMlg" minOccurs="0" maxOccurs="1" position="650" length="10"/>  
+        <field kor="반납합계수령금액" name="gvbkSumRcvnAmt" minOccurs="0" maxOccurs="1" position="660" length="10"/>  
+        <field kor="부족마일리지" name="lackMlg" minOccurs="0" maxOccurs="1" position="670" length="10"/>  
+        <field kor="상품권재수령초과금액" name="gcReRcvnOverAmt" minOccurs="0" maxOccurs="1" position="680" length="10"/>  
+        <field kor="사은품재수령초과금액" name="giftReRcvnOverAmt" minOccurs="0" maxOccurs="1" position="690" length="10"/>  
+        <field kor="기존마일리지" name="extgMlg" minOccurs="0" maxOccurs="1" position="700" length="10"/>  
+        <field kor="기존회원등급" name="extgMemGrd" minOccurs="0" maxOccurs="1" position="710" length="20"/>  
+        <field kor="취소후마일리지" name="afcnMlg" minOccurs="0" maxOccurs="1" position="730" length="10"/>  
+        <field kor="취소후회원등급" name="afcnMemGrd" minOccurs="0" maxOccurs="1" position="740" length="20"/>  
+        <field kor="명품구분코드" name="lxgdsGbcd" minOccurs="0" maxOccurs="1" position="760" length="1"/> 
+      </segment> 
+    </record> 
+  </stream>  
+  <stream kor="" name="TADCISMTPF9000201_InRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="TAD_InRes" class="java.util.LinkedHashMap">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
+        <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
+        <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
+        <field kor="시스템환경구분코드" name="sysEnvGbcd" minOccurs="0" maxOccurs="1" position="17" length="1"/>
+        <field kor="IP주소" name="ipAdr" minOccurs="0" maxOccurs="1" position="18" length="40"/>
+        <field kor="GUID" name="guid" minOccurs="0" maxOccurs="1" position="58" length="38"/>
+        <field kor="진행번호" name="prgrNo" minOccurs="0" maxOccurs="1" position="96" length="3" justify="right" padding="0"/>
+        <field kor="최초GUID" name="frstGuid" minOccurs="0" maxOccurs="1" position="99" length="38"/>
+        <field kor="전송시스템코드" name="sendSysCd" minOccurs="0" maxOccurs="1" position="137" length="3"/>
+        <field kor="최초전송시스템코드" name="frstSendSysCd" minOccurs="0" maxOccurs="1" position="140" length="3"/>
+        <field kor="시스템공통예비내용" name="sysCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="143" length="21"/>
+        <field kor="EIMS전문ID" name="eimsTgrmId" minOccurs="0" maxOccurs="1" position="164" length="17"/>
+        <field kor="EIMS전문번호" name="eimsTgrmVerNo" minOccurs="0" maxOccurs="1" position="181" length="3"/>
+        <field kor="프래임워크거래ID" name="frwkTrdId" minOccurs="0" maxOccurs="1" position="184" length="12"/>
+        <field kor="수신시스템코드" name="rcvSysCd" minOccurs="0" maxOccurs="1" position="196" length="3"/>
+        <field kor="연계전문코드" name="tieTgrmCd" minOccurs="0" maxOccurs="1" position="199" length="10"/>
+        <field kor="연계서비스그룹코드" name="tieSrvGrpCd" minOccurs="0" maxOccurs="1" position="209" length="2"/>
+        <field kor="연계서비스명" name="tieSrvNm" minOccurs="0" maxOccurs="1" position="211" length="30"/>
+        <field kor="화면번호" name="scrnNo" minOccurs="0" maxOccurs="1" position="241" length="20"/>
+        <field kor="요청응답구분코드" name="reqnRespGbcd" minOccurs="0" maxOccurs="1" position="261" length="1"/>
+        <field kor="동기처리구분코드" name="syncProcGbcd" minOccurs="0" maxOccurs="1" position="262" length="1"/>
+        <field kor="거래응답코드" name="trdRespCd" minOccurs="0" maxOccurs="1" position="263" length="1"/>
+        <field kor="요청일시" name="reqnDtm" minOccurs="0" maxOccurs="1" position="264" length="17"/>
+        <field kor="응답일시" name="respDtm" minOccurs="0" maxOccurs="1" position="281" length="17"/>
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="298" length="3"/>
+        <field kor="사용자ID" name="userId" minOccurs="0" maxOccurs="1" position="301" length="8"/>
+        <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
+        <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
+      </segment>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="419" length="3"/>
+        <field kor="승인번호" name="aprvlNo" minOccurs="0" maxOccurs="1" position="422" length="10"/>
+        <field kor="원매출일자" name="orgsaleDt" minOccurs="0" maxOccurs="1" position="432" length="8"/>
+        <field kor="원매출POS번호" name="orgsalePosNo" minOccurs="0" maxOccurs="1" position="440" length="4"/>
+        <field kor="원매출영수증번호" name="orgsaleRcptNo" minOccurs="0" maxOccurs="1" position="444" length="6"/>
+        <field kor="취소금액" name="cnclAmt" minOccurs="0" maxOccurs="1" position="450" length="10"/>
+        <field kor="취소마일리지" name="cnclMlg" minOccurs="0" maxOccurs="1" position="460" length="10"/>
+        <field kor="확정여부" name="cnfmYn" minOccurs="0" maxOccurs="1" position="470" length="10"/>
+        <field kor="기수령합계마일리지" name="arcvnSumMlg" minOccurs="0" maxOccurs="1" position="480" length="10"/>
+        <field kor="기수령합계수령금액" name="arcvnSumRcvnAmt" minOccurs="0" maxOccurs="1" position="490" length="10"/>
+        <field kor="기수령상품권수령마일리지" name="arcvnGcRcvnMlg" minOccurs="0" maxOccurs="1" position="500" length="10"/>
+        <field kor="기수령상품권수령금액" name="arcvnGcRcvnAmt" minOccurs="0" maxOccurs="1" position="510" length="10"/>
+        <field kor="기수령사은품수령마일리지1" name="arcvnGiftRcvnMlg1" minOccurs="0" maxOccurs="1" position="520" length="10"/>
+        <field kor="기수령사은품수령금액1" name="arcvnGiftRcvnAmt1" minOccurs="0" maxOccurs="1" position="530" length="10"/>
+        <field kor="기수령사은품상품명1" name="arcvnGiftItemNm1" minOccurs="0" maxOccurs="1" position="540" length="10"/>
+        <field kor="기수령사은품수령마일리지2" name="arcvnGiftRcvnMlg2" minOccurs="0" maxOccurs="1" position="550" length="10"/>
+        <field kor="기수령사은품수령금액2" name="arcvnGiftRcvnAmt2" minOccurs="0" maxOccurs="1" position="560" length="10"/>
+        <field kor="기수령사은품상품명2" name="arcvnGiftItemNm2" minOccurs="0" maxOccurs="1" position="570" length="10"/>
+        <field kor="기수령사은품수령마일리지3" name="arcvnGiftRcvnMlg3" minOccurs="0" maxOccurs="1" position="580" length="10"/>
+        <field kor="기수령사은품수령금액3" name="arcvnGiftRcvnAmt3" minOccurs="0" maxOccurs="1" position="590" length="10"/>
+        <field kor="기수령사은품상품명3" name="arcvnGiftItemNm3" minOccurs="0" maxOccurs="1" position="600" length="10"/>
+        <field kor="취소후합계마일리지" name="afcnSumMlg" minOccurs="0" maxOccurs="1" position="610" length="10"/>
+        <field kor="취소후합계수령금액" name="afcnSumRcvnAmt" minOccurs="0" maxOccurs="1" position="620" length="10"/>
+        <field kor="재수령가능마일리지" name="reRcvnPossMlg" minOccurs="0" maxOccurs="1" position="630" length="10"/>
+        <field kor="재수령가능금액" name="reRcvnPossAmt" minOccurs="0" maxOccurs="1" position="640" length="10"/>
+        <field kor="반납합계마일리지" name="gvbkSumMlg" minOccurs="0" maxOccurs="1" position="650" length="10"/>
+        <field kor="반납합계수령금액" name="gvbkSumRcvnAmt" minOccurs="0" maxOccurs="1" position="660" length="10"/>
+        <field kor="부족마일리지" name="lackMlg" minOccurs="0" maxOccurs="1" position="670" length="10"/>
+        <field kor="상품권재수령초과금액" name="gcReRcvnOverAmt" minOccurs="0" maxOccurs="1" position="680" length="10"/>
+        <field kor="사은품재수령초과금액" name="giftReRcvnOverAmt" minOccurs="0" maxOccurs="1" position="690" length="10"/>
+        <field kor="기존마일리지" name="extgMlg" minOccurs="0" maxOccurs="1" position="700" length="10"/>
+        <field kor="기존회원등급" name="extgMemGrd" minOccurs="0" maxOccurs="1" position="710" length="20"/>
+        <field kor="취소후마일리지" name="afcnMlg" minOccurs="0" maxOccurs="1" position="730" length="10"/>
+        <field kor="취소후회원등급" name="afcnMemGrd" minOccurs="0" maxOccurs="1" position="740" length="20"/>
+        <field kor="명품구분코드" name="lxgdsGbcd" minOccurs="0" maxOccurs="1" position="760" length="1"/>
+      </segment>
+    </record>
+  </stream>
+</beanio>

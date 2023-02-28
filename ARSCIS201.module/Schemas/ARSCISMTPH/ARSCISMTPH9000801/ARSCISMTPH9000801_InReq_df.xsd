@@ -2,8 +2,8 @@
     <element name="root" type="ns:ARSCISMTPH9000801_InReq"/>
     <complexType name="ARSCISMTPH9000801_InReq">
         <sequence>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="기준년도" e:length="4" e:padder="SpaceRight" name="bsicYr" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="기준년도" e:length="4" e:padder="SpaceRight" minOccurs="0" name="bsicYr" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

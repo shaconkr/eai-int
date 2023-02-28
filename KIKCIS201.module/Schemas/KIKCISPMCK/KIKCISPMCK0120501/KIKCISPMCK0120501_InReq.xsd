@@ -47,16 +47,16 @@
     </complexType>
     <complexType name="KIKCISPMCK0120501_InReq">
         <sequence>
-            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
-            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" name="saleDt" nillable="true" type="string"/>
-            <element e:kor="매출POS번호" e:length="6" e:padder="SpaceRight" name="salePosNo" nillable="true" type="string"/>
-            <element e:kor="매출영수번호" e:length="6" e:padder="SpaceRight" name="saleRceitNo" nillable="true" type="string"/>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="saleDt" nillable="true" type="string"/>
+            <element e:kor="매출POS번호" e:length="6" e:padder="SpaceRight" minOccurs="0" name="salePosNo" nillable="true" type="string"/>
+            <element e:kor="매출영수번호" e:length="6" e:padder="SpaceRight" minOccurs="0" name="saleRceitNo" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:KIKHeaderType"/>
-            <element name="data" type="ns:KIKCISPMCK0120501_InReq"/>
+            <element e:kor="공통부" name="header" type="ns:KIKHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:KIKCISPMCK0120501_InReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

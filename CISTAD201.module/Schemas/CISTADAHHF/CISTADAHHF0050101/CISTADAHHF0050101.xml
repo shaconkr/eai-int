@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,12 +39,12 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="승인일자" name="aprvlDt" minOccurs="1" maxOccurs="1" position="419" length="8"/>  
-        <field kor="승인시간" name="aprvlTime" minOccurs="1" maxOccurs="1" position="427" length="6"/>  
-        <field kor="승인번호" name="aprvlNo" minOccurs="1" maxOccurs="1" position="433" length="12"/>  
-        <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="445" length="16"/>  
-        <field kor="변경ID" name="chgId" minOccurs="1" maxOccurs="1" position="461" length="100"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="승인일자" name="aprvlDt" minOccurs="0" maxOccurs="1" position="419" length="8"/>  
+        <field kor="승인시간" name="aprvlTime" minOccurs="0" maxOccurs="1" position="427" length="6"/>  
+        <field kor="승인번호" name="aprvlNo" minOccurs="0" maxOccurs="1" position="433" length="12"/>  
+        <field kor="카드번호" name="crdNo" minOccurs="0" maxOccurs="1" position="445" length="16"/>  
+        <field kor="변경ID" name="chgId" minOccurs="0" maxOccurs="1" position="461" length="100"/> 
       </segment> 
     </record> 
   </stream>  
@@ -53,7 +53,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -83,8 +83,8 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="처리여부" name="procYn" minOccurs="1" maxOccurs="1" position="419" length="1"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="처리여부" name="procYn" minOccurs="0" maxOccurs="1" position="419" length="1"/>
       </segment>
     </record>
   </stream>

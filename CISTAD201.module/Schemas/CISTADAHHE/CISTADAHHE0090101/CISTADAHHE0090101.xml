@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,11 +39,11 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <segment name="srchGroup" kor="검색그룹" minOccurs="1" maxOccurs="1" class="map"> 
-          <field kor="시작년월" name="strtYm" minOccurs="1" maxOccurs="1" position="419" length="6"/>  
-          <field kor="종료년월" name="endYm" minOccurs="1" maxOccurs="1" position="425" length="6"/>  
-          <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="431" length="6"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <segment name="srchGroup" kor="검색그룹" minOccurs="0" maxOccurs="1" class="map"> 
+          <field kor="시작년월" name="strtYm" minOccurs="0" maxOccurs="1" position="419" length="6"/>  
+          <field kor="종료년월" name="endYm" minOccurs="0" maxOccurs="1" position="425" length="6"/>  
+          <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="431" length="6"/> 
         </segment> 
       </segment> 
     </record> 
@@ -53,7 +53,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -83,29 +83,29 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="419" length="6"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="419" length="6"/>
         <segment name="rstList" kor="결과리스트" minOccurs="50" maxOccurs="50" collection="list" class="map">
-          <field kor="년도" name="yr" minOccurs="1" maxOccurs="1" position="425" length="4"/>
-          <field kor="월" name="mm" minOccurs="1" maxOccurs="1" position="429" length="2"/>
-          <field kor="인입건수" name="ldinCnt" minOccurs="1" maxOccurs="1" position="431" length="10"/>
-          <field kor="인입금액" name="ldinAmt" minOccurs="1" maxOccurs="1" position="441" length="10"/>
-          <field kor="인입건수당단가" name="ldinCntPerUprc" minOccurs="1" maxOccurs="1" position="451" length="10"/>
-          <field kor="팝업승인건수" name="pupAprvlCnt" minOccurs="1" maxOccurs="1" position="461" length="10"/>
-          <field kor="팝업승인건수율" name="pupAprvlCntRt" minOccurs="1" maxOccurs="1" position="471" length="5"/>
-          <field kor="팝업승인금액" name="pupAprvlAmt" minOccurs="1" maxOccurs="1" position="476" length="10"/>
-          <field kor="팝업승인금액율" name="pupAprvlAmtRt" minOccurs="1" maxOccurs="1" position="486" length="5"/>
-          <field kor="팝업승인건수당단가" name="pupAprvlCntPerUprc" minOccurs="1" maxOccurs="1" position="491" length="10"/>
-          <field kor="유선승인건수" name="wirdAprvlCnt" minOccurs="1" maxOccurs="1" position="501" length="10"/>
-          <field kor="유선승인건수율" name="wirdAprvlCntRt" minOccurs="1" maxOccurs="1" position="511" length="5"/>
-          <field kor="유선승인금액" name="wirdAprvlAmt" minOccurs="1" maxOccurs="1" position="516" length="10"/>
-          <field kor="유선승인금액율" name="wirdAprvlAmtRt" minOccurs="1" maxOccurs="1" position="526" length="5"/>
-          <field kor="유선승인건수당단가" name="wirdAprvlCntPerUprc" minOccurs="1" maxOccurs="1" position="531" length="10"/>
-          <field kor="총건수" name="totCnt" minOccurs="1" maxOccurs="1" position="541" length="10"/>
-          <field kor="승인건수율" name="aprvlCntRt" minOccurs="1" maxOccurs="1" position="551" length="5"/>
-          <field kor="총금액" name="totAmt" minOccurs="1" maxOccurs="1" position="556" length="10"/>
-          <field kor="승인금액율" name="aprvlAmtRt" minOccurs="1" maxOccurs="1" position="566" length="5"/>
-          <field kor="건수당단가" name="cntPerUprc" minOccurs="1" maxOccurs="1" position="571" length="10"/>
+          <field kor="년도" name="yr" minOccurs="0" maxOccurs="1" position="425" length="4"/>
+          <field kor="월" name="mm" minOccurs="0" maxOccurs="1" position="429" length="2"/>
+          <field kor="인입건수" name="ldinCnt" minOccurs="0" maxOccurs="1" position="431" length="10"/>
+          <field kor="인입금액" name="ldinAmt" minOccurs="0" maxOccurs="1" position="441" length="10"/>
+          <field kor="인입건수당단가" name="ldinCntPerUprc" minOccurs="0" maxOccurs="1" position="451" length="10"/>
+          <field kor="팝업승인건수" name="pupAprvlCnt" minOccurs="0" maxOccurs="1" position="461" length="10"/>
+          <field kor="팝업승인건수율" name="pupAprvlCntRt" minOccurs="0" maxOccurs="1" position="471" length="5"/>
+          <field kor="팝업승인금액" name="pupAprvlAmt" minOccurs="0" maxOccurs="1" position="476" length="10"/>
+          <field kor="팝업승인금액율" name="pupAprvlAmtRt" minOccurs="0" maxOccurs="1" position="486" length="5"/>
+          <field kor="팝업승인건수당단가" name="pupAprvlCntPerUprc" minOccurs="0" maxOccurs="1" position="491" length="10"/>
+          <field kor="유선승인건수" name="wirdAprvlCnt" minOccurs="0" maxOccurs="1" position="501" length="10"/>
+          <field kor="유선승인건수율" name="wirdAprvlCntRt" minOccurs="0" maxOccurs="1" position="511" length="5"/>
+          <field kor="유선승인금액" name="wirdAprvlAmt" minOccurs="0" maxOccurs="1" position="516" length="10"/>
+          <field kor="유선승인금액율" name="wirdAprvlAmtRt" minOccurs="0" maxOccurs="1" position="526" length="5"/>
+          <field kor="유선승인건수당단가" name="wirdAprvlCntPerUprc" minOccurs="0" maxOccurs="1" position="531" length="10"/>
+          <field kor="총건수" name="totCnt" minOccurs="0" maxOccurs="1" position="541" length="10"/>
+          <field kor="승인건수율" name="aprvlCntRt" minOccurs="0" maxOccurs="1" position="551" length="5"/>
+          <field kor="총금액" name="totAmt" minOccurs="0" maxOccurs="1" position="556" length="10"/>
+          <field kor="승인금액율" name="aprvlAmtRt" minOccurs="0" maxOccurs="1" position="566" length="5"/>
+          <field kor="건수당단가" name="cntPerUprc" minOccurs="0" maxOccurs="1" position="571" length="10"/>
         </segment>
       </segment>
     </record>

@@ -47,13 +47,13 @@
     </complexType>
     <complexType name="CHBCISFNDX0120101_InRes">
         <sequence>
-            <element e:kor="총미도래잔액" e:length="18" e:padder="ZeroLeft" name="totNadvBlnc" nillable="true" type="long"/>
+            <element e:kor="총미도래잔액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="totNadvBlnc" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CHBHeaderType"/>
-            <element name="data" type="ns:CHBCISFNDX0120101_InRes"/>
+            <element e:kor="공통부" name="header" type="ns:CHBHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CHBCISFNDX0120101_InRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

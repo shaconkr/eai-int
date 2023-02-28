@@ -2,7 +2,7 @@
     <element name="root" type="ns:ARSCISFNDX0190101_InRes"/>
     <complexType name="ARSCISFNDX0190101_InRes">
         <sequence>
-            <element e:kor="UMS순번" e:length="14" e:padder="ZeroLeft" name="umsSeq" nillable="true" type="long"/>
+            <element e:kor="UMS순번" e:length="14" e:padder="ZeroLeft" minOccurs="0" name="umsSeq" nillable="true" type="long"/>
         </sequence>
     </complexType>
 </schema>

@@ -2,22 +2,22 @@
     <element name="root" type="ns:GRID_LIST_TYPE"/>
     <complexType name="GRID_LIST_TYPE">
         <sequence>
-            <element e:kor="매출관리번호" e:length="18" e:padder="SpaceRight" name="saleMngNo" nillable="true" type="string"/>
-            <element e:kor="매출이용구분코드" e:length="4" e:padder="SpaceRight" name="saleUtlzGbcd" nillable="true" type="string"/>
-            <element e:kor="자사승인번호" e:length="9" e:padder="SpaceRight" name="owcoAprvlNo" nillable="true" type="string"/>
-            <element e:kor="본인가족회원순번" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq" nillable="true" type="string"/>
-            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" name="saleDt" nillable="true" type="string"/>
-            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" name="chrDt" nillable="true" type="string"/>
-            <element e:kor="상품명" e:length="200" e:padder="SpaceRight" name="itemNm" nillable="true" type="string"/>
-            <element e:kor="순매출금액" e:length="19" e:padder="ZeroLeft" name="nsaleAmt" nillable="true" type="long"/>
-            <element e:kor="카드할부개월수" e:length="4" e:padder="ZeroLeft" name="crdInsmMths" nillable="true" type="long"/>
-            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
-            <element e:kor="청구회차" e:length="8" e:padder="ZeroLeft" name="reqTmnm" nillable="true" type="long"/>
-            <element e:kor="청구원금금액" e:length="19" e:padder="ZeroLeft" name="reqPrncAmt" nillable="true" type="long"/>
-            <element e:kor="청구수수료금액" e:length="19" e:padder="ZeroLeft" name="chrCmisAmt" nillable="true" type="long"/>
-            <element e:kor="청구이자금액" e:length="19" e:padder="ZeroLeft" name="reqIntrAmt" nillable="true" type="long"/>
-            <element e:kor="총잔액" e:length="19" e:padder="ZeroLeft" name="totBlnc" nillable="true" type="long"/>
-            <element e:kor="당월구분코드" e:length="1" e:padder="SpaceRight" name="thmnGbcd" nillable="true" type="string"/>
+            <element e:kor="매출관리번호" e:length="18" e:padder="SpaceRight" minOccurs="0" name="saleMngNo" nillable="true" type="string"/>
+            <element e:kor="매출이용구분코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="saleUtlzGbcd" nillable="true" type="string"/>
+            <element e:kor="자사승인번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="owcoAprvlNo" nillable="true" type="string"/>
+            <element e:kor="본인가족회원순번" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq" nillable="true" type="string"/>
+            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="saleDt" nillable="true" type="string"/>
+            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="chrDt" nillable="true" type="string"/>
+            <element e:kor="상품명" e:length="200" e:padder="SpaceRight" minOccurs="0" name="itemNm" nillable="true" type="string"/>
+            <element e:kor="순매출금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="nsaleAmt" nillable="true" type="long"/>
+            <element e:kor="카드할부개월수" e:length="4" e:padder="ZeroLeft" minOccurs="0" name="crdInsmMths" nillable="true" type="long"/>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="청구회차" e:length="8" e:padder="ZeroLeft" minOccurs="0" name="reqTmnm" nillable="true" type="long"/>
+            <element e:kor="청구원금금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqPrncAmt" nillable="true" type="long"/>
+            <element e:kor="청구수수료금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="chrCmisAmt" nillable="true" type="long"/>
+            <element e:kor="청구이자금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqIntrAmt" nillable="true" type="long"/>
+            <element e:kor="총잔액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="totBlnc" nillable="true" type="long"/>
+            <element e:kor="당월구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="thmnGbcd" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

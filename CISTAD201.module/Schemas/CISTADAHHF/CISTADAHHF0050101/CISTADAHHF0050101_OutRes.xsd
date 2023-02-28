@@ -33,13 +33,13 @@
     </complexType>
     <complexType name="CISTADAHHF0050101_OutRes">
         <sequence>
-            <element e:kor="처리여부" e:length="1" e:padder="SpaceRight" name="procYn" nillable="true" type="string"/>
+            <element e:kor="처리여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="procYn" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:TADHeaderType"/>
-            <element name="data" type="ns:CISTADAHHF0050101_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:TADHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISTADAHHF0050101_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

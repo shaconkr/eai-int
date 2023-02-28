@@ -2,10 +2,10 @@
     <element name="root" type="ns:BANK_GRID_LIST_TYPE"/>
     <complexType name="BANK_GRID_LIST_TYPE">
         <sequence>
-            <element e:kor="은행코드" e:length="3" e:padder="SpaceRight" name="bankCd" nillable="true" type="string"/>
-            <element e:kor="은행명" e:length="100" e:padder="SpaceRight" name="bankNm" nillable="true" type="string"/>
-            <element e:kor="가상계좌은행지점코드" e:length="3" e:padder="SpaceRight" name="virtAcntBankBrnCd" nillable="true" type="string"/>
-            <element e:kor="가상계좌주제코드" e:length="3" e:padder="SpaceRight" name="virtAcntSbjtCd" nillable="true" type="string"/>
+            <element e:kor="은행코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="bankCd" nillable="true" type="string"/>
+            <element e:kor="은행명" e:length="100" e:padder="SpaceRight" minOccurs="0" name="bankNm" nillable="true" type="string"/>
+            <element e:kor="가상계좌은행지점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="virtAcntBankBrnCd" nillable="true" type="string"/>
+            <element e:kor="가상계좌주제코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="virtAcntSbjtCd" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

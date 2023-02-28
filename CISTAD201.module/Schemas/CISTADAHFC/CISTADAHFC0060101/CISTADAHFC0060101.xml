@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,10 +39,10 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <segment name="srchGroup" kor="검색그룹" minOccurs="1" maxOccurs="1" class="map"> 
-          <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="419" length="16"/>  
-          <field kor="작업구분값" name="wrkGbVal" minOccurs="1" maxOccurs="1" position="435" length="2"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <segment name="srchGroup" kor="검색그룹" minOccurs="0" maxOccurs="1" class="map"> 
+          <field kor="카드번호" name="crdNo" minOccurs="0" maxOccurs="1" position="419" length="16"/>  
+          <field kor="작업구분값" name="wrkGbVal" minOccurs="0" maxOccurs="1" position="435" length="2"/> 
         </segment> 
       </segment> 
     </record> 
@@ -52,7 +52,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -82,20 +82,20 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <segment name="rstGroup" kor="결과그룹" minOccurs="1" maxOccurs="1" class="map">
-          <field kor="총한도금액" name="totBndsAmt" minOccurs="1" maxOccurs="1" position="419" length="18"/>
-          <field kor="총사용금액" name="totUseAmt" minOccurs="1" maxOccurs="1" position="437" length="18"/>
-          <field kor="잔여한도금액" name="rmndBndsAmt" minOccurs="1" maxOccurs="1" position="455" length="18"/>
-          <field kor="임시한도금액" name="tmpBndsAmt" minOccurs="1" maxOccurs="1" position="473" length="18"/>
-          <field kor="특별한도금액" name="speclBndsAmt" minOccurs="1" maxOccurs="1" position="491" length="18"/>
-          <field kor="임시한도적용일자" name="tmpBndsAplyDt" minOccurs="1" maxOccurs="1" position="509" length="8"/>
-          <field kor="임시한도종료일자" name="tmpBndsEndDt" minOccurs="1" maxOccurs="1" position="517" length="8"/>
-          <field kor="특별한도적용일자" name="speclBndsAplyDt" minOccurs="1" maxOccurs="1" position="525" length="8"/>
-          <field kor="특별한도종료일자" name="speclBndsEndDt" minOccurs="1" maxOccurs="1" position="533" length="8"/>
-          <field kor="특별한도잔액" name="speclBndsBlnc" minOccurs="1" maxOccurs="1" position="541" length="18"/>
-          <field kor="승인금액" name="aprvlAmt" minOccurs="1" maxOccurs="1" position="559" length="18"/>
-          <field kor="입금금액" name="iamtAmt" minOccurs="1" maxOccurs="1" position="577" length="18"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <segment name="rstGroup" kor="결과그룹" minOccurs="0" maxOccurs="1" class="map">
+          <field kor="총한도금액" name="totBndsAmt" minOccurs="0" maxOccurs="1" position="419" length="18"/>
+          <field kor="총사용금액" name="totUseAmt" minOccurs="0" maxOccurs="1" position="437" length="18"/>
+          <field kor="잔여한도금액" name="rmndBndsAmt" minOccurs="0" maxOccurs="1" position="455" length="18"/>
+          <field kor="임시한도금액" name="tmpBndsAmt" minOccurs="0" maxOccurs="1" position="473" length="18"/>
+          <field kor="특별한도금액" name="speclBndsAmt" minOccurs="0" maxOccurs="1" position="491" length="18"/>
+          <field kor="임시한도적용일자" name="tmpBndsAplyDt" minOccurs="0" maxOccurs="1" position="509" length="8"/>
+          <field kor="임시한도종료일자" name="tmpBndsEndDt" minOccurs="0" maxOccurs="1" position="517" length="8"/>
+          <field kor="특별한도적용일자" name="speclBndsAplyDt" minOccurs="0" maxOccurs="1" position="525" length="8"/>
+          <field kor="특별한도종료일자" name="speclBndsEndDt" minOccurs="0" maxOccurs="1" position="533" length="8"/>
+          <field kor="특별한도잔액" name="speclBndsBlnc" minOccurs="0" maxOccurs="1" position="541" length="18"/>
+          <field kor="승인금액" name="aprvlAmt" minOccurs="0" maxOccurs="1" position="559" length="18"/>
+          <field kor="입금금액" name="iamtAmt" minOccurs="0" maxOccurs="1" position="577" length="18"/>
         </segment>
       </segment>
     </record>

@@ -33,28 +33,28 @@
     </complexType>
     <complexType name="CISTADAHFA0130101_OutRes">
         <sequence>
-            <element e:kor="작업처리구분코드" e:length="2" e:padder="SpaceRight" name="wrkProcGbcd" nillable="true" type="string"/>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="승인주의등록일시" e:length="14" e:padder="SpaceRight" name="aprvlCareRegDtm" nillable="true" type="string"/>
-            <element e:kor="승인주의구분코드" e:length="4" e:padder="SpaceRight" name="aprvlCareGbcd" nillable="true" type="string"/>
-            <element e:kor="승인코드" e:length="4" e:padder="SpaceRight" name="aprvlCd" nillable="true" type="string"/>
-            <element e:kor="승인주의적용일자" e:length="8" e:padder="SpaceRight" name="aprvlCareAplyDt" nillable="true" type="string"/>
-            <element e:kor="승인주의종료일자" e:length="8" e:padder="SpaceRight" name="aprvlCareEndDt" nillable="true" type="string"/>
-            <element e:kor="승인주의내용" e:length="100" e:padder="SpaceRight" name="aprvlCareCntn" nillable="true" type="string"/>
-            <element e:kor="상담점코드" e:length="3" e:padder="SpaceRight" name="cnslStoreCd" nillable="true" type="string"/>
-            <element e:kor="상담자ID" e:length="8" e:padder="SpaceRight" name="conpsId" nillable="true" type="string"/>
-            <element e:kor="등록ID" e:length="100" e:padder="SpaceRight" name="regId" nillable="true" type="string"/>
-            <element e:kor="등록일시" e:length="14" e:padder="SpaceRight" name="regDtm" nillable="true" type="string"/>
-            <element e:kor="등록프로그램ID" e:length="100" e:padder="SpaceRight" name="regPrgId" nillable="true" type="string"/>
-            <element e:kor="변경ID" e:length="100" e:padder="SpaceRight" name="chgId" nillable="true" type="string"/>
-            <element e:kor="변경일시" e:length="14" e:padder="SpaceRight" name="chgDtm" nillable="true" type="string"/>
-            <element e:kor="변경프로그램ID" e:length="100" e:padder="SpaceRight" name="chgPrgId" nillable="true" type="string"/>
+            <element e:kor="작업처리구분코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="wrkProcGbcd" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="승인주의등록일시" e:length="14" e:padder="SpaceRight" minOccurs="0" name="aprvlCareRegDtm" nillable="true" type="string"/>
+            <element e:kor="승인주의구분코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="aprvlCareGbcd" nillable="true" type="string"/>
+            <element e:kor="승인코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="aprvlCd" nillable="true" type="string"/>
+            <element e:kor="승인주의적용일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="aprvlCareAplyDt" nillable="true" type="string"/>
+            <element e:kor="승인주의종료일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="aprvlCareEndDt" nillable="true" type="string"/>
+            <element e:kor="승인주의내용" e:length="100" e:padder="SpaceRight" minOccurs="0" name="aprvlCareCntn" nillable="true" type="string"/>
+            <element e:kor="상담점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="cnslStoreCd" nillable="true" type="string"/>
+            <element e:kor="상담자ID" e:length="8" e:padder="SpaceRight" minOccurs="0" name="conpsId" nillable="true" type="string"/>
+            <element e:kor="등록ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="regId" nillable="true" type="string"/>
+            <element e:kor="등록일시" e:length="14" e:padder="SpaceRight" minOccurs="0" name="regDtm" nillable="true" type="string"/>
+            <element e:kor="등록프로그램ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="regPrgId" nillable="true" type="string"/>
+            <element e:kor="변경ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="chgId" nillable="true" type="string"/>
+            <element e:kor="변경일시" e:length="14" e:padder="SpaceRight" minOccurs="0" name="chgDtm" nillable="true" type="string"/>
+            <element e:kor="변경프로그램ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="chgPrgId" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:TADHeaderType"/>
-            <element name="data" type="ns:CISTADAHFA0130101_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:TADHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISTADAHFA0130101_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

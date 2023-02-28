@@ -1,0 +1,89 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/CISTADMKKA0020101_InRes" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/CISTADMKKA0020101_InRes">
+    <complexType name="CISHeaderType">
+        <sequence>
+            <element e:kor="전체전문길이" e:length="8" e:padder="SpaceRight" minOccurs="0" name="totTgrmLen" nillable="true" type="integer"/>
+            <element e:kor="헤더길이" e:length="8" e:padder="SpaceRight" minOccurs="0" name="hdrLen" nillable="true" type="integer"/>
+            <element e:kor="전문형식코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="tgrmFrmCd" nillable="true" type="string"/>
+            <element e:kor="시스템환경구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="sysEnvGbcd" nillable="true" type="string"/>
+            <element e:kor="IP주소" e:length="40" e:padder="SpaceRight" minOccurs="0" name="ipAdr" nillable="true" type="string"/>
+            <element e:kor="GUID" e:length="38" e:padder="SpaceRight" minOccurs="0" name="guid" nillable="true" type="string"/>
+            <element e:kor="진행번호" e:length="3" e:padder="SpaceRight" minOccurs="0" name="prgrNo" nillable="true" type="integer"/>
+            <element e:kor="최초GUID" e:length="38" e:padder="SpaceRight" minOccurs="0" name="frstGuid" nillable="true" type="string"/>
+            <element e:kor="전송시스템코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="sendSysCd" nillable="true" type="string"/>
+            <element e:kor="최초전송시스템코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="frstSendSysCd" nillable="true" type="string"/>
+            <element e:kor="시스템공통예비내용" e:length="21" e:padder="SpaceRight" minOccurs="0" name="sysCommTrtyPrepCntn" nillable="true" type="string"/>
+            <element e:kor="EIMS전문ID" e:length="17" e:padder="SpaceRight" minOccurs="0" name="eimsTgrmId" nillable="true" type="string"/>
+            <element e:kor="EIMS전문번호" e:length="3" e:padder="SpaceRight" minOccurs="0" name="eimsTgrmVerNo" nillable="true" type="string"/>
+            <element e:kor="프래임워크거래ID" e:length="12" e:padder="SpaceRight" minOccurs="0" name="frwkTrdId" nillable="true" type="string"/>
+            <element e:kor="수신시스템코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="rcvSysCd" nillable="true" type="string"/>
+            <element e:kor="연계전문코드" e:length="10" e:padder="SpaceRight" minOccurs="0" name="tieTgrmCd" nillable="true" type="string"/>
+            <element e:kor="연계서비스그룹코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="tieSrvGrpCd" nillable="true" type="string"/>
+            <element e:kor="연계서비스명" e:length="30" e:padder="SpaceRight" minOccurs="0" name="tieSrvNm" nillable="true" type="string"/>
+            <element e:kor="화면번호" e:length="20" e:padder="SpaceRight" minOccurs="0" name="scrnNo" nillable="true" type="string"/>
+            <element e:kor="요청응답구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="reqnRespGbcd" nillable="true" type="string"/>
+            <element e:kor="동기처리구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="syncProcGbcd" nillable="true" type="string"/>
+            <element e:kor="거래응답코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="trdRespCd" nillable="true" type="string"/>
+            <element e:kor="페이지번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="pageNo" nillable="true" type="integer"/>
+            <element e:kor="페이지행건수" e:length="9" e:padder="SpaceRight" minOccurs="0" name="pageRowCnt" nillable="true" type="integer"/>
+            <element e:kor="전체레코드건수" e:length="9" e:padder="SpaceRight" minOccurs="0" name="totRowCnt" nillable="true" type="integer"/>
+            <element e:kor="다음페이지여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="nxtPageYn" nillable="true" type="string"/>
+            <element e:kor="요청일시" e:length="17" e:padder="SpaceRight" minOccurs="0" name="reqnDtm" nillable="true" type="string"/>
+            <element e:kor="응답일시" e:length="17" e:padder="SpaceRight" minOccurs="0" name="respDtm" nillable="true" type="string"/>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="사용자ID" e:length="8" e:padder="SpaceRight" minOccurs="0" name="userId" nillable="true" type="string"/>
+            <element e:kor="거래공통영역예비내용" e:length="100" e:padder="SpaceRight" minOccurs="0" name="trdCommTrtyPrepCntn" nillable="true" type="string"/>
+            <element e:kor="메시지그룹명" e:length="0" e:padder="SpaceRight" minOccurs="0" name="msgGrpNm" nillable="true" type="ns:msgGrpNmType"/>
+            <element e:kor="표준전문종료문자값" e:length="2" e:padder="SpaceRight" minOccurs="0" name="stdTgrmEndLettrVal" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="msgGrpNmType">
+        <sequence>
+            <element e:kor="메시지표시방법구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="msgShwMthdGbcd" nillable="true" type="string"/>
+            <element e:kor="오류발생전문항목명" e:length="50" e:padder="SpaceRight" minOccurs="0" name="errOcrnTgrmClasNm" nillable="true" type="string"/>
+            <element e:kor="메시지코드" e:length="10" e:padder="SpaceRight" minOccurs="0" name="msgCd" nillable="true" type="string"/>
+            <element e:kor="메시지내용" e:length="300" e:padder="SpaceRight" minOccurs="0" name="msgCntn" nillable="true" type="string"/>
+            <element e:kor="메시지세부내용" e:length="1000" e:padder="SpaceRight" minOccurs="0" name="msgDtlCntn" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="CISTADMKKA0020101_InRes">
+        <sequence>
+            <element e:kor="에누리쿠폰번호" e:length="14" e:padder="SpaceRight" minOccurs="0" name="enuriCopnNo" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="쿠폰종류코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="copnKndCd" nillable="true" type="string"/>
+            <element e:kor="협력사원사번" e:length="8" e:padder="SpaceRight" minOccurs="0" name="venempEmno" nillable="true" type="string"/>
+            <element e:kor="쿠폰유효시작일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="copnVlidStrtDt" nillable="true" type="string"/>
+            <element e:kor="쿠폰유효종료일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="copnVlidEndDt" nillable="true" type="string"/>
+            <element e:kor="쿠폰할인구분코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="copnDcGbcd" nillable="true" type="string"/>
+            <element e:kor="쿠폰사용기준금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="copnUseBsicAmt" nillable="true" type="long"/>
+            <element e:kor="쿠폰할인최대금액" e:length="10" e:padder="ZeroLeft" minOccurs="0" name="copnDcMaxAmt" nillable="true" type="long"/>
+            <element e:kor="쿠폰발행사유" e:length="100" e:padder="SpaceRight" minOccurs="0" name="copnPblcRsn" nillable="true" type="string"/>
+            <element e:kor="무제한여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="ulmtYn" nillable="true" type="string"/>
+            <element e:kor="온라인제외여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="onlnExcldYn" nillable="true" type="string"/>
+            <element e:kor="쿠폰상태코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="copnStatCd" nillable="true" type="string"/>
+            <element e:kor="쿠폰회수여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="copnWtdwYn" nillable="true" type="string"/>
+            <element e:kor="쿠폰발행구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="copnPblcGbcd" nillable="true" type="string"/>
+            <element e:kor="캠페인구분코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="campGbcd" nillable="true" type="string"/>
+            <element e:kor="캠페인ID" e:length="12" e:padder="SpaceRight" minOccurs="0" name="campId" nillable="true" type="string"/>
+            <element e:kor="오퍼ID" e:length="6" e:padder="SpaceRight" minOccurs="0" name="ofrId" nillable="true" type="string"/>
+            <element e:kor="오퍼ID일련번호" e:length="4" e:padder="SpaceRight" minOccurs="0" name="ofrIdSeqno" nillable="true" type="string"/>
+            <element e:kor="브랜드한정여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="brndLimiYn" nillable="true" type="string"/>
+            <element e:kor="포스한정여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="posLimiYn" nillable="true" type="string"/>
+            <element e:kor="에누리조정구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="enuriAdjtGbcd" nillable="true" type="string"/>
+            <element e:kor="적용점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="aplyStoreCd" nillable="true" type="string"/>
+            <element e:kor="쿠폰발행일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="copnPblcDt" nillable="true" type="string"/>
+            <element e:kor="등록ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="regId" nillable="true" type="string"/>
+            <element e:kor="등록일시" e:length="14" e:padder="SpaceRight" minOccurs="0" name="regDtm" nillable="true" type="string"/>
+            <element e:kor="등록프로그램ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="regPrgId" nillable="true" type="string"/>
+            <element e:kor="변경ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="chgId" nillable="true" type="string"/>
+            <element e:kor="변경일시" e:length="14" e:padder="SpaceRight" minOccurs="0" name="chgDtm" nillable="true" type="string"/>
+            <element e:kor="변경프로그램ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="chgPrgId" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="rootType">
+        <sequence>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISTADMKKA0020101_InRes"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:rootType"/>
+</schema>

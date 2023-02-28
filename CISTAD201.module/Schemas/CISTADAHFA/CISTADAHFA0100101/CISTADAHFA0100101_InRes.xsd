@@ -47,25 +47,25 @@
     </complexType>
     <complexType name="CISTADAHFA0100101_InRes">
         <sequence>
-            <element e:kor="레코드총건수" e:length="10" e:padder="SpaceRight" name="recdTotCnt" nillable="true" type="string"/>
-            <element e:kor="다음검색KEY" e:length="30" e:padder="SpaceRight" name="nxtSrchKey" nillable="true" type="string"/>
-            <element e:kor="결과건수" e:length="5" e:padder="ZeroLeft" name="rstRowcount" nillable="true" type="long"/>
-            <element e:kor="결과리스트" e:padder="ZeroLeft" maxOccurs="unbounded" name="rstList" nillable="true" type="ns:RST_LIST_TYPE"/>
+            <element e:kor="레코드총건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="recdTotCnt" nillable="true" type="string"/>
+            <element e:kor="다음검색KEY" e:length="30" e:padder="SpaceRight" minOccurs="0" name="nxtSrchKey" nillable="true" type="string"/>
+            <element e:kor="결과건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="rstRowcount" nillable="true" type="long"/>
+            <element e:kor="결과리스트" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rstList" nillable="true" type="ns:RST_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RST_LIST_TYPE">
         <sequence>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="회원명" e:length="100" e:padder="SpaceRight" name="memNm" nillable="true" type="string"/>
-            <element e:kor="특정회원구분코드" e:length="2" e:padder="SpaceRight" name="ptcrMemGbcd" nillable="true" type="string"/>
-            <element e:kor="우선승인유형코드" e:length="1" e:padder="SpaceRight" name="priorAprvlTypeCd" nillable="true" type="string"/>
-            <element e:kor="적용일자" e:length="8" e:padder="SpaceRight" name="aplyDt" nillable="true" type="string"/>
-            <element e:kor="해제일자" e:length="8" e:padder="SpaceRight" name="clerDt" nillable="true" type="string"/>
-            <element e:kor="등록사유" e:length="2000" e:padder="SpaceRight" name="regRsn" nillable="true" type="string"/>
-            <element e:kor="가족적용여부" e:length="1" e:padder="SpaceRight" name="famlAplyYn" nillable="true" type="string"/>
-            <element e:kor="등록점코드" e:length="3" e:padder="SpaceRight" name="regStoreCd" nillable="true" type="string"/>
-            <element e:kor="등록ID" e:length="100" e:padder="SpaceRight" name="regId" nillable="true" type="string"/>
-            <element e:kor="등록일시" e:length="14" e:padder="SpaceRight" name="regDtm" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="회원명" e:length="100" e:padder="SpaceRight" minOccurs="0" name="memNm" nillable="true" type="string"/>
+            <element e:kor="특정회원구분코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="ptcrMemGbcd" nillable="true" type="string"/>
+            <element e:kor="우선승인유형코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="priorAprvlTypeCd" nillable="true" type="string"/>
+            <element e:kor="적용일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="aplyDt" nillable="true" type="string"/>
+            <element e:kor="해제일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="clerDt" nillable="true" type="string"/>
+            <element e:kor="등록사유" e:length="2000" e:padder="SpaceRight" minOccurs="0" name="regRsn" nillable="true" type="string"/>
+            <element e:kor="가족적용여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="famlAplyYn" nillable="true" type="string"/>
+            <element e:kor="등록점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="regStoreCd" nillable="true" type="string"/>
+            <element e:kor="등록ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="regId" nillable="true" type="string"/>
+            <element e:kor="등록일시" e:length="14" e:padder="SpaceRight" minOccurs="0" name="regDtm" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">

@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,21 +39,21 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="데이터구분코드" name="dataGbcd" minOccurs="1" maxOccurs="1" position="419" length="1"/>  
-        <field kor="가맹점코드" name="frcsCd" minOccurs="1" maxOccurs="1" position="420" length="9"/>  
-        <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="429" length="3"/>  
-        <field kor="매출POS번호" name="salePosNo" minOccurs="1" maxOccurs="1" position="432" length="4"/>  
-        <field kor="가맹점구분코드" name="frcsGbcd" minOccurs="1" maxOccurs="1" position="436" length="2"/>  
-        <field kor="가맹점상태코드" name="frcsStatCd" minOccurs="1" maxOccurs="1" position="438" length="1"/>  
-        <field kor="가맹점명" name="frcsNm" minOccurs="1" maxOccurs="1" position="439" length="20"/>  
-        <field kor="영업개시일자" name="bizBgnDt" minOccurs="1" maxOccurs="1" position="459" length="8"/>  
-        <field kor="영업해지일자" name="bizTmnnDt" minOccurs="1" maxOccurs="1" position="467" length="8"/>  
-        <field kor="자사카드취급여부" name="owcoCrdHndlYn" minOccurs="1" maxOccurs="1" position="475" length="1"/>  
-        <field kor="자사카드승인제한금액" name="owcoCrdAprvlLimtAmt" minOccurs="1" maxOccurs="1" position="476" length="12" justify="right" padding="0"/>  
-        <field kor="변경점코드" name="chgStoreCd" minOccurs="1" maxOccurs="1" position="488" length="3"/>  
-        <field kor="변경자ID" name="chgpId" minOccurs="1" maxOccurs="1" position="491" length="8"/>  
-        <field kor="변경일시" name="chgDtm" minOccurs="1" maxOccurs="1" position="499" length="14"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="데이터구분코드" name="dataGbcd" minOccurs="0" maxOccurs="1" position="419" length="1"/>  
+        <field kor="가맹점코드" name="frcsCd" minOccurs="0" maxOccurs="1" position="420" length="9"/>  
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="429" length="3"/>  
+        <field kor="매출POS번호" name="salePosNo" minOccurs="0" maxOccurs="1" position="432" length="4"/>  
+        <field kor="가맹점구분코드" name="frcsGbcd" minOccurs="0" maxOccurs="1" position="436" length="2"/>  
+        <field kor="가맹점상태코드" name="frcsStatCd" minOccurs="0" maxOccurs="1" position="438" length="1"/>  
+        <field kor="가맹점명" name="frcsNm" minOccurs="0" maxOccurs="1" position="439" length="20"/>  
+        <field kor="영업개시일자" name="bizBgnDt" minOccurs="0" maxOccurs="1" position="459" length="8"/>  
+        <field kor="영업해지일자" name="bizTmnnDt" minOccurs="0" maxOccurs="1" position="467" length="8"/>  
+        <field kor="자사카드취급여부" name="owcoCrdHndlYn" minOccurs="0" maxOccurs="1" position="475" length="1"/>  
+        <field kor="자사카드승인제한금액" name="owcoCrdAprvlLimtAmt" minOccurs="0" maxOccurs="1" position="476" length="12" justify="right" padding="0"/>  
+        <field kor="변경점코드" name="chgStoreCd" minOccurs="0" maxOccurs="1" position="488" length="3"/>  
+        <field kor="변경자ID" name="chgpId" minOccurs="0" maxOccurs="1" position="491" length="8"/>  
+        <field kor="변경일시" name="chgDtm" minOccurs="0" maxOccurs="1" position="499" length="14"/> 
       </segment> 
     </record> 
   </stream>  
@@ -62,7 +62,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -92,21 +92,21 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="데이터구분코드" name="dataGbcd" minOccurs="1" maxOccurs="1" position="419" length="1"/>
-        <field kor="가맹점코드" name="frcsCd" minOccurs="1" maxOccurs="1" position="420" length="9"/>
-        <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="429" length="3"/>
-        <field kor="매출POS번호" name="salePosNo" minOccurs="1" maxOccurs="1" position="432" length="4"/>
-        <field kor="가맹점구분코드" name="frcsGbcd" minOccurs="1" maxOccurs="1" position="436" length="2"/>
-        <field kor="가맹점상태코드" name="frcsStatCd" minOccurs="1" maxOccurs="1" position="438" length="1"/>
-        <field kor="가맹점명" name="frcsNm" minOccurs="1" maxOccurs="1" position="439" length="20"/>
-        <field kor="영업개시일자" name="bizBgnDt" minOccurs="1" maxOccurs="1" position="459" length="8"/>
-        <field kor="영업해지일자" name="bizTmnnDt" minOccurs="1" maxOccurs="1" position="467" length="8"/>
-        <field kor="자사카드취급여부" name="owcoCrdHndlYn" minOccurs="1" maxOccurs="1" position="475" length="1"/>
-        <field kor="자사카드승인제한금액" name="owcoCrdAprvlLimtAmt" minOccurs="1" maxOccurs="1" position="476" length="12" justify="right" padding="0"/>
-        <field kor="변경점코드" name="chgStoreCd" minOccurs="1" maxOccurs="1" position="488" length="3"/>
-        <field kor="변경자ID" name="chgpId" minOccurs="1" maxOccurs="1" position="491" length="8"/>
-        <field kor="변경일시" name="chgDtm" minOccurs="1" maxOccurs="1" position="499" length="14"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="데이터구분코드" name="dataGbcd" minOccurs="0" maxOccurs="1" position="419" length="1"/>
+        <field kor="가맹점코드" name="frcsCd" minOccurs="0" maxOccurs="1" position="420" length="9"/>
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="429" length="3"/>
+        <field kor="매출POS번호" name="salePosNo" minOccurs="0" maxOccurs="1" position="432" length="4"/>
+        <field kor="가맹점구분코드" name="frcsGbcd" minOccurs="0" maxOccurs="1" position="436" length="2"/>
+        <field kor="가맹점상태코드" name="frcsStatCd" minOccurs="0" maxOccurs="1" position="438" length="1"/>
+        <field kor="가맹점명" name="frcsNm" minOccurs="0" maxOccurs="1" position="439" length="20"/>
+        <field kor="영업개시일자" name="bizBgnDt" minOccurs="0" maxOccurs="1" position="459" length="8"/>
+        <field kor="영업해지일자" name="bizTmnnDt" minOccurs="0" maxOccurs="1" position="467" length="8"/>
+        <field kor="자사카드취급여부" name="owcoCrdHndlYn" minOccurs="0" maxOccurs="1" position="475" length="1"/>
+        <field kor="자사카드승인제한금액" name="owcoCrdAprvlLimtAmt" minOccurs="0" maxOccurs="1" position="476" length="12" justify="right" padding="0"/>
+        <field kor="변경점코드" name="chgStoreCd" minOccurs="0" maxOccurs="1" position="488" length="3"/>
+        <field kor="변경자ID" name="chgpId" minOccurs="0" maxOccurs="1" position="491" length="8"/>
+        <field kor="변경일시" name="chgDtm" minOccurs="0" maxOccurs="1" position="499" length="14"/>
       </segment>
     </record>
   </stream>

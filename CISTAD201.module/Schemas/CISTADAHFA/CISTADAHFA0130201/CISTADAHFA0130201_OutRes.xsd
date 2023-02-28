@@ -33,21 +33,21 @@
     </complexType>
     <complexType name="CISTADAHFA0130201_OutRes">
         <sequence>
-            <element e:kor="결과그룹" e:padder="ZeroLeft" name="rstGroup" nillable="true" type="ns:RST_GROUP_TYPE"/>
+            <element e:kor="결과그룹" e:padder="ZeroLeft" minOccurs="0" name="rstGroup" nillable="true" type="ns:RST_GROUP_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RST_GROUP_TYPE">
         <sequence>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="승인주의코드" e:length="4" e:padder="SpaceRight" name="aprvlCareCd" nillable="true" type="string"/>
-            <element e:kor="승인주의내용" e:length="100" e:padder="SpaceRight" name="aprvlCareCntn" nillable="true" type="string"/>
-            <element e:kor="승인주의적용일자" e:length="8" e:padder="SpaceRight" name="aprvlCareAplyDt" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="승인주의코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="aprvlCareCd" nillable="true" type="string"/>
+            <element e:kor="승인주의내용" e:length="100" e:padder="SpaceRight" minOccurs="0" name="aprvlCareCntn" nillable="true" type="string"/>
+            <element e:kor="승인주의적용일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="aprvlCareAplyDt" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:TADHeaderType"/>
-            <element name="data" type="ns:CISTADAHFA0130201_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:TADHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISTADAHFA0130201_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

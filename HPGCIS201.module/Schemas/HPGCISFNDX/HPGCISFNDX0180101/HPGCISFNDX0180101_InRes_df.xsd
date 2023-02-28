@@ -2,7 +2,7 @@
     <element name="root" type="ns:HPGCISFNDX0180101_InRes"/>
     <complexType name="HPGCISFNDX0180101_InRes">
         <sequence>
-            <element e:kor="처리결과코드" e:length="2" e:padder="SpaceRight" name="procRstCd" nillable="true" type="string"/>
+            <element e:kor="처리결과코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="procRstCd" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

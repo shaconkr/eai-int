@@ -32,7 +32,7 @@
             <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
             <element e:kor="사용자ID" e:length="8" e:padder="SpaceRight" minOccurs="0" name="userId" nillable="true" type="string"/>
             <element e:kor="거래공통영역예비내용" e:length="100" e:padder="SpaceRight" minOccurs="0" name="trdCommTrtyPrepCntn" nillable="true" type="string"/>
-            <element e:kor="메시지그룹명" e:length="0" e:padder="SpaceRight" maxOccurs="unbounded" minOccurs="0" name="msgGrpNm" nillable="true" type="ns:msgGrpNmType"/>
+            <element e:kor="메시지그룹명" e:length="0" e:padder="SpaceRight" minOccurs="0" name="msgGrpNm" nillable="true" type="ns:msgGrpNmType"/>
             <element e:kor="표준전문종료문자값" e:length="2" e:padder="SpaceRight" minOccurs="0" name="stdTgrmEndLettrVal" nillable="true" type="string"/>
         </sequence>
     </complexType>
@@ -47,48 +47,48 @@
     </complexType>
     <complexType name="TADCISMTSY0008001_OutRes">
         <sequence>
-            <element e:kor="작업구분값" e:length="1" e:padder="SpaceRight" name="wrkGbVal" nillable="true" type="string"/>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
-            <element e:kor="승인일자" e:length="8" e:padder="SpaceRight" name="aprvlDt" nillable="true" type="string"/>
-            <element e:kor="승인시각" e:length="6" e:padder="SpaceRight" name="aprvlTmstmp" nillable="true" type="string"/>
-            <element e:kor="자사승인번호" e:length="9" e:padder="SpaceRight" name="owcoAprvlNo" nillable="true" type="string"/>
-            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
-            <element e:kor="포스번호" e:length="6" e:padder="SpaceRight" name="posNo" nillable="true" type="string"/>
-            <element e:kor="승인요청기관코드" e:length="2" e:padder="SpaceRight" name="aprvlReqnIstnCd" nillable="true" type="string"/>
-            <element e:kor="일괄승인여부" e:length="1" e:padder="SpaceRight" name="ilmpAprvlYn" nillable="true" type="string"/>
-            <element e:kor="승인거래구분코드" e:length="4" e:padder="SpaceRight" name="aprvlTrdGbcd" nillable="true" type="string"/>
-            <element e:kor="사용한도구분코드" e:length="1" e:padder="SpaceRight" name="useBndsGbcd" nillable="true" type="string"/>
-            <element e:kor="승인결과분류코드" e:length="1" e:padder="SpaceRight" name="aprvlRstCsfCd" nillable="true" type="string"/>
-            <element e:kor="취소일자" e:length="8" e:padder="SpaceRight" name="cnclDt" nillable="true" type="string"/>
-            <element e:kor="취소시각" e:length="6" e:padder="SpaceRight" name="cnclTmstmp" nillable="true" type="string"/>
-            <element e:kor="원매출POS번호" e:length="6" e:padder="SpaceRight" name="orgsalePosNo" nillable="true" type="string"/>
-            <element e:kor="원매출영수번호" e:length="6" e:padder="SpaceRight" name="orgsaleRceitNo" nillable="true" type="string"/>
-            <element e:kor="카드할부개월수" e:length="3" e:padder="ZeroLeft" name="crdInsmMths" nillable="true" type="long"/>
-            <element e:kor="승인시재구분코드" e:length="2" e:padder="SpaceRight" name="aprvlCuratGbcd" nillable="true" type="string"/>
-            <element e:kor="총매출금액" e:length="18" e:padder="ZeroLeft" name="tsaleAmt" nillable="true" type="long"/>
-            <element e:kor="에누리금액" e:length="18" e:padder="ZeroLeft" name="enuriAmt" nillable="true" type="long"/>
-            <element e:kor="순매출금액" e:length="18" e:padder="ZeroLeft" name="nsaleAmt" nillable="true" type="long"/>
-            <element e:kor="카드승인금액" e:length="18" e:padder="ZeroLeft" name="crdAprvlAmt" nillable="true" type="long"/>
-            <element e:kor="포인트승인금액" e:length="18" e:padder="ZeroLeft" name="pntAprvlAmt" nillable="true" type="long"/>
-            <element e:kor="승인금액" e:length="18" e:padder="ZeroLeft" name="aprvlAmt" nillable="true" type="long"/>
-            <element e:kor="발생마일리지" e:length="18" e:padder="ZeroLeft" name="ocrnMlg" nillable="true" type="decimal"/>
-            <element e:kor="NEOX포인트" e:length="12" e:padder="ZeroLeft" name="neoxPnt" nillable="true" type="decimal"/>
-            <element e:kor="NEOX카드번호" e:length="16" e:padder="SpaceRight" name="neoxCrdNo" nillable="true" type="string"/>
-            <element e:kor="포스입력모드구분코드" e:length="1" e:padder="SpaceRight" name="posInsrModeGbcd" nillable="true" type="string"/>
-            <element e:kor="영수증번호" e:length="6" e:padder="SpaceRight" name="rcptNo" nillable="true" type="string"/>
-            <element e:kor="입금구분코드" e:length="1" e:padder="SpaceRight" name="iamtGbcd" nillable="true" type="string"/>
-            <element e:kor="입금금액" e:length="18" e:padder="ZeroLeft" name="iamtAmt" nillable="true" type="long"/>
-            <element e:kor="상품코드" e:length="13" e:padder="SpaceRight" name="itemCd" nillable="true" type="string"/>
-            <element e:kor="상품금액" e:length="18" e:padder="ZeroLeft" name="itemAmt" nillable="true" type="long"/>
-            <element e:kor="티켓번호" e:length="7" e:padder="SpaceRight" name="tcktNo" nillable="true" type="string"/>
-            <element e:kor="초과승인한도금액" e:length="18" e:padder="ZeroLeft" name="overAprvlBndsAmt" nillable="true" type="long"/>
+            <element e:kor="작업구분값" e:length="1" e:padder="SpaceRight" minOccurs="0" name="wrkGbVal" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" minOccurs="0" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="승인일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="aprvlDt" nillable="true" type="string"/>
+            <element e:kor="승인시각" e:length="6" e:padder="SpaceRight" minOccurs="0" name="aprvlTmstmp" nillable="true" type="string"/>
+            <element e:kor="자사승인번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="owcoAprvlNo" nillable="true" type="string"/>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="포스번호" e:length="6" e:padder="SpaceRight" minOccurs="0" name="posNo" nillable="true" type="string"/>
+            <element e:kor="승인요청기관코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="aprvlReqnIstnCd" nillable="true" type="string"/>
+            <element e:kor="일괄승인여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="ilmpAprvlYn" nillable="true" type="string"/>
+            <element e:kor="승인거래구분코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="aprvlTrdGbcd" nillable="true" type="string"/>
+            <element e:kor="사용한도구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="useBndsGbcd" nillable="true" type="string"/>
+            <element e:kor="승인결과분류코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="aprvlRstCsfCd" nillable="true" type="string"/>
+            <element e:kor="취소일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="cnclDt" nillable="true" type="string"/>
+            <element e:kor="취소시각" e:length="6" e:padder="SpaceRight" minOccurs="0" name="cnclTmstmp" nillable="true" type="string"/>
+            <element e:kor="원매출POS번호" e:length="6" e:padder="SpaceRight" minOccurs="0" name="orgsalePosNo" nillable="true" type="string"/>
+            <element e:kor="원매출영수번호" e:length="6" e:padder="SpaceRight" minOccurs="0" name="orgsaleRceitNo" nillable="true" type="string"/>
+            <element e:kor="카드할부개월수" e:length="3" e:padder="ZeroLeft" minOccurs="0" name="crdInsmMths" nillable="true" type="long"/>
+            <element e:kor="승인시재구분코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="aprvlCuratGbcd" nillable="true" type="string"/>
+            <element e:kor="총매출금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="tsaleAmt" nillable="true" type="long"/>
+            <element e:kor="에누리금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="enuriAmt" nillable="true" type="long"/>
+            <element e:kor="순매출금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="nsaleAmt" nillable="true" type="long"/>
+            <element e:kor="카드승인금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="crdAprvlAmt" nillable="true" type="long"/>
+            <element e:kor="포인트승인금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="pntAprvlAmt" nillable="true" type="long"/>
+            <element e:kor="승인금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="aprvlAmt" nillable="true" type="long"/>
+            <element e:kor="발생마일리지" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="ocrnMlg" nillable="true" type="decimal"/>
+            <element e:kor="NEOX포인트" e:length="12" e:padder="ZeroLeft" minOccurs="0" name="neoxPnt" nillable="true" type="decimal"/>
+            <element e:kor="NEOX카드번호" e:length="16" e:padder="SpaceRight" minOccurs="0" name="neoxCrdNo" nillable="true" type="string"/>
+            <element e:kor="포스입력모드구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="posInsrModeGbcd" nillable="true" type="string"/>
+            <element e:kor="영수증번호" e:length="6" e:padder="SpaceRight" minOccurs="0" name="rcptNo" nillable="true" type="string"/>
+            <element e:kor="입금구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="iamtGbcd" nillable="true" type="string"/>
+            <element e:kor="입금금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="iamtAmt" nillable="true" type="long"/>
+            <element e:kor="상품코드" e:length="13" e:padder="SpaceRight" minOccurs="0" name="itemCd" nillable="true" type="string"/>
+            <element e:kor="상품금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="itemAmt" nillable="true" type="long"/>
+            <element e:kor="티켓번호" e:length="7" e:padder="SpaceRight" minOccurs="0" name="tcktNo" nillable="true" type="string"/>
+            <element e:kor="초과승인한도금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="overAprvlBndsAmt" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:TADCISMTSY0008001_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:TADCISMTSY0008001_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

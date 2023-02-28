@@ -1,0 +1,42 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/TADCISMTPF9000201_InRes" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/TADCISMTPF9000201_InRes">
+    <element name="root" type="ns:TADCISMTPF9000201_InRes"/>
+    <complexType name="TADCISMTPF9000201_InRes">
+        <sequence>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="승인번호" e:length="10" e:padder="SpaceRight" minOccurs="0" name="aprvlNo" nillable="true" type="string"/>
+            <element e:kor="원매출일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="orgsaleDt" nillable="true" type="string"/>
+            <element e:kor="원매출POS번호" e:length="4" e:padder="SpaceRight" minOccurs="0" name="orgsalePosNo" nillable="true" type="string"/>
+            <element e:kor="원매출영수증번호" e:length="6" e:padder="SpaceRight" minOccurs="0" name="orgsaleRcptNo" nillable="true" type="string"/>
+            <element e:kor="취소금액" e:length="10" e:padder="SpaceRight" minOccurs="0" name="cnclAmt" nillable="true" type="string"/>
+            <element e:kor="취소마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="cnclMlg" nillable="true" type="string"/>
+            <element e:kor="확정여부" e:length="10" e:padder="SpaceRight" minOccurs="0" name="cnfmYn" nillable="true" type="string"/>
+            <element e:kor="기수령합계마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnSumMlg" nillable="true" type="string"/>
+            <element e:kor="기수령합계수령금액" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnSumRcvnAmt" nillable="true" type="string"/>
+            <element e:kor="기수령상품권수령마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGcRcvnMlg" nillable="true" type="string"/>
+            <element e:kor="기수령상품권수령금액" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGcRcvnAmt" nillable="true" type="string"/>
+            <element e:kor="기수령사은품수령마일리지1" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftRcvnMlg1" nillable="true" type="string"/>
+            <element e:kor="기수령사은품수령금액1" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftRcvnAmt1" nillable="true" type="string"/>
+            <element e:kor="기수령사은품상품명1" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftItemNm1" nillable="true" type="string"/>
+            <element e:kor="기수령사은품수령마일리지2" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftRcvnMlg2" nillable="true" type="string"/>
+            <element e:kor="기수령사은품수령금액2" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftRcvnAmt2" nillable="true" type="string"/>
+            <element e:kor="기수령사은품상품명2" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftItemNm2" nillable="true" type="string"/>
+            <element e:kor="기수령사은품수령마일리지3" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftRcvnMlg3" nillable="true" type="string"/>
+            <element e:kor="기수령사은품수령금액3" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftRcvnAmt3" nillable="true" type="string"/>
+            <element e:kor="기수령사은품상품명3" e:length="10" e:padder="SpaceRight" minOccurs="0" name="arcvnGiftItemNm3" nillable="true" type="string"/>
+            <element e:kor="취소후합계마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="afcnSumMlg" nillable="true" type="string"/>
+            <element e:kor="취소후합계수령금액" e:length="10" e:padder="SpaceRight" minOccurs="0" name="afcnSumRcvnAmt" nillable="true" type="string"/>
+            <element e:kor="재수령가능마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="reRcvnPossMlg" nillable="true" type="string"/>
+            <element e:kor="재수령가능금액" e:length="10" e:padder="SpaceRight" minOccurs="0" name="reRcvnPossAmt" nillable="true" type="string"/>
+            <element e:kor="반납합계마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="gvbkSumMlg" nillable="true" type="string"/>
+            <element e:kor="반납합계수령금액" e:length="10" e:padder="SpaceRight" minOccurs="0" name="gvbkSumRcvnAmt" nillable="true" type="string"/>
+            <element e:kor="부족마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="lackMlg" nillable="true" type="string"/>
+            <element e:kor="상품권재수령초과금액" e:length="10" e:padder="SpaceRight" minOccurs="0" name="gcReRcvnOverAmt" nillable="true" type="string"/>
+            <element e:kor="사은품재수령초과금액" e:length="10" e:padder="SpaceRight" minOccurs="0" name="giftReRcvnOverAmt" nillable="true" type="string"/>
+            <element e:kor="기존마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="extgMlg" nillable="true" type="string"/>
+            <element e:kor="기존회원등급" e:length="20" e:padder="SpaceRight" minOccurs="0" name="extgMemGrd" nillable="true" type="string"/>
+            <element e:kor="취소후마일리지" e:length="10" e:padder="SpaceRight" minOccurs="0" name="afcnMlg" nillable="true" type="string"/>
+            <element e:kor="취소후회원등급" e:length="20" e:padder="SpaceRight" minOccurs="0" name="afcnMemGrd" nillable="true" type="string"/>
+            <element e:kor="명품구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="lxgdsGbcd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

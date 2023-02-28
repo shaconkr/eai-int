@@ -2,7 +2,7 @@
     <element name="root" type="ns:HPGCISOCCTJC01801_InRes"/>
     <complexType name="HPGCISOCCTJC01801_InRes">
         <sequence>
-            <element e:kor="신카드번호" e:length="16" e:padder="SpaceRight" name="newCrdNo" nillable="true" type="string"/>
+            <element e:kor="신카드번호" e:length="16" e:padder="SpaceRight" minOccurs="0" name="newCrdNo" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

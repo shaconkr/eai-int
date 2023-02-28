@@ -33,16 +33,16 @@
     </complexType>
     <complexType name="TADCISCTCB0010601_InReq">
         <sequence>
-            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
-            <element e:kor="전자지갑가입여부" e:length="1" e:padder="SpaceRight" name="eltrWalletJoinYn" nillable="true" type="string"/>
-            <element e:kor="전자지갑등록일자" e:length="8" e:padder="SpaceRight" name="eltrWalletRegDt" nillable="true" type="string"/>
-            <element e:kor="전자지갑삭제일자" e:length="8" e:padder="SpaceRight" name="eltrWalletDelDt" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" minOccurs="0" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="전자지갑가입여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="eltrWalletJoinYn" nillable="true" type="string"/>
+            <element e:kor="전자지갑등록일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="eltrWalletRegDt" nillable="true" type="string"/>
+            <element e:kor="전자지갑삭제일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="eltrWalletDelDt" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:TADHeaderType"/>
-            <element name="data" type="ns:TADCISCTCB0010601_InReq"/>
+            <element e:kor="공통부" name="header" type="ns:TADHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:TADCISCTCB0010601_InReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

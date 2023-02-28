@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISHDFCTCN0013401="http://schema.hcis.com/xsd/CISHDFCTCN0013401_OutReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISHDFCTCN/CISHDFCTCN0013401.CISHDFCTCN0013401_OutReq" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISHDFCTCN0013401_OutReq_df.xsd" namespace="http://schema.hcis.com/xsd/CISHDFCTCN0013401_OutReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISHDFCTCN0013401:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="공통부" type="HDFHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="데이터부" type="CISHDFCTCN0013401_OutReq" name="data" start="0" end="0"/>
+  </jndi:configuration>
+</jndi:namedResource>

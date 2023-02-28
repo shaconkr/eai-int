@@ -47,22 +47,22 @@
     </complexType>
     <complexType name="KIKCISFNDX0010201_OutReq">
         <sequence>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="청구결제단위번호" e:length="4" e:padder="SpaceRight" name="reqStlmUnitNo" nillable="true" type="string"/>
-            <element e:kor="입금예정일자" e:length="8" e:padder="SpaceRight" name="iamtPrrgDt" nillable="true" type="string"/>
-            <element e:kor="결제일" e:length="2" e:padder="SpaceRight" name="stlmDay" nillable="true" type="string"/>
-            <element e:kor="청구시작일자" e:length="8" e:padder="SpaceRight" name="chrStrtDt" nillable="true" type="string"/>
-            <element e:kor="청구종료일자" e:length="8" e:padder="SpaceRight" name="chrEndDt" nillable="true" type="string"/>
-            <element e:kor="화면구분코드" e:length="1" e:padder="SpaceRight" name="scrnGbcd" nillable="true" type="string"/>
-            <element e:kor="조회여부" e:length="1" e:padder="SpaceRight" name="qryYn" nillable="true" type="string"/>
-            <element e:kor="조회시작일자" e:length="8" e:padder="SpaceRight" name="qryStrtDt" nillable="true" type="string"/>
-            <element e:kor="조회종료일자" e:length="8" e:padder="SpaceRight" name="qryEndDt" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="청구결제단위번호" e:length="4" e:padder="SpaceRight" minOccurs="0" name="reqStlmUnitNo" nillable="true" type="string"/>
+            <element e:kor="입금예정일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="iamtPrrgDt" nillable="true" type="string"/>
+            <element e:kor="결제일" e:length="2" e:padder="SpaceRight" minOccurs="0" name="stlmDay" nillable="true" type="string"/>
+            <element e:kor="청구시작일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="chrStrtDt" nillable="true" type="string"/>
+            <element e:kor="청구종료일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="chrEndDt" nillable="true" type="string"/>
+            <element e:kor="화면구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="scrnGbcd" nillable="true" type="string"/>
+            <element e:kor="조회여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="qryYn" nillable="true" type="string"/>
+            <element e:kor="조회시작일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="qryStrtDt" nillable="true" type="string"/>
+            <element e:kor="조회종료일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="qryEndDt" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:KIKCISFNDX0010201_OutReq"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:KIKCISFNDX0010201_OutReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

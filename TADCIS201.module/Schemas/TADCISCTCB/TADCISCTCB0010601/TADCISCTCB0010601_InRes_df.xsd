@@ -2,9 +2,9 @@
     <element name="root" type="ns:TADCISCTCB0010601_InRes"/>
     <complexType name="TADCISCTCB0010601_InRes">
         <sequence>
-            <element e:kor="전문길이" e:length="1" e:padder="SpaceRight" name="tgrmLen" nillable="true" type="string"/>
-            <element e:kor="전문내용" e:length="33" e:padder="SpaceRight" name="tgrmCntn" nillable="true" type="string"/>
-            <element e:kor="오류코드" e:length="4" e:padder="SpaceRight" name="errCd" nillable="true" type="string"/>
+            <element e:kor="전문길이" e:length="1" e:padder="SpaceRight" minOccurs="0" name="tgrmLen" nillable="true" type="string"/>
+            <element e:kor="전문내용" e:length="33" e:padder="SpaceRight" minOccurs="0" name="tgrmCntn" nillable="true" type="string"/>
+            <element e:kor="오류코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="errCd" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

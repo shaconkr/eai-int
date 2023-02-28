@@ -47,17 +47,17 @@
     </complexType>
     <complexType name="ARSCISFNDX0090101_OutReq">
         <sequence>
-            <element e:kor="본인주민등록번호" e:length="13" e:padder="SpaceRight" name="selfRrno" nillable="true" type="string"/>
-            <element e:kor="회계년월" e:length="6" e:padder="SpaceRight" name="acncYm" nillable="true" type="string"/>
-            <element e:kor="가족포함여부" e:length="1" e:padder="SpaceRight" name="famlInclYn" nillable="true" type="string"/>
-            <element e:kor="본인회원번호" e:length="9" e:padder="SpaceRight" name="selfMemNo" nillable="true" type="string"/>
-            <element e:kor="사원번호" e:length="10" e:padder="SpaceRight" name="empNo" nillable="true" type="string"/>
+            <element e:kor="본인주민등록번호" e:length="13" e:padder="SpaceRight" minOccurs="0" name="selfRrno" nillable="true" type="string"/>
+            <element e:kor="회계년월" e:length="6" e:padder="SpaceRight" minOccurs="0" name="acncYm" nillable="true" type="string"/>
+            <element e:kor="가족포함여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="famlInclYn" nillable="true" type="string"/>
+            <element e:kor="본인회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="selfMemNo" nillable="true" type="string"/>
+            <element e:kor="사원번호" e:length="10" e:padder="SpaceRight" minOccurs="0" name="empNo" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:ARSCISFNDX0090101_OutReq"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:ARSCISFNDX0090101_OutReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>
