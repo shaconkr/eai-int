@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,7 +39,7 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="작업처리구분코드" name="wrkProcGbcd" minOccurs="1" maxOccurs="1" position="419" length="2"/>  
         <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="1" maxOccurs="1" position="421" length="2"/>  
         <field kor="우선승인유형코드" name="priorAprvlTypeCd" minOccurs="1" maxOccurs="1" position="423" length="1"/>  
@@ -55,7 +55,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -85,10 +85,10 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="레코드총건수" name="recdTotCnt" minOccurs="1" maxOccurs="1" position="419" length="10"/>
         <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="429" length="30"/>
-        <segment name="rstList" minOccurs="0" maxOccurs="50" collection="list" class="map">
+        <segment name="rstList" kor="결과리스트" minOccurs="0" maxOccurs="50" collection="list" class="map">
           <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="459" length="9"/>
           <field kor="회원명" name="memNm" minOccurs="1" maxOccurs="1" position="468" length="100"/>
           <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="1" maxOccurs="1" position="568" length="2"/>
