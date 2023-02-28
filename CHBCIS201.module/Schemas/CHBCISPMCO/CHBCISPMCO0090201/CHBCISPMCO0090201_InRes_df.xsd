@@ -2,7 +2,7 @@
     <element name="root" type="ns:CHBCISPMCO0090201_InRes"/>
     <complexType name="CHBCISPMCO0090201_InRes">
         <sequence>
-            <element e:kor="미도래금액" e:length="19" e:padder="ZeroLeft" name="nadvAmt" nillable="true" type="long"/>
+            <element e:kor="미도래금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="nadvAmt" nillable="true" type="long"/>
         </sequence>
     </complexType>
 </schema>

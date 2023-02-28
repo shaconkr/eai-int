@@ -47,121 +47,121 @@
     </complexType>
     <complexType name="ARSCISFNDX0050101_OutRes">
         <sequence>
-            <element e:kor="청구서_배열건수" e:length="5" e:padder="ZeroLeft" name="billpostRowcount" nillable="true" type="long"/>
-            <element e:kor="청구서_배열" e:padder="ZeroLeft" maxOccurs="unbounded" name="billpostList" nillable="true" type="ns:BILLPOST_LIST_TYPE"/>
+            <element e:kor="청구서_배열건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="billpostRowcount" nillable="true" type="long"/>
+            <element e:kor="청구서_배열" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="billpostList" nillable="true" type="ns:BILLPOST_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="BILLPOST_LIST_TYPE">
         <sequence>
-            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" name="sendDt" nillable="true" type="string"/>
-            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" name="sendTime" nillable="true" type="string"/>
-            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
-            <element e:kor="고객명" e:length="40" e:padder="SpaceRight" name="custNm" nillable="true" type="string"/>
-            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" name="chrDt" nillable="true" type="string"/>
-            <element e:kor="매출시작일자" e:length="8" e:padder="SpaceRight" name="saleStrtDt" nillable="true" type="string"/>
-            <element e:kor="매출종료일자" e:length="8" e:padder="SpaceRight" name="saleEndDt" nillable="true" type="string"/>
-            <element e:kor="결제방법코드" e:length="1" e:padder="SpaceRight" name="stlmMthdCd" nillable="true" type="string"/>
-            <element e:kor="결제은행코드" e:length="10" e:padder="SpaceRight" name="stlmBankCd" nillable="true" type="string"/>
-            <element e:kor="결제계좌번호" e:length="20" e:padder="SpaceRight" name="stlmAcno" nillable="true" type="string"/>
-            <element e:kor="최종입금일자" e:length="8" e:padder="SpaceRight" name="lastIamtDt" nillable="true" type="string"/>
-            <element e:kor="실결제일자" e:length="8" e:padder="SpaceRight" name="realStlmDt" nillable="true" type="string"/>
-            <element e:kor="이자기산일자" e:length="8" e:padder="SpaceRight" name="intrRcknDt" nillable="true" type="string"/>
-            <element e:kor="적용이자율" e:length="9" e:padder="ZeroLeft" name="aplyIntrRt" nillable="true" type="long"/>
-            <element e:kor="통합한도금액" e:length="19" e:padder="ZeroLeft" name="untdBndsAmt" nillable="true" type="long"/>
-            <element e:kor="마일리지" e:length="20" e:padder="ZeroLeft" name="mlg" nillable="true" type="decimal"/>
-            <element e:kor="마일리지산정기준일자" e:length="8" e:padder="SpaceRight" name="mlgEstmBsicDt" nillable="true" type="string"/>
-            <element e:kor="결제일" e:length="2" e:padder="SpaceRight" name="stlmDay" nillable="true" type="string"/>
-            <element e:kor="연체원금금액" e:length="19" e:padder="ZeroLeft" name="oduePrncAmt" nillable="true" type="long"/>
-            <element e:kor="연체수수료금액" e:length="19" e:padder="ZeroLeft" name="odueCmisAmt" nillable="true" type="long"/>
-            <element e:kor="연체이자금액" e:length="1" e:padder="ZeroLeft" name="odueIntrAmt" nillable="true" type="long"/>
-            <element e:kor="연체총합계금액" e:length="19" e:padder="ZeroLeft" name="odueTotSumAmt" nillable="true" type="long"/>
-            <element e:kor="당월원금금액" e:length="19" e:padder="ZeroLeft" name="thmnPrncAmt" nillable="true" type="long"/>
-            <element e:kor="당월수수료금액" e:length="19" e:padder="ZeroLeft" name="thmnCmisAmt" nillable="true" type="long"/>
-            <element e:kor="당월청구합계금액" e:length="19" e:padder="ZeroLeft" name="thmnReqSumAmt" nillable="true" type="long"/>
-            <element e:kor="초과납부금액" e:length="19" e:padder="ZeroLeft" name="overPymAmt" nillable="true" type="long"/>
-            <element e:kor="납부합계금액" e:length="19" e:padder="ZeroLeft" name="pymSumAmt" nillable="true" type="long"/>
-            <element e:kor="총건수" e:length="1" e:padder="ZeroLeft" name="totCnt" nillable="true" type="long"/>
-            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" name="saleDt" nillable="true" type="string"/>
-            <element e:kor="상품명" e:length="200" e:padder="SpaceRight" name="itemNm" nillable="true" type="string"/>
-            <element e:kor="관계구분코드명" e:length="100" e:padder="SpaceRight" name="relGbcdNm" nillable="true" type="string"/>
-            <element e:kor="가맹점명" e:length="100" e:padder="SpaceRight" name="frcsNm" nillable="true" type="string"/>
-            <element e:kor="카드할부개월수" e:length="4" e:padder="ZeroLeft" name="crdInsmMths" nillable="true" type="long"/>
-            <element e:kor="매출금액" e:length="1" e:padder="ZeroLeft" name="saleAmt" nillable="true" type="long"/>
-            <element e:kor="전월미결제금액" e:length="19" e:padder="ZeroLeft" name="lmmNpymAmt" nillable="true" type="long"/>
-            <element e:kor="청구회차" e:length="8" e:padder="ZeroLeft" name="reqTmnm" nillable="true" type="long"/>
-            <element e:kor="당월청구원금금액" e:length="19" e:padder="ZeroLeft" name="thmnReqPrncAmt" nillable="true" type="long"/>
-            <element e:kor="당월청구수수료금액" e:length="19" e:padder="ZeroLeft" name="thmnReqCmisAmt" nillable="true" type="long"/>
-            <element e:kor="잔여개월수" e:length="8" e:padder="ZeroLeft" name="rmndMths" nillable="true" type="long"/>
-            <element e:kor="미도래금액" e:length="19" e:padder="ZeroLeft" name="nadvAmt" nillable="true" type="long"/>
-            <element e:kor="결제일자" e:length="8" e:padder="SpaceRight" name="stlmDt" nillable="true" type="string"/>
-            <element e:kor="사용자명" e:length="20" e:padder="SpaceRight" name="userNm" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo" nillable="true" type="string"/>
-            <element e:kor="즉시입금금액" e:length="19" e:padder="ZeroLeft" name="imdtIamtAmt" nillable="true" type="long"/>
-            <element e:kor="적립예상마일리지" e:length="20" e:padder="ZeroLeft" name="acmExpMlg" nillable="true" type="decimal"/>
-            <element e:kor="주소1" e:length="200" e:padder="SpaceRight" name="adr1" nillable="true" type="string"/>
-            <element e:kor="주소2" e:length="200" e:padder="SpaceRight" name="adr2" nillable="true" type="string"/>
-            <element e:kor="휴대전화번호" e:length="20" e:padder="SpaceRight" name="mobiTelno" nillable="true" type="string"/>
-            <element e:kor="이메일주소" e:length="50" e:padder="SpaceRight" name="emailAdr" nillable="true" type="string"/>
-            <element e:kor="은행명1" e:length="20" e:padder="SpaceRight" name="bankNm1" nillable="true" type="string"/>
-            <element e:kor="가상계좌번호1" e:length="20" e:padder="SpaceRight" name="virtAcno1" nillable="true" type="string"/>
-            <element e:kor="은행명2" e:length="20" e:padder="SpaceRight" name="bankNm2" nillable="true" type="string"/>
-            <element e:kor="가상계좌번호2" e:length="20" e:padder="SpaceRight" name="virtAcno2" nillable="true" type="string"/>
-            <element e:kor="은행명3" e:length="20" e:padder="SpaceRight" name="bankNm3" nillable="true" type="string"/>
-            <element e:kor="가상계좌번호3" e:length="20" e:padder="SpaceRight" name="virtAcno3" nillable="true" type="string"/>
-            <element e:kor="은행명4" e:length="20" e:padder="SpaceRight" name="bankNm4" nillable="true" type="string"/>
-            <element e:kor="가상계좌번호4" e:length="20" e:padder="SpaceRight" name="virtAcno4" nillable="true" type="string"/>
-            <element e:kor="은행명5" e:length="20" e:padder="SpaceRight" name="bankNm5" nillable="true" type="string"/>
-            <element e:kor="가상계좌번호5" e:length="20" e:padder="SpaceRight" name="virtAcno5" nillable="true" type="string"/>
-            <element e:kor="은행명6" e:length="20" e:padder="SpaceRight" name="bankNm6" nillable="true" type="string"/>
-            <element e:kor="가상계좌번호6" e:length="20" e:padder="SpaceRight" name="virtAcno6" nillable="true" type="string"/>
-            <element e:kor="본인가족회원순번1" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq1" nillable="true" type="string"/>
-            <element e:kor="사용자명1" e:length="20" e:padder="SpaceRight" name="userNm1" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호1" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo1" nillable="true" type="string"/>
-            <element e:kor="청구대상금액1" e:length="19" e:padder="ZeroLeft" name="reqTgamt1" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번2" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq2" nillable="true" type="string"/>
-            <element e:kor="사용자명2" e:length="20" e:padder="SpaceRight" name="userNm2" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호2" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo2" nillable="true" type="string"/>
-            <element e:kor="청구대상금액2" e:length="19" e:padder="ZeroLeft" name="reqTgamt2" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번3" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq3" nillable="true" type="string"/>
-            <element e:kor="사용자명3" e:length="20" e:padder="SpaceRight" name="userNm3" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호3" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo3" nillable="true" type="string"/>
-            <element e:kor="청구대상금액3" e:length="19" e:padder="ZeroLeft" name="reqTgamt3" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번4" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq4" nillable="true" type="string"/>
-            <element e:kor="사용자명4" e:length="20" e:padder="SpaceRight" name="userNm4" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호4" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo4" nillable="true" type="string"/>
-            <element e:kor="청구대상금액4" e:length="19" e:padder="ZeroLeft" name="reqTgamt4" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번5" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq5" nillable="true" type="string"/>
-            <element e:kor="사용자명5" e:length="20" e:padder="SpaceRight" name="userNm5" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호5" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo5" nillable="true" type="string"/>
-            <element e:kor="청구대상금액5" e:length="19" e:padder="ZeroLeft" name="reqTgamt5" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번6" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq6" nillable="true" type="string"/>
-            <element e:kor="사용자명6" e:length="20" e:padder="SpaceRight" name="userNm6" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호6" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo6" nillable="true" type="string"/>
-            <element e:kor="청구대상금액6" e:length="19" e:padder="ZeroLeft" name="reqTgamt6" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번7" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq7" nillable="true" type="string"/>
-            <element e:kor="사용자명7" e:length="20" e:padder="SpaceRight" name="userNm7" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호7" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo7" nillable="true" type="string"/>
-            <element e:kor="청구대상금액7" e:length="19" e:padder="ZeroLeft" name="reqTgamt7" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번8" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq8" nillable="true" type="string"/>
-            <element e:kor="사용자명8" e:length="20" e:padder="SpaceRight" name="userNm8" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호8" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo8" nillable="true" type="string"/>
-            <element e:kor="청구대상금액8" e:length="19" e:padder="ZeroLeft" name="reqTgamt8" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번9" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq9" nillable="true" type="string"/>
-            <element e:kor="사용자명9" e:length="20" e:padder="SpaceRight" name="userNm9" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호9" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo9" nillable="true" type="string"/>
-            <element e:kor="청구대상금액9" e:length="19" e:padder="ZeroLeft" name="reqTgamt9" nillable="true" type="long"/>
-            <element e:kor="본인가족회원순번10" e:length="2" e:padder="SpaceRight" name="selfFamlMemSeq10" nillable="true" type="string"/>
-            <element e:kor="사용자명10" e:length="20" e:padder="SpaceRight" name="userNm10" nillable="true" type="string"/>
-            <element e:kor="사용카드뒤4자리번호10" e:length="4" e:padder="SpaceRight" name="useCrdBck4PtnNo10" nillable="true" type="string"/>
-            <element e:kor="청구대상금액10" e:length="19" e:padder="ZeroLeft" name="reqTgamt10" nillable="true" type="long"/>
+            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="sendDt" nillable="true" type="string"/>
+            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" minOccurs="0" name="sendTime" nillable="true" type="string"/>
+            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="respCd" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="16" e:padder="SpaceRight" minOccurs="0" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="고객명" e:length="40" e:padder="SpaceRight" minOccurs="0" name="custNm" nillable="true" type="string"/>
+            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="chrDt" nillable="true" type="string"/>
+            <element e:kor="매출시작일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="saleStrtDt" nillable="true" type="string"/>
+            <element e:kor="매출종료일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="saleEndDt" nillable="true" type="string"/>
+            <element e:kor="결제방법코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="stlmMthdCd" nillable="true" type="string"/>
+            <element e:kor="결제은행코드" e:length="10" e:padder="SpaceRight" minOccurs="0" name="stlmBankCd" nillable="true" type="string"/>
+            <element e:kor="결제계좌번호" e:length="20" e:padder="SpaceRight" minOccurs="0" name="stlmAcno" nillable="true" type="string"/>
+            <element e:kor="최종입금일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="lastIamtDt" nillable="true" type="string"/>
+            <element e:kor="실결제일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="realStlmDt" nillable="true" type="string"/>
+            <element e:kor="이자기산일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="intrRcknDt" nillable="true" type="string"/>
+            <element e:kor="적용이자율" e:length="9" e:padder="ZeroLeft" minOccurs="0" name="aplyIntrRt" nillable="true" type="long"/>
+            <element e:kor="통합한도금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="untdBndsAmt" nillable="true" type="long"/>
+            <element e:kor="마일리지" e:length="20" e:padder="ZeroLeft" minOccurs="0" name="mlg" nillable="true" type="decimal"/>
+            <element e:kor="마일리지산정기준일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="mlgEstmBsicDt" nillable="true" type="string"/>
+            <element e:kor="결제일" e:length="2" e:padder="SpaceRight" minOccurs="0" name="stlmDay" nillable="true" type="string"/>
+            <element e:kor="연체원금금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="oduePrncAmt" nillable="true" type="long"/>
+            <element e:kor="연체수수료금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="odueCmisAmt" nillable="true" type="long"/>
+            <element e:kor="연체이자금액" e:length="1" e:padder="ZeroLeft" minOccurs="0" name="odueIntrAmt" nillable="true" type="long"/>
+            <element e:kor="연체총합계금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="odueTotSumAmt" nillable="true" type="long"/>
+            <element e:kor="당월원금금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="thmnPrncAmt" nillable="true" type="long"/>
+            <element e:kor="당월수수료금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="thmnCmisAmt" nillable="true" type="long"/>
+            <element e:kor="당월청구합계금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="thmnReqSumAmt" nillable="true" type="long"/>
+            <element e:kor="초과납부금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="overPymAmt" nillable="true" type="long"/>
+            <element e:kor="납부합계금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="pymSumAmt" nillable="true" type="long"/>
+            <element e:kor="총건수" e:length="1" e:padder="ZeroLeft" minOccurs="0" name="totCnt" nillable="true" type="long"/>
+            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="saleDt" nillable="true" type="string"/>
+            <element e:kor="상품명" e:length="200" e:padder="SpaceRight" minOccurs="0" name="itemNm" nillable="true" type="string"/>
+            <element e:kor="관계구분코드명" e:length="100" e:padder="SpaceRight" minOccurs="0" name="relGbcdNm" nillable="true" type="string"/>
+            <element e:kor="가맹점명" e:length="100" e:padder="SpaceRight" minOccurs="0" name="frcsNm" nillable="true" type="string"/>
+            <element e:kor="카드할부개월수" e:length="4" e:padder="ZeroLeft" minOccurs="0" name="crdInsmMths" nillable="true" type="long"/>
+            <element e:kor="매출금액" e:length="1" e:padder="ZeroLeft" minOccurs="0" name="saleAmt" nillable="true" type="long"/>
+            <element e:kor="전월미결제금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="lmmNpymAmt" nillable="true" type="long"/>
+            <element e:kor="청구회차" e:length="8" e:padder="ZeroLeft" minOccurs="0" name="reqTmnm" nillable="true" type="long"/>
+            <element e:kor="당월청구원금금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="thmnReqPrncAmt" nillable="true" type="long"/>
+            <element e:kor="당월청구수수료금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="thmnReqCmisAmt" nillable="true" type="long"/>
+            <element e:kor="잔여개월수" e:length="8" e:padder="ZeroLeft" minOccurs="0" name="rmndMths" nillable="true" type="long"/>
+            <element e:kor="미도래금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="nadvAmt" nillable="true" type="long"/>
+            <element e:kor="결제일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="stlmDt" nillable="true" type="string"/>
+            <element e:kor="사용자명" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo" nillable="true" type="string"/>
+            <element e:kor="즉시입금금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="imdtIamtAmt" nillable="true" type="long"/>
+            <element e:kor="적립예상마일리지" e:length="20" e:padder="ZeroLeft" minOccurs="0" name="acmExpMlg" nillable="true" type="decimal"/>
+            <element e:kor="주소1" e:length="200" e:padder="SpaceRight" minOccurs="0" name="adr1" nillable="true" type="string"/>
+            <element e:kor="주소2" e:length="200" e:padder="SpaceRight" minOccurs="0" name="adr2" nillable="true" type="string"/>
+            <element e:kor="휴대전화번호" e:length="20" e:padder="SpaceRight" minOccurs="0" name="mobiTelno" nillable="true" type="string"/>
+            <element e:kor="이메일주소" e:length="50" e:padder="SpaceRight" minOccurs="0" name="emailAdr" nillable="true" type="string"/>
+            <element e:kor="은행명1" e:length="20" e:padder="SpaceRight" minOccurs="0" name="bankNm1" nillable="true" type="string"/>
+            <element e:kor="가상계좌번호1" e:length="20" e:padder="SpaceRight" minOccurs="0" name="virtAcno1" nillable="true" type="string"/>
+            <element e:kor="은행명2" e:length="20" e:padder="SpaceRight" minOccurs="0" name="bankNm2" nillable="true" type="string"/>
+            <element e:kor="가상계좌번호2" e:length="20" e:padder="SpaceRight" minOccurs="0" name="virtAcno2" nillable="true" type="string"/>
+            <element e:kor="은행명3" e:length="20" e:padder="SpaceRight" minOccurs="0" name="bankNm3" nillable="true" type="string"/>
+            <element e:kor="가상계좌번호3" e:length="20" e:padder="SpaceRight" minOccurs="0" name="virtAcno3" nillable="true" type="string"/>
+            <element e:kor="은행명4" e:length="20" e:padder="SpaceRight" minOccurs="0" name="bankNm4" nillable="true" type="string"/>
+            <element e:kor="가상계좌번호4" e:length="20" e:padder="SpaceRight" minOccurs="0" name="virtAcno4" nillable="true" type="string"/>
+            <element e:kor="은행명5" e:length="20" e:padder="SpaceRight" minOccurs="0" name="bankNm5" nillable="true" type="string"/>
+            <element e:kor="가상계좌번호5" e:length="20" e:padder="SpaceRight" minOccurs="0" name="virtAcno5" nillable="true" type="string"/>
+            <element e:kor="은행명6" e:length="20" e:padder="SpaceRight" minOccurs="0" name="bankNm6" nillable="true" type="string"/>
+            <element e:kor="가상계좌번호6" e:length="20" e:padder="SpaceRight" minOccurs="0" name="virtAcno6" nillable="true" type="string"/>
+            <element e:kor="본인가족회원순번1" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq1" nillable="true" type="string"/>
+            <element e:kor="사용자명1" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm1" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호1" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo1" nillable="true" type="string"/>
+            <element e:kor="청구대상금액1" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt1" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번2" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq2" nillable="true" type="string"/>
+            <element e:kor="사용자명2" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm2" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호2" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo2" nillable="true" type="string"/>
+            <element e:kor="청구대상금액2" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt2" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번3" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq3" nillable="true" type="string"/>
+            <element e:kor="사용자명3" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm3" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호3" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo3" nillable="true" type="string"/>
+            <element e:kor="청구대상금액3" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt3" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번4" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq4" nillable="true" type="string"/>
+            <element e:kor="사용자명4" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm4" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호4" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo4" nillable="true" type="string"/>
+            <element e:kor="청구대상금액4" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt4" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번5" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq5" nillable="true" type="string"/>
+            <element e:kor="사용자명5" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm5" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호5" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo5" nillable="true" type="string"/>
+            <element e:kor="청구대상금액5" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt5" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번6" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq6" nillable="true" type="string"/>
+            <element e:kor="사용자명6" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm6" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호6" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo6" nillable="true" type="string"/>
+            <element e:kor="청구대상금액6" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt6" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번7" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq7" nillable="true" type="string"/>
+            <element e:kor="사용자명7" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm7" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호7" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo7" nillable="true" type="string"/>
+            <element e:kor="청구대상금액7" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt7" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번8" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq8" nillable="true" type="string"/>
+            <element e:kor="사용자명8" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm8" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호8" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo8" nillable="true" type="string"/>
+            <element e:kor="청구대상금액8" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt8" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번9" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq9" nillable="true" type="string"/>
+            <element e:kor="사용자명9" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm9" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호9" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo9" nillable="true" type="string"/>
+            <element e:kor="청구대상금액9" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt9" nillable="true" type="long"/>
+            <element e:kor="본인가족회원순번10" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfFamlMemSeq10" nillable="true" type="string"/>
+            <element e:kor="사용자명10" e:length="20" e:padder="SpaceRight" minOccurs="0" name="userNm10" nillable="true" type="string"/>
+            <element e:kor="사용카드뒤4자리번호10" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useCrdBck4PtnNo10" nillable="true" type="string"/>
+            <element e:kor="청구대상금액10" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqTgamt10" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:ARSCISFNDX0050101_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:ARSCISFNDX0050101_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

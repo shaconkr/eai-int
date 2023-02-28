@@ -47,19 +47,19 @@
     </complexType>
     <complexType name="KIKCISPMCK0130201_OutReq">
         <sequence>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="청구결제단위번호" e:length="4" e:padder="SpaceRight" name="reqStlmUnitNo" nillable="true" type="string"/>
-            <element e:kor="은행코드" e:length="3" e:padder="SpaceRight" name="bankCd" nillable="true" type="string"/>
-            <element e:kor="가상계좌은행지점코드" e:length="3" e:padder="SpaceRight" name="virtAcntBankBrnCd" nillable="true" type="string"/>
-            <element e:kor="가상계좌주제코드" e:length="3" e:padder="SpaceRight" name="virtAcntSbjtCd" nillable="true" type="string"/>
-            <element e:kor="등록점코드" e:length="3" e:padder="SpaceRight" name="regStoreCd" nillable="true" type="string"/>
-            <element e:kor="등록ID" e:length="100" e:padder="SpaceRight" name="regId" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="청구결제단위번호" e:length="4" e:padder="SpaceRight" minOccurs="0" name="reqStlmUnitNo" nillable="true" type="string"/>
+            <element e:kor="은행코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="bankCd" nillable="true" type="string"/>
+            <element e:kor="가상계좌은행지점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="virtAcntBankBrnCd" nillable="true" type="string"/>
+            <element e:kor="가상계좌주제코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="virtAcntSbjtCd" nillable="true" type="string"/>
+            <element e:kor="등록점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="regStoreCd" nillable="true" type="string"/>
+            <element e:kor="등록ID" e:length="100" e:padder="SpaceRight" minOccurs="0" name="regId" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:KIKCISPMCK0130201_OutReq"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:KIKCISPMCK0130201_OutReq"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,27 +39,27 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="작업구분코드" name="wrkGbcd" minOccurs="1" maxOccurs="1" position="419" length="2"/>  
-        <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="421" length="9"/>  
-        <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="1" maxOccurs="1" position="430" length="2"/>  
-        <field kor="우선승인유형코드" name="priorAprvlTypeCd" minOccurs="1" maxOccurs="1" position="432" length="1"/>  
-        <field kor="상위승인기준금액" name="highAprvlBsicAmt" minOccurs="1" maxOccurs="1" position="433" length="18"/>  
-        <field kor="상위승인기준유형코드" name="highAprvlBsicTypeCd" minOccurs="1" maxOccurs="1" position="451" length="1"/>  
-        <field kor="중간승인기준유형코드" name="intmAprvlBsicTypeCd" minOccurs="1" maxOccurs="1" position="452" length="1"/>  
-        <field kor="하위승인기준금액" name="lowAprvlBsicAmt" minOccurs="1" maxOccurs="1" position="453" length="18"/>  
-        <field kor="하위승인기준유형코드" name="lowAprvlBsicTypeCd" minOccurs="1" maxOccurs="1" position="471" length="1"/>  
-        <field kor="가족적용여부" name="famlAplyYn" minOccurs="1" maxOccurs="1" position="472" length="1"/>  
-        <field kor="적용일자" name="aplyDt" minOccurs="1" maxOccurs="1" position="473" length="8"/>  
-        <field kor="해제일자" name="clerDt" minOccurs="1" maxOccurs="1" position="481" length="8"/>  
-        <field kor="등록사유" name="regRsn" minOccurs="1" maxOccurs="1" position="489" length="2000"/>  
-        <field kor="등록점코드" name="regStoreCd" minOccurs="1" maxOccurs="1" position="2489" length="3"/>  
-        <field kor="등록ID" name="regId" minOccurs="1" maxOccurs="1" position="2492" length="100"/>  
-        <field kor="등록일시" name="regDtm" minOccurs="1" maxOccurs="1" position="2592" length="14"/>  
-        <field kor="등록프로그램ID" name="regPrgId" minOccurs="1" maxOccurs="1" position="2606" length="100"/>  
-        <field kor="변경ID" name="chgId" minOccurs="1" maxOccurs="1" position="2706" length="100"/>  
-        <field kor="변경일시" name="chgDtm" minOccurs="1" maxOccurs="1" position="2806" length="14"/>  
-        <field kor="변경프로그램ID" name="chgPrgId" minOccurs="1" maxOccurs="1" position="2820" length="100"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="작업구분코드" name="wrkGbcd" minOccurs="0" maxOccurs="1" position="419" length="2"/>  
+        <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="421" length="9"/>  
+        <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="0" maxOccurs="1" position="430" length="2"/>  
+        <field kor="우선승인유형코드" name="priorAprvlTypeCd" minOccurs="0" maxOccurs="1" position="432" length="1"/>  
+        <field kor="상위승인기준금액" name="highAprvlBsicAmt" minOccurs="0" maxOccurs="1" position="433" length="18"/>  
+        <field kor="상위승인기준유형코드" name="highAprvlBsicTypeCd" minOccurs="0" maxOccurs="1" position="451" length="1"/>  
+        <field kor="중간승인기준유형코드" name="intmAprvlBsicTypeCd" minOccurs="0" maxOccurs="1" position="452" length="1"/>  
+        <field kor="하위승인기준금액" name="lowAprvlBsicAmt" minOccurs="0" maxOccurs="1" position="453" length="18"/>  
+        <field kor="하위승인기준유형코드" name="lowAprvlBsicTypeCd" minOccurs="0" maxOccurs="1" position="471" length="1"/>  
+        <field kor="가족적용여부" name="famlAplyYn" minOccurs="0" maxOccurs="1" position="472" length="1"/>  
+        <field kor="적용일자" name="aplyDt" minOccurs="0" maxOccurs="1" position="473" length="8"/>  
+        <field kor="해제일자" name="clerDt" minOccurs="0" maxOccurs="1" position="481" length="8"/>  
+        <field kor="등록사유" name="regRsn" minOccurs="0" maxOccurs="1" position="489" length="2000"/>  
+        <field kor="등록점코드" name="regStoreCd" minOccurs="0" maxOccurs="1" position="2489" length="3"/>  
+        <field kor="등록ID" name="regId" minOccurs="0" maxOccurs="1" position="2492" length="100"/>  
+        <field kor="등록일시" name="regDtm" minOccurs="0" maxOccurs="1" position="2592" length="14"/>  
+        <field kor="등록프로그램ID" name="regPrgId" minOccurs="0" maxOccurs="1" position="2606" length="100"/>  
+        <field kor="변경ID" name="chgId" minOccurs="0" maxOccurs="1" position="2706" length="100"/>  
+        <field kor="변경일시" name="chgDtm" minOccurs="0" maxOccurs="1" position="2806" length="14"/>  
+        <field kor="변경프로그램ID" name="chgPrgId" minOccurs="0" maxOccurs="1" position="2820" length="100"/> 
       </segment> 
     </record> 
   </stream>  
@@ -68,7 +68,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -98,7 +98,7 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"/>
     </record>
   </stream>
 </beanio>

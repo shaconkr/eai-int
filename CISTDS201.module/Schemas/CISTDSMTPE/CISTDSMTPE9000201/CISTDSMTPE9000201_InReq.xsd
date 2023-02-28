@@ -47,29 +47,29 @@
     </complexType>
     <complexType name="CISTDSMTPE9000201_InReq">
         <sequence>
-            <element e:kor="거래코드" e:length="4" e:padder="SpaceRight" name="trdCd" nillable="true" type="string"/>
-            <element e:kor="거래구분코드" e:length="2" e:padder="SpaceRight" name="trdGbcd" nillable="true" type="string"/>
-            <element e:kor="공백값" e:length="1" e:padder="SpaceRight" name="nullVal" nillable="true" type="string"/>
-            <element e:kor="전문길이" e:length="6" e:padder="SpaceRight" name="tgrmLen" nillable="true" type="string"/>
-            <element e:kor="응답코드" e:length="7" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
-            <element e:kor="공백값2" e:length="100" e:padder="SpaceRight" name="nullVal2" nillable="true" type="string"/>
-            <element e:kor="사용반납구분코드" e:length="4" e:padder="SpaceRight" name="useGvbkGbcd" nillable="true" type="string"/>
-            <element e:kor="전문유형번호" e:length="4" e:padder="SpaceRight" name="tgrmTypeNo" nillable="true" type="string"/>
-            <element e:kor="카드포스번호" e:length="4" e:padder="SpaceRight" name="crdPosNo" nillable="true" type="string"/>
-            <element e:kor="고객번호1" e:length="9" e:padder="SpaceRight" name="custNo1" nillable="true" type="string"/>
-            <element e:kor="고객번호2" e:length="9" e:padder="SpaceRight" name="custNo2" nillable="true" type="string"/>
-            <element e:kor="카드번호" e:length="20" e:padder="SpaceRight" name="crdNo" nillable="true" type="string"/>
-            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" name="storeCd" nillable="true" type="string"/>
-            <element e:kor="적립일자" e:length="8" e:padder="SpaceRight" name="acmDt" nillable="true" type="string"/>
-            <element e:kor="처리시간" e:length="6" e:padder="SpaceRight" name="procTime" nillable="true" type="string"/>
-            <element e:kor="전환금액" e:length="13" e:padder="SpaceRight" name="swtcAmt" nillable="true" type="string"/>
-            <element e:kor="점코드2" e:length="3" e:padder="SpaceRight" name="storeCd2" nillable="true" type="string"/>
-            <element e:kor="처리일자" e:length="8" e:padder="SpaceRight" name="procDt" nillable="true" type="string"/>
-            <element e:kor="처리순번" e:length="7" e:padder="SpaceRight" name="procSeq" nillable="true" type="string"/>
-            <element e:kor="지급순번" e:length="3" e:padder="SpaceRight" name="giveSeq" nillable="true" type="string"/>
-            <element e:kor="등록자사번" e:length="30" e:padder="SpaceRight" name="rgstEmno" nillable="true" type="string"/>
-            <element e:kor="등록자ID" e:length="30" e:padder="SpaceRight" name="rgstId" nillable="true" type="string"/>
-            <element e:kor="공백값3" e:length="231" e:padder="SpaceRight" name="nullVal3" nillable="true" type="string"/>
+            <element e:kor="거래코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="trdCd" nillable="true" type="string"/>
+            <element e:kor="거래구분코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="trdGbcd" nillable="true" type="string"/>
+            <element e:kor="공백값" e:length="1" e:padder="SpaceRight" minOccurs="0" name="nullVal" nillable="true" type="string"/>
+            <element e:kor="전문길이" e:length="6" e:padder="SpaceRight" minOccurs="0" name="tgrmLen" nillable="true" type="string"/>
+            <element e:kor="응답코드" e:length="7" e:padder="SpaceRight" minOccurs="0" name="respCd" nillable="true" type="string"/>
+            <element e:kor="공백값2" e:length="100" e:padder="SpaceRight" minOccurs="0" name="nullVal2" nillable="true" type="string"/>
+            <element e:kor="사용반납구분코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="useGvbkGbcd" nillable="true" type="string"/>
+            <element e:kor="전문유형번호" e:length="4" e:padder="SpaceRight" minOccurs="0" name="tgrmTypeNo" nillable="true" type="string"/>
+            <element e:kor="카드포스번호" e:length="4" e:padder="SpaceRight" minOccurs="0" name="crdPosNo" nillable="true" type="string"/>
+            <element e:kor="고객번호1" e:length="9" e:padder="SpaceRight" minOccurs="0" name="custNo1" nillable="true" type="string"/>
+            <element e:kor="고객번호2" e:length="9" e:padder="SpaceRight" minOccurs="0" name="custNo2" nillable="true" type="string"/>
+            <element e:kor="카드번호" e:length="20" e:padder="SpaceRight" minOccurs="0" name="crdNo" nillable="true" type="string"/>
+            <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
+            <element e:kor="적립일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="acmDt" nillable="true" type="string"/>
+            <element e:kor="처리시간" e:length="6" e:padder="SpaceRight" minOccurs="0" name="procTime" nillable="true" type="string"/>
+            <element e:kor="전환금액" e:length="13" e:padder="SpaceRight" minOccurs="0" name="swtcAmt" nillable="true" type="string"/>
+            <element e:kor="점코드2" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd2" nillable="true" type="string"/>
+            <element e:kor="처리일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="procDt" nillable="true" type="string"/>
+            <element e:kor="처리순번" e:length="7" e:padder="SpaceRight" minOccurs="0" name="procSeq" nillable="true" type="string"/>
+            <element e:kor="지급순번" e:length="3" e:padder="SpaceRight" minOccurs="0" name="giveSeq" nillable="true" type="string"/>
+            <element e:kor="등록자사번" e:length="30" e:padder="SpaceRight" minOccurs="0" name="rgstEmno" nillable="true" type="string"/>
+            <element e:kor="등록자ID" e:length="30" e:padder="SpaceRight" minOccurs="0" name="rgstId" nillable="true" type="string"/>
+            <element e:kor="공백값3" e:length="231" e:padder="SpaceRight" minOccurs="0" name="nullVal3" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">

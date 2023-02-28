@@ -47,13 +47,13 @@
     </complexType>
     <complexType name="ARSCISFNDX0190101_OutRes">
         <sequence>
-            <element e:kor="UMS순번" e:length="14" e:padder="ZeroLeft" name="umsSeq" nillable="true" type="long"/>
+            <element e:kor="UMS순번" e:length="14" e:padder="ZeroLeft" minOccurs="0" name="umsSeq" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:ARSCISFNDX0190101_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:ARSCISFNDX0190101_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

@@ -33,40 +33,40 @@
     </complexType>
     <complexType name="CISTADAHHE0070101_OutRes">
         <sequence>
-            <element e:kor="다음검색KEY" e:length="8" e:padder="SpaceRight" name="nxtSrchKey" nillable="true" type="string"/>
-            <element e:kor="결과건수" e:length="5" e:padder="ZeroLeft" name="rstRowcount" nillable="true" type="long"/>
+            <element e:kor="다음검색KEY" e:length="8" e:padder="SpaceRight" minOccurs="0" name="nxtSrchKey" nillable="true" type="string"/>
+            <element e:kor="결과건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="rstRowcount" nillable="true" type="long"/>
             <element e:kor="결과리스트" e:padder="ZeroLeft" maxOccurs="50" minOccurs="50" name="rstList" nillable="true" type="ns:RST_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RST_LIST_TYPE">
         <sequence>
-            <element e:kor="일자" e:length="8" e:padder="SpaceRight" name="dt" nillable="true" type="string"/>
-            <element e:kor="자동처리합계건수" e:length="10" e:padder="SpaceRight" name="autoProcSumCnt" nillable="true" type="string"/>
-            <element e:kor="자동처리비율" e:length="5" e:padder="SpaceRight" name="autoProcRate" nillable="true" type="string"/>
-            <element e:kor="자동처리승인건수" e:length="10" e:padder="SpaceRight" name="autoProcAprvlCnt" nillable="true" type="string"/>
-            <element e:kor="자동처리승인건수비율" e:length="5" e:padder="SpaceRight" name="autoProcAprvlCntRate" nillable="true" type="string"/>
-            <element e:kor="자동처리거절건수" e:length="10" e:padder="SpaceRight" name="autoProcFejCnt" nillable="true" type="string"/>
-            <element e:kor="자동처리거절건수비율" e:length="5" e:padder="SpaceRight" name="autoProcFejCntRate" nillable="true" type="string"/>
-            <element e:kor="자동처리승인금액" e:length="18" e:padder="SpaceRight" name="autoProcAprvlAmt" nillable="true" type="string"/>
-            <element e:kor="자동처리승인금액비율" e:length="5" e:padder="SpaceRight" name="autoProcAprvlAmtRate" nillable="true" type="string"/>
-            <element e:kor="팝업처리합계건수" e:length="10" e:padder="SpaceRight" name="pupProcSumCnt" nillable="true" type="string"/>
-            <element e:kor="팝업처리비율" e:length="5" e:padder="SpaceRight" name="pupProcRate" nillable="true" type="string"/>
-            <element e:kor="팝업처리승인건수" e:length="10" e:padder="SpaceRight" name="pupProcAprvlCnt" nillable="true" type="string"/>
-            <element e:kor="팝업처리승인건수비율" e:length="5" e:padder="SpaceRight" name="pupProcAprvlCntRate" nillable="true" type="string"/>
-            <element e:kor="팝업처리거절건수" e:length="10" e:padder="SpaceRight" name="pupProcFejCnt" nillable="true" type="string"/>
-            <element e:kor="팝업처리거절건수비율" e:length="5" e:padder="SpaceRight" name="pupProcFejCntRate" nillable="true" type="string"/>
-            <element e:kor="팝업처리승인금액" e:length="18" e:padder="SpaceRight" name="pupProcAprvlAmt" nillable="true" type="string"/>
-            <element e:kor="팝업처리승인금액비율" e:length="5" e:padder="SpaceRight" name="pupProcAprvlAmtRate" nillable="true" type="string"/>
-            <element e:kor="전체누적건수" e:length="18" e:padder="SpaceRight" name="totAcmtCnt" nillable="true" type="string"/>
-            <element e:kor="승인건수" e:length="10" e:padder="SpaceRight" name="aprvlCnt" nillable="true" type="string"/>
-            <element e:kor="거절건수" e:length="10" e:padder="SpaceRight" name="fejCnt" nillable="true" type="string"/>
-            <element e:kor="승인금액" e:length="18" e:padder="SpaceRight" name="aprvlAmt" nillable="true" type="string"/>
+            <element e:kor="일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="dt" nillable="true" type="string"/>
+            <element e:kor="자동처리합계건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="autoProcSumCnt" nillable="true" type="string"/>
+            <element e:kor="자동처리비율" e:length="5" e:padder="SpaceRight" minOccurs="0" name="autoProcRate" nillable="true" type="string"/>
+            <element e:kor="자동처리승인건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="autoProcAprvlCnt" nillable="true" type="string"/>
+            <element e:kor="자동처리승인건수비율" e:length="5" e:padder="SpaceRight" minOccurs="0" name="autoProcAprvlCntRate" nillable="true" type="string"/>
+            <element e:kor="자동처리거절건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="autoProcFejCnt" nillable="true" type="string"/>
+            <element e:kor="자동처리거절건수비율" e:length="5" e:padder="SpaceRight" minOccurs="0" name="autoProcFejCntRate" nillable="true" type="string"/>
+            <element e:kor="자동처리승인금액" e:length="18" e:padder="SpaceRight" minOccurs="0" name="autoProcAprvlAmt" nillable="true" type="string"/>
+            <element e:kor="자동처리승인금액비율" e:length="5" e:padder="SpaceRight" minOccurs="0" name="autoProcAprvlAmtRate" nillable="true" type="string"/>
+            <element e:kor="팝업처리합계건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="pupProcSumCnt" nillable="true" type="string"/>
+            <element e:kor="팝업처리비율" e:length="5" e:padder="SpaceRight" minOccurs="0" name="pupProcRate" nillable="true" type="string"/>
+            <element e:kor="팝업처리승인건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="pupProcAprvlCnt" nillable="true" type="string"/>
+            <element e:kor="팝업처리승인건수비율" e:length="5" e:padder="SpaceRight" minOccurs="0" name="pupProcAprvlCntRate" nillable="true" type="string"/>
+            <element e:kor="팝업처리거절건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="pupProcFejCnt" nillable="true" type="string"/>
+            <element e:kor="팝업처리거절건수비율" e:length="5" e:padder="SpaceRight" minOccurs="0" name="pupProcFejCntRate" nillable="true" type="string"/>
+            <element e:kor="팝업처리승인금액" e:length="18" e:padder="SpaceRight" minOccurs="0" name="pupProcAprvlAmt" nillable="true" type="string"/>
+            <element e:kor="팝업처리승인금액비율" e:length="5" e:padder="SpaceRight" minOccurs="0" name="pupProcAprvlAmtRate" nillable="true" type="string"/>
+            <element e:kor="전체누적건수" e:length="18" e:padder="SpaceRight" minOccurs="0" name="totAcmtCnt" nillable="true" type="string"/>
+            <element e:kor="승인건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="aprvlCnt" nillable="true" type="string"/>
+            <element e:kor="거절건수" e:length="10" e:padder="SpaceRight" minOccurs="0" name="fejCnt" nillable="true" type="string"/>
+            <element e:kor="승인금액" e:length="18" e:padder="SpaceRight" minOccurs="0" name="aprvlAmt" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:TADHeaderType"/>
-            <element name="data" type="ns:CISTADAHHE0070101_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:TADHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISTADAHHE0070101_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

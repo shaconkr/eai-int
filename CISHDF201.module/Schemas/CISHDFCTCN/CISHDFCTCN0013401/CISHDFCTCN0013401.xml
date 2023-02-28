@@ -51,14 +51,14 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/> 
       </segment>  
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="1800" length="3"/>  
-        <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="1803" length="16"/>  
-        <field kor="휴대폰번호" name="mphonNo" minOccurs="1" maxOccurs="1" position="1819" length="16"/>  
-        <field kor="생년월일" name="bymd" minOccurs="1" maxOccurs="1" position="1835" length="8"/>  
-        <field kor="카드구분코드" name="crdGbcd" minOccurs="1" maxOccurs="1" position="1843" length="3"/>  
-        <field kor="고객등급코드" name="custGrdCd" minOccurs="1" maxOccurs="1" position="1846" length="2"/>  
-        <field kor="메시지" name="msg" minOccurs="1" maxOccurs="1" position="1848" length="2000"/>  
-        <field kor="예비항목정보" name="prepClasInf" minOccurs="1" maxOccurs="1" position="3848" length="200"/> 
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="1800" length="3"/>  
+        <field kor="카드번호" name="crdNo" minOccurs="0" maxOccurs="1" position="1803" length="16"/>  
+        <field kor="휴대폰번호" name="mphonNo" minOccurs="0" maxOccurs="1" position="1819" length="16"/>  
+        <field kor="생년월일" name="bymd" minOccurs="0" maxOccurs="1" position="1835" length="8"/>  
+        <field kor="카드구분코드" name="crdGbcd" minOccurs="0" maxOccurs="1" position="1843" length="3"/>  
+        <field kor="고객등급코드" name="custGrdCd" minOccurs="0" maxOccurs="1" position="1846" length="2"/>  
+        <field kor="메시지" name="msg" minOccurs="0" maxOccurs="1" position="1848" length="2000"/>  
+        <field kor="예비항목정보" name="prepClasInf" minOccurs="0" maxOccurs="1" position="3848" length="200"/> 
       </segment> 
     </record> 
   </stream>  
@@ -109,14 +109,14 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/>
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="1800" length="3"/>
-        <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="1803" length="16"/>
-        <field kor="휴대폰번호" name="mphonNo" minOccurs="1" maxOccurs="1" position="1819" length="16"/>
-        <field kor="생년월일" name="bymd" minOccurs="1" maxOccurs="1" position="1835" length="8"/>
-        <field kor="카드구분코드" name="crdGbcd" minOccurs="1" maxOccurs="1" position="1843" length="3"/>
-        <field kor="고객등급코드" name="custGrdCd" minOccurs="1" maxOccurs="1" position="1846" length="2"/>
-        <field kor="메시지" name="msg" minOccurs="1" maxOccurs="1" position="1848" length="2000"/>
-        <field kor="예비항목정보" name="prepClasInf" minOccurs="1" maxOccurs="1" position="3848" length="200"/>
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="1800" length="3"/>
+        <field kor="카드번호" name="crdNo" minOccurs="0" maxOccurs="1" position="1803" length="16"/>
+        <field kor="휴대폰번호" name="mphonNo" minOccurs="0" maxOccurs="1" position="1819" length="16"/>
+        <field kor="생년월일" name="bymd" minOccurs="0" maxOccurs="1" position="1835" length="8"/>
+        <field kor="카드구분코드" name="crdGbcd" minOccurs="0" maxOccurs="1" position="1843" length="3"/>
+        <field kor="고객등급코드" name="custGrdCd" minOccurs="0" maxOccurs="1" position="1846" length="2"/>
+        <field kor="메시지" name="msg" minOccurs="0" maxOccurs="1" position="1848" length="2000"/>
+        <field kor="예비항목정보" name="prepClasInf" minOccurs="0" maxOccurs="1" position="3848" length="200"/>
       </segment>
     </record>
   </stream>

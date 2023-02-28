@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,23 +39,23 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="작업처리구분코드" name="wrkProcGbcd" minOccurs="1" maxOccurs="1" position="419" length="2"/>  
-        <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="421" length="9"/>  
-        <field kor="승인주의등록일시" name="aprvlCareRegDtm" minOccurs="1" maxOccurs="1" position="430" length="14"/>  
-        <field kor="승인주의구분코드" name="aprvlCareGbcd" minOccurs="1" maxOccurs="1" position="444" length="4"/>  
-        <field kor="승인코드" name="aprvlCd" minOccurs="1" maxOccurs="1" position="448" length="4"/>  
-        <field kor="승인주의적용일자" name="aprvlCareAplyDt" minOccurs="1" maxOccurs="1" position="452" length="8"/>  
-        <field kor="승인주의종료일자" name="aprvlCareEndDt" minOccurs="1" maxOccurs="1" position="460" length="8"/>  
-        <field kor="승인주의내용" name="aprvlCareCntn" minOccurs="1" maxOccurs="1" position="468" length="100"/>  
-        <field kor="상담점코드" name="cnslStoreCd" minOccurs="1" maxOccurs="1" position="568" length="3"/>  
-        <field kor="상담자ID" name="conpsId" minOccurs="1" maxOccurs="1" position="571" length="8"/>  
-        <field kor="등록ID" name="regId" minOccurs="1" maxOccurs="1" position="579" length="100"/>  
-        <field kor="등록일시" name="regDtm" minOccurs="1" maxOccurs="1" position="679" length="14"/>  
-        <field kor="등록프로그램ID" name="regPrgId" minOccurs="1" maxOccurs="1" position="693" length="100"/>  
-        <field kor="변경ID" name="chgId" minOccurs="1" maxOccurs="1" position="793" length="100"/>  
-        <field kor="변경일시" name="chgDtm" minOccurs="1" maxOccurs="1" position="893" length="14"/>  
-        <field kor="변경프로그램ID" name="chgPrgId" minOccurs="1" maxOccurs="1" position="907" length="100"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="작업처리구분코드" name="wrkProcGbcd" minOccurs="0" maxOccurs="1" position="419" length="2"/>  
+        <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="421" length="9"/>  
+        <field kor="승인주의등록일시" name="aprvlCareRegDtm" minOccurs="0" maxOccurs="1" position="430" length="14"/>  
+        <field kor="승인주의구분코드" name="aprvlCareGbcd" minOccurs="0" maxOccurs="1" position="444" length="4"/>  
+        <field kor="승인코드" name="aprvlCd" minOccurs="0" maxOccurs="1" position="448" length="4"/>  
+        <field kor="승인주의적용일자" name="aprvlCareAplyDt" minOccurs="0" maxOccurs="1" position="452" length="8"/>  
+        <field kor="승인주의종료일자" name="aprvlCareEndDt" minOccurs="0" maxOccurs="1" position="460" length="8"/>  
+        <field kor="승인주의내용" name="aprvlCareCntn" minOccurs="0" maxOccurs="1" position="468" length="100"/>  
+        <field kor="상담점코드" name="cnslStoreCd" minOccurs="0" maxOccurs="1" position="568" length="3"/>  
+        <field kor="상담자ID" name="conpsId" minOccurs="0" maxOccurs="1" position="571" length="8"/>  
+        <field kor="등록ID" name="regId" minOccurs="0" maxOccurs="1" position="579" length="100"/>  
+        <field kor="등록일시" name="regDtm" minOccurs="0" maxOccurs="1" position="679" length="14"/>  
+        <field kor="등록프로그램ID" name="regPrgId" minOccurs="0" maxOccurs="1" position="693" length="100"/>  
+        <field kor="변경ID" name="chgId" minOccurs="0" maxOccurs="1" position="793" length="100"/>  
+        <field kor="변경일시" name="chgDtm" minOccurs="0" maxOccurs="1" position="893" length="14"/>  
+        <field kor="변경프로그램ID" name="chgPrgId" minOccurs="0" maxOccurs="1" position="907" length="100"/> 
       </segment> 
     </record> 
   </stream>  
@@ -64,7 +64,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -94,23 +94,23 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="작업처리구분코드" name="wrkProcGbcd" minOccurs="1" maxOccurs="1" position="419" length="2"/>
-        <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="421" length="9"/>
-        <field kor="승인주의등록일시" name="aprvlCareRegDtm" minOccurs="1" maxOccurs="1" position="430" length="14"/>
-        <field kor="승인주의구분코드" name="aprvlCareGbcd" minOccurs="1" maxOccurs="1" position="444" length="4"/>
-        <field kor="승인코드" name="aprvlCd" minOccurs="1" maxOccurs="1" position="448" length="4"/>
-        <field kor="승인주의적용일자" name="aprvlCareAplyDt" minOccurs="1" maxOccurs="1" position="452" length="8"/>
-        <field kor="승인주의종료일자" name="aprvlCareEndDt" minOccurs="1" maxOccurs="1" position="460" length="8"/>
-        <field kor="승인주의내용" name="aprvlCareCntn" minOccurs="1" maxOccurs="1" position="468" length="100"/>
-        <field kor="상담점코드" name="cnslStoreCd" minOccurs="1" maxOccurs="1" position="568" length="3"/>
-        <field kor="상담자ID" name="conpsId" minOccurs="1" maxOccurs="1" position="571" length="8"/>
-        <field kor="등록ID" name="regId" minOccurs="1" maxOccurs="1" position="579" length="100"/>
-        <field kor="등록일시" name="regDtm" minOccurs="1" maxOccurs="1" position="679" length="14"/>
-        <field kor="등록프로그램ID" name="regPrgId" minOccurs="1" maxOccurs="1" position="693" length="100"/>
-        <field kor="변경ID" name="chgId" minOccurs="1" maxOccurs="1" position="793" length="100"/>
-        <field kor="변경일시" name="chgDtm" minOccurs="1" maxOccurs="1" position="893" length="14"/>
-        <field kor="변경프로그램ID" name="chgPrgId" minOccurs="1" maxOccurs="1" position="907" length="100"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="작업처리구분코드" name="wrkProcGbcd" minOccurs="0" maxOccurs="1" position="419" length="2"/>
+        <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="421" length="9"/>
+        <field kor="승인주의등록일시" name="aprvlCareRegDtm" minOccurs="0" maxOccurs="1" position="430" length="14"/>
+        <field kor="승인주의구분코드" name="aprvlCareGbcd" minOccurs="0" maxOccurs="1" position="444" length="4"/>
+        <field kor="승인코드" name="aprvlCd" minOccurs="0" maxOccurs="1" position="448" length="4"/>
+        <field kor="승인주의적용일자" name="aprvlCareAplyDt" minOccurs="0" maxOccurs="1" position="452" length="8"/>
+        <field kor="승인주의종료일자" name="aprvlCareEndDt" minOccurs="0" maxOccurs="1" position="460" length="8"/>
+        <field kor="승인주의내용" name="aprvlCareCntn" minOccurs="0" maxOccurs="1" position="468" length="100"/>
+        <field kor="상담점코드" name="cnslStoreCd" minOccurs="0" maxOccurs="1" position="568" length="3"/>
+        <field kor="상담자ID" name="conpsId" minOccurs="0" maxOccurs="1" position="571" length="8"/>
+        <field kor="등록ID" name="regId" minOccurs="0" maxOccurs="1" position="579" length="100"/>
+        <field kor="등록일시" name="regDtm" minOccurs="0" maxOccurs="1" position="679" length="14"/>
+        <field kor="등록프로그램ID" name="regPrgId" minOccurs="0" maxOccurs="1" position="693" length="100"/>
+        <field kor="변경ID" name="chgId" minOccurs="0" maxOccurs="1" position="793" length="100"/>
+        <field kor="변경일시" name="chgDtm" minOccurs="0" maxOccurs="1" position="893" length="14"/>
+        <field kor="변경프로그램ID" name="chgPrgId" minOccurs="0" maxOccurs="1" position="907" length="100"/>
       </segment>
     </record>
   </stream>

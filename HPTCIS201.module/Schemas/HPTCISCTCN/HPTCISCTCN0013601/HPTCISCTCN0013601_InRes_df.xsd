@@ -2,19 +2,19 @@
     <element name="root" type="ns:HPTCISCTCN0013601_InRes"/>
     <complexType name="HPTCISCTCN0013601_InRes">
         <sequence>
-            <element e:kor="EAIKEY번호" e:length="20" e:padder="SpaceRight" name="eaiKeyNo" nillable="true" type="string"/>
-            <element e:kor="EAI생성일자" e:length="8" e:padder="SpaceRight" name="eaiCreDt" nillable="true" type="string"/>
-            <element e:kor="카드회원CI값" e:length="88" e:padder="SpaceRight" name="crdMemCiVal" nillable="true" type="string"/>
-            <element e:kor="자사신청여부" e:length="1" e:padder="SpaceRight" name="owcoReqYn" nillable="true" type="string"/>
-            <element e:kor="H포인트신청여부" e:length="1" e:padder="SpaceRight" name="hpntReqYn" nillable="true" type="string"/>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="전자영수증신청여부" e:length="1" e:padder="SpaceRight" name="eltrRcptReqYn" nillable="true" type="string"/>
-            <element e:kor="이력이벤트명" e:length="300" e:padder="SpaceRight" name="hisEvntNm" nillable="true" type="string"/>
-            <element e:kor="본인여부" e:length="1" e:padder="SpaceRight" name="selfYn" nillable="true" type="string"/>
-            <element e:kor="본인고객번호" e:length="9" e:padder="SpaceRight" name="selfCustNo" nillable="true" type="string"/>
-            <element e:kor="본인관계구분코드" e:length="2" e:padder="SpaceRight" name="selfRelGbcd" nillable="true" type="string"/>
-            <element e:kor="이력코드" e:length="5" e:padder="SpaceRight" name="hisCd" nillable="true" type="string"/>
-            <element e:kor="한글명" e:length="100" e:padder="SpaceRight" name="korNm" nillable="true" type="string"/>
+            <element e:kor="EAIKEY번호" e:length="20" e:padder="SpaceRight" minOccurs="0" name="eaiKeyNo" nillable="true" type="string"/>
+            <element e:kor="EAI생성일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="eaiCreDt" nillable="true" type="string"/>
+            <element e:kor="카드회원CI값" e:length="88" e:padder="SpaceRight" minOccurs="0" name="crdMemCiVal" nillable="true" type="string"/>
+            <element e:kor="자사신청여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="owcoReqYn" nillable="true" type="string"/>
+            <element e:kor="H포인트신청여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="hpntReqYn" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="전자영수증신청여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="eltrRcptReqYn" nillable="true" type="string"/>
+            <element e:kor="이력이벤트명" e:length="300" e:padder="SpaceRight" minOccurs="0" name="hisEvntNm" nillable="true" type="string"/>
+            <element e:kor="본인여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="selfYn" nillable="true" type="string"/>
+            <element e:kor="본인고객번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="selfCustNo" nillable="true" type="string"/>
+            <element e:kor="본인관계구분코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="selfRelGbcd" nillable="true" type="string"/>
+            <element e:kor="이력코드" e:length="5" e:padder="SpaceRight" minOccurs="0" name="hisCd" nillable="true" type="string"/>
+            <element e:kor="한글명" e:length="100" e:padder="SpaceRight" minOccurs="0" name="korNm" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

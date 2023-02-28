@@ -47,21 +47,21 @@
     </complexType>
     <complexType name="CISHPTCTCN0013601_InRes">
         <sequence>
-            <element e:kor="동시가입자여부" e:length="1" e:padder="SpaceRight" name="dongSiJnpsYn" nillable="true" type="string"/>
-            <element e:kor="현재일시" e:length="16" e:padder="SpaceRight" name="curDtm" nillable="true" type="string"/>
-            <element e:kor="통합약관1동의여부값" e:length="3" e:padder="SpaceRight" name="untdTcnd1AgrYnVal" nillable="true" type="string"/>
-            <element e:kor="통합약관3동의여부값" e:length="3" e:padder="SpaceRight" name="untdTcnd3AgrYnVal" nillable="true" type="string"/>
-            <element e:kor="통합약관4동의여부값" e:length="3" e:padder="SpaceRight" name="untdTcnd4AgrYnVal" nillable="true" type="string"/>
-            <element e:kor="통합약관6동의여부값" e:length="3" e:padder="SpaceRight" name="untdTcnd6AgrYnVal" nillable="true" type="string"/>
-            <element e:kor="통합약관7동의여부값" e:length="3" e:padder="SpaceRight" name="untdTcnd7AgrYnVal" nillable="true" type="string"/>
-            <element e:kor="통합약관8동의여부값" e:length="3" e:padder="SpaceRight" name="untdTcnd8AgrYnVal" nillable="true" type="string"/>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="동시가입자여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="dongSiJnpsYn" nillable="true" type="string"/>
+            <element e:kor="현재일시" e:length="16" e:padder="SpaceRight" minOccurs="0" name="curDtm" nillable="true" type="string"/>
+            <element e:kor="통합약관1동의여부값" e:length="3" e:padder="SpaceRight" minOccurs="0" name="untdTcnd1AgrYnVal" nillable="true" type="string"/>
+            <element e:kor="통합약관3동의여부값" e:length="3" e:padder="SpaceRight" minOccurs="0" name="untdTcnd3AgrYnVal" nillable="true" type="string"/>
+            <element e:kor="통합약관4동의여부값" e:length="3" e:padder="SpaceRight" minOccurs="0" name="untdTcnd4AgrYnVal" nillable="true" type="string"/>
+            <element e:kor="통합약관6동의여부값" e:length="3" e:padder="SpaceRight" minOccurs="0" name="untdTcnd6AgrYnVal" nillable="true" type="string"/>
+            <element e:kor="통합약관7동의여부값" e:length="3" e:padder="SpaceRight" minOccurs="0" name="untdTcnd7AgrYnVal" nillable="true" type="string"/>
+            <element e:kor="통합약관8동의여부값" e:length="3" e:padder="SpaceRight" minOccurs="0" name="untdTcnd8AgrYnVal" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:CISHPTCTCN0013601_InRes"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISHPTCTCN0013601_InRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

@@ -47,32 +47,32 @@
     </complexType>
     <complexType name="ARSCISFNDX0020101_OutRes">
         <sequence>
-            <element e:kor="조회결과_배열건수" e:length="5" e:padder="ZeroLeft" name="rsltRowcount" nillable="true" type="long"/>
-            <element e:kor="조회결과_배열" e:padder="ZeroLeft" maxOccurs="unbounded" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
+            <element e:kor="조회결과_배열건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="rsltRowcount" nillable="true" type="long"/>
+            <element e:kor="조회결과_배열" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RSLT_LIST_TYPE">
         <sequence>
-            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" name="sendDt" nillable="true" type="string"/>
-            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" name="sendTime" nillable="true" type="string"/>
-            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="이용구분코드" e:length="1" e:padder="SpaceRight" name="utlzGbcd" nillable="true" type="string"/>
-            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" name="chrDt" nillable="true" type="string"/>
-            <element e:kor="결제건수" e:length="3" e:padder="ZeroLeft" name="stlmCnt" nillable="true" type="long"/>
-            <element e:kor="총결제금액" e:length="18" e:padder="ZeroLeft" name="totStlmAmt" nillable="true" type="long"/>
-            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" name="saleDt" nillable="true" type="string"/>
-            <element e:kor="상품명" e:length="60" e:padder="SpaceRight" name="itemNm" nillable="true" type="string"/>
-            <element e:kor="매출금액" e:length="18" e:padder="ZeroLeft" name="saleAmt" nillable="true" type="long"/>
-            <element e:kor="카드할부개월수" e:length="3" e:padder="ZeroLeft" name="crdInsmMths" nillable="true" type="long"/>
-            <element e:kor="청구회차" e:length="7" e:padder="ZeroLeft" name="reqTmnm" nillable="true" type="long"/>
-            <element e:kor="당월청구금액" e:length="18" e:padder="ZeroLeft" name="thmnReqAmt" nillable="true" type="long"/>
+            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="sendDt" nillable="true" type="string"/>
+            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" minOccurs="0" name="sendTime" nillable="true" type="string"/>
+            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="respCd" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="이용구분코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="utlzGbcd" nillable="true" type="string"/>
+            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="chrDt" nillable="true" type="string"/>
+            <element e:kor="결제건수" e:length="3" e:padder="ZeroLeft" minOccurs="0" name="stlmCnt" nillable="true" type="long"/>
+            <element e:kor="총결제금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="totStlmAmt" nillable="true" type="long"/>
+            <element e:kor="매출일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="saleDt" nillable="true" type="string"/>
+            <element e:kor="상품명" e:length="60" e:padder="SpaceRight" minOccurs="0" name="itemNm" nillable="true" type="string"/>
+            <element e:kor="매출금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="saleAmt" nillable="true" type="long"/>
+            <element e:kor="카드할부개월수" e:length="3" e:padder="ZeroLeft" minOccurs="0" name="crdInsmMths" nillable="true" type="long"/>
+            <element e:kor="청구회차" e:length="7" e:padder="ZeroLeft" minOccurs="0" name="reqTmnm" nillable="true" type="long"/>
+            <element e:kor="당월청구금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="thmnReqAmt" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:ARSCISFNDX0020101_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:ARSCISFNDX0020101_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

@@ -51,23 +51,23 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/> 
       </segment>  
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="거래코드" name="trdCd" minOccurs="1" maxOccurs="1" position="1800" length="4"/>  
-        <field kor="거래구분코드" name="trdGbcd" minOccurs="1" maxOccurs="1" position="1804" length="2"/>  
-        <field kor="공백값" name="nullVal" minOccurs="1" maxOccurs="1" position="1806" length="1"/>  
-        <field kor="전문길이" name="tgrmLen" minOccurs="1" maxOccurs="1" position="1807" length="6"/>  
-        <field kor="응답코드" name="respCd" minOccurs="1" maxOccurs="1" position="1813" length="7"/>  
-        <field kor="공백값2" name="nullVal2" minOccurs="1" maxOccurs="1" position="1820" length="100"/>  
-        <field kor="처리일자" name="procDt" minOccurs="1" maxOccurs="1" position="1920" length="8"/>  
-        <field kor="처리시간" name="procTime" minOccurs="1" maxOccurs="1" position="1928" length="6"/>  
-        <field kor="사용반납구분코드" name="useGvbkGbcd" minOccurs="1" maxOccurs="1" position="1934" length="4"/>  
-        <field kor="공백값3" name="nullVal3" minOccurs="1" maxOccurs="1" position="1938" length="15"/>  
-        <field kor="공백값4" name="nullVal4" minOccurs="1" maxOccurs="1" position="1953" length="3"/>  
-        <field kor="지급번호" name="giveNo" minOccurs="1" maxOccurs="1" position="1956" length="18"/>  
-        <field kor="지급순번" name="giveSeq" minOccurs="1" maxOccurs="1" position="1974" length="3"/>  
-        <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="1977" length="3"/>  
-        <field kor="전환금액" name="swtcAmt" minOccurs="1" maxOccurs="1" position="1980" length="13"/>  
-        <field kor="참여사분담비율" name="ptcoDvlbRate" minOccurs="1" maxOccurs="1" position="1993" length="6"/>  
-        <field kor="공백값5" name="nullVal5" minOccurs="1" maxOccurs="1" position="1999" length="313"/> 
+        <field kor="거래코드" name="trdCd" minOccurs="0" maxOccurs="1" position="1800" length="4"/>  
+        <field kor="거래구분코드" name="trdGbcd" minOccurs="0" maxOccurs="1" position="1804" length="2"/>  
+        <field kor="공백값" name="nullVal" minOccurs="0" maxOccurs="1" position="1806" length="1"/>  
+        <field kor="전문길이" name="tgrmLen" minOccurs="0" maxOccurs="1" position="1807" length="6"/>  
+        <field kor="응답코드" name="respCd" minOccurs="0" maxOccurs="1" position="1813" length="7"/>  
+        <field kor="공백값2" name="nullVal2" minOccurs="0" maxOccurs="1" position="1820" length="100"/>  
+        <field kor="처리일자" name="procDt" minOccurs="0" maxOccurs="1" position="1920" length="8"/>  
+        <field kor="처리시간" name="procTime" minOccurs="0" maxOccurs="1" position="1928" length="6"/>  
+        <field kor="사용반납구분코드" name="useGvbkGbcd" minOccurs="0" maxOccurs="1" position="1934" length="4"/>  
+        <field kor="공백값3" name="nullVal3" minOccurs="0" maxOccurs="1" position="1938" length="15"/>  
+        <field kor="공백값4" name="nullVal4" minOccurs="0" maxOccurs="1" position="1953" length="3"/>  
+        <field kor="지급번호" name="giveNo" minOccurs="0" maxOccurs="1" position="1956" length="18"/>  
+        <field kor="지급순번" name="giveSeq" minOccurs="0" maxOccurs="1" position="1974" length="3"/>  
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="1977" length="3"/>  
+        <field kor="전환금액" name="swtcAmt" minOccurs="0" maxOccurs="1" position="1980" length="13"/>  
+        <field kor="참여사분담비율" name="ptcoDvlbRate" minOccurs="0" maxOccurs="1" position="1993" length="6"/>  
+        <field kor="공백값5" name="nullVal5" minOccurs="0" maxOccurs="1" position="1999" length="313"/> 
       </segment> 
     </record> 
   </stream>  
@@ -118,23 +118,23 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/>
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="거래코드" name="trdCd" minOccurs="1" maxOccurs="1" position="1800" length="4"/>
-        <field kor="거래구분코드" name="trdGbcd" minOccurs="1" maxOccurs="1" position="1804" length="2"/>
-        <field kor="공백값" name="nullVal" minOccurs="1" maxOccurs="1" position="1806" length="1"/>
-        <field kor="전문길이" name="tgrmLen" minOccurs="1" maxOccurs="1" position="1807" length="6"/>
-        <field kor="응답코드" name="respCd" minOccurs="1" maxOccurs="1" position="1813" length="7"/>
-        <field kor="공백값2" name="nullVal2" minOccurs="1" maxOccurs="1" position="1820" length="100"/>
-        <field kor="처리일자" name="procDt" minOccurs="1" maxOccurs="1" position="1920" length="8"/>
-        <field kor="처리시간" name="procTime" minOccurs="1" maxOccurs="1" position="1928" length="6"/>
-        <field kor="사용반납구분코드" name="useGvbkGbcd" minOccurs="1" maxOccurs="1" position="1934" length="4"/>
-        <field kor="공백값3" name="nullVal3" minOccurs="1" maxOccurs="1" position="1938" length="15"/>
-        <field kor="공백값4" name="nullVal4" minOccurs="1" maxOccurs="1" position="1953" length="3"/>
-        <field kor="지급번호" name="giveNo" minOccurs="1" maxOccurs="1" position="1956" length="18"/>
-        <field kor="지급순번" name="giveSeq" minOccurs="1" maxOccurs="1" position="1974" length="3"/>
-        <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="1977" length="3"/>
-        <field kor="전환금액" name="swtcAmt" minOccurs="1" maxOccurs="1" position="1980" length="13"/>
-        <field kor="참여사분담비율" name="ptcoDvlbRate" minOccurs="1" maxOccurs="1" position="1993" length="6"/>
-        <field kor="공백값5" name="nullVal5" minOccurs="1" maxOccurs="1" position="1999" length="313"/>
+        <field kor="거래코드" name="trdCd" minOccurs="0" maxOccurs="1" position="1800" length="4"/>
+        <field kor="거래구분코드" name="trdGbcd" minOccurs="0" maxOccurs="1" position="1804" length="2"/>
+        <field kor="공백값" name="nullVal" minOccurs="0" maxOccurs="1" position="1806" length="1"/>
+        <field kor="전문길이" name="tgrmLen" minOccurs="0" maxOccurs="1" position="1807" length="6"/>
+        <field kor="응답코드" name="respCd" minOccurs="0" maxOccurs="1" position="1813" length="7"/>
+        <field kor="공백값2" name="nullVal2" minOccurs="0" maxOccurs="1" position="1820" length="100"/>
+        <field kor="처리일자" name="procDt" minOccurs="0" maxOccurs="1" position="1920" length="8"/>
+        <field kor="처리시간" name="procTime" minOccurs="0" maxOccurs="1" position="1928" length="6"/>
+        <field kor="사용반납구분코드" name="useGvbkGbcd" minOccurs="0" maxOccurs="1" position="1934" length="4"/>
+        <field kor="공백값3" name="nullVal3" minOccurs="0" maxOccurs="1" position="1938" length="15"/>
+        <field kor="공백값4" name="nullVal4" minOccurs="0" maxOccurs="1" position="1953" length="3"/>
+        <field kor="지급번호" name="giveNo" minOccurs="0" maxOccurs="1" position="1956" length="18"/>
+        <field kor="지급순번" name="giveSeq" minOccurs="0" maxOccurs="1" position="1974" length="3"/>
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="1977" length="3"/>
+        <field kor="전환금액" name="swtcAmt" minOccurs="0" maxOccurs="1" position="1980" length="13"/>
+        <field kor="참여사분담비율" name="ptcoDvlbRate" minOccurs="0" maxOccurs="1" position="1993" length="6"/>
+        <field kor="공백값5" name="nullVal5" minOccurs="0" maxOccurs="1" position="1999" length="313"/>
       </segment>
     </record>
   </stream>

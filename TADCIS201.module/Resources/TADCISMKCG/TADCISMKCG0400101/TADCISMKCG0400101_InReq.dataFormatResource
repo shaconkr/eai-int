@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TADCISMKCG0400101="http://schema.hcis.com/xsd/TADCISMKCG0400101_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="TADCISMKCG/TADCISMKCG0400101.TADCISMKCG0400101_InReq" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/TADCISMKCG0400101_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/TADCISMKCG0400101_InReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="TADCISMKCG0400101:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="공통부" type="TADHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="데이터부" type="TADCISMKCG0400101_InReq" name="data" start="0" end="0"/>
+  </jndi:configuration>
+</jndi:namedResource>

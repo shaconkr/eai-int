@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,26 +39,26 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="거래코드" name="trdCd" minOccurs="1" maxOccurs="1" position="419" length="4"/>  
-        <field kor="공백값" name="nullVal" minOccurs="1" maxOccurs="1" position="423" length="8"/>  
-        <field kor="전문종별코드" name="tgrmSubCCd" minOccurs="1" maxOccurs="1" position="431" length="2"/>  
-        <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="433" length="3"/>  
-        <field kor="카드포스번호" name="crdPosNo" minOccurs="1" maxOccurs="1" position="436" length="4"/>  
-        <field kor="거래번호" name="trdNo" minOccurs="1" maxOccurs="1" position="440" length="4"/>  
-        <field kor="전송일시" name="sendDtm" minOccurs="1" maxOccurs="1" position="444" length="10"/>  
-        <field kor="VANID" name="vanId" minOccurs="1" maxOccurs="1" position="454" length="2"/>  
-        <field kor="송수신상태코드" name="tnrStatCd" minOccurs="1" maxOccurs="1" position="456" length="1"/>  
-        <field kor="전문길이" name="tgrmLen" minOccurs="1" maxOccurs="1" position="457" length="3"/>  
-        <field kor="전문코드" name="tgrmCd" minOccurs="1" maxOccurs="1" position="460" length="4"/>  
-        <field kor="처리일시" name="procDtm" minOccurs="1" maxOccurs="1" position="464" length="14"/>  
-        <field kor="조회구분" name="qryGb" minOccurs="1" maxOccurs="1" position="478" length="1"/>  
-        <field kor="카드번호암호화여부" name="crdNoEcrytYn" minOccurs="1" maxOccurs="1" position="479" length="1"/>  
-        <field kor="입력값" name="insrVal" minOccurs="1" maxOccurs="1" position="480" length="20" justify="right" padding="0"/>  
-        <field kor="응답코드" name="respCd" minOccurs="1" maxOccurs="1" position="500" length="4"/>  
-        <field kor="공백값1" name="nullVal1" minOccurs="1" maxOccurs="1" position="504" length="26"/>  
-        <field kor="잔액" name="blnc" minOccurs="1" maxOccurs="1" position="530" length="10" justify="right" padding="0"/>  
-        <field kor="공백값2" name="nullVal2" minOccurs="1" maxOccurs="1" position="540" length="741"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="거래코드" name="trdCd" minOccurs="0" maxOccurs="1" position="419" length="4"/>  
+        <field kor="공백값" name="nullVal" minOccurs="0" maxOccurs="1" position="423" length="8"/>  
+        <field kor="전문종별코드" name="tgrmSubCCd" minOccurs="0" maxOccurs="1" position="431" length="2"/>  
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="433" length="3"/>  
+        <field kor="카드포스번호" name="crdPosNo" minOccurs="0" maxOccurs="1" position="436" length="4"/>  
+        <field kor="거래번호" name="trdNo" minOccurs="0" maxOccurs="1" position="440" length="4"/>  
+        <field kor="전송일시" name="sendDtm" minOccurs="0" maxOccurs="1" position="444" length="10"/>  
+        <field kor="VANID" name="vanId" minOccurs="0" maxOccurs="1" position="454" length="2"/>  
+        <field kor="송수신상태코드" name="tnrStatCd" minOccurs="0" maxOccurs="1" position="456" length="1"/>  
+        <field kor="전문길이" name="tgrmLen" minOccurs="0" maxOccurs="1" position="457" length="3"/>  
+        <field kor="전문코드" name="tgrmCd" minOccurs="0" maxOccurs="1" position="460" length="4"/>  
+        <field kor="처리일시" name="procDtm" minOccurs="0" maxOccurs="1" position="464" length="14"/>  
+        <field kor="조회구분" name="qryGb" minOccurs="0" maxOccurs="1" position="478" length="1"/>  
+        <field kor="카드번호암호화여부" name="crdNoEcrytYn" minOccurs="0" maxOccurs="1" position="479" length="1"/>  
+        <field kor="입력값" name="insrVal" minOccurs="0" maxOccurs="1" position="480" length="20" justify="right" padding="0"/>  
+        <field kor="응답코드" name="respCd" minOccurs="0" maxOccurs="1" position="500" length="4"/>  
+        <field kor="공백값1" name="nullVal1" minOccurs="0" maxOccurs="1" position="504" length="26"/>  
+        <field kor="잔액" name="blnc" minOccurs="0" maxOccurs="1" position="530" length="10" justify="right" padding="0"/>  
+        <field kor="공백값2" name="nullVal2" minOccurs="0" maxOccurs="1" position="540" length="741"/> 
       </segment> 
     </record> 
   </stream>  
@@ -67,7 +67,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -97,26 +97,26 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="거래코드" name="trdCd" minOccurs="1" maxOccurs="1" position="419" length="4"/>
-        <field kor="공백값" name="nullVal" minOccurs="1" maxOccurs="1" position="423" length="8"/>
-        <field kor="전문종별코드" name="tgrmSubCCd" minOccurs="1" maxOccurs="1" position="431" length="2"/>
-        <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="433" length="3"/>
-        <field kor="카드포스번호" name="crdPosNo" minOccurs="1" maxOccurs="1" position="436" length="4"/>
-        <field kor="거래번호" name="trdNo" minOccurs="1" maxOccurs="1" position="440" length="4"/>
-        <field kor="전송일시" name="sendDtm" minOccurs="1" maxOccurs="1" position="444" length="10"/>
-        <field kor="VANID" name="vanId" minOccurs="1" maxOccurs="1" position="454" length="2"/>
-        <field kor="송수신상태코드" name="tnrStatCd" minOccurs="1" maxOccurs="1" position="456" length="1"/>
-        <field kor="전문길이" name="tgrmLen" minOccurs="1" maxOccurs="1" position="457" length="3"/>
-        <field kor="전문코드" name="tgrmCd" minOccurs="1" maxOccurs="1" position="460" length="4"/>
-        <field kor="처리일시" name="procDtm" minOccurs="1" maxOccurs="1" position="464" length="14"/>
-        <field kor="조회구분" name="qryGb" minOccurs="1" maxOccurs="1" position="478" length="1"/>
-        <field kor="카드번호암호화여부" name="crdNoEcrytYn" minOccurs="1" maxOccurs="1" position="479" length="1"/>
-        <field kor="입력값" name="insrVal" minOccurs="1" maxOccurs="1" position="480" length="20" justify="right" padding="0"/>
-        <field kor="응답코드" name="respCd" minOccurs="1" maxOccurs="1" position="500" length="4"/>
-        <field kor="공백값1" name="nullVal1" minOccurs="1" maxOccurs="1" position="504" length="26"/>
-        <field kor="잔액" name="blnc" minOccurs="1" maxOccurs="1" position="530" length="10" justify="right" padding="0"/>
-        <field kor="공백값2" name="nullVal2" minOccurs="1" maxOccurs="1" position="540" length="741"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="거래코드" name="trdCd" minOccurs="0" maxOccurs="1" position="419" length="4"/>
+        <field kor="공백값" name="nullVal" minOccurs="0" maxOccurs="1" position="423" length="8"/>
+        <field kor="전문종별코드" name="tgrmSubCCd" minOccurs="0" maxOccurs="1" position="431" length="2"/>
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="433" length="3"/>
+        <field kor="카드포스번호" name="crdPosNo" minOccurs="0" maxOccurs="1" position="436" length="4"/>
+        <field kor="거래번호" name="trdNo" minOccurs="0" maxOccurs="1" position="440" length="4"/>
+        <field kor="전송일시" name="sendDtm" minOccurs="0" maxOccurs="1" position="444" length="10"/>
+        <field kor="VANID" name="vanId" minOccurs="0" maxOccurs="1" position="454" length="2"/>
+        <field kor="송수신상태코드" name="tnrStatCd" minOccurs="0" maxOccurs="1" position="456" length="1"/>
+        <field kor="전문길이" name="tgrmLen" minOccurs="0" maxOccurs="1" position="457" length="3"/>
+        <field kor="전문코드" name="tgrmCd" minOccurs="0" maxOccurs="1" position="460" length="4"/>
+        <field kor="처리일시" name="procDtm" minOccurs="0" maxOccurs="1" position="464" length="14"/>
+        <field kor="조회구분" name="qryGb" minOccurs="0" maxOccurs="1" position="478" length="1"/>
+        <field kor="카드번호암호화여부" name="crdNoEcrytYn" minOccurs="0" maxOccurs="1" position="479" length="1"/>
+        <field kor="입력값" name="insrVal" minOccurs="0" maxOccurs="1" position="480" length="20" justify="right" padding="0"/>
+        <field kor="응답코드" name="respCd" minOccurs="0" maxOccurs="1" position="500" length="4"/>
+        <field kor="공백값1" name="nullVal1" minOccurs="0" maxOccurs="1" position="504" length="26"/>
+        <field kor="잔액" name="blnc" minOccurs="0" maxOccurs="1" position="530" length="10" justify="right" padding="0"/>
+        <field kor="공백값2" name="nullVal2" minOccurs="0" maxOccurs="1" position="540" length="741"/>
       </segment>
     </record>
   </stream>

@@ -2,10 +2,10 @@
     <element name="root" type="ns:ARSCISFNDX0040101_InRes"/>
     <complexType name="ARSCISFNDX0040101_InRes">
         <sequence>
-            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" name="sendDt" nillable="true" type="string"/>
-            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" name="sendTime" nillable="true" type="string"/>
-            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="sendDt" nillable="true" type="string"/>
+            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" minOccurs="0" name="sendTime" nillable="true" type="string"/>
+            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="respCd" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

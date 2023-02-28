@@ -2,10 +2,10 @@
     <element name="root" type="ns:CMIS_LIST_TYPE"/>
     <complexType name="CMIS_LIST_TYPE">
         <sequence>
-            <element e:kor="청구회차" e:length="2" e:padder="ZeroLeft" name="reqTmnm" nillable="true" type="long"/>
-            <element e:kor="청구원금금액" e:length="19" e:padder="ZeroLeft" name="reqPrncAmt" nillable="true" type="long"/>
-            <element e:kor="수수료금액" e:length="13" e:padder="ZeroLeft" name="cmisAmt" nillable="true" type="long"/>
-            <element e:kor="월청구금액" e:length="17" e:padder="ZeroLeft" name="mmChrAmt" nillable="true" type="decimal"/>
+            <element e:kor="청구회차" e:length="2" e:padder="ZeroLeft" minOccurs="0" name="reqTmnm" nillable="true" type="long"/>
+            <element e:kor="청구원금금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqPrncAmt" nillable="true" type="long"/>
+            <element e:kor="수수료금액" e:length="13" e:padder="ZeroLeft" minOccurs="0" name="cmisAmt" nillable="true" type="long"/>
+            <element e:kor="월청구금액" e:length="17" e:padder="ZeroLeft" minOccurs="0" name="mmChrAmt" nillable="true" type="decimal"/>
         </sequence>
     </complexType>
 </schema>

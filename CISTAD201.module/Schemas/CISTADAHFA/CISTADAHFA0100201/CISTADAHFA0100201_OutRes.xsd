@@ -36,8 +36,8 @@
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:TADHeaderType"/>
-            <element name="data" type="ns:CISTADAHFA0100201_OutRes"/>
+            <element e:kor="공통부" name="header" type="ns:TADHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISTADAHFA0100201_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

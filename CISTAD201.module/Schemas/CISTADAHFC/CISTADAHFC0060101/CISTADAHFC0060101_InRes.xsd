@@ -47,29 +47,29 @@
     </complexType>
     <complexType name="CISTADAHFC0060101_InRes">
         <sequence>
-            <element e:kor="결과그룹" e:padder="ZeroLeft" name="rstGroup" nillable="true" type="ns:RST_GROUP_TYPE"/>
+            <element e:kor="결과그룹" e:padder="ZeroLeft" minOccurs="0" name="rstGroup" nillable="true" type="ns:RST_GROUP_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RST_GROUP_TYPE">
         <sequence>
-            <element e:kor="총한도금액" e:length="18" e:padder="ZeroLeft" name="totBndsAmt" nillable="true" type="long"/>
-            <element e:kor="총사용금액" e:length="18" e:padder="ZeroLeft" name="totUseAmt" nillable="true" type="long"/>
-            <element e:kor="잔여한도금액" e:length="18" e:padder="ZeroLeft" name="rmndBndsAmt" nillable="true" type="long"/>
-            <element e:kor="임시한도금액" e:length="18" e:padder="ZeroLeft" name="tmpBndsAmt" nillable="true" type="long"/>
-            <element e:kor="특별한도금액" e:length="18" e:padder="ZeroLeft" name="speclBndsAmt" nillable="true" type="long"/>
-            <element e:kor="임시한도적용일자" e:length="8" e:padder="SpaceRight" name="tmpBndsAplyDt" nillable="true" type="string"/>
-            <element e:kor="임시한도종료일자" e:length="8" e:padder="SpaceRight" name="tmpBndsEndDt" nillable="true" type="string"/>
-            <element e:kor="특별한도적용일자" e:length="8" e:padder="SpaceRight" name="speclBndsAplyDt" nillable="true" type="string"/>
-            <element e:kor="특별한도종료일자" e:length="8" e:padder="SpaceRight" name="speclBndsEndDt" nillable="true" type="string"/>
-            <element e:kor="특별한도잔액" e:length="18" e:padder="ZeroLeft" name="speclBndsBlnc" nillable="true" type="long"/>
-            <element e:kor="승인금액" e:length="18" e:padder="ZeroLeft" name="aprvlAmt" nillable="true" type="long"/>
-            <element e:kor="입금금액" e:length="18" e:padder="ZeroLeft" name="iamtAmt" nillable="true" type="long"/>
+            <element e:kor="총한도금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="totBndsAmt" nillable="true" type="long"/>
+            <element e:kor="총사용금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="totUseAmt" nillable="true" type="long"/>
+            <element e:kor="잔여한도금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="rmndBndsAmt" nillable="true" type="long"/>
+            <element e:kor="임시한도금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="tmpBndsAmt" nillable="true" type="long"/>
+            <element e:kor="특별한도금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="speclBndsAmt" nillable="true" type="long"/>
+            <element e:kor="임시한도적용일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="tmpBndsAplyDt" nillable="true" type="string"/>
+            <element e:kor="임시한도종료일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="tmpBndsEndDt" nillable="true" type="string"/>
+            <element e:kor="특별한도적용일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="speclBndsAplyDt" nillable="true" type="string"/>
+            <element e:kor="특별한도종료일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="speclBndsEndDt" nillable="true" type="string"/>
+            <element e:kor="특별한도잔액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="speclBndsBlnc" nillable="true" type="long"/>
+            <element e:kor="승인금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="aprvlAmt" nillable="true" type="long"/>
+            <element e:kor="입금금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="iamtAmt" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:CISHeaderType"/>
-            <element name="data" type="ns:CISTADAHFC0060101_InRes"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:CISTADAHFC0060101_InRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

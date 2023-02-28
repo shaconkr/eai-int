@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="ARS_InReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -50,11 +50,11 @@
         </segment>  
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="1800" length="9"/>  
-        <field kor="사용자회원번호" name="userMemNo" minOccurs="1" maxOccurs="1" position="1809" length="12"/>  
-        <field kor="청구일자" name="chrDt" minOccurs="1" maxOccurs="1" position="1821" length="8"/>  
-        <field kor="전체여부" name="totYn" minOccurs="1" maxOccurs="1" position="1829" length="1"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="1800" length="9"/>  
+        <field kor="사용자회원번호" name="userMemNo" minOccurs="0" maxOccurs="1" position="1809" length="12"/>  
+        <field kor="청구일자" name="chrDt" minOccurs="0" maxOccurs="1" position="1821" length="8"/>  
+        <field kor="전체여부" name="totYn" minOccurs="0" maxOccurs="1" position="1829" length="1"/> 
       </segment> 
     </record> 
   </stream>  
@@ -63,7 +63,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="ARS_InRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -104,112 +104,112 @@
         </segment>
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="청구서_배열건수" name="billpostRowcount" minOccurs="1" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="billpostList" kor="청구서_배열" minOccurs="1" maxOccurs="9223372036854775807" collection="list" class="map">
-          <field kor="전송일자" name="sendDt" minOccurs="1" maxOccurs="1" position="1805" length="8"/>
-          <field kor="전송시간" name="sendTime" minOccurs="1" maxOccurs="1" position="1813" length="6"/>
-          <field kor="응답코드" name="respCd" minOccurs="1" maxOccurs="1" position="1819" length="4"/>
-          <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="1823" length="9"/>
-          <field kor="카드번호" name="crdNo" minOccurs="1" maxOccurs="1" position="1832" length="16"/>
-          <field kor="고객명" name="custNm" minOccurs="1" maxOccurs="1" position="1848" length="40"/>
-          <field kor="청구일자" name="chrDt" minOccurs="1" maxOccurs="1" position="1888" length="8"/>
-          <field kor="매출시작일자" name="saleStrtDt" minOccurs="1" maxOccurs="1" position="1896" length="8"/>
-          <field kor="매출종료일자" name="saleEndDt" minOccurs="1" maxOccurs="1" position="1904" length="8"/>
-          <field kor="결제방법코드" name="stlmMthdCd" minOccurs="1" maxOccurs="1" position="1912" length="1"/>
-          <field kor="결제은행코드" name="stlmBankCd" minOccurs="1" maxOccurs="1" position="1913" length="10"/>
-          <field kor="결제계좌번호" name="stlmAcno" minOccurs="1" maxOccurs="1" position="1923" length="20"/>
-          <field kor="최종입금일자" name="lastIamtDt" minOccurs="1" maxOccurs="1" position="1943" length="8"/>
-          <field kor="실결제일자" name="realStlmDt" minOccurs="1" maxOccurs="1" position="1951" length="8"/>
-          <field kor="이자기산일자" name="intrRcknDt" minOccurs="1" maxOccurs="1" position="1959" length="8"/>
-          <field kor="적용이자율" name="aplyIntrRt" minOccurs="1" maxOccurs="1" position="1967" length="9" justify="right" padding="0"/>
-          <field kor="통합한도금액" name="untdBndsAmt" minOccurs="1" maxOccurs="1" position="1976" length="19" justify="right" padding="0"/>
-          <field kor="마일리지" name="mlg" minOccurs="1" maxOccurs="1" position="1995" length="20" justify="right" padding="0"/>
-          <field kor="마일리지산정기준일자" name="mlgEstmBsicDt" minOccurs="1" maxOccurs="1" position="2015" length="8"/>
-          <field kor="결제일" name="stlmDay" minOccurs="1" maxOccurs="1" position="2023" length="2"/>
-          <field kor="연체원금금액" name="oduePrncAmt" minOccurs="1" maxOccurs="1" position="2025" length="19" justify="right" padding="0"/>
-          <field kor="연체수수료금액" name="odueCmisAmt" minOccurs="1" maxOccurs="1" position="2044" length="19" justify="right" padding="0"/>
-          <field kor="연체이자금액" name="odueIntrAmt" minOccurs="1" maxOccurs="1" position="2063" length="1" justify="right" padding="0"/>
-          <field kor="연체총합계금액" name="odueTotSumAmt" minOccurs="1" maxOccurs="1" position="2064" length="19" justify="right" padding="0"/>
-          <field kor="당월원금금액" name="thmnPrncAmt" minOccurs="1" maxOccurs="1" position="2083" length="19" justify="right" padding="0"/>
-          <field kor="당월수수료금액" name="thmnCmisAmt" minOccurs="1" maxOccurs="1" position="2102" length="19" justify="right" padding="0"/>
-          <field kor="당월청구합계금액" name="thmnReqSumAmt" minOccurs="1" maxOccurs="1" position="2121" length="19" justify="right" padding="0"/>
-          <field kor="초과납부금액" name="overPymAmt" minOccurs="1" maxOccurs="1" position="2140" length="19" justify="right" padding="0"/>
-          <field kor="납부합계금액" name="pymSumAmt" minOccurs="1" maxOccurs="1" position="2159" length="19" justify="right" padding="0"/>
-          <field kor="총건수" name="totCnt" minOccurs="1" maxOccurs="1" position="2178" length="1" justify="right" padding="0"/>
-          <field kor="매출일자" name="saleDt" minOccurs="1" maxOccurs="1" position="2179" length="8"/>
-          <field kor="상품명" name="itemNm" minOccurs="1" maxOccurs="1" position="2187" length="200"/>
-          <field kor="관계구분코드명" name="relGbcdNm" minOccurs="1" maxOccurs="1" position="2387" length="100"/>
-          <field kor="가맹점명" name="frcsNm" minOccurs="1" maxOccurs="1" position="2487" length="100"/>
-          <field kor="카드할부개월수" name="crdInsmMths" minOccurs="1" maxOccurs="1" position="2587" length="4" justify="right" padding="0"/>
-          <field kor="매출금액" name="saleAmt" minOccurs="1" maxOccurs="1" position="2591" length="1" justify="right" padding="0"/>
-          <field kor="전월미결제금액" name="lmmNpymAmt" minOccurs="1" maxOccurs="1" position="2592" length="19" justify="right" padding="0"/>
-          <field kor="청구회차" name="reqTmnm" minOccurs="1" maxOccurs="1" position="2611" length="8" justify="right" padding="0"/>
-          <field kor="당월청구원금금액" name="thmnReqPrncAmt" minOccurs="1" maxOccurs="1" position="2619" length="19" justify="right" padding="0"/>
-          <field kor="당월청구수수료금액" name="thmnReqCmisAmt" minOccurs="1" maxOccurs="1" position="2638" length="19" justify="right" padding="0"/>
-          <field kor="잔여개월수" name="rmndMths" minOccurs="1" maxOccurs="1" position="2657" length="8" justify="right" padding="0"/>
-          <field kor="미도래금액" name="nadvAmt" minOccurs="1" maxOccurs="1" position="2665" length="19" justify="right" padding="0"/>
-          <field kor="결제일자" name="stlmDt" minOccurs="1" maxOccurs="1" position="2684" length="8"/>
-          <field kor="사용자명" name="userNm" minOccurs="1" maxOccurs="1" position="2692" length="20"/>
-          <field kor="사용카드뒤4자리번호" name="useCrdBck4PtnNo" minOccurs="1" maxOccurs="1" position="2712" length="4"/>
-          <field kor="즉시입금금액" name="imdtIamtAmt" minOccurs="1" maxOccurs="1" position="2716" length="19" justify="right" padding="0"/>
-          <field kor="적립예상마일리지" name="acmExpMlg" minOccurs="1" maxOccurs="1" position="2735" length="20" justify="right" padding="0"/>
-          <field kor="주소1" name="adr1" minOccurs="1" maxOccurs="1" position="2755" length="200"/>
-          <field kor="주소2" name="adr2" minOccurs="1" maxOccurs="1" position="2955" length="200"/>
-          <field kor="휴대전화번호" name="mobiTelno" minOccurs="1" maxOccurs="1" position="3155" length="20"/>
-          <field kor="이메일주소" name="emailAdr" minOccurs="1" maxOccurs="1" position="3175" length="50"/>
-          <field kor="은행명1" name="bankNm1" minOccurs="1" maxOccurs="1" position="3225" length="20"/>
-          <field kor="가상계좌번호1" name="virtAcno1" minOccurs="1" maxOccurs="1" position="3245" length="20"/>
-          <field kor="은행명2" name="bankNm2" minOccurs="1" maxOccurs="1" position="3265" length="20"/>
-          <field kor="가상계좌번호2" name="virtAcno2" minOccurs="1" maxOccurs="1" position="3285" length="20"/>
-          <field kor="은행명3" name="bankNm3" minOccurs="1" maxOccurs="1" position="3305" length="20"/>
-          <field kor="가상계좌번호3" name="virtAcno3" minOccurs="1" maxOccurs="1" position="3325" length="20"/>
-          <field kor="은행명4" name="bankNm4" minOccurs="1" maxOccurs="1" position="3345" length="20"/>
-          <field kor="가상계좌번호4" name="virtAcno4" minOccurs="1" maxOccurs="1" position="3365" length="20"/>
-          <field kor="은행명5" name="bankNm5" minOccurs="1" maxOccurs="1" position="3385" length="20"/>
-          <field kor="가상계좌번호5" name="virtAcno5" minOccurs="1" maxOccurs="1" position="3405" length="20"/>
-          <field kor="은행명6" name="bankNm6" minOccurs="1" maxOccurs="1" position="3425" length="20"/>
-          <field kor="가상계좌번호6" name="virtAcno6" minOccurs="1" maxOccurs="1" position="3445" length="20"/>
-          <field kor="본인가족회원순번1" name="selfFamlMemSeq1" minOccurs="1" maxOccurs="1" position="3465" length="2"/>
-          <field kor="사용자명1" name="userNm1" minOccurs="1" maxOccurs="1" position="3467" length="20"/>
-          <field kor="사용카드뒤4자리번호1" name="useCrdBck4PtnNo1" minOccurs="1" maxOccurs="1" position="3487" length="4"/>
-          <field kor="청구대상금액1" name="reqTgamt1" minOccurs="1" maxOccurs="1" position="3491" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번2" name="selfFamlMemSeq2" minOccurs="1" maxOccurs="1" position="3510" length="2"/>
-          <field kor="사용자명2" name="userNm2" minOccurs="1" maxOccurs="1" position="3512" length="20"/>
-          <field kor="사용카드뒤4자리번호2" name="useCrdBck4PtnNo2" minOccurs="1" maxOccurs="1" position="3532" length="4"/>
-          <field kor="청구대상금액2" name="reqTgamt2" minOccurs="1" maxOccurs="1" position="3536" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번3" name="selfFamlMemSeq3" minOccurs="1" maxOccurs="1" position="3555" length="2"/>
-          <field kor="사용자명3" name="userNm3" minOccurs="1" maxOccurs="1" position="3557" length="20"/>
-          <field kor="사용카드뒤4자리번호3" name="useCrdBck4PtnNo3" minOccurs="1" maxOccurs="1" position="3577" length="4"/>
-          <field kor="청구대상금액3" name="reqTgamt3" minOccurs="1" maxOccurs="1" position="3581" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번4" name="selfFamlMemSeq4" minOccurs="1" maxOccurs="1" position="3600" length="2"/>
-          <field kor="사용자명4" name="userNm4" minOccurs="1" maxOccurs="1" position="3602" length="20"/>
-          <field kor="사용카드뒤4자리번호4" name="useCrdBck4PtnNo4" minOccurs="1" maxOccurs="1" position="3622" length="4"/>
-          <field kor="청구대상금액4" name="reqTgamt4" minOccurs="1" maxOccurs="1" position="3626" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번5" name="selfFamlMemSeq5" minOccurs="1" maxOccurs="1" position="3645" length="2"/>
-          <field kor="사용자명5" name="userNm5" minOccurs="1" maxOccurs="1" position="3647" length="20"/>
-          <field kor="사용카드뒤4자리번호5" name="useCrdBck4PtnNo5" minOccurs="1" maxOccurs="1" position="3667" length="4"/>
-          <field kor="청구대상금액5" name="reqTgamt5" minOccurs="1" maxOccurs="1" position="3671" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번6" name="selfFamlMemSeq6" minOccurs="1" maxOccurs="1" position="3690" length="2"/>
-          <field kor="사용자명6" name="userNm6" minOccurs="1" maxOccurs="1" position="3692" length="20"/>
-          <field kor="사용카드뒤4자리번호6" name="useCrdBck4PtnNo6" minOccurs="1" maxOccurs="1" position="3712" length="4"/>
-          <field kor="청구대상금액6" name="reqTgamt6" minOccurs="1" maxOccurs="1" position="3716" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번7" name="selfFamlMemSeq7" minOccurs="1" maxOccurs="1" position="3735" length="2"/>
-          <field kor="사용자명7" name="userNm7" minOccurs="1" maxOccurs="1" position="3737" length="20"/>
-          <field kor="사용카드뒤4자리번호7" name="useCrdBck4PtnNo7" minOccurs="1" maxOccurs="1" position="3757" length="4"/>
-          <field kor="청구대상금액7" name="reqTgamt7" minOccurs="1" maxOccurs="1" position="3761" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번8" name="selfFamlMemSeq8" minOccurs="1" maxOccurs="1" position="3780" length="2"/>
-          <field kor="사용자명8" name="userNm8" minOccurs="1" maxOccurs="1" position="3782" length="20"/>
-          <field kor="사용카드뒤4자리번호8" name="useCrdBck4PtnNo8" minOccurs="1" maxOccurs="1" position="3802" length="4"/>
-          <field kor="청구대상금액8" name="reqTgamt8" minOccurs="1" maxOccurs="1" position="3806" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번9" name="selfFamlMemSeq9" minOccurs="1" maxOccurs="1" position="3825" length="2"/>
-          <field kor="사용자명9" name="userNm9" minOccurs="1" maxOccurs="1" position="3827" length="20"/>
-          <field kor="사용카드뒤4자리번호9" name="useCrdBck4PtnNo9" minOccurs="1" maxOccurs="1" position="3847" length="4"/>
-          <field kor="청구대상금액9" name="reqTgamt9" minOccurs="1" maxOccurs="1" position="3851" length="19" justify="right" padding="0"/>
-          <field kor="본인가족회원순번10" name="selfFamlMemSeq10" minOccurs="1" maxOccurs="1" position="3870" length="2"/>
-          <field kor="사용자명10" name="userNm10" minOccurs="1" maxOccurs="1" position="3872" length="20"/>
-          <field kor="사용카드뒤4자리번호10" name="useCrdBck4PtnNo10" minOccurs="1" maxOccurs="1" position="3892" length="4"/>
-          <field kor="청구대상금액10" name="reqTgamt10" minOccurs="1" maxOccurs="1" position="3896" length="19" justify="right" padding="0"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="청구서_배열건수" name="billpostRowcount" minOccurs="0" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
+        <segment name="billpostList" kor="청구서_배열" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+          <field kor="전송일자" name="sendDt" minOccurs="0" maxOccurs="1" position="1805" length="8"/>
+          <field kor="전송시간" name="sendTime" minOccurs="0" maxOccurs="1" position="1813" length="6"/>
+          <field kor="응답코드" name="respCd" minOccurs="0" maxOccurs="1" position="1819" length="4"/>
+          <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="1823" length="9"/>
+          <field kor="카드번호" name="crdNo" minOccurs="0" maxOccurs="1" position="1832" length="16"/>
+          <field kor="고객명" name="custNm" minOccurs="0" maxOccurs="1" position="1848" length="40"/>
+          <field kor="청구일자" name="chrDt" minOccurs="0" maxOccurs="1" position="1888" length="8"/>
+          <field kor="매출시작일자" name="saleStrtDt" minOccurs="0" maxOccurs="1" position="1896" length="8"/>
+          <field kor="매출종료일자" name="saleEndDt" minOccurs="0" maxOccurs="1" position="1904" length="8"/>
+          <field kor="결제방법코드" name="stlmMthdCd" minOccurs="0" maxOccurs="1" position="1912" length="1"/>
+          <field kor="결제은행코드" name="stlmBankCd" minOccurs="0" maxOccurs="1" position="1913" length="10"/>
+          <field kor="결제계좌번호" name="stlmAcno" minOccurs="0" maxOccurs="1" position="1923" length="20"/>
+          <field kor="최종입금일자" name="lastIamtDt" minOccurs="0" maxOccurs="1" position="1943" length="8"/>
+          <field kor="실결제일자" name="realStlmDt" minOccurs="0" maxOccurs="1" position="1951" length="8"/>
+          <field kor="이자기산일자" name="intrRcknDt" minOccurs="0" maxOccurs="1" position="1959" length="8"/>
+          <field kor="적용이자율" name="aplyIntrRt" minOccurs="0" maxOccurs="1" position="1967" length="9" justify="right" padding="0"/>
+          <field kor="통합한도금액" name="untdBndsAmt" minOccurs="0" maxOccurs="1" position="1976" length="19" justify="right" padding="0"/>
+          <field kor="마일리지" name="mlg" minOccurs="0" maxOccurs="1" position="1995" length="20" justify="right" padding="0"/>
+          <field kor="마일리지산정기준일자" name="mlgEstmBsicDt" minOccurs="0" maxOccurs="1" position="2015" length="8"/>
+          <field kor="결제일" name="stlmDay" minOccurs="0" maxOccurs="1" position="2023" length="2"/>
+          <field kor="연체원금금액" name="oduePrncAmt" minOccurs="0" maxOccurs="1" position="2025" length="19" justify="right" padding="0"/>
+          <field kor="연체수수료금액" name="odueCmisAmt" minOccurs="0" maxOccurs="1" position="2044" length="19" justify="right" padding="0"/>
+          <field kor="연체이자금액" name="odueIntrAmt" minOccurs="0" maxOccurs="1" position="2063" length="1" justify="right" padding="0"/>
+          <field kor="연체총합계금액" name="odueTotSumAmt" minOccurs="0" maxOccurs="1" position="2064" length="19" justify="right" padding="0"/>
+          <field kor="당월원금금액" name="thmnPrncAmt" minOccurs="0" maxOccurs="1" position="2083" length="19" justify="right" padding="0"/>
+          <field kor="당월수수료금액" name="thmnCmisAmt" minOccurs="0" maxOccurs="1" position="2102" length="19" justify="right" padding="0"/>
+          <field kor="당월청구합계금액" name="thmnReqSumAmt" minOccurs="0" maxOccurs="1" position="2121" length="19" justify="right" padding="0"/>
+          <field kor="초과납부금액" name="overPymAmt" minOccurs="0" maxOccurs="1" position="2140" length="19" justify="right" padding="0"/>
+          <field kor="납부합계금액" name="pymSumAmt" minOccurs="0" maxOccurs="1" position="2159" length="19" justify="right" padding="0"/>
+          <field kor="총건수" name="totCnt" minOccurs="0" maxOccurs="1" position="2178" length="1" justify="right" padding="0"/>
+          <field kor="매출일자" name="saleDt" minOccurs="0" maxOccurs="1" position="2179" length="8"/>
+          <field kor="상품명" name="itemNm" minOccurs="0" maxOccurs="1" position="2187" length="200"/>
+          <field kor="관계구분코드명" name="relGbcdNm" minOccurs="0" maxOccurs="1" position="2387" length="100"/>
+          <field kor="가맹점명" name="frcsNm" minOccurs="0" maxOccurs="1" position="2487" length="100"/>
+          <field kor="카드할부개월수" name="crdInsmMths" minOccurs="0" maxOccurs="1" position="2587" length="4" justify="right" padding="0"/>
+          <field kor="매출금액" name="saleAmt" minOccurs="0" maxOccurs="1" position="2591" length="1" justify="right" padding="0"/>
+          <field kor="전월미결제금액" name="lmmNpymAmt" minOccurs="0" maxOccurs="1" position="2592" length="19" justify="right" padding="0"/>
+          <field kor="청구회차" name="reqTmnm" minOccurs="0" maxOccurs="1" position="2611" length="8" justify="right" padding="0"/>
+          <field kor="당월청구원금금액" name="thmnReqPrncAmt" minOccurs="0" maxOccurs="1" position="2619" length="19" justify="right" padding="0"/>
+          <field kor="당월청구수수료금액" name="thmnReqCmisAmt" minOccurs="0" maxOccurs="1" position="2638" length="19" justify="right" padding="0"/>
+          <field kor="잔여개월수" name="rmndMths" minOccurs="0" maxOccurs="1" position="2657" length="8" justify="right" padding="0"/>
+          <field kor="미도래금액" name="nadvAmt" minOccurs="0" maxOccurs="1" position="2665" length="19" justify="right" padding="0"/>
+          <field kor="결제일자" name="stlmDt" minOccurs="0" maxOccurs="1" position="2684" length="8"/>
+          <field kor="사용자명" name="userNm" minOccurs="0" maxOccurs="1" position="2692" length="20"/>
+          <field kor="사용카드뒤4자리번호" name="useCrdBck4PtnNo" minOccurs="0" maxOccurs="1" position="2712" length="4"/>
+          <field kor="즉시입금금액" name="imdtIamtAmt" minOccurs="0" maxOccurs="1" position="2716" length="19" justify="right" padding="0"/>
+          <field kor="적립예상마일리지" name="acmExpMlg" minOccurs="0" maxOccurs="1" position="2735" length="20" justify="right" padding="0"/>
+          <field kor="주소1" name="adr1" minOccurs="0" maxOccurs="1" position="2755" length="200"/>
+          <field kor="주소2" name="adr2" minOccurs="0" maxOccurs="1" position="2955" length="200"/>
+          <field kor="휴대전화번호" name="mobiTelno" minOccurs="0" maxOccurs="1" position="3155" length="20"/>
+          <field kor="이메일주소" name="emailAdr" minOccurs="0" maxOccurs="1" position="3175" length="50"/>
+          <field kor="은행명1" name="bankNm1" minOccurs="0" maxOccurs="1" position="3225" length="20"/>
+          <field kor="가상계좌번호1" name="virtAcno1" minOccurs="0" maxOccurs="1" position="3245" length="20"/>
+          <field kor="은행명2" name="bankNm2" minOccurs="0" maxOccurs="1" position="3265" length="20"/>
+          <field kor="가상계좌번호2" name="virtAcno2" minOccurs="0" maxOccurs="1" position="3285" length="20"/>
+          <field kor="은행명3" name="bankNm3" minOccurs="0" maxOccurs="1" position="3305" length="20"/>
+          <field kor="가상계좌번호3" name="virtAcno3" minOccurs="0" maxOccurs="1" position="3325" length="20"/>
+          <field kor="은행명4" name="bankNm4" minOccurs="0" maxOccurs="1" position="3345" length="20"/>
+          <field kor="가상계좌번호4" name="virtAcno4" minOccurs="0" maxOccurs="1" position="3365" length="20"/>
+          <field kor="은행명5" name="bankNm5" minOccurs="0" maxOccurs="1" position="3385" length="20"/>
+          <field kor="가상계좌번호5" name="virtAcno5" minOccurs="0" maxOccurs="1" position="3405" length="20"/>
+          <field kor="은행명6" name="bankNm6" minOccurs="0" maxOccurs="1" position="3425" length="20"/>
+          <field kor="가상계좌번호6" name="virtAcno6" minOccurs="0" maxOccurs="1" position="3445" length="20"/>
+          <field kor="본인가족회원순번1" name="selfFamlMemSeq1" minOccurs="0" maxOccurs="1" position="3465" length="2"/>
+          <field kor="사용자명1" name="userNm1" minOccurs="0" maxOccurs="1" position="3467" length="20"/>
+          <field kor="사용카드뒤4자리번호1" name="useCrdBck4PtnNo1" minOccurs="0" maxOccurs="1" position="3487" length="4"/>
+          <field kor="청구대상금액1" name="reqTgamt1" minOccurs="0" maxOccurs="1" position="3491" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번2" name="selfFamlMemSeq2" minOccurs="0" maxOccurs="1" position="3510" length="2"/>
+          <field kor="사용자명2" name="userNm2" minOccurs="0" maxOccurs="1" position="3512" length="20"/>
+          <field kor="사용카드뒤4자리번호2" name="useCrdBck4PtnNo2" minOccurs="0" maxOccurs="1" position="3532" length="4"/>
+          <field kor="청구대상금액2" name="reqTgamt2" minOccurs="0" maxOccurs="1" position="3536" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번3" name="selfFamlMemSeq3" minOccurs="0" maxOccurs="1" position="3555" length="2"/>
+          <field kor="사용자명3" name="userNm3" minOccurs="0" maxOccurs="1" position="3557" length="20"/>
+          <field kor="사용카드뒤4자리번호3" name="useCrdBck4PtnNo3" minOccurs="0" maxOccurs="1" position="3577" length="4"/>
+          <field kor="청구대상금액3" name="reqTgamt3" minOccurs="0" maxOccurs="1" position="3581" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번4" name="selfFamlMemSeq4" minOccurs="0" maxOccurs="1" position="3600" length="2"/>
+          <field kor="사용자명4" name="userNm4" minOccurs="0" maxOccurs="1" position="3602" length="20"/>
+          <field kor="사용카드뒤4자리번호4" name="useCrdBck4PtnNo4" minOccurs="0" maxOccurs="1" position="3622" length="4"/>
+          <field kor="청구대상금액4" name="reqTgamt4" minOccurs="0" maxOccurs="1" position="3626" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번5" name="selfFamlMemSeq5" minOccurs="0" maxOccurs="1" position="3645" length="2"/>
+          <field kor="사용자명5" name="userNm5" minOccurs="0" maxOccurs="1" position="3647" length="20"/>
+          <field kor="사용카드뒤4자리번호5" name="useCrdBck4PtnNo5" minOccurs="0" maxOccurs="1" position="3667" length="4"/>
+          <field kor="청구대상금액5" name="reqTgamt5" minOccurs="0" maxOccurs="1" position="3671" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번6" name="selfFamlMemSeq6" minOccurs="0" maxOccurs="1" position="3690" length="2"/>
+          <field kor="사용자명6" name="userNm6" minOccurs="0" maxOccurs="1" position="3692" length="20"/>
+          <field kor="사용카드뒤4자리번호6" name="useCrdBck4PtnNo6" minOccurs="0" maxOccurs="1" position="3712" length="4"/>
+          <field kor="청구대상금액6" name="reqTgamt6" minOccurs="0" maxOccurs="1" position="3716" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번7" name="selfFamlMemSeq7" minOccurs="0" maxOccurs="1" position="3735" length="2"/>
+          <field kor="사용자명7" name="userNm7" minOccurs="0" maxOccurs="1" position="3737" length="20"/>
+          <field kor="사용카드뒤4자리번호7" name="useCrdBck4PtnNo7" minOccurs="0" maxOccurs="1" position="3757" length="4"/>
+          <field kor="청구대상금액7" name="reqTgamt7" minOccurs="0" maxOccurs="1" position="3761" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번8" name="selfFamlMemSeq8" minOccurs="0" maxOccurs="1" position="3780" length="2"/>
+          <field kor="사용자명8" name="userNm8" minOccurs="0" maxOccurs="1" position="3782" length="20"/>
+          <field kor="사용카드뒤4자리번호8" name="useCrdBck4PtnNo8" minOccurs="0" maxOccurs="1" position="3802" length="4"/>
+          <field kor="청구대상금액8" name="reqTgamt8" minOccurs="0" maxOccurs="1" position="3806" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번9" name="selfFamlMemSeq9" minOccurs="0" maxOccurs="1" position="3825" length="2"/>
+          <field kor="사용자명9" name="userNm9" minOccurs="0" maxOccurs="1" position="3827" length="20"/>
+          <field kor="사용카드뒤4자리번호9" name="useCrdBck4PtnNo9" minOccurs="0" maxOccurs="1" position="3847" length="4"/>
+          <field kor="청구대상금액9" name="reqTgamt9" minOccurs="0" maxOccurs="1" position="3851" length="19" justify="right" padding="0"/>
+          <field kor="본인가족회원순번10" name="selfFamlMemSeq10" minOccurs="0" maxOccurs="1" position="3870" length="2"/>
+          <field kor="사용자명10" name="userNm10" minOccurs="0" maxOccurs="1" position="3872" length="20"/>
+          <field kor="사용카드뒤4자리번호10" name="useCrdBck4PtnNo10" minOccurs="0" maxOccurs="1" position="3892" length="4"/>
+          <field kor="청구대상금액10" name="reqTgamt10" minOccurs="0" maxOccurs="1" position="3896" length="19" justify="right" padding="0"/>
         </segment>
       </segment>
     </record>

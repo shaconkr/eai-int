@@ -47,21 +47,21 @@
     </complexType>
     <complexType name="KIKCISFNDX0010201_InRes">
         <sequence>
-            <element e:kor="결제예정금액" e:length="20" e:padder="ZeroLeft" name="stlmPrrgAmt" nillable="true" type="decimal"/>
-            <element e:kor="조회결과_배열건수" e:length="5" e:padder="ZeroLeft" name="rsltRowcount" nillable="true" type="long"/>
-            <element e:kor="조회결과_배열" e:padder="ZeroLeft" maxOccurs="unbounded" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
+            <element e:kor="결제예정금액" e:length="20" e:padder="ZeroLeft" minOccurs="0" name="stlmPrrgAmt" nillable="true" type="decimal"/>
+            <element e:kor="조회결과_배열건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="rsltRowcount" nillable="true" type="long"/>
+            <element e:kor="조회결과_배열" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RSLT_LIST_TYPE">
         <sequence>
-            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" name="chrDt" nillable="true" type="string"/>
-            <element e:kor="총결제금액" e:length="18" e:padder="ZeroLeft" name="totStlmAmt" nillable="true" type="long"/>
+            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="chrDt" nillable="true" type="string"/>
+            <element e:kor="총결제금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="totStlmAmt" nillable="true" type="long"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:KIKHeaderType"/>
-            <element name="data" type="ns:KIKCISFNDX0010201_InRes"/>
+            <element e:kor="공통부" name="header" type="ns:KIKHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:KIKCISFNDX0010201_InRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

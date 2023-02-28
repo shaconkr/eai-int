@@ -47,25 +47,25 @@
     </complexType>
     <complexType name="CISSPGMTPH9000901_InReq">
         <sequence>
-            <element e:kor="전문코드" e:length="1" e:padder="SpaceRight" name="tgrmCd" nillable="true" type="string"/>
-            <element e:kor="전문길이" e:length="4" e:padder="SpaceRight" name="tgrmLen" nillable="true" type="string"/>
-            <element e:kor="기관코드" e:length="4" e:padder="SpaceRight" name="istnCd" nillable="true" type="string"/>
-            <element e:kor="전문순번" e:length="4" e:padder="SpaceRight" name="tgrmSeq" nillable="true" type="string"/>
-            <element e:kor="구분내용1" e:length="2" e:padder="SpaceRight" name="gbCntn1" nillable="true" type="string"/>
-            <element e:kor="구분내용2" e:length="5" e:padder="SpaceRight" name="gbCntn2" nillable="true" type="string"/>
-            <element e:kor="구분내용3" e:length="2" e:padder="SpaceRight" name="gbCntn3" nillable="true" type="string"/>
-            <element e:kor="전문종별코드" e:length="4" e:padder="SpaceRight" name="tgrmSubCCd" nillable="true" type="string"/>
-            <element e:kor="구분내용4" e:length="4" e:padder="SpaceRight" name="gbCntn4" nillable="true" type="string"/>
-            <element e:kor="공백값1" e:length="1" e:padder="SpaceRight" name="nullVal1" nillable="true" type="string"/>
-            <element e:kor="구분내용5" e:length="1" e:padder="SpaceRight" name="gbCntn5" nillable="true" type="string"/>
-            <element e:kor="구분내용6" e:length="1" e:padder="SpaceRight" name="gbCntn6" nillable="true" type="string"/>
-            <element e:kor="전송일자" e:length="6" e:padder="SpaceRight" name="sendDt" nillable="true" type="string"/>
-            <element e:kor="구분내용7" e:length="6" e:padder="SpaceRight" name="gbCntn7" nillable="true" type="string"/>
-            <element e:kor="상품권종류코드" e:length="2" e:padder="SpaceRight" name="gcKndCd" nillable="true" type="string"/>
-            <element e:kor="상품권번호" e:length="20" e:padder="SpaceRight" name="gcNo" nillable="true" type="string"/>
-            <element e:kor="상품권금액" e:length="8" e:padder="SpaceRight" name="gcAmt" nillable="true" type="string"/>
-            <element e:kor="거래번호" e:length="4" e:padder="SpaceRight" name="trdNo" nillable="true" type="string"/>
-            <element e:kor="공백값2" e:length="190" e:padder="SpaceRight" name="nullVal2" nillable="true" type="string"/>
+            <element e:kor="전문코드" e:length="1" e:padder="SpaceRight" minOccurs="0" name="tgrmCd" nillable="true" type="string"/>
+            <element e:kor="전문길이" e:length="4" e:padder="SpaceRight" minOccurs="0" name="tgrmLen" nillable="true" type="string"/>
+            <element e:kor="기관코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="istnCd" nillable="true" type="string"/>
+            <element e:kor="전문순번" e:length="4" e:padder="SpaceRight" minOccurs="0" name="tgrmSeq" nillable="true" type="string"/>
+            <element e:kor="구분내용1" e:length="2" e:padder="SpaceRight" minOccurs="0" name="gbCntn1" nillable="true" type="string"/>
+            <element e:kor="구분내용2" e:length="5" e:padder="SpaceRight" minOccurs="0" name="gbCntn2" nillable="true" type="string"/>
+            <element e:kor="구분내용3" e:length="2" e:padder="SpaceRight" minOccurs="0" name="gbCntn3" nillable="true" type="string"/>
+            <element e:kor="전문종별코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="tgrmSubCCd" nillable="true" type="string"/>
+            <element e:kor="구분내용4" e:length="4" e:padder="SpaceRight" minOccurs="0" name="gbCntn4" nillable="true" type="string"/>
+            <element e:kor="공백값1" e:length="1" e:padder="SpaceRight" minOccurs="0" name="nullVal1" nillable="true" type="string"/>
+            <element e:kor="구분내용5" e:length="1" e:padder="SpaceRight" minOccurs="0" name="gbCntn5" nillable="true" type="string"/>
+            <element e:kor="구분내용6" e:length="1" e:padder="SpaceRight" minOccurs="0" name="gbCntn6" nillable="true" type="string"/>
+            <element e:kor="전송일자" e:length="6" e:padder="SpaceRight" minOccurs="0" name="sendDt" nillable="true" type="string"/>
+            <element e:kor="구분내용7" e:length="6" e:padder="SpaceRight" minOccurs="0" name="gbCntn7" nillable="true" type="string"/>
+            <element e:kor="상품권종류코드" e:length="2" e:padder="SpaceRight" minOccurs="0" name="gcKndCd" nillable="true" type="string"/>
+            <element e:kor="상품권번호" e:length="20" e:padder="SpaceRight" minOccurs="0" name="gcNo" nillable="true" type="string"/>
+            <element e:kor="상품권금액" e:length="8" e:padder="SpaceRight" minOccurs="0" name="gcAmt" nillable="true" type="string"/>
+            <element e:kor="거래번호" e:length="4" e:padder="SpaceRight" minOccurs="0" name="trdNo" nillable="true" type="string"/>
+            <element e:kor="공백값2" e:length="190" e:padder="SpaceRight" minOccurs="0" name="nullVal2" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">

@@ -2,7 +2,7 @@
     <element name="root" type="ns:CHBCISFNDX0120101_InRes"/>
     <complexType name="CHBCISFNDX0120101_InRes">
         <sequence>
-            <element e:kor="총미도래잔액" e:length="18" e:padder="ZeroLeft" name="totNadvBlnc" nillable="true" type="long"/>
+            <element e:kor="총미도래잔액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="totNadvBlnc" nillable="true" type="long"/>
         </sequence>
     </complexType>
 </schema>

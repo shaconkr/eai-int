@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISHPTMTPC9000201="http://schema.hcis.com/xsd/CISHPTMTPC9000201_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_WCwXXLNVEe2zCa0TT6kE_Q" name="CISHPTMTPC.CISHPTMTPC9000201.CISHPTMTPC9000201_OutRes" type="dataformat:DataFormat">
-  <imports xmi:id="_WCwXXbNVEe2zCa0TT6kE_Q" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISHPTMTPC9000201_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISHPTMTPC9000201_OutRes"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_WCwXXrNVEe2zCa0TT6kE_Q" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISHPTMTPC9000201:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets xmi:id="_WCwXX7NVEe2zCa0TT6kE_Q" name="header" kor="0" type="HPTHeaderType"/>
-    <fieldOffsets xmi:id="_WCwXYLNVEe2zCa0TT6kE_Q" name="data" kor="0" type="CISHPTMTPC9000201_OutRes"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISHPTMTPC9000201="http://schema.hcis.com/xsd/CISHPTMTPC9000201_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISHPTMTPC/CISHPTMTPC9000201.CISHPTMTPC9000201_OutRes" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISHPTMTPC9000201_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISHPTMTPC9000201_OutRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISHPTMTPC9000201:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets kor="공통부" type="HPTHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="데이터부" type="CISHPTMTPC9000201_OutRes" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>

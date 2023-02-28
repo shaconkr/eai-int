@@ -47,19 +47,19 @@
     </complexType>
     <complexType name="ARSCISFNDX0030101_InRes">
         <sequence>
-            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" name="sendDt" nillable="true" type="string"/>
-            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" name="sendTime" nillable="true" type="string"/>
-            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" name="respCd" nillable="true" type="string"/>
-            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" name="crdMemNo" nillable="true" type="string"/>
-            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" name="chrDt" nillable="true" type="string"/>
-            <element e:kor="청구금액" e:length="18" e:padder="ZeroLeft" name="reqAmt" nillable="true" type="long"/>
-            <element e:kor="재발송여부" e:length="1" e:padder="SpaceRight" name="reSenmYn" nillable="true" type="string"/>
+            <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="sendDt" nillable="true" type="string"/>
+            <element e:kor="전송시간" e:length="6" e:padder="SpaceRight" minOccurs="0" name="sendTime" nillable="true" type="string"/>
+            <element e:kor="응답코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="respCd" nillable="true" type="string"/>
+            <element e:kor="카드회원번호" e:length="9" e:padder="SpaceRight" minOccurs="0" name="crdMemNo" nillable="true" type="string"/>
+            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="chrDt" nillable="true" type="string"/>
+            <element e:kor="청구금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="reqAmt" nillable="true" type="long"/>
+            <element e:kor="재발송여부" e:length="1" e:padder="SpaceRight" minOccurs="0" name="reSenmYn" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element name="header" type="ns:ARSHeaderType"/>
-            <element name="data" type="ns:ARSCISFNDX0030101_InRes"/>
+            <element e:kor="공통부" name="header" type="ns:ARSHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:ARSCISFNDX0030101_InRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>

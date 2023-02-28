@@ -3,7 +3,7 @@
 <jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADMTSY0006001="http://schema.hcis.com/xsd/CISTADMTSY0006001_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADMTSY/CISTADMTSY0006001.CISTADMTSY0006001_OutRes" type="dataformat:DataFormat">
   <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADMTSY0006001_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADMTSY0006001_OutRes"/>
   <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADMTSY0006001:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets kor="0" type="TADHeaderType" name="header" start="0" end="0"/>
-    <fieldOffsets kor="0" type="CISTADMTSY0006001_OutRes" name="data" start="0" end="0"/>
+    <fieldOffsets kor="공통부" type="TADHeaderType" name="header" start="0" end="0"/>
+    <fieldOffsets kor="데이터부" type="CISTADMTSY0006001_OutRes" name="data" start="0" end="0"/>
   </jndi:configuration>
 </jndi:namedResource>

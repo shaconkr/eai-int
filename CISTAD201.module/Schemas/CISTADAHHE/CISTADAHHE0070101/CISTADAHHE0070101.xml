@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,11 +39,11 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map"> 
-        <segment name="srchGroup" kor="검색그룹" minOccurs="1" maxOccurs="1" class="map"> 
-          <field kor="조회시작일자" name="qryStrtDt" minOccurs="1" maxOccurs="1" position="419" length="8"/>  
-          <field kor="조회종료일자" name="qryEndDt" minOccurs="1" maxOccurs="1" position="427" length="8"/>  
-          <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="435" length="8"/> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <segment name="srchGroup" kor="검색그룹" minOccurs="0" maxOccurs="1" class="map"> 
+          <field kor="조회시작일자" name="qryStrtDt" minOccurs="0" maxOccurs="1" position="419" length="8"/>  
+          <field kor="조회종료일자" name="qryEndDt" minOccurs="0" maxOccurs="1" position="427" length="8"/>  
+          <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="435" length="8"/> 
         </segment> 
       </segment> 
     </record> 
@@ -53,7 +53,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" kor="0" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -83,31 +83,31 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" kor="0" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="419" length="8"/>
-        <field kor="결과건수" name="rstRowcount" minOccurs="1" maxOccurs="1" position="427" length="5" justify="right" padding="0"/>
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
+        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="419" length="8"/>
+        <field kor="결과건수" name="rstRowcount" minOccurs="0" maxOccurs="1" position="427" length="5" justify="right" padding="0"/>
         <segment name="rstList" kor="결과리스트" minOccurs="50" maxOccurs="50" collection="list" class="map">
-          <field kor="일자" name="dt" minOccurs="1" maxOccurs="1" position="432" length="8"/>
-          <field kor="자동처리합계건수" name="autoProcSumCnt" minOccurs="1" maxOccurs="1" position="440" length="10"/>
-          <field kor="자동처리비율" name="autoProcRate" minOccurs="1" maxOccurs="1" position="450" length="5"/>
-          <field kor="자동처리승인건수" name="autoProcAprvlCnt" minOccurs="1" maxOccurs="1" position="455" length="10"/>
-          <field kor="자동처리승인건수비율" name="autoProcAprvlCntRate" minOccurs="1" maxOccurs="1" position="465" length="5"/>
-          <field kor="자동처리거절건수" name="autoProcFejCnt" minOccurs="1" maxOccurs="1" position="470" length="10"/>
-          <field kor="자동처리거절건수비율" name="autoProcFejCntRate" minOccurs="1" maxOccurs="1" position="480" length="5"/>
-          <field kor="자동처리승인금액" name="autoProcAprvlAmt" minOccurs="1" maxOccurs="1" position="485" length="18"/>
-          <field kor="자동처리승인금액비율" name="autoProcAprvlAmtRate" minOccurs="1" maxOccurs="1" position="503" length="5"/>
-          <field kor="팝업처리합계건수" name="pupProcSumCnt" minOccurs="1" maxOccurs="1" position="508" length="10"/>
-          <field kor="팝업처리비율" name="pupProcRate" minOccurs="1" maxOccurs="1" position="518" length="5"/>
-          <field kor="팝업처리승인건수" name="pupProcAprvlCnt" minOccurs="1" maxOccurs="1" position="523" length="10"/>
-          <field kor="팝업처리승인건수비율" name="pupProcAprvlCntRate" minOccurs="1" maxOccurs="1" position="533" length="5"/>
-          <field kor="팝업처리거절건수" name="pupProcFejCnt" minOccurs="1" maxOccurs="1" position="538" length="10"/>
-          <field kor="팝업처리거절건수비율" name="pupProcFejCntRate" minOccurs="1" maxOccurs="1" position="548" length="5"/>
-          <field kor="팝업처리승인금액" name="pupProcAprvlAmt" minOccurs="1" maxOccurs="1" position="553" length="18"/>
-          <field kor="팝업처리승인금액비율" name="pupProcAprvlAmtRate" minOccurs="1" maxOccurs="1" position="571" length="5"/>
-          <field kor="전체누적건수" name="totAcmtCnt" minOccurs="1" maxOccurs="1" position="576" length="18"/>
-          <field kor="승인건수" name="aprvlCnt" minOccurs="1" maxOccurs="1" position="594" length="10"/>
-          <field kor="거절건수" name="fejCnt" minOccurs="1" maxOccurs="1" position="604" length="10"/>
-          <field kor="승인금액" name="aprvlAmt" minOccurs="1" maxOccurs="1" position="614" length="18"/>
+          <field kor="일자" name="dt" minOccurs="0" maxOccurs="1" position="432" length="8"/>
+          <field kor="자동처리합계건수" name="autoProcSumCnt" minOccurs="0" maxOccurs="1" position="440" length="10"/>
+          <field kor="자동처리비율" name="autoProcRate" minOccurs="0" maxOccurs="1" position="450" length="5"/>
+          <field kor="자동처리승인건수" name="autoProcAprvlCnt" minOccurs="0" maxOccurs="1" position="455" length="10"/>
+          <field kor="자동처리승인건수비율" name="autoProcAprvlCntRate" minOccurs="0" maxOccurs="1" position="465" length="5"/>
+          <field kor="자동처리거절건수" name="autoProcFejCnt" minOccurs="0" maxOccurs="1" position="470" length="10"/>
+          <field kor="자동처리거절건수비율" name="autoProcFejCntRate" minOccurs="0" maxOccurs="1" position="480" length="5"/>
+          <field kor="자동처리승인금액" name="autoProcAprvlAmt" minOccurs="0" maxOccurs="1" position="485" length="18"/>
+          <field kor="자동처리승인금액비율" name="autoProcAprvlAmtRate" minOccurs="0" maxOccurs="1" position="503" length="5"/>
+          <field kor="팝업처리합계건수" name="pupProcSumCnt" minOccurs="0" maxOccurs="1" position="508" length="10"/>
+          <field kor="팝업처리비율" name="pupProcRate" minOccurs="0" maxOccurs="1" position="518" length="5"/>
+          <field kor="팝업처리승인건수" name="pupProcAprvlCnt" minOccurs="0" maxOccurs="1" position="523" length="10"/>
+          <field kor="팝업처리승인건수비율" name="pupProcAprvlCntRate" minOccurs="0" maxOccurs="1" position="533" length="5"/>
+          <field kor="팝업처리거절건수" name="pupProcFejCnt" minOccurs="0" maxOccurs="1" position="538" length="10"/>
+          <field kor="팝업처리거절건수비율" name="pupProcFejCntRate" minOccurs="0" maxOccurs="1" position="548" length="5"/>
+          <field kor="팝업처리승인금액" name="pupProcAprvlAmt" minOccurs="0" maxOccurs="1" position="553" length="18"/>
+          <field kor="팝업처리승인금액비율" name="pupProcAprvlAmtRate" minOccurs="0" maxOccurs="1" position="571" length="5"/>
+          <field kor="전체누적건수" name="totAcmtCnt" minOccurs="0" maxOccurs="1" position="576" length="18"/>
+          <field kor="승인건수" name="aprvlCnt" minOccurs="0" maxOccurs="1" position="594" length="10"/>
+          <field kor="거절건수" name="fejCnt" minOccurs="0" maxOccurs="1" position="604" length="10"/>
+          <field kor="승인금액" name="aprvlAmt" minOccurs="0" maxOccurs="1" position="614" length="18"/>
         </segment>
       </segment>
     </record>
