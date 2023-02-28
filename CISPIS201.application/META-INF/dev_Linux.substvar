@@ -2,7 +2,7 @@
 <repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
 	<globalVariables>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.DEPLOYMENTUNIT.TYPE</name>
+			<name>//CISPIS201.module//BW.DEPLOYMENTUNIT.TYPE</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -11,7 +11,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.APPNODE.NAME</name>
+			<name>//CISPIS201.module//BW.APPNODE.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -20,7 +20,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.DEPLOYMENTUNIT.NAME</name>
+			<name>//CISPIS201.module//BW.DEPLOYMENTUNIT.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -29,7 +29,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.HOST.NAME</name>
+			<name>//CISPIS201.module//BW.HOST.NAME</name>
 			<value>localhost</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -38,7 +38,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.DOMAIN.NAME</name>
+			<name>//CISPIS201.module//BW.DOMAIN.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -47,7 +47,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.DEPLOYMENTUNIT.VERSION</name>
+			<name>//CISPIS201.module//BW.DEPLOYMENTUNIT.VERSION</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -56,7 +56,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.APPSPACE.NAME</name>
+			<name>//CISPIS201.module//BW.APPSPACE.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -65,7 +65,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.MODULE.VERSION</name>
+			<name>//CISPIS201.module//BW.MODULE.VERSION</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -74,7 +74,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//BW.MODULE.NAME</name>
+			<name>//CISPIS201.module//BW.MODULE.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -83,8 +83,8 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//FW_PORT</name>
-			<value>15021</value>
+			<name>//CISPIS201.module//PIS_PORT</name>
+			<value>21</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
@@ -92,8 +92,44 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//HPGCIS201.module//FW_IP</name>
-			<value>10.100.166.42</value>
+			<name>//CISPIS201.module//PIS_IP</name>
+			<value>127.0.0.1</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CISPIS201.module//PIS_USER</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CISPIS201.module//CISPISMKCY001201</name>
+			<value>CISPISMKCY001201</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CISPIS201.module//PIS_PASS</name>
+			<value>#!BbLKyXH21VUSHjCOMNJwAg==</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//CISPIS201.module//PIS_PLAIN_PASS</name>
+			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -318,23 +354,23 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//CSPI_Library///BaseInfo/CfgFileName</name>
-			<value>cfg_HPGCIS.ini</value>
+			<value>cfg_CISPIS.ini</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
 			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
-			<lookupValue>cfg_HPGCIS.ini</lookupValue>
+			<lookupValue>cfg_CISPIS.ini</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//CSPI_Library///BaseInfo/WorkGroup</name>
-			<value>HPGCIS</value>
+			<value>CISPIS</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
 			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
-			<lookupValue>HPGCIS</lookupValue>
+			<lookupValue>CISPIS</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//CSPI_Library///BaseInfo/CfgFileDir</name>
