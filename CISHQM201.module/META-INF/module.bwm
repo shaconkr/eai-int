@@ -14,6 +14,7 @@
   <sca:property xmi:id="_TtY5wLM-Ee2zCa0TT6kE_Q" name="HQM_USER" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_Uv9KALM-Ee2zCa0TT6kE_Q" name="HQM_PASS" type="property:password" scaext:simpleValue="#!ZwOLax+scsu0IPWzywvVyg==" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_5Pzq4LNBEe2zCa0TT6kE_Q" name="CISHQMCTCN0040106" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_EBJIYLclEe2VwptvMlmp7g" name="HQM_PASS_PRINT" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_tuAN4bM8Ee2zCa0TT6kE_Q" name="ComponentKIKCISFNDX0010101_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_tuAN4rM8Ee2zCa0TT6kE_Q" processName="CISHQMCTCN.CISHQMCTCN0040106.CISHQMCTCN0040106"/>
   </sca:component>
