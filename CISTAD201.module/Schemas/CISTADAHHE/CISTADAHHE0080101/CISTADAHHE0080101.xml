@@ -9,7 +9,7 @@
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
     <record name="TAD_OutReq" class="java.util.LinkedHashMap"> 
-      <segment name="header" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map"> 
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>  
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>  
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>  
@@ -39,8 +39,8 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>  
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
-      <segment name="data" minOccurs="1" maxOccurs="1" class="map"> 
-        <segment name="srchGroup" minOccurs="1" maxOccurs="1" class="map"> 
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
+        <segment name="srchGroup" kor="검색그룹" minOccurs="1" maxOccurs="1" class="map"> 
           <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="419" length="3"/>  
           <field kor="승인자ID" name="aprvId" minOccurs="1" maxOccurs="1" position="422" length="100"/>  
           <field kor="시작년월" name="strtYm" minOccurs="1" maxOccurs="1" position="522" length="6"/>  
@@ -55,7 +55,7 @@
       <property name="recordTerminator" value="\r\n"/>
     </parser>
     <record name="TAD_OutRes" class="java.util.LinkedHashMap">
-      <segment name="header" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="header" kor="공통부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="전체전문길이" name="totTgrmLen" minOccurs="0" maxOccurs="1" position="0" length="8" justify="right" padding="0"/>
         <field kor="헤더길이" name="hdrLen" minOccurs="0" maxOccurs="1" position="8" length="8" justify="right" padding="0"/>
         <field kor="전문형식코드" name="tgrmFrmCd" minOccurs="0" maxOccurs="1" position="16" length="1"/>
@@ -85,9 +85,9 @@
         <field kor="거래공통영역예비내용" name="trdCommTrtyPrepCntn" minOccurs="0" maxOccurs="1" position="309" length="100"/>
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
-      <segment name="data" minOccurs="1" maxOccurs="1" class="map">
+      <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="419" length="111"/>
-        <segment name="rstList" minOccurs="0" maxOccurs="50" collection="list" class="map">
+        <segment name="rstList" kor="결과리스트" minOccurs="50" maxOccurs="50" collection="list" class="map">
           <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="530" length="3"/>
           <field kor="승인자ID" name="aprvId" minOccurs="1" maxOccurs="1" position="533" length="100"/>
           <field kor="승인구분코드" name="aprvlGbcd" minOccurs="1" maxOccurs="1" position="633" length="1"/>
