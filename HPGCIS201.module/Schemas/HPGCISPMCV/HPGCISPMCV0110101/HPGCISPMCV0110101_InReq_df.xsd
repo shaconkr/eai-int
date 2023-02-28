@@ -2,7 +2,7 @@
     <element name="root" type="ns:HPGCISPMCV0110101_InReq"/>
     <complexType name="HPGCISPMCV0110101_InReq">
         <sequence>
-            <element e:kor="은행코드" e:length="3" e:padder="SpaceRight" name="bankCd" nillable="true" type="string"/>
+            <element e:kor="은행코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="bankCd" nillable="true" type="string"/>
         </sequence>
     </complexType>
 </schema>

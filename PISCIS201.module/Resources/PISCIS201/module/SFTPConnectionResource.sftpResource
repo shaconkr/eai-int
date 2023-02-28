@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sftpconnection="http://ns.tibco.com/bw/palette/sftpconnection" xmi:id="_9NPN0bczEe2ge9h3ittoHw" name="PISCIS201.module.SFTPConnectionResource" type="sftpconnection:sftpconnection">
+  <jndi:configuration xsi:type="sftpconnection:SFTPConnection" xmi:id="_9NPN0rczEe2ge9h3ittoHw">
+    <substitutionBindings xmi:id="_pomh0Lc5Ee2ge9h3ittoHw" template="host" propName="CIS_IP"/>
+    <substitutionBindings xmi:id="_px1WULc5Ee2ge9h3ittoHw" template="port" propName="CIS_PORT"/>
+  </jndi:configuration>
+</jndi:namedResource>
