@@ -1651,9 +1651,7 @@
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="CallProc_IFID01ToAssign_OK"/>
-                        <bpws:source
-                            linkName="CallProc_CISTADAHHE0080101ToL_Set_LogError"
-                            tibex:faultDetailsVar="CallProc_CISTADAHHE0080101" tibex:faultNameVar="FaultName">
+                        <bpws:source linkName="CallProc_CISTADAHHE0080101ToL_Set_LogError">
                             <tibex:DesignExpression>
                                 <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>

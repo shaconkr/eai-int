@@ -50,7 +50,17 @@
     xmlns:ns46="www.tibco.com/plugin/java/JavaInvokeActivityOutput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityOutput"
     xmlns:ns47="http://tns.tibco.com/bw/palette/internal/activityerror+85cb6544-38d7-4933-b770-da81d426ac6f"
     xmlns:ns48="http://www.tibco.com/pe/WriteToLogActivitySchema"
+    xmlns:ns49="activity.jsonParser.input+4c4faf1e-8a70-4484-8ef4-4164c0d08bbe+ActivityInputType"
     xmlns:ns5="www.tibco.com/plugin/java/JavaInvokeActivityOutput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityOutput"
+    xmlns:ns50="http://schema.hcis.com/xsd/CISTADAHHE0080101_InReq"
+    xmlns:ns51="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonParser"
+    xmlns:ns52="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutReq"
+    xmlns:ns53="activity.jsonRender.output+232e6c68-e301-4f86-8994-dd080ee6787a+ActivityOutputType"
+    xmlns:ns54="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender"
+    xmlns:ns55="activity.jsonParser.input+594e4720-bcf4-4c61-99f4-b27de5d45058+ActivityInputType"
+    xmlns:ns56="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutRes"
+    xmlns:ns57="http://schema.hcis.com/xsd/CISTADAHHE0080101_InRes"
+    xmlns:ns58="activity.jsonRender.output+64a20820-bc04-45e4-866e-e725c01d7c95+ActivityOutputType"
     xmlns:ns6="http://tns.tibco.com/bw/palette/internal/activityerror+96760986-6554-4fda-8c18-be567d57335d"
     xmlns:ns7="www.tibco.com/plugin/java/JavaInvokeActivityInput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityInput"
     xmlns:ns8="www.tibco.com/plugin/java/JavaInvokeActivityOutput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityOutput"
@@ -62,19 +72,13 @@
     <tibex:VariableDescriptor type="MemorySaving">
         <task name="End">
             <endingVariables>
-                <variable>TADtoCIS</variable>
-            </endingVariables>
-        </task>
-        <task name="CIStoTAD">
-            <endingVariables>
-                <variable>CIStoTAD-input</variable>
-                <variable>Start</variable>
+                <variable>RenderJsonCIS</variable>
             </endingVariables>
         </task>
         <task name="to2ByteHangle">
             <endingVariables>
                 <variable>to2ByteHangle-input</variable>
-                <variable>CIStoTAD</variable>
+                <variable>RenderJsonTAD</variable>
             </endingVariables>
         </task>
         <task name="JsonToEdiBytesLen">
@@ -151,12 +155,6 @@
                 <variable>ediBytesToJson</variable>
             </endingVariables>
         </task>
-        <task name="TADtoCIS">
-            <endingVariables>
-                <variable>TADtoCIS-input</variable>
-                <variable>to3ByteHangle</variable>
-            </endingVariables>
-        </task>
         <task name="ReqLog">
             <endingVariables>
                 <variable>ReqLog-input</variable>
@@ -167,6 +165,30 @@
             <endingVariables>
                 <variable>ResLog-input</variable>
                 <variable>ResString</variable>
+            </endingVariables>
+        </task>
+        <task name="ParseJsonCIS">
+            <endingVariables>
+                <variable>ParseJsonCIS-input</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+        <task name="RenderJsonTAD">
+            <endingVariables>
+                <variable>RenderJsonTAD-input</variable>
+                <variable>ParseJsonCIS</variable>
+            </endingVariables>
+        </task>
+        <task name="ParseJsonTAD">
+            <endingVariables>
+                <variable>ParseJsonTAD-input</variable>
+                <variable>to3ByteHangle</variable>
+            </endingVariables>
+        </task>
+        <task name="RenderJsonCIS">
+            <endingVariables>
+                <variable>RenderJsonCIS-input</variable>
+                <variable>ParseJsonTAD</variable>
             </endingVariables>
         </task>
     </tibex:VariableDescriptor>
@@ -367,38 +389,6 @@
             <element name="XMLToJavaConversionException" type="tns:ConversionExceptionType"/>
             <element name="JavaEventSourceException" type="tns:JavaExceptionType"/>
             <element name="JavaEventSourceIllegalOperationException" type="tns:JavaExceptionType"/>
-        </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityInput"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityInput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityInput">
-            <complexType name="MutTypeMethodParameters">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="targetSystemId" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="jsonString" type="string"/>
-                </sequence>
-            </complexType>
-            <element name="JavaInvokeActivityInput" type="tns:MutTypeMethodInputRoot"/>
-            <complexType name="MutTypeMethodInputRoot">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="MethodParameters" type="tns:MutTypeMethodParameters"/>
-                </sequence>
-            </complexType>
-        </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityOutput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityOutput"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityOutput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityOutput">
-            <element name="JavaInvokeActivityOutput" type="tns:MutTypeMethodOutputRoot"/>
-            <complexType name="MutTypeMethodOutputRoot">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="MethodReturnValue" type="string"/>
-                </sequence>
-            </complexType>
         </schema>
         <schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -776,50 +766,6 @@
                 </sequence>
             </complexType>
         </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityInput"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityInput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityInput">
-            <complexType name="MutTypeMethodParameters">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="targetSystemId" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="jsonString" type="string"/>
-                </sequence>
-            </complexType>
-            <element name="JavaInvokeActivityInput" type="tns:MutTypeMethodInputRoot"/>
-            <complexType name="MutTypeMethodInputRoot">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="MethodParameters" type="tns:MutTypeMethodParameters"/>
-                </sequence>
-            </complexType>
-        </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityOutput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityOutput"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityOutput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityOutput">
-            <element name="JavaInvokeActivityOutput" type="tns:MutTypeMethodOutputRoot"/>
-            <complexType name="MutTypeMethodOutputRoot">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="MethodReturnValue" type="string"/>
-                </sequence>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+96760986-6554-4fda-8c18-be567d57335d"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.example.org/JavaExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+96760986-6554-4fda-8c18-be567d57335d">
-            <import namespace="http://www.example.org/JavaExceptions"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvocationException"/>
-                </choice>
-            </complexType>
-        </schema>
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+518a0aff-95f0-411d-beaf-a8741a718e16"
             xmlns="http://www.w3.org/2001/XMLSchema"
@@ -964,18 +910,6 @@
                 </choice>
             </complexType>
         </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+85cb6544-38d7-4933-b770-da81d426ac6f"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.example.org/JavaExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+85cb6544-38d7-4933-b770-da81d426ac6f">
-            <import namespace="http://www.example.org/JavaExceptions"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvocationException"/>
-                </choice>
-            </complexType>
-        </schema>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
             targetNamespace="http://www.tibco.com/pe/WriteToLogActivitySchema"
@@ -1040,6 +974,125 @@
                     <element maxOccurs="1" minOccurs="0" ref="Q1:InvocationException"/>
                 </choice>
             </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="activity.jsonParser.input+4c4faf1e-8a70-4484-8ef4-4164c0d08bbe+ActivityInputType"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="activity.jsonParser.input+4c4faf1e-8a70-4484-8ef4-4164c0d08bbe+ActivityInputType">
+            <complexType name="ActivityInputClassType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="jsonString" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityInputClass" type="tns:ActivityInputClassType"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions">
+            <element name="JSONActivityException" type="tns:JSONActivityException"/>
+            <complexType name="JSONActivityException">
+                <sequence>
+                    <element name="msg" type="string"/>
+                    <element minOccurs="0" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="UnsupportedEncodingException" type="tns:UnsupportedEncodingExceptionType"/>
+            <complexType name="UnsupportedEncodingExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException">
+                        <sequence>
+                            <element name="encoding" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="JSONParserExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="JSONParserException" type="tns:JSONParserExceptionType"/>
+            <complexType name="JSONTransformExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="JSONTransformException" type="tns:JSONTransformExceptionType"/>
+            <complexType name="JSONRenderExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="JSONRenderException" type="tns:JSONRenderExceptionType"/>
+            <complexType name="JSONRestExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="JSONRestException" type="tns:JSONRestExceptionType"/>
+            <complexType name="ValidationExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="ValidationException" type="tns:ValidationExceptionType"/>
+        </schema>
+        <schema
+            targetNamespace="activity.jsonRender.output+232e6c68-e301-4f86-8994-dd080ee6787a+ActivityOutputType"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="activity.jsonRender.output+232e6c68-e301-4f86-8994-dd080ee6787a+ActivityOutputType">
+            <complexType name="ActivityOutputClassType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="jsonString" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityOutputClass" type="tns:ActivityOutputClassType"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonParser"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonParser">
+            <import namespace="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JSONParserException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender">
+            <import namespace="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JSONRenderException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="activity.jsonParser.input+594e4720-bcf4-4c61-99f4-b27de5d45058+ActivityInputType"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="activity.jsonParser.input+594e4720-bcf4-4c61-99f4-b27de5d45058+ActivityInputType">
+            <complexType name="ActivityInputClassType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="jsonString" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityInputClass" type="tns:ActivityInputClassType"/>
+        </schema>
+        <schema
+            targetNamespace="activity.jsonRender.output+64a20820-bc04-45e4-866e-e725c01d7c95+ActivityOutputType"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="activity.jsonRender.output+64a20820-bc04-45e4-866e-e725c01d7c95+ActivityOutputType">
+            <complexType name="ActivityOutputClassType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="jsonString" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityOutputClass" type="tns:ActivityOutputClassType"/>
         </schema>
         <schema elementFormDefault="qualified"
             targetNamespace="http://www.tibco.com/tnt/utilitySchema"
@@ -1156,8 +1209,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="814"
-                                    xsi:type="notation:Bounds" y="227"/>
+                                    <layoutConstraint x="809"
+                                    xsi:type="notation:Bounds" y="233"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
                                     <children type="4017">
@@ -1195,47 +1248,6 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint
-                                    height="40" width="40"
-                                    x="135"
-                                    xsi:type="notation:Bounds" y="2"/>
-                                    </children>
-                                    <children type="4002 bw.java.javamethod">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="299"
@@ -1246,28 +1258,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1276,7 +1288,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="452"
@@ -1287,28 +1299,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1317,7 +1329,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="2"
@@ -1328,28 +1340,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1358,7 +1370,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="595"
@@ -1369,28 +1381,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1399,7 +1411,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="168"
@@ -1410,28 +1422,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1440,7 +1452,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="299"
@@ -1451,28 +1463,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1481,7 +1493,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="424"
@@ -1492,28 +1504,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1522,7 +1534,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="575"
@@ -1533,28 +1545,28 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="D2Coding"
@@ -1563,7 +1575,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="778"
@@ -1574,6 +1586,47 @@
                                     <styles
                                     fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="D2Coding"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="D2Coding"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="D2Coding"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="D2Coding"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.11"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="71"
+                                    xsi:type="notation:Bounds" y="307"/>
+                                    </children>
+                                    <children type="4002 bw.java.javamethod">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="D2Coding"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.12"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -1607,7 +1660,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.12"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="135"
+                                    x="10"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1648,7 +1701,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.13"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="23"
+                                    x="160"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1689,7 +1742,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.14"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="231"
+                                    x="341"
                                     xsi:type="notation:Bounds" y="227"/>
                                     </children>
                                     <children type="4002 bw.java.javamethod">
@@ -1730,114 +1783,32 @@
                                     <element href="//0/@process/@activity/@activity/@activities.15"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="414"
-                                    xsi:type="notation:Bounds" y="227"/>
-                                    </children>
-                                    <children type="4002 bw.java.javamethod">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
-                                    <layoutConstraint
-                                    height="40" width="40"
-                                    x="527"
-                                    xsi:type="notation:Bounds" y="227"/>
-                                    </children>
-                                    <children type="4002 bw.java.javamethod">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="D2Coding"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
-                                    <layoutConstraint
-                                    height="40" width="40"
-                                    x="658"
-                                    xsi:type="notation:Bounds" y="227"/>
+                                    x="437"
+                                    xsi:type="notation:Bounds" y="233"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.log">
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="맑은 고딕"
@@ -1846,7 +1817,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.16"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="675"
@@ -1856,25 +1827,91 @@
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.19"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.19"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.19"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.19"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.17"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="251"
+                                    xsi:type="notation:Bounds" y="227"/>
+                                    </children>
+                                    <children type="4002 bw.restjson.JsonParser">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.18"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="101"
+                                    xsi:type="notation:Bounds" y="2"/>
+                                    </children>
+                                    <children type="4002 bw.restjson.JsonRender">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="맑은 고딕"
@@ -1886,8 +1923,74 @@
                                     <element href="//0/@process/@activity/@activity/@activities.19"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="319"
-                                    xsi:type="notation:Bounds" y="227"/>
+                                    x="200"
+                                    xsi:type="notation:Bounds" y="2"/>
+                                    </children>
+                                    <children type="4002 bw.restjson.JsonParser">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.20"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="547"
+                                    xsi:type="notation:Bounds" y="233"/>
+                                    </children>
+                                    <children type="4002 bw.restjson.JsonRender">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.21"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="658"
+                                    xsi:type="notation:Bounds" y="233"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1901,7 +2004,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="384"
+                                    <layoutConstraint height="414"
                                     width="992" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -1912,8 +2015,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="365" width="444"
-                                x="30" xsi:type="notation:Bounds" y="20"/>
+                            <layoutConstraint height="414" width="995" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1923,7 +2025,8 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="409" width="519" xsi:type="notation:Bounds"/>
+                    <layoutConstraint height="438" width="995" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
@@ -1931,13 +2034,13 @@
             </children>
             <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="1337" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="490" width="1337" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.18" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1958,8 +2061,8 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -2002,8 +2105,8 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.11" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.13"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.17" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -2014,7 +2117,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.14"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.19" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.15" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -2025,7 +2128,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.15"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.16" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.20" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -2035,39 +2138,6 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.16"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.17" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.17"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="D2Coding" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.14" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.11"/>
-            <bendpoints points="[25, 0, -80, 0]$[81, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.11"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.13" type="4006">
             <children type="6002">
@@ -2075,31 +2145,76 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.12"/>
-            <bendpoints
-                points="[0, 25, 691, -90]$[0, 66, 691, -49]$[-786, 66, -95, -49]$[-786, 115, -95, 0]$[-715, 115, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <bendpoints points="[25, 0, -80, 0]$[81, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.19"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.15" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.13"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.13"
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.14"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <bendpoints
+                points="[0, 25, 691, -90]$[0, 66, 691, -49]$[-786, 66, -95, -49]$[-786, 115, -95, 0]$[-715, 115, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.17"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.14" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.11"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.11" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.12"/>
             <bendpoints points="[25, 0, -87, 0]$[88, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.13"/>
+            <bendpoints points="[25, 9, -85, 0]$[86, 0, -24, -9]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.16" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.14"/>
+            <bendpoints points="[25, 0, -55, 0]$[56, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.16"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.15"/>
+            <bendpoints
+                points="[25, 9, 698, -101]$[55, 9, 728, -101]$[55, 65, 728, -45]$[-673, 65, 0, -45]$[-673, 86, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
@@ -2109,42 +2224,52 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.15"/>
-            <bendpoints points="[25, 9, -85, 0]$[86, 0, -24, -9]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.18" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.16"/>
-            <bendpoints points="[25, 0, -55, 0]$[56, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, 0, -260, 0]$[261, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.18"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.19" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.17"/>
-            <bendpoints
-                points="[25, 9, 698, -101]$[55, 9, 728, -101]$[55, 65, 728, -45]$[-673, 65, 0, -45]$[-673, 86, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.19"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.18"/>
-            <bendpoints points="[25, 0, -260, 0]$[261, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.20"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.21" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.19"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.21"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.20"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -2194,8 +2319,26 @@
             namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns17"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/namespaces/tnt/plugins/tcp" prefix="tns18"/>
+        <tibex:namespaceItem
+            namespace="activity.jsonParser.input+4c4faf1e-8a70-4484-8ef4-4164c0d08bbe+ActivityInputType" prefix="tns19"/>
+        <tibex:namespaceItem
+            namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutReq" prefix="ns1"/>
+        <tibex:namespaceItem
+            namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_InReq" prefix="ns"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+        <tibex:namespaceItem
+            namespace="activity.jsonParser.input+594e4720-bcf4-4c61-99f4-b27de5d45058+ActivityInputType" prefix="tns20"/>
+        <tibex:namespaceItem
+            namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutRes" prefix="ns3"/>
+        <tibex:namespaceItem
+            namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_InRes" prefix="ns2"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_InReq"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutReq"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_OutRes"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/CISTADAHHE0080101_InRes"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -2212,12 +2355,6 @@
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:JavaInvokeActivityInput"
-            name="CIStoTAD-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns5:JavaInvokeActivityOutput"
-            name="CIStoTAD" sca-bpel:internal="true"/>
-        <bpws:variable element="ns6:ActivityErrorData"
-            name="_error_CIStoTAD" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:JavaInvokeActivityInput"
             name="to2ByteHangle-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns8:JavaInvokeActivityOutput"
@@ -2297,14 +2434,28 @@
             name="to3ByteHangle" sca-bpel:internal="true"/>
         <bpws:variable element="ns44:ActivityErrorData"
             name="_error_to3ByteHangle" sca-bpel:internal="true"/>
-        <bpws:variable element="ns45:JavaInvokeActivityInput"
-            name="TADtoCIS-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns46:JavaInvokeActivityOutput"
-            name="TADtoCIS" sca-bpel:internal="true"/>
-        <bpws:variable element="ns47:ActivityErrorData"
-            name="_error_TADtoCIS" sca-bpel:internal="true"/>
         <bpws:variable element="ns48:ActivityInput" name="ReqLog-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns48:ActivityInput" name="ResLog-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns49:ActivityInputClass"
+            name="ParseJsonCIS-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns50:root" name="ParseJsonCIS" sca-bpel:internal="true"/>
+        <bpws:variable element="ns51:ActivityErrorData"
+            name="_error_ParseJsonCIS" sca-bpel:internal="true"/>
+        <bpws:variable element="ns52:root" name="RenderJsonTAD-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns53:ActivityOutputClass"
+            name="RenderJsonTAD" sca-bpel:internal="true"/>
+        <bpws:variable element="ns54:ActivityErrorData"
+            name="_error_RenderJsonTAD" sca-bpel:internal="true"/>
+        <bpws:variable element="ns55:ActivityInputClass"
+            name="ParseJsonTAD-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns56:root" name="ParseJsonTAD" sca-bpel:internal="true"/>
+        <bpws:variable element="ns51:ActivityErrorData"
+            name="_error_ParseJsonTAD" sca-bpel:internal="true"/>
+        <bpws:variable element="ns57:root" name="RenderJsonCIS-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns58:ActivityOutputClass"
+            name="RenderJsonCIS" sca-bpel:internal="true"/>
+        <bpws:variable element="ns54:ActivityErrorData"
+            name="_error_RenderJsonCIS" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2317,8 +2468,7 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToCIStoTAD" tibex:linkType="SUCCESS"/>
-                <bpws:link name="JavaInvokeToEnd1" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToto2ByteHangle" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvoke1ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="WriteTCPDataToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="ReadTCPDataToEnd" tibex:linkType="SUCCESS"/>
@@ -2326,8 +2476,7 @@
                 <bpws:link name="ReadTCPData1ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvoke7ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JavaInvoke8ToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="JavaInvoke9ToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="JavaInvoke10ToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="to3ByteHangleToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="dumpLogTodumpFullLog" tibex:linkType="SUCCESS"/>
                 <bpws:link name="TCPCloseConnectionToconcatBytes" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Log1ToediBytesToJson" tibex:linkType="SUCCESS"/>
@@ -2336,6 +2485,10 @@
                 <bpws:link name="ReqStringToReqLog" tibex:linkType="SUCCESS"/>
                 <bpws:link name="ReqLogToTCPOpenConnection" tibex:linkType="SUCCESS"/>
                 <bpws:link name="TCPOpenConnectionToWriteTCPData" tibex:linkType="SUCCESS"/>
+                <bpws:link name="ParseJSONToto2ByteHangle" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RenderJSONToto2ByteHangle" tibex:linkType="SUCCESS"/>
+                <bpws:link name="ParseJsonTADToRenderJsonCIS" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RenderJSONToEnd" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -2343,7 +2496,7 @@
                     tibex:xpdlId="d2ac91f3-928e-4e90-af87-ed539599f4ab"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToCIStoTAD"/>
+                        <bpws:source linkName="StartToto2ByteHangle"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -2355,11 +2508,11 @@
                     name="End"
                     tibex:xpdlId="00c2c3b1-e4b1-4c8c-af13-3ac6ee1b754e" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="JavaInvoke10ToEnd"/>
+                        <bpws:target linkName="RenderJSONToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;TADtoCIS&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:subElement>&lt;tns:emsBody>&lt;xsl:value-of select=&quot;$TADtoCIS/MethodReturnValue&quot;/>&lt;/tns:emsBody>&lt;/tns:subElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RenderJsonCIS&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:subElement>&lt;tns:emsBody>&lt;xsl:value-of select=&quot;$RenderJsonCIS/jsonString&quot;/>&lt;/tns:emsBody>&lt;/tns:subElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2378,61 +2531,19 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="CIStoTAD-input"
-                    name="CIStoTAD" outputVariable="CIStoTAD"
-                    tibex:xpdlId="96760986-6554-4fda-8c18-be567d57335d" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="StartToCIStoTAD"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="JavaInvokeToEnd1"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityInput&quot; xmlns:tns=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;CIStoTAD-input&quot; match=&quot;/&quot;>&lt;tns2:JavaInvokeActivityInput>&lt;MethodParameters>&lt;targetSystemId>&lt;xsl:value-of select=&quot;&amp;quot;TAD&amp;quot;&quot;/>&lt;/targetSystemId>&lt;jsonString>&lt;xsl:value-of select=&quot;$Start/tns:emsBody&quot;/>&lt;/jsonString>&lt;/MethodParameters>&lt;/tns2:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity
-                            activityTypeID="bw.java.javamethod"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:java="http://ns.tibco.com/bw/palette/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
-                                    <value
-                                    className="com.hcis.eai.common.HCISHelper"
-                                    constructDeclaredClass="true"
-                                    icon="HcisCommon.smodule\Resources\icons\edit-node-48.png"
-                                    isNew="true"
-                                    isNewActivity="true"
-                                    methodName="baseMapping"
-                                    methodReturn="string" xsi:type="java:JavaMethod">
-                                    <methodParameter
-                                    paramName="targetSystemId" paramType="string"/>
-                                    <methodParameter
-                                    paramName="jsonString" paramType="string"/>
-                                    </value>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="to2ByteHangle-input"
                     name="to2ByteHangle" outputVariable="to2ByteHangle"
                     tibex:xpdlId="518a0aff-95f0-411d-beaf-a8741a718e16" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="JavaInvokeToEnd1"/>
+                        <bpws:target linkName="RenderJSONToto2ByteHangle"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="JavaInvoke1ToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;CIStoTAD&quot;/>&lt;xsl:template name=&quot;to2ByteHangle-input&quot; match=&quot;/&quot;>&lt;tns3:JavaInvokeActivityInput>&lt;MethodParameters>&lt;data>&lt;xsl:value-of select=&quot;$CIStoTAD/MethodReturnValue&quot;/>&lt;/data>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;/MethodParameters>&lt;/tns3:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RenderJsonTAD&quot;/>&lt;xsl:template name=&quot;to2ByteHangle-input&quot; match=&quot;/&quot;>&lt;tns3:JavaInvokeActivityInput>&lt;MethodParameters>&lt;data>&lt;xsl:value-of select=&quot;$RenderJsonTAD/jsonString&quot;/>&lt;/data>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;/MethodParameters>&lt;/tns3:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2937,7 +3048,7 @@
                         <bpws:target linkName="JavaInvoke8ToEnd"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="JavaInvoke9ToEnd"/>
+                        <bpws:source linkName="to3ByteHangleToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -2965,48 +3076,6 @@
                                     paramName="data" paramType="string"/>
                                     <methodParameter
                                     paramName="encoding" paramType="string"/>
-                                    </value>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="TADtoCIS-input"
-                    name="TADtoCIS" outputVariable="TADtoCIS"
-                    tibex:xpdlId="85cb6544-38d7-4933-b770-da81d426ac6f" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="JavaInvoke9ToEnd"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="JavaInvoke10ToEnd"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns16=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;to3ByteHangle&quot;/>&lt;xsl:template name=&quot;TADtoCIS-input&quot; match=&quot;/&quot;>&lt;tns16:JavaInvokeActivityInput>&lt;MethodParameters>&lt;targetSystemId>&lt;xsl:value-of select=&quot;&amp;quot;CIS&amp;quot;&quot;/>&lt;/targetSystemId>&lt;jsonString>&lt;xsl:value-of select=&quot;$to3ByteHangle/MethodReturnValue&quot;/>&lt;/jsonString>&lt;/MethodParameters>&lt;/tns16:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity
-                            activityTypeID="bw.java.javamethod"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:java="http://ns.tibco.com/bw/palette/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
-                                    <value
-                                    className="com.hcis.eai.common.HCISHelper"
-                                    constructDeclaredClass="true"
-                                    icon="HcisCommon.smodule\Resources\icons\edit-node-48.png"
-                                    isNew="true"
-                                    isNewActivity="true"
-                                    methodName="baseMapping"
-                                    methodReturn="string" xsi:type="java:JavaMethod">
-                                    <methodParameter
-                                    paramName="targetSystemId" paramType="string"/>
-                                    <methodParameter
-                                    paramName="jsonString" paramType="string"/>
                                     </value>
                                 </properties>
                             </activityConfig>
@@ -3074,6 +3143,142 @@
                                     <value controlBy="Application"
                                     role="Info"
                                     suppressJobInfo="true" xsi:type="generalactivities:Log"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="ParseJsonCIS-input"
+                    name="ParseJsonCIS" outputVariable="ParseJsonCIS"
+                    tibex:xpdlId="4c4faf1e-8a70-4484-8ef4-4164c0d08bbe" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToto2ByteHangle"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="ParseJSONToto2ByteHangle"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns19=&quot;activity.jsonParser.input+4c4faf1e-8a70-4484-8ef4-4164c0d08bbe+ActivityInputType&quot; xmlns:tns=&quot;http://www.example.org/Schema_SubProc&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ParseJsonCIS-input&quot; match=&quot;/&quot;>&lt;tns19:ActivityInputClass>&lt;jsonString>&lt;xsl:value-of select=&quot;$Start/tns:emsBody&quot;/>&lt;/jsonString>&lt;/tns19:ActivityInputClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.restjson.JsonParser"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:restjson="http://ns.tibco.com/bw/palette/restjson" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/restjson#//JsonParser"/>
+                                    <value jsonInputStyle="None"
+                                    schemaType="Xsd" xsi:type="restjson:JsonParser">
+                                    <outputEditorElement href="platform:/resource/CISTAD201.module/Schemas/CISTADAHHE/CISTADAHHE0080101/CISTADAHHE0080101_InReq.xsd#//root;XSDElementDeclaration"/>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="RenderJsonTAD-input"
+                    name="RenderJsonTAD" outputVariable="RenderJsonTAD"
+                    tibex:xpdlId="232e6c68-e301-4f86-8994-dd080ee6787a" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="ParseJSONToto2ByteHangle"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="RenderJSONToto2ByteHangle"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://schema.hcis.com/xsd/CISTADAHHE0080101_InReq&quot; xmlns:ns1=&quot;http://schema.hcis.com/xsd/CISTADAHHE0080101_OutReq&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJsonCIS&quot;/>&lt;xsl:template name=&quot;RenderJsonTAD-input&quot; match=&quot;/&quot;>&lt;ns1:root>&lt;ns1:header>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:totTgrmLen&quot;>&lt;ns1:totTgrmLen>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:totTgrmLen&quot;/>&lt;/ns1:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:hdrLen&quot;>&lt;ns1:hdrLen>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:hdrLen&quot;/>&lt;/ns1:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:tgrmFrmCd&quot;>&lt;ns1:tgrmFrmCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:tgrmFrmCd&quot;/>&lt;/ns1:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:sysEnvGbcd&quot;>&lt;ns1:sysEnvGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:sysEnvGbcd&quot;/>&lt;/ns1:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:ipAdr&quot;>&lt;ns1:ipAdr>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:ipAdr&quot;/>&lt;/ns1:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:guid&quot;>&lt;ns1:guid>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:guid&quot;/>&lt;/ns1:guid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:prgrNo&quot;>&lt;ns1:prgrNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:prgrNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:prgrNo&quot;/>&lt;/ns1:prgrNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:frstGuid&quot;>&lt;ns1:frstGuid>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:frstGuid&quot;/>&lt;/ns1:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:sendSysCd&quot;>&lt;ns1:sendSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:sendSysCd&quot;/>&lt;/ns1:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:frstSendSysCd&quot;>&lt;ns1:frstSendSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:frstSendSysCd&quot;/>&lt;/ns1:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:sysCommTrtyPrepCntn&quot;>&lt;ns1:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:sysCommTrtyPrepCntn&quot;/>&lt;/ns1:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:eimsTgrmId&quot;>&lt;ns1:eimsTgrmId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:eimsTgrmId&quot;/>&lt;/ns1:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:eimsTgrmVerNo&quot;>&lt;ns1:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:eimsTgrmVerNo&quot;/>&lt;/ns1:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:frwkTrdId&quot;>&lt;ns1:frwkTrdId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:frwkTrdId&quot;/>&lt;/ns1:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:rcvSysCd&quot;>&lt;ns1:rcvSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:rcvSysCd&quot;/>&lt;/ns1:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:tieTgrmCd&quot;>&lt;ns1:tieTgrmCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:tieTgrmCd&quot;/>&lt;/ns1:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:tieSrvGrpCd&quot;>&lt;ns1:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:tieSrvGrpCd&quot;/>&lt;/ns1:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:tieSrvNm&quot;>&lt;ns1:tieSrvNm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:tieSrvNm&quot;/>&lt;/ns1:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:scrnNo&quot;>&lt;ns1:scrnNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:scrnNo&quot;/>&lt;/ns1:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:reqnRespGbcd&quot;>&lt;ns1:reqnRespGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:reqnRespGbcd&quot;/>&lt;/ns1:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:syncProcGbcd&quot;>&lt;ns1:syncProcGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:syncProcGbcd&quot;/>&lt;/ns1:syncProcGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:trdRespCd&quot;>&lt;ns1:trdRespCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:trdRespCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:trdRespCd&quot;/>&lt;/ns1:trdRespCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:reqnDtm&quot;>&lt;ns1:reqnDtm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:reqnDtm&quot;/>&lt;/ns1:reqnDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:respDtm&quot;>&lt;ns1:respDtm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:respDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:respDtm&quot;/>&lt;/ns1:respDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:storeCd&quot;>&lt;ns1:storeCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:storeCd&quot;/>&lt;/ns1:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:userId&quot;>&lt;ns1:userId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:userId&quot;/>&lt;/ns1:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns:header/ns:trdCommTrtyPrepCntn&quot;>&lt;ns1:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:header/ns:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:header/ns:trdCommTrtyPrepCntn&quot;/>&lt;/ns1:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;ns1:msgCd>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/ns1:msgCd>&lt;/ns1:header>&lt;ns1:data>&lt;ns1:srchGroup>&lt;ns1:storeCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:storeCd&quot;/>&lt;/ns1:storeCd>&lt;ns1:aprvId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:aprvId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:aprvId&quot;/>&lt;/ns1:aprvId>&lt;ns1:strtYm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:strtYm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:strtYm&quot;/>&lt;/ns1:strtYm>&lt;ns1:endYm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:endYm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:endYm&quot;/>&lt;/ns1:endYm>&lt;ns1:nxtSrchKey>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:nxtSrchKey/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns:data/ns:srchGroup/ns:nxtSrchKey&quot;/>&lt;/ns1:nxtSrchKey>&lt;/ns1:srchGroup>&lt;/ns1:data>&lt;/ns1:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.restjson.JsonRender"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:restjson="http://ns.tibco.com/bw/palette/restjson" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/restjson#//JsonRender"/>
+                                    <value jsonOutputStyle="None"
+                                    schemaType="Xsd" xsi:type="restjson:JsonRender">
+                                    <inputEditorElement href="platform:/resource/CISTAD201.module/Schemas/CISTADAHHE/CISTADAHHE0080101/CISTADAHHE0080101_OutReq.xsd#//root;XSDElementDeclaration"/>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="ParseJsonTAD-input"
+                    name="ParseJsonTAD" outputVariable="ParseJsonTAD"
+                    tibex:xpdlId="594e4720-bcf4-4c61-99f4-b27de5d45058" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="to3ByteHangleToEnd"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="ParseJsonTADToRenderJsonCIS"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns20=&quot;activity.jsonParser.input+594e4720-bcf4-4c61-99f4-b27de5d45058+ActivityInputType&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;to3ByteHangle&quot;/>&lt;xsl:template name=&quot;ParseJsonTAD-input&quot; match=&quot;/&quot;>&lt;tns20:ActivityInputClass>&lt;jsonString>&lt;xsl:value-of select=&quot;$to3ByteHangle/MethodReturnValue&quot;/>&lt;/jsonString>&lt;/tns20:ActivityInputClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.restjson.JsonParser"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:restjson="http://ns.tibco.com/bw/palette/restjson" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/restjson#//JsonParser"/>
+                                    <value jsonInputStyle="None"
+                                    schemaType="Xsd" xsi:type="restjson:JsonParser">
+                                    <outputEditorElement href="platform:/resource/CISTAD201.module/Schemas/CISTADAHHE/CISTADAHHE0080101/CISTADAHHE0080101_OutRes.xsd#//root;XSDElementDeclaration"/>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="RenderJsonCIS-input"
+                    name="RenderJsonCIS" outputVariable="RenderJsonCIS"
+                    tibex:xpdlId="64a20820-bc04-45e4-866e-e725c01d7c95" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="ParseJsonTADToRenderJsonCIS"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="RenderJSONToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns3=&quot;http://schema.hcis.com/xsd/CISTADAHHE0080101_OutRes&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/CISTADAHHE0080101_InRes&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJsonTAD&quot;/>&lt;xsl:template name=&quot;RenderJsonCIS-input&quot; match=&quot;/&quot;>&lt;ns2:root>&lt;ns2:header>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:totTgrmLen&quot;>&lt;ns2:totTgrmLen>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:totTgrmLen&quot;/>&lt;/ns2:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:hdrLen&quot;>&lt;ns2:hdrLen>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:hdrLen&quot;/>&lt;/ns2:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:tgrmFrmCd&quot;>&lt;ns2:tgrmFrmCd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:tgrmFrmCd&quot;/>&lt;/ns2:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:sysEnvGbcd&quot;>&lt;ns2:sysEnvGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:sysEnvGbcd&quot;/>&lt;/ns2:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:ipAdr&quot;>&lt;ns2:ipAdr>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:ipAdr&quot;/>&lt;/ns2:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:guid&quot;>&lt;ns2:guid>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:guid&quot;/>&lt;/ns2:guid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:prgrNo&quot;>&lt;ns2:prgrNo>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:prgrNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:prgrNo&quot;/>&lt;/ns2:prgrNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:frstGuid&quot;>&lt;ns2:frstGuid>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:frstGuid&quot;/>&lt;/ns2:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:sendSysCd&quot;>&lt;ns2:sendSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:sendSysCd&quot;/>&lt;/ns2:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:frstSendSysCd&quot;>&lt;ns2:frstSendSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:frstSendSysCd&quot;/>&lt;/ns2:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:sysCommTrtyPrepCntn&quot;>&lt;ns2:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:sysCommTrtyPrepCntn&quot;/>&lt;/ns2:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:eimsTgrmId&quot;>&lt;ns2:eimsTgrmId>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:eimsTgrmId&quot;/>&lt;/ns2:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:eimsTgrmVerNo&quot;>&lt;ns2:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:eimsTgrmVerNo&quot;/>&lt;/ns2:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:frwkTrdId&quot;>&lt;ns2:frwkTrdId>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:frwkTrdId&quot;/>&lt;/ns2:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:rcvSysCd&quot;>&lt;ns2:rcvSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:rcvSysCd&quot;/>&lt;/ns2:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:tieTgrmCd&quot;>&lt;ns2:tieTgrmCd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:tieTgrmCd&quot;/>&lt;/ns2:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:tieSrvGrpCd&quot;>&lt;ns2:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:tieSrvGrpCd&quot;/>&lt;/ns2:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:tieSrvNm&quot;>&lt;ns2:tieSrvNm>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:tieSrvNm&quot;/>&lt;/ns2:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:scrnNo&quot;>&lt;ns2:scrnNo>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:scrnNo&quot;/>&lt;/ns2:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:reqnRespGbcd&quot;>&lt;ns2:reqnRespGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:reqnRespGbcd&quot;/>&lt;/ns2:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:syncProcGbcd&quot;>&lt;ns2:syncProcGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:syncProcGbcd&quot;/>&lt;/ns2:syncProcGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:trdRespCd&quot;>&lt;ns2:trdRespCd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:trdRespCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:trdRespCd&quot;/>&lt;/ns2:trdRespCd>&lt;/xsl:if>&lt;ns2:pageNo>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:pageNo>&lt;ns2:pageRowCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:pageRowCnt>&lt;ns2:totRowCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:totRowCnt>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:reqnDtm&quot;>&lt;ns2:reqnDtm>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:reqnDtm&quot;/>&lt;/ns2:reqnDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:respDtm&quot;>&lt;ns2:respDtm>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:respDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:respDtm&quot;/>&lt;/ns2:respDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:storeCd&quot;>&lt;ns2:storeCd>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:storeCd&quot;/>&lt;/ns2:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:userId&quot;>&lt;ns2:userId>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:userId&quot;/>&lt;/ns2:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonTAD/ns3:header/ns3:trdCommTrtyPrepCntn&quot;>&lt;ns2:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:header/ns3:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:header/ns3:trdCommTrtyPrepCntn&quot;/>&lt;/ns2:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;/ns2:header>&lt;ns2:data>&lt;ns2:nxtSrchKey>&lt;xsl:copy-of select=&quot;$ParseJsonTAD/ns3:data/ns3:nxtSrchKey/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonTAD/ns3:data/ns3:nxtSrchKey&quot;/>&lt;/ns2:nxtSrchKey>&lt;xsl:choose>&lt;xsl:when test=&quot;count($ParseJsonTAD/ns3:data/ns3:rstList)>0&quot;>&lt;ns2:rstRowcount>&lt;xsl:value-of select=&quot;xsd:long(count($ParseJsonTAD/ns3:data/ns3:rstList))&quot;/>&lt;/ns2:rstRowcount>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:rstRowcount>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:rstRowcount>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;count($ParseJsonTAD/ns3:data/ns3:rstList)>0&quot;>&lt;xsl:for-each select=&quot;$ParseJsonTAD/ns3:data/ns3:rstList&quot;>&lt;ns2:rstList>&lt;ns2:storeCd>&lt;xsl:copy-of select=&quot;ns3:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns3:storeCd&quot;/>&lt;/ns2:storeCd>&lt;ns2:aprvId>&lt;xsl:copy-of select=&quot;ns3:aprvId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns3:aprvId&quot;/>&lt;/ns2:aprvId>&lt;ns2:aprvlGbcd>&lt;xsl:copy-of select=&quot;ns3:aprvlGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;ns3:aprvlGbcd&quot;/>&lt;/ns2:aprvlGbcd>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(ns3:rstTotCnt)>0&quot;>&lt;ns2:rstTotCnt>&lt;xsl:value-of select=&quot;xsd:long(ns3:rstTotCnt)&quot;/>&lt;/ns2:rstTotCnt>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:rstTotCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:rstTotCnt>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(ns3:rstTotAmt)>0&quot;>&lt;ns2:rstTotAmt>&lt;xsl:value-of select=&quot;xsd:long(ns3:rstTotAmt)&quot;/>&lt;/ns2:rstTotAmt>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:rstTotAmt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:rstTotAmt>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(ns3:aprvlCnt)>0&quot;>&lt;ns2:aprvlCnt>&lt;xsl:value-of select=&quot;xsd:long(ns3:aprvlCnt)&quot;/>&lt;/ns2:aprvlCnt>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:aprvlCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:aprvlCnt>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(ns3:aprvlAmt)>0&quot;>&lt;ns2:aprvlAmt>&lt;xsl:value-of select=&quot;xsd:long(ns3:aprvlAmt)&quot;/>&lt;/ns2:aprvlAmt>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:aprvlAmt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:aprvlAmt>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(ns3:cnclCnt)>0&quot;>&lt;ns2:cnclCnt>&lt;xsl:value-of select=&quot;xsd:long(ns3:cnclCnt)&quot;/>&lt;/ns2:cnclCnt>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:cnclCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:cnclCnt>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(ns3:cnclAmt)>0&quot;>&lt;ns2:cnclAmt>&lt;xsl:value-of select=&quot;xsd:long(ns3:cnclAmt)&quot;/>&lt;/ns2:cnclAmt>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:cnclAmt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:cnclAmt>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(ns3:aprvlNdmtCnt)>0&quot;>&lt;ns2:aprvlNdmtCnt>&lt;xsl:value-of select=&quot;xsd:long(ns3:aprvlNdmtCnt)&quot;/>&lt;/ns2:aprvlNdmtCnt>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:aprvlNdmtCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:aprvlNdmtCnt>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(ns3:aprvlNdmtAmt)>0&quot;>&lt;ns2:aprvlNdmtAmt>&lt;xsl:value-of select=&quot;xsd:long(ns3:aprvlNdmtAmt)&quot;/>&lt;/ns2:aprvlNdmtAmt>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:aprvlNdmtAmt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:aprvlNdmtAmt>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/ns2:rstList>&lt;/xsl:for-each>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns2:rstList>&lt;ns2:storeCd>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/ns2:storeCd>&lt;ns2:aprvId>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/ns2:aprvId>&lt;ns2:aprvlGbcd>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/ns2:aprvlGbcd>&lt;ns2:rstTotCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:rstTotCnt>&lt;ns2:rstTotAmt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:rstTotAmt>&lt;ns2:aprvlCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:aprvlCnt>&lt;ns2:aprvlAmt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:aprvlAmt>&lt;ns2:cnclCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:cnclCnt>&lt;ns2:cnclAmt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:cnclAmt>&lt;ns2:aprvlNdmtCnt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:aprvlNdmtCnt>&lt;ns2:aprvlNdmtAmt>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/ns2:aprvlNdmtAmt>&lt;/ns2:rstList>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/ns2:data>&lt;/ns2:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.restjson.JsonRender"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:restjson="http://ns.tibco.com/bw/palette/restjson" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/restjson#//JsonRender"/>
+                                    <value jsonOutputStyle="None"
+                                    schemaType="Xsd" xsi:type="restjson:JsonRender">
+                                    <inputEditorElement href="platform:/resource/CISTAD201.module/Schemas/CISTADAHHE/CISTADAHHE0080101/CISTADAHHE0080101_InRes.xsd#//root;XSDElementDeclaration"/>
+                                    </value>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>
