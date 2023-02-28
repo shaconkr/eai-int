@@ -17,6 +17,6 @@
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_YEDcQZeYEe2izowMkiietQ" processName="CISSPG201.module.Activator"/>
   </sca:component>
   <sca:component xmi:id="_TuCAMKNqEe2TuZGFJF3wYA" name="ComponentCISSPGMTPH9000901_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_TuCAMaNqEe2TuZGFJF3wYA" processName="CISSPGMTPH.CISSPGMTPH9000901_Main"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_TuCAMaNqEe2TuZGFJF3wYA" processName="CISSPGMTPH.CISSPGMTPH9000901.CISSPGMTPH9000901_Main"/>
   </sca:component>
 </sca:composite>

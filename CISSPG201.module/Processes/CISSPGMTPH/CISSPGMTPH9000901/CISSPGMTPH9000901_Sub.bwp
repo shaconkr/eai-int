@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="CISHPTMTPC.CISHPTMTPC9000201.CISHPTMTPC9000201_Sub"
+    name="CISSPGMTPH.CISSPGMTPH9000901.CISSPGMTPH9000901_Sub"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20230224092237"
+    targetNamespace="http://xmlns.example.com/20230117102008"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://www.example.org/Schema_SubProc"
-    xmlns:ns1="http://tns.tibco.com/bw/activity/sendhttprequest/input+b7cadf0c-c046-4466-8cbe-aa11dedd7dd1+RequestActivityInput"
-    xmlns:ns2="http://tns.tibco.com/bw/activity/sendhttprequest/output+b7cadf0c-c046-4466-8cbe-aa11dedd7dd1+RequestActivityOutput"
-    xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest"
-    xmlns:ns4="http://tns.tibco.com/bw/activity/sendhttprequest/input+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityInput"
-    xmlns:ns5="http://tns.tibco.com/bw/activity/sendhttprequest/output+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityOutput"
+    xmlns:ns1="www.tibco.com/plugin/java/JavaInvokeActivityInput+bc8544e5-10bb-4701-abef-e7b40d9ff109+JavaInvokeActivityInput"
+    xmlns:ns10="www.tibco.com/plugin/java/JavaInvokeActivityInput+c5a0480a-5408-4867-ba6f-a18d27f0c13a+JavaInvokeActivityInput"
+    xmlns:ns11="www.tibco.com/plugin/java/JavaInvokeActivityOutput+c5a0480a-5408-4867-ba6f-a18d27f0c13a+JavaInvokeActivityOutput"
+    xmlns:ns12="http://tns.tibco.com/bw/palette/internal/activityerror+c5a0480a-5408-4867-ba6f-a18d27f0c13a"
+    xmlns:ns13="http://www.tibco.com/namespaces/tnt/plugins/tcp"
+    xmlns:ns14="http://tns.tibco.com/bw/palette/internal/activityerror+bw.tcp.tcpopenconnection"
+    xmlns:ns15="www.tibco.com/plugin/java/JavaInvokeActivityInput+d0599020-2a11-445b-b939-af39d574af8d+JavaInvokeActivityInput"
+    xmlns:ns16="www.tibco.com/plugin/java/JavaInvokeActivityOutput+d0599020-2a11-445b-b939-af39d574af8d+JavaInvokeActivityOutput"
+    xmlns:ns17="http://tns.tibco.com/bw/palette/internal/activityerror+d0599020-2a11-445b-b939-af39d574af8d"
+    xmlns:ns18="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpwritedata+e30b49f6-0f66-436c-9561-575ceeb3761e+ActivityInput"
+    xmlns:ns19="http://tns.tibco.com/bw/palette/internal/activityerror+bw.tcp.write"
+    xmlns:ns2="www.tibco.com/plugin/java/JavaInvokeActivityOutput+bc8544e5-10bb-4701-abef-e7b40d9ff109+JavaInvokeActivityOutput"
+    xmlns:ns20="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+bd2b8326-32d7-491b-866b-3f6256299563+ActivityInput"
+    xmlns:ns21="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataOutput+bd2b8326-32d7-491b-866b-3f6256299563+ActivityOutput"
+    xmlns:ns22="http://tns.tibco.com/bw/palette/internal/activityerror+bw.tcp.read"
+    xmlns:ns23="www.tibco.com/plugin/java/JavaInvokeActivityInput+f1459c31-d7b5-4c07-948c-ae1557831f3e+JavaInvokeActivityInput"
+    xmlns:ns24="www.tibco.com/plugin/java/JavaInvokeActivityOutput+f1459c31-d7b5-4c07-948c-ae1557831f3e+JavaInvokeActivityOutput"
+    xmlns:ns25="http://tns.tibco.com/bw/palette/internal/activityerror+f1459c31-d7b5-4c07-948c-ae1557831f3e"
+    xmlns:ns26="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+21a1f938-05b2-4a07-a634-d848c99adb67+ActivityInput"
+    xmlns:ns27="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataOutput+21a1f938-05b2-4a07-a634-d848c99adb67+ActivityOutput"
+    xmlns:ns28="http://xmlns.tibco.com/2003/5/bw/plugins/tcp/tcpcloseconnection"
+    xmlns:ns29="http://tns.tibco.com/bw/palette/internal/activityerror+bw.tcp.tcpcloseconnection"
+    xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bc8544e5-10bb-4701-abef-e7b40d9ff109"
+    xmlns:ns30="www.tibco.com/plugin/java/JavaInvokeActivityInput+a80b5706-d1da-4262-8aed-90916746fa84+JavaInvokeActivityInput"
+    xmlns:ns31="www.tibco.com/plugin/java/JavaInvokeActivityOutput+a80b5706-d1da-4262-8aed-90916746fa84+JavaInvokeActivityOutput"
+    xmlns:ns32="http://tns.tibco.com/bw/palette/internal/activityerror+a80b5706-d1da-4262-8aed-90916746fa84"
+    xmlns:ns33="www.tibco.com/plugin/java/JavaInvokeActivityInput+5f0a3f4a-7fda-46b0-bded-2137ef235a73+JavaInvokeActivityInput"
+    xmlns:ns34="www.tibco.com/plugin/java/JavaInvokeActivityOutput+5f0a3f4a-7fda-46b0-bded-2137ef235a73+JavaInvokeActivityOutput"
+    xmlns:ns35="http://tns.tibco.com/bw/palette/internal/activityerror+5f0a3f4a-7fda-46b0-bded-2137ef235a73"
+    xmlns:ns36="www.tibco.com/plugin/java/JavaInvokeActivityInput+e149f409-d975-4be9-861e-40526c7315a4+JavaInvokeActivityInput"
+    xmlns:ns37="www.tibco.com/plugin/java/JavaInvokeActivityOutput+e149f409-d975-4be9-861e-40526c7315a4+JavaInvokeActivityOutput"
+    xmlns:ns38="http://tns.tibco.com/bw/palette/internal/activityerror+e149f409-d975-4be9-861e-40526c7315a4"
+    xmlns:ns39="www.tibco.com/plugin/java/JavaInvokeActivityInput+6b687899-e635-4e5c-bc28-898c9c3bceed+JavaInvokeActivityInput"
+    xmlns:ns4="www.tibco.com/plugin/java/JavaInvokeActivityInput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityInput"
+    xmlns:ns40="www.tibco.com/plugin/java/JavaInvokeActivityOutput+6b687899-e635-4e5c-bc28-898c9c3bceed+JavaInvokeActivityOutput"
+    xmlns:ns41="http://tns.tibco.com/bw/palette/internal/activityerror+6b687899-e635-4e5c-bc28-898c9c3bceed"
+    xmlns:ns42="www.tibco.com/plugin/java/JavaInvokeActivityInput+353a6863-8f11-4e9a-b2be-484e9aef6486+JavaInvokeActivityInput"
+    xmlns:ns43="www.tibco.com/plugin/java/JavaInvokeActivityOutput+353a6863-8f11-4e9a-b2be-484e9aef6486+JavaInvokeActivityOutput"
+    xmlns:ns44="http://tns.tibco.com/bw/palette/internal/activityerror+353a6863-8f11-4e9a-b2be-484e9aef6486"
+    xmlns:ns45="www.tibco.com/plugin/java/JavaInvokeActivityInput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityInput"
+    xmlns:ns46="www.tibco.com/plugin/java/JavaInvokeActivityOutput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityOutput"
+    xmlns:ns47="http://tns.tibco.com/bw/palette/internal/activityerror+85cb6544-38d7-4933-b770-da81d426ac6f"
+    xmlns:ns48="www.tibco.com/plugin/java/JavaInvokeActivityInput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityInput"
+    xmlns:ns49="www.tibco.com/plugin/java/JavaInvokeActivityOutput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityOutput"
+    xmlns:ns5="www.tibco.com/plugin/java/JavaInvokeActivityOutput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityOutput"
+    xmlns:ns50="http://tns.tibco.com/bw/palette/internal/activityerror+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90"
+    xmlns:ns51="http://tns.tibco.com/bw/activity/sendhttprequest/input+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityInput"
+    xmlns:ns52="http://tns.tibco.com/bw/activity/sendhttprequest/output+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityOutput"
+    xmlns:ns53="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest"
+    xmlns:ns6="http://tns.tibco.com/bw/palette/internal/activityerror+96760986-6554-4fda-8c18-be567d57335d"
+    xmlns:ns7="www.tibco.com/plugin/java/JavaInvokeActivityInput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityInput"
+    xmlns:ns8="www.tibco.com/plugin/java/JavaInvokeActivityOutput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityOutput"
+    xmlns:ns9="http://tns.tibco.com/bw/palette/internal/activityerror+518a0aff-95f0-411d-beaf-a8741a718e16"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -231,6 +279,140 @@
             </complexType>
             <element name="mimeEnvelopeElement" type="tns:mimeEnvelopeElementType"/>
         </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityInput"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/input+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityInput">
+            <import namespace="http://xmlns.tibco.com/encodings/mime"/>
+            <complexType name="inputHeadersType">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="Accept" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Accept-Charset" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Accept-Encoding" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Content-Type" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Cookie" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Pragma" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="DynamicHeaders">
+                <sequence>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="Header" type="tns:Header"/>
+                </sequence>
+            </complexType>
+            <complexType name="Header">
+                <sequence>
+                    <element form="unqualified" name="Name" type="string"/>
+                    <element form="unqualified" name="Value" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="statusLineType">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="httpVersion" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="statusCode" type="int"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="reasonPhrase" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="RequestActivityInput">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Host" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Port" type="int"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Method" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="RequestURI" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="PostData" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="QueryString" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Timeout" type="int"/>
+                    <element maxOccurs="1" minOccurs="0" name="Headers" type="tns:inputHeadersType"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="DynamicHeaders" type="tns:DynamicHeaders"/>
+                    <element minOccurs="0" ref="ns0:mimeEnvelopeElement"/>
+                </sequence>
+            </complexType>
+            <element name="RequestActivityInput" type="tns:RequestActivityInput"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/output+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityOutput"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/output+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityOutput">
+            <import namespace="http://xmlns.tibco.com/encodings/mime"/>
+            <complexType name="outputHeadersType">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="Allow" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Content-Type" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Content-Length" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Content-Encoding" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Date" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Location" type="string"/>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="Set-Cookie" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Pragma" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="DynamicHeaders">
+                <sequence>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="Header" type="tns:Header"/>
+                </sequence>
+            </complexType>
+            <complexType name="Header">
+                <sequence>
+                    <element form="unqualified" name="Name" type="string"/>
+                    <element form="unqualified" name="Value" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="statusLineType">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="httpVersion" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="statusCode" type="int"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="reasonPhrase" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="RequestActivityOutput">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="Header" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="statusLine" type="tns:statusLineType"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="binaryContent" type="base64Binary"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="asciiContent" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="filePath" type="string"/>
+                    <element maxOccurs="1" minOccurs="0" name="Headers" type="tns:outputHeadersType"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="DynamicHeaders" type="tns:DynamicHeaders"/>
+                    <element minOccurs="0" ref="ns0:mimeEnvelopeElement"/>
+                </sequence>
+            </complexType>
+            <element name="RequestActivityOutput" type="tns:RequestActivityOutput"/>
+        </schema>
         <schema attributeFormDefault="unqualified"
             elementFormDefault="unqualified"
             targetNamespace="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions"
@@ -326,143 +508,9 @@
                 </choice>
             </complexType>
         </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityInput"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/input+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityInput">
-            <import namespace="http://xmlns.tibco.com/encodings/mime"/>
-            <complexType name="inputHeadersType">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="Accept" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Accept-Charset" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Accept-Encoding" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Content-Type" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Cookie" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Pragma" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="DynamicHeaders">
-                <sequence>
-                    <element form="unqualified" maxOccurs="unbounded"
-                        minOccurs="0" name="Header" type="tns:Header"/>
-                </sequence>
-            </complexType>
-            <complexType name="Header">
-                <sequence>
-                    <element form="unqualified" name="Name" type="string"/>
-                    <element form="unqualified" name="Value" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="statusLineType">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="httpVersion" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="statusCode" type="int"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="reasonPhrase" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="RequestActivityInput">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Host" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Port" type="int"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Method" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="RequestURI" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="PostData" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="QueryString" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Timeout" type="int"/>
-                    <element maxOccurs="1" minOccurs="0" name="Headers" type="tns:inputHeadersType"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="DynamicHeaders" type="tns:DynamicHeaders"/>
-                    <element minOccurs="0" ref="ns0:mimeEnvelopeElement"/>
-                </sequence>
-            </complexType>
-            <element name="RequestActivityInput" type="tns:RequestActivityInput"/>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/output+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityOutput"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/output+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityOutput">
-            <import namespace="http://xmlns.tibco.com/encodings/mime"/>
-            <complexType name="outputHeadersType">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="Allow" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Content-Type" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Content-Length" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Content-Encoding" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Date" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Location" type="string"/>
-                    <element form="unqualified" maxOccurs="unbounded"
-                        minOccurs="0" name="Set-Cookie" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Pragma" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="DynamicHeaders">
-                <sequence>
-                    <element form="unqualified" maxOccurs="unbounded"
-                        minOccurs="0" name="Header" type="tns:Header"/>
-                </sequence>
-            </complexType>
-            <complexType name="Header">
-                <sequence>
-                    <element form="unqualified" name="Name" type="string"/>
-                    <element form="unqualified" name="Value" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="statusLineType">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="httpVersion" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="statusCode" type="int"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="reasonPhrase" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="RequestActivityOutput">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="Header" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="statusLine" type="tns:statusLineType"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="binaryContent" type="base64Binary"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="asciiContent" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="filePath" type="string"/>
-                    <element maxOccurs="1" minOccurs="0" name="Headers" type="tns:outputHeadersType"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="DynamicHeaders" type="tns:DynamicHeaders"/>
-                    <element minOccurs="0" ref="ns0:mimeEnvelopeElement"/>
-                </sequence>
-            </complexType>
-            <element name="RequestActivityOutput" type="tns:RequestActivityOutput"/>
-        </schema>
     </tibex:Types>
-    <tibex:ProcessInfo callable="true" createdBy="hakusa"
-        createdOn="Mon Jan 09 15:13:27 KST 2023" description=""
+    <tibex:ProcessInfo callable="true" createdBy="cis099"
+        createdOn="Fri Jan 06 16:18:06 KST 2023" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="6.9.0 V26 2022-11-02" scalable="true"
         singleton="true" stateless="false" type="IT"/>
@@ -494,94 +542,71 @@
                                 <children type="4005">
                                     <children type="3007">
                                     <children type="4002">
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="맑은 고딕"
+                                    <styles fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="2"
-                                    xsi:type="notation:Bounds" y="70"/>
+                                    <layoutConstraint x="18"
+                                    xsi:type="notation:Bounds" y="78"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
-                                    <styles fontName="맑은 고딕"
+                                    <styles
+                                    fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
-                                    <styles fontName="맑은 고딕"
+                                    <styles
+                                    fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
-                                    <styles fontName="맑은 고딕"
+                                    <styles
+                                    fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="맑은 고딕"
+                                    <styles fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="302"
-                                    xsi:type="notation:Bounds" y="70"/>
+                                    <layoutConstraint x="526"
+                                    xsi:type="notation:Bounds" y="78"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="맑은 고딕"
@@ -591,15 +616,15 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint x="166"
-                                    xsi:type="notation:Bounds" y="189"/>
+                                    <layoutConstraint x="268"
+                                    xsi:type="notation:Bounds" y="142"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     </children>
-                                    <styles fontName="맑은 고딕"
+                                    <styles fontName="D2Coding"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles backgroundColor="16777215"
                                     gradientEndColor="50431"
@@ -607,13 +632,13 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="384"
-                                    width="515" xsi:type="notation:Bounds"/>
+                                    width="992" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
                                 <element href="//0/@process/@activity"/>
                             </children>
-                            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
@@ -624,7 +649,7 @@
                         <styles xsi:type="notation:FilteringStyle"/>
                         <element href="//0/@process/@activity"/>
                     </children>
-                    <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                    <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
@@ -634,9 +659,9 @@
                 <styles xsi:type="notation:FilteringStyle"/>
                 <element href="//0/@process"/>
             </children>
-            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+            <styles fontName="D2Coding" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="860" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="1337" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -649,8 +674,7 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.0"/>
-            <bendpoints
-                points="[25, 18, -139, -101]$[140, 101, -24, -18]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, 6, -225, -58]$[226, 58, -24, -6]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
@@ -661,41 +685,78 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.1"/>
-            <bendpoints points="[25, -21, -111, 98]$[112, -98, -24, 21]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, -6, -248, 58]$[249, -58, -24, 6]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
             namespace="http://www.example.org/Schema_SubProc" prefix="tns"/>
         <tibex:namespaceItem
-            namespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+b7cadf0c-c046-4466-8cbe-aa11dedd7dd1+RequestActivityInput" prefix="tns1"/>
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+bc8544e5-10bb-4701-abef-e7b40d9ff109+JavaInvokeActivityInput" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+96760986-6554-4fda-8c18-be567d57335d+JavaInvokeActivityInput" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+518a0aff-95f0-411d-beaf-a8741a718e16+JavaInvokeActivityInput" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+c5a0480a-5408-4867-ba6f-a18d27f0c13a+JavaInvokeActivityInput" prefix="tns4"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+d0599020-2a11-445b-b939-af39d574af8d+JavaInvokeActivityInput" prefix="tns5"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpwritedata+e30b49f6-0f66-436c-9561-575ceeb3761e+ActivityInput" prefix="tns6"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+bd2b8326-32d7-491b-866b-3f6256299563+ActivityInput" prefix="tns7"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+f1459c31-d7b5-4c07-948c-ae1557831f3e+JavaInvokeActivityInput" prefix="tns8"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataOutput+bd2b8326-32d7-491b-866b-3f6256299563+ActivityOutput" prefix="Q1"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/tcp/tcpreaddataInput+21a1f938-05b2-4a07-a634-d848c99adb67+ActivityInput" prefix="tns9"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
+        <tibex:namespaceItem
+            namespace="http://xmlns.tibco.com/2003/5/bw/plugins/tcp/tcpcloseconnection" prefix="tns10"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+a80b5706-d1da-4262-8aed-90916746fa84+JavaInvokeActivityInput" prefix="tns11"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+5f0a3f4a-7fda-46b0-bded-2137ef235a73+JavaInvokeActivityInput" prefix="tns12"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+e149f409-d975-4be9-861e-40526c7315a4+JavaInvokeActivityInput" prefix="tns13"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+6b687899-e635-4e5c-bc28-898c9c3bceed+JavaInvokeActivityInput" prefix="tns14"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+353a6863-8f11-4e9a-b2be-484e9aef6486+JavaInvokeActivityInput" prefix="tns15"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+85cb6544-38d7-4933-b770-da81d426ac6f+JavaInvokeActivityInput" prefix="tns16"/>
+        <tibex:namespaceItem
+            namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+170459ed-3bf9-4fd3-a67a-9b1f6da0ba90+JavaInvokeActivityInput" prefix="tns17"/>
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityInput" prefix="tns18"/>
         <tibex:namespaceItem
             namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-        <tibex:namespaceItem
-            namespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityInput" prefix="tns5"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
-        <bpws:variable element="ns0:subElement" name="End-input"
-            sca-bpel:internal="true" tibex:parameter="out"/>
-        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:subElement" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
+        <bpws:variable element="ns0:subElement" name="End-input"
+            sca-bpel:internal="true" tibex:parameter="out"/>
         <bpws:variable name="httpClientResourceSIM"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
             <bpws:from>
-                <bpws:literal>CISHPT201.module.Simm</bpws:literal>
+                <bpws:literal>CISSPG201.module.Simm</bpws:literal>
             </bpws:from>
         </bpws:variable>
-        <bpws:variable element="ns4:RequestActivityInput"
+        <bpws:variable element="ns51:RequestActivityInput"
             name="SendSIMRequest-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns5:RequestActivityOutput"
+        <bpws:variable element="ns52:RequestActivityOutput"
             name="SendSIMRequest" sca-bpel:internal="true"/>
-        <bpws:variable element="ns3:ActivityErrorData"
+        <bpws:variable element="ns53:ActivityErrorData"
             name="_error_SendSIMRequest" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
@@ -715,7 +776,7 @@
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="0" name="Start"
-                    tibex:xpdlId="23b7eafa-c661-48be-ad22-3639b50abc9c"
+                    tibex:xpdlId="d2ac91f3-928e-4e90-af87-ed539599f4ab"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
                         <bpws:source linkName="StartToSendSIMRequest"/>
@@ -728,7 +789,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="End-input"
                     name="End"
-                    tibex:xpdlId="7ee4ff27-21a3-4b19-b4c7-73b694a18456" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="00c2c3b1-e4b1-4c8c-af13-3ac6ee1b754e" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="SendSIMRequestToEnd"/>
                     </bpws:targets>
@@ -758,7 +819,7 @@
                     inputVariable="SendSIMRequest-input"
                     name="SendSIMRequest"
                     outputVariable="SendSIMRequest"
-                    tibex:xpdlId="71b4dd44-9635-42da-9b6d-973089cb7180" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="25597300-e546-48d5-b4be-be8132e43f16" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="StartToSendSIMRequest"/>
                     </bpws:targets>
@@ -767,14 +828,14 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityInput&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendSIMRequest-input&quot; match=&quot;/&quot;>&lt;tns5:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;'GET'&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;concat('/response?id=', &amp;quot;CISHPTMTPC9000201&amp;quot;)&quot;/>&lt;/RequestURI>&lt;/tns5:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns18=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityInput&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendSIMRequest-input&quot; match=&quot;/&quot;>&lt;tns18:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;'GET'&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;concat('/response?id=', &amp;quot;CISSPGMTPH9000901&amp;quot;)&quot;/>&lt;/RequestURI>&lt;/tns18:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.http.sendHTTPRequest"
                             version="6.0.0.20132205"
-                            xmlns:RequestActivityInput="http://tns.tibco.com/bw/activity/sendhttprequest/input+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityInput"
-                            xmlns:RequestActivityOutput="http://tns.tibco.com/bw/activity/sendhttprequest/output+71b4dd44-9635-42da-9b6d-973089cb7180+RequestActivityOutput"
+                            xmlns:RequestActivityInput="http://tns.tibco.com/bw/activity/sendhttprequest/input+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityInput"
+                            xmlns:RequestActivityOutput="http://tns.tibco.com/bw/activity/sendhttprequest/output+25597300-e546-48d5-b4be-be8132e43f16+RequestActivityOutput"
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:http="http://ns.tibco.com/bw/palette/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
