@@ -2,7 +2,7 @@
 <bpws:process exitOnStandardFault="no"
     name="CISTADAHFC.CISTADAHFC0060101.CISTADAHFC0060101_Sub"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20230217172003"
+    targetNamespace="http://xmlns.example.com/20230228173845"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
@@ -1041,13 +1041,6 @@
             </xs:complexType>
             <xs:element name="ActivityInput" type="tns:LogParametersType"/>
         </xs:schema>
-        <schema elementFormDefault="qualified"
-            targetNamespace="http://www.tibco.com/tnt/utilitySchema"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/tnt/utilitySchema">
-            <simpleType name="nativeJavaObjectKey">
-                <restriction base="string"/>
-            </simpleType>
-        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="cis099"
         createdOn="Fri Jan 06 16:18:06 KST 2023" description=""

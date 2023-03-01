@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADMKKB0041101="http://schema.hcis.com/xsd/CISTADMKKB0041101_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADMKKB/CISTADMKKB0041101.CISTADMKKB0041101_OutRes" type="dataformat:DataFormat">
-  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADMKKB0041101_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADMKKB0041101_OutRes"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADMKKB0041101:main" lineLength="0" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
-    <fieldOffsets kor="공통부" type="TADHeaderType" name="header" start="0" end="0"/>
-    <fieldOffsets kor="데이터부" type="CISTADMKKB0041101_OutRes" name="data" start="0" end="0"/>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADMKKB0041101="http://schema.hcis.com/xsd/CISTADMKKB0041101_OutRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Dst04LdDEe2qIOYwg5hKwQ" name="CISTADMKKB.CISTADMKKB0041101.CISTADMKKB0041101_OutRes" type="dataformat:DataFormat">
+  <imports xmi:id="_Dst04bdDEe2qIOYwg5hKwQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADMKKB0041101_OutRes_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADMKKB0041101_OutRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Dst04rdDEe2qIOYwg5hKwQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADMKKB0041101:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets xmi:id="_Dst047dDEe2qIOYwg5hKwQ" name="header" kor="공통부" type="TADHeaderType"/>
+    <fieldOffsets xmi:id="_Dst05LdDEe2qIOYwg5hKwQ" name="data" kor="데이터부" type="CISTADMKKB0041101_OutRes"/>
   </jndi:configuration>
 </jndi:namedResource>

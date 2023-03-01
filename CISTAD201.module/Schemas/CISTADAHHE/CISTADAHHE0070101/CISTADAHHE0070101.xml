@@ -86,7 +86,7 @@
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="419" length="8"/>
         <field kor="결과건수" name="rstRowcount" minOccurs="0" maxOccurs="1" position="427" length="5" justify="right" padding="0"/>
-        <segment name="rstList" kor="결과리스트" minOccurs="50" maxOccurs="50" collection="list" class="map">
+        <segment name="rstList" kor="결과리스트" minOccurs="0" maxOccurs="50" collection="list" class="map">
           <field kor="일자" name="dt" minOccurs="0" maxOccurs="1" position="432" length="8"/>
           <field kor="자동처리합계건수" name="autoProcSumCnt" minOccurs="0" maxOccurs="1" position="440" length="10"/>
           <field kor="자동처리비율" name="autoProcRate" minOccurs="0" maxOccurs="1" position="450" length="5"/>
