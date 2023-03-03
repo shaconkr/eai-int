@@ -88,7 +88,7 @@
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="419" length="34"/>
-        <segment name="rstList" kor="결과리스트" minOccurs="0" maxOccurs="50" collection="list" class="map">
+        <segment name="rstList" kor="결과리스트" minOccurs="50" maxOccurs="50" collection="list" class="map">
           <field kor="카드번호" name="crdNo" minOccurs="0" maxOccurs="1" position="453" length="16"/>
           <field kor="카드브랜드코드" name="crdBrndCd" minOccurs="0" maxOccurs="1" position="469" length="4"/>
           <field kor="승인번호" name="aprvlNo" minOccurs="0" maxOccurs="1" position="473" length="12"/>
