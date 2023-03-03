@@ -2,7 +2,7 @@
 <bpws:process exitOnStandardFault="no"
     name="CISTADMKCY.CISTADMKCY0040103.CISTADMKCY0040103_Main"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20230228180520"
+    targetNamespace="http://xmlns.example.com/20230302163809"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
@@ -53,8 +53,6 @@
         <task name="L_Set_LogEnd">
             <endingVariables>
                 <variable>L_Set_LogEnd-input</variable>
-                <variable>ParseJSON</variable>
-                <variable>L_Get_InterfaceInfo</variable>
             </endingVariables>
         </task>
         <task name="ReplytoJMSMessage">
@@ -85,7 +83,11 @@
         <task name="L_Set_LogError">
             <endingVariables>
                 <variable>L_Set_LogError-input</variable>
-                <variable>JMSReceiveMessage</variable>
+            </endingVariables>
+        </task>
+        <task name="Exception_L_Set_LogError">
+            <endingVariables>
+                <variable>Exception_L_Set_LogError-input</variable>
             </endingVariables>
         </task>
     </tibex:VariableDescriptor>
@@ -1215,8 +1217,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
-                                    <layoutConstraint x="506"
-                                    xsi:type="notation:Bounds" y="257"/>
+                                    <layoutConstraint x="535"
+                                    xsi:type="notation:Bounds" y="209"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1230,7 +1232,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="490"
+                                    <layoutConstraint height="422"
                                     width="1307" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -1241,7 +1243,107 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="490" width="1310" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="381" width="1310" xsi:type="notation:Bounds"/>
+                        </children>
+                        <children type="4022">
+                            <children type="3022">
+                                <children type="4029">
+                                    <children type="3031">
+                                    <children type="4033">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
+                                    <layoutConstraint
+                                    height="34" width="34"
+                                    xsi:type="notation:Bounds" y="68"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3032">
+                                    <children type="4005">
+                                    <children type="3007">
+                                    <eAnnotations source="Pixel"/>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint
+                                    width="200"
+                                    x="58"
+                                    xsi:type="notation:Bounds" y="41"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
+                                    <layoutConstraint
+                                    height="168"
+                                    width="1209" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                </children>
+                                <styles xsi:type="notation:SortingStyle"/>
+                                <styles xsi:type="notation:FilteringStyle"/>
+                            </children>
+                            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles xsi:type="bwnotation:BackgroundStyle"/>
+                            <styles xsi:type="bwnotation:ResizingStyle"/>
+                            <element href="//0/@process/@activity/@faultHandlers"/>
+                            <layoutConstraint height="200" width="1215" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1251,7 +1353,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="514" width="1310" x="1"
+                    <layoutConstraint height="617" width="1310" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1260,7 +1362,7 @@
             </children>
             <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="566" width="1652" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="669" width="1652" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1384,7 +1486,7 @@
             <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
             <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.10"/>
-            <bendpoints points="[1, 25, -10, -189]$[10, 190, -1, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 25, 0, -99]$[0, 100, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1459,13 +1561,17 @@
         <bpws:variable element="ns12:ActivityErrorData"
             name="_error_RenderJSON1" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:SetLog" name="L_Set_LogError-input" sca-bpel:internal="true"/>
+        <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
+        <bpws:variable name="FaultName1" sca-bpel:internal="true" type="xsd:string"/>
+        <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:subElement"
             name="CallProc_CISTADMKCY0040103-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:subElement"
             name="CallProc_CISTADMKCY0040103" sca-bpel:internal="true"/>
-        <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:OptionalErrorReport"
             name="_errorOptional" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:SetLog"
+            name="Exception_L_Set_LogError-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1476,6 +1582,33 @@
         <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bpel/2007/extensions"/>
     </bpws:extensions>
     <bpws:scope name="scope">
+        <bpws:faultHandlers>
+            <bpws:catchAll tibex:faultDetailsVar="FaultDetails"
+                tibex:faultNameVar="FaultName1" tibex:xpdlId="eb410a30-f2a5-48fe-9462-eee7b2cf1af5">
+                <bpws:scope name="scope1">
+                    <bpws:flow name="flow1">
+                        <bpws:links/>
+                        <bpws:extensionActivity>
+                            <tibex:extActivity
+                                inputVariable="Exception_L_Set_LogError-input"
+                                name="Exception_L_Set_LogError"
+                                tibex:xpdlId="1df20d1b-6848-4120-bbca-4bd62e18fe8e"
+                                type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                <bpws:targets/>
+                                <bpws:sources/>
+                                <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:ns3=&quot;http://schema.hcis.com/xsd//CISTADMKCY0040103_InReq&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/CISTADMKCY0040103_InReq&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;L_Set_LogError-input&quot; match=&quot;/&quot;>&lt;Log:SetLog>&lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&lt;Log:InterfaceSysId>&lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&lt;/Log:InterfaceSysId>&lt;/xsl:if>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'BIZ_UUID'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;'EI_INFO'&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Error>&lt;Log:StackTrace>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/Log:StackTrace>&lt;Log:Msg>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/Log:Msg>&lt;Log:FullClass>&lt;xsl:value-of select=&quot;$_error/FullClass&quot;/>&lt;/Log:FullClass>&lt;Log:ProcessStack>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/Log:ProcessStack>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;Log:MsgCode>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/Log:MsgCode>&lt;/xsl:if>&lt;/Log:Error>&lt;/Log:SetLog>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                </tibex:inputBindings>
+                                <tibex:CallProcess
+                                    moduleRef="CSPI_Library"
+                                    subProcessName="L_Set_LogError" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                            </tibex:extActivity>
+                        </bpws:extensionActivity>
+                    </bpws:flow>
+                </bpws:scope>
+            </bpws:catchAll>
+        </bpws:faultHandlers>
         <bpws:flow name="flow">
             <bpws:links>
                 <bpws:link name="JMSReceiveMessageToParseJSON" tibex:linkType="SUCCESS"/>
@@ -1657,7 +1790,9 @@
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="CallProc_IFID01ToAssign_OK"/>
-                        <bpws:source linkName="CallProc_CISTADMKCY0040103ToL_Set_LogError">
+                        <bpws:source
+                            linkName="CallProc_CISTADMKCY0040103ToL_Set_LogError"
+                            tibex:faultDetailsVar="CallProc_CISTADMKCY0040103" tibex:faultNameVar="FaultName">
                             <tibex:DesignExpression>
                                 <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
@@ -1746,7 +1881,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/CISTADMKCY0040103_InReq&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;RenderJSON_Error-input&quot; match=&quot;/&quot;>&lt;ns2:root>&lt;ns2:header>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:totTgrmLen&quot;>&lt;ns2:totTgrmLen>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:totTgrmLen&quot;/>&lt;/ns2:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:hdrLen&quot;>&lt;ns2:hdrLen>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:hdrLen&quot;/>&lt;/ns2:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:tgrmFrmCd&quot;>&lt;ns2:tgrmFrmCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:tgrmFrmCd&quot;/>&lt;/ns2:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:sysEnvGbcd&quot;>&lt;ns2:sysEnvGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:sysEnvGbcd&quot;/>&lt;/ns2:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:ipAdr&quot;>&lt;ns2:ipAdr>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:ipAdr&quot;/>&lt;/ns2:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:guid&quot;>&lt;ns2:guid>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:guid&quot;/>&lt;/ns2:guid>&lt;/xsl:if>&lt;ns2:prgrNo>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:prgrNo+1&quot;/>&lt;/ns2:prgrNo>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:frstGuid&quot;>&lt;ns2:frstGuid>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frstGuid&quot;/>&lt;/ns2:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:sendSysCd&quot;>&lt;ns2:sendSysCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:sendSysCd&quot;/>&lt;/ns2:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:frstSendSysCd&quot;>&lt;ns2:frstSendSysCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frstSendSysCd&quot;/>&lt;/ns2:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:sysCommTrtyPrepCntn&quot;>&lt;ns2:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:sysCommTrtyPrepCntn&quot;/>&lt;/ns2:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmId&quot;>&lt;ns2:eimsTgrmId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmId&quot;/>&lt;/ns2:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmVerNo&quot;>&lt;ns2:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmVerNo&quot;/>&lt;/ns2:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;>&lt;ns2:frwkTrdId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;/>&lt;/ns2:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:rcvSysCd&quot;>&lt;ns2:rcvSysCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:rcvSysCd&quot;/>&lt;/ns2:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:tieTgrmCd&quot;>&lt;ns2:tieTgrmCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:tieTgrmCd&quot;/>&lt;/ns2:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:tieSrvGrpCd&quot;>&lt;ns2:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:tieSrvGrpCd&quot;/>&lt;/ns2:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:tieSrvNm&quot;>&lt;ns2:tieSrvNm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:tieSrvNm&quot;/>&lt;/ns2:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:scrnNo&quot;>&lt;ns2:scrnNo>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:scrnNo&quot;/>&lt;/ns2:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:reqnRespGbcd&quot;>&lt;ns2:reqnRespGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:reqnRespGbcd&quot;/>&lt;/ns2:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:syncProcGbcd&quot;>&lt;ns2:syncProcGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:syncProcGbcd&quot;/>&lt;/ns2:syncProcGbcd>&lt;/xsl:if>&lt;ns2:trdRespCd>&lt;xsl:value-of select=&quot;'1'&quot;/>&lt;/ns2:trdRespCd>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:pageNo&quot;>&lt;ns2:pageNo>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:pageNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:pageNo&quot;/>&lt;/ns2:pageNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:pageRowCnt&quot;>&lt;ns2:pageRowCnt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:pageRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:pageRowCnt&quot;/>&lt;/ns2:pageRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:totRowCnt&quot;>&lt;ns2:totRowCnt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:totRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:totRowCnt&quot;/>&lt;/ns2:totRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:nxtPageYn&quot;>&lt;ns2:nxtPageYn>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:nxtPageYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:nxtPageYn&quot;/>&lt;/ns2:nxtPageYn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:reqnDtm&quot;>&lt;ns2:reqnDtm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:reqnDtm&quot;/>&lt;/ns2:reqnDtm>&lt;/xsl:if>&lt;ns2:respDtm>&lt;xsl:value-of select=&quot;format-dateTime(current-dateTime(), &amp;quot;[Y0001][M01][D01][H01][m01][s01][f001]&amp;quot;)&quot;/>&lt;/ns2:respDtm>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:storeCd&quot;>&lt;ns2:storeCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:storeCd&quot;/>&lt;/ns2:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:userId&quot;>&lt;ns2:userId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:userId&quot;/>&lt;/ns2:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:trdCommTrtyPrepCntn&quot;>&lt;ns2:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:trdCommTrtyPrepCntn&quot;/>&lt;/ns2:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;ns2:msgGrpNm>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:msgShwMthdGbcd&quot;>&lt;ns2:msgShwMthdGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:msgShwMthdGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:msgShwMthdGbcd&quot;/>&lt;/ns2:msgShwMthdGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:errOcrnTgrmClasNm&quot;>&lt;ns2:errOcrnTgrmClasNm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:errOcrnTgrmClasNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:errOcrnTgrmClasNm&quot;/>&lt;/ns2:errOcrnTgrmClasNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;ns2:msgCd>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/ns2:msgCd>&lt;/xsl:if>&lt;ns2:msgCntn>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/ns2:msgCntn>&lt;ns2:msgDtlCntn>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/ns2:msgDtlCntn>&lt;/ns2:msgGrpNm>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:stdTgrmEndLettrVal&quot;>&lt;ns2:stdTgrmEndLettrVal>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:stdTgrmEndLettrVal/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:stdTgrmEndLettrVal&quot;/>&lt;/ns2:stdTgrmEndLettrVal>&lt;/xsl:if>&lt;/ns2:header>&lt;ns2:data>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:wrkProcGbcd&quot;>&lt;ns2:wrkProcGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:wrkProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:wrkProcGbcd&quot;/>&lt;/ns2:wrkProcGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:ptcrMemGbcd&quot;>&lt;ns2:ptcrMemGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:ptcrMemGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:ptcrMemGbcd&quot;/>&lt;/ns2:ptcrMemGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:priorAprvlTypeCd&quot;>&lt;ns2:priorAprvlTypeCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:priorAprvlTypeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:priorAprvlTypeCd&quot;/>&lt;/ns2:priorAprvlTypeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:qryStrtDt&quot;>&lt;ns2:qryStrtDt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:qryStrtDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:qryStrtDt&quot;/>&lt;/ns2:qryStrtDt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:qryEndDt&quot;>&lt;ns2:qryEndDt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:qryEndDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:qryEndDt&quot;/>&lt;/ns2:qryEndDt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:crdMemNo&quot;>&lt;ns2:crdMemNo>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:crdMemNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:crdMemNo&quot;/>&lt;/ns2:crdMemNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:nxtSrchKey&quot;>&lt;ns2:nxtSrchKey>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:nxtSrchKey/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:nxtSrchKey&quot;/>&lt;/ns2:nxtSrchKey>&lt;/xsl:if>&lt;/ns2:data>&lt;/ns2:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns2=&quot;http://schema.hcis.com/xsd/CISTADMKCY0040103_InReq&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;RenderJSON_Error-input&quot; match=&quot;/&quot;>&lt;ns2:root>&lt;ns2:header>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:totTgrmLen&quot;>&lt;ns2:totTgrmLen>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:totTgrmLen&quot;/>&lt;/ns2:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:hdrLen&quot;>&lt;ns2:hdrLen>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:hdrLen&quot;/>&lt;/ns2:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:tgrmFrmCd&quot;>&lt;ns2:tgrmFrmCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:tgrmFrmCd&quot;/>&lt;/ns2:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:sysEnvGbcd&quot;>&lt;ns2:sysEnvGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:sysEnvGbcd&quot;/>&lt;/ns2:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:ipAdr&quot;>&lt;ns2:ipAdr>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:ipAdr&quot;/>&lt;/ns2:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:guid&quot;>&lt;ns2:guid>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:guid&quot;/>&lt;/ns2:guid>&lt;/xsl:if>&lt;ns2:prgrNo>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:prgrNo+1&quot;/>&lt;/ns2:prgrNo>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:frstGuid&quot;>&lt;ns2:frstGuid>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frstGuid&quot;/>&lt;/ns2:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:sendSysCd&quot;>&lt;ns2:sendSysCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:sendSysCd&quot;/>&lt;/ns2:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:frstSendSysCd&quot;>&lt;ns2:frstSendSysCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frstSendSysCd&quot;/>&lt;/ns2:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:sysCommTrtyPrepCntn&quot;>&lt;ns2:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:sysCommTrtyPrepCntn&quot;/>&lt;/ns2:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmId&quot;>&lt;ns2:eimsTgrmId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmId&quot;/>&lt;/ns2:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmVerNo&quot;>&lt;ns2:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:eimsTgrmVerNo&quot;/>&lt;/ns2:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;>&lt;ns2:frwkTrdId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:frwkTrdId&quot;/>&lt;/ns2:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:rcvSysCd&quot;>&lt;ns2:rcvSysCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:rcvSysCd&quot;/>&lt;/ns2:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:tieTgrmCd&quot;>&lt;ns2:tieTgrmCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:tieTgrmCd&quot;/>&lt;/ns2:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:tieSrvGrpCd&quot;>&lt;ns2:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:tieSrvGrpCd&quot;/>&lt;/ns2:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:tieSrvNm&quot;>&lt;ns2:tieSrvNm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:tieSrvNm&quot;/>&lt;/ns2:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:scrnNo&quot;>&lt;ns2:scrnNo>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:scrnNo&quot;/>&lt;/ns2:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:reqnRespGbcd&quot;>&lt;ns2:reqnRespGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:reqnRespGbcd&quot;/>&lt;/ns2:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:syncProcGbcd&quot;>&lt;ns2:syncProcGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:syncProcGbcd&quot;/>&lt;/ns2:syncProcGbcd>&lt;/xsl:if>&lt;ns2:trdRespCd>&lt;xsl:value-of select=&quot;'1'&quot;/>&lt;/ns2:trdRespCd>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:pageNo&quot;>&lt;ns2:pageNo>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:pageNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:pageNo&quot;/>&lt;/ns2:pageNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:pageRowCnt&quot;>&lt;ns2:pageRowCnt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:pageRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:pageRowCnt&quot;/>&lt;/ns2:pageRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:totRowCnt&quot;>&lt;ns2:totRowCnt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:totRowCnt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:totRowCnt&quot;/>&lt;/ns2:totRowCnt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:nxtPageYn&quot;>&lt;ns2:nxtPageYn>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:nxtPageYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:nxtPageYn&quot;/>&lt;/ns2:nxtPageYn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:reqnDtm&quot;>&lt;ns2:reqnDtm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:reqnDtm&quot;/>&lt;/ns2:reqnDtm>&lt;/xsl:if>&lt;ns2:respDtm>&lt;xsl:value-of select=&quot;format-dateTime(current-dateTime(), &amp;quot;[Y0001][M01][D01][H01][m01][s01][f001]&amp;quot;)&quot;/>&lt;/ns2:respDtm>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:storeCd&quot;>&lt;ns2:storeCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:storeCd&quot;/>&lt;/ns2:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:userId&quot;>&lt;ns2:userId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:userId&quot;/>&lt;/ns2:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:trdCommTrtyPrepCntn&quot;>&lt;ns2:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:trdCommTrtyPrepCntn&quot;/>&lt;/ns2:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;ns2:msgGrpNm>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:msgShwMthdGbcd&quot;>&lt;ns2:msgShwMthdGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:msgShwMthdGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:msgShwMthdGbcd&quot;/>&lt;/ns2:msgShwMthdGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:errOcrnTgrmClasNm&quot;>&lt;ns2:errOcrnTgrmClasNm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:errOcrnTgrmClasNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:msgGrpNm/ns2:errOcrnTgrmClasNm&quot;/>&lt;/ns2:errOcrnTgrmClasNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;ns2:msgCd>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/ns2:msgCd>&lt;/xsl:if>&lt;ns2:msgCntn>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/ns2:msgCntn>&lt;ns2:msgDtlCntn>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/ns2:msgDtlCntn>&lt;/ns2:msgGrpNm>&lt;xsl:if test=&quot;$ParseJSON/ns2:header/ns2:stdTgrmEndLettrVal&quot;>&lt;ns2:stdTgrmEndLettrVal>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:header/ns2:stdTgrmEndLettrVal/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:header/ns2:stdTgrmEndLettrVal&quot;/>&lt;/ns2:stdTgrmEndLettrVal>&lt;/xsl:if>&lt;/ns2:header>&lt;ns2:data>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:ofrId&quot;>&lt;ns2:ofrId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:ofrId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:ofrId&quot;/>&lt;/ns2:ofrId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:ofrIdSeqno&quot;>&lt;ns2:ofrIdSeqno>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:ofrIdSeqno/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:ofrIdSeqno&quot;/>&lt;/ns2:ofrIdSeqno>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:campGbcd&quot;>&lt;ns2:campGbcd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:campGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:campGbcd&quot;/>&lt;/ns2:campGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:insmTypeCd&quot;>&lt;ns2:insmTypeCd>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:insmTypeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:insmTypeCd&quot;/>&lt;/ns2:insmTypeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:insmCmisr&quot;>&lt;ns2:insmCmisr>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:insmCmisr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:insmCmisr&quot;/>&lt;/ns2:insmCmisr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:insmStrtMm&quot;>&lt;ns2:insmStrtMm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:insmStrtMm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:insmStrtMm&quot;/>&lt;/ns2:insmStrtMm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:insmEndMm&quot;>&lt;ns2:insmEndMm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:insmEndMm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:insmEndMm&quot;/>&lt;/ns2:insmEndMm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:insmUlmtYn&quot;>&lt;ns2:insmUlmtYn>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:insmUlmtYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:insmUlmtYn&quot;/>&lt;/ns2:insmUlmtYn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:saleBsicAmt&quot;>&lt;ns2:saleBsicAmt>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:saleBsicAmt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:saleBsicAmt&quot;/>&lt;/ns2:saleBsicAmt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:regId&quot;>&lt;ns2:regId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:regId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:regId&quot;/>&lt;/ns2:regId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:regDtm&quot;>&lt;ns2:regDtm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:regDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:regDtm&quot;/>&lt;/ns2:regDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:regPrgId&quot;>&lt;ns2:regPrgId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:regPrgId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:regPrgId&quot;/>&lt;/ns2:regPrgId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:chgId&quot;>&lt;ns2:chgId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:chgId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:chgId&quot;/>&lt;/ns2:chgId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:chgDtm&quot;>&lt;ns2:chgDtm>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:chgDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:chgDtm&quot;/>&lt;/ns2:chgDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/ns2:data/ns2:chgPrgId&quot;>&lt;ns2:chgPrgId>&lt;xsl:copy-of select=&quot;$ParseJSON/ns2:data/ns2:chgPrgId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJSON/ns2:data/ns2:chgPrgId&quot;/>&lt;/ns2:chgPrgId>&lt;/xsl:if>&lt;/ns2:data>&lt;/ns2:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
