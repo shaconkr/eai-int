@@ -84,4 +84,22 @@
   <sca:component xmi:id="_RGktYLlxEe2q27PGDFwr1g" name="ComponentCISTADMTSY0006001_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_RGktYblxEe2q27PGDFwr1g" processName="CISTADMTSY.CISTADMTSY0006001.CISTADMTSY0006001_Main"/>
   </sca:component>
+  <sca:component xmi:id="_uedIMLmDEe2-5diWruCtog" name="ComponentCISTADMKCH0010201" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_uedIMbmDEe2-5diWruCtog" processName="CISTADMKCH.CISTADMKCH0010201.CISTADMKCH0010201"/>
+  </sca:component>
+  <sca:component xmi:id="_uekc8LmDEe2-5diWruCtog" name="ComponentCISTADMKKA0030201" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_uekc8bmDEe2-5diWruCtog" processName="CISTADMKKA.CISTADMKKA0030201.CISTADMKKA0030201"/>
+  </sca:component>
+  <sca:component xmi:id="_uem5MLmDEe2-5diWruCtog" name="ComponentCISTADMKKA0050101" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_uem5MbmDEe2-5diWruCtog" processName="CISTADMKKA.CISTADMKKA0050101.CISTADMKKA0050101"/>
+  </sca:component>
+  <sca:component xmi:id="_uepVcLmDEe2-5diWruCtog" name="ComponentCISTADMKKB0040601" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_uepVcbmDEe2-5diWruCtog" processName="CISTADMKKB.CISTADMKKB0040601.CISTADMKKB0040601"/>
+  </sca:component>
+  <sca:component xmi:id="_uesYwLmDEe2-5diWruCtog" name="ComponentCISTADMKKB0040801" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_uesYwbmDEe2-5diWruCtog" processName="CISTADMKKB.CISTADMKKB0040801.CISTADMKKB0040801"/>
+  </sca:component>
+  <sca:component xmi:id="_ueu1ALmDEe2-5diWruCtog" name="ComponentCISTADMKKB0040901" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ueu1AbmDEe2-5diWruCtog" processName="CISTADMKKB.CISTADMKKB0040901.CISTADMKKB0040901"/>
+  </sca:component>
 </sca:composite>
