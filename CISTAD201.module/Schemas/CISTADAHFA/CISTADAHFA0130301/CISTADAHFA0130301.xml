@@ -83,7 +83,7 @@
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="레코드총건수" name="recdTotCnt" minOccurs="0" maxOccurs="1" position="419" length="10"/>
         <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="429" length="8"/>
-        <segment name="rstList" kor="결과리스트" minOccurs="50" maxOccurs="50" collection="list" class="map">
+        <segment name="rstList" kor="결과리스트" minOccurs="0" maxOccurs="50" collection="list" class="map">
           <field kor="승인주의등록일시" name="aprvlCareRegDtm" minOccurs="0" maxOccurs="1" position="437" length="14"/>
           <field kor="승인주의구분코드" name="aprvlCareGbcd" minOccurs="0" maxOccurs="1" position="451" length="4"/>
           <field kor="승인주의적용일자" name="aprvlCareAplyDt" minOccurs="0" maxOccurs="1" position="455" length="8"/>

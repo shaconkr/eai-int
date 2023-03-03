@@ -40,13 +40,13 @@
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="작업처리구분코드" name="wrkProcGbcd" minOccurs="0" maxOccurs="1" position="419" length="2"/>  
-        <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="0" maxOccurs="1" position="421" length="2"/>  
-        <field kor="우선승인유형코드" name="priorAprvlTypeCd" minOccurs="0" maxOccurs="1" position="423" length="1"/>  
-        <field kor="조회시작일자" name="qryStrtDt" minOccurs="0" maxOccurs="1" position="424" length="8"/>  
-        <field kor="조회종료일자" name="qryEndDt" minOccurs="0" maxOccurs="1" position="432" length="8"/>  
-        <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="440" length="9"/>  
-        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="449" length="30"/> 
+        <field kor="작업처리구분코드" name="wrkProcGbcd" minOccurs="1" maxOccurs="1" position="419" length="2"/>  
+        <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="1" maxOccurs="1" position="421" length="2"/>  
+        <field kor="우선승인유형코드" name="priorAprvlTypeCd" minOccurs="1" maxOccurs="1" position="423" length="1"/>  
+        <field kor="조회시작일자" name="qryStrtDt" minOccurs="1" maxOccurs="1" position="424" length="8"/>  
+        <field kor="조회종료일자" name="qryEndDt" minOccurs="1" maxOccurs="1" position="432" length="8"/>  
+        <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="440" length="9"/>  
+        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="449" length="30"/> 
       </segment> 
     </record> 
   </stream>  
@@ -86,20 +86,20 @@
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="레코드총건수" name="recdTotCnt" minOccurs="0" maxOccurs="1" position="419" length="10"/>
-        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="429" length="30"/>
-        <segment name="rstList" kor="결과리스트" minOccurs="50" maxOccurs="50" collection="list" class="map">
-          <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="459" length="9"/>
-          <field kor="회원명" name="memNm" minOccurs="0" maxOccurs="1" position="468" length="100"/>
-          <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="0" maxOccurs="1" position="568" length="2"/>
-          <field kor="우선승인유형코드" name="priorAprvlTypeCd" minOccurs="0" maxOccurs="1" position="570" length="1"/>
-          <field kor="적용일자" name="aplyDt" minOccurs="0" maxOccurs="1" position="571" length="8"/>
-          <field kor="해제일자" name="clerDt" minOccurs="0" maxOccurs="1" position="579" length="8"/>
-          <field kor="등록사유" name="regRsn" minOccurs="0" maxOccurs="1" position="587" length="2000"/>
-          <field kor="가족적용여부" name="famlAplyYn" minOccurs="0" maxOccurs="1" position="2587" length="1"/>
-          <field kor="등록점코드" name="regStoreCd" minOccurs="0" maxOccurs="1" position="2588" length="3"/>
-          <field kor="등록ID" name="regId" minOccurs="0" maxOccurs="1" position="2591" length="100"/>
-          <field kor="등록일시" name="regDtm" minOccurs="0" maxOccurs="1" position="2691" length="14"/>
+        <field kor="레코드총건수" name="recdTotCnt" minOccurs="1" maxOccurs="1" position="419" length="10"/>
+        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="429" length="30"/>
+        <segment name="rstList" kor="결과리스트" minOccurs="0" maxOccurs="50" collection="list" class="map" nillable="true">
+          <field kor="카드회원번호" name="crdMemNo" minOccurs="1" maxOccurs="1" position="459" length="9"/>
+          <field kor="회원명" name="memNm" minOccurs="1" maxOccurs="1" position="468" length="100"/>
+          <field kor="특정회원구분코드" name="ptcrMemGbcd" minOccurs="1" maxOccurs="1" position="568" length="2"/>
+          <field kor="우선승인유형코드" name="priorAprvlTypeCd" minOccurs="1" maxOccurs="1" position="570" length="1"/>
+          <field kor="적용일자" name="aplyDt" minOccurs="1" maxOccurs="1" position="571" length="8"/>
+          <field kor="해제일자" name="clerDt" minOccurs="1" maxOccurs="1" position="579" length="8"/>
+          <field kor="등록사유" name="regRsn" minOccurs="1" maxOccurs="1" position="587" length="2000"/>
+          <field kor="가족적용여부" name="famlAplyYn" minOccurs="1" maxOccurs="1" position="2587" length="1"/>
+          <field kor="등록점코드" name="regStoreCd" minOccurs="1" maxOccurs="1" position="2588" length="3"/>
+          <field kor="등록ID" name="regId" minOccurs="1" maxOccurs="1" position="2591" length="100"/>
+          <field kor="등록일시" name="regDtm" minOccurs="1" maxOccurs="1" position="2691" length="14"/>
         </segment>
       </segment>
     </record>

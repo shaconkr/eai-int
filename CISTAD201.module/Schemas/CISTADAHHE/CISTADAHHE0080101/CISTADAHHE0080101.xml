@@ -40,12 +40,12 @@
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
-        <segment name="srchGroup" kor="검색그룹" minOccurs="0" maxOccurs="1" class="map"> 
-          <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="419" length="3"/>  
-          <field kor="승인자ID" name="aprvId" minOccurs="0" maxOccurs="1" position="422" length="100"/>  
-          <field kor="시작년월" name="strtYm" minOccurs="0" maxOccurs="1" position="522" length="6"/>  
-          <field kor="종료년월" name="endYm" minOccurs="0" maxOccurs="1" position="528" length="6"/>  
-          <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="534" length="111"/> 
+        <segment name="srchGroup" kor="검색그룹" minOccurs="1" maxOccurs="1" class="map"> 
+          <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="419" length="3"/>  
+          <field kor="승인자ID" name="aprvId" minOccurs="1" maxOccurs="1" position="422" length="100"/>  
+          <field kor="시작년월" name="strtYm" minOccurs="1" maxOccurs="1" position="522" length="6"/>  
+          <field kor="종료년월" name="endYm" minOccurs="1" maxOccurs="1" position="528" length="6"/>  
+          <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="534" length="111"/> 
         </segment> 
       </segment> 
     </record> 
@@ -86,19 +86,19 @@
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/>
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="0" maxOccurs="1" position="419" length="111"/>
-        <segment name="rstList" kor="결과리스트" minOccurs="50" maxOccurs="50" collection="list" class="map">
-          <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="530" length="3"/>
-          <field kor="승인자ID" name="aprvId" minOccurs="0" maxOccurs="1" position="533" length="100"/>
-          <field kor="승인구분코드" name="aprvlGbcd" minOccurs="0" maxOccurs="1" position="633" length="1"/>
-          <field kor="결과총건수" name="rstTotCnt" minOccurs="0" maxOccurs="1" position="634" length="18"/>
-          <field kor="결과총금액" name="rstTotAmt" minOccurs="0" maxOccurs="1" position="652" length="18"/>
-          <field kor="승인건수" name="aprvlCnt" minOccurs="0" maxOccurs="1" position="670" length="18"/>
-          <field kor="승인금액" name="aprvlAmt" minOccurs="0" maxOccurs="1" position="688" length="18"/>
-          <field kor="취소건수" name="cnclCnt" minOccurs="0" maxOccurs="1" position="706" length="18"/>
-          <field kor="취소금액" name="cnclAmt" minOccurs="0" maxOccurs="1" position="724" length="18"/>
-          <field kor="승인불가건수" name="aprvlNdmtCnt" minOccurs="0" maxOccurs="1" position="742" length="18"/>
-          <field kor="승인불가금액" name="aprvlNdmtAmt" minOccurs="0" maxOccurs="1" position="760" length="18"/>
+        <field kor="다음검색KEY" name="nxtSrchKey" minOccurs="1" maxOccurs="1" position="419" length="111"/>
+        <segment name="rstList" kor="결과리스트" minOccurs="0" maxOccurs="50" collection="list" class="map">
+          <field kor="점코드" name="storeCd" minOccurs="1" maxOccurs="1" position="530" length="3"/>
+          <field kor="승인자ID" name="aprvId" minOccurs="1" maxOccurs="1" position="533" length="100"/>
+          <field kor="승인구분코드" name="aprvlGbcd" minOccurs="1" maxOccurs="1" position="633" length="1"/>
+          <field kor="결과총건수" name="rstTotCnt" minOccurs="1" maxOccurs="1" position="634" length="18"/>
+          <field kor="결과총금액" name="rstTotAmt" minOccurs="1" maxOccurs="1" position="652" length="18"/>
+          <field kor="승인건수" name="aprvlCnt" minOccurs="1" maxOccurs="1" position="670" length="18"/>
+          <field kor="승인금액" name="aprvlAmt" minOccurs="1" maxOccurs="1" position="688" length="18"/>
+          <field kor="취소건수" name="cnclCnt" minOccurs="1" maxOccurs="1" position="706" length="18"/>
+          <field kor="취소금액" name="cnclAmt" minOccurs="1" maxOccurs="1" position="724" length="18"/>
+          <field kor="승인불가건수" name="aprvlNdmtCnt" minOccurs="1" maxOccurs="1" position="742" length="18"/>
+          <field kor="승인불가금액" name="aprvlNdmtAmt" minOccurs="1" maxOccurs="1" position="760" length="18"/>
         </segment>
       </segment>
     </record>
