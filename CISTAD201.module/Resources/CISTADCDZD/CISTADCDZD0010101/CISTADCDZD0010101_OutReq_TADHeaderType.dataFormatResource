@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADCDZD0010101="http://schema.hcis.com/xsd/CISTADCDZD0010101_OutReq_TADHeaderType" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Dp-C4LdDEe2qIOYwg5hKwQ" name="CISTADCDZD.CISTADCDZD0010101.CISTADCDZD0010101_OutReq_TADHeaderType" type="dataformat:DataFormat">
-  <imports xmi:id="_Dp-C4bdDEe2qIOYwg5hKwQ" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADCDZD0010101_OutReq_TADHeaderType_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADCDZD0010101_OutReq_TADHeaderType"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Dp-C4rdDEe2qIOYwg5hKwQ" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADCDZD0010101:main" lineLength="419" fieldOffsetsStr="totTgrmLen(0,8)&#xA;hdrLen(8,16)&#xA;tgrmFrmCd(16,17)&#xA;sysEnvGbcd(17,18)&#xA;ipAdr(18,58)&#xA;guid(58,96)&#xA;prgrNo(96,99)&#xA;frstGuid(99,137)&#xA;sendSysCd(137,140)&#xA;frstSendSysCd(140,143)&#xA;sysCommTrtyPrepCntn(143,164)&#xA;eimsTgrmId(164,181)&#xA;eimsTgrmVerNo(181,184)&#xA;frwkTrdId(184,196)&#xA;rcvSysCd(196,199)&#xA;tieTgrmCd(199,209)&#xA;tieSrvGrpCd(209,211)&#xA;tieSrvNm(211,241)&#xA;scrnNo(241,261)&#xA;reqnRespGbcd(261,262)&#xA;syncProcGbcd(262,263)&#xA;trdRespCd(263,264)&#xA;reqnDtm(264,281)&#xA;respDtm(281,298)&#xA;storeCd(298,301)&#xA;userId(301,309)&#xA;trdCommTrtyPrepCntn(309,409)&#xA;msgCd(409,419)">
-    <fieldOffsets xmi:id="_Dp-p8LdDEe2qIOYwg5hKwQ" name="totTgrmLen" end="8" kor="전체전문길이" type="integer"/>
-    <fieldOffsets xmi:id="_Dp-p8bdDEe2qIOYwg5hKwQ" name="hdrLen" start="8" end="16" kor="헤더길이" type="integer"/>
-    <fieldOffsets xmi:id="_Dp-p8rdDEe2qIOYwg5hKwQ" name="tgrmFrmCd" start="16" end="17" kor="전문형식코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p87dDEe2qIOYwg5hKwQ" name="sysEnvGbcd" start="17" end="18" kor="시스템환경구분코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p9LdDEe2qIOYwg5hKwQ" name="ipAdr" start="18" end="58" kor="IP주소" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p9bdDEe2qIOYwg5hKwQ" name="guid" start="58" end="96" kor="GUID" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p9rdDEe2qIOYwg5hKwQ" name="prgrNo" start="96" end="99" kor="진행번호" type="integer"/>
-    <fieldOffsets xmi:id="_Dp-p97dDEe2qIOYwg5hKwQ" name="frstGuid" start="99" end="137" kor="최초GUID" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p-LdDEe2qIOYwg5hKwQ" name="sendSysCd" start="137" end="140" kor="전송시스템코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p-bdDEe2qIOYwg5hKwQ" name="frstSendSysCd" start="140" end="143" kor="최초전송시스템코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p-rdDEe2qIOYwg5hKwQ" name="sysCommTrtyPrepCntn" start="143" end="164" kor="시스템공통예비내용" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p-7dDEe2qIOYwg5hKwQ" name="eimsTgrmId" start="164" end="181" kor="EIMS전문ID" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p_LdDEe2qIOYwg5hKwQ" name="eimsTgrmVerNo" start="181" end="184" kor="EIMS전문번호" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p_bdDEe2qIOYwg5hKwQ" name="frwkTrdId" start="184" end="196" kor="프래임워크거래ID" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p_rdDEe2qIOYwg5hKwQ" name="rcvSysCd" start="196" end="199" kor="수신시스템코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-p_7dDEe2qIOYwg5hKwQ" name="tieTgrmCd" start="199" end="209" kor="연계전문코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qALdDEe2qIOYwg5hKwQ" name="tieSrvGrpCd" start="209" end="211" kor="연계서비스그룹코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qAbdDEe2qIOYwg5hKwQ" name="tieSrvNm" start="211" end="241" kor="연계서비스명" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qArdDEe2qIOYwg5hKwQ" name="scrnNo" start="241" end="261" kor="화면번호" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qA7dDEe2qIOYwg5hKwQ" name="reqnRespGbcd" start="261" end="262" kor="요청응답구분코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qBLdDEe2qIOYwg5hKwQ" name="syncProcGbcd" start="262" end="263" kor="동기처리구분코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qBbdDEe2qIOYwg5hKwQ" name="trdRespCd" start="263" end="264" kor="거래응답코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qBrdDEe2qIOYwg5hKwQ" name="reqnDtm" start="264" end="281" kor="요청일시" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qB7dDEe2qIOYwg5hKwQ" name="respDtm" start="281" end="298" kor="응답일시" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qCLdDEe2qIOYwg5hKwQ" name="storeCd" start="298" end="301" kor="점코드" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qCbdDEe2qIOYwg5hKwQ" name="userId" start="301" end="309" kor="사용자ID" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qCrdDEe2qIOYwg5hKwQ" name="trdCommTrtyPrepCntn" start="309" end="409" kor="거래공통영역예비내용" type="string"/>
-    <fieldOffsets xmi:id="_Dp-qC7dDEe2qIOYwg5hKwQ" name="msgCd" start="409" end="419" kor="메시지코드" type="string"/>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CISTADCDZD0010101="http://schema.hcis.com/xsd/CISTADCDZD0010101_OutReq_TADHeaderType" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="CISTADCDZD/CISTADCDZD0010101.CISTADCDZD0010101_OutReq_TADHeaderType" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/CISTADCDZD0010101_OutReq_TADHeaderType_df.xsd" namespace="http://schema.hcis.com/xsd/CISTADCDZD0010101_OutReq_TADHeaderType"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CISTADCDZD0010101:main" lineLength="419" fieldOffsetsStr="totTgrmLen(0,8)&#xA;hdrLen(8,16)&#xA;tgrmFrmCd(16,17)&#xA;sysEnvGbcd(17,18)&#xA;ipAdr(18,58)&#xA;guid(58,96)&#xA;prgrNo(96,99)&#xA;frstGuid(99,137)&#xA;sendSysCd(137,140)&#xA;frstSendSysCd(140,143)&#xA;sysCommTrtyPrepCntn(143,164)&#xA;eimsTgrmId(164,181)&#xA;eimsTgrmVerNo(181,184)&#xA;frwkTrdId(184,196)&#xA;rcvSysCd(196,199)&#xA;tieTgrmCd(199,209)&#xA;tieSrvGrpCd(209,211)&#xA;tieSrvNm(211,241)&#xA;scrnNo(241,261)&#xA;reqnRespGbcd(261,262)&#xA;syncProcGbcd(262,263)&#xA;trdRespCd(263,264)&#xA;reqnDtm(264,281)&#xA;respDtm(281,298)&#xA;storeCd(298,301)&#xA;userId(301,309)&#xA;trdCommTrtyPrepCntn(309,409)&#xA;msgCd(409,419)">
+    <fieldOffsets kor="전체전문길이" type="integer" name="totTgrmLen" start="0" end="8"/>
+    <fieldOffsets kor="헤더길이" type="integer" name="hdrLen" start="8" end="16"/>
+    <fieldOffsets kor="전문형식코드" type="string" name="tgrmFrmCd" start="16" end="17"/>
+    <fieldOffsets kor="시스템환경구분코드" type="string" name="sysEnvGbcd" start="17" end="18"/>
+    <fieldOffsets kor="IP주소" type="string" name="ipAdr" start="18" end="58"/>
+    <fieldOffsets kor="GUID" type="string" name="guid" start="58" end="96"/>
+    <fieldOffsets kor="진행번호" type="integer" name="prgrNo" start="96" end="99"/>
+    <fieldOffsets kor="최초GUID" type="string" name="frstGuid" start="99" end="137"/>
+    <fieldOffsets kor="전송시스템코드" type="string" name="sendSysCd" start="137" end="140"/>
+    <fieldOffsets kor="최초전송시스템코드" type="string" name="frstSendSysCd" start="140" end="143"/>
+    <fieldOffsets kor="시스템공통예비내용" type="string" name="sysCommTrtyPrepCntn" start="143" end="164"/>
+    <fieldOffsets kor="EIMS전문ID" type="string" name="eimsTgrmId" start="164" end="181"/>
+    <fieldOffsets kor="EIMS전문번호" type="string" name="eimsTgrmVerNo" start="181" end="184"/>
+    <fieldOffsets kor="프래임워크거래ID" type="string" name="frwkTrdId" start="184" end="196"/>
+    <fieldOffsets kor="수신시스템코드" type="string" name="rcvSysCd" start="196" end="199"/>
+    <fieldOffsets kor="연계전문코드" type="string" name="tieTgrmCd" start="199" end="209"/>
+    <fieldOffsets kor="연계서비스그룹코드" type="string" name="tieSrvGrpCd" start="209" end="211"/>
+    <fieldOffsets kor="연계서비스명" type="string" name="tieSrvNm" start="211" end="241"/>
+    <fieldOffsets kor="화면번호" type="string" name="scrnNo" start="241" end="261"/>
+    <fieldOffsets kor="요청응답구분코드" type="string" name="reqnRespGbcd" start="261" end="262"/>
+    <fieldOffsets kor="동기처리구분코드" type="string" name="syncProcGbcd" start="262" end="263"/>
+    <fieldOffsets kor="거래응답코드" type="string" name="trdRespCd" start="263" end="264"/>
+    <fieldOffsets kor="요청일시" type="string" name="reqnDtm" start="264" end="281"/>
+    <fieldOffsets kor="응답일시" type="string" name="respDtm" start="281" end="298"/>
+    <fieldOffsets kor="점코드" type="string" name="storeCd" start="298" end="301"/>
+    <fieldOffsets kor="사용자ID" type="string" name="userId" start="301" end="309"/>
+    <fieldOffsets kor="거래공통영역예비내용" type="string" name="trdCommTrtyPrepCntn" start="309" end="409"/>
+    <fieldOffsets kor="메시지코드" type="string" name="msgCd" start="409" end="419"/>
   </jndi:configuration>
 </jndi:namedResource>
