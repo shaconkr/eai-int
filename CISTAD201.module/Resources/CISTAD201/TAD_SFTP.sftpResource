@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sftpconnection="http://ns.tibco.com/bw/palette/sftpconnection" xmi:id="_8BCQULlrEe2q27PGDFwr1g" name="CISTAD201.TAD_SFTP" type="sftpconnection:sftpconnection">
+  <jndi:configuration xsi:type="sftpconnection:SFTPConnection" xmi:id="_8BDecLlrEe2q27PGDFwr1g">
+    <substitutionBindings xmi:id="_uz0LoLlsEe2q27PGDFwr1g" template="host" propName="TAD_IP"/>
+    <substitutionBindings xmi:id="_yrJCgLlsEe2q27PGDFwr1g" template="port" propName="TAD_PORT"/>
+    <substitutionBindings xmi:id="_zzQhILlsEe2q27PGDFwr1g" template="userName" propName="TAD_USER"/>
+    <substitutionBindings xmi:id="_1he9gLlsEe2q27PGDFwr1g" template="password" propName="TAD_PASS"/>
+  </jndi:configuration>
+</jndi:namedResource>
