@@ -8,9 +8,14 @@ Bundle-Vendor: TIBCO Software Inc.
 Export-Package: TADCIS201,
  com.hcis.eai.tad
 Require-Bundle: HcisCommon.smodule;bundle-version="1.0.0"
-Import-Package: com.tibco.bw.palette.shared.java;version="6.2.1600",
+Import-Package: com.google.common.base,
+ com.google.common.collect,
+ com.google.gson,
+ com.tibco.bw.palette.shared.java;version="6.2.1600",
  com.tibco.bw.runtime;version="6.3.2400",
  kr.shacon.format,
+ kr.shacon.types,
+ kr.shacon.util,
  org.beanio,
  org.beanio.internal.util,
  org.slf4j

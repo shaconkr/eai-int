@@ -1,60 +1,61 @@
 package com.hcis.eai.tad;
 
-import java.io.IOException;
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
+import java.util.stream.Collectors;
 
+import org.beanio.Marshaller;
 import org.beanio.StreamFactory;
-import org.beanio.internal.util.IOUtil;
+import org.beanio.Unmarshaller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import kr.shacon.format.Transformer;
+import kr.shacon.types.MapDeserializer;
 
 public class TADCISTransformer extends Transformer {
     private static final Logger log = LoggerFactory.getLogger(Transformer.class);
-	
-	public TADCISTransformer(String ifId) {
-		super(ifId);
-		// TODO Auto-generated constructor stub
-	}
+    StreamFactory factory2;
 
-	@Override
-	protected StreamFactory newStreamFactory(String xmlpath) {
-    	log.debug("@@@ load xml {}", xmlpath);
+    protected Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .registerTypeAdapter(Map.class, new MapDeserializer())
+                .setDateFormat("yyyy-MM-dd HH:mm:ss")
+                .serializeNulls()
+                .create();
+
+    public TADCISTransformer() {
+    }
+
+
+    public StreamFactory newStreamFactory2(String xmlpath) {
         StreamFactory factory = StreamFactory.newInstance();
 		InputStream is = getClass().getResourceAsStream(xmlpath);
-		try {
-			if(is.available() > 0 ) {
-				log.debug("@@@ Found O {}", xmlpath);
-			}else {
-				log.debug("@@@ Not Found O {}", xmlpath);
-			}
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		
-		
-        try {
-            factory.load(is);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            IOUtil.closeQuietly(is);
-        }
+		String xmlString = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"));
+        factory.load(xmlString);
         return factory;
-	}
+    }
 
 	@Override
-	public String toEDI(String msgType, String jsonString, String encoding, String xml) {
-		// TODO Auto-generated method stub
-		return super.toEDI(msgType, jsonString, encoding, xml);
-	}
+	public String toEDI(String msgType, String jsonString, String encoding, String xmlpath) {             
+    	StreamFactory factory = newStreamFactory(getBeanXmlInputStream(xmlpath));
+        Marshaller marshaller = factory.createMarshaller(msgType);
+        Map<String, Object> map = gson.fromJson(jsonString, Map.class);
+        return marshaller.marshal(map,encoding).toString();
+    }
 
-	@Override
-	public String toJSON(String msgType, String ediString, String encoding, String xml) {
-		// TODO Auto-generated method stub
-		return super.toJSON(msgType, ediString, encoding, xml);
-	}
+    @Override
+    public String toJSON(String msgType, String ediString, String encoding, String xmlpath) {
+    	StreamFactory factory = newStreamFactory(getBeanXmlInputStream(xmlpath));
+        Unmarshaller unmarshaller = factory.createUnmarshaller(msgType);
+        Object  o = unmarshaller.unmarshal(ediString, encoding);
+        return gson.toJson( o, Map.class);
+    }
 
 }

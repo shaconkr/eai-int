@@ -20,10 +20,22 @@
   <sca:component xmi:id="_yqcg8Kg_Ee2Ek8WUBmMbIg" name="ComponentTADCIS_Recv" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_yqcg8ag_Ee2Ek8WUBmMbIg" processName="TADCIS201.module.TADCIS_Recv"/>
   </sca:component>
-  <sca:component xmi:id="_98lVkKjZEe2Ek8WUBmMbIg" name="ComponentTADCISMTSY0008001_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_98lVkajZEe2Ek8WUBmMbIg" processName="TADCISMTSY.TADCISMTSY0008001.TADCISMTSY0008001_Main"/>
+  <sca:component xmi:id="_oqL88LvHEe2RvOJhTVY1Jg" name="ComponentTADCISCTCB0010601_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_oqL88bvHEe2RvOJhTVY1Jg" processName="TADCISCTCB.TADCISCTCB0010601.TADCISCTCB0010601_Main"/>
   </sca:component>
-  <sca:component xmi:id="_s0mhsLDAEe2rDJp779GFIQ" name="Component1TADCISMTSY0008001_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_s0mhsbDAEe2rDJp779GFIQ" processName="TADCISCTCB.TADCISCTCB0010601.TADCISCTCB0010601_Main"/>
+  <sca:component xmi:id="_oqdCsLvHEe2RvOJhTVY1Jg" name="ComponentTADCISMKCG0400101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_oqdCsbvHEe2RvOJhTVY1Jg" processName="TADCISMKCG.TADCISMKCG0400101.TADCISMKCG0400101_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_oqxLwLvHEe2RvOJhTVY1Jg" name="ComponentTADCISMKKA0110101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_oqxLwbvHEe2RvOJhTVY1Jg" processName="TADCISMKKA.TADCISMKKA0110101.TADCISMKKA0110101_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_orAcULvHEe2RvOJhTVY1Jg" name="ComponentTADCISMTPF9000101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_orAcUbvHEe2RvOJhTVY1Jg" processName="TADCISMTPF.TADCISMTPF9000101.TADCISMTPF9000101_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_orPF0LvHEe2RvOJhTVY1Jg" name="ComponentTADCISMTPF9000201_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_orPF0bvHEe2RvOJhTVY1Jg" processName="TADCISMTPF.TADCISMTPF9000201.TADCISMTPF9000201_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_ordIQLvHEe2RvOJhTVY1Jg" name="ComponentTADCISMTSY0008001_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ordIQbvHEe2RvOJhTVY1Jg" processName="TADCISMTSY.TADCISMTSY0008001.TADCISMTSY0008001_Main"/>
   </sca:component>
 </sca:composite>
