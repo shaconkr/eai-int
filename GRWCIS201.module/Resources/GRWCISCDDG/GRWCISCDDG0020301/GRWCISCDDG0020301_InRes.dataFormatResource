@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GRWCISCDDG0020301="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InRes" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="GRWCISCDDG/GRWCISCDDG0020301.GRWCISCDDG0020301_InRes" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/GRWCISCDDG0020301_InRes_df.xsd" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InRes"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="GRWCISCDDG0020301:main" lineLength="300" fieldOffsetsStr="eltrAthzNo(0,100)&#xA;athzTypeCd(100,200)&#xA;eltrAthzStatCd(200,300)">
+    <fieldOffsets kor="전자결재번호" type="string" name="eltrAthzNo" start="0" end="100"/>
+    <fieldOffsets kor="결재유형코드" type="string" name="athzTypeCd" start="100" end="200"/>
+    <fieldOffsets kor="전자결재상태코드" type="string" name="eltrAthzStatCd" start="200" end="300"/>
+  </jndi:configuration>
+</jndi:namedResource>

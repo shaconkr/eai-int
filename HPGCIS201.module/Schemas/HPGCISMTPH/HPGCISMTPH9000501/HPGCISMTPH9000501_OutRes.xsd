@@ -48,7 +48,7 @@
     <complexType name="HPGCISMTPH9000501_OutRes">
         <sequence>
             <element e:kor="그리드건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="gridRowcount" nillable="true" type="long"/>
-            <element e:kor="그리드목록" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="gridList" nillable="true" type="ns:GRID_LIST_TYPE"/>
+            <element e:kor="그리드목록" e:lengthField="gridRowcount" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="gridList" nillable="true" type="ns:GRID_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="GRID_LIST_TYPE">

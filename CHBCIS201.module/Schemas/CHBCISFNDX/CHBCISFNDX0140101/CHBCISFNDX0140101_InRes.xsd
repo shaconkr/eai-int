@@ -56,7 +56,7 @@
             <element e:kor="할부금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="insmAmt" nillable="true" type="long"/>
             <element e:kor="납부합계금액" e:length="18" e:padder="ZeroLeft" minOccurs="0" name="pymSumAmt" nillable="true" type="long"/>
             <element e:kor="결과리스트_배열건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="rsltRowcount" nillable="true" type="long"/>
-            <element e:kor="결과리스트_배열" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
+            <element e:kor="결과리스트_배열" e:lengthField="rsltRowcount" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RSLT_LIST_TYPE">

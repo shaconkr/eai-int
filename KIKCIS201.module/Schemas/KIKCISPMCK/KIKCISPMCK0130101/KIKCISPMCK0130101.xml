@@ -104,14 +104,14 @@
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="은행목록건수" name="bankGridRowcount" minOccurs="0" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="bankGridList" kor="은행목록" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="bankGridList" kor="은행목록" occursRef="bankGridRowcount" collection="list" class="map">
           <field kor="은행코드" name="bankCd" minOccurs="0" maxOccurs="1" position="1805" length="3"/>
           <field kor="은행명" name="bankNm" minOccurs="0" maxOccurs="1" position="1808" length="100"/>
           <field kor="가상계좌은행지점코드" name="virtAcntBankBrnCd" minOccurs="0" maxOccurs="1" position="1908" length="3"/>
           <field kor="가상계좌주제코드" name="virtAcntSbjtCd" minOccurs="0" maxOccurs="1" position="1911" length="3"/>
         </segment>
         <field kor="가상계좌번호목록건수" name="virtAcnoGridRowcount" minOccurs="0" maxOccurs="1" position="1914" length="5" justify="right" padding="0"/>
-        <segment name="virtAcnoGridList" kor="가상계좌번호목록" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="virtAcnoGridList" kor="가상계좌번호목록" occursRef="virtAcnoGridRowcount" collection="list" class="map">
           <field kor="은행코드" name="bankCd" minOccurs="0" maxOccurs="1" position="1919" length="3"/>
           <field kor="은행명" name="bankNm" minOccurs="0" maxOccurs="1" position="1922" length="100"/>
           <field kor="가상계좌번호" name="virtAcno" minOccurs="0" maxOccurs="1" position="2022" length="50"/>

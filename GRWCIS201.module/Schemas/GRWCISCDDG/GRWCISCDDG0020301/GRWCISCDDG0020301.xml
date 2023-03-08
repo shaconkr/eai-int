@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">  
+  <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
+    <property name="pattern" value="yyyyMMddhhmm"/> 
+  </typeHandler>  
+  <stream kor="" name="GRWCISCDDG0020301_InReq" format="fixedlength"> 
+    <parser> 
+      <property name="recordTerminator" value="\r\n"/> 
+    </parser>  
+    <record name="GRW_InReq" class="java.util.LinkedHashMap"> 
+      <field kor="전자결재번호" name="eltrAthzNo" minOccurs="0" maxOccurs="1" position="0" length="100"/>  
+      <field kor="결재유형코드" name="athzTypeCd" minOccurs="0" maxOccurs="1" position="100" length="100"/>  
+      <field kor="전자결재상태코드" name="eltrAthzStatCd" minOccurs="0" maxOccurs="1" position="200" length="100"/> 
+    </record> 
+  </stream>  
+  <stream kor="" name="GRWCISCDDG0020301_InRes" format="fixedlength">
+    <parser>
+      <property name="recordTerminator" value="\r\n"/>
+    </parser>
+    <record name="GRW_InRes" class="java.util.LinkedHashMap">
+      <field kor="전자결재번호" name="eltrAthzNo" minOccurs="0" maxOccurs="1" position="0" length="100"/>
+      <field kor="결재유형코드" name="athzTypeCd" minOccurs="0" maxOccurs="1" position="100" length="100"/>
+      <field kor="전자결재상태코드" name="eltrAthzStatCd" minOccurs="0" maxOccurs="1" position="200" length="100"/>
+    </record>
+  </stream>
+</beanio>

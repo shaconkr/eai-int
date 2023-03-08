@@ -48,9 +48,9 @@
     <complexType name="KIKCISPMCK0130101_OutRes">
         <sequence>
             <element e:kor="은행목록건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="bankGridRowcount" nillable="true" type="long"/>
-            <element e:kor="은행목록" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="bankGridList" nillable="true" type="ns:BANK_GRID_LIST_TYPE"/>
+            <element e:kor="은행목록" e:lengthField="bankGridRowcount" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="bankGridList" nillable="true" type="ns:BANK_GRID_LIST_TYPE"/>
             <element e:kor="가상계좌번호목록건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="virtAcnoGridRowcount" nillable="true" type="long"/>
-            <element e:kor="가상계좌번호목록" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="virtAcnoGridList" nillable="true" type="ns:VIRT_ACNO_GRID_LIST_TYPE"/>
+            <element e:kor="가상계좌번호목록" e:lengthField="virtAcnoGridRowcount" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="virtAcnoGridList" nillable="true" type="ns:VIRT_ACNO_GRID_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="BANK_GRID_LIST_TYPE">

@@ -103,7 +103,7 @@
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="목록건수" name="gridRowcount" minOccurs="0" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="gridList" kor="목록배열" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="gridList" kor="목록배열" occursRef="gridRowcount" collection="list" class="map">
           <field kor="은행코드" name="bankCd" minOccurs="0" maxOccurs="1" position="1805" length="3"/>
           <field kor="가상계좌은행지점코드" name="virtAcntBankBrnCd" minOccurs="0" maxOccurs="1" position="1808" length="3"/>
           <field kor="가상계좌주제코드" name="virtAcntSbjtCd" minOccurs="0" maxOccurs="1" position="1811" length="3"/>
