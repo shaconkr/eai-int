@@ -1,0 +1,10 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq">
+    <complexType name="GRWCISCDDG0020301_InReq">
+        <sequence>
+            <element e:kor="전자결재번호" e:length="100" e:padder="SpaceRight" minOccurs="0" name="eltrAthzNo" nillable="true" type="string"/>
+            <element e:kor="결재유형코드" e:length="100" e:padder="SpaceRight" minOccurs="0" name="athzTypeCd" nillable="true" type="string"/>
+            <element e:kor="전자결재상태코드" e:length="100" e:padder="SpaceRight" minOccurs="0" name="eltrAthzStatCd" nillable="true" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="root" type="ns:GRWCISCDDG0020301_InReq"/>
+</schema>

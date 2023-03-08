@@ -112,7 +112,7 @@
         <field kor="할부금액" name="insmAmt" minOccurs="0" maxOccurs="1" position="1973" length="19" justify="right" padding="0"/>
         <field kor="총합계금액" name="totSumAmt" minOccurs="0" maxOccurs="1" position="1992" length="19" justify="right" padding="0"/>
         <field kor="그리드건수" name="gridRowcount" minOccurs="0" maxOccurs="1" position="2011" length="5" justify="right" padding="0"/>
-        <segment name="gridList" kor="그리드" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="gridList" kor="그리드" occursRef="gridRowcount" collection="list" class="map">
           <field kor="매출관리번호" name="saleMngNo" minOccurs="0" maxOccurs="1" position="2016" length="18"/>
           <field kor="카드할부개월수" name="crdInsmMths" minOccurs="0" maxOccurs="1" position="2034" length="4" justify="right" padding="0"/>
           <field kor="원금금액" name="prncAmt" minOccurs="0" maxOccurs="1" position="2038" length="19" justify="right" padding="0"/>

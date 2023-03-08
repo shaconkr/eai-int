@@ -48,7 +48,7 @@
     <complexType name="ARSCISFNDX0050101_InRes">
         <sequence>
             <element e:kor="청구서_배열건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="billpostRowcount" nillable="true" type="long"/>
-            <element e:kor="청구서_배열" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="billpostList" nillable="true" type="ns:BILLPOST_LIST_TYPE"/>
+            <element e:kor="청구서_배열" e:lengthField="billpostRowcount" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="billpostList" nillable="true" type="ns:BILLPOST_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="BILLPOST_LIST_TYPE">

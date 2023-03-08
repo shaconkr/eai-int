@@ -104,7 +104,7 @@
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="조회결과_배열건수" name="rsltRowcount" minOccurs="0" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="rsltList" kor="조회결과_배열" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="rsltList" kor="조회결과_배열" occursRef="rsltRowcount" collection="list" class="map">
           <field kor="전송일자" name="sendDt" minOccurs="0" maxOccurs="1" position="1805" length="8"/>
           <field kor="전송시간" name="sendTime" minOccurs="0" maxOccurs="1" position="1813" length="6"/>
           <field kor="응답코드" name="respCd" minOccurs="0" maxOccurs="1" position="1819" length="4"/>
