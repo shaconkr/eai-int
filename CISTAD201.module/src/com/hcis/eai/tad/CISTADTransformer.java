@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 import org.beanio.Marshaller;
 import org.beanio.StreamFactory;
 import org.beanio.Unmarshaller;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -20,7 +20,7 @@ import kr.shacon.format.Transformer;
 import kr.shacon.types.MapDeserializer;
 
 public class CISTADTransformer extends Transformer {
-    private static final Logger log = LoggerFactory.getLogger(Transformer.class);
+//    private static final Logger log = LoggerFactory.getLogger(Transformer.class);
     StreamFactory factory2;
 
     protected Gson gson = new GsonBuilder()
@@ -41,6 +41,7 @@ public class CISTADTransformer extends Transformer {
         return factory;
     }
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public String toEDI(String msgType, String jsonString, String encoding, String xmlpath) {             
     	StreamFactory factory = newStreamFactory(getBeanXmlInputStream(xmlpath));

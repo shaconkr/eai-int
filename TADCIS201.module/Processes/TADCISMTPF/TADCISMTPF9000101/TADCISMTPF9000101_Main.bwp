@@ -148,12 +148,6 @@
                 <variable>ParseJsonCIS</variable>
             </endingVariables>
         </task>
-        <task name="jiLog">
-            <endingVariables>
-                <variable>jiLog-input</variable>
-                <variable>jiLog</variable>
-            </endingVariables>
-        </task>
         <task name="Exception_L_Set_LogError">
             <endingVariables>
                 <variable>Exception_L_Set_LogError-input</variable>
@@ -1115,86 +1109,12 @@
             </complexType>
             <element name="ActivityOutputClass" type="tns:ActivityOutputClassType"/>
         </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+ce0522c8-c896-43f5-bff7-c00d1b1aa6e0+JavaInvokeActivityInput"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityInput+ce0522c8-c896-43f5-bff7-c00d1b1aa6e0+JavaInvokeActivityInput">
-            <complexType name="MutTypeMethodParameters">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="bytes" type="base64Binary"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="encoding" type="string"/>
-                </sequence>
-            </complexType>
-            <element name="JavaInvokeActivityInput" type="tns:MutTypeMethodInputRoot"/>
-            <complexType name="MutTypeMethodInputRoot">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="MethodParameters" type="tns:MutTypeMethodParameters"/>
-                </sequence>
-            </complexType>
-        </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/JavaInvokeActivityOutput+ce0522c8-c896-43f5-bff7-c00d1b1aa6e0+JavaInvokeActivityOutput"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.tibco.com/plugin/java/JavaInvokeActivityOutput+ce0522c8-c896-43f5-bff7-c00d1b1aa6e0+JavaInvokeActivityOutput">
-            <element name="JavaInvokeActivityOutput" type="tns:MutTypeMethodOutputRoot"/>
-            <complexType name="MutTypeMethodOutputRoot">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="MethodReturnValue" type="string"/>
-                </sequence>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://www.example.org/JavaExceptions"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/JavaExceptions">
-            <element name="JavaException" type="tns:JavaExceptionType"/>
-            <complexType name="JavaExceptionType">
-                <sequence>
-                    <element name="msg" type="string"/>
-                    <element minOccurs="0" name="msgCode" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="InvocationExceptionType">
-                <complexContent>
-                    <extension base="tns:JavaExceptionType">
-                        <sequence>
-                            <element name="methodName" type="string"/>
-                            <element name="exceptionClassName" type="string"/>
-                            <element name="exceptionMessage" type="string"/>
-                        </sequence>
-                    </extension>
-                </complexContent>
-            </complexType>
-            <element name="InvocationException" type="tns:InvocationExceptionType"/>
-            <complexType name="ConversionExceptionType">
-                <complexContent>
-                    <extension base="tns:JavaExceptionType">
-                        <sequence>
-                            <element name="conversionError" type="string"/>
-                        </sequence>
-                    </extension>
-                </complexContent>
-            </complexType>
-            <element name="ConversionException" type="tns:ConversionExceptionType"/>
-            <element name="JavaToXMLConversionException" type="tns:ConversionExceptionType"/>
-            <element name="XMLToJavaConversionException" type="tns:ConversionExceptionType"/>
-            <element name="JavaEventSourceException" type="tns:JavaExceptionType"/>
-            <element name="JavaEventSourceIllegalOperationException" type="tns:JavaExceptionType"/>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+ce0522c8-c896-43f5-bff7-c00d1b1aa6e0"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.example.org/JavaExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+ce0522c8-c896-43f5-bff7-c00d1b1aa6e0">
-            <import namespace="http://www.example.org/JavaExceptions"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvocationException"/>
-                </choice>
-            </complexType>
+        <schema elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/tnt/utilitySchema"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/tnt/utilitySchema">
+            <simpleType name="nativeJavaObjectKey">
+                <restriction base="string"/>
+            </simpleType>
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="false" createdBy="mskim"
@@ -1914,39 +1834,6 @@
                                     x="415"
                                     xsi:type="notation:Bounds" y="189"/>
                                     </children>
-                                    <children type="4002 bw.java.javamethod">
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.19"/>
-                                    <layoutConstraint
-                                    height="40" width="40"
-                                    x="74"
-                                    xsi:type="notation:Bounds" y="-29"/>
-                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -2296,7 +2183,7 @@
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.19" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -2304,17 +2191,6 @@
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.18"/>
             <bendpoints points="[19, -24, -42, 56]$[42, -55, -19, 25]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.19"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.19"/>
-            <bendpoints points="[20, 25, -46, -55]$[46, 56, -20, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -2460,12 +2336,6 @@
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable element="ns16:SetLog"
             name="Exception_L_Set_LogError-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns42:JavaInvokeActivityInput"
-            name="jiLog-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns43:JavaInvokeActivityOutput"
-            name="jiLog" sca-bpel:internal="true"/>
-        <bpws:variable element="ns44:ActivityErrorData"
-            name="_error_jiLog" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2524,8 +2394,7 @@
                 <bpws:link name="RenderJsonCISToL_Get_InterfaceInfo" tibex:linkType="SUCCESS"/>
                 <bpws:link name="ParseJSONToCIStoTAD" tibex:linkType="SUCCESS"/>
                 <bpws:link name="RenderJsonTADToAssign_OK" tibex:linkType="SUCCESS"/>
-                <bpws:link name="JMSReceiveMessageTojiLog" tibex:linkType="SUCCESS"/>
-                <bpws:link name="jiLogToediBytesToJson" tibex:linkType="SUCCESS"/>
+                <bpws:link name="JMSReceiveMessageToediBytesToJson" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -2533,7 +2402,7 @@
                     tibex:xpdlId="5500a7a6-7a1f-4793-b8df-abc7c1a1a8a4"
                     variable="JMSReceiveMessage" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="JMSReceiveMessageTojiLog"/>
+                        <bpws:source linkName="JMSReceiveMessageToediBytesToJson"/>
                     </bpws:sources>
                     <bpws:correlations/>
                     <tibex:eventSource>
@@ -2566,7 +2435,7 @@
                     outputVariable="ediBytesToJson"
                     tibex:xpdlId="552bb193-3dae-417c-88a9-4c4bf8804171" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="jiLogToediBytesToJson"/>
+                        <bpws:target linkName="JMSReceiveMessageToediBytesToJson"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="ediBytesToJsonToto3ByteHangle"/>
@@ -2951,7 +2820,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+45daadd4-47cc-4922-9e5d-c77501af875c+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;to2ByteHangle&quot;/>&lt;xsl:template name=&quot;JsonToEdiBytesLen-input&quot; match=&quot;/&quot;>&lt;tns4:JavaInvokeActivityInput>&lt;MethodParameters>&lt;msgType>&lt;xsl:value-of select=&quot;&amp;quot;_OutRes&amp;quot;&quot;/>&lt;/msgType>&lt;jsonString>&lt;xsl:value-of select=&quot;$to2ByteHangle/MethodReturnValue&quot;/>&lt;/jsonString>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;xml>&lt;xsl:value-of select=&quot;&amp;quot;/Schemas/TADCISMTPF/TADCISMTPF9000101/TADCISMTPF9000101.xml&amp;quot;&quot;/>&lt;/xml>&lt;/MethodParameters>&lt;/tns4:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+45daadd4-47cc-4922-9e5d-c77501af875c+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;to2ByteHangle&quot;/>&lt;xsl:template name=&quot;JsonToEdiBytesLen-input&quot; match=&quot;/&quot;>&lt;tns4:JavaInvokeActivityInput>&lt;MethodParameters>&lt;msgType>&lt;xsl:value-of select=&quot;&amp;quot;_InRes&amp;quot;&quot;/>&lt;/msgType>&lt;jsonString>&lt;xsl:value-of select=&quot;$to2ByteHangle/MethodReturnValue&quot;/>&lt;/jsonString>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;xml>&lt;xsl:value-of select=&quot;&amp;quot;/Schemas/TADCISMTPF/TADCISMTPF9000101/TADCISMTPF9000101.xml&amp;quot;&quot;/>&lt;/xml>&lt;/MethodParameters>&lt;/tns4:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -3100,7 +2969,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns6=&quot;http://schema.hcis.com/xsd/TADCISMTPF9000101_OutRes&quot; xmlns:ns7=&quot;http://schema.hcis.com/xsd/TADCISMTPF9000101_InRes&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJsonCIS&quot;/>&lt;xsl:template name=&quot;RenderJsonTAD-input&quot; match=&quot;/&quot;>&lt;ns7:root>&lt;ns7:header>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:totTgrmLen&quot;>&lt;ns7:totTgrmLen>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:totTgrmLen&quot;/>&lt;/ns7:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:hdrLen&quot;>&lt;ns7:hdrLen>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:hdrLen&quot;/>&lt;/ns7:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:tgrmFrmCd&quot;>&lt;ns7:tgrmFrmCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tgrmFrmCd&quot;/>&lt;/ns7:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:sysEnvGbcd&quot;>&lt;ns7:sysEnvGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sysEnvGbcd&quot;/>&lt;/ns7:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:ipAdr&quot;>&lt;ns7:ipAdr>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:ipAdr&quot;/>&lt;/ns7:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:guid&quot;>&lt;ns7:guid>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:guid&quot;/>&lt;/ns7:guid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:prgrNo&quot;>&lt;ns7:prgrNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:prgrNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:prgrNo&quot;/>&lt;/ns7:prgrNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:frstGuid&quot;>&lt;ns7:frstGuid>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frstGuid&quot;/>&lt;/ns7:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:sendSysCd&quot;>&lt;ns7:sendSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sendSysCd&quot;/>&lt;/ns7:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:frstSendSysCd&quot;>&lt;ns7:frstSendSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frstSendSysCd&quot;/>&lt;/ns7:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:sysCommTrtyPrepCntn&quot;>&lt;ns7:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sysCommTrtyPrepCntn&quot;/>&lt;/ns7:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmId&quot;>&lt;ns7:eimsTgrmId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmId&quot;/>&lt;/ns7:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmVerNo&quot;>&lt;ns7:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmVerNo&quot;/>&lt;/ns7:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:frwkTrdId&quot;>&lt;ns7:frwkTrdId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frwkTrdId&quot;/>&lt;/ns7:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:rcvSysCd&quot;>&lt;ns7:rcvSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:rcvSysCd&quot;/>&lt;/ns7:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:tieTgrmCd&quot;>&lt;ns7:tieTgrmCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieTgrmCd&quot;/>&lt;/ns7:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvGrpCd&quot;>&lt;ns7:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvGrpCd&quot;/>&lt;/ns7:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvNm&quot;>&lt;ns7:tieSrvNm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvNm&quot;/>&lt;/ns7:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:scrnNo&quot;>&lt;ns7:scrnNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:scrnNo&quot;/>&lt;/ns7:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:reqnRespGbcd&quot;>&lt;ns7:reqnRespGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:reqnRespGbcd&quot;/>&lt;/ns7:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:syncProcGbcd&quot;>&lt;ns7:syncProcGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:syncProcGbcd&quot;/>&lt;/ns7:syncProcGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:trdRespCd&quot;>&lt;ns7:trdRespCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:trdRespCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:trdRespCd&quot;/>&lt;/ns7:trdRespCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:reqnDtm&quot;>&lt;ns7:reqnDtm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:reqnDtm&quot;/>&lt;/ns7:reqnDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:respDtm&quot;>&lt;ns7:respDtm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:respDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:respDtm&quot;/>&lt;/ns7:respDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:storeCd&quot;>&lt;ns7:storeCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:storeCd&quot;/>&lt;/ns7:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:userId&quot;>&lt;ns7:userId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:userId&quot;/>&lt;/ns7:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:trdCommTrtyPrepCntn&quot;>&lt;ns7:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:trdCommTrtyPrepCntn&quot;/>&lt;/ns7:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;/ns7:header>&lt;ns7:data>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:storeCd&quot;>&lt;ns7:storeCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:storeCd&quot;/>&lt;/ns7:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:aprvlNo&quot;>&lt;ns7:aprvlNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:aprvlNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:aprvlNo&quot;/>&lt;/ns7:aprvlNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleDt&quot;>&lt;ns7:orgsaleDt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleDt&quot;/>&lt;/ns7:orgsaleDt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:orgsalePosNo&quot;>&lt;ns7:orgsalePosNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsalePosNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsalePosNo&quot;/>&lt;/ns7:orgsalePosNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleRcptNo&quot;>&lt;ns7:orgsaleRcptNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleRcptNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleRcptNo&quot;/>&lt;/ns7:orgsaleRcptNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:cnclAmt&quot;>&lt;ns7:cnclAmt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:cnclAmt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:cnclAmt&quot;/>&lt;/ns7:cnclAmt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:cnclMlg&quot;>&lt;ns7:cnclMlg>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:cnclMlg/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:cnclMlg&quot;/>&lt;/ns7:cnclMlg>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:gvbkTrgtYn&quot;>&lt;ns7:gvbkTrgtYn>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:gvbkTrgtYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:gvbkTrgtYn&quot;/>&lt;/ns7:gvbkTrgtYn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:msg1&quot;>&lt;ns7:msg1>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg1/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg1&quot;/>&lt;/ns7:msg1>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:msg2&quot;>&lt;ns7:msg2>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg2/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg2&quot;/>&lt;/ns7:msg2>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:msg3&quot;>&lt;ns7:msg3>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg3/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg3&quot;/>&lt;/ns7:msg3>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:mlgBsicYr&quot;>&lt;ns7:mlgBsicYr>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:mlgBsicYr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:mlgBsicYr&quot;/>&lt;/ns7:mlgBsicYr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:lackMlg&quot;>&lt;ns7:lackMlg>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:lackMlg/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:lackMlg&quot;/>&lt;/ns7:lackMlg>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:giftReRcvnOverAmt&quot;>&lt;ns7:giftReRcvnOverAmt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:giftReRcvnOverAmt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:giftReRcvnOverAmt&quot;/>&lt;/ns7:giftReRcvnOverAmt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:pymBsicDt&quot;>&lt;ns7:pymBsicDt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:pymBsicDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:pymBsicDt&quot;/>&lt;/ns7:pymBsicDt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:extgMemGrd&quot;>&lt;ns7:extgMemGrd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:extgMemGrd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:extgMemGrd&quot;/>&lt;/ns7:extgMemGrd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:afcnMemGrd&quot;>&lt;ns7:afcnMemGrd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:afcnMemGrd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:afcnMemGrd&quot;/>&lt;/ns7:afcnMemGrd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:grdChgAplyDt&quot;>&lt;ns7:grdChgAplyDt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:grdChgAplyDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:grdChgAplyDt&quot;/>&lt;/ns7:grdChgAplyDt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:lxgdsGbcd&quot;>&lt;ns7:lxgdsGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:lxgdsGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:lxgdsGbcd&quot;/>&lt;/ns7:lxgdsGbcd>&lt;/xsl:if>&lt;/ns7:data>&lt;/ns7:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns6=&quot;http://schema.hcis.com/xsd/TADCISMTPF9000101_OutRes&quot; xmlns:ns7=&quot;http://schema.hcis.com/xsd/TADCISMTPF9000101_InRes&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJsonCIS&quot;/>&lt;xsl:template name=&quot;RenderJsonTAD-input&quot; match=&quot;/&quot;>&lt;ns7:root>&lt;ns7:header>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:totTgrmLen&quot;>&lt;ns7:totTgrmLen>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:totTgrmLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:totTgrmLen&quot;/>&lt;/ns7:totTgrmLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:hdrLen&quot;>&lt;ns7:hdrLen>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:hdrLen/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:hdrLen&quot;/>&lt;/ns7:hdrLen>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:tgrmFrmCd&quot;>&lt;ns7:tgrmFrmCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tgrmFrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tgrmFrmCd&quot;/>&lt;/ns7:tgrmFrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:sysEnvGbcd&quot;>&lt;ns7:sysEnvGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sysEnvGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sysEnvGbcd&quot;/>&lt;/ns7:sysEnvGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:ipAdr&quot;>&lt;ns7:ipAdr>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:ipAdr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:ipAdr&quot;/>&lt;/ns7:ipAdr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:guid&quot;>&lt;ns7:guid>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:guid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:guid&quot;/>&lt;/ns7:guid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:prgrNo&quot;>&lt;ns7:prgrNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:prgrNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:prgrNo&quot;/>&lt;/ns7:prgrNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:frstGuid&quot;>&lt;ns7:frstGuid>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frstGuid/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frstGuid&quot;/>&lt;/ns7:frstGuid>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:sendSysCd&quot;>&lt;ns7:sendSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sendSysCd&quot;/>&lt;/ns7:sendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:frstSendSysCd&quot;>&lt;ns7:frstSendSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frstSendSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frstSendSysCd&quot;/>&lt;/ns7:frstSendSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:sysCommTrtyPrepCntn&quot;>&lt;ns7:sysCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sysCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:sysCommTrtyPrepCntn&quot;/>&lt;/ns7:sysCommTrtyPrepCntn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmId&quot;>&lt;ns7:eimsTgrmId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmId&quot;/>&lt;/ns7:eimsTgrmId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmVerNo&quot;>&lt;ns7:eimsTgrmVerNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmVerNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:eimsTgrmVerNo&quot;/>&lt;/ns7:eimsTgrmVerNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:frwkTrdId&quot;>&lt;ns7:frwkTrdId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frwkTrdId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:frwkTrdId&quot;/>&lt;/ns7:frwkTrdId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:rcvSysCd&quot;>&lt;ns7:rcvSysCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:rcvSysCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:rcvSysCd&quot;/>&lt;/ns7:rcvSysCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:tieTgrmCd&quot;>&lt;ns7:tieTgrmCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieTgrmCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieTgrmCd&quot;/>&lt;/ns7:tieTgrmCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvGrpCd&quot;>&lt;ns7:tieSrvGrpCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvGrpCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvGrpCd&quot;/>&lt;/ns7:tieSrvGrpCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvNm&quot;>&lt;ns7:tieSrvNm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvNm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:tieSrvNm&quot;/>&lt;/ns7:tieSrvNm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:scrnNo&quot;>&lt;ns7:scrnNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:scrnNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:scrnNo&quot;/>&lt;/ns7:scrnNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:reqnRespGbcd&quot;>&lt;ns7:reqnRespGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:reqnRespGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:reqnRespGbcd&quot;/>&lt;/ns7:reqnRespGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:syncProcGbcd&quot;>&lt;ns7:syncProcGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:syncProcGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:syncProcGbcd&quot;/>&lt;/ns7:syncProcGbcd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:trdRespCd&quot;>&lt;ns7:trdRespCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:trdRespCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:trdRespCd&quot;/>&lt;/ns7:trdRespCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:reqnDtm&quot;>&lt;ns7:reqnDtm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:reqnDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:reqnDtm&quot;/>&lt;/ns7:reqnDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:respDtm&quot;>&lt;ns7:respDtm>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:respDtm/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:respDtm&quot;/>&lt;/ns7:respDtm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:storeCd&quot;>&lt;ns7:storeCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:storeCd&quot;/>&lt;/ns7:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:userId&quot;>&lt;ns7:userId>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:userId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:userId&quot;/>&lt;/ns7:userId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:header/ns6:trdCommTrtyPrepCntn&quot;>&lt;ns7:trdCommTrtyPrepCntn>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:header/ns6:trdCommTrtyPrepCntn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:header/ns6:trdCommTrtyPrepCntn&quot;/>&lt;/ns7:trdCommTrtyPrepCntn>&lt;/xsl:if>&lt;ns7:msgCd>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/ns7:msgCd>&lt;/ns7:header>&lt;ns7:data>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:storeCd&quot;>&lt;ns7:storeCd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:storeCd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:storeCd&quot;/>&lt;/ns7:storeCd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:aprvlNo&quot;>&lt;ns7:aprvlNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:aprvlNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:aprvlNo&quot;/>&lt;/ns7:aprvlNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleDt&quot;>&lt;ns7:orgsaleDt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleDt&quot;/>&lt;/ns7:orgsaleDt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:orgsalePosNo&quot;>&lt;ns7:orgsalePosNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsalePosNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsalePosNo&quot;/>&lt;/ns7:orgsalePosNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleRcptNo&quot;>&lt;ns7:orgsaleRcptNo>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleRcptNo/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:orgsaleRcptNo&quot;/>&lt;/ns7:orgsaleRcptNo>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:cnclAmt&quot;>&lt;ns7:cnclAmt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:cnclAmt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:cnclAmt&quot;/>&lt;/ns7:cnclAmt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:cnclMlg&quot;>&lt;ns7:cnclMlg>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:cnclMlg/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:cnclMlg&quot;/>&lt;/ns7:cnclMlg>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:gvbkTrgtYn&quot;>&lt;ns7:gvbkTrgtYn>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:gvbkTrgtYn/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:gvbkTrgtYn&quot;/>&lt;/ns7:gvbkTrgtYn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:msg1&quot;>&lt;ns7:msg1>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg1/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg1&quot;/>&lt;/ns7:msg1>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:msg2&quot;>&lt;ns7:msg2>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg2/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg2&quot;/>&lt;/ns7:msg2>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:msg3&quot;>&lt;ns7:msg3>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg3/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:msg3&quot;/>&lt;/ns7:msg3>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:mlgBsicYr&quot;>&lt;ns7:mlgBsicYr>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:mlgBsicYr/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:mlgBsicYr&quot;/>&lt;/ns7:mlgBsicYr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:lackMlg&quot;>&lt;ns7:lackMlg>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:lackMlg/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:lackMlg&quot;/>&lt;/ns7:lackMlg>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:giftReRcvnOverAmt&quot;>&lt;ns7:giftReRcvnOverAmt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:giftReRcvnOverAmt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:giftReRcvnOverAmt&quot;/>&lt;/ns7:giftReRcvnOverAmt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:pymBsicDt&quot;>&lt;ns7:pymBsicDt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:pymBsicDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:pymBsicDt&quot;/>&lt;/ns7:pymBsicDt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:extgMemGrd&quot;>&lt;ns7:extgMemGrd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:extgMemGrd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:extgMemGrd&quot;/>&lt;/ns7:extgMemGrd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:afcnMemGrd&quot;>&lt;ns7:afcnMemGrd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:afcnMemGrd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:afcnMemGrd&quot;/>&lt;/ns7:afcnMemGrd>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:grdChgAplyDt&quot;>&lt;ns7:grdChgAplyDt>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:grdChgAplyDt/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:grdChgAplyDt&quot;/>&lt;/ns7:grdChgAplyDt>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJsonCIS/ns6:data/ns6:lxgdsGbcd&quot;>&lt;ns7:lxgdsGbcd>&lt;xsl:copy-of select=&quot;$ParseJsonCIS/ns6:data/ns6:lxgdsGbcd/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseJsonCIS/ns6:data/ns6:lxgdsGbcd&quot;/>&lt;/ns7:lxgdsGbcd>&lt;/xsl:if>&lt;/ns7:data>&lt;/ns7:root>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -3114,48 +2983,6 @@
                                     <value jsonOutputStyle="None"
                                     schemaType="Xsd" xsi:type="restjson:JsonRender">
                                     <inputEditorElement href="platform:/resource/TADCIS201.module/Schemas/TADCISMTPF/TADCISMTPF9000101/TADCISMTPF9000101_InRes.xsd#//root;XSDElementDeclaration"/>
-                                    </value>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="jiLog-input"
-                    name="jiLog" outputVariable="jiLog"
-                    tibex:xpdlId="ce0522c8-c896-43f5-bff7-c00d1b1aa6e0" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="JMSReceiveMessageTojiLog"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="jiLogToediBytesToJson"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns8=&quot;www.tibco.com/plugin/java/JavaInvokeActivityInput+ce0522c8-c896-43f5-bff7-c00d1b1aa6e0+JavaInvokeActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:template name=&quot;jiLog-input&quot; match=&quot;/&quot;>&lt;tns8:JavaInvokeActivityInput>&lt;MethodParameters>&lt;bytes>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/bytes>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;euc-kr&amp;quot;&quot;/>&lt;/encoding>&lt;/MethodParameters>&lt;/tns8:JavaInvokeActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity
-                            activityTypeID="bw.java.javamethod"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:java="http://ns.tibco.com/bw/palette/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/java#//JavaMethod"/>
-                                    <value
-                                    className="com.hcis.eai.tad.TADCISHelper"
-                                    constructDeclaredClass="true"
-                                    isNew="true"
-                                    isNewActivity="true"
-                                    methodName="toString"
-                                    methodReturn="string" xsi:type="java:JavaMethod">
-                                    <exceptionTypes>java.io.UnsupportedEncodingException</exceptionTypes>
-                                    <methodParameter
-                                    paramName="bytes" paramType="byte[]"/>
-                                    <methodParameter
-                                    paramName="encoding" paramType="string"/>
                                     </value>
                                 </properties>
                             </activityConfig>

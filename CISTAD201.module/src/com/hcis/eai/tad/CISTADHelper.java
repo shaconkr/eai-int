@@ -50,7 +50,8 @@ public class CISTADHelper<N> extends HCISHelper<N> {
         return new String(setTotalLength(edi.getBytes(encoding), 8, 0, false, encoding),encoding); 
     }
 
-    public String toEDI3(String msgType, String jsonString, String encoding, InputStream is) {
+    @SuppressWarnings("unchecked")
+	public String toEDI3(String msgType, String jsonString, String encoding, InputStream is) {
     	StreamFactory factory = newStreamFactory(is);
         Marshaller marshaller = factory.createMarshaller(msgType);
         Map<String, Object> map = gson.fromJson(jsonString, Map.class);
@@ -102,7 +103,6 @@ public class CISTADHelper<N> extends HCISHelper<N> {
 
 	@Override    
     public String toString(byte[] bytes, String encoding) throws UnsupportedEncodingException {
-		String abc = new String(bytes, encoding);
     	return new String(bytes, encoding);
     }
     /**

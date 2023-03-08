@@ -1269,8 +1269,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="27"
-                                    xsi:type="notation:Bounds" y="111"/>
+                                    <layoutConstraint x="3"
+                                    xsi:type="notation:Bounds" y="32"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -1304,8 +1304,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="107"
-                                    xsi:type="notation:Bounds" y="111"/>
+                                    <layoutConstraint x="92"
+                                    xsi:type="notation:Bounds" y="32"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -1603,7 +1603,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/file/v2&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;ReadFile-input&quot; match=&quot;/&quot;>&lt;tns2:ReadActivityInputClass>&lt;fileName>&lt;xsl:value-of select=&quot;&amp;quot;D:\HCIS\eai-int\TADCISTEST.module\Resources\TADCISMTPF\TADCISMTPF9000101_0.json&amp;quot;&quot;/>&lt;/fileName>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;UTF-8&amp;quot;&quot;/>&lt;/encoding>&lt;/tns2:ReadActivityInputClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/file/v2&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;ReadFile-input&quot; match=&quot;/&quot;>&lt;tns2:ReadActivityInputClass>&lt;fileName>&lt;xsl:value-of select=&quot;&amp;quot;D:\HCIS\eai-int\TADCISTEST.module\Resources\TADCISMTPF\TADCISMTPF9000101_0.fix&amp;quot;&quot;/>&lt;/fileName>&lt;encoding>&lt;xsl:value-of select=&quot;&amp;quot;UTF-8&amp;quot;&quot;/>&lt;/encoding>&lt;/tns2:ReadActivityInputClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.file.read"

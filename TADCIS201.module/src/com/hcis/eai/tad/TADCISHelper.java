@@ -49,6 +49,7 @@ public class TADCISHelper<N> extends HCISHelper<N> {
         return new String(setTotalLength(edi.getBytes(encoding), 8, 0, false, encoding),encoding); 
     }
 
+	@SuppressWarnings("unchecked")
 	public String toEDI3(String msgType, String jsonString, String encoding, InputStream is) {
     	StreamFactory factory = newStreamFactory(is);
         Marshaller marshaller = factory.createMarshaller(msgType);
