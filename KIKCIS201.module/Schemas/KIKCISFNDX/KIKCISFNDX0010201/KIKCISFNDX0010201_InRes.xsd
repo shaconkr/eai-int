@@ -49,7 +49,7 @@
         <sequence>
             <element e:kor="결제예정금액" e:length="20" e:padder="ZeroLeft" minOccurs="0" name="stlmPrrgAmt" nillable="true" type="decimal"/>
             <element e:kor="조회결과_배열건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="rsltRowcount" nillable="true" type="long"/>
-            <element e:kor="조회결과_배열" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
+            <element e:kor="조회결과_배열" e:lengthField="rsltRowcount" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RSLT_LIST_TYPE">

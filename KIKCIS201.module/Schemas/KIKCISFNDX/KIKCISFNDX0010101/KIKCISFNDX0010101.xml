@@ -112,7 +112,7 @@
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="조회결과_배열건수" name="rsltRowcount" minOccurs="0" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="rsltList" kor="조회결과_배열" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="rsltList" kor="조회결과_배열" occursRef="rsltRowcount" collection="list" class="map">
           <field kor="카드회원번호" name="crdMemNo" minOccurs="0" maxOccurs="1" position="1805" length="9"/>
           <field kor="청구결제단위번호" name="reqStlmUnitNo" minOccurs="0" maxOccurs="1" position="1814" length="4"/>
           <field kor="매출관리번호" name="saleMngNo" minOccurs="0" maxOccurs="1" position="1818" length="18"/>

@@ -3,7 +3,7 @@
     <complexType name="ARSCISFNDX0090101_InRes">
         <sequence>
             <element e:kor="결과_배열건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="rsltRowcount" nillable="true" type="long"/>
-            <element e:kor="결과_배열" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" type="ns:RSLT_LIST_TYPE"/>
+            <element e:kor="결과_배열" e:lengthField="rsltRowcount" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" type="ns:RSLT_LIST_TYPE"/>
         </sequence>
     </complexType>
     <complexType name="RSLT_LIST_TYPE">

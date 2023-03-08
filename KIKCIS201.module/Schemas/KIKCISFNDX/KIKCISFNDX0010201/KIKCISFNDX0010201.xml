@@ -113,7 +113,7 @@
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="결제예정금액" name="stlmPrrgAmt" minOccurs="0" maxOccurs="1" position="1800" length="20" justify="right" padding="0"/>
         <field kor="조회결과_배열건수" name="rsltRowcount" minOccurs="0" maxOccurs="1" position="1820" length="5" justify="right" padding="0"/>
-        <segment name="rsltList" kor="조회결과_배열" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="rsltList" kor="조회결과_배열" occursRef="rsltRowcount" collection="list" class="map">
           <field kor="청구일자" name="chrDt" minOccurs="0" maxOccurs="1" position="1825" length="8"/>
           <field kor="총결제금액" name="totStlmAmt" minOccurs="0" maxOccurs="1" position="1833" length="18" justify="right" padding="0"/>
         </segment>

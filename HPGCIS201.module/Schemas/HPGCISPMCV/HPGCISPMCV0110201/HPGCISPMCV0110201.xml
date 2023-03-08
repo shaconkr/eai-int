@@ -104,7 +104,7 @@
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="목록건수" name="gridRowcount" minOccurs="0" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="gridList" kor="목록배열" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="gridList" kor="목록배열" occursRef="gridRowcount" collection="list" class="map">
           <field kor="은행코드" name="bankCd" minOccurs="0" maxOccurs="1" position="1805" length="3"/>
           <field kor="은행명" name="bankNm" minOccurs="0" maxOccurs="1" position="1808" length="100"/>
           <field kor="가상계좌번호" name="virtAcno" minOccurs="0" maxOccurs="1" position="1908" length="50"/>

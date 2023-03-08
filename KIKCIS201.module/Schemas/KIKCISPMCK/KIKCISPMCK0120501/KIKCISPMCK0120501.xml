@@ -106,7 +106,7 @@
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
         <field kor="그리드건수" name="gridRowcount" minOccurs="0" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
-        <segment name="gridList" kor="그리드" minOccurs="0" maxOccurs="9223372036854775807" collection="list" class="map">
+        <segment name="gridList" kor="그리드" occursRef="gridRowcount" collection="list" class="map">
           <field kor="매출관리번호" name="saleMngNo" minOccurs="0" maxOccurs="1" position="1805" length="18"/>
           <field kor="매출이용구분코드" name="saleUtlzGbcd" minOccurs="0" maxOccurs="1" position="1823" length="4"/>
           <field kor="자사승인번호" name="owcoAprvlNo" minOccurs="0" maxOccurs="1" position="1827" length="9"/>
