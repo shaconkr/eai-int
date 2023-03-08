@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GRWCISCDDG0020301="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="GRWCISCDDG/GRWCISCDDG0020301.GRWCISCDDG0020301_InReq" type="dataformat:DataFormat">
-  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/GRWCISCDDG0020301_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="GRWCISCDDG0020301:main" lineLength="300" fieldOffsetsStr="eltrAthzNo(0,100)&#xA;athzTypeCd(100,200)&#xA;eltrAthzStatCd(200,300)">
-    <fieldOffsets kor="전자결재번호" type="string" name="eltrAthzNo" start="0" end="100"/>
-    <fieldOffsets kor="결재유형코드" type="string" name="athzTypeCd" start="100" end="200"/>
-    <fieldOffsets kor="전자결재상태코드" type="string" name="eltrAthzStatCd" start="200" end="300"/>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GRWCISCDDG0020301="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_LW8WUL19Ee2Ztaq4CNRb9A" name="GRWCISCDDG.GRWCISCDDG0020301.GRWCISCDDG0020301_InReq" type="dataformat:DataFormat">
+  <imports xmi:id="_LW8WUb19Ee2Ztaq4CNRb9A" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/GRWCISCDDG0020301_InReq_df.xsd" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_LW8WUr19Ee2Ztaq4CNRb9A" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="GRWCISCDDG0020301:main" fieldOffsetsStr="header(0,0)&#xA;data(0,0)">
+    <fieldOffsets xmi:id="_LW8WU719Ee2Ztaq4CNRb9A" name="header" kor="공통부" type="GRWHeaderType"/>
+    <fieldOffsets xmi:id="_LW8WVL19Ee2Ztaq4CNRb9A" name="data" kor="데이터부" type="GRWCISCDDG0020301_InReq"/>
   </jndi:configuration>
 </jndi:namedResource>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_hyddwL1UEe2RJZalnHpWaQ" targetNamespace="http://tns.tibco.com/bw/composite/GRWCIS201.module" name="GRWCIS201.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_h-rU0L1UEe2RJZalnHpWaQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-1F0L1UEe2RJZalnHpWaQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-1F0b1UEe2RJZalnHpWaQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-1F0r1UEe2RJZalnHpWaQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-1F071UEe2RJZalnHpWaQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h--PwL1UEe2RJZalnHpWaQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h--Pwb1UEe2RJZalnHpWaQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h--Pwr1UEe2RJZalnHpWaQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h--Pw71UEe2RJZalnHpWaQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="__C-Q0L1cEe2-xuAM40VP0g" name="FW_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__X5X8L1cEe2-xuAM40VP0g" name="FW_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_0OoJML13Ee2-xuAM40VP0g" name="HOST_IP" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_1yehkL13Ee2-xuAM40VP0g" name="HOST_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_T7nHEL1yEe2-xuAM40VP0g" name="ComponentGRWCISCDDG0020301" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_T7nHEb1yEe2-xuAM40VP0g" processName="GRWCISCDDG.GRWCISCDDG0020301.GRWCISCDDG0020301"/>
+  </sca:component>
+  <sca:component xmi:id="_6z7dsL2BEe2Ztaq4CNRb9A" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_6z7dsb2BEe2Ztaq4CNRb9A" processName="GRWCIS201.module.Activator"/>
+  </sca:component>
+</sca:composite>

@@ -1,4 +1,5 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InRes_GRWHeaderType" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InRes_GRWHeaderType">
+    <element name="root" type="ns:GRWHeaderType"/>
     <complexType name="GRWHeaderType">
         <sequence>
             <element e:kor="전체전문길이" e:length="8" e:padder="SpaceRight" minOccurs="0" name="totTgrmLen" nillable="true" type="integer"/>
@@ -32,7 +33,7 @@
             <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
             <element e:kor="사용자ID" e:length="8" e:padder="SpaceRight" minOccurs="0" name="userId" nillable="true" type="string"/>
             <element e:kor="거래공통영역예비내용" e:length="100" e:padder="SpaceRight" minOccurs="0" name="trdCommTrtyPrepCntn" nillable="true" type="string"/>
-            <element e:kor="메시지그룹명" e:length="0" e:padder="SpaceRight" minOccurs="0" name="msgGrpNm" nillable="true" type="ns:msgGrpNmType"/>
+            <element e:kor="메시지그룹명" e:length="0" e:padder="SpaceRight" minOccurs="0" name="msgGrpNm" type="ns:msgGrpNmType"/>
             <element e:kor="표준전문종료문자값" e:length="2" e:padder="SpaceRight" minOccurs="0" name="stdTgrmEndLettrVal" nillable="true" type="string"/>
         </sequence>
     </complexType>
@@ -45,18 +46,4 @@
             <element e:kor="메시지세부내용" e:length="1000" e:padder="SpaceRight" minOccurs="0" name="msgDtlCntn" nillable="true" type="string"/>
         </sequence>
     </complexType>
-    <complexType name="GRWCISCDDG0020301_InReq">
-        <sequence>
-            <element e:kor="전자결재번호" e:length="100" e:padder="SpaceRight" minOccurs="0" name="eltrAthzNo" nillable="true" type="string"/>
-            <element e:kor="결재유형코드" e:length="100" e:padder="SpaceRight" minOccurs="0" name="athzTypeCd" nillable="true" type="string"/>
-            <element e:kor="전자결재상태코드" e:length="100" e:padder="SpaceRight" minOccurs="0" name="eltrAthzStatCd" nillable="true" type="string"/>
-        </sequence>
-    </complexType>
-    <complexType name="rootType">
-        <sequence>
-            <element e:kor="공통부" name="header" type="ns:GRWHeaderType"/>
-            <element e:kor="데이터부" name="data" type="ns:GRWCISCDDG0020301_InReq"/>
-        </sequence>
-    </complexType>
-    <element name="root" type="ns:rootType"/>
 </schema>
