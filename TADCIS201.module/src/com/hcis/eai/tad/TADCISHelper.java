@@ -22,7 +22,7 @@ import kr.shacon.format.TibXsdParser;
 
 
 public class TADCISHelper<N> extends HCISHelper<N> {
-	
+
     private static final Logger log = LoggerFactory.getLogger(TADCISHelper.class);
     private final Gson  gson = new GsonBuilder()
             .setPrettyPrinting()
@@ -44,14 +44,12 @@ public class TADCISHelper<N> extends HCISHelper<N> {
         String interfaceId = getInterfaceId();
         String xmlfile = Strings.isNullOrEmpty(xml) ? "/Schemas/" + interfaceId.substring(0,10) + "/" + interfaceId + "/" + interfaceId + ".xml" : xml;        
         String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
-        log.debug("## streamName [{}] xml [{}] msgType [{}] ", streamName, xmlfile, msgType);
+        log.debug("## streamName [{}] , xml [{}] , msgType [{}] ", streamName, xmlfile, msgType);
         String edi = toEDI3(streamName, encodedString, encoding, getBeanXmlInputStream(xmlfile));
-log.debug("sbYi     CISTADHelper.toEDI2   edi : {} ", edi);
         return new String(setTotalLength(edi.getBytes(encoding), 8, 0, false, encoding),encoding); 
     }
 
 	public String toEDI3(String msgType, String jsonString, String encoding, InputStream is) {
-log.debug("sbYi    CISTADHelper.toEDI3    1");
     	StreamFactory factory = newStreamFactory(is);
         Marshaller marshaller = factory.createMarshaller(msgType);
         Map<String, Object> map = gson.fromJson(jsonString, Map.class);
@@ -60,37 +58,30 @@ log.debug("sbYi    CISTADHelper.toEDI3    1");
 
 	@Override
 	public String EDIbytesToJson(String msgType, byte[] ediBytes, String encoding, String xml) throws Exception {
-log.debug("sbYi  0 -----------------  CISTADHelper.EDIbytesToJson ");
         return toJSON(msgType, new String(ediBytes, encoding), encoding, xml);
     }
 
 	public String toJSON(String msgType, String ediString, String encoding, String xml) throws Exception {
-log.debug("sbYi  0 -----------------  CISTADHelper.toJSON   ");
         String interfaceId = getInterfaceId();
-log.debug("sbYi  1 -----------------  CISTADHelper.toJSON  interfaceId : {} ", interfaceId);
         String xmlfile = Strings.isNullOrEmpty(xml) ? "/Schemas/" + interfaceId.substring(0,10) + "/" + interfaceId + "/" + interfaceId + ".xml" : xml;
-log.debug("sbYi  2 -----------------  CISTADHelper.toJSON      xmlfile : {} ", xmlfile);
-//        CISTADTransformer trans = new CISTADTransformer();
-log.debug("sbYi  3 -----------------  CISTADHelper.toJSON    ");
         String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
-log.debug("sbYi  4 -----------------  CISTADHelper.toJSON   streamName : {} ", streamName);
         log.debug("## BeanIO {} , {} , {} ", streamName, xmlfile, msgType);        
         InputStream ism = getBeanXmlInputStream(xmlfile);
-log.debug("sbYi  5 -----------------  CISTADHelper.toJSON    ");
         return new String(toJSON3(streamName, ediString, encoding, ism).getBytes(encoding), encoding);
-//        return new String(toJSON3(streamName, ediString, encoding, getBeanXmlInputStream(xmlfile)).getBytes(encoding), encoding);
-//        return new String(trans.toJSON(streamName, ediString, encoding, getBeanXmlInputStream(xmlfile)).getBytes(encoding), encoding);
     }
 
     public String toJSON3(String msgType, String ediString, String encoding, InputStream is) {
-log.debug("sbYi  0 1 -----------------  CISTADHelper.toJSON3    ediString : {}", ediString);
+log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 0 : {} ", msgType);
     	StreamFactory     factory = newStreamFactory(is);
-log.debug("sbYi  1 1 -----------------  CISTADHelper.toJSON3     encoding : {}", encoding);
+log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 1 : {} ", ediString);
         Unmarshaller unmarshaller = factory.createUnmarshaller(msgType);
-log.debug("sbYi  2 1 -----------------  CISTADHelper.toJSON3      msgType : {}", msgType);
+log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 2 : {} ", encoding);
         Object o = unmarshaller.unmarshal(ediString, encoding);
-log.debug("sbYi  3 1 -----------------  CISTADHelper.toJSON3    ");
-        return gson.toJson(o, Map.class);
+log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 3 : {} ", o.toString());
+String strRtn = gson.toJson(o, Map.class);
+log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 4 : {} ", strRtn);
+        return strRtn;
+//        return gson.toJson(o, Map.class);
     }
 	
 	@Override

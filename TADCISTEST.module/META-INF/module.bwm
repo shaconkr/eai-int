@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_CC--8LvNEe2wqr0p10B2VA" targetNamespace="http://tns.tibco.com/bw/composite/TADCISTEST.module" name="TADCISTEST.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_DOkBQLvNEe2wqr0p10B2VA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DOskILvNEe2wqr0p10B2VA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DOwOgLvNEe2wqr0p10B2VA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DO1HALvNEe2wqr0p10B2VA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DO4xYLvNEe2wqr0p10B2VA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DO9C0LvNEe2wqr0p10B2VA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DPCiYLvNEe2wqr0p10B2VA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DPFlsLvNEe2wqr0p10B2VA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DPJQELvNEe2wqr0p10B2VA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_NOUO8LvNEe2wqr0p10B2VA" name="ComponentTADCISMKCG0400101" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NOUO8bvNEe2wqr0p10B2VA" processName="test.module.TADCISMKCG0400101"/>
+  </sca:component>
+  <sca:component xmi:id="_8lhuILyEEe2myb99346qWw" name="ComponentTADCISMTPF9000101" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8lhuIbyEEe2myb99346qWw" processName="test.module.TADCISMTPF9000101"/>
+  </sca:component>
+</sca:composite>
