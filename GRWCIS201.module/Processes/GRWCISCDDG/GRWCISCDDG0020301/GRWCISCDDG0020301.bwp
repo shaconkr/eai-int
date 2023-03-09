@@ -1654,15 +1654,13 @@
             namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InRes" prefix="ns2"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../../../HcisCommon.smodule/Schemas/CISHeader.xsd" namespace="http://schema.hcis.com/json"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../Schemas/GRWCISCDDG/GRWCISCDDG0020301/GRWCISCDDG0020301_InReq.xsd" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InReq"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_OutRes"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_OutReq"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../Schemas/GRWCISCDDG/GRWCISCDDG0020301/GRWCISCDDG0020301_InRes.xsd" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_InRes"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_OutReq"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://schema.hcis.com/xsd/GRWCISCDDG0020301_OutRes"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
