@@ -34,25 +34,25 @@ public class CISTADHelper<N> extends HCISHelper<N> {
 
 	@Override
     public byte[] JsonToEDIbytes(String msgType, String jsonString, String encoding, String xml) throws Exception {
-    	log.debug("@@@@ BeanIO {}", xml);
+    	log.debug("@@@@ CISTADHelper.JsonToEDIbytes  BeanIO {}", xml);
         String edi = toEDI2(msgType,jsonString ,encoding, xml);
         return edi.getBytes(encoding);
     }
 
     public String toEDI2(String msgType, String jsonString, String encoding, String xml) throws Exception {
-    	log.debug("@@@@ BeanIO {}", xml);
+    	log.debug("@@@@ CISTADHelper.toEDI2  BeanIO {}", xml);
         String encodedString = new String(jsonString.getBytes(encoding), encoding);
-        String interfaceId = getInterfaceId();
-        String xmlfile = Strings.isNullOrEmpty(xml) ? "/Schemas/" + interfaceId.substring(0,10) + "/" + interfaceId + "/" + interfaceId + ".xml" : xml;        
-        String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
-        log.debug("## streamName [{}] xml [{}] msgType [{}] ", streamName, xmlfile, msgType);
+        String   interfaceId = getInterfaceId();
+        String       xmlfile = Strings.isNullOrEmpty(xml) ? "/Schemas/" + interfaceId.substring(0,10) + "/" + interfaceId + "/" + interfaceId + ".xml" : xml;        
+        String    streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
+        log.debug("@@@ CISTADHelper.toEDI2  streamName [{}] xml [{}] msgType [{}] ", streamName, xmlfile, msgType);
         String edi = toEDI3(streamName, encodedString, encoding, getBeanXmlInputStream(xmlfile));
         return new String(setTotalLength(edi.getBytes(encoding), 8, 0, false, encoding),encoding); 
     }
 
     @SuppressWarnings("unchecked")
 	public String toEDI3(String msgType, String jsonString, String encoding, InputStream is) {
-    	StreamFactory factory = newStreamFactory(is);
+    	StreamFactory factory = newStreamFactoryLocal(is);
         Marshaller marshaller = factory.createMarshaller(msgType);
         Map<String, Object> map = gson.fromJson(jsonString, Map.class);
         return marshaller.marshal(map,encoding).toString();
@@ -73,7 +73,7 @@ public class CISTADHelper<N> extends HCISHelper<N> {
     }
     
     public String toJSON3(String msgType, String ediString, String encoding, InputStream is) {
-    	StreamFactory     factory = newStreamFactory(is);
+    	StreamFactory     factory = newStreamFactoryLocal(is);
         Unmarshaller unmarshaller = factory.createUnmarshaller(msgType);
         Object o = unmarshaller.unmarshal(ediString, encoding);
         return gson.toJson(o, Map.class);
@@ -105,18 +105,17 @@ public class CISTADHelper<N> extends HCISHelper<N> {
     public String toString(byte[] bytes, String encoding) throws UnsupportedEncodingException {
     	return new String(bytes, encoding);
     }
-    /**
+
+	/**
      * 고정길이전문 정의 XML문자열로 EDI Factory 생성
      */
-    public StreamFactory newStreamFactory(InputStream is) {
+    public StreamFactory newStreamFactoryLocal(InputStream is) {
         StreamFactory factory = StreamFactory.newInstance();
         try {
 			factory.load(is);
 		} catch (BeanIOConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         return factory;

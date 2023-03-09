@@ -33,26 +33,27 @@ public class TADCISHelper<N> extends HCISHelper<N> {
 
 	@Override
     public byte[] JsonToEDIbytes(String msgType, String jsonString, String encoding, String xml) throws Exception {
-    	log.debug("@@@@ BeanIO {}", xml);
+    	log.debug("@@@@ TADCISHelper.JsonToEDIbytes BeanIO {}", xml);
         String edi = toEDI2(msgType,jsonString ,encoding, xml);
         return edi.getBytes(encoding);
     }
 
 	public String toEDI2(String msgType, String jsonString, String encoding, String xml) throws Exception {
-    	log.debug("@@@@ BeanIO {}", xml);
+    	log.debug("@@@@ TADCISHelper.toEDI2 BeanIO {}", xml);
         String encodedString = new String(jsonString.getBytes(encoding), encoding);
         String interfaceId = getInterfaceId();
         String xmlfile = Strings.isNullOrEmpty(xml) ? "/Schemas/" + interfaceId.substring(0,10) + "/" + interfaceId + "/" + interfaceId + ".xml" : xml;        
         String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
-        log.debug("## streamName [{}] , xml [{}] , msgType [{}] ", streamName, xmlfile, msgType);
+        log.debug("@@@@ TADCISHelper.toEDI2 streamName : {} , xml : {} , msgType : {} ", streamName, xmlfile, msgType);
         String edi = toEDI3(streamName, encodedString, encoding, getBeanXmlInputStream(xmlfile));
         return new String(setTotalLength(edi.getBytes(encoding), 8, 0, false, encoding),encoding); 
     }
 
 	@SuppressWarnings("unchecked")
 	public String toEDI3(String msgType, String jsonString, String encoding, InputStream is) {
-    	StreamFactory factory = newStreamFactory(is);
-        Marshaller marshaller = factory.createMarshaller(msgType);
+    	log.debug("@@@@ TADCISHelper.toEDI3 Run");
+    	StreamFactory   factory = newStreamFactoryLocal(is);
+        Marshaller   marshaller = factory.createMarshaller(msgType);
         Map<String, Object> map = gson.fromJson(jsonString, Map.class);
         return marshaller.marshal(map,encoding).toString();
     }
@@ -64,35 +65,30 @@ public class TADCISHelper<N> extends HCISHelper<N> {
 
 	public String toJSON(String msgType, String ediString, String encoding, String xml) throws Exception {
         String interfaceId = getInterfaceId();
-        String xmlfile = Strings.isNullOrEmpty(xml) ? "/Schemas/" + interfaceId.substring(0,10) + "/" + interfaceId + "/" + interfaceId + ".xml" : xml;
-        String streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
-        log.debug("## BeanIO {} , {} , {} ", streamName, xmlfile, msgType);        
-        InputStream ism = getBeanXmlInputStream(xmlfile);
+        String     xmlfile = Strings.isNullOrEmpty(xml) ? "/Schemas/" + interfaceId.substring(0,10) + "/" + interfaceId + "/" + interfaceId + ".xml" : xml;
+        String  streamName = (msgType.startsWith("_")) ? interfaceId + msgType : msgType;
+        log.debug("@@@@ TADCISHelper.toJSON  BeanIO {} , {} , {} ", streamName, xmlfile, msgType);        
+        InputStream    ism = getBeanXmlInputStream(xmlfile);
         return new String(toJSON3(streamName, ediString, encoding, ism).getBytes(encoding), encoding);
     }
 
     public String toJSON3(String msgType, String ediString, String encoding, InputStream is) {
-log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 0 : {} ", msgType);
-    	StreamFactory     factory = newStreamFactory(is);
-log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 1 : {} ", ediString);
+    	log.debug("@@@@ TADCISHelper.toJSON3 Run");
+    	StreamFactory     factory = newStreamFactoryLocal(is);
         Unmarshaller unmarshaller = factory.createUnmarshaller(msgType);
-log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 2 : {} ", encoding);
-        Object o = unmarshaller.unmarshal(ediString, encoding);
-log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 3 : {} ", o.toString());
-String strRtn = gson.toJson(o, Map.class);
-log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 4 : {} ", strRtn);
+        Object      o = unmarshaller.unmarshal(ediString, encoding);
+        String strRtn = gson.toJson(o, Map.class);
         return strRtn;
-//        return gson.toJson(o, Map.class);
     }
 	
 	@Override
 	public String logEDIBytes(byte[] bytes, String xsdpath) {
 		InputStream is = getClass().getResourceAsStream(xsdpath);
 		try {
-			if(is.available() > 0 ) {
-				log.debug("@@@ Found O {}", xsdpath);
-			}else {
-				log.debug("@@@ Not Found O {}", xsdpath);
+			if (is.available() > 0) {
+				log.debug("@@@ TADCISHelper.logEDIBytes Found O {}", xsdpath);
+			} else {
+				log.debug("@@@ TADCISHelper.logEDIBytes Not Found O {}", xsdpath);
 			}
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
@@ -109,7 +105,7 @@ log.debug("sbYi -------- TADCISHelper.toJSON3 -------------------------- 4 : {} 
     /**
      * 고정길이전문 정의 XML문자열로 EDI Factory 생성
      */
-    public StreamFactory newStreamFactory(InputStream is) {
+    public StreamFactory newStreamFactoryLocal(InputStream is) {
         StreamFactory factory = StreamFactory.newInstance();
         try {
 			factory.load(is);

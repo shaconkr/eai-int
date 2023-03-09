@@ -3,8 +3,8 @@
 	<name>TADCIS201.module</name>
 	<comment></comment>
 	<projects>
-		<project>HcisCommon.smodule</project>
 		<project>CSPI_Library</project>
+		<project>HcisCommon.smodule</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

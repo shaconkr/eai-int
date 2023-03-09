@@ -144,4 +144,7 @@
   <sca:component xmi:id="_eciBELmhEe2-57z8R9m2Lg" name="ComponentCISTADMKKB0041201_Main" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_eciBEbmhEe2-57z8R9m2Lg" processName="CISTADMKKB.CISTADMKKB0041201.CISTADMKKB0041201_Main"/>
   </sca:component>
+  <sca:component xmi:id="_zjr5QL48Ee2z2q2K-A2V2g" name="ComponentCISTADSCBB0010201" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zjr5Qb48Ee2z2q2K-A2V2g" processName="CISTADSCBB.CISTADSCBB0010201.CISTADSCBB0010201"/>
+  </sca:component>
 </sca:composite>

@@ -30,33 +30,23 @@ public class TADCISTransformer extends Transformer {
                 .serializeNulls()
                 .create();
 
-    public TADCISTransformer() {
-    }
+    public TADCISTransformer() {}
 
-
-    public StreamFactory newStreamFactory2(String xmlpath) {
-        StreamFactory factory = StreamFactory.newInstance();
-		InputStream is = getClass().getResourceAsStream(xmlpath);
-		String xmlString = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"));
-        factory.load(xmlString);
-        return factory;
-    }
-
+    @Override
 	@SuppressWarnings("unchecked")
-	@Override
 	public String toEDI(String msgType, String jsonString, String encoding, String xmlpath) {             
-    	StreamFactory factory = newStreamFactory(getBeanXmlInputStream(xmlpath));
-        Marshaller marshaller = factory.createMarshaller(msgType);
+    	StreamFactory   factory = newStreamFactory(getBeanXmlInputStream(xmlpath));
+        Marshaller   marshaller = factory.createMarshaller(msgType);
         Map<String, Object> map = gson.fromJson(jsonString, Map.class);
         return marshaller.marshal(map,encoding).toString();
     }
 
     @Override
     public String toJSON(String msgType, String ediString, String encoding, String xmlpath) {
-    	StreamFactory factory = newStreamFactory(getBeanXmlInputStream(xmlpath));
+    	StreamFactory     factory = newStreamFactory(getBeanXmlInputStream(xmlpath));
         Unmarshaller unmarshaller = factory.createUnmarshaller(msgType);
-        Object  o = unmarshaller.unmarshal(ediString, encoding);
-        return gson.toJson( o, Map.class);
+        Object obj = unmarshaller.unmarshal(ediString, encoding);
+        return gson.toJson(obj, Map.class);
     }
 
 }
