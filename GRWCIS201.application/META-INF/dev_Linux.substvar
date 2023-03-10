@@ -3,6 +3,7 @@
 	<globalVariables>
 		<globalVariable>
 			<name>/newGroup/newProperty</name>
+			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -11,6 +12,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/newGroup1/newProperty</name>
+			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

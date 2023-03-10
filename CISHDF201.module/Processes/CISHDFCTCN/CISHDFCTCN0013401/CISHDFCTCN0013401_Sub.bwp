@@ -675,7 +675,7 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
             <bpws:from>
-                <bpws:literal>CISHDF201.module.Simm</bpws:literal>
+                <bpws:literal>CISHDF201.module.FW</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns4:RequestActivityInput"
