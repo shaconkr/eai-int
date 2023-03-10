@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jndi:namedResource xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HPGCISFNDX0110102="http://schema.hcis.com/xsd/HPGCISFNDX0110102_InRes_RSLT_LIST_TYPE" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" name="HPGCISFNDX/HPGCISFNDX0110102.HPGCISFNDX0110102_InRes_RSLT_LIST_TYPE" type="dataformat:DataFormat">
+  <jndi:imports importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/HPGCISFNDX0110102_InRes_RSLT_LIST_TYPE_df.xsd" namespace="http://schema.hcis.com/xsd/HPGCISFNDX0110102_InRes_RSLT_LIST_TYPE"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="HPGCISFNDX0110102:main" lineLength="77" fieldOffsetsStr="chrDt(0,8)&#xA;reqTmnm(8,16)&#xA;calcDys(16,22)&#xA;prncAmt(22,41)&#xA;cmisAmt(41,42)&#xA;nadvAmt(42,61)&#xA;realStlmDt(61,69)&#xA;insmCmisRcknDt(69,77)">
+    <fieldOffsets kor="청구일자" type="string" name="chrDt" start="0" end="8"/>
+    <fieldOffsets kor="청구회차" type="long" name="reqTmnm" start="8" end="16"/>
+    <fieldOffsets kor="계산일수" type="long" name="calcDys" start="16" end="22"/>
+    <fieldOffsets kor="원금금액" type="long" name="prncAmt" start="22" end="41"/>
+    <fieldOffsets kor="수수료금액" type="long" name="cmisAmt" start="41" end="42"/>
+    <fieldOffsets kor="미도래금액" type="long" name="nadvAmt" start="42" end="61"/>
+    <fieldOffsets kor="실결제일자" type="string" name="realStlmDt" start="61" end="69"/>
+    <fieldOffsets kor="할부수수료기산일자" type="string" name="insmCmisRcknDt" start="69" end="77"/>
+  </jndi:configuration>
+</jndi:namedResource>
