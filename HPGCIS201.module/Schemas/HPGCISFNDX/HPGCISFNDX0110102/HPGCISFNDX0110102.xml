@@ -4,7 +4,7 @@
   <typeHandler type="java.util.Date" class="org.beanio.types.DateTypeHandler"> 
     <property name="pattern" value="yyyyMMddhhmm"/> 
   </typeHandler>  
-  <stream kor="" name="HPGCISFNDX0110101_InReq" format="fixedlength"> 
+  <stream kor="" name="HPGCISFNDX0110102_InReq" format="fixedlength"> 
     <parser> 
       <property name="recordTerminator" value="\r\n"/> 
     </parser>  
@@ -51,12 +51,15 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/> 
       </segment>  
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="할부금액" name="insmAmt" minOccurs="0" maxOccurs="1" position="1800" length="19" justify="right" padding="0"/>  
-        <field kor="카드할부개월수" name="crdInsmMths" minOccurs="0" maxOccurs="1" position="1819" length="4" justify="right" padding="0"/> 
+        <field kor="매출일자" name="saleDt" minOccurs="0" maxOccurs="1" position="1800" length="8"/>  
+        <field kor="매출금액" name="saleAmt" minOccurs="0" maxOccurs="1" position="1808" length="1" justify="right" padding="0"/>  
+        <field kor="결제일" name="stlmDay" minOccurs="0" maxOccurs="1" position="1809" length="2"/>  
+        <field kor="할부개월수" name="insmMths" minOccurs="0" maxOccurs="1" position="1811" length="18" justify="right" padding="0"/>  
+        <field kor="수수료율" name="cmisr" minOccurs="0" maxOccurs="1" position="1829" length="12" justify="right" padding="0"/> 
       </segment> 
     </record> 
   </stream>  
-  <stream kor="" name="HPGCISFNDX0110101_InRes" format="fixedlength">
+  <stream kor="" name="HPGCISFNDX0110102_InRes" format="fixedlength">
     <parser>
       <property name="recordTerminator" value="\r\n"/>
     </parser>
@@ -103,16 +106,16 @@
         <field kor="표준전문종료문자값" name="stdTgrmEndLettrVal" minOccurs="0" maxOccurs="1" position="1798" length="2"/>
       </segment>
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map">
-        <field kor="할부금액" name="insmAmt" minOccurs="0" maxOccurs="1" position="1800" length="19" justify="right" padding="0"/>
-        <field kor="카드할부개월수" name="crdInsmMths" minOccurs="0" maxOccurs="1" position="1819" length="4" justify="right" padding="0"/>
-        <field kor="수수료율" name="cmisr" minOccurs="0" maxOccurs="1" position="1823" length="12" justify="right" padding="0"/>
-        <field kor="수수료금액" name="cmisAmt" minOccurs="0" maxOccurs="1" position="1835" length="1" justify="right" padding="0"/>
-        <field kor="청구금액" name="reqAmt" minOccurs="0" maxOccurs="1" position="1836" length="1" justify="right" padding="0"/>
-        <segment name="cmisList" kor="할부_배열" minOccurs="20" maxOccurs="20" collection="list" class="map">
-          <field kor="청구회차" name="reqTmnm" minOccurs="0" maxOccurs="1" position="1837" length="2" justify="right" padding="0"/>
-          <field kor="청구원금금액" name="reqPrncAmt" minOccurs="0" maxOccurs="1" position="1839" length="19" justify="right" padding="0"/>
-          <field kor="수수료금액" name="cmisAmt" minOccurs="0" maxOccurs="1" position="1858" length="13" justify="right" padding="0"/>
-          <field kor="월청구금액" name="mmChrAmt" minOccurs="0" maxOccurs="1" position="1871" length="17" justify="right" padding="0"/>
+        <field kor="예상할부수수료조회결과_배열건수" name="rsltRowcount" minOccurs="0" maxOccurs="1" position="1800" length="5" justify="right" padding="0"/>
+        <segment name="rsltList" kor="예상할부수수료조회결과_배열" occursRef="rsltRowcount" collection="list" class="map">
+          <field kor="청구일자" name="chrDt" minOccurs="0" maxOccurs="1" position="1805" length="8"/>
+          <field kor="청구회차" name="reqTmnm" minOccurs="0" maxOccurs="1" position="1813" length="8" justify="right" padding="0"/>
+          <field kor="계산일수" name="calcDys" minOccurs="0" maxOccurs="1" position="1821" length="6" justify="right" padding="0"/>
+          <field kor="원금금액" name="prncAmt" minOccurs="0" maxOccurs="1" position="1827" length="19" justify="right" padding="0"/>
+          <field kor="수수료금액" name="cmisAmt" minOccurs="0" maxOccurs="1" position="1846" length="1" justify="right" padding="0"/>
+          <field kor="미도래금액" name="nadvAmt" minOccurs="0" maxOccurs="1" position="1847" length="19" justify="right" padding="0"/>
+          <field kor="실결제일자" name="realStlmDt" minOccurs="0" maxOccurs="1" position="1866" length="8"/>
+          <field kor="할부수수료기산일자" name="insmCmisRcknDt" minOccurs="0" maxOccurs="1" position="1874" length="8"/>
         </segment>
       </segment>
     </record>

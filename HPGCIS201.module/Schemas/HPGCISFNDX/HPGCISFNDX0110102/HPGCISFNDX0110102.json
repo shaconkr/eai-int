@@ -4,23 +4,23 @@
     "sysNm": "카드홈페이지",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "ioid": "SHPGFNDX0110101"
+    "ioid": "SHPGFNDX0110102"
   },
   "target": {
     "sysId": "CIS",
     "sysNm": "H-CIS",
-    "workId": "FNDX",
-    "workNm": "청구외부제공",
-    "ioid": "TCISFNDX0110101"
+    "workId": "FNDA",
+    "workNm": "고객 청구입금 내역조회",
+    "ioid": "TCISFNDA0050401"
   },
   "request": {
-    "ifId": "HPGCISFNDX0110101",
-    "ifNm": "홈페이지할부수수료계산",
+    "ifId": "HPGCISFNDX0110102",
+    "ifNm": "홈페이지할부수수료조회",
     "sysId": "HPG",
     "sysNm": "카드홈페이지",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "fwId": "OCFNDX01101R",
+    "fwId": "OCFNDA00502R",
     "infraId": "2",
     "infraNm": "대내I/F",
     "procId": "1",
@@ -55,13 +55,13 @@
     "extResTypeNm": ""
   },
   "response": {
-    "ifId": "HPGCISFNDX0110101",
-    "ifNm": "홈페이지할부수수료계산",
+    "ifId": "HPGCISFNDX0110102",
+    "ifNm": "홈페이지할부수수료조회",
     "sysId": "HPG",
     "sysNm": "카드홈페이지",
     "workId": "DEFT",
     "workNm": "어플리케이션 Default 코드",
-    "fwId": "OCFNDX01101R",
+    "fwId": "OCFNDA00502R",
     "infraId": "2",
     "infraNm": "대내I/F",
     "procId": "1",

@@ -1,4 +1,4 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/HPGCISFNDX0110101_InReq_msgGrpNmType" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/HPGCISFNDX0110101_InReq_msgGrpNmType">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/HPGCISFNDX0110102_InReq_msgGrpNmType" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.hcis.com/xsd/HPGCISFNDX0110102_InReq_msgGrpNmType">
     <element name="root" type="ns:msgGrpNmType"/>
     <complexType name="msgGrpNmType">
         <sequence>

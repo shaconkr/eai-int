@@ -1,5 +1,5 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/HPGCISFNDX0110101_InRes" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/HPGCISFNDX0110101_InRes">
-    <complexType name="HPGHeaderType">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="http://shacon.kr/xsd" xmlns:ns="http://schema.hcis.com/xsd/HPGCISFNDX0110102_OutRes" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.hcis.com/xsd/HPGCISFNDX0110102_OutRes">
+    <complexType name="CISHeaderType">
         <sequence>
             <element e:kor="전체전문길이" e:length="8" e:padder="SpaceRight" minOccurs="0" name="totTgrmLen" nillable="true" type="integer"/>
             <element e:kor="헤더길이" e:length="8" e:padder="SpaceRight" minOccurs="0" name="hdrLen" nillable="true" type="integer"/>
@@ -45,28 +45,28 @@
             <element e:kor="메시지세부내용" e:length="1000" e:padder="SpaceRight" minOccurs="0" name="msgDtlCntn" nillable="true" type="string"/>
         </sequence>
     </complexType>
-    <complexType name="HPGCISFNDX0110101_InRes">
+    <complexType name="HPGCISFNDX0110102_OutRes">
         <sequence>
-            <element e:kor="할부금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="insmAmt" nillable="true" type="long"/>
-            <element e:kor="카드할부개월수" e:length="4" e:padder="ZeroLeft" minOccurs="0" name="crdInsmMths" nillable="true" type="long"/>
-            <element e:kor="수수료율" e:length="12" e:padder="ZeroLeft" minOccurs="0" name="cmisr" nillable="true" type="decimal"/>
-            <element e:kor="수수료금액" e:length="1" e:padder="ZeroLeft" minOccurs="0" name="cmisAmt" nillable="true" type="long"/>
-            <element e:kor="청구금액" e:length="1" e:padder="ZeroLeft" minOccurs="0" name="reqAmt" nillable="true" type="long"/>
-            <element e:kor="할부_배열" e:padder="ZeroLeft" maxOccurs="20" minOccurs="20" name="cmisList" nillable="true" type="ns:CMIS_LIST_TYPE"/>
+            <element e:kor="예상할부수수료조회결과_배열건수" e:length="5" e:padder="ZeroLeft" minOccurs="0" name="rsltRowcount" nillable="true" type="long"/>
+            <element e:kor="예상할부수수료조회결과_배열" e:lengthField="rsltRowcount" e:padder="ZeroLeft" maxOccurs="unbounded" minOccurs="0" name="rsltList" nillable="true" type="ns:RSLT_LIST_TYPE"/>
         </sequence>
     </complexType>
-    <complexType name="CMIS_LIST_TYPE">
+    <complexType name="RSLT_LIST_TYPE">
         <sequence>
-            <element e:kor="청구회차" e:length="2" e:padder="ZeroLeft" minOccurs="0" name="reqTmnm" nillable="true" type="long"/>
-            <element e:kor="청구원금금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="reqPrncAmt" nillable="true" type="long"/>
-            <element e:kor="수수료금액" e:length="13" e:padder="ZeroLeft" minOccurs="0" name="cmisAmt" nillable="true" type="long"/>
-            <element e:kor="월청구금액" e:length="17" e:padder="ZeroLeft" minOccurs="0" name="mmChrAmt" nillable="true" type="decimal"/>
+            <element e:kor="청구일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="chrDt" nillable="true" type="string"/>
+            <element e:kor="청구회차" e:length="8" e:padder="ZeroLeft" minOccurs="0" name="reqTmnm" nillable="true" type="long"/>
+            <element e:kor="계산일수" e:length="6" e:padder="ZeroLeft" minOccurs="0" name="calcDys" nillable="true" type="long"/>
+            <element e:kor="원금금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="prncAmt" nillable="true" type="long"/>
+            <element e:kor="수수료금액" e:length="1" e:padder="ZeroLeft" minOccurs="0" name="cmisAmt" nillable="true" type="long"/>
+            <element e:kor="미도래금액" e:length="19" e:padder="ZeroLeft" minOccurs="0" name="nadvAmt" nillable="true" type="long"/>
+            <element e:kor="실결제일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="realStlmDt" nillable="true" type="string"/>
+            <element e:kor="할부수수료기산일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="insmCmisRcknDt" nillable="true" type="string"/>
         </sequence>
     </complexType>
     <complexType name="rootType">
         <sequence>
-            <element e:kor="공통부" name="header" type="ns:HPGHeaderType"/>
-            <element e:kor="데이터부" name="data" type="ns:HPGCISFNDX0110101_InRes"/>
+            <element e:kor="공통부" name="header" type="ns:CISHeaderType"/>
+            <element e:kor="데이터부" name="data" type="ns:HPGCISFNDX0110102_OutRes"/>
         </sequence>
     </complexType>
     <element name="root" type="ns:rootType"/>
