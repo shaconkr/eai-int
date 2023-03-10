@@ -3,7 +3,6 @@
 	<name>CISPIS201.module</name>
 	<comment></comment>
 	<projects>
-		<project>HcisCommon.smodule</project>
 		<project>CSPI_Library</project>
 	</projects>
 	<buildSpec>

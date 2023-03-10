@@ -13,18 +13,14 @@
   <sca:property xmi:id="_M5BkgLckEe2RiIXLVeipcw" name="PIS_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_M6qjQLckEe2RiIXLVeipcw" name="PIS_USER" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_M8KYELckEe2RiIXLVeipcw" name="PIS_PASS" type="property:password" scaext:simpleValue="#!BbLKyXH21VUSHjCOMNJwAg==" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_NDzRILckEe2RiIXLVeipcw" name="CISPISMKCY001201" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_9c5_ULckEe2RiIXLVeipcw" name="PIS_PLAIN_PASS" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:component xmi:id="_tFVOkLcREe2RiIXLVeipcw" name="ComponentCISPISMKCY0010101_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_tFVOkbcREe2RiIXLVeipcw" processName="CISPISMKCY.CISPISMKCY0010101.CISPISMKCY0010101_Main"/>
-  </sca:component>
-  <sca:component xmi:id="_8Gw7gLcTEe2RiIXLVeipcw" name="ComponentCISPISMKCY0010201_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Gw7gbcTEe2RiIXLVeipcw" processName="CISPISMKCY.CISPISMKCY0010201.CISPISMKCY0010201_Main"/>
-  </sca:component>
-  <sca:component xmi:id="_jaIHALcxEe2ge9h3ittoHw" name="ComponentPISCISMKCD0030203_Main" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jaIHAbcxEe2ge9h3ittoHw" processName="PISCISMKCD.PISCISMKCD0030203.PISCISMKCD0030203_Main"/>
-  </sca:component>
   <sca:component xmi:id="_fVwuIrc7Ee2ge9h3ittoHw" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_fVwuI7c7Ee2ge9h3ittoHw" processName="CISPIS201.module.Activator"/>
+  </sca:component>
+  <sca:component xmi:id="_cB69ML7uEe29Jrw0kLdu2Q" name="ComponentCISPISMKCY0010101_Main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_cB69Mb7uEe29Jrw0kLdu2Q" processName="CISPISMKCY.CISPISMKCY0010101.CISPISMKCY0010101_Main"/>
+  </sca:component>
+  <sca:component xmi:id="_7-dLQL7uEe29Jrw0kLdu2Q" name="ComponentCISPISMKCY0010201" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_7-dLQb7uEe29Jrw0kLdu2Q" processName="CISPISMKCY.CISPISMKCY0010201.CISPISMKCY0010201"/>
   </sca:component>
 </sca:composite>

@@ -49,8 +49,6 @@
         <task name="L_Set_LogEnd">
             <endingVariables>
                 <variable>L_Set_LogEnd-input</variable>
-                <variable>ParseJSON</variable>
-                <variable>L_Get_InterfaceInfo</variable>
             </endingVariables>
         </task>
         <task name="ReplytoJMSMessage">
@@ -81,7 +79,11 @@
         <task name="L_Set_LogError">
             <endingVariables>
                 <variable>L_Set_LogError-input</variable>
-                <variable>JMSReceiveMessage</variable>
+            </endingVariables>
+        </task>
+        <task name="Exception_L_Set_LogError">
+            <endingVariables>
+                <variable>Exception_L_Set_LogError-input</variable>
             </endingVariables>
         </task>
     </tibex:VariableDescriptor>
@@ -1237,7 +1239,101 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="414" width="1115" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="319" width="1115" xsi:type="notation:Bounds"/>
+                        </children>
+                        <children type="4022">
+                            <children type="3022">
+                                <children type="4029">
+                                    <children type="3031">
+                                    <children type="4033">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
+                                    <layoutConstraint
+                                    height="34" width="34"
+                                    xsi:type="notation:Bounds" y="68"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3032">
+                                    <children type="4005">
+                                    <children type="3007">
+                                    <eAnnotations source="Pixel"/>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint
+                                    width="229"
+                                    x="321"
+                                    xsi:type="notation:Bounds" y="41"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                </children>
+                                <styles xsi:type="notation:SortingStyle"/>
+                                <styles xsi:type="notation:FilteringStyle"/>
+                            </children>
+                            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles xsi:type="bwnotation:BackgroundStyle"/>
+                            <styles xsi:type="bwnotation:ResizingStyle"/>
+                            <element href="//0/@process/@activity/@faultHandlers"/>
+                            <layoutConstraint height="200" width="1020" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1247,7 +1343,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="438" width="1115" x="1"
+                    <layoutConstraint height="555" width="1115" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1256,7 +1352,7 @@
             </children>
             <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="490" width="1457" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="607" width="1457" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1407,6 +1503,8 @@
             namespace="http://www.example.org/Schema_SubProc" prefix="tns7"/>
         <tibex:namespaceItem
             namespace="http://schema.hcis.com/xsd/ARSCISFNDX0020101_InReq" prefix="ns1"/>
+        <tibex:namespaceItem
+            namespace="http://schema.hcis.com/xsd/ARSCISFNDX0060101_InReq" prefix="ns"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
@@ -1455,6 +1553,10 @@
             name="CallProc_ARSCISFNDX0020101-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:subElement"
             name="CallProc_ARSCISFNDX0020101" sca-bpel:internal="true"/>
+        <bpws:variable name="FaultName1" sca-bpel:internal="true" type="xsd:string"/>
+        <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:SetLog"
+            name="Exception_L_Set_LogError-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1465,6 +1567,31 @@
         <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bpel/2007/extensions"/>
     </bpws:extensions>
     <bpws:scope name="scope">
+        <bpws:faultHandlers>
+            <bpws:catchAll tibex:faultDetailsVar="FaultDetails"
+                tibex:faultNameVar="FaultName1" tibex:xpdlId="e6fade5e-0c01-4667-be48-14a6033c19ba">
+                <bpws:scope name="scope1">
+                    <bpws:flow name="flow1">
+                        <bpws:links/>
+                        <bpws:extensionActivity>
+                            <tibex:extActivity
+                                inputVariable="Exception_L_Set_LogError-input"
+                                name="Exception_L_Set_LogError"
+                                tibex:xpdlId="8d14321a-d535-4ea5-a609-4524514470cc"
+                                type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Log=&quot;http://www.cspi_library.org/Log&quot; xmlns:Library=&quot;http://www.cspi_library.org/Library&quot; xmlns:ns=&quot;http://schema.hcis.com/xsd/ARSCISFNDX0060101_InReq&quot; xmlns:ns1=&quot;http://schema.hcis.com/xsd/ARSCISFNDX0020101_InReq&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;JMSReceiveMessage&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;L_Get_InterfaceInfo&quot;/>&lt;xsl:template name=&quot;Exception_L_Set_LogError-input&quot; match=&quot;/&quot;>&lt;Log:SetLog>&lt;xsl:if test=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;>&lt;Log:InterfaceSysId>&lt;xsl:value-of select=&quot;$L_Get_InterfaceInfo/Library:InterfaceSysId&quot;/>&lt;/Log:InterfaceSysId>&lt;/xsl:if>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;&amp;quot;BIZ_UUID&amp;quot;&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$ParseJSON/ns1:header/ns1:frwkTrdId&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Detail>&lt;Log:Key>&lt;xsl:value-of select=&quot;&amp;quot;EI_INFO&amp;quot;&quot;/>&lt;/Log:Key>&lt;Log:Value>&lt;xsl:value-of select=&quot;$JMSReceiveMessage/Body&quot;/>&lt;/Log:Value>&lt;/Log:Detail>&lt;Log:Error>&lt;Log:StackTrace>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/Log:StackTrace>&lt;Log:Msg>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/Log:Msg>&lt;Log:FullClass>&lt;xsl:value-of select=&quot;$_error/FullClass&quot;/>&lt;/Log:FullClass>&lt;Log:ProcessStack>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/Log:ProcessStack>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;Log:MsgCode>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/Log:MsgCode>&lt;/xsl:if>&lt;/Log:Error>&lt;/Log:SetLog>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                </tibex:inputBindings>
+                                <tibex:CallProcess
+                                    moduleRef="CSPI_Library"
+                                    subProcessName="L_Set_LogError" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                            </tibex:extActivity>
+                        </bpws:extensionActivity>
+                    </bpws:flow>
+                </bpws:scope>
+            </bpws:catchAll>
+        </bpws:faultHandlers>
         <bpws:flow name="flow">
             <bpws:links>
                 <bpws:link name="JMSReceiveMessageToParseJSON" tibex:linkType="SUCCESS"/>

@@ -9,6 +9,12 @@ TIBCO-BW-Edition: bwe
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
 TIBCO-BW-ApplicationModule: META-INF/module.bwm
 TIBCO-BW-Version: 6.9.0 V26 2022-11-02
+Import-Package: com.tibco.bw.palette.shared.java;version="6.2.1600",
+ com.tibco.bw.runtime;version="6.3.2400",
+ kr.shacon.format,
+ org.beanio,
+ org.beanio.internal.util,
+ org.slf4j
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv

@@ -110,15 +110,6 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//CISPIS201.module//CISPISMKCY001201</name>
-			<value>CISPISMKCY001201</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
 			<name>//CISPIS201.module//PIS_PASS</name>
 			<value>#!BbLKyXH21VUSHjCOMNJwAg==</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -375,105 +366,6 @@
 		<globalVariable>
 			<name>//CSPI_Library///BaseInfo/CfgFileDir</name>
 			<value>/app/tibco/ezMNA/baseinfo/</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.DEPLOYMENTUNIT.TYPE</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//PROJ_PATH</name>
-			<value>d:/HCIS/</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//EIMS_PATH</name>
-			<value>d:/HCIS/eai-repo/</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.APPNODE.NAME</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.DEPLOYMENTUNIT.NAME</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.HOST.NAME</name>
-			<value>localhost</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.DOMAIN.NAME</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.DEPLOYMENTUNIT.VERSION</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.APPSPACE.NAME</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.MODULE.VERSION</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//HcisCommon.smodule//BW.MODULE.NAME</name>
-			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

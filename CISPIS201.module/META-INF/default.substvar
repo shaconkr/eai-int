@@ -119,15 +119,6 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>CISPISMKCY001201</name>
-			<value>CISPISMKCY001201</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
 			<name>PIS_PLAIN_PASS</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>

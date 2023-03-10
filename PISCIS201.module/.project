@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>CSPI_Library</project>
-		<project>HcisCommon.smodule</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
