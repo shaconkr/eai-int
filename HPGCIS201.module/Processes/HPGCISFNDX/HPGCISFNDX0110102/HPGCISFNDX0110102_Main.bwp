@@ -1513,8 +1513,6 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Schema_SubProc"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../../Schemas/HPGCISFNDX/HPGCISFNDX0110101/HPGCISFNDX0110101_InReq.xsd" namespace="http://schema.hcis.com/xsd/HPGCISFNDX0110101_InReq"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../Schemas/HPGCISFNDX/HPGCISFNDX0110102/HPGCISFNDX0110102_InReq.xsd" namespace="http://schema.hcis.com/xsd/HPGCISFNDX0110102_InReq"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
@@ -1727,9 +1725,7 @@
                         <bpws:target linkName="L_Set_LogStartToCallProc_HPGCISFNDX0170101"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source
-                            linkName="CallProc_HPGCISFNDX0170101ToL_Set_LogError"
-                            tibex:faultDetailsVar="CallProc_HPGCISFNDX0110102" tibex:faultNameVar="FaultName">
+                        <bpws:source linkName="CallProc_HPGCISFNDX0170101ToL_Set_LogError">
                             <tibex:DesignExpression>
                                 <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
