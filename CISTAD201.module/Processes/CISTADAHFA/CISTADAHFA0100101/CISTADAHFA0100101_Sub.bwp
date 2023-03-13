@@ -955,13 +955,6 @@
             </complexType>
             <element name="ActivityOutputClass" type="tns:ActivityOutputClassType"/>
         </schema>
-        <schema elementFormDefault="qualified"
-            targetNamespace="http://www.tibco.com/tnt/utilitySchema"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/tnt/utilitySchema">
-            <simpleType name="nativeJavaObjectKey">
-                <restriction base="string"/>
-            </simpleType>
-        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="cis099"
         createdOn="Fri Jan 06 16:18:06 KST 2023" description=""

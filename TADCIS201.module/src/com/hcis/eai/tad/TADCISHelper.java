@@ -34,7 +34,7 @@ public class TADCISHelper<N> extends HCISHelper<N> {
 	@Override
     public byte[] JsonToEDIbytes(String msgType, String jsonString, String encoding, String xml) throws Exception {
     	log.debug("@@@@ TADCISHelper.JsonToEDIbytes BeanIO {}", xml);
-        String edi = toEDI2(msgType,jsonString ,encoding, xml);
+        String edi = toEDI2(msgType, jsonString, encoding, xml);
         return edi.getBytes(encoding);
     }
 
@@ -102,7 +102,8 @@ public class TADCISHelper<N> extends HCISHelper<N> {
     	logEDIItem(sb, layout, bytes, offset);    	
     	return sb.toString();
     }
-    /**
+
+	/**
      * 고정길이전문 정의 XML문자열로 EDI Factory 생성
      */
     public StreamFactory newStreamFactoryLocal(InputStream is) {
