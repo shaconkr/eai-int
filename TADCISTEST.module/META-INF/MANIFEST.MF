@@ -11,10 +11,17 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
  com.tibco.bw.palette; filter:="(name=bw.file)",
  com.tibco.bw.palette; filter:="(name=bw.java)",
- com.tibco.bw.palette; filter:="(name=bw.jms)"
+ com.tibco.bw.palette; filter:="(name=bw.jms)",
+ com.tibco.bw.palette; filter:="(name=bw.parse)"
 TIBCO-BW-Version: 6.9.0 HF1 V47 2023-02-15
-Import-Package: com.hcis.eai.tadcistest,
- com.tibco.bw.runtime;version="6.3.2400"
+Import-Package: com.google.gson,
+ com.hcis.eai.tadcistest,
+ com.tibco.bw.palette.shared.java;version="6.2.1600",
+ com.tibco.bw.runtime;version="6.3.2400",
+ org.apache.commons.lang3,
+ org.beanio,
+ org.beanio.internal.util,
+ org.slf4j
 TIBCO-BW-Edition: bwe
 TIBCO-BW-ApplicationModule: META-INF/module.bwm
 TIBCO-BW-ConfigProfile: META-INF/default.substvar

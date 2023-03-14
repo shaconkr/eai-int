@@ -12,7 +12,7 @@
   <sca:component xmi:id="_NOUO8LvNEe2wqr0p10B2VA" name="ComponentTADCISMKCG0400101" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NOUO8bvNEe2wqr0p10B2VA" processName="test.module.TADCISMKCG0400101"/>
   </sca:component>
-  <sca:component xmi:id="_8lhuILyEEe2myb99346qWw" name="ComponentTADCISMTPF9000101" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8lhuIbyEEe2myb99346qWw" processName="test.module.TADCISMTPF9000101"/>
+  <sca:component xmi:id="_kwvHcMFfEe2JaZ08zHJEnw" name="ComponentTADCISMTPF9000101_ori" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_kwvHccFfEe2JaZ08zHJEnw" processName="test.module.TADCISMTPF9000101"/>
   </sca:component>
 </sca:composite>
