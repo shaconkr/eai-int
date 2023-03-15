@@ -40,22 +40,23 @@
         <field kor="메시지코드" name="msgCd" minOccurs="0" maxOccurs="1" position="409" length="10"/> 
       </segment>  
       <segment name="data" kor="데이터부" minOccurs="1" maxOccurs="1" class="map"> 
-        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="419" length="3"/>  
-        <field kor="포스번호" name="posNo" minOccurs="0" maxOccurs="1" position="422" length="6"/>  
-        <field kor="전송일자" name="sendDt" minOccurs="0" maxOccurs="1" position="428" length="8"/>  
-        <field kor="전송시간" name="sendTime" minOccurs="0" maxOccurs="1" position="436" length="6"/>  
-        <field kor="카드번호" name="crdNo" minOccurs="0" maxOccurs="1" position="442" length="16"/>  
-        <field kor="할부개월수" name="insmMths" minOccurs="0" maxOccurs="1" position="458" length="3"/>  
-        <field kor="총매출금액" name="tsaleAmt" minOccurs="0" maxOccurs="1" position="461" length="18"/>  
-        <field kor="할인금액" name="dcAmt" minOccurs="0" maxOccurs="1" position="479" length="18"/>  
-        <field kor="순매출금액" name="nsaleAmt" minOccurs="0" maxOccurs="1" position="497" length="18"/>  
-        <field kor="입금금액" name="iamtAmt" minOccurs="0" maxOccurs="1" position="515" length="18"/>  
-        <field kor="카드승인금액" name="crdAprvlAmt" minOccurs="0" maxOccurs="1" position="533" length="18"/>  
-        <field kor="풀암호화비밀번호" name="fullEcrytPwd" minOccurs="0" maxOccurs="1" position="551" length="100"/>  
-        <field kor="승인사유구분코드" name="aprvlRsnGbcd" minOccurs="0" maxOccurs="1" position="651" length="4"/>  
-        <field kor="승인메모" name="aprvlMemo" minOccurs="0" maxOccurs="1" position="655" length="500"/>  
-        <field kor="초과승인한도금액" name="overAprvlBndsAmt" minOccurs="0" maxOccurs="1" position="1155" length="18"/>  
-        <field kor="변경자ID" name="chgpId" minOccurs="0" maxOccurs="1" position="1173" length="100"/> 
+        <field kor="작업구분코드" name="wrkGbcd" minOccurs="0" maxOccurs="1" position="419" length="4"/>  
+        <field kor="점코드" name="storeCd" minOccurs="0" maxOccurs="1" position="423" length="3"/>  
+        <field kor="포스번호" name="posNo" minOccurs="0" maxOccurs="1" position="426" length="6"/>  
+        <field kor="전송일자" name="sendDt" minOccurs="0" maxOccurs="1" position="432" length="8"/>  
+        <field kor="전송시간" name="sendTime" minOccurs="0" maxOccurs="1" position="440" length="6"/>  
+        <field kor="카드번호" name="crdNo" minOccurs="0" maxOccurs="1" position="446" length="16"/>  
+        <field kor="할부개월수" name="insmMths" minOccurs="0" maxOccurs="1" position="462" length="3"/>  
+        <field kor="총매출금액" name="tsaleAmt" minOccurs="0" maxOccurs="1" position="465" length="18"/>  
+        <field kor="할인금액" name="dcAmt" minOccurs="0" maxOccurs="1" position="483" length="18"/>  
+        <field kor="순매출금액" name="nsaleAmt" minOccurs="0" maxOccurs="1" position="501" length="18"/>  
+        <field kor="입금금액" name="iamtAmt" minOccurs="0" maxOccurs="1" position="519" length="18"/>  
+        <field kor="카드승인금액" name="crdAprvlAmt" minOccurs="0" maxOccurs="1" position="537" length="18"/>  
+        <field kor="풀암호화비밀번호" name="fullEcrytPwd" minOccurs="0" maxOccurs="1" position="555" length="100"/>  
+        <field kor="승인사유구분코드" name="aprvlRsnGbcd" minOccurs="0" maxOccurs="1" position="655" length="4"/>  
+        <field kor="승인메모" name="aprvlMemo" minOccurs="0" maxOccurs="1" position="659" length="500"/>  
+        <field kor="초과승인한도금액" name="overAprvlBndsAmt" minOccurs="0" maxOccurs="1" position="1159" length="18"/>  
+        <field kor="변경자ID" name="chgpId" minOccurs="0" maxOccurs="1" position="1177" length="100"/> 
       </segment> 
     </record> 
   </stream>  

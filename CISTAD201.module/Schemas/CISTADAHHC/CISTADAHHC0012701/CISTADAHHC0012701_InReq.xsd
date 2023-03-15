@@ -47,6 +47,7 @@
     </complexType>
     <complexType name="CISTADAHHC0012701_InReq">
         <sequence>
+            <element e:kor="작업구분코드" e:length="4" e:padder="SpaceRight" minOccurs="0" name="wrkGbcd" nillable="true" type="string"/>
             <element e:kor="점코드" e:length="3" e:padder="SpaceRight" minOccurs="0" name="storeCd" nillable="true" type="string"/>
             <element e:kor="포스번호" e:length="6" e:padder="SpaceRight" minOccurs="0" name="posNo" nillable="true" type="string"/>
             <element e:kor="전송일자" e:length="8" e:padder="SpaceRight" minOccurs="0" name="sendDt" nillable="true" type="string"/>
